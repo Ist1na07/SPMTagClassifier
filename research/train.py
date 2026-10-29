@@ -1,4 +1,8 @@
-"""Frozen grouped searches; every ablation is refitted and retuned from scratch.
+"""Historical staged searches; every ablation was refitted within a limited grid.
+
+The local proxy chooses one head BEFORE downstream tuning. This is not joint
+optimization. legacy_features contains window summaries, not the full original
+56-dimensional segment representation. See research/rework/ for the correction.
 
 Run after extract.cjs and legacy-features.cjs. No raw charts are published.
 The persisted JSON models are consumed directly by the JavaScript runtime.
@@ -213,7 +217,7 @@ def run_maps(records,manual,key):
         candidates[variant]=best
         print(key,'map',variant,'val',round(score,4),config,flush=True)
         dump(OUT/f'{key}k-search.json',search)
-    # Legacy features are a fair retrained comparator, not a key-normalized deployment candidate.
+    # Historical window-summary comparator, NOT the complete original pipeline.
     winner=max((v for v in selected if v!='legacy_features'),key=lambda v:selected[v]['validationMacroF1'])
     # Immutable selection is written before any test metric is computed.
     dump(OUT/f'{key}k-selection.json',{'winner':winner,'variants':selected,'grid':GRID,'testOpened':False})

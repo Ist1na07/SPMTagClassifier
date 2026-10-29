@@ -3,8 +3,10 @@
 独立的 osu!mania **4K / 6K / 7K** 键型分析库；Node 与浏览器均可用，推理零第三方依赖。
 
 - [v1.1.0](https://github.com/Ist1na07/SPMTagClassifier/releases/tag/v1.1.0)：从 SPM Map Analyser **tag v1.2.0** 提取的原版 7K 引擎，782 次逐值一致性检查通过。
-- **v1.2.0**：独立特征与分类模块、分段证据、4K 粗分类、6K 迁移，以及可复现的完整调参/消融资料。
+- **v1.2.0**：独立特征与分类模块、分段证据、4K 粗分类、6K 迁移，以及当时的分阶段搜索资料。
 - **[研究报告与全部结果](research/REPORT.md)** · [缺陷审查](research/AUDIT.md) · [来源](UPSTREAM.md)
+
+**研究重做中：** v1.2.0 的搜索先按局部代理目标固定局部头，再选整谱参数，并非完整联合调参；`legacy_features` 只含旧窗口统计，也不是原完整 56 项特征与专家流程的公平重训对照。已撤回相关完整性与归因结论，保留原始数值。重做协议与证据见 [7K 回炉研究](research/rework/README.md)；已发布 tag 不改写。
 
 ## 先运行一张谱面
 
@@ -82,10 +84,10 @@ python -m pip install -r research/requirements.txt
 ./scripts/reproduce.ps1
 ```
 
-数据按当前工作目录的 `dataset/` 布局提供，未随仓库或 npm 包再分发。每个消融重新调参；固定歌曲组划分、全部候选、逐谱/逐时间结果及局限均在 `research/`。原版提取逐值检查另需 `.upstream/` 为插件 v1.2.0 checkout：`npm run test:parity`。
+数据按当前工作目录的 `dataset/` 布局提供，未随仓库或 npm 包再分发。旧消融分别重新拟合，但搜索分阶段进行；固定歌曲组划分、候选与逐谱/逐时间结果均在 `research/`。原版提取逐值检查另需 `.upstream/` 为插件 v1.2.0 checkout：`npm run test:parity`。
 
 ## English summary
 
-Dependency-free standalone osu!mania classifier. Default 7K retains mature predictions with additive evidence; opt into the new research head with `{ algorithm: 'modern' }`. 4K uses five benchmark coarse classes. 6K is cross-key extrapolation, not human-validated pattern accuracy. Browser global: `TagClassifier`. See the research report for independently retuned ablations and negative findings.
+Dependency-free standalone osu!mania classifier. Default 7K retains mature predictions with additive evidence; opt into the experimental head with `{ algorithm: 'modern' }`. 4K uses five benchmark coarse classes. 6K is cross-key extrapolation, not human-validated pattern accuracy. Browser global: `TagClassifier`. The v1.2.0 search was staged, not a complete joint optimization; see `research/rework/` for the correction and ongoing re-evaluation.
 
 MIT · original upstream attribution retained.
