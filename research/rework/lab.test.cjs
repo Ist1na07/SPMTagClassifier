@@ -58,4 +58,19 @@ test('sustaining LN area and releases are not erased when there is no head in wi
  nearly(f.lnAreaRatio,400/(500*7));nearly(f.tailRate,2);assert.equal(f.notes,0);
  assert.ok(Object.values(f).every(Number.isFinite));
 });
+test('normalization quantile span is measured in the transformed signal domain',()=>{
+ const api=loadLab({patches:[patches.transformedScale]});
+ const f=api.lab.computeWindowFeatures(context(api.lab,chart([[0,0],[500,1],[1000,2],[1500,3]])).ctx,0,1000);
+ const windows=Array.from({length:9},(_,i)=>({...f,nps:(i+1)*10}));
+ const norm=api.lab.normalizeWindows(windows),j=norm.featureNames.indexOf('nps');
+ nearly(norm.values[7][j]-norm.values[0][j],1);
+});
+test('uniform confidence rescaling must not turn a 60% dominant pattern into Mix',()=>{
+ const original=loadLab(),fixed=loadLab({patches:[patches.weightedShares]});
+ const segments=[['chordjack',6000],['dense chordstream',2000],['tech',2000]].map(([tag,d])=>({tag,start:0,end:d,family:'rc',confidence:1}));
+ assert.deepEqual(original.lab.aggregateOverall(segments).tags,['chordjack']);
+ const weaker=segments.map(s=>({...s,confidence:.4}));
+ assert.deepEqual(original.lab.aggregateOverall(weaker).tags,['rc mix']);
+ assert.deepEqual(fixed.lab.aggregateOverall(weaker).tags,['chordjack']);
+});
 module.exports={chart};

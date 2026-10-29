@@ -1,4 +1,4 @@
-import unittest
+import unittest,copy
 import numpy as np
 import torch
 from mil import *
@@ -38,4 +38,18 @@ class TestMIL(unittest.TestCase):
    n=len(r['segments']);dur=np.array([max(1,s['end']-s['start']) for s in r['segments']])
    expected=np.average(p.detach().numpy()[offset:offset+n],axis=0,weights=dur)
    np.testing.assert_allclose(expected,bag.detach().numpy()[i],rtol=1e-12);offset+=n
+ def all_break_example(self):
+  main,_,_=load();r=copy.deepcopy(main[0]);r['tags']=['chordjack'];r['segments']=r['segments'][:1]
+  p=np.full(len(CLASSES),.001/(len(CLASSES)-2));p[CLASSES.index('chordjack')]=.009;p[-1]=.99
+  r['segments'][0]['prior']=p.tolist();d=Packed([r],'prior_residual');m=Model(d.x.shape[1],True)
+  return r,d,m
+ def test_all_break_chart_cannot_receive_a_confident_fine_tag(self):
+  r,d,m=self.all_break_example();cfg={'effortPower':0.,'confidencePower':0.}
+  prob,local,_=predict(m,d,[r],cfg)
+  self.assertTrue(np.all(local[0].argmax(1)==CLASSES.index('break')))
+  self.assertEqual(int(predict_tags(prob,.2).sum()),0)
+ def test_nonempty_chart_label_supervises_active_evidence_not_only_conditional_composition(self):
+  r,d,m=self.all_break_example();cfg={'localL2':.01,'mapL2':.0001,'strongWeight':1.,'effortPower':0.,'confidencePower':0.}
+  m.objective(d,cfg).backward()
+  self.assertGreater(float(m.local.bias.grad[CLASSES.index('break')]),.1)
 if __name__=='__main__':unittest.main()

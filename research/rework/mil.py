@@ -17,6 +17,7 @@ from sklearn.metrics import f1_score,accuracy_score
 torch.set_num_threads(1)
 torch.set_default_dtype(torch.float64)
 SCHEMA=json.loads(Path('.cache/rework-schema.json').read_text(encoding='utf8'))
+SCHEMA['constant']=['zero']
 CLASSES=SCHEMA['classes']
 MAP_CLASSES=sorted(set(CLASSES)-{'break','wildcard'}|{'rc mix','ln mix','hybrid'})
 VARIANTS={
@@ -29,6 +30,8 @@ VARIANTS={
  'frozen_prior':(['corrected','modern','context'],True),
  'strong_only_prior':(['corrected','modern','context'],True),
  'copied_prior':(['corrected','modern','context'],True),
+ 'context_residual':(['context'],True),
+ 'bias_only_prior':(['constant'],True),
 }
 def dump(path,value):
     Path(path).parent.mkdir(parents=True,exist_ok=True)
@@ -100,6 +103,7 @@ def predict_tags(prob,threshold):
     fi=[i for i in range(len(MAP_CLASSES)) if i not in mi]
     p=np.zeros_like(prob,dtype=bool)
     for i,row in enumerate(prob):
+        if row.max()<=0:continue  # actual empty evidence remains empty
         best=mi[int(np.argmax(row[mi]))]
         if row[best]>=mix and row[best]>=max(row[fi]):p[i,best]=True
         else:p[i,fi]=row[fi]>=fine
@@ -131,7 +135,7 @@ def segment_metrics(rows,probs):
       'durationAccuracy':sum(m['correctMs'] for m in metrics)/max(1,sum(m['labelledMs'] for m in metrics)),'charts':metrics}
 def matrix(rows,variant):
     names,_=VARIANTS[variant]
-    return np.array([sum((s[k] for k in names),[]) for r in rows for s in r['segments']],float)
+    return np.array([sum(([0.] if k=='constant' else s[k] for k in names),[]) for r in rows for s in r['segments']],float)
 class Packed:
     def __init__(self,rows,variant,mean=None,scale=None):
         self.rows=rows;self.lengths=[len(r['segments']) for r in rows]
@@ -218,6 +222,14 @@ class Model(torch.nn.Module):
     def objective(self,data,config):
         p,z,_=self(data,config)
         bce=torch.nn.functional.binary_cross_entropy_with_logits(z[data.weak],data.y,reduction='none').mean(1)
+        # A nonempty chart annotation also asserts that some segment is active.
+        # Conditional non-Break composition ALONE has zero gradient to the
+        # Break gate. Max-MIL supplies this missing observation without copying
+        # the chart's type onto every segment or assuming an active duration.
+        active=torch.zeros(len(data.rows)).scatter_reduce(0,data.bag,1-p[:,-1],reduce='amax',include_self=True)
+        existence=-torch.log(torch.clamp(active[data.weak],min=1e-15))
+        if data.variant in ['strong_only_prior','copied_prior']:existence=existence.detach()
+        bce=bce+existence
         weak=(bce*data.weak_weight).sum()/data.weak_weight.sum()
         strong=-(torch.log(torch.clamp((p[data.edges]*data.mask).sum(1),min=1e-15))*data.strongw).sum() if data.edges else p.sum()*0
         if data.variant=='copied_prior' and data.copy_edges:
@@ -252,7 +264,10 @@ def predict(model,train,rows,config):
     packed=Packed(rows,train.variant,train.mean,train.scale)
     with torch.no_grad():p,z,bag=model(packed,config)
     parts=np.split(p.numpy(),np.cumsum(packed.lengths)[:-1])
-    return torch.sigmoid(z).numpy(),parts,bag.numpy()
+    probability=torch.sigmoid(z).numpy()
+    for i,local in enumerate(parts):
+        if np.all(local.argmax(1)==CLASSES.index('break')):probability[i]=0
+    return probability,parts,bag.numpy()
 if __name__=='__main__':
     main,manual,data=load();cfg={'localL2':.03,'mapL2':.03,'strongWeight':1.,'effortPower':1.,'confidencePower':0.}
     start=time.perf_counter();model,train,trace=fit(main[:250]+manual[:4],'prior_residual',cfg)

@@ -6,17 +6,24 @@ const patches=require('./patches.cjs'),legacy=require('../../src/legacy/tag-engi
 const out=path.join(ROOT,'research/rework/results');fs.mkdirSync(out,{recursive:true});
 const save=(file,data)=>fs.writeFileSync(path.join(out,file),JSON.stringify(data,null,2)+'\n');
 const records=records7(),manual=records.filter(r=>r.dataset==='manual');
-const conditions=[['original',[]],...['area','adjacency','heldOrder','phase','sustaining','releaseIsolation'].map(k=>[patches[k].id,[patches[k]]]),
- ['logical',patches.logical],['logical_release',patches.logical.concat(patches.releaseIsolation)]];
+let conditions=[['original',[]],...['area','adjacency','heldOrder','phase','sustaining','releaseIsolation'].map(k=>[patches[k].id,[patches[k]]]),
+ ['logical',patches.logical],['logical_release',patches.logical.concat(patches.releaseIsolation)],
+ ['transformed_scale',[patches.transformedScale]],['logical_release_scale',patches.logical.concat(patches.releaseIsolation,patches.transformedScale)]];
 const cached=new Map(),numeric=[],parity=[];
 const api=loadLab();
+const requested=process.argv.slice(2);
+if(requested.length){
+ conditions=conditions.filter(([id])=>requested.includes(id));
+ if(conditions.length!==requested.length)throw Error('Unknown/repeated diagnostic condition');
+ numeric.push(...JSON.parse(fs.readFileSync(path.join(out,'diagnosis.json'),'utf8')).rows.filter(r=>!requested.includes(r.condition)));
+}
 // Check the actual archived entry point, not only a reimplementation of it.
-for(const r of records){
- const text=fs.readFileSync(r.path,'utf8'),baseline=legacy.analyzeMap(text),exposed=api.analyzeMap(text);
- assert.deepEqual(exposed,baseline,r.uid);parity.push(r.uid);
+for(const r of requested.length?manual:records){
+ const text=fs.readFileSync(r.path,'utf8'),baseline=legacy.analyzeMap(text);
+ if(!requested.length){const exposed=api.analyzeMap(text);assert.deepEqual(exposed,baseline,r.uid);parity.push(r.uid);}
  if(r.dataset==='manual')cached.set(r.uid,{text,baseline,view:inspect(api,text)});
 }
-save('instrumentation-parity.json',{records:parity.length,uids:parity,comparison:'complete original analyzeMap return, deepStrictEqual'});
+if(!requested.length)save('instrumentation-parity.json',{records:parity.length,uids:parity,comparison:'complete original analyzeMap return, deepStrictEqual'});
 function boundaryOracle(ann,segments){
  let good=0,total=ann.filter(a=>a.tags.length).reduce((s,a)=>s+a.end-a.start,0);
  for(const s of segments){
@@ -47,7 +54,7 @@ for(const [id,ps] of conditions){
  }
 }
 const prior=JSON.parse(fs.readFileSync(path.join(ROOT,'research/results/segment-test-predictions.json'),'utf8')).filter(r=>r.variant==='full');
-for(const r of manual){
+for(const r of requested.length?[]:manual){
  const {view}=cached.get(r.uid),p=prior.filter(p=>p.uid===r.uid);
  const m=scoreIntervals(r.annotations,p.map(p=>({...p,tag:p.predicted})));
  numeric.push({condition:'previous_modern_oof',chart:r.id,partition:'automatic',...compact(m),

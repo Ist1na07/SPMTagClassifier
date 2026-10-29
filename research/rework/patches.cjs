@@ -52,5 +52,19 @@ const sustaining=patch('sustaining','Compute hold occupancy and releases in wind
   '    // Sustain-only windows still carry occupancy and release evidence.');
  return r(s,'      f.lockRatio /= rowCount;','      f.lockRatio /= Math.max(1,rowCount);');
 });
+const transformedScale=patch('transformed_scale','Normalize log-transformed signals by a quantile span in the SAME transformed domain',(s,r)=>{
+ const declaration='      const logTailed = key === "cutDemand" || key === "jackSpeedBpm" || key === "nps" || key === "tailRate";';
+ s=r(s,declaration,'');
+ return r(s,`      let scale = q(0.9) - q(0.1);
+      if (scale < 1e-6) scale = Math.max(Math.abs(med) * 0.5, 1e-6);`,
+ `${declaration}
+      const transform=x=>logTailed?Math.log1p(Math.max(0,x)/5):x;
+      let scale = transform(q(0.9)) - transform(q(0.1));
+      if (scale < 1e-6) scale = Math.max(Math.abs(transform(med)) * 0.5, 1e-6);`);
+});
+const weightedShares=patch('weighted_shares','Compute class shares with the SAME weighted-time numerator and denominator',(s,r)=>r(s,
+ '      total += durS;',
+ '      total += durS * Math.max(0.4, seg.confidence);'));
 module.exports={area,adjacency,heldOrder,phase,releaseIsolation,sustaining,
+ transformedScale,weightedShares,
  logical:[area,adjacency,heldOrder,phase,sustaining]};
