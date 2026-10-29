@@ -1,0 +1,18 @@
+{
+  "classes": [
+    "jack",
+    "ln",
+    "speed",
+    "stamina",
+    "tech"
+  ],
+  "lambda": 1,
+  "threshold": 0.55,
+  "segmentLambda": 0.6666666666666666,
+  "evidenceLevel": "source-label-preserving projection surrogate, not human 6K labels",
+  "projection": "4→6 symmetric vacant-column embedding; 7→6 remove center column; source song groups retain original split",
+  "sort": {
+    "rcMax": 0.1,
+    "lnMin": 0.68
+  }
+}

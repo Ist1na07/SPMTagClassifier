@@ -1,0 +1,141 @@
+{
+  "4k": {
+    "selected": "effort_evidence",
+    "testMacroF1": 0.948744492222753
+  },
+  "7kResearch": {
+    "selected": "hard_evidence",
+    "testMacroF1": 0.40196902562410985,
+    "legacyTestMacroF1": 0.47718637687325455
+  },
+  "segment": [
+    {
+      "variant": "full",
+      "durationAccuracy": 0.48028265100020595,
+      "chartMacroAccuracy": 0.46187625754858347,
+      "nll": 1.6044876477124512
+    },
+    {
+      "variant": "base_only",
+      "durationAccuracy": 0.3471718465221705,
+      "chartMacroAccuracy": 0.3499437045302248,
+      "nll": 1.8745138736678109
+    },
+    {
+      "variant": "no_geometry",
+      "durationAccuracy": 0.3427210458140672,
+      "chartMacroAccuracy": 0.3322475409800425,
+      "nll": 1.7341193391048892
+    },
+    {
+      "variant": "no_rhythm",
+      "durationAccuracy": 0.38041634272305824,
+      "chartMacroAccuracy": 0.3873589097162587,
+      "nll": 1.5843997897362283
+    },
+    {
+      "variant": "no_holds",
+      "durationAccuracy": 0.45739607698979634,
+      "chartMacroAccuracy": 0.4444956596541618,
+      "nll": 1.6940023533654944
+    },
+    {
+      "variant": "no_sequence",
+      "durationAccuracy": 0.39439259483358297,
+      "chartMacroAccuracy": 0.3710159516936116,
+      "nll": 1.7389327963239536
+    },
+    {
+      "variant": "no_burden",
+      "durationAccuracy": 0.36532319789527773,
+      "chartMacroAccuracy": 0.3715590022229278,
+      "nll": 1.649660048739457
+    }
+  ],
+  "legacySegmentDurationAccuracy": 0.6892303677688182,
+  "6kSurrogate": {
+    "variant": "tuned_transfer",
+    "adapt": true,
+    "lambda": 1,
+    "threshold": 0.55,
+    "validationMacroF1": 0.8848001131765837,
+    "testMacroF1": 0.8357104922669685,
+    "testMicroF1": 0.8253012048192772,
+    "testExactMatch": 0.7581699346405228,
+    "perClass": {
+      "jack": {
+        "precision": 0.9759036144578314,
+        "recall": 0.9642857142857143,
+        "f1-score": 0.9700598802395209,
+        "support": 84.0
+      },
+      "ln": {
+        "precision": 1.0,
+        "recall": 0.972972972972973,
+        "f1-score": 0.9863013698630136,
+        "support": 37.0
+      },
+      "speed": {
+        "precision": 0.8,
+        "recall": 0.821917808219178,
+        "f1-score": 0.8108108108108109,
+        "support": 73.0
+      },
+      "stamina": {
+        "precision": 0.7424242424242424,
+        "recall": 0.765625,
+        "f1-score": 0.7538461538461538,
+        "support": 64.0
+      },
+      "tech": {
+        "precision": 0.5,
+        "recall": 0.96,
+        "f1-score": 0.6575342465753424,
+        "support": 50.0
+      },
+      "micro avg": {
+        "precision": 0.7696629213483146,
+        "recall": 0.8896103896103896,
+        "f1-score": 0.8253012048192772,
+        "support": 308.0
+      },
+      "macro avg": {
+        "precision": 0.8036655713764148,
+        "recall": 0.896960299095573,
+        "f1-score": 0.8357104922669685,
+        "support": 308.0
+      },
+      "weighted avg": {
+        "precision": 0.8113345945766538,
+        "recall": 0.8896103896103896,
+        "f1-score": 0.8386046623024722,
+        "support": 308.0
+      },
+      "samples avg": {
+        "precision": 0.8240740740740742,
+        "recall": 0.8937908496732027,
+        "f1-score": 0.8453159041394335,
+        "support": 308.0
+      }
+    }
+  },
+  "apolar": {
+    "total": 292,
+    "eligible": 227,
+    "stablePositiveRecall": 0.8898678414096917,
+    "modernPositiveRecall": 0.9559471365638766
+  },
+  "smoke": {
+    "counts": {
+      "4": 1349,
+      "6": 2343,
+      "7": 689
+    },
+    "errors": [
+      {
+        "file": "dataset\\spm_dataset_6k-0.1.0\\beatmaps\\bm6k_0778.osu",
+        "error": "InvalidHoldTail"
+      }
+    ]
+  }
+}

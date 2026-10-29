@@ -1,0 +1,49 @@
+{
+  "winner": "full",
+  "variants": {
+    "full": {
+      "validationMacroF1": 0.9576393389902916,
+      "variant": "full",
+      "windowMs": 2000,
+      "C": 0.3,
+      "classWeight": null,
+      "threshold": 0.4,
+      "local": {
+        "C": 3.0,
+        "classWeight": "balanced"
+      }
+    }
+  },
+  "grid": {
+    "C": [
+      0.03,
+      0.3,
+      3.0
+    ],
+    "classWeight": [
+      null,
+      "balanced"
+    ],
+    "windowMs": [
+      2000,
+      4000,
+      8000
+    ],
+    "threshold": [
+      0.25,
+      0.4,
+      0.55
+    ],
+    "temperature": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "smoothingPenalty": [
+      0.0,
+      1.0,
+      3.0
+    ]
+  },
+  "testOpened": false
+}

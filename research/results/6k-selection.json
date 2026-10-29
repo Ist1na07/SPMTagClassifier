@@ -1,0 +1,37 @@
+{
+  "tuned_transfer": {
+    "variant": "tuned_transfer",
+    "adapt": true,
+    "lambda": 1,
+    "threshold": 0.55,
+    "validationMacroF1": 0.8848001131765837
+  },
+  "pure4": {
+    "variant": "pure4",
+    "adapt": true,
+    "lambda": 0,
+    "threshold": 0.25,
+    "validationMacroF1": 0.3178949294297071
+  },
+  "pure7": {
+    "variant": "pure7",
+    "adapt": true,
+    "lambda": 1,
+    "threshold": 0.55,
+    "validationMacroF1": 0.8848001131765837
+  },
+  "barycentric": {
+    "variant": "barycentric",
+    "adapt": true,
+    "lambda": 0.6666666666666666,
+    "threshold": 0.55,
+    "validationMacroF1": 0.8658797550416499
+  },
+  "no_key_adaptation": {
+    "variant": "no_key_adaptation",
+    "adapt": false,
+    "lambda": 0.6666666666666666,
+    "threshold": 0.55,
+    "validationMacroF1": 0.8141611185552886
+  }
+}

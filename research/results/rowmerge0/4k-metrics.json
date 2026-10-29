@@ -1,0 +1,94 @@
+{
+  "winner": "full",
+  "classes": [
+    "jack",
+    "ln",
+    "speed",
+    "stamina",
+    "tech"
+  ],
+  "counts": {
+    "jack": 395,
+    "ln": 102,
+    "speed": 285,
+    "stamina": 296,
+    "tech": 237
+  },
+  "records": 1315,
+  "splitCounts": [
+    789,
+    263,
+    263
+  ],
+  "groupCounts": [
+    379,
+    118,
+    112
+  ],
+  "results": {
+    "full": {
+      "validationMacroF1": 0.9576393389902916,
+      "macroF1": 0.9479471293678042,
+      "microF1": 0.9473684210526315,
+      "sampleF1": 0.9505703422053232,
+      "exactMatch": 0.935361216730038,
+      "brier": 0.017902726364092108,
+      "perClass": {
+        "jack": {
+          "precision": 0.9634146341463414,
+          "recall": 1.0,
+          "f1-score": 0.9813664596273292,
+          "support": 79.0
+        },
+        "ln": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 21.0
+        },
+        "speed": {
+          "precision": 0.9166666666666666,
+          "recall": 0.9649122807017544,
+          "f1-score": 0.9401709401709402,
+          "support": 57.0
+        },
+        "stamina": {
+          "precision": 0.95,
+          "recall": 0.9661016949152542,
+          "f1-score": 0.957983193277311,
+          "support": 59.0
+        },
+        "tech": {
+          "precision": 0.8695652173913043,
+          "recall": 0.851063829787234,
+          "f1-score": 0.8602150537634409,
+          "support": 47.0
+        },
+        "micro avg": {
+          "precision": 0.9368029739776952,
+          "recall": 0.9581749049429658,
+          "f1-score": 0.9473684210526315,
+          "support": 263.0
+        },
+        "macro avg": {
+          "precision": 0.9399293036408626,
+          "recall": 0.9564155610808486,
+          "f1-score": 0.9479471293678042,
+          "support": 263.0
+        },
+        "weighted avg": {
+          "precision": 0.9364232749617959,
+          "recall": 0.9581749049429658,
+          "f1-score": 0.9470296951731774,
+          "support": 263.0
+        },
+        "samples avg": {
+          "precision": 0.9467680608365019,
+          "recall": 0.9581749049429658,
+          "f1-score": 0.9505703422053232,
+          "support": 263.0
+        }
+      }
+    }
+  }
+}

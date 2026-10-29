@@ -1,0 +1,187 @@
+{
+  "winner": "effort_evidence",
+  "variants": {
+    "full": {
+      "validationMacroF1": 0.9630306077794423,
+      "variant": "full",
+      "windowMs": 4000,
+      "C": 0.03,
+      "classWeight": null,
+      "threshold": 0.55,
+      "local": {
+        "C": 3.0,
+        "classWeight": "balanced"
+      }
+    },
+    "base_only": {
+      "validationMacroF1": 0.8910013254063344,
+      "variant": "base_only",
+      "windowMs": 2000,
+      "C": 3.0,
+      "classWeight": null,
+      "threshold": 0.55,
+      "local": {
+        "C": 3.0,
+        "classWeight": "balanced"
+      }
+    },
+    "no_geometry": {
+      "validationMacroF1": 0.9451207667671083,
+      "variant": "no_geometry",
+      "windowMs": 4000,
+      "C": 3.0,
+      "classWeight": "balanced",
+      "threshold": 0.55,
+      "local": {
+        "C": 3.0,
+        "classWeight": null
+      }
+    },
+    "no_rhythm": {
+      "validationMacroF1": 0.9340932400244097,
+      "variant": "no_rhythm",
+      "windowMs": 8000,
+      "C": 0.3,
+      "classWeight": null,
+      "threshold": 0.4,
+      "local": {
+        "C": 3.0,
+        "classWeight": "balanced"
+      }
+    },
+    "no_holds": {
+      "validationMacroF1": 0.960857036325636,
+      "variant": "no_holds",
+      "windowMs": 2000,
+      "C": 0.3,
+      "classWeight": null,
+      "threshold": 0.55,
+      "local": {
+        "C": 3.0,
+        "classWeight": "balanced"
+      }
+    },
+    "no_sequence": {
+      "validationMacroF1": 0.9589634954041127,
+      "variant": "no_sequence",
+      "windowMs": 4000,
+      "C": 0.03,
+      "classWeight": null,
+      "threshold": 0.55,
+      "local": {
+        "C": 3.0,
+        "classWeight": "balanced"
+      }
+    },
+    "no_burden": {
+      "validationMacroF1": 0.9564495798319328,
+      "variant": "no_burden",
+      "windowMs": 4000,
+      "C": 0.03,
+      "classWeight": null,
+      "threshold": 0.55,
+      "local": {
+        "C": 3.0,
+        "classWeight": "balanced"
+      }
+    },
+    "hard_evidence": {
+      "validationMacroF1": 0.9596353708658423,
+      "variant": "hard_evidence",
+      "windowMs": 4000,
+      "C": 0.3,
+      "classWeight": null,
+      "threshold": 0.55,
+      "local": {
+        "C": 3.0,
+        "classWeight": "balanced"
+      }
+    },
+    "duration_evidence": {
+      "validationMacroF1": 0.959450020834716,
+      "variant": "duration_evidence",
+      "windowMs": 4000,
+      "C": 0.03,
+      "classWeight": null,
+      "threshold": 0.55,
+      "local": {
+        "C": 3.0,
+        "classWeight": "balanced"
+      }
+    },
+    "effort_evidence": {
+      "validationMacroF1": 0.9649807476658422,
+      "variant": "effort_evidence",
+      "windowMs": 2000,
+      "C": 0.3,
+      "classWeight": null,
+      "threshold": 0.55,
+      "local": {
+        "C": 3.0,
+        "classWeight": "balanced"
+      }
+    },
+    "confidence_evidence": {
+      "validationMacroF1": 0.9595323881765095,
+      "variant": "confidence_evidence",
+      "windowMs": 2000,
+      "C": 0.3,
+      "classWeight": null,
+      "threshold": 0.4,
+      "local": {
+        "C": 3.0,
+        "classWeight": "balanced"
+      }
+    },
+    "no_evidence": {
+      "validationMacroF1": 0.9591789628916079,
+      "variant": "no_evidence",
+      "windowMs": 4000,
+      "C": 0.03,
+      "classWeight": null,
+      "threshold": 0.55,
+      "local": null
+    },
+    "legacy_features": {
+      "validationMacroF1": 0.9357379624866173,
+      "variant": "legacy_features",
+      "windowMs": 4000,
+      "C": 0.03,
+      "classWeight": null,
+      "threshold": 0.55,
+      "local": null
+    }
+  },
+  "grid": {
+    "C": [
+      0.03,
+      0.3,
+      3.0
+    ],
+    "classWeight": [
+      null,
+      "balanced"
+    ],
+    "windowMs": [
+      2000,
+      4000,
+      8000
+    ],
+    "threshold": [
+      0.25,
+      0.4,
+      0.55
+    ],
+    "temperature": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "smoothingPenalty": [
+      0.0,
+      1.0,
+      3.0
+    ]
+  },
+  "testOpened": false
+}

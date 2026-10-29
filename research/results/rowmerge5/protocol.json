@@ -1,0 +1,43 @@
+{
+  "seed": 20261030,
+  "grid": {
+    "C": [
+      0.03,
+      0.3,
+      3.0
+    ],
+    "classWeight": [
+      null,
+      "balanced"
+    ],
+    "windowMs": [
+      2000,
+      4000,
+      8000
+    ],
+    "threshold": [
+      0.25,
+      0.4,
+      0.55
+    ],
+    "temperature": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "smoothingPenalty": [
+      0.0,
+      1.0,
+      3.0
+    ]
+  },
+  "variants": [
+    "full"
+  ],
+  "mapSelection": "maximum validation macro multi-label F1; deterministic first tie",
+  "deploymentEligibility": "all normalized variants; legacy_features is a retrained comparator only",
+  "segmentSelection": "maximum inner validation duration acceptable-label accuracy; NLL tie break",
+  "grouping": "transitive union of canonical song, base title, positive beatmap/set IDs, rate-normalized event duplicates",
+  "sixK": "no pattern labels; interpolation/invariants/corpus audit only",
+  "trainingScope": "ship the evaluated training-only fit, not a silently refitted all-data model"
+}

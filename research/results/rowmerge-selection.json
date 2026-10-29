@@ -1,0 +1,52 @@
+{
+  "4": {
+    "selected": {
+      "rowMergeMs": 10,
+      "variant": "effort_evidence",
+      "validationMacroF1": 0.9649807476658422
+    },
+    "compared": [
+      {
+        "rowMergeMs": 10,
+        "variant": "effort_evidence",
+        "validationMacroF1": 0.9649807476658422
+      },
+      {
+        "rowMergeMs": 0,
+        "variant": "full",
+        "validationMacroF1": 0.9576393389902916
+      },
+      {
+        "rowMergeMs": 5,
+        "variant": "full",
+        "validationMacroF1": 0.9630306077794423
+      }
+    ],
+    "selectionData": "validation only, original 10 ms wins exact ties"
+  },
+  "7": {
+    "selected": {
+      "rowMergeMs": 10,
+      "variant": "hard_evidence",
+      "validationMacroF1": 0.46405994545380735
+    },
+    "compared": [
+      {
+        "rowMergeMs": 10,
+        "variant": "hard_evidence",
+        "validationMacroF1": 0.46405994545380735
+      },
+      {
+        "rowMergeMs": 0,
+        "variant": "full",
+        "validationMacroF1": 0.4318901832667441
+      },
+      {
+        "rowMergeMs": 5,
+        "variant": "full",
+        "validationMacroF1": 0.45108482848420933
+      }
+    ],
+    "selectionData": "validation only, original 10 ms wins exact ties"
+  }
+}

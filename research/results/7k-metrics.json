@@ -1,0 +1,1957 @@
+{
+  "winner": "hard_evidence",
+  "classes": [
+    "anchor",
+    "chordjack",
+    "coordination",
+    "dense chordstream",
+    "density",
+    "fast chordstream",
+    "hybrid",
+    "inverse",
+    "ln mix",
+    "ln wildcard",
+    "minijack",
+    "rc mix",
+    "release",
+    "speed",
+    "tech",
+    "technical",
+    "vibro"
+  ],
+  "counts": {
+    "inverse": 18,
+    "density": 32,
+    "technical": 14,
+    "coordination": 23,
+    "ln mix": 39,
+    "release": 28,
+    "dense chordstream": 40,
+    "chordjack": 35,
+    "tech": 38,
+    "minijack": 11,
+    "vibro": 5,
+    "anchor": 6,
+    "speed": 31,
+    "fast chordstream": 15,
+    "rc mix": 25,
+    "hybrid": 49,
+    "ln wildcard": 3
+  },
+  "records": 349,
+  "splitCounts": [
+    206,
+    73,
+    70
+  ],
+  "groupCounts": [
+    112,
+    36,
+    37
+  ],
+  "results": {
+    "full": {
+      "validationMacroF1": 0.44716325985675837,
+      "macroF1": 0.40612288393618323,
+      "microF1": 0.6506024096385542,
+      "sampleF1": 0.6809523809523809,
+      "exactMatch": 0.5428571428571428,
+      "brier": 0.0353973221378932,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.5,
+          "recall": 0.75,
+          "f1-score": 0.6,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.3,
+          "recall": 0.6,
+          "f1-score": 0.4,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.7692307692307693,
+          "recall": 1.0,
+          "f1-score": 0.8695652173913043,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.5,
+          "recall": 0.375,
+          "f1-score": 0.42857142857142855,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.5555555555555556,
+          "recall": 1.0,
+          "f1-score": 0.7142857142857143,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.625,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.9285714285714286,
+          "recall": 0.8125,
+          "f1-score": 0.8666666666666667,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1-score": 0.8,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.6136363636363636,
+          "recall": 0.6923076923076923,
+          "f1-score": 0.6506024096385542,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.40117790706026,
+          "recall": 0.4465909090909091,
+          "f1-score": 0.40612288393618323,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.6986396794089103,
+          "recall": 0.6923076923076923,
+          "f1-score": 0.6671451133407655,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.6642857142857143,
+          "recall": 0.7285714285714285,
+          "f1-score": 0.6809523809523809,
+          "support": 78.0
+        }
+      }
+    },
+    "base_only": {
+      "validationMacroF1": 0.3345404671245389,
+      "macroF1": 0.3592807514224378,
+      "microF1": 0.5065502183406113,
+      "sampleF1": 0.5357142857142856,
+      "exactMatch": 0.18571428571428572,
+      "brier": 0.07257793912346008,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 0.5,
+          "recall": 0.8,
+          "f1-score": 0.6153846153846154,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.375,
+          "recall": 0.75,
+          "f1-score": 0.5,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.4166666666666667,
+          "recall": 1.0,
+          "f1-score": 0.5882352941176471,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.2857142857142857,
+          "recall": 0.8,
+          "f1-score": 0.42105263157894735,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.625,
+          "recall": 1.0,
+          "f1-score": 0.7692307692307693,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.3333333333333333,
+          "recall": 0.25,
+          "f1-score": 0.2857142857142857,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.125,
+          "recall": 0.5,
+          "f1-score": 0.2,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.5,
+          "recall": 0.8,
+          "f1-score": 0.6153846153846154,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 0.8888888888888888,
+          "recall": 0.7272727272727273,
+          "f1-score": 0.8,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1-score": 0.75,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.23529411764705882,
+          "recall": 1.0,
+          "f1-score": 0.38095238095238093,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.1,
+          "recall": 1.0,
+          "f1-score": 0.18181818181818182,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.3841059602649007,
+          "recall": 0.7435897435897436,
+          "f1-score": 0.5065502183406113,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.3020527818970726,
+          "recall": 0.5516042780748663,
+          "f1-score": 0.3592807514224378,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.5384298163709929,
+          "recall": 0.7435897435897436,
+          "f1-score": 0.5908196854612668,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.4464285714285714,
+          "recall": 0.7571428571428571,
+          "f1-score": 0.5357142857142856,
+          "support": 78.0
+        }
+      }
+    },
+    "no_geometry": {
+      "validationMacroF1": 0.39058468080064546,
+      "macroF1": 0.3892712939744446,
+      "microF1": 0.5490196078431373,
+      "sampleF1": 0.5838095238095237,
+      "exactMatch": 0.3,
+      "brier": 0.051624107316347805,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1-score": 0.8888888888888888,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.375,
+          "recall": 0.75,
+          "f1-score": 0.5,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.5,
+          "recall": 0.8,
+          "f1-score": 0.6153846153846154,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.2727272727272727,
+          "recall": 0.6,
+          "f1-score": 0.375,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1-score": 0.8,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.2727272727272727,
+          "recall": 0.375,
+          "f1-score": 0.3157894736842105,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1-score": 0.5,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1-score": 0.5,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.5454545454545454,
+          "f1-score": 0.7058823529411765,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1-score": 0.75,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1-score": 0.6666666666666666,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.4444444444444444,
+          "recall": 0.717948717948718,
+          "f1-score": 0.5490196078431373,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.3531639928698752,
+          "recall": 0.5070855614973262,
+          "f1-score": 0.3892712939744446,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.5967365967365967,
+          "recall": 0.717948717948718,
+          "f1-score": 0.6135135366648822,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.5207142857142858,
+          "recall": 0.75,
+          "f1-score": 0.5838095238095237,
+          "support": 78.0
+        }
+      }
+    },
+    "no_rhythm": {
+      "validationMacroF1": 0.44847942906766436,
+      "macroF1": 0.3892453951277481,
+      "microF1": 0.5989304812834224,
+      "sampleF1": 0.648095238095238,
+      "exactMatch": 0.42857142857142855,
+      "brier": 0.048465439516125905,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1-score": 0.8888888888888888,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1-score": 0.4444444444444444,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.6666666666666666,
+          "recall": 0.8,
+          "f1-score": 0.7272727272727273,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.3,
+          "recall": 0.6,
+          "f1-score": 0.4,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.7142857142857143,
+          "recall": 1.0,
+          "f1-score": 0.8333333333333334,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.3,
+          "recall": 0.375,
+          "f1-score": 0.3333333333333333,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.25,
+          "recall": 0.5,
+          "f1-score": 0.3333333333333333,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.38461538461538464,
+          "recall": 1.0,
+          "f1-score": 0.5555555555555556,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.6363636363636364,
+          "f1-score": 0.7777777777777778,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.7,
+          "recall": 0.875,
+          "f1-score": 0.7777777777777778,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.42857142857142855,
+          "recall": 0.75,
+          "f1-score": 0.5454545454545454,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.5137614678899083,
+          "recall": 0.717948717948718,
+          "f1-score": 0.5989304812834224,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.36141995259642323,
+          "recall": 0.46096256684491976,
+          "f1-score": 0.3892453951277481,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.6065840142763219,
+          "recall": 0.717948717948718,
+          "f1-score": 0.6344211344211345,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.6095238095238095,
+          "recall": 0.7571428571428571,
+          "f1-score": 0.648095238095238,
+          "support": 78.0
+        }
+      }
+    },
+    "no_holds": {
+      "validationMacroF1": 0.3797046091163738,
+      "macroF1": 0.37206877526350146,
+      "microF1": 0.6037735849056604,
+      "sampleF1": 0.6357142857142857,
+      "exactMatch": 0.5571428571428572,
+      "brier": 0.03843665391950354,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1-score": 0.4444444444444444,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.2222222222222222,
+          "recall": 0.4,
+          "f1-score": 0.2857142857142857,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1-score": 0.8,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.25,
+          "recall": 0.125,
+          "f1-score": 0.16666666666666666,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.8333333333333334,
+          "recall": 1.0,
+          "f1-score": 0.9090909090909091,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.625,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.9230769230769231,
+          "recall": 0.75,
+          "f1-score": 0.8275862068965517,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.6,
+          "recall": 0.75,
+          "f1-score": 0.6666666666666666,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.5925925925925926,
+          "recall": 0.6153846153846154,
+          "f1-score": 0.6037735849056604,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.3820764203117144,
+          "recall": 0.3870320855614973,
+          "f1-score": 0.37206877526350146,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.6629958360727591,
+          "recall": 0.6153846153846154,
+          "f1-score": 0.6136946546429305,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.6404761904761904,
+          "recall": 0.65,
+          "f1-score": 0.6357142857142857,
+          "support": 78.0
+        }
+      }
+    },
+    "no_sequence": {
+      "validationMacroF1": 0.4473501775292057,
+      "macroF1": 0.3870421133396912,
+      "microF1": 0.6577181208053692,
+      "sampleF1": 0.6666666666666666,
+      "exactMatch": 0.6,
+      "brier": 0.03543693564019392,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1-score": 0.5714285714285714,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.6666666666666666,
+          "recall": 0.8,
+          "f1-score": 0.7272727272727273,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.5714285714285714,
+          "recall": 0.8,
+          "f1-score": 0.6666666666666666,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.7142857142857143,
+          "recall": 1.0,
+          "f1-score": 0.8333333333333334,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1-score": 0.8888888888888888,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.5454545454545454,
+          "f1-score": 0.7058823529411765,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 1.0,
+          "recall": 0.6875,
+          "f1-score": 0.8148148148148148,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1-score": 0.5714285714285714,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.6901408450704225,
+          "recall": 0.6282051282051282,
+          "f1-score": 0.6577181208053692,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.4011204481792716,
+          "recall": 0.4078208556149733,
+          "f1-score": 0.3870421133396912,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.6871794871794872,
+          "recall": 0.6282051282051282,
+          "f1-score": 0.629751874849914,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.6928571428571428,
+          "recall": 0.6571428571428571,
+          "f1-score": 0.6666666666666666,
+          "support": 78.0
+        }
+      }
+    },
+    "no_burden": {
+      "validationMacroF1": 0.44059382487908166,
+      "macroF1": 0.39152173836011317,
+      "microF1": 0.6136363636363636,
+      "sampleF1": 0.6438095238095236,
+      "exactMatch": 0.45714285714285713,
+      "brier": 0.03547075922119072,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.5,
+          "recall": 0.75,
+          "f1-score": 0.6,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.5714285714285714,
+          "recall": 0.8,
+          "f1-score": 0.6666666666666666,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.3333333333333333,
+          "recall": 0.6,
+          "f1-score": 0.42857142857142855,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.7142857142857143,
+          "recall": 1.0,
+          "f1-score": 0.8333333333333334,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.3,
+          "recall": 0.375,
+          "f1-score": 0.3333333333333333,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.45454545454545453,
+          "recall": 1.0,
+          "f1-score": 0.625,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.5454545454545454,
+          "f1-score": 0.7058823529411765,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.8,
+          "recall": 0.75,
+          "f1-score": 0.7741935483870968,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1-score": 0.8888888888888888,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.5510204081632653,
+          "recall": 0.6923076923076923,
+          "f1-score": 0.6136363636363636,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.36903488668194545,
+          "recall": 0.4482620320855615,
+          "f1-score": 0.39152173836011317,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.6325563325563326,
+          "recall": 0.6923076923076923,
+          "f1-score": 0.63728908574734,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.611904761904762,
+          "recall": 0.7285714285714285,
+          "f1-score": 0.6438095238095236,
+          "support": 78.0
+        }
+      }
+    },
+    "hard_evidence": {
+      "validationMacroF1": 0.46405994545380735,
+      "macroF1": 0.40196902562410985,
+      "microF1": 0.6666666666666666,
+      "sampleF1": 0.6928571428571427,
+      "exactMatch": 0.6,
+      "brier": 0.035344089800077465,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1-score": 0.8888888888888888,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1-score": 0.4444444444444444,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.6666666666666666,
+          "recall": 0.8,
+          "f1-score": 0.7272727272727273,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.375,
+          "recall": 0.6,
+          "f1-score": 0.46153846153846156,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.7692307692307693,
+          "recall": 1.0,
+          "f1-score": 0.8695652173913043,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.5,
+          "recall": 0.375,
+          "f1-score": 0.42857142857142855,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.7142857142857143,
+          "recall": 1.0,
+          "f1-score": 0.8333333333333334,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.625,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.9230769230769231,
+          "recall": 0.75,
+          "f1-score": 0.8275862068965517,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.5714285714285714,
+          "recall": 1.0,
+          "f1-score": 0.7272727272727273,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.6666666666666666,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.6666666666666666,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.40704050851109674,
+          "recall": 0.42820855614973263,
+          "f1-score": 0.40196902562410985,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.7067565981027519,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.6600338289085261,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.7,
+          "recall": 0.7071428571428572,
+          "f1-score": 0.6928571428571427,
+          "support": 78.0
+        }
+      }
+    },
+    "duration_evidence": {
+      "validationMacroF1": 0.42376193077498775,
+      "macroF1": 0.396285687591916,
+      "microF1": 0.5714285714285714,
+      "sampleF1": 0.6033333333333332,
+      "exactMatch": 0.2857142857142857,
+      "brier": 0.049566026949029736,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.375,
+          "recall": 0.75,
+          "f1-score": 0.5,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.5,
+          "recall": 0.8,
+          "f1-score": 0.6153846153846154,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.3333333333333333,
+          "recall": 0.8,
+          "f1-score": 0.47058823529411764,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.7142857142857143,
+          "recall": 1.0,
+          "f1-score": 0.8333333333333334,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.16666666666666666,
+          "recall": 0.25,
+          "f1-score": 0.2,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1-score": 0.5,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1-score": 0.5,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.6363636363636364,
+          "f1-score": 0.7777777777777778,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.8125,
+          "recall": 0.8125,
+          "f1-score": 0.8125,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.5714285714285714,
+          "recall": 1.0,
+          "f1-score": 0.7272727272727273,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.464,
+          "recall": 0.7435897435897436,
+          "f1-score": 0.5714285714285714,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.34940476190476183,
+          "recall": 0.5205213903743315,
+          "f1-score": 0.396285687591916,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.5995115995115995,
+          "recall": 0.7435897435897436,
+          "f1-score": 0.6324082570688905,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.5345238095238096,
+          "recall": 0.7714285714285715,
+          "f1-score": 0.6033333333333332,
+          "support": 78.0
+        }
+      }
+    },
+    "effort_evidence": {
+      "validationMacroF1": 0.41925837063493143,
+      "macroF1": 0.4044153288484922,
+      "microF1": 0.58,
+      "sampleF1": 0.6128571428571428,
+      "exactMatch": 0.3,
+      "brier": 0.048325947674471376,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.375,
+          "recall": 0.75,
+          "f1-score": 0.5,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.6666666666666666,
+          "recall": 0.8,
+          "f1-score": 0.7272727272727273,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.3333333333333333,
+          "recall": 0.8,
+          "f1-score": 0.47058823529411764,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.7142857142857143,
+          "recall": 1.0,
+          "f1-score": 0.8333333333333334,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.16666666666666666,
+          "recall": 0.25,
+          "f1-score": 0.2,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1-score": 0.5,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.35714285714285715,
+          "recall": 1.0,
+          "f1-score": 0.5263157894736842,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.6363636363636364,
+          "f1-score": 0.7777777777777778,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.8125,
+          "recall": 0.8125,
+          "f1-score": 0.8125,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.5714285714285714,
+          "recall": 1.0,
+          "f1-score": 0.7272727272727273,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.47540983606557374,
+          "recall": 0.7435897435897436,
+          "f1-score": 0.58,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.36060924369747893,
+          "recall": 0.5205213903743315,
+          "f1-score": 0.4044153288484922,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.6117216117216117,
+          "recall": 0.7435897435897436,
+          "f1-score": 0.6412674815151596,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.5511904761904762,
+          "recall": 0.7714285714285715,
+          "f1-score": 0.6128571428571428,
+          "support": 78.0
+        }
+      }
+    },
+    "confidence_evidence": {
+      "validationMacroF1": 0.43789630179523475,
+      "macroF1": 0.38625590653718794,
+      "microF1": 0.6101694915254238,
+      "sampleF1": 0.6404761904761903,
+      "exactMatch": 0.42857142857142855,
+      "brier": 0.03541224835310023,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.5,
+          "recall": 0.75,
+          "f1-score": 0.6,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.5714285714285714,
+          "recall": 0.8,
+          "f1-score": 0.6666666666666666,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.3,
+          "recall": 0.6,
+          "f1-score": 0.4,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1-score": 0.8,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.3333333333333333,
+          "recall": 0.375,
+          "f1-score": 0.35294117647058826,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1-score": 0.6666666666666666,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.5454545454545454,
+          "f1-score": 0.7058823529411765,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.8,
+          "recall": 0.75,
+          "f1-score": 0.7741935483870968,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1-score": 0.8,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.5454545454545454,
+          "recall": 0.6923076923076923,
+          "f1-score": 0.6101694915254238,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.3610644257703082,
+          "recall": 0.4482620320855615,
+          "f1-score": 0.38625590653718794,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.6238095238095238,
+          "recall": 0.6923076923076923,
+          "f1-score": 0.6313076760894598,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.6047619047619047,
+          "recall": 0.7285714285714285,
+          "f1-score": 0.6404761904761903,
+          "support": 78.0
+        }
+      }
+    },
+    "no_evidence": {
+      "validationMacroF1": 0.40948205692752104,
+      "macroF1": 0.4040783214244926,
+      "microF1": 0.57,
+      "sampleF1": 0.6057142857142855,
+      "exactMatch": 0.2714285714285714,
+      "brier": 0.05292526193207735,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 1.0,
+          "recall": 0.8,
+          "f1-score": 0.8888888888888888,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.4,
+          "recall": 0.5,
+          "f1-score": 0.4444444444444444,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.5,
+          "recall": 0.8,
+          "f1-score": 0.6153846153846154,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.3,
+          "recall": 0.6,
+          "f1-score": 0.4,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.7692307692307693,
+          "recall": 1.0,
+          "f1-score": 0.8695652173913043,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.2857142857142857,
+          "recall": 0.5,
+          "f1-score": 0.36363636363636365,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.5,
+          "recall": 1.0,
+          "f1-score": 0.6666666666666666,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.38461538461538464,
+          "recall": 1.0,
+          "f1-score": 0.5555555555555556,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.5454545454545454,
+          "f1-score": 0.7058823529411765,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.7647058823529411,
+          "recall": 0.8125,
+          "f1-score": 0.7878787878787878,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1-score": 0.5714285714285714,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.4672131147540984,
+          "recall": 0.7307692307692307,
+          "f1-score": 0.57,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.37083919540666943,
+          "recall": 0.5034090909090909,
+          "f1-score": 0.4040783214244926,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.6196973463941791,
+          "recall": 0.7307692307692307,
+          "f1-score": 0.6368138495818999,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.5440476190476192,
+          "recall": 0.7714285714285715,
+          "f1-score": 0.6057142857142855,
+          "support": 78.0
+        }
+      }
+    },
+    "legacy_features": {
+      "validationMacroF1": 0.3980174632047658,
+      "macroF1": 0.40309698826322865,
+      "microF1": 0.572972972972973,
+      "sampleF1": 0.6161904761904761,
+      "exactMatch": 0.4,
+      "brier": 0.052901519870174586,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.2857142857142857,
+          "recall": 0.5,
+          "f1-score": 0.36363636363636365,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.5,
+          "recall": 0.6,
+          "f1-score": 0.5454545454545454,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.15384615384615385,
+          "recall": 0.4,
+          "f1-score": 0.2222222222222222,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.7692307692307693,
+          "recall": 1.0,
+          "f1-score": 0.8695652173913043,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.5,
+          "recall": 0.25,
+          "f1-score": 0.3333333333333333,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1-score": 0.8,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.625,
+          "recall": 1.0,
+          "f1-score": 0.7692307692307693,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.6363636363636364,
+          "f1-score": 0.7777777777777778,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 0.8571428571428571,
+          "recall": 0.75,
+          "f1-score": 0.8,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 0.4,
+          "recall": 1.0,
+          "f1-score": 0.5714285714285714,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.4953271028037383,
+          "recall": 0.6794871794871795,
+          "f1-score": 0.572972972972973,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.385741219564749,
+          "recall": 0.46684491978609627,
+          "f1-score": 0.40309698826322865,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.6522694186155724,
+          "recall": 0.6794871794871795,
+          "f1-score": 0.6377265618068293,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.5785714285714286,
+          "recall": 0.7142857142857143,
+          "f1-score": 0.6161904761904761,
+          "support": 78.0
+        }
+      }
+    },
+    "v1.1.0_untouched": {
+      "macroF1": 0.47718637687325455,
+      "microF1": 0.7066666666666667,
+      "sampleF1": 0.7238095238095238,
+      "exactMatch": 0.6571428571428571,
+      "brier": 0.03697478991596639,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "chordjack": {
+          "precision": 0.8,
+          "recall": 0.8,
+          "f1-score": 0.8,
+          "support": 5.0
+        },
+        "coordination": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1-score": 0.5714285714285714,
+          "support": 4.0
+        },
+        "dense chordstream": {
+          "precision": 0.6666666666666666,
+          "recall": 0.8,
+          "f1-score": 0.7272727272727273,
+          "support": 5.0
+        },
+        "density": {
+          "precision": 0.5,
+          "recall": 0.8,
+          "f1-score": 0.6153846153846154,
+          "support": 5.0
+        },
+        "fast chordstream": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 2.0
+        },
+        "hybrid": {
+          "precision": 0.7142857142857143,
+          "recall": 0.5,
+          "f1-score": 0.5882352941176471,
+          "support": 10.0
+        },
+        "inverse": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "ln mix": {
+          "precision": 0.5,
+          "recall": 0.25,
+          "f1-score": 0.3333333333333333,
+          "support": 8.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "minijack": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 2.0
+        },
+        "rc mix": {
+          "precision": 0.75,
+          "recall": 0.6,
+          "f1-score": 0.6666666666666666,
+          "support": 5.0
+        },
+        "release": {
+          "precision": 1.0,
+          "recall": 0.7272727272727273,
+          "f1-score": 0.8421052631578947,
+          "support": 11.0
+        },
+        "speed": {
+          "precision": 1.0,
+          "recall": 0.9375,
+          "f1-score": 0.967741935483871,
+          "support": 16.0
+        },
+        "tech": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1-score": 1.0,
+          "support": 4.0
+        },
+        "technical": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 1.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 0.0
+        },
+        "micro avg": {
+          "precision": 0.7361111111111112,
+          "recall": 0.6794871794871795,
+          "f1-score": 0.7066666666666667,
+          "support": 78.0
+        },
+        "macro avg": {
+          "precision": 0.5057422969187675,
+          "recall": 0.46557486631016043,
+          "f1-score": 0.47718637687325455,
+          "support": 78.0
+        },
+        "weighted avg": {
+          "precision": 0.7742673992673992,
+          "recall": 0.6794871794871795,
+          "f1-score": 0.7131843949058493,
+          "support": 78.0
+        },
+        "samples avg": {
+          "precision": 0.75,
+          "recall": 0.7142857142857143,
+          "f1-score": 0.7238095238095238,
+          "support": 78.0
+        }
+      }
+    }
+  }
+}

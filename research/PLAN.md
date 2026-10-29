@@ -1,5 +1,7 @@
 # v1.2.0 research and release plan
 
+Executed design, results, negative findings and production decisions: [REPORT.md](REPORT.md). The new 7K head remains opt-in; default 7K decisions are retained because measured performance did not improve. 4K/6K use the new engine.
+
 ## Acceptance
 
 1. Publish v1.1.0 as the unmodified 7K extraction, with parity evidence.
