@@ -1,0 +1,29 @@
+{
+  "name": "spm-tag-classifier",
+  "version": "1.1.0",
+  "description": "Standalone osu!mania pattern classification extracted from SPM Map Analyser",
+  "main": "src/legacy/tag-engine.cjs",
+  "bin": {
+    "spm-tag-classifier": "bin/classify.cjs"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "test:parity": "node scripts/parity.cjs"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ist1na07/SPMTagClassifier.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "src/",
+    "bin/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "UPSTREAM.md"
+  ]
+}
