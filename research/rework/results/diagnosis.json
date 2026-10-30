@@ -10032,6 +10032,868 @@
       },
       "segments": 17,
       "boundaryOracle": 1
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "AA",
+      "partition": "automatic",
+      "accuracy": 0.6535123966942149,
+      "correctMs": 118612.5,
+      "labelledMs": 181500,
+      "uncoveredMs": 37.5,
+      "confusion": {
+        "break -> ln wildcard": 1162.5,
+        "ln wildcard -> fast chordstream": 412.5,
+        "dense chordstream -> fast chordstream": 1200,
+        "break -> fast chordstream": 1200,
+        "coordination -> fast chordstream": 75,
+        "technical -> coordination": 7200,
+        "chordjack -> coordination": 1200,
+        "dense chordstream -> coordination": 900,
+        "break -> coordination": 300,
+        "fast chordstream -> break": 5062.5,
+        "fast chordstream -> inverse": 712.5,
+        "dense chordstream|wildcard -> inverse": 75,
+        "break -> dense chordstream": 1050,
+        "break -> chordjack": 525,
+        "technical -> chordjack": 9375,
+        "technical -> break": 225,
+        "ln wildcard -> break": 8925,
+        "ln wildcard -> tech": 675,
+        "tech|technical -> minijack": 2925,
+        "break -> minijack": 900,
+        "break -> tech": 900,
+        "chordjack -> tech": 2400,
+        "tech -> dense chordstream": 525,
+        "chordjack -> dense chordstream": 2400,
+        "break -> density": 300,
+        "fast chordstream -> tech": 225,
+        "wildcard -> tech": 4275,
+        "wildcard -> break": 525,
+        "inverse -> break": 7200
+      },
+      "internal1s": {
+        "accuracy": 0.7328740157480315,
+        "correctMs": 93075,
+        "labelledMs": 127000,
+        "uncoveredMs": 0,
+        "confusion": {
+          "technical -> coordination": 5200,
+          "fast chordstream -> break": 2800,
+          "technical -> chordjack": 7600,
+          "ln wildcard -> break": 7600,
+          "tech|technical -> minijack": 1925,
+          "chordjack -> tech": 400,
+          "chordjack -> dense chordstream": 400,
+          "wildcard -> tech": 2800,
+          "inverse -> break": 5200
+        }
+      },
+      "segments": 30,
+      "boundaryOracle": 0.8380165289256198
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "AA",
+      "partition": "fixed_original",
+      "accuracy": 0.6690082644628099,
+      "correctMs": 121425,
+      "labelledMs": 181500,
+      "uncoveredMs": 37.5,
+      "confusion": {
+        "break -> ln wildcard": 1162.5,
+        "ln wildcard -> fast chordstream": 412.5,
+        "dense chordstream -> fast chordstream": 1200,
+        "break -> fast chordstream": 1200,
+        "coordination -> fast chordstream": 75,
+        "technical -> coordination": 7200,
+        "chordjack -> coordination": 1200,
+        "dense chordstream -> coordination": 900,
+        "break -> coordination": 300,
+        "fast chordstream -> break": 5062.5,
+        "fast chordstream -> inverse": 712.5,
+        "dense chordstream|wildcard -> inverse": 75,
+        "break -> dense chordstream": 1050,
+        "break -> chordjack": 525,
+        "technical -> chordjack": 9375,
+        "technical -> break": 225,
+        "ln wildcard -> break": 8925,
+        "ln wildcard -> tech": 675,
+        "break -> tech": 1800,
+        "chordjack -> tech": 2400,
+        "tech -> dense chordstream": 525,
+        "chordjack -> dense chordstream": 2400,
+        "break -> density": 412.5,
+        "fast chordstream -> tech": 225,
+        "wildcard -> tech": 4275,
+        "wildcard -> break": 525,
+        "inverse -> break": 7200
+      },
+      "internal1s": {
+        "accuracy": 0.7480314960629921,
+        "correctMs": 95000,
+        "labelledMs": 127000,
+        "uncoveredMs": 0,
+        "confusion": {
+          "technical -> coordination": 5200,
+          "fast chordstream -> break": 2800,
+          "technical -> chordjack": 7600,
+          "ln wildcard -> break": 7600,
+          "chordjack -> tech": 400,
+          "chordjack -> dense chordstream": 400,
+          "wildcard -> tech": 2800,
+          "inverse -> break": 5200
+        }
+      },
+      "segments": 29,
+      "boundaryOracle": 0.8373966942148761
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "AA",
+      "partition": "human_boundary",
+      "accuracy": 0.6413223140495867,
+      "correctMs": 116400,
+      "labelledMs": 181500,
+      "uncoveredMs": 0,
+      "confusion": {
+        "break -> minijack": 1200,
+        "break -> speed": 1200,
+        "coordination -> chordjack": 9600,
+        "technical -> coordination": 7200,
+        "chordjack -> fast chordstream": 1200,
+        "fast chordstream -> coordination": 4800,
+        "technical -> chordjack": 9600,
+        "ln wildcard -> break": 9600,
+        "tech|technical -> fast chordstream": 7500,
+        "chordjack -> dense chordstream": 4800,
+        "break -> technical": 1200,
+        "inverse -> break": 7200
+      },
+      "internal1s": {
+        "accuracy": 0.6669291338582677,
+        "correctMs": 84700,
+        "labelledMs": 127000,
+        "uncoveredMs": 0,
+        "confusion": {
+          "coordination -> chordjack": 7600,
+          "technical -> coordination": 5200,
+          "fast chordstream -> coordination": 2800,
+          "technical -> chordjack": 7600,
+          "ln wildcard -> break": 7600,
+          "tech|technical -> fast chordstream": 5500,
+          "chordjack -> dense chordstream": 800,
+          "inverse -> break": 5200
+        }
+      },
+      "segments": 32,
+      "boundaryOracle": 1
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "AH",
+      "partition": "automatic",
+      "accuracy": 0.7432354166666667,
+      "correctMs": 178376.5,
+      "labelledMs": 240000,
+      "uncoveredMs": 0,
+      "confusion": {
+        "break -> inverse": 3654.5,
+        "density|inverse -> break": 9260.5,
+        "density|inverse -> coordination": 535.5,
+        "density -> coordination": 6108.5,
+        "ln wildcard -> technical": 11671.5,
+        "density -> technical": 4860.5,
+        "technical|ln wildcard -> break": 38.5,
+        "break -> technical": 1770,
+        "technical -> break": 2219,
+        "inverse -> break": 1225,
+        "break -> density": 1683,
+        "ln wildcard -> density": 13240,
+        "inverse|density -> technical": 497.5,
+        "density|ln wildcard -> technical": 3673,
+        "density|technical -> ln wildcard": 191.5,
+        "density -> ln wildcard": 880.5,
+        "technical -> ln wildcard": 114.5
+      },
+      "internal1s": {
+        "accuracy": 0.7999920076726342,
+        "correctMs": 140133,
+        "labelledMs": 175168,
+        "uncoveredMs": 0,
+        "confusion": {
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 7796,
+          "density -> coordination": 3185,
+          "density -> technical": 592,
+          "ln wildcard -> technical": 7021,
+          "break -> technical": 770,
+          "technical -> break": 1219,
+          "break -> density": 683,
+          "ln wildcard -> density": 8441.5,
+          "density|ln wildcard -> technical": 1673
+        }
+      },
+      "segments": 36,
+      "boundaryOracle": 0.9080166666666667
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "AH",
+      "partition": "fixed_original",
+      "accuracy": 0.75644375,
+      "correctMs": 181546.5,
+      "labelledMs": 240000,
+      "uncoveredMs": 0,
+      "confusion": {
+        "break -> inverse": 3654.5,
+        "density|inverse -> break": 9260.5,
+        "coordination -> density": 7347,
+        "ln wildcard -> technical": 3099.5,
+        "density -> technical": 4860.5,
+        "technical|ln wildcard -> break": 38.5,
+        "break -> technical": 1770,
+        "technical -> break": 2219,
+        "inverse -> break": 1225,
+        "break -> density": 1064,
+        "ln wildcard -> density": 17602,
+        "inverse|density -> ln wildcard": 497.5,
+        "density -> ln wildcard": 880.5,
+        "technical -> ln wildcard": 114.5,
+        "density -> coordination": 4820.5
+      },
+      "internal1s": {
+        "accuracy": 0.8062345862257947,
+        "correctMs": 141226.5,
+        "labelledMs": 175168,
+        "uncoveredMs": 0,
+        "confusion": {
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 7796,
+          "coordination -> density": 5347,
+          "density -> technical": 592,
+          "ln wildcard -> technical": 449,
+          "break -> technical": 770,
+          "technical -> break": 1219,
+          "break -> density": 64,
+          "ln wildcard -> density": 11153,
+          "density -> coordination": 2897
+        }
+      },
+      "segments": 35,
+      "boundaryOracle": 0.8899729166666667
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "AH",
+      "partition": "human_boundary",
+      "accuracy": 0.8112291666666667,
+      "correctMs": 194695,
+      "labelledMs": 240000,
+      "uncoveredMs": 0,
+      "confusion": {
+        "density|inverse -> break": 9796,
+        "ln wildcard -> break": 4898,
+        "ln wildcard -> technical": 2449,
+        "ln wildcard -> density": 15153,
+        "density|ln wildcard -> technical": 3673,
+        "density -> technical": 4439,
+        "density -> coordination": 4897
+      },
+      "internal1s": {
+        "accuracy": 0.8327034618195104,
+        "correctMs": 145863,
+        "labelledMs": 175168,
+        "uncoveredMs": 0,
+        "confusion": {
+          "density|inverse -> break": 7796,
+          "ln wildcard -> break": 2898,
+          "ln wildcard -> technical": 449,
+          "ln wildcard -> density": 11153,
+          "density|ln wildcard -> technical": 1673,
+          "density -> technical": 2439,
+          "density -> coordination": 2897
+        }
+      },
+      "segments": 33,
+      "boundaryOracle": 1
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "BE",
+      "partition": "automatic",
+      "accuracy": 0.5352100962638002,
+      "correctMs": 128710,
+      "labelledMs": 240485,
+      "uncoveredMs": 0,
+      "confusion": {
+        "wildcard -> break": 19200,
+        "chordjack -> break": 4725,
+        "chordjack -> fast chordstream": 7575,
+        "dense chordstream -> fast chordstream": 39262.5,
+        "dense chordstream -> wildcard": 1425,
+        "wildcard|dense chordstream -> fast chordstream": 9075,
+        "break -> fast chordstream": 18765,
+        "break -> wildcard": 610,
+        "dense chordstream|wildcard -> break": 525,
+        "wildcard -> fast chordstream": 9600,
+        "dense chordstream -> break": 1012.5
+      },
+      "internal1s": {
+        "accuracy": 0.5565792249806597,
+        "correctMs": 118710,
+        "labelledMs": 213285,
+        "uncoveredMs": 0,
+        "confusion": {
+          "wildcard -> break": 17200,
+          "chordjack -> break": 3725,
+          "chordjack -> fast chordstream": 5375,
+          "dense chordstream -> fast chordstream": 35262.5,
+          "dense chordstream -> wildcard": 425,
+          "wildcard|dense chordstream -> fast chordstream": 8075,
+          "break -> fast chordstream": 16900,
+          "wildcard -> fast chordstream": 7600,
+          "dense chordstream -> break": 12.5
+        }
+      },
+      "segments": 20,
+      "boundaryOracle": 0.8251969977337464
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "BE",
+      "partition": "fixed_original",
+      "accuracy": 0.6510489219701853,
+      "correctMs": 156567.5,
+      "labelledMs": 240485,
+      "uncoveredMs": 0,
+      "confusion": {
+        "wildcard -> break": 19200,
+        "chordjack -> break": 5400,
+        "chordjack -> fast chordstream": 6900,
+        "dense chordstream -> fast chordstream": 39262.5,
+        "dense chordstream -> wildcard": 1425,
+        "wildcard|dense chordstream -> fast chordstream": 9075,
+        "break -> fast chordstream": 57.5,
+        "break -> wildcard": 610,
+        "dense chordstream|wildcard -> break": 525,
+        "wildcard -> fast chordstream": 450,
+        "dense chordstream -> break": 1012.5
+      },
+      "internal1s": {
+        "accuracy": 0.6714490001640997,
+        "correctMs": 143210,
+        "labelledMs": 213285,
+        "uncoveredMs": 0,
+        "confusion": {
+          "wildcard -> break": 17200,
+          "chordjack -> break": 3725,
+          "chordjack -> fast chordstream": 5375,
+          "dense chordstream -> fast chordstream": 35262.5,
+          "dense chordstream -> wildcard": 425,
+          "wildcard|dense chordstream -> fast chordstream": 8075,
+          "dense chordstream -> break": 12.5
+        }
+      },
+      "segments": 22,
+      "boundaryOracle": 0.9410358234401314
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "BE",
+      "partition": "human_boundary",
+      "accuracy": 0.5660228288666653,
+      "correctMs": 136120,
+      "labelledMs": 240485,
+      "uncoveredMs": 0,
+      "confusion": {
+        "wildcard -> break": 28800,
+        "chordjack -> break": 14400,
+        "dense chordstream -> fast chordstream": 41700,
+        "dense chordstream|wildcard -> tech": 19465
+      },
+      "internal1s": {
+        "accuracy": 0.5763180720632018,
+        "correctMs": 122920,
+        "labelledMs": 213285,
+        "uncoveredMs": 0,
+        "confusion": {
+          "wildcard -> break": 24800,
+          "chordjack -> break": 12400,
+          "dense chordstream -> fast chordstream": 35700,
+          "dense chordstream|wildcard -> tech": 17465
+        }
+      },
+      "segments": 14,
+      "boundaryOracle": 1
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "DS",
+      "partition": "automatic",
+      "accuracy": 0.639658014413336,
+      "correctMs": 260774.5,
+      "labelledMs": 407678,
+      "uncoveredMs": 0,
+      "confusion": {
+        "release -> coordination": 6343.5,
+        "release -> break": 156.5,
+        "break -> density": 3962,
+        "release -> density": 8256,
+        "coordination|chordjack -> density": 4542,
+        "chordjack -> density": 1513,
+        "coordination -> density": 8658,
+        "tech -> density": 2202,
+        "density -> fast chordstream": 1500.5,
+        "chordjack -> fast chordstream": 1696,
+        "fast chordstream|wildcard -> dense chordstream": 14087,
+        "dense chordstream -> fast chordstream": 325.5,
+        "break -> dense chordstream": 202.5,
+        "break -> fast chordstream": 7501.5,
+        "tech -> fast chordstream": 620,
+        "tech -> technical": 757,
+        "fast chordstream -> density": 509,
+        "fast chordstream -> chordjack": 155.5,
+        "speed|tech -> chordjack": 2487,
+        "chordjack -> dense chordstream": 3964,
+        "tech -> dense chordstream": 2487,
+        "speed -> dense chordstream": 1087.5,
+        "speed -> density": 155.5,
+        "technical -> density": 2357.5,
+        "technical -> fast chordstream": 129.5,
+        "ln wildcard -> fast chordstream": 4236,
+        "release -> ln wildcard": 77.5,
+        "release -> inverse": 5781,
+        "break -> inverse": 4447.5,
+        "break -> technical": 25122.5,
+        "coordination -> technical": 45.5,
+        "break -> coordination": 16,
+        "dense chordstream|wildcard -> inverse": 815,
+        "density -> inverse": 13522.5,
+        "density -> chordjack": 880,
+        "break -> chordjack": 2087,
+        "speed -> chordjack": 4174,
+        "ln wildcard -> chordjack": 3131,
+        "chordjack -> inverse": 651.5,
+        "ln wildcard -> inverse": 2087,
+        "dense chordstream|wildcard -> fast chordstream": 58,
+        "dense chordstream|wildcard -> minijack": 4116
+      },
+      "internal1s": {
+        "accuracy": 0.7056951619736568,
+        "correctMs": 223201.5,
+        "labelledMs": 316286,
+        "uncoveredMs": 0,
+        "confusion": {
+          "release -> coordination": 6343.5,
+          "break -> density": 962,
+          "release -> density": 6256,
+          "coordination|chordjack -> density": 2542,
+          "tech -> density": 202,
+          "fast chordstream|wildcard -> dense chordstream": 14087,
+          "break -> fast chordstream": 5501.5,
+          "speed|tech -> chordjack": 487,
+          "tech -> dense chordstream": 487,
+          "chordjack -> dense chordstream": 487,
+          "technical -> density": 487,
+          "ln wildcard -> fast chordstream": 3236,
+          "release -> inverse": 4781,
+          "break -> technical": 24122.5,
+          "coordination -> density": 6602.5,
+          "density -> inverse": 10522,
+          "break -> chordjack": 87,
+          "speed -> chordjack": 174,
+          "ln wildcard -> chordjack": 87,
+          "ln wildcard -> inverse": 87,
+          "break -> inverse": 3369.5,
+          "dense chordstream|wildcard -> minijack": 2174
+        }
+      },
+      "segments": 55,
+      "boundaryOracle": 0.8940217524615015
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "DS",
+      "partition": "fixed_original",
+      "accuracy": 0.6398873620847826,
+      "correctMs": 260868,
+      "labelledMs": 407678,
+      "uncoveredMs": 0,
+      "confusion": {
+        "release -> coordination": 6250,
+        "release -> break": 156.5,
+        "break -> density": 7673.5,
+        "release -> density": 8256,
+        "coordination|chordjack -> density": 4542,
+        "chordjack -> density": 1513,
+        "coordination -> density": 8658,
+        "tech -> density": 2202,
+        "density -> fast chordstream": 1500.5,
+        "chordjack -> fast chordstream": 1696,
+        "fast chordstream|wildcard -> dense chordstream": 14087,
+        "dense chordstream -> fast chordstream": 325.5,
+        "break -> dense chordstream": 202.5,
+        "break -> fast chordstream": 7501.5,
+        "tech -> fast chordstream": 620,
+        "tech -> technical": 757,
+        "fast chordstream -> density": 509,
+        "fast chordstream -> chordjack": 155.5,
+        "speed|tech -> chordjack": 2487,
+        "chordjack -> dense chordstream": 3964,
+        "tech -> dense chordstream": 2487,
+        "speed -> dense chordstream": 1087.5,
+        "speed -> density": 155.5,
+        "technical -> density": 2357.5,
+        "technical -> fast chordstream": 129.5,
+        "ln wildcard -> fast chordstream": 4236,
+        "release -> ln wildcard": 77.5,
+        "release -> inverse": 5781,
+        "break -> inverse": 4447.5,
+        "break -> technical": 21411,
+        "coordination -> technical": 45.5,
+        "break -> coordination": 16,
+        "dense chordstream|wildcard -> ln wildcard": 815,
+        "density -> ln wildcard": 5511,
+        "density -> inverse": 8011.5,
+        "density -> chordjack": 880,
+        "break -> chordjack": 2087,
+        "speed -> chordjack": 4174,
+        "ln wildcard -> chordjack": 3131,
+        "chordjack -> inverse": 651.5,
+        "ln wildcard -> inverse": 2087,
+        "dense chordstream|wildcard -> fast chordstream": 58,
+        "dense chordstream|wildcard -> minijack": 4116
+      },
+      "internal1s": {
+        "accuracy": 0.7059907804961333,
+        "correctMs": 223295,
+        "labelledMs": 316286,
+        "uncoveredMs": 0,
+        "confusion": {
+          "release -> coordination": 6250,
+          "break -> density": 4673.5,
+          "release -> density": 6256,
+          "coordination|chordjack -> density": 2542,
+          "tech -> density": 202,
+          "fast chordstream|wildcard -> dense chordstream": 14087,
+          "break -> fast chordstream": 5501.5,
+          "speed|tech -> chordjack": 487,
+          "tech -> dense chordstream": 487,
+          "chordjack -> dense chordstream": 487,
+          "technical -> density": 487,
+          "ln wildcard -> fast chordstream": 3236,
+          "release -> inverse": 4781,
+          "break -> technical": 20411,
+          "coordination -> density": 6602.5,
+          "density -> ln wildcard": 4511,
+          "density -> inverse": 6011,
+          "break -> chordjack": 87,
+          "speed -> chordjack": 174,
+          "ln wildcard -> chordjack": 87,
+          "ln wildcard -> inverse": 87,
+          "break -> inverse": 3369.5,
+          "dense chordstream|wildcard -> minijack": 2174
+        }
+      },
+      "segments": 58,
+      "boundaryOracle": 0.8940217524615015
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "DS",
+      "partition": "human_boundary",
+      "accuracy": 0.7544336461619219,
+      "correctMs": 307566,
+      "labelledMs": 407678,
+      "uncoveredMs": 0,
+      "confusion": {
+        "release -> density": 8256,
+        "coordination|chordjack -> density": 4542,
+        "tech -> fast chordstream": 3579,
+        "chordjack -> minijack": 1696,
+        "density -> inverse": 14610,
+        "break -> minijack": 8198,
+        "speed|tech -> dense chordstream": 2487,
+        "tech -> dense chordstream": 2487,
+        "speed -> minijack": 1243,
+        "ln wildcard -> technical": 10993,
+        "coordination -> density": 15412,
+        "break -> density": 10174,
+        "break -> chordjack": 2087,
+        "speed -> dense chordstream": 4174,
+        "inverse -> ln wildcard": 3913,
+        "ln wildcard -> chordjack": 2087,
+        "dense chordstream|wildcard -> minijack": 4174
+      },
+      "internal1s": {
+        "accuracy": 0.8145222994378506,
+        "correctMs": 257622,
+        "labelledMs": 316286,
+        "uncoveredMs": 0,
+        "confusion": {
+          "release -> density": 6256,
+          "coordination|chordjack -> density": 2542,
+          "tech -> fast chordstream": 202,
+          "break -> minijack": 6198,
+          "speed|tech -> dense chordstream": 487,
+          "tech -> dense chordstream": 487,
+          "ln wildcard -> technical": 7949,
+          "coordination -> density": 13412,
+          "density -> inverse": 10522,
+          "break -> density": 6174,
+          "break -> chordjack": 87,
+          "speed -> dense chordstream": 174,
+          "inverse -> ln wildcard": 1913,
+          "ln wildcard -> chordjack": 87,
+          "dense chordstream|wildcard -> minijack": 2174
+        }
+      },
+      "segments": 48,
+      "boundaryOracle": 0.9974416083281413
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "EE",
+      "partition": "automatic",
+      "accuracy": 0.6302281368821293,
+      "correctMs": 132931.5,
+      "labelledMs": 210926,
+      "uncoveredMs": 0,
+      "confusion": {
+        "release -> ln wildcard": 1432.5,
+        "density -> ln wildcard": 1263.5,
+        "density -> coordination": 9522.5,
+        "coordination -> density": 5972,
+        "break -> density": 4634,
+        "break -> ln wildcard": 505.5,
+        "technical -> density": 10787,
+        "inverse -> density": 2570.5,
+        "inverse -> break": 126.5,
+        "ln wildcard -> break": 2697,
+        "break -> release": 11896,
+        "coordination -> release": 421.5,
+        "inverse -> ln wildcard": 4466.5,
+        "break -> fast chordstream": 3034,
+        "break -> coordination": 927,
+        "release -> break": 5393,
+        "density -> technical": 1306.5,
+        "ln wildcard -> technical": 9142.5,
+        "break -> technical": 829,
+        "break -> inverse": 1067.5
+      },
+      "internal1s": {
+        "accuracy": 0.6876803658850812,
+        "correctMs": 106755.5,
+        "labelledMs": 155240,
+        "uncoveredMs": 0,
+        "confusion": {
+          "release -> ln wildcard": 432.5,
+          "density -> ln wildcard": 263.5,
+          "density -> coordination": 8522.5,
+          "technical -> density": 8787,
+          "inverse -> density": 697,
+          "ln wildcard -> break": 697,
+          "break -> release": 9106.5,
+          "coordination -> density": 3519,
+          "inverse -> ln wildcard": 2045,
+          "break -> fast chordstream": 2118,
+          "release -> break": 3393,
+          "break -> density": 2454.5,
+          "density -> technical": 306.5,
+          "ln wildcard -> technical": 6142.5
+        }
+      },
+      "segments": 26,
+      "boundaryOracle": 0.8325028683045239
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "EE",
+      "partition": "fixed_original",
+      "accuracy": 0.6110863525596655,
+      "correctMs": 128894,
+      "labelledMs": 210926,
+      "uncoveredMs": 0,
+      "confusion": {
+        "release -> ln wildcard": 1432.5,
+        "density -> ln wildcard": 1263.5,
+        "density -> coordination": 9522.5,
+        "coordination -> density": 5972,
+        "break -> density": 8679,
+        "break -> ln wildcard": 498,
+        "technical -> density": 10787,
+        "inverse -> density": 2570.5,
+        "inverse -> break": 126.5,
+        "ln wildcard -> break": 2697,
+        "break -> release": 11896,
+        "coordination -> release": 421.5,
+        "inverse -> ln wildcard": 4466.5,
+        "break -> fast chordstream": 3034,
+        "break -> coordination": 927,
+        "release -> break": 5393,
+        "density -> technical": 1306.5,
+        "ln wildcard -> technical": 9142.5,
+        "break -> technical": 829,
+        "break -> inverse": 1067.5
+      },
+      "internal1s": {
+        "accuracy": 0.6664390620973976,
+        "correctMs": 103458,
+        "labelledMs": 155240,
+        "uncoveredMs": 0,
+        "confusion": {
+          "release -> ln wildcard": 432.5,
+          "density -> ln wildcard": 263.5,
+          "density -> coordination": 8522.5,
+          "technical -> density": 8787,
+          "inverse -> density": 697,
+          "ln wildcard -> break": 697,
+          "break -> release": 9106.5,
+          "coordination -> density": 3519,
+          "inverse -> ln wildcard": 2045,
+          "break -> fast chordstream": 2118,
+          "break -> density": 5752,
+          "release -> break": 3393,
+          "density -> technical": 306.5,
+          "ln wildcard -> technical": 6142.5
+        }
+      },
+      "segments": 27,
+      "boundaryOracle": 0.8437224429420744
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "EE",
+      "partition": "human_boundary",
+      "accuracy": 0.7267288053630183,
+      "correctMs": 153286,
+      "labelledMs": 210926,
+      "uncoveredMs": 0,
+      "confusion": {
+        "density -> coordination": 10786,
+        "technical -> density": 10787,
+        "ln wildcard -> break": 2697,
+        "break -> release": 12472,
+        "inverse -> ln wildcard": 4045,
+        "ln wildcard -> density": 2697,
+        "break -> density": 5730,
+        "release -> break": 5393,
+        "ln wildcard -> technical": 3033
+      },
+      "internal1s": {
+        "accuracy": 0.7555140427724814,
+        "correctMs": 117286,
+        "labelledMs": 155240,
+        "uncoveredMs": 0,
+        "confusion": {
+          "density -> coordination": 8786,
+          "technical -> density": 8787,
+          "ln wildcard -> break": 697,
+          "break -> release": 8786,
+          "inverse -> ln wildcard": 2045,
+          "ln wildcard -> density": 697,
+          "break -> density": 3730,
+          "release -> break": 3393,
+          "ln wildcard -> technical": 1033
+        }
+      },
+      "segments": 29,
+      "boundaryOracle": 1
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "RJ",
+      "partition": "automatic",
+      "accuracy": 0.92562359031948,
+      "correctMs": 194523.5,
+      "labelledMs": 210154,
+      "uncoveredMs": 0,
+      "confusion": {
+        "break -> coordination": 3576.5,
+        "coordination -> density": 1000,
+        "break -> density": 211.5,
+        "chordjack|fast chordstream -> break": 2827,
+        "chordjack|fast chordstream -> coordination": 1615,
+        "break -> technical": 4718,
+        "break -> chordjack": 346.5,
+        "coordination -> break": 288,
+        "break -> dense chordstream": 125,
+        "chordjack -> dense chordstream": 846,
+        "chordjack -> coordination": 77
+      },
+      "internal1s": {
+        "accuracy": 0.9597457507681033,
+        "correctMs": 170244.5,
+        "labelledMs": 177385,
+        "uncoveredMs": 0,
+        "confusion": {
+          "break -> coordination": 730.5,
+          "chordjack|fast chordstream -> break": 1692,
+          "break -> technical": 4718
+        }
+      },
+      "segments": 26,
+      "boundaryOracle": 0.9480737935038115
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "RJ",
+      "partition": "fixed_original",
+      "accuracy": 0.8476569563272648,
+      "correctMs": 178138.5,
+      "labelledMs": 210154,
+      "uncoveredMs": 0,
+      "confusion": {
+        "break -> coordination": 19961.5,
+        "coordination -> density": 1000,
+        "break -> density": 211.5,
+        "chordjack|fast chordstream -> break": 2827,
+        "chordjack|fast chordstream -> coordination": 1615,
+        "break -> technical": 4718,
+        "break -> chordjack": 346.5,
+        "coordination -> break": 288,
+        "break -> dense chordstream": 125,
+        "chordjack -> dense chordstream": 846,
+        "chordjack -> coordination": 77
+      },
+      "internal1s": {
+        "accuracy": 0.8673760464526313,
+        "correctMs": 153859.5,
+        "labelledMs": 177385,
+        "uncoveredMs": 0,
+        "confusion": {
+          "break -> coordination": 17115.5,
+          "chordjack|fast chordstream -> break": 1692,
+          "break -> technical": 4718
+        }
+      },
+      "segments": 27,
+      "boundaryOracle": 0.9480737935038115
+    },
+    {
+      "condition": "neutral_hands",
+      "chart": "RJ",
+      "partition": "human_boundary",
+      "accuracy": 0.9780399135871789,
+      "correctMs": 205539,
+      "labelledMs": 210154,
+      "uncoveredMs": 0,
+      "confusion": {
+        "dense chordstream -> minijack": 2769,
+        "break -> release": 1846
+      },
+      "internal1s": {
+        "accuracy": 0.9956647969106746,
+        "correctMs": 176616,
+        "labelledMs": 177385,
+        "uncoveredMs": 0,
+        "confusion": {
+          "dense chordstream -> minijack": 769
+        }
+      },
+      "segments": 17,
+      "boundaryOracle": 1
     }
   ],
   "summaries": [
@@ -12439,6 +13301,213 @@
         [
           "break -> density",
           10174
+        ],
+        [
+          "density|inverse -> break",
+          9796
+        ],
+        [
+          "coordination -> chordjack",
+          9600
+        ]
+      ]
+    },
+    {
+      "condition": "neutral_hands",
+      "partition": "automatic",
+      "durationAccuracy": 0.6801497642450778,
+      "chartMeanAccuracy": 0.6879112752066047,
+      "uncoveredMs": 37.5,
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788
+        ],
+        [
+          "break -> technical",
+          32439.5
+        ],
+        [
+          "break -> fast chordstream",
+          30500.5
+        ],
+        [
+          "ln wildcard -> technical",
+          20814
+        ],
+        [
+          "wildcard -> break",
+          19725
+        ],
+        [
+          "density -> coordination",
+          15631
+        ],
+        [
+          "coordination -> density",
+          15630
+        ],
+        [
+          "fast chordstream|wildcard -> dense chordstream",
+          14087
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "ln wildcard -> density",
+          13240
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "break -> release",
+          11896
+        ],
+        [
+          "ln wildcard -> break",
+          11622
+        ],
+        [
+          "break -> density",
+          10790.5
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600
+        ]
+      ]
+    },
+    {
+      "condition": "neutral_hands",
+      "partition": "fixed_original",
+      "durationAccuracy": 0.6892130300125507,
+      "chartMeanAccuracy": 0.6958552679007847,
+      "uncoveredMs": 37.5,
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788
+        ],
+        [
+          "break -> technical",
+          28728
+        ],
+        [
+          "coordination -> density",
+          22977
+        ],
+        [
+          "break -> coordination",
+          21204.5
+        ],
+        [
+          "wildcard -> break",
+          19725
+        ],
+        [
+          "break -> density",
+          18040.5
+        ],
+        [
+          "ln wildcard -> density",
+          17602
+        ],
+        [
+          "density -> coordination",
+          14343
+        ],
+        [
+          "fast chordstream|wildcard -> dense chordstream",
+          14087
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "ln wildcard -> technical",
+          12242
+        ],
+        [
+          "break -> release",
+          11896
+        ],
+        [
+          "break -> fast chordstream",
+          11793
+        ],
+        [
+          "ln wildcard -> break",
+          11622
+        ],
+        [
+          "technical -> chordjack",
+          9375
+        ]
+      ]
+    },
+    {
+      "condition": "neutral_hands",
+      "partition": "human_boundary",
+      "durationAccuracy": 0.7470140728482374,
+      "chartMeanAccuracy": 0.746296112449173,
+      "uncoveredMs": 0,
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          41700
+        ],
+        [
+          "wildcard -> break",
+          28800
+        ],
+        [
+          "dense chordstream|wildcard -> tech",
+          19465
+        ],
+        [
+          "ln wildcard -> density",
+          17850
+        ],
+        [
+          "ln wildcard -> break",
+          17195
+        ],
+        [
+          "ln wildcard -> technical",
+          16475
+        ],
+        [
+          "break -> density",
+          15904
+        ],
+        [
+          "density -> coordination",
+          15683
+        ],
+        [
+          "coordination -> density",
+          15412
+        ],
+        [
+          "density -> inverse",
+          14610
+        ],
+        [
+          "chordjack -> break",
+          14400
+        ],
+        [
+          "break -> release",
+          14318
+        ],
+        [
+          "technical -> density",
+          10787
         ],
         [
           "density|inverse -> break",

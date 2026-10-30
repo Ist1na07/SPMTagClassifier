@@ -8,7 +8,8 @@ const save=(file,data)=>fs.writeFileSync(path.join(out,file),JSON.stringify(data
 const records=records7(),manual=records.filter(r=>r.dataset==='manual');
 let conditions=[['original',[]],...['area','adjacency','heldOrder','phase','sustaining','releaseIsolation'].map(k=>[patches[k].id,[patches[k]]]),
  ['logical',patches.logical],['logical_release',patches.logical.concat(patches.releaseIsolation)],
- ['transformed_scale',[patches.transformedScale]],['logical_release_scale',patches.logical.concat(patches.releaseIsolation,patches.transformedScale)]];
+ ['transformed_scale',[patches.transformedScale]],['logical_release_scale',patches.logical.concat(patches.releaseIsolation,patches.transformedScale)],
+ ['neutral_hands',[patches.neutralHands]]];
 const cached=new Map(),numeric=[],parity=[];
 const api=loadLab();
 const requested=process.argv.slice(2);

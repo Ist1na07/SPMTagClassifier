@@ -219,6 +219,20 @@ class Model(torch.nn.Module):
         columns={c:fine[:,i] for i,c in enumerate(self.fine_classes)}
         columns.update({c:mix[:,i] for i,c in enumerate(['rc mix','ln mix','hybrid'])})
         return p,torch.stack([columns[c] for c in MAP_CLASSES],1),bag
+    def local_control_objective(self,data,config):
+        """The actual local training target for the no-weak-feedback controls.
+
+        A detached weak chart loss is NOT a constant when line search moves
+        local parameters. Optimize this explicit local target first, freeze the
+        local model, then fit the chart head. Hyperparameters still get selected
+        together by the final inner task, not by a local proxy.
+        """
+        p=torch.softmax(self.local(data.x)+(data.prior if self.prior else 0),dim=1)
+        strong=-(torch.log(torch.clamp((p[data.edges]*data.mask).sum(1),min=1e-15))*data.strongw).sum() if data.edges else p.sum()*0
+        loss=config['strongWeight']*strong
+        if data.variant=='copied_prior' and data.copy_edges:
+            loss=loss-(torch.log(torch.clamp(p[data.copy_edges,data.copy_y],min=1e-15))*data.copy_w).sum()
+        return loss+config['localL2']*(self.local.weight.square().sum()+self.local.bias.square().sum())/2
     def objective(self,data,config):
         p,z,_=self(data,config)
         bce=torch.nn.functional.binary_cross_entropy_with_logits(z[data.weak],data.y,reduction='none').mean(1)

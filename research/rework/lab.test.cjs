@@ -5,6 +5,7 @@ const {loadLab,context,inspect}=require('./legacy-lab.cjs');
 const {records7,scoreIntervals}=require('./data.cjs');
 const patches=require('./patches.cjs');
 const legacy=require('../../src/legacy/tag-engine.cjs');
+const {mirrorText}=require('./mirror.cjs');
 function chart(notes,timing='0,500,4,2,0,100,1,0'){
  return 'osu file format v14\n[General]\nMode:3\n[Difficulty]\nCircleSize:7\n[TimingPoints]\n'+timing+'\n[HitObjects]\n'+notes.map(n=>`${Math.floor((n[1]+.5)*512/7)},192,${n[0]},${n.length>2?128:1},0,${n.length>2?n[2]+':0:0:0:0':'0:0:0:0:'}`).join('\n');
 }
@@ -72,5 +73,13 @@ test('uniform confidence rescaling must not turn a 60% dominant pattern into Mix
  const weaker=segments.map(s=>({...s,confidence:.4}));
  assert.deepEqual(original.lab.aggregateOverall(weaker).tags,['rc mix']);
  assert.deepEqual(fixed.lab.aggregateOverall(weaker).tags,['chordjack']);
+});
+test('neutral-hand alternation is invariant to mirror for single, balanced and centre rows',()=>{
+ const api=loadLab({patches:[patches.neutralHands]});
+ const notes=[[0,0],[125,3],[250,6],[375,0],[375,6],[500,0],[625,6],[750,0],[875,6],[1000,3],[1125,2],[1250,4],[1375,2],[1500,4],[1625,3]];
+ const text=chart(notes),a=context(api.lab,text),b=context(api.lab,mirrorText(text));
+ for(let i=0;i<a.windows.length;i++)for(const k of Object.keys(a.windows[i])){
+  assert.ok(Math.abs(a.windows[i][k]-b.windows[i][k])<1e-10,k);
+ }
 });
 module.exports={chart};

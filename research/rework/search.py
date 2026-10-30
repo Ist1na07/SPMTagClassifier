@@ -15,15 +15,22 @@ def configs(variant):
     if variant=='frozen_prior':grid={**grid,'localL2':[.03],'strongWeight':[.5]}
     return [dict(zip(grid,values)) for values in itertools.product(*grid.values())]
 _MAIN=_MANUAL=_PLAN=None
-def init_worker(plan):
-    global _MAIN,_MANUAL,_PLAN
-    _MAIN,_MANUAL,_=load();_PLAN=plan
+_REFINE=False
+_STATES=None
+def init_worker(plan,refine=False,states=None):
+    global _MAIN,_MANUAL,_PLAN,_REFINE,_STATES
+    _MAIN,_MANUAL,_=load();_PLAN=plan;_REFINE=refine;_STATES=states
+
+def fit_candidate(rows,variant,cfg,key,refine=False,states=None):
+    if not refine:return fit(rows,variant,cfg)
+    from convergence import refined_fit
+    return refined_fit(rows,variant,cfg,Path(states)/(key.replace('/','-')+'.pt')if states else None)
 def run(job):
     variant,outer,inner,cid=job;split=_PLAN[outer]['inner'][inner]
     train=[_MAIN[i] for i in split['train']]+[_MANUAL[i] for i in split['strongTrain']]
     val=[_MAIN[i] for i in split['validation']];strong=[_MANUAL[i] for i in split['strongValidation']]
     cfg=configs(variant)[cid];start=time.perf_counter()
-    model,packed,fittrace=fit(train,variant,cfg)
+    model,packed,fittrace=fit_candidate(train,variant,cfg,'/'.join(map(str,job)),_REFINE,_STATES)
     prob,_,_=predict(model,packed,val,cfg);_,local,_=predict(model,packed,strong,cfg)
     return {'key':'/'.join(map(str,job)),'variant':variant,'outer':outer,'inner':inner,'configId':cid,
       'config':cfg,'fit':{**fittrace,'seconds':time.perf_counter()-start},
@@ -71,6 +78,11 @@ def main_run(args):
       'classSupport':record_support(main,list(range(len(main)))),'plans':plans,
       'records':[{'index':i,'uid':r['uid'],'group':r['group'],'tags':target(r),'recordWeight':r['recordWeight']} for i,r in enumerate(main)],
       'manual':[{'index':i,'uid':r['uid'],'group':r['group']}for i,r in enumerate(manual)]}
+    if args.refine:
+        from convergence import POLICY
+        protocol.update(id='7k-mil-fixed-original-segmentation-r3',optimizer=POLICY,
+          refinementScope='same splits/grid/final inner objective; train-only optimizer refinement; detached controls fit their local objective before fitting the frozen-local map head',
+          reusedFits='r2 fits already satisfying the new gradient stopping condition are retained unchanged')
     old=OUT/'protocol.json'
     if old.exists() and json.loads(old.read_text(encoding='utf8'))!=protocol:
         raise RuntimeError('Protocol differs from existing run; use a new result directory/revision, not a silent mixed resume')
@@ -81,9 +93,26 @@ def main_run(args):
     if journal.exists():
         with journal.open(encoding='utf8') as f:
             for line in f:r=json.loads(line);done[r['key']]=r
+    if args.reuse:
+        if not args.refine:raise RuntimeError('Reuse is restricted to the explicit r2 -> r3 train-only refinement')
+        source=Path(args.reuse);previous=json.loads((source/'protocol.json').read_text(encoding='utf8'))
+        for key in ['variants','grid','thresholds','plans','records','manual']:
+            if protocol[key]!=previous[key]:raise RuntimeError('Cannot reuse different '+key)
+        previous_fits=json.loads((source/'fits.json').read_text(encoding='utf8'))
+        eligible={r['key']for r in previous_fits if r['fit']['gradientMax']<=POLICY['gradientMax']
+                  and r['variant']not in ['strong_only_prior','copied_prior']}
+        with Path(args.reuse_journal).open(encoding='utf8')as f,journal.open('a',encoding='utf8')as destination:
+            for line in f:
+                r=json.loads(line)
+                if r['key']not in eligible or r['key']in done:continue
+                r['reusedFrom']={'directory':str(source),'sourceCommit':previous['sourceCommit'],
+                  'reason':'already satisfies identical training-objective gradient stopping condition'}
+                r['fit']['refinement']={'policy':POLICY,'status':'small_gradient_reused','chunks':[],
+                  'loss':r['fit']['loss'],'gradientMax':r['fit']['gradientMax']}
+                done[r['key']]=r;destination.write(json.dumps(r,ensure_ascii=False,allow_nan=False)+'\n')
     jobs=[(v,o,i,c) for v in variants for o in range(6) for i in range(3) for c in range(len(configs(v))) if '/'.join(map(str,(v,o,i,c))) not in done]
     print('pending fits',len(jobs),'workers',args.workers,flush=True)
-    with journal.open('a',encoding='utf8') as f,concurrent.futures.ProcessPoolExecutor(max_workers=args.workers,initializer=init_worker,initargs=(plans,)) as pool:
+    with journal.open('a',encoding='utf8') as f,concurrent.futures.ProcessPoolExecutor(max_workers=args.workers,initializer=init_worker,initargs=(plans,args.refine,args.states)) as pool:
         futures={pool.submit(run,j):j for j in jobs}
         for future in concurrent.futures.as_completed(futures):
             r=future.result();done[r['key']]=r;f.write(json.dumps(r,ensure_ascii=False,allow_nan=False)+'\n');f.flush()
@@ -118,7 +147,7 @@ def main_run(args):
         v,o,cfg,t=selection['variant'],selection['outer'],selection['config'],selection['threshold'];split=plans[o]
         train=[main[i]for i in split['train']]+[manual[i]for i in split['strongTrain']]
         test=[main[i]for i in split['test']];strong=[manual[i]for i in split['strongTest']]
-        model,packed,trace=fit(train,v,cfg)
+        model,packed,trace=fit_candidate(train,v,cfg,'outer/'+v+'/'+str(o),args.refine,args.states)
         prob,_,bag=predict(model,packed,test,cfg);_,local,_=predict(model,packed,strong,cfg)
         pred=predict_tags(prob,t);seg=segment_metrics(strong,local)
         save_model(OUT/'models'/f'{v}-{o}.json',model,packed,cfg,t,{'outer':o,'trainUids':[r['uid']for r in train],
@@ -136,5 +165,8 @@ def main_run(args):
       'scope':'fixed original segmentation only; no release or product replacement is implied'})
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--workers',type=int,default=4);parser.add_argument('--variants')
-    parser.add_argument('--output',default=str(OUT));parser.add_argument('--journal',default='.cache/rework-mil-stage1-r2-fits.jsonl');args=parser.parse_args()
+    parser.add_argument('--output',default=str(OUT));parser.add_argument('--journal',default='.cache/rework-mil-stage1-r2-fits.jsonl')
+    parser.add_argument('--refine',action='store_true');parser.add_argument('--states',default='.cache/rework-r3-states')
+    parser.add_argument('--reuse');parser.add_argument('--reuse-journal',default='.cache/rework-mil-stage1-r2-fits.jsonl')
+    args=parser.parse_args()
     main_run(args)

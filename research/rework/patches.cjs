@@ -65,6 +65,16 @@ const transformedScale=patch('transformed_scale','Normalize log-transformed sign
 const weightedShares=patch('weighted_shares','Compute class shares with the SAME weighted-time numerator and denominator',(s,r)=>r(s,
  '      total += durS;',
  '      total += durS * Math.max(0.4, seg.confidence);'));
+const neutralHands=patch('neutral_hands','Hand alternation excludes neutral/tied rows and the flexible 7K centre',(s,r)=>{
+ s=r(s,'      const split2 = K <= 1 ? 1 : Math.ceil(K / 2);','      const split2 = Math.floor(K / 2);');
+ s=r(s,'        let col = -1, left = 0;','        let col = -1, left = 0, right = 0;');
+ s=r(s,'            if (c < split2) left++;','            if (c < split2) left++;\n            else if(c>=Math.ceil(K/2))right++;');
+ s=r(s,'hand: left * 2 >= r.hits ? 0 : 1','hand: left>right?0:right>left?1:-1');
+ s=r(s,'const cont = seq[i].hand !== seq[i - 1].hand && (i >= 2 ?',
+  'const cont = seq[i].hand>=0 && seq[i-1].hand>=0 && seq[i].hand !== seq[i - 1].hand && (i >= 2 ?');
+ return r(s,'run = i + 1 < seq.length && seq[i + 1].hand !== seq[i].hand ? 2 : 1;',
+  'run = i + 1 < seq.length && seq[i].hand>=0 && seq[i+1].hand>=0 && seq[i + 1].hand !== seq[i].hand ? 2 : 1;');
+});
 module.exports={area,adjacency,heldOrder,phase,releaseIsolation,sustaining,
- transformedScale,weightedShares,
+ transformedScale,weightedShares,neutralHands,
  logical:[area,adjacency,heldOrder,phase,sustaining]};

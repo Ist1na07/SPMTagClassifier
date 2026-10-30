@@ -1,0 +1,739 @@
+{
+  "scope": "training-only; same ten gradient-selected cases; no validation/test scoring",
+  "policy": {
+    "id": "train-stability-r3",
+    "gradientMax": 1e-05,
+    "chunkIterations": 250,
+    "maxChunks": 4,
+    "lbfgsGradientTolerance": 1e-07,
+    "lbfgsChangeTolerance": 1e-12,
+    "relativeLossChange": 1e-08,
+    "probabilityMeanChange": 1e-05,
+    "probabilityMaxChange": 0.001,
+    "consecutiveStableChecks": 2
+  },
+  "cases": [
+    {
+      "fitKey": "original56/3/1/3",
+      "original": {
+        "adamSteps": 300,
+        "lbfgsEvaluations": 110,
+        "loss": 0.39173612026984583,
+        "gradientMax": 0.001832435890865139
+      },
+      "refinement": {
+        "policy": {
+          "id": "train-stability-r3",
+          "gradientMax": 1e-05,
+          "chunkIterations": 250,
+          "maxChunks": 4,
+          "lbfgsGradientTolerance": 1e-07,
+          "lbfgsChangeTolerance": 1e-12,
+          "relativeLossChange": 1e-08,
+          "probabilityMeanChange": 1e-05,
+          "probabilityMaxChange": 0.001,
+          "consecutiveStableChecks": 2
+        },
+        "status": "budget_exhausted",
+        "chunks": [
+          {
+            "chunk": 1,
+            "evaluations": 287,
+            "loss": 0.39104368134594075,
+            "gradientMax": 0.0011459764434802809,
+            "relativeLossChange": 0.000692438923905081,
+            "segmentProbabilityMeanChange": 0.0017648446462618505,
+            "segmentProbabilityMaxChange": 0.1381054948437922,
+            "mapProbabilityMeanChange": 0.0033200058965609665,
+            "mapProbabilityMaxChange": 0.13493033834211554,
+            "trainingPrimaryFlipFraction": 0.020721599219892736
+          },
+          {
+            "chunk": 2,
+            "evaluations": 300,
+            "loss": 0.3910142212733799,
+            "gradientMax": 0.0019296932586201658,
+            "relativeLossChange": 2.946007256082739e-05,
+            "segmentProbabilityMeanChange": 0.0005228636631782561,
+            "segmentProbabilityMaxChange": 0.05365366895811191,
+            "mapProbabilityMeanChange": 0.0005177094783868512,
+            "mapProbabilityMaxChange": 0.019543805457130303,
+            "trainingPrimaryFlipFraction": 0.0078010726474890294
+          },
+          {
+            "chunk": 3,
+            "evaluations": 312,
+            "loss": 0.39096406755604474,
+            "gradientMax": 0.0023380403060714134,
+            "relativeLossChange": 5.0153717335188475e-05,
+            "segmentProbabilityMeanChange": 0.000818288928221968,
+            "segmentProbabilityMaxChange": 0.06907650548820887,
+            "mapProbabilityMeanChange": 0.0008939082837469229,
+            "mapProbabilityMaxChange": 0.04248810543813003,
+            "trainingPrimaryFlipFraction": 0.00901999024865919
+          },
+          {
+            "chunk": 4,
+            "evaluations": 312,
+            "loss": 0.3909090461313501,
+            "gradientMax": 0.0008948475027568964,
+            "relativeLossChange": 5.502142469465676e-05,
+            "segmentProbabilityMeanChange": 0.0007776278126433371,
+            "segmentProbabilityMaxChange": 0.06967802732971062,
+            "mapProbabilityMeanChange": 0.0009849138805753973,
+            "mapProbabilityMaxChange": 0.038238563259195835,
+            "trainingPrimaryFlipFraction": 0.008532423208191127
+          }
+        ],
+        "loss": 0.3909090461313501,
+        "gradientMax": 0.0008948475027568964
+      },
+      "seconds": 14.894210299999031
+    },
+    {
+      "fitKey": "original56/2/1/16",
+      "original": {
+        "adamSteps": 300,
+        "lbfgsEvaluations": 102,
+        "loss": 0.7045037000531422,
+        "gradientMax": 0.00011037987743258435
+      },
+      "refinement": {
+        "policy": {
+          "id": "train-stability-r3",
+          "gradientMax": 1e-05,
+          "chunkIterations": 250,
+          "maxChunks": 4,
+          "lbfgsGradientTolerance": 1e-07,
+          "lbfgsChangeTolerance": 1e-12,
+          "relativeLossChange": 1e-08,
+          "probabilityMeanChange": 1e-05,
+          "probabilityMaxChange": 0.001,
+          "consecutiveStableChecks": 2
+        },
+        "status": "train_prediction_stable",
+        "chunks": [
+          {
+            "chunk": 1,
+            "evaluations": 269,
+            "loss": 0.7044671625360757,
+            "gradientMax": 8.615217755738236e-05,
+            "relativeLossChange": 3.653751706655939e-05,
+            "segmentProbabilityMeanChange": 0.0002197702533634369,
+            "segmentProbabilityMaxChange": 0.010360150420578418,
+            "mapProbabilityMeanChange": 0.0006625684404590459,
+            "mapProbabilityMaxChange": 0.018710061111275128,
+            "trainingPrimaryFlipFraction": 0.005551532705768767
+          },
+          {
+            "chunk": 2,
+            "evaluations": 106,
+            "loss": 0.7044669112142695,
+            "gradientMax": 9.19940338539758e-05,
+            "relativeLossChange": 2.5132180614395594e-07,
+            "segmentProbabilityMeanChange": 1.8740264692549512e-05,
+            "segmentProbabilityMaxChange": 0.0010895882393656409,
+            "mapProbabilityMeanChange": 8.422223595997147e-05,
+            "mapProbabilityMaxChange": 0.0017956598555110004,
+            "trainingPrimaryFlipFraction": 0.0
+          },
+          {
+            "chunk": 3,
+            "evaluations": 5,
+            "loss": 0.7044669112136924,
+            "gradientMax": 8.88206387526097e-05,
+            "relativeLossChange": 5.770939282001564e-13,
+            "segmentProbabilityMeanChange": 3.0603500881251115e-09,
+            "segmentProbabilityMaxChange": 9.369863923636146e-08,
+            "mapProbabilityMeanChange": 6.640987351427146e-09,
+            "mapProbabilityMaxChange": 1.555859719948316e-07,
+            "trainingPrimaryFlipFraction": 0.0
+          },
+          {
+            "chunk": 4,
+            "evaluations": 15,
+            "loss": 0.7044669112096841,
+            "gradientMax": 9.199238834773802e-05,
+            "relativeLossChange": 4.008349208106665e-12,
+            "segmentProbabilityMeanChange": 3.867331785856739e-09,
+            "segmentProbabilityMaxChange": 1.1327648019587855e-07,
+            "mapProbabilityMeanChange": 7.766579964525704e-09,
+            "mapProbabilityMaxChange": 1.5952593769574808e-07,
+            "trainingPrimaryFlipFraction": 0.0
+          }
+        ],
+        "loss": 0.7044669112096841,
+        "gradientMax": 9.199238834773802e-05
+      },
+      "seconds": 6.159010899998975
+    },
+    {
+      "fitKey": "original56_context/3/1/3",
+      "original": {
+        "adamSteps": 300,
+        "lbfgsEvaluations": 121,
+        "loss": 0.3704567004559609,
+        "gradientMax": 0.0028329259784993415
+      },
+      "refinement": {
+        "policy": {
+          "id": "train-stability-r3",
+          "gradientMax": 1e-05,
+          "chunkIterations": 250,
+          "maxChunks": 4,
+          "lbfgsGradientTolerance": 1e-07,
+          "lbfgsChangeTolerance": 1e-12,
+          "relativeLossChange": 1e-08,
+          "probabilityMeanChange": 1e-05,
+          "probabilityMaxChange": 0.001,
+          "consecutiveStableChecks": 2
+        },
+        "status": "budget_exhausted",
+        "chunks": [
+          {
+            "chunk": 1,
+            "evaluations": 280,
+            "loss": 0.36987217183893967,
+            "gradientMax": 0.0010831990157166912,
+            "relativeLossChange": 0.0005845286170212405,
+            "segmentProbabilityMeanChange": 0.0028581051607026614,
+            "segmentProbabilityMaxChange": 0.14278081997268544,
+            "mapProbabilityMeanChange": 0.0032598705531479252,
+            "mapProbabilityMaxChange": 0.10534507511050734,
+            "trainingPrimaryFlipFraction": 0.02779132130667967
+          },
+          {
+            "chunk": 2,
+            "evaluations": 276,
+            "loss": 0.3695325400634858,
+            "gradientMax": 0.0012564254197828827,
+            "relativeLossChange": 0.0003396317754538747,
+            "segmentProbabilityMeanChange": 0.0015974870700436621,
+            "segmentProbabilityMaxChange": 0.18973139390880442,
+            "mapProbabilityMeanChange": 0.0025439580812630113,
+            "mapProbabilityMaxChange": 0.07801125032990386,
+            "trainingPrimaryFlipFraction": 0.011945392491467578
+          },
+          {
+            "chunk": 3,
+            "evaluations": 291,
+            "loss": 0.36949116546862876,
+            "gradientMax": 0.0006688541176225571,
+            "relativeLossChange": 4.137459485703543e-05,
+            "segmentProbabilityMeanChange": 0.0007122557698054899,
+            "segmentProbabilityMaxChange": 0.08398002937507237,
+            "mapProbabilityMeanChange": 0.0006633132165665332,
+            "mapProbabilityMaxChange": 0.0315216766564399,
+            "trainingPrimaryFlipFraction": 0.007069722086786933
+          },
+          {
+            "chunk": 4,
+            "evaluations": 310,
+            "loss": 0.36947447012097967,
+            "gradientMax": 0.0006699923584212821,
+            "relativeLossChange": 1.66953476490872e-05,
+            "segmentProbabilityMeanChange": 0.00037094535303379325,
+            "segmentProbabilityMaxChange": 0.026371462440126225,
+            "mapProbabilityMeanChange": 0.00040869763403220344,
+            "mapProbabilityMaxChange": 0.02166040583685669,
+            "trainingPrimaryFlipFraction": 0.0024378352023403218
+          }
+        ],
+        "loss": 0.36947447012097967,
+        "gradientMax": 0.0006699923584212821
+      },
+      "seconds": 13.204485100000966
+    },
+    {
+      "fitKey": "original56_context/2/0/2",
+      "original": {
+        "adamSteps": 300,
+        "lbfgsEvaluations": 102,
+        "loss": 0.33650285544781433,
+        "gradientMax": 0.0001494576193854962
+      },
+      "refinement": {
+        "policy": {
+          "id": "train-stability-r3",
+          "gradientMax": 1e-05,
+          "chunkIterations": 250,
+          "maxChunks": 4,
+          "lbfgsGradientTolerance": 1e-07,
+          "lbfgsChangeTolerance": 1e-12,
+          "relativeLossChange": 1e-08,
+          "probabilityMeanChange": 1e-05,
+          "probabilityMaxChange": 0.001,
+          "consecutiveStableChecks": 2
+        },
+        "status": "budget_exhausted",
+        "chunks": [
+          {
+            "chunk": 1,
+            "evaluations": 264,
+            "loss": 0.3363298109828602,
+            "gradientMax": 0.00021543760654365446,
+            "relativeLossChange": 0.00017304446495414183,
+            "segmentProbabilityMeanChange": 0.0010912070152012325,
+            "segmentProbabilityMaxChange": 0.18930700893782454,
+            "mapProbabilityMeanChange": 0.0016033486095636152,
+            "mapProbabilityMaxChange": 0.16481555516920326,
+            "trainingPrimaryFlipFraction": 0.012419503219871205
+          },
+          {
+            "chunk": 2,
+            "evaluations": 298,
+            "loss": 0.3363099691132764,
+            "gradientMax": 0.00035291342764068746,
+            "relativeLossChange": 1.9841869583814287e-05,
+            "segmentProbabilityMeanChange": 0.0003983183170181394,
+            "segmentProbabilityMaxChange": 0.020300248657427328,
+            "mapProbabilityMeanChange": 0.0005409910394043498,
+            "mapProbabilityMaxChange": 0.016732794905474746,
+            "trainingPrimaryFlipFraction": 0.0043698252069917206
+          },
+          {
+            "chunk": 3,
+            "evaluations": 312,
+            "loss": 0.3363059894988681,
+            "gradientMax": 0.00035313630346371476,
+            "relativeLossChange": 3.9796144082893115e-06,
+            "segmentProbabilityMeanChange": 0.00021438668945702557,
+            "segmentProbabilityMaxChange": 0.012123638241781393,
+            "mapProbabilityMeanChange": 0.00025252027733544416,
+            "mapProbabilityMaxChange": 0.00747674876215193,
+            "trainingPrimaryFlipFraction": 0.002529898804047838
+          },
+          {
+            "chunk": 4,
+            "evaluations": 312,
+            "loss": 0.33630238895879827,
+            "gradientMax": 0.00036342391955674713,
+            "relativeLossChange": 3.600540069814695e-06,
+            "segmentProbabilityMeanChange": 0.00015689808952911658,
+            "segmentProbabilityMaxChange": 0.010739996523925432,
+            "mapProbabilityMeanChange": 0.00022866756315472866,
+            "mapProbabilityMaxChange": 0.00795851681606563,
+            "trainingPrimaryFlipFraction": 0.001609935602575897
+          }
+        ],
+        "loss": 0.33630238895879827,
+        "gradientMax": 0.00036342391955674713
+      },
+      "seconds": 13.320967399999063
+    },
+    {
+      "fitKey": "modern40_context/1/0/17",
+      "original": {
+        "adamSteps": 300,
+        "lbfgsEvaluations": 114,
+        "loss": 0.6202027615981427,
+        "gradientMax": 0.0012820432654546176
+      },
+      "refinement": {
+        "policy": {
+          "id": "train-stability-r3",
+          "gradientMax": 1e-05,
+          "chunkIterations": 250,
+          "maxChunks": 4,
+          "lbfgsGradientTolerance": 1e-07,
+          "lbfgsChangeTolerance": 1e-12,
+          "relativeLossChange": 1e-08,
+          "probabilityMeanChange": 1e-05,
+          "probabilityMaxChange": 0.001,
+          "consecutiveStableChecks": 2
+        },
+        "status": "train_prediction_stable",
+        "chunks": [
+          {
+            "chunk": 1,
+            "evaluations": 59,
+            "loss": 0.6201849662998342,
+            "gradientMax": 0.0004879926194392755,
+            "relativeLossChange": 1.779529830847615e-05,
+            "segmentProbabilityMeanChange": 0.00020173854861288496,
+            "segmentProbabilityMaxChange": 0.010774220284345826,
+            "mapProbabilityMeanChange": 0.00038041866477055397,
+            "mapProbabilityMaxChange": 0.01683045414250517,
+            "trainingPrimaryFlipFraction": 0.001683096898292859
+          },
+          {
+            "chunk": 2,
+            "evaluations": 7,
+            "loss": 0.6201849662998342,
+            "gradientMax": 0.0004879926194392755,
+            "relativeLossChange": 0.0,
+            "segmentProbabilityMeanChange": 0.0,
+            "segmentProbabilityMaxChange": 0.0,
+            "mapProbabilityMeanChange": 0.0,
+            "mapProbabilityMaxChange": 0.0,
+            "trainingPrimaryFlipFraction": 0.0
+          },
+          {
+            "chunk": 3,
+            "evaluations": 7,
+            "loss": 0.6201849662998342,
+            "gradientMax": 0.0004879926194392755,
+            "relativeLossChange": 0.0,
+            "segmentProbabilityMeanChange": 0.0,
+            "segmentProbabilityMaxChange": 0.0,
+            "mapProbabilityMeanChange": 0.0,
+            "mapProbabilityMaxChange": 0.0,
+            "trainingPrimaryFlipFraction": 0.0
+          }
+        ],
+        "loss": 0.6201849662998342,
+        "gradientMax": 0.0004879926194392755
+      },
+      "seconds": 3.367956399999457
+    },
+    {
+      "fitKey": "modern40_context/4/2/27",
+      "original": {
+        "adamSteps": 300,
+        "lbfgsEvaluations": 46,
+        "loss": 0.69684887354445,
+        "gradientMax": 0.00011341946813816194
+      },
+      "refinement": {
+        "policy": {
+          "id": "train-stability-r3",
+          "gradientMax": 1e-05,
+          "chunkIterations": 250,
+          "maxChunks": 4,
+          "lbfgsGradientTolerance": 1e-07,
+          "lbfgsChangeTolerance": 1e-12,
+          "relativeLossChange": 1e-08,
+          "probabilityMeanChange": 1e-05,
+          "probabilityMaxChange": 0.001,
+          "consecutiveStableChecks": 2
+        },
+        "status": "small_gradient",
+        "chunks": [
+          {
+            "chunk": 1,
+            "evaluations": 12,
+            "loss": 0.6968488735444498,
+            "gradientMax": 1.927761957970064e-06,
+            "relativeLossChange": 2.220446049250313e-16,
+            "segmentProbabilityMeanChange": 9.574231351887583e-11,
+            "segmentProbabilityMaxChange": 8.91512030865016e-09,
+            "mapProbabilityMeanChange": 2.5377362390796656e-10,
+            "mapProbabilityMaxChange": 1.097975232955406e-08,
+            "trainingPrimaryFlipFraction": 0.0
+          }
+        ],
+        "loss": 0.6968488735444498,
+        "gradientMax": 1.927761957970064e-06
+      },
+      "seconds": 2.3480780999998387
+    },
+    {
+      "fitKey": "corrected56_context/0/2/3",
+      "original": {
+        "adamSteps": 300,
+        "lbfgsEvaluations": 118,
+        "loss": 0.33928980177564544,
+        "gradientMax": 0.001489079300903952
+      },
+      "refinement": {
+        "policy": {
+          "id": "train-stability-r3",
+          "gradientMax": 1e-05,
+          "chunkIterations": 250,
+          "maxChunks": 4,
+          "lbfgsGradientTolerance": 1e-07,
+          "lbfgsChangeTolerance": 1e-12,
+          "relativeLossChange": 1e-08,
+          "probabilityMeanChange": 1e-05,
+          "probabilityMaxChange": 0.001,
+          "consecutiveStableChecks": 2
+        },
+        "status": "budget_exhausted",
+        "chunks": [
+          {
+            "chunk": 1,
+            "evaluations": 291,
+            "loss": 0.3379552561138399,
+            "gradientMax": 0.0007271959818876682,
+            "relativeLossChange": 0.0013345456618055196,
+            "segmentProbabilityMeanChange": 0.0021453301316908154,
+            "segmentProbabilityMaxChange": 0.1883901533893314,
+            "mapProbabilityMeanChange": 0.0048093209428089045,
+            "mapProbabilityMaxChange": 0.18184842855117456,
+            "trainingPrimaryFlipFraction": 0.018031555221637866
+          },
+          {
+            "chunk": 2,
+            "evaluations": 312,
+            "loss": 0.3379089852998953,
+            "gradientMax": 0.0013547398288142947,
+            "relativeLossChange": 4.6270813944593314e-05,
+            "segmentProbabilityMeanChange": 0.0008471470455136613,
+            "segmentProbabilityMaxChange": 0.07274943621723962,
+            "mapProbabilityMeanChange": 0.0008025417562415834,
+            "mapProbabilityMaxChange": 0.026183564365695577,
+            "trainingPrimaryFlipFraction": 0.010267968945654895
+          },
+          {
+            "chunk": 3,
+            "evaluations": 312,
+            "loss": 0.33787870641014317,
+            "gradientMax": 0.0006766493471324539,
+            "relativeLossChange": 3.0278889752155536e-05,
+            "segmentProbabilityMeanChange": 0.0004658501610533532,
+            "segmentProbabilityMaxChange": 0.04494560561199934,
+            "mapProbabilityMeanChange": 0.0006415147121728567,
+            "mapProbabilityMaxChange": 0.014392129612858129,
+            "trainingPrimaryFlipFraction": 0.004007012271475081
+          },
+          {
+            "chunk": 4,
+            "evaluations": 312,
+            "loss": 0.3378351794819812,
+            "gradientMax": 0.000706327760354573,
+            "relativeLossChange": 4.352692816195214e-05,
+            "segmentProbabilityMeanChange": 0.00048516126099773976,
+            "segmentProbabilityMaxChange": 0.05189121823937315,
+            "mapProbabilityMeanChange": 0.0008270510678703928,
+            "mapProbabilityMaxChange": 0.026546264288485333,
+            "trainingPrimaryFlipFraction": 0.006010518407212622
+          }
+        ],
+        "loss": 0.3378351794819812,
+        "gradientMax": 0.000706327760354573
+      },
+      "seconds": 13.280174800000168
+    },
+    {
+      "fitKey": "corrected56_context/5/1/16",
+      "original": {
+        "adamSteps": 300,
+        "lbfgsEvaluations": 105,
+        "loss": 0.622119322423383,
+        "gradientMax": 0.00016610879944829976
+      },
+      "refinement": {
+        "policy": {
+          "id": "train-stability-r3",
+          "gradientMax": 1e-05,
+          "chunkIterations": 250,
+          "maxChunks": 4,
+          "lbfgsGradientTolerance": 1e-07,
+          "lbfgsChangeTolerance": 1e-12,
+          "relativeLossChange": 1e-08,
+          "probabilityMeanChange": 1e-05,
+          "probabilityMaxChange": 0.001,
+          "consecutiveStableChecks": 2
+        },
+        "status": "train_prediction_stable",
+        "chunks": [
+          {
+            "chunk": 1,
+            "evaluations": 280,
+            "loss": 0.6219328772382222,
+            "gradientMax": 0.0005022481332460698,
+            "relativeLossChange": 0.00018644518516075514,
+            "segmentProbabilityMeanChange": 0.0008734237875560577,
+            "segmentProbabilityMaxChange": 0.0301617713049106,
+            "mapProbabilityMeanChange": 0.0017783030243857614,
+            "mapProbabilityMaxChange": 0.04387138771924701,
+            "trainingPrimaryFlipFraction": 0.007802974884174592
+          },
+          {
+            "chunk": 2,
+            "evaluations": 282,
+            "loss": 0.6218288863165569,
+            "gradientMax": 0.0001860651429789954,
+            "relativeLossChange": 0.0001039909216653534,
+            "segmentProbabilityMeanChange": 0.0005075787534226676,
+            "segmentProbabilityMaxChange": 0.020032862977469312,
+            "mapProbabilityMeanChange": 0.001343889805027912,
+            "mapProbabilityMaxChange": 0.04093053391571648,
+            "trainingPrimaryFlipFraction": 0.004145330407217752
+          },
+          {
+            "chunk": 3,
+            "evaluations": 11,
+            "loss": 0.6218288863165558,
+            "gradientMax": 0.00018606514298318867,
+            "relativeLossChange": 1.1102230246251565e-15,
+            "segmentProbabilityMeanChange": 1.6658825798374686e-13,
+            "segmentProbabilityMaxChange": 8.083700375749459e-12,
+            "mapProbabilityMeanChange": 3.147189959930448e-13,
+            "mapProbabilityMaxChange": 7.881417740662755e-12,
+            "trainingPrimaryFlipFraction": 0.0
+          },
+          {
+            "chunk": 4,
+            "evaluations": 11,
+            "loss": 0.6218288863165551,
+            "gradientMax": 0.00018606514298683766,
+            "relativeLossChange": 6.661338147750939e-16,
+            "segmentProbabilityMeanChange": 1.4323970465378569e-13,
+            "segmentProbabilityMaxChange": 6.950662267968255e-12,
+            "mapProbabilityMeanChange": 2.7061383641358343e-13,
+            "mapProbabilityMaxChange": 6.778411165697662e-12,
+            "trainingPrimaryFlipFraction": 0.0
+          }
+        ],
+        "loss": 0.6218288863165551,
+        "gradientMax": 0.00018606514298683766
+      },
+      "seconds": 7.876932199998919
+    },
+    {
+      "fitKey": "union_context/0/1/2",
+      "original": {
+        "adamSteps": 300,
+        "lbfgsEvaluations": 126,
+        "loss": 0.3473962917749147,
+        "gradientMax": 0.0018547333804064417
+      },
+      "refinement": {
+        "policy": {
+          "id": "train-stability-r3",
+          "gradientMax": 1e-05,
+          "chunkIterations": 250,
+          "maxChunks": 4,
+          "lbfgsGradientTolerance": 1e-07,
+          "lbfgsChangeTolerance": 1e-12,
+          "relativeLossChange": 1e-08,
+          "probabilityMeanChange": 1e-05,
+          "probabilityMaxChange": 0.001,
+          "consecutiveStableChecks": 2
+        },
+        "status": "budget_exhausted",
+        "chunks": [
+          {
+            "chunk": 1,
+            "evaluations": 288,
+            "loss": 0.34667644192672503,
+            "gradientMax": 0.0011661816823907727,
+            "relativeLossChange": 0.0007198498481896798,
+            "segmentProbabilityMeanChange": 0.002215718850444396,
+            "segmentProbabilityMaxChange": 0.1515622753324592,
+            "mapProbabilityMeanChange": 0.0028552704969159663,
+            "mapProbabilityMaxChange": 0.1300578067991085,
+            "trainingPrimaryFlipFraction": 0.021355848025825675
+          },
+          {
+            "chunk": 2,
+            "evaluations": 285,
+            "loss": 0.3464261920964634,
+            "gradientMax": 0.001494844816565876,
+            "relativeLossChange": 0.0002502498302616174,
+            "segmentProbabilityMeanChange": 0.0017327712584721347,
+            "segmentProbabilityMaxChange": 0.12409720664727342,
+            "mapProbabilityMeanChange": 0.0014470568657784606,
+            "mapProbabilityMaxChange": 0.05323351096407947,
+            "trainingPrimaryFlipFraction": 0.01539607648373479
+          },
+          {
+            "chunk": 3,
+            "evaluations": 309,
+            "loss": 0.3464002876871211,
+            "gradientMax": 0.0012989370707212342,
+            "relativeLossChange": 2.5904409342303314e-05,
+            "segmentProbabilityMeanChange": 0.0006275738070343266,
+            "segmentProbabilityMaxChange": 0.06436480210396167,
+            "mapProbabilityMeanChange": 0.0004586483466907793,
+            "mapProbabilityMaxChange": 0.02014594167232453,
+            "trainingPrimaryFlipFraction": 0.007449714427613608
+          },
+          {
+            "chunk": 4,
+            "evaluations": 300,
+            "loss": 0.34638250458675834,
+            "gradientMax": 0.0013781471314996186,
+            "relativeLossChange": 1.778310036276709e-05,
+            "segmentProbabilityMeanChange": 0.0005526377696064872,
+            "segmentProbabilityMaxChange": 0.04477568725643455,
+            "mapProbabilityMeanChange": 0.0004132085470049532,
+            "mapProbabilityMaxChange": 0.013870229301026576,
+            "trainingPrimaryFlipFraction": 0.003973181028060591
+          }
+        ],
+        "loss": 0.34638250458675834,
+        "gradientMax": 0.0013781471314996186
+      },
+      "seconds": 14.37460750000173
+    },
+    {
+      "fitKey": "union_context/0/1/17",
+      "original": {
+        "adamSteps": 300,
+        "lbfgsEvaluations": 103,
+        "loss": 0.555292109490346,
+        "gradientMax": 0.00019283163821749597
+      },
+      "refinement": {
+        "policy": {
+          "id": "train-stability-r3",
+          "gradientMax": 1e-05,
+          "chunkIterations": 250,
+          "maxChunks": 4,
+          "lbfgsGradientTolerance": 1e-07,
+          "lbfgsChangeTolerance": 1e-12,
+          "relativeLossChange": 1e-08,
+          "probabilityMeanChange": 1e-05,
+          "probabilityMaxChange": 0.001,
+          "consecutiveStableChecks": 2
+        },
+        "status": "budget_exhausted",
+        "chunks": [
+          {
+            "chunk": 1,
+            "evaluations": 296,
+            "loss": 0.5551739988231927,
+            "gradientMax": 0.00012752788819126403,
+            "relativeLossChange": 0.00011811066715328167,
+            "segmentProbabilityMeanChange": 0.0007938777575834369,
+            "segmentProbabilityMaxChange": 0.040623593645393474,
+            "mapProbabilityMeanChange": 0.0017254739982330567,
+            "mapProbabilityMaxChange": 0.06712427995947601,
+            "trainingPrimaryFlipFraction": 0.011671219269927986
+          },
+          {
+            "chunk": 2,
+            "evaluations": 312,
+            "loss": 0.5551449956823633,
+            "gradientMax": 0.00011025903202732884,
+            "relativeLossChange": 2.9003140829431118e-05,
+            "segmentProbabilityMeanChange": 0.00041465929302590687,
+            "segmentProbabilityMaxChange": 0.03255332256947313,
+            "mapProbabilityMeanChange": 0.0008266798089519958,
+            "mapProbabilityMaxChange": 0.025919166715507425,
+            "trainingPrimaryFlipFraction": 0.00645641917059846
+          },
+          {
+            "chunk": 3,
+            "evaluations": 313,
+            "loss": 0.5551392194764925,
+            "gradientMax": 0.00019731938590287405,
+            "relativeLossChange": 5.776205870833273e-06,
+            "segmentProbabilityMeanChange": 0.00013936705184820959,
+            "segmentProbabilityMaxChange": 0.004329082339026569,
+            "mapProbabilityMeanChange": 0.00036817179674238115,
+            "mapProbabilityMaxChange": 0.009709751201927908,
+            "trainingPrimaryFlipFraction": 0.0017382666997765085
+          },
+          {
+            "chunk": 4,
+            "evaluations": 313,
+            "loss": 0.5551387676724278,
+            "gradientMax": 9.350047172660271e-05,
+            "relativeLossChange": 4.5180406471612145e-07,
+            "segmentProbabilityMeanChange": 5.43862593198633e-05,
+            "segmentProbabilityMaxChange": 0.0015369828492782789,
+            "mapProbabilityMeanChange": 0.00011597437524269875,
+            "mapProbabilityMaxChange": 0.0020085114490829836,
+            "trainingPrimaryFlipFraction": 0.0007449714427613609
+          }
+        ],
+        "loss": 0.5551387676724278,
+        "gradientMax": 9.350047172660271e-05
+      },
+      "seconds": 14.42883830000028
+    }
+  ]
+}

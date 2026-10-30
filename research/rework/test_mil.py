@@ -52,4 +52,32 @@ class TestMIL(unittest.TestCase):
   r,d,m=self.all_break_example();cfg={'localL2':.01,'mapL2':.0001,'strongWeight':1.,'effortPower':0.,'confidencePower':0.}
   m.objective(d,cfg).backward()
   self.assertGreater(float(m.local.bias.grad[CLASSES.index('break')]),.1)
+ def test_control_local_objective_has_the_derivative_used_by_line_search(self):
+  main,manual,_=load();cfg={'localL2':.03,'mapL2':.0003,'strongWeight':.5,'effortPower':1.,'confidencePower':1.}
+  for variant in ['strong_only_prior','copied_prior']:
+   d=Packed(main[:5]+manual[:2],variant);m=Model(d.x.shape[1],True)
+   loss=m.local_control_objective(d,cfg);loss.backward();parameter=m.local.weight;ix=(2,6)
+   analytic=float(parameter.grad[ix]);eps=1e-6
+   with torch.no_grad():parameter[ix]+=eps
+   high=float(m.local_control_objective(d,cfg).detach())
+   with torch.no_grad():parameter[ix]-=2*eps
+   low=float(m.local_control_objective(d,cfg).detach())
+   self.assertAlmostEqual(analytic,(high-low)/(2*eps),places=6)
+   for p in m.local.parameters():p.requires_grad_(False)
+   m.zero_grad();m.objective(d,cfg).backward();parameter=m.mix.weight;ix=(2,8)
+   analytic=float(parameter.grad[ix])
+   with torch.no_grad():parameter[ix]+=eps
+   high=float(m.objective(d,cfg).detach())
+   with torch.no_grad():parameter[ix]-=2*eps
+   low=float(m.objective(d,cfg).detach())
+   self.assertAlmostEqual(analytic,(high-low)/(2*eps),places=6)
+ def test_refinement_stops_on_training_gradient_without_using_validation(self):
+  from convergence import polish,POLICY
+  main,manual,_=load();d=Packed(main[:3]+manual[:1],'frozen_prior');m=Model(d.x.shape[1],True)
+  for p in m.local.parameters():p.requires_grad_(False)
+  cfg={'localL2':.03,'mapL2':.0003,'strongWeight':.5,'effortPower':0.,'confidencePower':0.}
+  before={k:v.clone()for k,v in m.state_dict().items()}
+  result=polish(m,d,cfg,policy={**POLICY,'gradientMax':1e10})
+  self.assertEqual(result['status'],'small_gradient');self.assertFalse(result['chunks'])
+  for k,v in m.state_dict().items():self.assertTrue(torch.equal(v,before[k]))
 if __name__=='__main__':unittest.main()

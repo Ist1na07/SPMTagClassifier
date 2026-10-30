@@ -64,3 +64,20 @@ python -X utf8 research/rework/search.py --workers 4
 ```
 
 Python 第一阶段另需 torch；本机已安装。程序先写协议和全部实际划分，再拟合；协议不一致时拒绝混合续跑。r2 的逐次拟合中间预测保存在 `.cache/rework-mil-stage1-r2-fits.jsonl`，完成后发布全部拟合摘要、所有联合配置评分、所选模型和外层逐谱/逐段概率。若在后续文档提交后的新 checkout 复跑，使用 `--output <新结果目录> --journal <新中间记录路径>`，不要覆盖已保存的证据。
+
+## 已完成的探索与下一项实验
+
+- **镜像对称性**：原完整流程在 399 条记录中有 45 条镜像后整谱标签改变。交互特征把中键/左右均衡行硬算成左手；`neutralHands` 把它们作为中性行处理后，同批记录的整谱和分段标签镜像差异均为零。固定旧系数时精标准确率没有随之提高，修正需要与分段/分类重调。见 `results/mirror-audit*.json`。
+- **Anchor**：4K 子桶分组嵌套调参和六项消融完成，连续单指 run/集中度有解释价值，但现有桶名不是 Anchor 属性不存在的可靠负例，7K 阳性也只来自一个组。不新增缺乏证据的硬类别。见 `results/anchor/REPORT.md`。
+- **固定边界联合模型 r2**：完整网格结果、实际模型及逐谱概率已经保存，见 `results/mil-stage1-r2/REPORT.md`。训练审计证明固定预算拟合仍会明显移动，且两个 detached 控制组的线搜索目标不匹配，因此先重做训练内优化再做内层选参。停止规则、复用条件和反例说明见 `results/OPTIMIZATION.md`；r2 不作为最终模型结论。
+
+r3 保持同一联合网格和划分，按训练梯度或连续的训练目标/预测稳定检查停止。两个无弱标签反传控制组先拟合其明确的局部目标，冻结后拟合整谱头；它们的配置仍由最终内层任务联合选择。新增拟合保存本地模型检查点，达到相同梯度条件的有效旧拟合直接复用：
+
+```powershell
+python -X utf8 research/rework/search.py --workers 6 --refine `
+  --output research/rework/results/mil-stage1-r3 `
+  --journal .cache/rework-mil-stage1-r3-fits.jsonl `
+  --reuse research/rework/results/mil-stage1-r2
+```
+
+接下来必须进入原生分段器、门控和聚合的联合调参，而不是用固定边界实验替代完整算法升级。4K/6K 的正式重做仍待此项推进；目前产品默认路径和已发布标签未替换。
