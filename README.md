@@ -14,7 +14,7 @@
 ## 运行一张谱面
 
 ```sh
-npm install github:Ist1na07/SPMTagClassifier#v1.2.1
+npm install https://github.com/Ist1na07/SPMTagClassifier/releases/download/v1.2.1/spm-tag-classifier-1.2.1.tgz
 ```
 
 ```js
@@ -33,7 +33,7 @@ console.log(r.segments.map(s => ({
 })));
 ```
 
-源码或发布包无需安装推理依赖即可运行：
+发布包只含运行所需文件；完整仓库另含研究证据。源码或发布包无需安装推理依赖即可运行：
 
 ```sh
 node bin/classify.cjs map.osu
