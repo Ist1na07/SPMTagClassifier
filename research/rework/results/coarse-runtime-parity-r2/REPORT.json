@@ -1,0 +1,173 @@
+{
+  "scope": "real JavaScript full parsing/native features/head/composition vs Python training prediction; baseline fixture models only, not shared final validation",
+  "cases": 28,
+  "byKeys": {
+    "4": 7,
+    "6": 7,
+    "7": 14
+  },
+  "windows": 2868,
+  "contextMs": [
+    2000,
+    4000,
+    8000
+  ],
+  "gate": [
+    0.0,
+    0.2
+  ],
+  "maximumAbsoluteErrors": {
+    "composition": 5.551115123125783e-16,
+    "mergedComposition": 6.661338147750939e-16,
+    "mergedDiversity": 3.920475055707584e-16,
+    "mass": 5.684341886080802e-14,
+    "local": 2.886579864025407e-15,
+    "weights": 3.1086244689504383e-15,
+    "features": 0
+  },
+  "intervalsAndPrimaryLabels": "exact",
+  "sixPatternAccuracy": "not measured; no human pattern labels",
+  "fixtures": [
+    {
+      "uid": "spm_dataset-4k-0.2.0/bm4k_0056/54",
+      "windowMs": 2000,
+      "gate": 0.0
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0031/30",
+      "windowMs": 2000,
+      "gate": 0.0
+    },
+    {
+      "uid": "manual/AA",
+      "windowMs": 2000,
+      "gate": 0.0
+    },
+    {
+      "uid": "spm_dataset_6k-0.1.0/bm6k_1562/1561",
+      "windowMs": 2000,
+      "gate": 0.0
+    },
+    {
+      "uid": "spm_dataset-4k-0.2.0/bm4k_0056/54",
+      "windowMs": 4000,
+      "gate": 0.2
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0031/30",
+      "windowMs": 4000,
+      "gate": 0.2
+    },
+    {
+      "uid": "manual/AA",
+      "windowMs": 4000,
+      "gate": 0.2
+    },
+    {
+      "uid": "spm_dataset_6k-0.1.0/bm6k_1562/1561",
+      "windowMs": 4000,
+      "gate": 0.2
+    },
+    {
+      "uid": "spm_dataset-4k-0.2.0/bm4k_0045/43",
+      "windowMs": 2000,
+      "gate": 0.0
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0001/0",
+      "windowMs": 2000,
+      "gate": 0.0
+    },
+    {
+      "uid": "manual/AH",
+      "windowMs": 2000,
+      "gate": 0.0
+    },
+    {
+      "uid": "spm_dataset_6k-0.1.0/bm6k_1339/1338",
+      "windowMs": 2000,
+      "gate": 0.0
+    },
+    {
+      "uid": "spm_dataset-4k-0.2.0/bm4k_0036/34",
+      "windowMs": 8000,
+      "gate": 0.0
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0046/45",
+      "windowMs": 8000,
+      "gate": 0.0
+    },
+    {
+      "uid": "manual/BE",
+      "windowMs": 8000,
+      "gate": 0.0
+    },
+    {
+      "uid": "spm_dataset_6k-0.1.0/bm6k_0174/173",
+      "windowMs": 8000,
+      "gate": 0.0
+    },
+    {
+      "uid": "spm_dataset-4k-0.2.0/bm4k_0039/37",
+      "windowMs": 8000,
+      "gate": 0.2
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0125/124",
+      "windowMs": 8000,
+      "gate": 0.2
+    },
+    {
+      "uid": "manual/DS",
+      "windowMs": 8000,
+      "gate": 0.2
+    },
+    {
+      "uid": "spm_dataset_6k-0.1.0/bm6k_1562/1561",
+      "windowMs": 8000,
+      "gate": 0.2
+    },
+    {
+      "uid": "spm_dataset-4k-0.2.0/bm4k_0048/46",
+      "windowMs": 2000,
+      "gate": 0.2
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0121/120",
+      "windowMs": 2000,
+      "gate": 0.2
+    },
+    {
+      "uid": "manual/EE",
+      "windowMs": 2000,
+      "gate": 0.2
+    },
+    {
+      "uid": "spm_dataset_6k-0.1.0/bm6k_1339/1338",
+      "windowMs": 2000,
+      "gate": 0.2
+    },
+    {
+      "uid": "spm_dataset-4k-0.2.0/bm4k_0038/36",
+      "windowMs": 2000,
+      "gate": 0.2
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0012/11",
+      "windowMs": 2000,
+      "gate": 0.2
+    },
+    {
+      "uid": "manual/RJ",
+      "windowMs": 2000,
+      "gate": 0.2
+    },
+    {
+      "uid": "spm_dataset_6k-0.1.0/bm6k_0174/173",
+      "windowMs": 2000,
+      "gate": 0.2
+    }
+  ],
+  "runtimeSource": "'use strict';\n// Actual JavaScript consumer of the jointly trained native-key coarse model.\n// It has no separate whole-map feature head and performs no 4K/7K output mix.\nconst {parseOsu,prepare}=require('../../src/parser.cjs');\nconst physical=require('./physical.cjs'),{composition}=require('./composition.cjs');\nconst named=(classes,p)=>Object.fromEntries(classes.map((c,i)=>[c,p[i]]));\nconst entropy=p=>-p.reduce((sum,v)=>sum+(v>0?v*Math.log(v):0),0)/Math.log(5);\n\nfunction localScores(metrics,model){\n const D=model.keys.length,K=model.classes.length,z=[],theta=model.theta;let clipped=0,maxMagnitude=0;\n const x=model.keys.map((key,j)=>{\n  if(!Object.hasOwn(metrics,key))throw Error('Unsupported coarse feature: '+key);\n  const value=(metrics[key]-model.mean[j])/model.scale[j];maxMagnitude=Math.max(maxMagnitude,Math.abs(value));\n  if(Math.abs(value)>model.clip)clipped++;\n  return Math.max(-model.clip,Math.min(model.clip,value));\n });\n for(let k=0;k<K;k++){\n  let value=theta[K*D+k];for(let j=0;j<D;j++)value+=theta[k*D+j]*x[j];z.push(value);\n }\n const max=Math.max(...z),p=z.map(v=>Math.exp(v-max)),sum=p.reduce((a,b)=>a+b,0);\n return {p:p.map(v=>v/sum),clippedFeatureFraction:clipped/D,maxStandardizedMagnitude:maxMagnitude};\n}\n\nfunction relativeEffort(windows){\n const positive=windows.filter(w=>w.metrics.effort>0).map(w=>[w.metrics.effort,w.end-w.start]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]);\n const total=positive.reduce((s,[v,d])=>s+d,0);let cumulative=0,reference=1;\n for(const [value,duration]of positive){cumulative+=duration;reference=value;if(cumulative>=.75*total)break;}\n return reference;\n}\n\nfunction coalesce(windows,classes){\n const groups=[];\n for(const w of windows){\n  let group=groups.at(-1);\n  if(!group||group.tag!==w.tag||group.end!==w.start)groups.push(group={start:w.start,end:w.end,tag:w.tag,members:[]});\n  group.end=w.end;group.members.push(w);\n }\n return groups.map(group=>{\n  const {members}=group,total=members.reduce((s,w)=>s+w.aggregationWeight,0),duration=group.end-group.start;\n  const p=Array(classes.length).fill(0);let entropyMass=0,effort=0,occupancy=0,notes=0,clipped=0,bpm=0,bpmDuration=0;\n  for(const w of members){\n   const d=w.end-w.start,weight=total?w.aggregationWeight:d;\n   w.probability.forEach((v,k)=>p[k]+=weight*v);entropyMass+=w.atomicEntropyMass;\n   effort+=d*w.metrics.effort;occupancy+=d*w.metrics.occupancy;notes+=w.notes;clipped+=d*w.clippedFeatureFraction;\n   if(w.equivBpm&&['jack','chordstream','speed'].includes(group.tag)){bpm+=d*w.equivBpm;bpmDuration+=d;}\n  }\n  for(let k=0;k<p.length;k++)p[k]/=total||duration;\n  const order=p.map((v,i)=>[v,i]).sort((a,b)=>b[0]-a[0]||a[1]-b[1]);\n  return {start:group.start,end:group.end,tag:group.tag,family:group.tag==='break'?'break':group.tag==='ln'?'ln':'rc',\n   confidence:p[classes.indexOf(group.tag)],probability:p,distribution:named(classes,p),aggregationWeight:total,\n   equivBpm:bpmDuration?Math.round(bpm/bpmDuration):undefined,\n   evidence:{normalizedEntropy:entropy(p),margin:order[0][0]-order[1][0],atomicEntropyMass:entropyMass,\n    meanLocalEntropy:total?entropyMass/total:0,effort:effort/duration,occupancy:occupancy/duration,\n    featureWindows:members.length,contextNoteObservations:notes,clippedFeatureFraction:clipped/duration}};\n });\n}\n\nfunction aggregateSegments(segments,classes){\n const result=composition(segments.map(s=>s.probability),segments.map(s=>s.aggregationWeight),{breakIndex:classes.length-1});\n // The merged support alone loses within-display-window uncertainty. Its\n // sufficient entropy statistic keeps between-window diversity unchanged.\n const mean=result.activeWeight?segments.reduce((s,r)=>s+r.evidence.atomicEntropyMass,0)/result.activeWeight:0;\n return {...result,meanLocalEntropy:mean,diversity:Math.max(0,result.entropy-mean)};\n}\n\nfunction analyzeWindows(windows,model,keyCount){\n const K=model.classes.length,D=model.keys.length;\n if(K!==5||model.theta.length!==K*(D+1)+2)throw Error('Invalid coarse5 model shape');\n if(!windows.length)throw Error('Empty coarse interval sequence');\n const classes=[...model.classes,'break'],reference=relativeEffort(windows),a=model.theta.at(-2),b=model.theta.at(-1);\n const annotated=windows.map(w=>{\n  const score=localScores(w.metrics,model),effort=Math.max(1e-4,w.metrics.effort/reference),gate=model.config.burdenGate;\n  const active=!w.structurallyEmpty&&(!gate||w.metrics.effort/reference>=gate||w.metrics.occupancy>0||w.metrics['release:tailRatePerKey']>0);\n  const p=active?[...score.p,0]:classes.map(c=>Number(c==='break'));\n  const weight=active?(w.end-w.start)/1000*effort**a*score.p.reduce((s,v)=>s+v*v,0)**b:0;\n  const tag=classes[p.indexOf(Math.max(...p))];\n  return {...w,probability:p,tag,aggregationWeight:weight,atomicEntropyMass:weight*entropy(p),\n   clippedFeatureFraction:score.clippedFeatureFraction,maxStandardizedMagnitude:score.maxStandardizedMagnitude};\n });\n const raw=composition(annotated.map(w=>w.probability),annotated.map(w=>w.aggregationWeight),{breakIndex:5});\n const segments=coalesce(annotated,classes),dominant=raw.activeWeight>0?model.classes[raw.distribution.indexOf(Math.max(...raw.distribution))]:null;\n return {windows:annotated,segments,coarse:{dominant,composition:named(model.classes,raw.distribution),\n   familyMass:{ln:raw.distribution[model.classes.indexOf('ln')],rc:raw.distribution.reduce((s,p,i)=>s+(model.classes[i]==='ln'?0:p),0)},\n   evidence:{activeWeight:raw.activeWeight,normalizedEntropy:raw.entropy,meanLocalEntropy:raw.meanLocalEntropy,diversity:raw.diversity},\n   scoreKind:'weighted local morphology support; trained from weak whole-map labels and available interval labels'},\n  modelInfo:{taxonomy:'coarse5',nativeKeyCount:keyCount,featureCount:D,windowMs:model.config.windowMs,stepMs:2000,\n   effortPower:a,concentrationPower:b,representation:model.spec.representation,weak4Only:!!model.spec.weak4Only,\n   clippedFeatureFraction:annotated.reduce((s,w)=>s+(w.end-w.start)*w.clippedFeatureFraction,0)/(annotated.at(-1).end-annotated[0].start)}};\n}\n\nfunction classifyCoarse(text,profile,options={}){\n const model=profile.model||profile,map=parseOsu(text,options),ctx=physical.prepare(prepare(map,10));\n const windows=physical.windows(ctx,model.config.windowMs,2000);\n return {map,...analyzeWindows(windows,model,map.keys)};\n}\nmodule.exports={classifyCoarse,analyzeWindows,aggregateSegments,localScores};\n"
+}

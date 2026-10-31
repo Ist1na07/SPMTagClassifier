@@ -1,0 +1,41 @@
+name: Publish a verified release tag
+on:
+  push:
+    tags: ['v[0-9]*']
+permissions:
+  contents: read
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          package-manager-cache: false
+      - name: Match the immutable tag, package version and release notes
+        run: |
+          node - <<'JS'
+          const fs=require('node:fs');
+          const tag=process.env.GITHUB_REF_NAME;
+          if(!/^v\d+\.\d+\.\d+$/.test(tag))throw Error('Expected stable vX.Y.Z tag');
+          if(tag!=='v'+require('./package.json').version)throw Error('Tag/package version mismatch');
+          if(!fs.existsSync('docs/releases/'+tag+'.md'))throw Error('Missing version-specific release notes');
+          JS
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
+      - run: npm run test:types
+      - run: git diff --exit-code -- dist/tag-engine.js src/generated/
+      - name: Publish exactly the tested tag and assets
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          package=$(npm pack --ignore-scripts --silent)
+          research="spm-tag-classifier-research-${GITHUB_REF_NAME}.zip"
+          git archive --format=zip --output="$research" HEAD research/rework
+          gh release create "$GITHUB_REF_NAME" "$package" dist/tag-engine.js "$research" \
+            --verify-tag --title "SPMTagClassifier $GITHUB_REF_NAME" \
+            --notes-file "docs/releases/${GITHUB_REF_NAME}.md"

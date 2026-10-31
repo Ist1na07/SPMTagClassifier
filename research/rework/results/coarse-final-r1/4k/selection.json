@@ -1,0 +1,35 @@
+{
+  "target": {
+    "variant": "weak4_only",
+    "mode": "both",
+    "criterion": "4k"
+  },
+  "readsOuterPredictions": false,
+  "innerPredictionScope": {
+    "weakRecords": 1559,
+    "manualRecords": 6,
+    "heldOutInnerPredictionsPerRecord": 5,
+    "weakPredictionRows": 7795,
+    "scope": "repeated inner CV for all-data configuration choice; roughly5/9 training fraction per expert, not new nested outer performance or a five-model vote"
+  },
+  "configId": 0,
+  "config": {
+    "windowMs": 2000,
+    "burdenGate": 0.0,
+    "localL2": 0.0003,
+    "strongWeight": 0.0,
+    "source4Weight": 1.0
+  },
+  "score": 0.9541838110069587,
+  "map4": {
+    "macroF1": 0.9541838110069587,
+    "accuracy": 0.9531558935361217,
+    "records": 6575
+  },
+  "map7": {
+    "macroF1": 0.7578215603281041,
+    "accuracy": 0.8559670781893005,
+    "records": 1220
+  },
+  "segmentChartAccuracy": 0.572776351809164
+}

@@ -1,0 +1,9 @@
+{
+  "scope": "actual full53 outer2 manual BE; identical model and records, only GEMM batching differs",
+  "originalManualBatchEqualsStoredRaw": true,
+  "combinedBatchEqualsStoredSupported": true,
+  "combinedRawEqualsSupportedNoneBitwise": true,
+  "maxProbabilityDelta": 4.440892098500626e-16,
+  "hardLabelDifferences": 0,
+  "cause": "raw study predicts weak test and manual test separately; support study combines them; matrix shape changes floating-point rounding"
+}

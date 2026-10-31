@@ -1,15 +1,14 @@
-/* SPMTagClassifier v1.2.0 | MIT | Ist1na */
+/* SPMTagClassifier v1.2.1 | MIT | Ist1na */
 var TagClassifier=(()=>{
 const modules=[function(module,exports,load){
 'use strict';
 const legacy=load(1);
 const {parseOsu,prepare}=load(2);
 const {features,windows,FEATURE_KEYS}=load(3);
-const {scores,named,choose}=load(4);
-const {pooledVector,localProbabilities,aggregateEvidence,coarseSupports,transferDistribution}=load(5);
-const {segmentsFrom}=load(6);
-const profile4=load(7),profile7=load(8);
-const display7=load(9),profile6=load(10);
+const {coarseResult}=load(4),{lnResult}=load(7);
+const geometry=load(9),{version}=load(6);
+const profile4=load(10),profile7=load(11);
+const native4=load(12),native6=load(13),native7=load(14);
 function profile(key){return key===4?profile4:profile7;}
 function evidenceMap(osuText,opts={}) {
   const map=parseOsu(osuText,opts),ctx=prepare(map,10);
@@ -21,18 +20,13 @@ function evidenceMap(osuText,opts={}) {
   };
   return {map,ctx,getWindows};
 }
-function mapSupports(e,p) {
-  const ws=e.getWindows(p.windowMs,p.rowMergeMs??10),local=localProbabilities(ws,p);
-  const vector=pooledVector(ws,p,local);
-  return {probabilities:scores(p.map,vector),local,windows:ws,vector};
-}
 function describe(w) {
   const m=w.metrics;
   return {anchor:m.anchorShare,trill:m.trillFraction,roll:m.rollFraction,
     repetition:1-m.maskEntropy,occupancy:m.occupancy,releaseIndependence:m.releaseIndependence};
 }
 function stable7(osuText,opts,e) {
-  const r=legacy.analyzeMap(osuText,opts);
+  const r=legacy.analyzeMap(osuText,opts),geometryContext=geometry.prepare(e.ctx);
   // The inherited segmenter can omit a short leading pickup when snapping.
   // Extend only the envelope; keep the learned tags and overall decision.
   if(r.segments.length){r.segments[0].start=r.map.firstNote;r.segments.at(-1).end=r.map.lastNote;}
@@ -44,12 +38,13 @@ function stable7(osuText,opts,e) {
     s.distribution=distribution;
     s.evidence={normalizedEntropy:ranked.length>1?-ranked.reduce((a,v)=>v>0?a+v*Math.log(v):a,0)/Math.log(ranked.length):0,
       margin:(ranked[0]||0)-(ranked[1]||0),effort:w.metrics.effort,occupancy:w.metrics.occupancy,
-      featureWindows:1,contextNoteObservations:w.notes,legacyConfidence:s.confidence};
+      featureWindows:1,contextNoteObservations:w.notes,legacyConfidence:s.confidence,
+      geometry:geometry.describeInterval(geometryContext,s.start,Math.max(s.start+1,s.end))};
   }
   const total=Object.values(r.overall.weights).reduce((a,b)=>a+b,0);
   r.overall.composition=total>0?Object.fromEntries(Object.entries(r.overall.weights).map(([k,v])=>[k,v/total])):{break:1};
   r.overall.scoreKind='legacy decision scores; distribution is normalized affinity, not calibrated confidence';
-  r.modelInfo={version:'1.2.0',keyCount:7,variant:'legacy-stable',researchVariant:profile7.variant,
+  r.modelInfo={version,keyCount:7,variant:'legacy-stable',researchVariant:'anchored-ln-release',
     segmentEvidence:'original decisions; corrected interval-union diagnostics',temporalResolutionMs:250};
   r.descriptors=e.getWindows(4000).map(w=>({start:w.start,end:w.end,...describe(w)}));
   return r;
@@ -57,51 +52,13 @@ function stable7(osuText,opts,e) {
 function analyzeMap(osuText,opts={}) {
   if(opts.algorithm==='legacy')return legacy.analyzeMap(osuText,opts);
   if(opts.algorithm && !['modern','stable'].includes(opts.algorithm))throw new Error('UnknownAlgorithm: expected modern, stable or legacy');
-  const e=evidenceMap(osuText,opts),{map}=e,p=profile(map.keys);
-  // The research head did not establish a 7K accuracy gain. Keep the mature
-  // production decisions by default; opt in explicitly to the fully new head.
-  if(map.keys===7&&opts.algorithm!=='modern')return stable7(osuText,opts,e);
-  const ms=mapSupports(e,p);
-  let display,probs,classes,penalty;
-  if(map.keys===4) {
-    display=ms.windows;classes=p.local?.classes??p.map.classes;penalty=0;
-    probs=p.local?ms.local:display.map(()=>ms.probabilities);
-  } else {
-    display=e.getWindows(display7.windowMs);classes=display7.model.classes;penalty=display7.smoothingPenalty;
-    probs=display.map(w=>scores(display7.model,display7.indices.map(i=>w.values[i])));
-    if(map.keys===6&&profile4.local)probs=probs.map((p7,i)=>transferDistribution(classes,p7,profile4.local.classes,
-      scores(profile4.local,profile4.indices.map(j=>display[i].values[j])),2/3));
-  }
-  // Physical silence is a structural Break, even for the five-way weak 4K head.
-  if(!classes.includes('break')){classes=[...classes,'break'];probs=probs.map(p=>[...p,0]);}
-  const breakIndex=classes.indexOf('break');
-  probs=probs.map((p,i)=>display[i].notes===0&&display[i].metrics.occupancy===0?p.map((_,j)=>Number(j===breakIndex)):p);
-  const segments=segmentsFrom(display,probs,classes,penalty);
-  const composition=aggregateEvidence(display,probs,'full',true);
-  let overallScores=ms.probabilities,overallClasses=p.map.classes,threshold=p.threshold;
-  const transfer={};
-  if(map.keys===6) {
-    const other=mapSupports(e,profile4),fine=coarseSupports(profile7.map.classes,ms.probabilities);
-    overallClasses=profile6.classes;threshold=profile6.threshold;
-    overallScores=overallClasses.map(c=>profile6.lambda*fine[c]+(1-profile6.lambda)*other.probabilities[profile4.map.classes.indexOf(c)]);
-    transfer.lambda=profile6.lambda;transfer.segmentLambda=2/3;
-    transfer.evidenceLevel='4K/7K projected-chart surrogate validation; no human 6K pattern labels';
-  }
-  let sort;
-  if(map.keys===4)sort=overallScores[overallClasses.indexOf('ln')]>=threshold?'ln':'rc';
-  else {
-    const ln=classes.reduce((s,t,i)=>s+(['coordination','density','inverse','release','technical','ln wildcard'].includes(t)?composition[i]:0),0);
-    const s=profile6.sort??{rcMax:.18,lnMin:.68};sort=ln<s.rcMax?'rc':ln>s.lnMin?'ln':'hb';
-  }
-  const overall={tags:choose(overallClasses,overallScores,threshold),sort,
-    scores:named(overallClasses,overallScores),weights:named(classes,composition),
-    scoreKind:'independent multi-label model support',compositionKind:'normalized duration × effort × maximum local support',
-    ...(map.keys===6?{transfer}:{} )};
-  return {map,segments,overall,debug:{windows:display,norm:undefined,ctx:undefined},
-    modelInfo:{version:'1.2.0',keyCount:map.keys,variant:p.variant,
-      segmentEvidence:map.keys===4?'weak whole-map labels':map.keys===6?'cross-key extrapolation':'manual interval labels plus weak map labels',
-      temporalResolutionMs:2000},descriptors:display.map(w=>({start:w.start,end:w.end,...describe(w)}))};
+  const e=evidenceMap(osuText,opts),{map}=e;
+  // Retain mature 7K predictions by default. The anchored candidate is opt-in;
+  // its fully retuned outer evaluation did not justify a default replacement.
+  if(map.keys===7)return opts.algorithm==='modern'?lnResult(osuText,native7,opts,e):stable7(osuText,opts,e);
+  return coarseResult(osuText,map.keys===4?native4:native6,opts);
 }
+
 function extractIntermediate(text,opts={}) {
   if(opts.algorithm==='legacy')return legacy.extractIntermediate(text,opts);
   const r=analyzeMap(text,opts);return {map:r.map,windows:r.debug.windows,segments:r.segments,overall:r.overall};
@@ -2428,128 +2385,3534 @@ module.exports = { GROUPS, FEATURE_KEYS, features, windows, mean, quantile };
 },
 function(module,exports,load){
 'use strict';
-function scores(model, vector) {
-  const x = vector.map((v, i) => (v - model.mean[i]) / model.scale[i]);
-  const z = model.W.map((w, k) => (w.reduce((s, a, i) => s + a * x[i], model.b[k])) / (model.temperature || 1));
-  if (model.multilabel) return z.map(v => 1 / (1 + Math.exp(-Math.max(-700, Math.min(700, v)))));
-  const max = Math.max(...z), ex = z.map(v => Math.exp(v - max)), total = ex.reduce((a, b) => a + b, 0);
-  return ex.map(v => v / total);
+const {classifyCoarse}=load(5);
+const {version}=load(6);
+// Keep the established public source-bucket name. The internal morphology
+// class is chordstream, not a claim about generic endurance or stamina.
+const external=tag=>tag==='chordstream'?'stamina':tag;
+const rename=object=>Object.fromEntries(Object.entries(object).map(([k,v])=>[external(k),v]));
+
+function coarseResult(text,profile,options={}){
+ const r=classifyCoarse(text,profile,options),dominant=r.coarse.dominant;
+ if(![4,6].includes(r.map.keys))throw Error('Native coarse product path requires 4K or 6K');
+ const composition=rename(r.coarse.composition);
+ const segments=r.segments.map(s=>({...s,tag:external(s.tag),scores:rename(s.distribution),distribution:rename(s.distribution)}));
+ const overall={tags:dominant?[external(dominant)]:[],sort:dominant===null?'unknown':dominant==='ln'?'ln':'rc',
+  scores:composition,weights:composition,composition,familyMass:r.coarse.familyMass,
+  scoreKind:r.coarse.scoreKind,compositionKind:'same local support weighted by duration × relative physical effort^a × concentration^b',
+  taxonomy:'five morphology source classes; stamina is the compatibility name for chordstream',evidence:r.coarse.evidence};
+ const descriptors=r.windows.map(w=>({start:w.start,end:w.end,anchor:w.metrics.regularAnchor,trill:w.metrics.trillFraction,
+  roll:w.metrics.rollFraction,repetition:1-w.metrics.maskEntropy,occupancy:w.metrics.occupancy,
+  releaseIndependence:w.metrics['release:headIsolation'],releaseHeldInteraction:w.metrics['release:independentHeldRelease']}));
+ return {map:r.map,segments,overall,coarse:r.coarse,debug:{windows:r.windows,norm:undefined,ctx:undefined},descriptors,
+  modelInfo:{...r.modelInfo,version,keyCount:r.map.keys,classes:[...profile.model.classes.map(external),'break'],featureKeys:profile.model.keys,variant:r.map.keys===4?'native-4k-coarse':'native-shared-coarse',
+   segmentEvidence:r.map.keys===4?'weak 4K source buckets plus sufficient structural templates':'4K/7K shared coarse extrapolation; no human 6K pattern accuracy',
+   temporalResolutionMs:2000,localScoreKind:'within-head softmax support or deterministic structural support, not calibrated correctness',
+   overallDecision:'dominant weighted morphology; no independent whole-map head',sortMeaning:'family of dominant coarse class',
+   supervision:r.map.keys===4?'4K-only weak supervision and selection':'4K/7K weak labels plus available 7K interval labels'}};
 }
-function named(classes, vector) { return Object.fromEntries(classes.map((c,i)=>[c,vector[i]])); }
-function choose(classes, p, threshold) {
-  const tags = classes.filter((_, i) => p[i] >= threshold);
-  return tags.length ? tags : [classes[p.indexOf(Math.max(...p))]];
+module.exports={coarseResult};
+
+},
+function(module,exports,load){
+/* Generated by node scripts/build-coarse.cjs; MIT; do not edit. */
+module.exports=(()=>{
+const modules=[function(module,exports,load){
+'use strict';
+// Actual JavaScript consumer of the jointly trained native-key coarse model.
+// It has no separate whole-map feature head and performs no 4K/7K output mix.
+const {parseOsu,prepare}=load(1);
+const physical=load(2),{composition}=load(6);
+const {physicalSupport}=load(7);
+const named=(classes,p)=>Object.fromEntries(classes.map((c,i)=>[c,p[i]]));
+const entropy=p=>-p.reduce((sum,v)=>sum+(v>0?v*Math.log(v):0),0)/Math.log(5);
+
+function localScores(metrics,model){
+ const D=model.keys.length,K=model.classes.length,z=[],theta=model.theta;let clipped=0,maxMagnitude=0;
+ const x=model.keys.map((key,j)=>{
+  if(!Object.hasOwn(metrics,key))throw Error('Unsupported coarse feature: '+key);
+  const value=(metrics[key]-model.mean[j])/model.scale[j];maxMagnitude=Math.max(maxMagnitude,Math.abs(value));
+  if(Math.abs(value)>model.clip)clipped++;
+  return Math.max(-model.clip,Math.min(model.clip,value));
+ });
+ for(let k=0;k<K;k++){
+  let value=theta[K*D+k];for(let j=0;j<D;j++)value+=theta[k*D+j]*x[j];z.push(value);
+ }
+ const max=Math.max(...z),p=z.map(v=>Math.exp(v-max)),sum=p.reduce((a,b)=>a+b,0);
+ return {p:p.map(v=>v/sum),clippedFeatureFraction:clipped/D,maxStandardizedMagnitude:maxMagnitude};
 }
-function linearQuantile(a, q) {
-  if (!a.length) return 0;
-  const s = [...a].sort((a,b)=>a-b), t=(s.length-1)*q, i=Math.floor(t);
-  return s[i] + (s[Math.min(i+1,s.length-1)]-s[i])*(t-i);
+
+function relativeEffort(windows){
+ const positive=windows.filter(w=>w.metrics.effort>0).map(w=>[w.metrics.effort,w.end-w.start]).sort((a,b)=>a[0]-b[0]||a[1]-b[1]);
+ const total=positive.reduce((s,[v,d])=>s+d,0);let cumulative=0,reference=1;
+ for(const [value,duration]of positive){cumulative+=duration;reference=value;if(cumulative>=.75*total)break;}
+ return reference;
 }
-module.exports = {scores,named,choose,linearQuantile};
+
+function coalesce(windows,classes){
+ const groups=[];
+ for(const w of windows){
+  let group=groups.at(-1);
+  if(!group||group.tag!==w.tag||group.end!==w.start)groups.push(group={start:w.start,end:w.end,tag:w.tag,members:[]});
+  group.end=w.end;group.members.push(w);
+ }
+ return groups.map(group=>{
+  const {members}=group,total=members.reduce((s,w)=>s+w.aggregationWeight,0),duration=group.end-group.start;
+  const p=Array(classes.length).fill(0);let entropyMass=0,effort=0,occupancy=0,notes=0,clipped=0,bpm=0,bpmDuration=0,structuralWindows=0;
+  for(const w of members){
+   const d=w.end-w.start,weight=total?w.aggregationWeight:d;
+   w.probability.forEach((v,k)=>p[k]+=weight*v);entropyMass+=w.atomicEntropyMass;
+   structuralWindows+=Number(!!w.structuralSupport);
+   effort+=d*w.metrics.effort;occupancy+=d*w.metrics.occupancy;notes+=w.notes;clipped+=d*w.clippedFeatureFraction;
+   if(w.equivBpm&&['jack','chordstream','speed'].includes(group.tag)){bpm+=d*w.equivBpm;bpmDuration+=d;}
+  }
+  for(let k=0;k<p.length;k++)p[k]/=total||duration;
+  const order=p.map((v,i)=>[v,i]).sort((a,b)=>b[0]-a[0]||a[1]-b[1]);
+  return {start:group.start,end:group.end,tag:group.tag,family:group.tag==='break'?'break':group.tag==='ln'?'ln':'rc',
+   confidence:p[classes.indexOf(group.tag)],probability:p,distribution:named(classes,p),aggregationWeight:total,
+   equivBpm:bpmDuration?Math.round(bpm/bpmDuration):undefined,
+   evidence:{normalizedEntropy:entropy(p),margin:order[0][0]-order[1][0],atomicEntropyMass:entropyMass,
+    meanLocalEntropy:total?entropyMass/total:0,effort:effort/duration,occupancy:occupancy/duration,
+    featureWindows:members.length,contextNoteObservations:notes,clippedFeatureFraction:clipped/duration,structuralWindows}};
+ });
+}
+
+function aggregateSegments(segments,classes){
+ const result=composition(segments.map(s=>s.probability),segments.map(s=>s.aggregationWeight),{breakIndex:classes.length-1});
+ // The merged support alone loses within-display-window uncertainty. Its
+ // sufficient entropy statistic keeps between-window diversity unchanged.
+ const mean=result.activeWeight?segments.reduce((s,r)=>s+r.evidence.atomicEntropyMass,0)/result.activeWeight:0;
+ return {...result,meanLocalEntropy:mean,diversity:Math.max(0,result.entropy-mean)};
+}
+
+function analyzeWindows(windows,model,keyCount,options={}){
+ const K=model.classes.length,D=model.keys.length;
+ if(K!==5||model.theta.length!==K*(D+1)+2)throw Error('Invalid coarse5 model shape');
+ if(!windows.length)throw Error('Empty coarse interval sequence');
+ const classes=[...model.classes,'break'],reference=relativeEffort(windows),a=model.theta.at(-2),b=model.theta.at(-1);
+ const annotated=windows.map(w=>{
+  const score=localScores(w.metrics,model),effort=Math.max(1e-4,w.metrics.effort/reference),gate=model.config.burdenGate;
+  const active=!w.structurallyEmpty&&(!gate||w.metrics.effort/reference>=gate||w.metrics.occupancy>0||w.metrics['release:tailRatePerKey']>0);
+  const structuralSupport=active?physicalSupport(w,options.physicalSupport??'none'):null;
+  const conditional=structuralSupport?model.classes.map(c=>Number(c===structuralSupport.tag)):score.p;
+  const p=active?[...conditional,0]:classes.map(c=>Number(c==='break'));
+  const weight=active?(w.end-w.start)/1000*effort**a*conditional.reduce((s,v)=>s+v*v,0)**b:0;
+  const tag=classes[p.indexOf(Math.max(...p))];
+  return {...w,probability:p,tag,aggregationWeight:weight,atomicEntropyMass:weight*entropy(p),structuralSupport,
+   clippedFeatureFraction:score.clippedFeatureFraction,maxStandardizedMagnitude:score.maxStandardizedMagnitude};
+ });
+ const raw=composition(annotated.map(w=>w.probability),annotated.map(w=>w.aggregationWeight),{breakIndex:5});
+ const segments=coalesce(annotated,classes),dominant=raw.activeWeight>0?model.classes[raw.distribution.indexOf(Math.max(...raw.distribution))]:null;
+ return {windows:annotated,segments,coarse:{dominant,composition:named(model.classes,raw.distribution),
+   familyMass:{ln:raw.distribution[model.classes.indexOf('ln')],rc:raw.distribution.reduce((s,p,i)=>s+(model.classes[i]==='ln'?0:p),0)},
+   evidence:{activeWeight:raw.activeWeight,normalizedEntropy:raw.entropy,meanLocalEntropy:raw.meanLocalEntropy,diversity:raw.diversity},
+   scoreKind:'weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness'},
+  modelInfo:{taxonomy:'coarse5',nativeKeyCount:keyCount,featureCount:D,windowMs:model.config.windowMs,stepMs:2000,
+   effortPower:a,concentrationPower:b,representation:model.spec.representation,weak4Only:!!model.spec.weak4Only,physicalSupport:options.physicalSupport??'none',
+   clippedFeatureFraction:annotated.reduce((s,w)=>s+(w.end-w.start)*w.clippedFeatureFraction,0)/(annotated.at(-1).end-annotated[0].start)}};
+}
+
+function classifyCoarse(text,profile,options={}){
+ const model=profile.model||profile,map=parseOsu(text,options),ctx=physical.prepare(prepare(map,10));
+ const windows=physical.windows(ctx,model.config.windowMs,2000);
+ return {map,...analyzeWindows(windows,model,map.keys,{physicalSupport:options.physicalSupport??profile.postprocess?.physicalSupport??'none'})};
+}
+module.exports={classifyCoarse,analyzeWindows,aggregateSegments,localScores};
 
 },
 function(module,exports,load){
 'use strict';
-const {FEATURE_KEYS} = load(3);
-const {scores,linearQuantile} = load(4);
-const FINE_TO_COARSE = {
-  chordjack:'jack',minijack:'jack',vibro:'jack',anchor:'jack',
-  'dense chordstream':'stamina','fast chordstream':'stamina',speed:'speed',tech:'tech',wildcard:'tech',
-  coordination:'ln',density:'ln',inverse:'ln',release:'ln',technical:'ln','ln wildcard':'ln'
-};
-function aggregateEvidence(windows, probabilities, mode='full', duration=false) {
-  if (['no_geometry','no_holds','no_burden'].includes(mode)) mode='confidence_evidence';
-  if (!['hard_evidence','duration_evidence','effort_evidence','confidence_evidence'].includes(mode)) mode='full';
-  const out=Array(probabilities[0].length).fill(0); let total=0;
-  windows.forEach((w,i)=>{
-    const p=probabilities[i];let weight=duration?Math.max(0,w.end-w.start):1;
-    if (['full','effort_evidence'].includes(mode)) weight*=Math.max(w.values[FEATURE_KEYS.indexOf('effort')],1e-8);
-    if (['full','confidence_evidence'].includes(mode)) weight*=Math.max(...p);
-    const best=p.indexOf(Math.max(...p));
-    for(let j=0;j<out.length;j++)out[j]+=weight*(mode==='hard_evidence'?Number(j===best):p[j]);
-    total+=weight;
-  });
-  return out.map(v=>v/Math.max(total,1e-12));
-}
-function pooledVector(windows, profile, localProbabilities) {
-  const idx=profile.indices, means=[],sds=[],q90=[];
-  for(const j of idx) {
-    const a=windows.map(w=>w.values[j]),m=a.reduce((s,x)=>s+x,0)/a.length;
-    means.push(m);sds.push(Math.sqrt(a.reduce((s,x)=>s+(x-m)**2,0)/a.length));q90.push(linearQuantile(a,.9));
+
+/** Milliseconds after rate conversion; tail intervals are half-open [head, tail). */
+function parseOsu(text, { speedRate = 1 } = {}) {
+  if (!Number.isFinite(speedRate) || speedRate <= 0) throw new RangeError('speedRate must be finite and positive');
+  let section = '', mode = null, keys = null;
+  const rawNotes = [], timingPoints = [], breaks = [], meta = {}, warnings=[];
+  for (const raw of text.replace(/^\uFEFF/, '').split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line || line.startsWith('//')) continue;
+    if (line.startsWith('[')) { section = line.slice(1, -1).toLowerCase(); continue; }
+    if (['general', 'difficulty', 'metadata'].includes(section)) {
+      const at = line.indexOf(':'); if (at < 0) continue;
+      const k = line.slice(0, at).trim(), v = line.slice(at + 1).trim();
+      if (k === 'Mode') mode = Number(v);
+      if (k === 'CircleSize') keys = Number(v);
+      if (section === 'metadata') meta[k] = v;
+      if (k === 'OverallDifficulty') meta.od = Number(v);
+    } else if (section === 'timingpoints') {
+      const p = line.split(','), t = Number(p[0]), beatLength = Number(p[1]);
+      if(!Number.isFinite(t)||!Number.isFinite(beatLength)){warnings.push('IgnoredNonfiniteTimingPoint');continue;}
+      if (beatLength > 0 && (p[6] === undefined || p[6].trim() !== '0'))
+        timingPoints.push({ t: t / speedRate, beatLength: beatLength / speedRate });
+    } else if (section === 'events') {
+      const p = line.split(/\s*,\s*|\s+/);
+      if (p[0] === '2' || p[0] === 'Break') {
+        const a = Number(p[1]), b = Number(p[2]);
+        if (Number.isFinite(a) && b > a) breaks.push([a / speedRate, b / speedRate]);
+      }
+    } else if (section === 'hitobjects') rawNotes.push(line.split(','));
   }
-  const v=[...means,...sds,...q90];
-  if(profile.variant!=='no_evidence')v.push(...aggregateEvidence(windows,localProbabilities,profile.variant));
-  return v;
+  if (mode !== 3) throw new Error('NotMania');
+  if (![4, 6, 7].includes(keys)) throw new Error('UnsupportedKeys: expected 4, 6 or 7');
+  const notes = [];
+  for (const p of rawNotes) {
+    const x = Number(p[0]), t = Number(p[2]), type = Number(p[3]);
+    if (p.length < 5 || !Number.isFinite(x) || !Number.isFinite(t) || !Number.isInteger(type))
+      throw new Error('InvalidHitObject');
+    if (!(type & 129)) continue;
+    const end = type & 128 ? Number((p[5] ?? '').split(':')[0]) : null;
+    if (end !== null && (!Number.isFinite(end) || end < t)) throw new Error('InvalidHoldTail');
+    notes.push({ t: t / speedRate, col: Math.min(keys - 1, Math.max(0, Math.floor(x * keys / 512))),
+      lnEnd: end !== null && end > t ? end / speedRate : null });
+  }
+  notes.sort((a, b) => a.t - b.t || a.col - b.col);
+  if (!notes.length) throw new Error('EmptyBeatmap');
+  Object.assign(meta,{title:meta.Title,artist:meta.Artist,version:meta.Version,creator:meta.Creator});
+  timingPoints.sort((a, b) => a.t - b.t);
+  // Duplicate objects on one key at the same time are one physical action.
+  const unique = [];
+  for (const n of notes) {
+    const last = unique.at(-1);
+    if (last && last.t === n.t && last.col === n.col) {
+      const end = Math.max(last.lnEnd ?? n.t, n.lnEnd ?? n.t); last.lnEnd = end > n.t ? end : null;
+    }
+    else unique.push(n);
+  }
+  return { keys, notes: unique, timingPoints, breaks, meta, warnings,
+    firstNote: unique[0].t, lastNote: unique.reduce((end,n)=>Math.max(end,n.lnEnd??n.t),unique[0].t) };
 }
-function localProbabilities(windows, profile) {
-  return profile.local ? windows.map(w=>scores(profile.local,profile.indices.map(i=>w.values[i]))) : null;
+
+function popcount(mask) { let n = 0; while (mask) { mask &= mask - 1; n++; } return n; }
+function lowerBound(a, t, key = x => x) {
+  let lo = 0, hi = a.length;
+  while (lo < hi) { const mid = (lo + hi) >>> 1; if (key(a[mid]) < t) lo = mid + 1; else hi = mid; }
+  return lo;
 }
-/** Coarse support union for independent whole-map labels, not a softmax. */
-function coarseSupports(classes,p) {
-  const out={jack:0,ln:0,speed:0,stamina:0,tech:0};
-  for(let i=0;i<classes.length;i++) {
-    const c=FINE_TO_COARSE[classes[i]];
-    if(c)out[c]=1-(1-out[c])*(1-p[i]);
+function prepare(map, rowMergeMs = 10) {
+  const rows = [], cols = Array.from({ length: map.keys }, () => []), tails = [];
+  for (const n of map.notes) {
+    cols[n.col].push(n);
+    let r = rows.at(-1);
+    if (!r || n.t - r.t > rowMergeMs) rows.push(r = { t: n.t, mask: 0, lnMask: 0 });
+    r.mask |= 1 << n.col; if (n.lnEnd !== null) { r.lnMask |= 1 << n.col; tails.push({ t: n.lnEnd, col: n.col, start: n.t }); }
+  }
+  // Union overlapping holds per column: occupancy never exceeds one finger per key.
+  const holds = cols.map(notes => {
+    const out = [];
+    for (const n of notes) if (n.lnEnd !== null) {
+      const last = out.at(-1);
+      if (last && n.t < last[1]) last[1] = Math.max(last[1], n.lnEnd);
+      else out.push([n.t, n.lnEnd]);
+    }
+    return out;
+  });
+  tails.sort((a, b) => a.t - b.t || a.col - b.col);
+  return { map, rows, cols, tails, holds, rowMergeMs };
+}
+module.exports = { parseOsu, prepare, popcount, lowerBound };
+
+},
+function(module,exports,load){
+'use strict';
+// Native-key physical descriptors for the shared coarse model. This module
+// does not select tags or treat an unobserved attribute as a negative label.
+const base=load(3);
+const {lowerBound:lb}=load(1);
+const anchor=load(4);
+const release=load(5);
+const REPLACED=new Set(['anchorShare','repeatRun']);
+const SEQUENCE=anchor.KEYS.filter(k=>k!=='peakShare');
+const BASE_KEYS=base.FEATURE_KEYS.filter(k=>!REPLACED.has(k));
+const KEYS=[...BASE_KEYS,...SEQUENCE,...release.KEYS.map(k=>'release:'+k)];
+const GROUPS={...Object.fromEntries(Object.entries(base.GROUPS).map(([g,ks])=>[g,ks.filter(k=>!REPLACED.has(k))])),
+ sequence:[...base.GROUPS.sequence.filter(k=>!REPLACED.has(k)),...SEQUENCE],release:release.KEYS.map(k=>'release:'+k)};
+
+function features(ctx,start,end){
+ const f=base.features(ctx,start,end);
+ const rows=ctx.rows.slice(lb(ctx.rows,start,r=>r.t),lb(ctx.rows,end,r=>r.t));
+ const a=anchor.describe(rows,ctx.map.keys),r=release.releaseGeometry(ctx,start,end);
+ const sequence=Object.fromEntries(anchor.KEYS.map((k,i)=>[k,a[i]]));
+ const metrics={...f.metrics,...sequence,...Object.fromEntries(release.KEYS.map((k,i)=>['release:'+k,r.values[i]]))};
+ // An empty head bin is not sustained head activity. Long held notes still
+ // have physical occupancy and are not erased by the head-only count.
+ if(!f.notes)metrics.sustain=0;
+ const values=KEYS.map(k=>metrics[k]);
+ if(values.some(x=>!Number.isFinite(x)))throw Error('Nonfinite native-key descriptors');
+ return {...f,values,metrics,baseValues:base.FEATURE_KEYS.map(k=>k==='sustain'&&!f.notes?0:f.metrics[k]),
+   tails:r.tails,structurallyEmpty:f.notes===0&&metrics.occupancy===0&&r.tails===0};
+}
+
+function windows(ctx,windowMs=4000,stepMs=2000){
+ const {firstNote}=ctx.map,end=Math.max(firstNote+1,ctx.map.lastNote+1),out=[];
+ for(let t=firstNote;t<end;t+=stepMs){
+  const center=Math.min(end,t+stepMs/2),a=Math.max(firstNote,center-windowMs/2),b=Math.min(end,center+windowMs/2);
+  out.push({...features(ctx,a,b),start:t,end:Math.min(t+stepMs,end),contextStart:a,contextEnd:b});
+ }
+ return out;
+}
+module.exports={KEYS,GROUPS,BASE_KEYS,SEQUENCE,features,windows,prepare:release.releaseContext};
+
+},
+function(module,exports,load){
+'use strict';
+const { popcount: pc, lowerBound: lb } = load(1);
+const mean = a => a.length ? a.reduce((x, y) => x + y, 0) / a.length : 0;
+const quantile = (a, q) => { if (!a.length) return 0; const s = [...a].sort((x, y) => x - y); return s[Math.floor((s.length - 1) * q)]; };
+const sd = a => { const m = mean(a); return Math.sqrt(mean(a.map(x => (x - m) ** 2))); };
+const frac = (a, f) => a.length ? a.filter(f).length / a.length : 0;
+const GROUPS = {
+  base: ['npsPerKey','rowRate','chordFraction','multiFraction','singleFraction','lnHeadFraction'],
+  geometry: ['overlap','repeatFraction','cutReturn','chordChange','columnEntropy','handImbalance','sameHand','crossCut'],
+  rhythm: ['logIoiSd','ioiChange','graceFraction','gridResidual','rowBpm','ioiCv'],
+  holds: ['occupancy','minOccupancy','occupancySd','heldAtHead','lockFraction','releaseIndependence','releaseScatter','tailRate','shortHoldFraction','inverseGap','lnHeadOverlap'],
+  sequence: ['anchorShare','repeatRun','maskEntropy','trillFraction','rollFraction'],
+  burden: ['effort','sustain','burstiness','activeFraction']
+};
+const FEATURE_KEYS = Object.values(GROUPS).flat();
+
+/** All hold area uses interval unions; all RC adjacency uses heads, never tails. */
+function features(ctx, start, end) {
+  const { map, rows, cols, holds, tails } = ctx, K = map.keys;
+  const dur = Math.max(end - start, 1), seconds = dur / 1000;
+  const rs = rows.slice(lb(rows, start, x => x.t), lb(rows, end, x => x.t));
+  const notes = map.notes.slice(lb(map.notes, start, x => x.t), lb(map.notes, end, x => x.t));
+  const ts = tails.slice(lb(tails, start, x => x.t), lb(tails, end, x => x.t));
+  const hits = rs.map(r => pc(r.mask)), iv = rs.slice(1).map((r, i) => r.t - rs[i].t).filter(x => x > 0);
+  const med = quantile(iv, .5), overlaps = [], changes = [], returns = [], sameHands = [], crossCuts = [];
+  const counts = Array(K).fill(0), maskCount = new Map();
+  let currentRun = 0, maxRun = 0, trills = 0, rolls = 0, previousDir = 0;
+  const hand = mask => {
+    let l = 0, r = 0;
+    for (let c = 0; c < K; c++) if (mask & (1 << c)) {
+      if (K === 7 && c === 3) { l += .5; r += .5; } else if (c < K / 2) l++; else r++;
+    }
+    return [l, r];
+  };
+  for (let i = 0; i < rs.length; i++) {
+    const r = rs[i]; maskCount.set(r.mask, (maskCount.get(r.mask) ?? 0) + 1);
+    for (let c = 0; c < K; c++) if (r.mask & (1 << c)) counts[c]++;
+    if (!i) continue;
+    const p = rs[i - 1], inter = pc(r.mask & p.mask);
+    overlaps.push(inter / Math.max(1, Math.min(hits[i], hits[i - 1])));
+    changes.push(pc(r.mask ^ p.mask) / K);
+    currentRun = inter ? currentRun + 1 : 0; maxRun = Math.max(maxRun, currentRun);
+    const [l, rr] = hand(r.mask), [pl, pr] = hand(p.mask);
+    sameHands.push((l * pl + rr * pr) / Math.max(1, (l + rr) * (pl + pr)));
+    // Within-hand finger substitutions; ignore the flexible 7K center finger.
+    let cut = 0, pairs = 0;
+    for (const range of [Array.from({length: Math.floor(K/2)}, (_, c) => c),
+      Array.from({length: Math.floor(K/2)}, (_, c) => K - 1 - c)]) {
+      for (let a = 0; a < range.length; a++) for (let b = a + 1; b < range.length; b++) {
+        const x = 1 << range[a], y = 1 << range[b]; pairs++;
+        if (((p.mask & x) && !(p.mask & y) && !(r.mask & x) && (r.mask & y)) ||
+          ((p.mask & y) && !(p.mask & x) && !(r.mask & y) && (r.mask & x))) cut++;
+      }
+    }
+    crossCuts.push(cut / Math.max(1, pairs));
+    if (i >= 2) {
+      const a = rs[i - 2]; returns.push(pc(a.mask & r.mask & ~p.mask) / Math.max(1, pc(a.mask)));
+      if (hits[i] === 1 && hits[i-1] === 1 && hits[i-2] === 1 && r.mask === a.mask && r.mask !== p.mask) trills++;
+    }
+    if (hits[i] === 1 && hits[i-1] === 1) {
+      const d = Math.sign(Math.log2(r.mask) - Math.log2(p.mask));
+      if (d && d === previousDir) rolls++; previousDir = d;
+    } else previousDir = 0;
+  }
+  const area = holds.map(hs => {
+    let a = 0; const hi = lb(hs, end, h => h[0]);
+    for (let i = hi - 1; i >= 0 && hs[i][1] > start; i--) a += Math.max(0, Math.min(end, hs[i][1]) - Math.max(start, hs[i][0]));
+    return a / dur;
+  });
+  let heldSum = 0, locks = 0;
+  for (const r of rs) {
+    let heldMask = 0;
+    for (let c = 0; c < K; c++) {
+      const hs = holds[c], i = lb(hs, r.t, h => h[0]) - 1;
+      if (i >= 0 && hs[i][0] < r.t && hs[i][1] > r.t) heldMask |= 1 << c;
+    }
+    heldSum += pc(heldMask) / K;
+    if (heldMask && (r.mask & ~heldMask)) locks++;
+  }
+  let independent = 0, inverse = 0; const gaps = [];
+  for (const t of ts) {
+    const i = lb(rows, t.t, x => x.t), candidates = [rows[i-1], rows[i]].filter(Boolean);
+    const nearest = candidates.length ? Math.min(...candidates.map(r => Math.abs(r.t - t.t))) : Infinity;
+    if (nearest > ctx.rowMergeMs) independent++;
+    const a = cols[t.col], next = a[lb(a, t.t, x => x.t)];
+    if (next) { const gap = Math.max(0, next.t - t.t); gaps.push(gap / Math.max(1, med)); inverse += Math.exp(-gap / Math.max(1, med)); }
+  }
+  const total = notes.length, ln = notes.filter(n => n.lnEnd !== null), leftRight = counts.reduce((a, n, c) => {
+    const [l, r] = hand(1 << c); a[0] += n*l; a[1] += n*r; return a;
+  }, [0,0]);
+  const entropy = (counts, total, max) => total && max > 1 ? -counts.reduce((s,n) => n ? s + n/total * Math.log(n/total) : s,0) / Math.log(max) : 0;
+  const residuals = [];
+  for (const r of rs) {
+    const i = Math.max(0, lb(map.timingPoints, r.t + 1e-8, p => p.t) - 1), tp = map.timingPoints[i];
+    if (tp) { const unit = tp.beatLength / 4; const q = (r.t - tp.t) / unit; residuals.push(Math.abs(q - Math.round(q))); }
+  }
+  const bins = Array(Math.max(1, Math.ceil(seconds))).fill(0);
+  for (const n of notes) bins[Math.min(bins.length - 1, Math.floor((n.t - start) / 1000))]++;
+  const nps = total / seconds, cv = mean(iv) ? sd(iv)/mean(iv) : 0;
+  const f = {
+    npsPerKey: nps/K, rowRate: rs.length/seconds, chordFraction: mean(hits)/K,
+    multiFraction: frac(hits,x=>x>=2), singleFraction: frac(hits,x=>x===1), lnHeadFraction: total ? ln.length/total : 0,
+    overlap: mean(overlaps), repeatFraction: frac(overlaps,x=>x>0), cutReturn: mean(returns), chordChange: mean(changes),
+    columnEntropy: entropy(counts,total,K), handImbalance: total ? Math.abs(leftRight[0]-leftRight[1])/total : 0,
+    sameHand: mean(sameHands), crossCut: mean(crossCuts), logIoiSd: sd(iv.map(Math.log)),
+    ioiChange: mean(iv.slice(1).map((v,i)=>Math.abs(Math.log(v/iv[i])))), graceFraction: med ? frac(iv,x=>x<med/2) : 0,
+    gridResidual: mean(residuals), rowBpm: med ? 15000/med : 0, ioiCv: cv,
+    occupancy: mean(area), minOccupancy: Math.min(...area), occupancySd: sd(area),
+    heldAtHead: rs.length ? heldSum/rs.length : 0, lockFraction: rs.length ? locks/rs.length : 0,
+    releaseIndependence: ts.length ? independent/ts.length : 0, releaseScatter: sd(gaps.map(x=>Math.log1p(x))),
+    tailRate: ts.length/seconds/K, shortHoldFraction: ln.length ? frac(ln,n=>n.lnEnd-n.t<=2*Math.max(1,med)) : 0,
+    inverseGap: ts.length ? inverse/ts.length : 0,
+    lnHeadOverlap: mean(rs.slice(1).map((r,i)=>pc(r.lnMask&rs[i].lnMask)/Math.max(1,pc(r.lnMask)))),
+    anchorShare: total ? Math.max(...counts)/total : 0, repeatRun: rs.length>1 ? maxRun/(rs.length-1) : 0,
+    maskEntropy: entropy([...maskCount.values()],rs.length,Math.min(2**K-1,rs.length)),
+    trillFraction: rs.length>2 ? trills/(rs.length-2) : 0, rollFraction: rs.length>2 ? rolls/(rs.length-2) : 0,
+    effort: nps/K * (1+mean(overlaps)) * (1+mean(area)),
+    sustain: frac(bins,x=>x>=mean(bins)), burstiness: mean(bins) ? sd(bins)/mean(bins) : 0,
+    activeFraction: frac(bins,x=>x>0)
+  };
+  return {start,end,values: FEATURE_KEYS.map(k=>f[k]),metrics:f,notes:total,rows:rs.length,
+    equivBpm: iv.length>=3 && cv<=.5 ? Math.round(15000/med) : undefined};
+}
+function windows(ctx, windowMs = 4000, stepMs = 2000) {
+  const out = [], {firstNote, lastNote} = ctx.map;
+  const end = Math.max(firstNote+1,lastNote+1);
+  for (let t = firstNote; t < end; t += stepMs) {
+    const center = Math.min(end,t+stepMs/2);
+    const a = Math.max(firstNote,center-windowMs/2), b = Math.min(end,center+windowMs/2);
+    out.push({...features(ctx,a,b),start:t,end:Math.min(t+stepMs,end)});
   }
   return out;
 }
-/** Preserve 7K conditional detail while interpolating the 4K/7K coarse masses. */
-function transferDistribution(classes,p7,classes4,p4,lambda=2/3) {
-  const coarse={},groups={};let active=0;
-  classes.forEach((t,i)=>{const c=FINE_TO_COARSE[t];if(c){coarse[c]=(coarse[c]||0)+p7[i];(groups[c]??=[]).push(i);active+=p7[i];}});
-  const out=[...p7];
-  for(const [c,ids] of Object.entries(groups)) {
-    const other=p4[classes4.indexOf(c)]||0,desired=lambda*(coarse[c]||0)+(1-lambda)*other*active;
-    for(const i of ids)out[i]=coarse[c]>0?desired*p7[i]/coarse[c]:desired/ids.length;
-  }
-  const sum=out.reduce((a,b)=>a+b,0);return out.map(x=>x/Math.max(1e-12,sum));
-}
-module.exports={aggregateEvidence,pooledVector,localProbabilities,FINE_TO_COARSE,coarseSupports,transferDistribution};
+module.exports = { GROUPS, FEATURE_KEYS, features, windows, mean, quantile };
 
 },
 function(module,exports,load){
 'use strict';
-const {named} = load(4);
-const LN = new Set(['coordination','density','inverse','release','technical','ln wildcard','ln']);
-function family(tag){return tag==='break'?'break':LN.has(tag)?'ln':'rc';}
-function decode(probabilities, penalty=1) {
-  let cost=probabilities[0].map(p=>-Math.log(Math.max(p,1e-15)));const back=[];
-  for(let i=1;i<probabilities.length;i++) {
-    const next=[],prev=[];
-    for(let k=0;k<cost.length;k++) {
-      let best=Infinity,index=0;
-      for(let j=0;j<cost.length;j++){const v=cost[j]+(j===k?0:penalty);if(v<best){best=v;index=j;}}
-      next.push(best-Math.log(Math.max(probabilities[i][k],1e-15)));prev.push(index);
-    }
-    back.push(prev);cost=next;
+// Key-count-aware morphology. These are descriptors, not local truth labels.
+const {popcount,lowerBound}=load(1);
+const KEYS=['peakShare','peakExcess','repeatConcentration','runAsymmetry','runCoverage','regularity','regularAnchor'];
+function describe(rows,K){
+ const N=rows.length,counts=Array(K).fill(0),pairs=Array(K).fill(0),longest=Array(K).fill(0),run=Array(K).fill(0);
+ const times=Array.from({length:K},()=>[]);
+ for(let i=0;i<N;i++)for(let c=0;c<K;c++){
+  if(rows[i].mask&(1<<c)){
+   counts[c]++;times[c].push(rows[i].t);run[c]++;longest[c]=Math.max(longest[c],run[c]);
+   if(i&&(rows[i-1].mask&(1<<c)))pairs[c]++;
+  }else run[c]=0;
+ }
+ const total=counts.reduce((a,b)=>a+b,0),repeat=pairs.reduce((a,b)=>a+b,0);
+ const sorted=[...longest].sort((a,b)=>a-b),peakCount=Math.max(...counts);
+ const steady=times.map(a=>{
+  const iv=a.slice(1).map((t,i)=>t-a[i]),mean=iv.reduce((a,b)=>a+b,0)/Math.max(1,iv.length);
+  const cv=mean>0?Math.sqrt(iv.reduce((s,v)=>s+(v-mean)**2,0)/Math.max(1,iv.length))/mean:Infinity;
+  return iv.length>=2?1/(1+cv):0;
+ });
+ const peak=total?Math.max(...counts)/total:0,excess=total?Math.max(0,(peak-1/K)/(1-1/K)):0;
+ const concentration=repeat?Math.max(0,(Math.max(...pairs)/repeat-1/K)/(1-1/K)):0;
+ const asymmetry=N?(sorted[K-1]-sorted[Math.floor((K-1)/2)])/N:0;
+ const regularity=Math.max(...steady.filter((_,c)=>counts[c]===peakCount));
+ return [peak,excess,concentration,asymmetry,N?sorted[K-1]/N:0,regularity,excess*regularity];
+}
+function windows(ctx,ms){
+ const start=ctx.map.firstNote,end=ctx.map.lastNote+1,out=[];
+ for(let t=start;t<end;t+=ms/2){
+  const rows=ctx.rows.slice(lowerBound(ctx.rows,t,r=>r.t),lowerBound(ctx.rows,t+ms,r=>r.t));
+  if(rows.length>=3)out.push(describe(rows,ctx.map.keys));
+ }
+ return out;
+}
+function pooled(ctx,ms){
+ const ws=windows(ctx,ms),out=[];
+ for(let j=0;j<KEYS.length;j++){
+  const a=ws.map(w=>w[j]).sort((a,b)=>a-b),mean=a.reduce((s,v)=>s+v,0)/Math.max(1,a.length);
+  out.push(mean,Math.sqrt(a.reduce((s,v)=>s+(v-mean)**2,0)/Math.max(1,a.length)),a[Math.floor(.9*(a.length-1))]||0);
+ }
+ return out;
+}
+module.exports={KEYS,describe,windows,pooled};
+
+},
+function(module,exports,load){
+'use strict';
+const {lowerBound:lb}=load(1);
+const KEYS=['tailRatePerKey','headIsolation','sameFingerRecovery','tailAsynchrony','tailTimingVariability',
+ 'heldOtherAtTail','sameHandOrder','releaseChordFraction','independentHeldRelease'];
+const mean=a=>a.length?a.reduce((s,x)=>s+x,0)/a.length:0;
+const sd=a=>{const m=mean(a);return Math.sqrt(mean(a.map(x=>(x-m)**2)));};
+const ratio=(gap,scale)=>Number.isFinite(gap)?gap/(gap+scale):1;
+
+function releaseContext(ctx){
+ // Timing-normalized geometry uses the active quarter-beat. Without timing
+ // points use a scale inferred from actual event gaps, not a new fixed-ms gate.
+ const times=[...new Set([...ctx.map.notes.map(n=>n.t),...ctx.tails.map(n=>n.t)])].sort((a,b)=>a-b);
+ const gaps=times.slice(1).map((t,i)=>t-times[i]).sort((a,b)=>a-b);
+ return {...ctx,releaseFallbackScale:gaps[Math.floor((gaps.length-1)/2)]||1};
+}
+function scaleAt(ctx,t){
+ const points=ctx.map.timingPoints;
+ const index=Math.max(0,lb(points,t+1e-8,p=>p.t)-1);
+ return points.length?points[index].beatLength/4:ctx.releaseFallbackScale;
+}
+function releaseGeometry(ctx,start,end){
+ const K=ctx.map.keys,tails=ctx.tails,heads=ctx.map.notes;
+ const lo=lb(tails,start,n=>n.t),hi=lb(tails,end,n=>n.t),n=hi-lo;
+ if(!n)return {values:KEYS.map(()=>0),metrics:Object.fromEntries(KEYS.map(k=>[k,0])),tails:0};
+ const isolation=[],recovery=[],asynchrony=[],held=[],interaction=[],rhythm=[],width=[];let order=0;
+ const hand=c=>K===7&&c===3?-1:c<Math.floor(K/2)?0:1;
+ for(let j=lo;j<hi;j++){
+  const tail=tails[j],scale=scaleAt(ctx,tail.t),i=lb(heads,tail.t,n=>n.t);
+  const before=i>0?tail.t-heads[i-1].t:Infinity,after=i<heads.length?heads[i].t-tail.t:Infinity;
+  const independent=ratio(Math.min(before,after),scale);isolation.push(independent);
+  const same=ctx.cols[tail.col],next=same[lb(same,tail.t,n=>n.t)];
+  recovery.push(ratio(next?next.t-tail.t:Infinity,scale));
+  const previous=j?tail.t-tails[j-1].t:Infinity,following=j+1<tails.length?tails[j+1].t-tail.t:Infinity;
+  asynchrony.push(ratio(Math.min(previous,following),scale));
+  let other=0;
+  for(let col=0;col<K;col++){
+   if(col===tail.col)continue;
+   const holds=ctx.holds[col],last=lb(holds,tail.t,h=>h[0])-1;
+   // Immediately BEFORE release: new simultaneous heads do not count, other
+   // simultaneous tails are still held. No epsilon-time magic is needed.
+   if(last>=0&&holds[last][1]>=tail.t)other++;
   }
-  const path=[cost.indexOf(Math.min(...cost))];
-  for(let i=back.length-1;i>=0;i--)path.push(back[i][path.at(-1)]);
-  return path.reverse();
+  const load=other/Math.max(1,K-1);held.push(load);interaction.push(load*independent);
+  const a=lb(tails,tail.t,n=>n.t),b=lb(tails,tail.t+1e-8,n=>n.t);width.push((b-a)/K);
+  if(j>lo&&tail.t>tails[j-1].t)rhythm.push(Math.log1p((tail.t-tails[j-1].t)/scale));
+  if(j>0&&j+1<tails.length){
+   const a=tails[j-1],b=tail,c=tails[j+1],h=hand(b.col);
+   // All three timestamp groups must be singletons. Strict a.t < b.t < c.t
+   // alone is insufficient: a/c can be the last/first member of a chord,
+   // whose arbitrary column ordering reverses under a physical mirror.
+   const uniqueEndpoints=(j<2||tails[j-2].t<a.t)&&(j+2>=tails.length||c.t<tails[j+2].t);
+   if(uniqueEndpoints&&a.t<b.t&&b.t<c.t&&h>=0&&hand(a.col)===h&&hand(c.col)===h&&new Set([a.col,b.col,c.col]).size===3){
+    const distance=Math.abs(a.col-b.col)+Math.abs(b.col-c.col),span=Math.max(a.col,b.col,c.col)-Math.min(a.col,b.col,c.col);
+    order+=(distance-span)/Math.max(1,Math.floor(K/2)-1)*Math.exp(-(c.t-a.t)/(3*scale));
+   }
+  }
+ }
+ const values=[n/((end-start)/1000)/K,mean(isolation),mean(recovery),mean(asynchrony),sd(rhythm),
+  mean(held),order/n,mean(width),mean(interaction)];
+ if(values.some(v=>!Number.isFinite(v)))throw Error('Nonfinite release geometry');
+ return {values,metrics:Object.fromEntries(KEYS.map((k,i)=>[k,values[i]])),tails:n};
 }
-function segmentsFrom(windows,probabilities,classes,penalty=1) {
-  const path=decode(probabilities,penalty), groups=[];
-  windows.forEach((w,i)=>{let g=groups.at(-1);if(!g||g.label!==path[i])groups.push(g={label:path[i],indices:[]});g.indices.push(i);});
-  return groups.map(g=>{
-    const first=windows[g.indices[0]],last=windows[g.indices.at(-1)],tag=classes[g.label];
-    const p=Array(classes.length).fill(0);let total=0,effort=0,notes=0,occupancy=0,bpm=0,bpmW=0;
-    for(const i of g.indices){
-      const w=windows[i],weight=w.end-w.start;total+=weight;
-      probabilities[i].forEach((v,j)=>p[j]+=weight*v);
-      effort+=weight*w.metrics.effort;occupancy+=weight*w.metrics.occupancy;notes+=w.notes;
-      if(w.equivBpm){bpm+=weight*w.equivBpm;bpmW+=weight;}
+module.exports={KEYS,releaseContext,releaseGeometry};
+
+},
+function(module,exports,load){
+'use strict';
+/** Separate uncertain local labels from genuine between-segment diversity.
+ * Inputs are probability vectors (not raw legacy scores), nonnegative evidence
+ * weights and an optional Break index. Break mass reduces active evidence.
+ * Entropies are divided by log(number of non-Break classes).
+ */
+function composition(probabilities,weights,{breakIndex=-1}={}){
+ if(!probabilities.length||probabilities.length!==weights.length)throw Error('ShapeMismatch');
+ const D=probabilities[0].length,indices=Array.from({length:D},(_,i)=>i).filter(i=>i!==breakIndex);
+ if(indices.length<2)throw Error('NeedAtLeastTwoActiveClasses');
+ const dist=Array(indices.length).fill(0),rows=[];let total=0;
+ const H=p=>-p.reduce((s,x)=>s+(x>0?x*Math.log(x):0),0)/Math.log(indices.length);
+ probabilities.forEach((p,i)=>{
+  if(p.length!==D||p.some(x=>!Number.isFinite(x)||x<0)||Math.abs(p.reduce((a,b)=>a+b,0)-1)>1e-9)throw Error('InvalidProbability');
+  if(!Number.isFinite(weights[i])||weights[i]<0)throw Error('InvalidWeight');
+  const active=indices.reduce((s,j)=>s+p[j],0),weight=weights[i]*active;
+  if(!weight)return;
+  const q=indices.map(j=>p[j]/active);total+=weight;
+  for(let j=0;j<q.length;j++)dist[j]+=weight*q[j];rows.push({q,weight});
+ });
+ if(!total)return {indices,distribution:dist,activeWeight:0,entropy:0,meanLocalEntropy:0,diversity:0};
+ for(let j=0;j<dist.length;j++)dist[j]/=total;
+ const entropy=H(dist),local=rows.reduce((s,r)=>s+r.weight/total*H(r.q),0);
+ return {indices,distribution:dist,activeWeight:total,entropy,meanLocalEntropy:local,
+  diversity:Math.max(0,entropy-local)};
+}
+module.exports={composition};
+
+},
+function(module,exports,load){
+'use strict';
+// Sufficient structural templates, not learned probability calibration.
+// Numeric tolerance only absorbs floating-point IOI arithmetic under rate
+// conversion; it is not an empirical rhythm/skill threshold.
+function physicalSupport(window,mode='none'){
+ if(!['none','jack','ln','both'].includes(mode))throw Error('Unknown physical support mode');
+ if(mode==='none')return null;
+ const required=['rowRate','occupancy','release:tailRatePerKey','lnHeadFraction','chordChange','overlap','ioiCv','rowBpm'];
+ if(!Number.isFinite(window.contextStart)||!Number.isFinite(window.contextEnd)||!Number.isFinite(window.notes)||
+    required.some(k=>!Number.isFinite(window.metrics[k])))throw Error('Physical support requires full finite native-window facts');
+ const m=window.metrics,seconds=Math.max(1,window.contextEnd-window.contextStart)/1000;
+ const rows=Math.round(m.rowRate*seconds),held=m.occupancy>0,tails=m['release:tailRatePerKey']>0;
+ if((mode==='ln'||mode==='both')&&((window.notes===0&&(held||tails))||
+    (rows<=1&&window.notes>0&&m.lnHeadFraction===1&&held)))return {tag:'ln',rule:'only_ln_activity_without_a_head_sequence'};
+ if((mode==='jack'||mode==='both')&&rows>=3&&m.lnHeadFraction===0&&!held&&!tails&&
+    m.chordChange===0&&m.overlap===1&&m.ioiCv<=1e-9&&m.rowBpm>0)
+  return {tag:'jack',rule:'periodic_identical_rc_chord'};
+ return null;
+}
+module.exports={physicalSupport};
+
+}],cache={};
+function load(id){if(!cache[id]){const m=cache[id]={exports:{}};modules[id](m,m.exports,load);}return cache[id].exports;}
+return load(0);})();
+
+},
+function(module,exports,load){
+module.exports={
+  "name": "spm-tag-classifier",
+  "version": "1.2.1",
+  "description": "Standalone osu!mania pattern classification extracted from SPM Map Analyser",
+  "main": "src/index.cjs",
+  "bin": {
+    "spm-tag-classifier": "bin/classify.cjs"
+  },
+  "scripts": {
+    "test": "node --test test/*.test.cjs",
+    "test:parity": "node scripts/parity.cjs",
+    "test:types": "tsc --noEmit -p test/types/tsconfig.json",
+    "build": "node scripts/build.cjs",
+    "research": "pwsh -NoProfile -File scripts/reproduce.ps1",
+    "research:legacy": "python -X utf8 research/train.py"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ist1na07/SPMTagClassifier.git"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "files": [
+    "src/",
+    "dist/",
+    "bin/",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "UPSTREAM.md"
+  ],
+  "types": "src/index.d.ts",
+  "devDependencies": {
+    "typescript": "5.9.3"
+  }
+}
+;
+},
+function(module,exports,load){
+'use strict';
+const {analyzeLnAdapter,nativeEvidence,classes}=load(8);
+const {features}=load(3),{version}=load(6);
+const geometry=load(9);
+const named=p=>Object.fromEntries(classes.map((c,i)=>[c,p[i]]));
+const ignored=new Set(['break','wildcard','ln wildcard','rc mix','ln mix','hybrid']);
+function lnResult(text,profile,options,e){
+ const r=analyzeLnAdapter(text,profile,options),atoms=nativeEvidence(r.segments,profile.policy),ctx=geometry.prepare(e.ctx);
+ const descriptors=[],segments=r.segments.map(s=>{
+  const sourceStart=s.start,sourceEnd=s.end,measurement=features(e.ctx,s.start,Math.max(s.start+1,s.end));
+  const members=atoms.filter(a=>a.start>=s.start&&a.end<=s.end);
+  const aggregationWeight=members.reduce((sum,a)=>sum+((profile.policy.mode==='soft'||!ignored.has(a.tag))?a.evidenceWeight:0),0);
+  const distribution=named(s.probability),metrics=s.metrics;
+  const measuredGeometry=geometry.describeInterval(ctx,s.start,Math.max(s.start+1,s.end)),m=measurement.metrics;
+  descriptors.push({start:s.start,end:s.end,anchor:m.anchorShare,trill:m.trillFraction,roll:m.rollFraction,
+   repetition:1-m.maskEntropy,occupancy:m.occupancy,releaseIndependence:m.releaseIndependence,geometry:measuredGeometry});
+  return {...s,confidence:distribution[s.tag],scores:distribution,distribution,aggregationWeight,
+   evidence:{normalizedEntropy:metrics.entropy,margin:metrics.margin,concentration:metrics.concentration,
+    effort:measurement.metrics.effort,occupancy:measurement.metrics.occupancy,geometry:measuredGeometry,
+    featureWindows:members.length,contextNoteObservations:measurement.notes,sourceStart,sourceEnd,
+    ...(s.confidence===undefined?{}:{legacyConfidence:s.confidence})}};
+ });
+ // Match the stable API's display-envelope repair without silently changing
+ // the fitted aggregation. Original score intervals remain explicit evidence.
+ if(segments.length){segments[0].start=e.map.firstNote;segments.at(-1).end=e.map.lastNote+1;}
+ const overall={...r.overall,scores:r.overall.shares,composition:r.overall.shares,
+  compositionKind:profile.policy.mode==='soft'?'same local normalized support, weighted by fitted evidence policy':'weighted primary-label composition, conditional on concrete non-Break labels',
+  scoreKind:'retrospectively tuned decision support; not calibrated correctness; weights retain weighted seconds'};
+ return {map:e.map,segments,overall,descriptors,debug:{windows:r.windows,norm:undefined,ctx:undefined},
+  modelInfo:{version,keyCount:7,variant:'anchored-ln-release',segmentEvidence:'archived RC/LN prior plus conditional Release adaptation; historical prior exposure unknown',
+   temporalResolutionMs:250,classes,defaultReplacementAccepted:false,extraGate:profile.extraGate,
+   aggregationPolicy:profile.policy,coverage:'display envelope repaired; aggregation uses original source intervals',
+   confidenceMeaning:'normalized within-family support of displayed class; legacy affinity retained in evidence',supervision:'weak LN impressions plus available manual LN intervals'}};
+}
+module.exports={lnResult};
+
+},
+function(module,exports,load){
+/* Generated by node scripts/build-ln.cjs; MIT; do not edit. */
+module.exports=(()=>{
+const modules=[function(module,exports,load){
+'use strict';
+// Pure exports for the static product build; dynamic archive access is
+// replaced by scripts/build-ln.cjs before this entry is shipped.
+module.exports={...load(1),nativeEvidence:load(8).evidence,
+ classes:load(5).CLASSES};
+
+},
+function(module,exports,load){
+'use strict';
+// Actual research caller for a selected small LN update. No archive edits.
+const {loadLab,context,inspectPrepared}=load(2);
+const parser=load(3),geometry=load(4);
+const {decisionSupport}=load(5),{evaluateCachedNative}=load(7);
+const injection={id:'ln_adapter_override',apply:(s,r)=>r(s,'  function modelScores(fam, f, extras, cutDemandRef) {',
+ '  function modelScores(fam, f, extras, cutDemandRef) {\n    if(fam==="ln"&&extras.__spmLnAdapter)return extras.__spmLnAdapter;')};
+
+function analyzeLnAdapter(text,profile,options={}){
+ const model=profile.model,policy=profile.policy,rate=options.speedRate??1;
+ if(!Number.isFinite(rate)||rate<=0)throw Error('speedRate must be finite and positive');
+ const api=loadLab({patches:[injection]}),prepared=context(api.lab,text,rate);
+ if(prepared.map.keys!==7)throw Error('LN expert adapter requires7K');
+ const view=inspectPrepared(api,prepared),expert=api.lab.MODEL.ln,D=expert.mean.length;
+ if(model.delta.length!==model.keys.length+1)throw Error('LN adapter shape differs');
+ if(model.delta.some(v=>v!==0)){
+  const modern=geometry.releaseContext(parser.prepare(parser.parseOsu(text,{speedRate:rate}),10));
+  for(let i=0;i<view.segments.length;i++){
+   const s=view.segments[i],g=geometry.releaseGeometry(modern,s.start,s.end).metrics;
+   const fields={a:g.headIsolation,b:g.heldOtherAtTail,ab:g.headIsolation*g.heldOtherAtTail,
+    ...Object.fromEntries(geometry.KEYS.map(k=>['geometry:'+k,g[k]])),
+    ...Object.fromEntries(['tailIndependence','lnAreaRatio','lnWeightRatio'].map(k=>['old:'+k,s.vector[view.featureKeys.indexOf(k)]]))};
+   let delta=model.delta.at(-1);
+   model.keys.forEach((key,j)=>{if(!Object.hasOwn(fields,key))throw Error('Unsupported LN adapter feature '+key);
+    delta+=model.delta[j]*Math.max(-model.clip,Math.min(model.clip,(fields[key]-model.mean[j])/model.scale[j]));});
+   const z=expert.classes.map((tag,k)=>{
+    let value=expert.b[k];for(let j=0;j<D;j++)value+=expert.W[k*D+j]*(s.vector[j]-expert.mean[j])/expert.std[j];
+    return value+(tag==='release'?delta:0);
+   });
+   const peak=Math.max(...z),p=z.map(v=>Math.exp(v-peak)),sum=p.reduce((a,b)=>a+b,0);
+   view.cache.extras[i].__spmLnAdapter=Object.fromEntries(expert.classes.map((tag,k)=>[tag,p[k]/sum]));
+  }
+ }
+ const classified=api.lab.classifySegments(view.cache,{lnDominantRatio:policy.lnRatio,scorer:policy.scorer});
+ const raw=classified.map((s,i)=>({start:s.start,end:s.end,tag:s.tag,family:s.family,secondary:s.secondary,equivBpm:s.equivBpm,confidence:s.confidence,probability:decisionSupport(s),
+  burden:view.segments[i].f.nps*(.5+view.segments[i].f.chordMean/3)*(.6+view.segments[i].f.jackSpeedBpm/150)}));
+ const result=evaluateCachedNative({partitions:[{cases:[{raw}]}]},{...policy,extraGate:profile.extraGate??'all',partition:0,head:0,smoothing:'coherent'});
+ return {map:prepared.map,windows:prepared.windows,...result,modelInfo:{researchOnly:true,variant:model.variant,
+  coefficientPrior:'archived experts, exact historical exposure unknown',updatedClass:'conditional LN Release only',boundaries:'original raw automatic'}};
+}
+module.exports={analyzeLnAdapter};
+
+},
+function(module,exports,load){
+function loadLab({patches=[],config={}}={}){
+ if(patches.some(p=>p.id!=='ln_adapter_override'))throw Error('Static LN core only supports its compiled adapter patch');
+ const module={exports:{}};(function(module,exports){
+"use strict";
+var TagClassifier = (() => {
+  var __defProp = Object.defineProperty;
+  var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
+  var __getOwnPropNames = Object.getOwnPropertyNames;
+  var __hasOwnProp = Object.prototype.hasOwnProperty;
+  var __export = (target, all) => {
+    for (var name in all)
+      __defProp(target, name, { get: all[name], enumerable: true });
+  };
+  var __copyProps = (to, from, except, desc) => {
+    if (from && typeof from === "object" || typeof from === "function") {
+      for (let key of __getOwnPropNames(from))
+        if (!__hasOwnProp.call(to, key) && key !== except)
+          __defProp(to, key, { get: () => from[key], enumerable: !(desc = __getOwnPropDesc(from, key)) || desc.enumerable });
     }
-    const probs=p.map(x=>x/Math.max(total,1e-12)), ranked=classes.map((c,i)=>[c,probs[i]]).sort((a,b)=>b[1]-a[1]);
-    const entropy=-probs.reduce((s,x)=>x>0?s+x*Math.log(x):s,0)/Math.log(classes.length);
-    return {start:first.start,end:last.end,tag,family:family(tag),confidence:probs[g.label],
-      scores:named(classes,probs),secondary:ranked.find(([t])=>t!==tag)?.[0],
-      equivBpm:tag==='break'||!bpmW?undefined:Math.round(bpm/bpmW),
-      evidence:{normalizedEntropy:entropy,margin:ranked[0][1]-(ranked[1]?.[1]||0),
-        effort:effort/Math.max(total,1e-12),occupancy:occupancy/Math.max(total,1e-12),
-        featureWindows:g.indices.length,contextNoteObservations:notes}};
+    return to;
+  };
+  var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
+
+  // src/index.ts
+  var index_exports = {};
+  __export(index_exports, {
+    analyzeMap: () => analyzeMap,
+    buildCachedMap: () => buildCachedMap,
+    extractIntermediate: () => extractIntermediate
   });
+
+  // src/parser/osu.ts
+  function clamp(v, lo, hi) {
+    return v < lo ? lo : v > hi ? hi : v;
+  }
+  function parseOsu(text) {
+    const lines = text.split(/\r?\n/);
+    let section = "";
+    const notes = [];
+    const timingPoints = [];
+    const breaks = [];
+    let keys = 0;
+    let od = 6;
+    let hp;
+    let title;
+    let artist;
+    let version;
+    let creator;
+    for (let i = 0; i < lines.length; i++) {
+      const raw = lines[i];
+      const line = raw.trim();
+      if (!line) continue;
+      if (line.startsWith("[")) {
+        section = line.slice(1, line.indexOf("]")).toLowerCase();
+        continue;
+      }
+      switch (section) {
+        case "general":
+          if (line.startsWith("Mode:")) {
+            if (parseInt(line.slice(5).trim(), 10) !== 3) {
+              throw new Error("NotMania");
+            }
+          }
+          break;
+        case "metadata": {
+          const ci = line.indexOf(":");
+          if (ci < 0) break;
+          const k = line.slice(0, ci).trim();
+          const v = line.slice(ci + 1).trim();
+          if (k === "Title") title = v;
+          else if (k === "Artist") artist = v;
+          else if (k === "Version") version = v;
+          else if (k === "Creator") creator = v;
+          break;
+        }
+        case "difficulty": {
+          const ci = line.indexOf(":");
+          if (ci < 0) break;
+          const k = line.slice(0, ci).trim();
+          const v = parseFloat(line.slice(ci + 1).trim());
+          if (k === "CircleSize") keys = v > 0 ? Math.round(v) : 10;
+          else if (k === "OverallDifficulty") od = v;
+          else if (k === "HPDrainRate") hp = v;
+          break;
+        }
+        case "events": {
+          if (line.startsWith("2 ") || line.startsWith("2	")) {
+            const parts = line.split(/\s+/);
+            const s = parseInt(parts[1], 10);
+            const e = parseInt(parts[2], 10);
+            if (Number.isFinite(s) && Number.isFinite(e)) breaks.push([s, e]);
+          }
+          break;
+        }
+        case "timingpoints": {
+          const p = line.split(",");
+          if (p.length < 2) break;
+          const t = parseFloat(p[0]);
+          const bl = parseFloat(p[1]);
+          const uninherited = p.length >= 7 ? p[6].trim() !== "0" : bl > 0;
+          if (uninherited && bl > 0 && Number.isFinite(t)) timingPoints.push({ t, beatLength: bl });
+          break;
+        }
+        case "hitobjects": {
+          if (!keys) keys = 7;
+          const p = line.split(",");
+          if (p.length < 5) break;
+          const x = parseFloat(p[0]);
+          if (!Number.isFinite(x)) break;
+          const type = parseInt(p[3], 10);
+          const t = Math.round(parseFloat(p[2]));
+          const col = clamp(Math.trunc(x * keys / 512), 0, keys - 1);
+          if (type & 128) {
+            const tailField = p[5] ?? p[4];
+            const lnEnd = Math.round(parseFloat(String(tailField).split(":")[0]));
+            notes.push({ t, col, lnEnd: Number.isFinite(lnEnd) ? Math.max(lnEnd, t) : null });
+          } else if (type & 1) {
+            notes.push({ t, col, lnEnd: null });
+          }
+          break;
+        }
+      }
+    }
+    if (!notes.length) throw new Error("EmptyBeatmap");
+    notes.sort((a, b) => a.t - b.t || a.col - b.col);
+    timingPoints.sort((a, b) => a.t - b.t);
+    let lastNote = 0;
+    for (const n of notes) lastNote = Math.max(lastNote, n.lnEnd ?? n.t);
+    return {
+      keys,
+      notes,
+      timingPoints,
+      breaks,
+      meta: { title, artist, version, creator, od, hp },
+      firstNote: notes[0].t,
+      lastNote
+    };
+  }
+  function beatLengthAt(tps, t) {
+    if (!tps.length) return 500;
+    let lo = 0;
+    let hi = tps.length - 1;
+    while (lo < hi) {
+      const mid = lo + hi + 1 >> 1;
+      if (tps[mid].t <= t) lo = mid;
+      else hi = mid - 1;
+    }
+    return tps[lo].beatLength;
+  }
+
+  // src/config.ts
+  var CONFIG = {
+    /** merge hits within this window into one row */
+    rowMergeMs: 10,
+    // ---- grid fitting ----
+    /** tolerance around grid points (ms) */
+    gridTolMs: 30,
+    /** minimum fraction of hits that must sit on the grid to count as "regular" */
+    gridMinRatio: 0.6,
+    /** candidate spacings below this (ms) are halved/doubled to normalize */
+    gridMinSpacing: 45,
+    gridMaxSpacing: 2e3,
+    // ---- feature windows ----
+    /** feature window length (ms) */
+    winMs: 1e3,
+    /** feature window step (ms) */
+    winStepMs: 250,
+    /** windows shorter than this note count get flagged low-density */
+    winMinNotes: 4,
+    // ---- segmentation ----
+    /** minimum prominence (absolute) for a change point */
+    segProminenceAbs: 0.05,
+    /** minimum prominence relative to local signal scale */
+    segProminenceRel: 0.35,
+    /** minimum segment length before merging (ms) */
+    minSegLenMs: 3e3,
+    /** when merging a short segment, prefer the neighbor whose feature dist is smaller */
+    mergeBySimilarity: true,
+    /** gap between consecutive notes considered a rest (ms) */
+    restGapMs: 2500,
+    /** a segment whose nps is below this quantile of map nps may be Break */
+    breakNpsQuantile: 0.25,
+    /** absolute nps floor under which a segment is Break regardless */
+    breakAbsNps: 1.2,
+    // ---- classification ----
+    /** weighted LN-head stream ratio above which a segment is LN-dominant */
+    lnDominantRatio: 0.45,
+    /** min confidence for displaying a secondary tag */
+    secondaryMargin: 0.75,
+    // ---- overall aggregation ----
+    /** share of best tag's weight over total for a single dominant tag */
+    overallDominantShare: 0.52,
+    /** minimum weight share for a tag to be counted in mix counting */
+    overallMixShare: 0.07
+  };
+
+  // src/core/rows.ts
+  function popcount(mask) {
+    let c = 0;
+    while (mask) {
+      mask &= mask - 1;
+      c++;
+    }
+    return c;
+  }
+  function buildRows(map) {
+    const rows = [];
+    const merge = CONFIG.rowMergeMs;
+    let i = 0;
+    const n = map.notes.length;
+    while (i < n) {
+      const t0 = map.notes[i].t;
+      let mask = 0;
+      let lnHeadMask = 0;
+      let lnTailMask = 0;
+      while (i < n && map.notes[i].t - t0 <= merge) {
+        const nt = map.notes[i];
+        mask |= 1 << nt.col;
+        if (nt.lnEnd != null) lnHeadMask |= 1 << nt.col;
+        i++;
+      }
+      rows.push({ t: t0, mask, hits: popcount(mask), lnHeadMask, lnTailMask });
+    }
+    return rows;
+  }
+  function attachTails(map, rows) {
+    const tails = [];
+    for (const n of map.notes) {
+      if (n.lnEnd != null) tails.push({ t: n.lnEnd, col: n.col });
+    }
+    tails.sort((a, b) => a.t - b.t);
+    let ri = 0;
+    const extra = [];
+    for (const tail of tails) {
+      while (ri + 1 < rows.length && rows[ri + 1].t <= tail.t + CONFIG.rowMergeMs) ri++;
+      let best = -1;
+      let bestDist = Infinity;
+      for (let k = ri; k >= 0 && rows[k].t >= tail.t - CONFIG.rowMergeMs * 4; k--) {
+        const d = Math.abs(rows[k].t - tail.t);
+        if (d < bestDist && d <= CONFIG.rowMergeMs * 4) {
+          bestDist = d;
+          best = k;
+        }
+      }
+      if (best >= 0) {
+        rows[best].lnTailMask |= 1 << tail.col;
+      } else {
+        extra.push({ t: tail.t, mask: 0, hits: 0, lnHeadMask: 0, lnTailMask: 1 << tail.col });
+      }
+    }
+    if (extra.length) {
+      rows.push(...extra);
+      rows.sort((a, b) => a.t - b.t);
+    }
+  }
+  function buildColumnData(map) {
+    const K = map.keys;
+    const colNotes = Array.from({ length: K }, () => []);
+    for (const n of map.notes) colNotes[n.col].push(n.t);
+    const colIntervals = [];
+    for (let c = 0; c < K; c++) {
+      const arr = colNotes[c];
+      const iv = [];
+      for (let i = 1; i < arr.length; i++) iv.push(arr[i] - arr[i - 1]);
+      colIntervals.push(iv);
+    }
+    return { colNotes, colIntervals };
+  }
+  function computeHeld(map, rows) {
+    const events = [];
+    for (const n of map.notes) {
+      if (n.lnEnd != null && n.lnEnd - n.t > 1) {
+        events.push({ t: n.t, col: n.col, type: 0 });
+        events.push({ t: n.lnEnd, col: n.col, type: 1 });
+      }
+    }
+    events.sort((a, b) => a.t - b.t || a.type - b.type);
+    const heldMask = new Int32Array(rows.length);
+    const lockRow = new Uint8Array(rows.length);
+    const freeHits = new Int32Array(rows.length);
+    const heldHits = new Int32Array(rows.length);
+    let held = 0;
+    let ei = 0;
+    for (let ri = 0; ri < rows.length; ri++) {
+      const t = rows[ri].t;
+      while (ei < events.length && events[ei].t <= t) {
+        const e = events[ei];
+        if (e.type === 0) held |= 1 << e.col;
+        else held &= ~(1 << e.col);
+        ei++;
+      }
+      heldMask[ri] = held;
+      if (held) {
+        const free = rows[ri].mask & ~held;
+        const onHeld = rows[ri].mask & held;
+        freeHits[ri] = popcount(free);
+        heldHits[ri] = popcount(onHeld);
+        lockRow[ri] = held !== 0 && free !== 0 ? 1 : 0;
+      } else {
+        freeHits[ri] = rows[ri].hits;
+        heldHits[ri] = 0;
+      }
+    }
+    return { heldMask, lockRow, freeHits, heldHits };
+  }
+
+  // src/core/grid.ts
+  function gridCoverage(times, spacing, tol) {
+    const n = times.length;
+    if (n === 0 || spacing <= 0) return 0;
+    const bins = Math.max(8, Math.round(spacing / Math.max(tol, 5)));
+    const hist = new Int32Array(bins);
+    for (let i = 0; i < n; i++) {
+      let m = times[i] % spacing;
+      if (m < 0) m += spacing;
+      hist[Math.min(bins - 1, Math.floor(m / spacing * bins))]++;
+    }
+    let peakBin = 0;
+    for (let b = 1; b < bins; b++) if (hist[b] > hist[peakBin]) peakBin = b;
+    const phase = (peakBin + 0.5) / bins * spacing;
+    let onGrid = 0;
+    for (let i = 0; i < n; i++) {
+      let d = (times[i] - phase) % spacing;
+      if (d < 0) d += spacing;
+      if (d > spacing / 2) d = spacing - d;
+      if (d <= tol) onGrid++;
+    }
+    return onGrid / n;
+  }
+  function fitGrid(rows, tStart, tEnd, lo, hi) {
+    const times = [];
+    if (lo !== void 0 && hi !== void 0) {
+      for (let i = lo; i < hi; i++) {
+        const r = rows[i];
+        if (r.hits > 0) times.push(r.t);
+      }
+    } else {
+      for (const r of rows) {
+        if (r.hits > 0 && r.t >= tStart && r.t <= tEnd) times.push(r.t);
+      }
+    }
+    const n = times.length;
+    if (n < 4) return { spacing: 0, ratio: 0, equivBpm: 0 };
+    const uniq = [times[0]];
+    for (let i = 1; i < n; i++) if (times[i] - uniq[uniq.length - 1] > CONFIG.rowMergeMs) uniq.push(times[i]);
+    const arr = Float64Array.from(uniq);
+    const ivs = [];
+    for (let i = 1; i < arr.length; i++) ivs.push(arr[i] - arr[i - 1]);
+    ivs.sort((a, b) => a - b);
+    const medianIv = ivs[Math.floor(ivs.length / 2)] || 500;
+    const tol = CONFIG.gridTolMs;
+    let bestSpacing = 0;
+    let bestRatio = 0;
+    const evaluate = (s) => {
+      if (!(s >= CONFIG.gridMinSpacing && s <= CONFIG.gridMaxSpacing)) return;
+      const cov = gridCoverage(arr, s, tol);
+      if (cov > bestRatio + 1e-9 || Math.abs(cov - bestRatio) <= 1e-9 && s > bestSpacing) {
+        bestRatio = cov;
+        bestSpacing = s;
+      }
+    };
+    const bases = [medianIv, medianIv / 2];
+    for (const b of bases) {
+      for (let mult = 1; mult <= 6; mult++) evaluate(b * mult);
+    }
+    if (bestRatio < CONFIG.gridMinRatio) {
+      for (let s = CONFIG.gridMinSpacing; s <= 800; s = s * 1.12) evaluate(s);
+    }
+    return {
+      spacing: bestSpacing,
+      ratio: bestRatio,
+      equivBpm: bestSpacing > 0 ? 15e3 / bestSpacing : 0
+    };
+  }
+
+  // src/core/features.ts
+  function buildFeatureContext(map, rows, held, cols) {
+    const K = map.keys;
+    const boundaryTimes = [];
+    for (let b = 0; b <= K; b++) boundaryTimes.push(new Float64Array(0));
+    for (let b = 1; b < K; b++) {
+      const a = cols.colNotes[b - 1];
+      const c = cols.colNotes[b];
+      const merged = new Float64Array(a.length + c.length);
+      let i = 0, j = 0, m = 0;
+      while (i < a.length && j < c.length) merged[m++] = a[i] <= c[j] ? a[i++] : c[j++];
+      while (i < a.length) merged[m++] = a[i++];
+      while (j < c.length) merged[m++] = c[j++];
+      boundaryTimes[b] = merged.subarray(0, m);
+    }
+    const lnHeads = [];
+    const lnTails = [];
+    const allEvents = [];
+    for (const n of map.notes) {
+      if (n.lnEnd != null) {
+        lnHeads.push({ t: n.t, col: n.col, dur: n.lnEnd - n.t });
+        lnTails.push({ t: n.lnEnd, col: n.col, start: n.t });
+        allEvents.push({ t: n.t, col: n.col, kind: "head" });
+        allEvents.push({ t: n.lnEnd, col: n.col, kind: "tail" });
+      } else {
+        allEvents.push({ t: n.t, col: n.col, kind: "head" });
+      }
+    }
+    allEvents.sort((a, b) => a.t - b.t);
+    lnTails.sort((a, b) => a.t - b.t);
+    let lnMaxDur = 0;
+    for (const h of lnHeads) if (h.dur > lnMaxDur) lnMaxDur = h.dur;
+    const riceArr = map.notes.filter((n) => n.lnEnd == null).map((n) => n.t);
+    riceArr.sort((a, b) => a - b);
+    const riceTimes = Float64Array.from(riceArr);
+    return { map, rows, held, cols, boundaryTimes, lnHeads, lnTails, lnMaxDur, allEvents, riceTimes };
+  }
+  function lowerBound(arr, t) {
+    let lo = 0, hi = arr.length;
+    while (lo < hi) {
+      const mid = lo + hi >> 1;
+      if (arr[mid] < t) lo = mid + 1;
+      else hi = mid;
+    }
+    return lo;
+  }
+  function lowerBoundObj(arr, t, key) {
+    let lo = 0, hi = arr.length;
+    while (lo < hi) {
+      const mid = lo + hi >> 1;
+      if (key(arr[mid]) < t) lo = mid + 1;
+      else hi = mid;
+    }
+    return lo;
+  }
+  function upperBoundObj(arr, t, key) {
+    let lo = 0, hi = arr.length;
+    while (lo < hi) {
+      const mid = lo + hi >> 1;
+      if (key(arr[mid]) <= t) lo = mid + 1;
+      else hi = mid;
+    }
+    return lo;
+  }
+  var BOUNDARY_W = {
+    7: [0.225, 0.35, 0.25, 0.225, 0.225, 0.25, 0.35, 0.225]
+  };
+  function cutDemandInWindow(ctx, t0, t1) {
+    const K = ctx.map.keys;
+    const w = BOUNDARY_W[K] ?? Array.from({ length: K + 1 }, (_, i) => Math.abs(i - K / 2) < 1 ? 0.05 : 0.35);
+    let sum = 0;
+    for (let b = 1; b < K; b++) {
+      const arr = ctx.boundaryTimes[b];
+      const lo = lowerBound(arr, t0);
+      const hi = lowerBound(arr, t1);
+      if (hi - lo < 2) continue;
+      for (let i = lo + 1; i < hi; i++) {
+        const dt = (arr[i] - arr[i - 1]) / 1e3;
+        if (dt > 0 && dt < 0.5) sum += w[b] / (dt * dt);
+      }
+    }
+    return sum / ((t1 - t0) / 1e3);
+  }
+  function computeWindowFeatures(ctx, t0, t1) {
+    const rows = ctx.rows;
+    const held = ctx.held;
+    const K = ctx.map.keys;
+    const durS = (t1 - t0) / 1e3;
+    const loIdx = Math.max(0, lowerBoundObj(rows, t0, (r) => r.t) - 1);
+    const hiIdx = lowerBoundObj(rows, t1, (r) => r.t);
+    let notes = 0;
+    let rowCount = 0;
+    let chordSum = 0;
+    let largeHits = 0, multiHits = 0, singleRows = 0;
+    let jackPairs = 0, pairCount = 0, overlapSum = 0, cutPairs = 0;
+    const ivs = [];
+    for (let i = loIdx; i < hiIdx; i++) {
+      const r = rows[i];
+      const inWin = r.t >= t0 && r.t < t1;
+      if (!inWin || r.hits === 0) continue;
+      rowCount++;
+      notes += r.hits;
+      chordSum += r.hits;
+      if (r.hits >= 3) largeHits += r.hits;
+      if (r.hits >= 2) multiHits += r.hits;
+      if (r.hits === 1) singleRows++;
+      if (i > 0 && rows[i - 1].hits > 0) {
+        const prev = rows[i - 1];
+        const ovMask = prev.mask & r.mask;
+        const ov = popcount(ovMask);
+        pairCount++;
+        if (ov > 0) {
+          jackPairs++;
+          overlapSum += ov / Math.min(prev.hits, r.hits);
+        } else cutPairs++;
+        ivs.push(r.t - prev.t);
+      }
+    }
+    const f = {
+      t: t0,
+      end: t1,
+      nps: notes / durS,
+      rows: rowCount,
+      notes,
+      equivBpm: 0,
+      gridRatio: 0,
+      rhythmSteady: 0,
+      chordMean: rowCount ? chordSum / rowCount : 0,
+      largeChordRatio: notes ? largeHits / notes : 0,
+      multiRatio: notes ? multiHits / notes : 0,
+      singleRatio: rowCount ? singleRows / rowCount : 0,
+      jackRowRatio: pairCount ? jackPairs / pairCount : 0,
+      overlapDegree: jackPairs ? overlapSum / jackPairs : 0,
+      jackSpeedBpm: 0,
+      cutFreeRatio: pairCount ? cutPairs / pairCount : 0,
+      cutDemand: 0,
+      anchorRate: 0,
+      trillRate: 0,
+      altHandRate: 0,
+      rollRate: 0,
+      graceRate: 0,
+      offBeatRatio: 0,
+      lnWeightRatio: 0,
+      lockRatio: 0,
+      lnAreaRatio: 0,
+      heldCoverage: 0,
+      tailRate: 0,
+      tailIndependence: 0,
+      tailScatter: 0,
+      shortLnRatio: 0,
+      invGapScore: 0
+    };
+    if (rowCount === 0) return f;
+    const gridLo = lowerBoundObj(rows, t0, (r) => r.t);
+    const gridHi = upperBoundObj(rows, t1 - 1, (r) => r.t);
+    const grid = fitGrid(rows, t0, t1 - 1, gridLo, gridHi);
+    f.equivBpm = grid.equivBpm;
+    f.gridRatio = grid.ratio;
+    if (ivs.length >= 3) {
+      const sorted = [...ivs].sort((a, b) => a - b);
+      const modal = sorted[Math.floor(sorted.length / 2)];
+      let steady = 0;
+      let grace = 0;
+      for (const iv of ivs) {
+        const q = iv / modal;
+        const nearest = Math.max(1, Math.round(q));
+        if (Math.abs(iv - nearest * modal) <= CONFIG.gridTolMs) steady++;
+        if (iv < modal * 0.45) grace++;
+      }
+      f.rhythmSteady = steady / ivs.length;
+      f.graceRate = grace / ivs.length;
+      const repDts = [];
+      const cols = ctx.cols.colNotes;
+      for (let c = 0; c < K; c++) {
+        const arr = cols[c];
+        const clo = lowerBound(arr, t0);
+        const chi = lowerBound(arr, t1);
+        for (let i = clo + 1; i < chi; i++) {
+          const dt = arr[i] - arr[i - 1];
+          if (dt < 1e3) repDts.push(dt);
+        }
+      }
+      if (repDts.length) {
+        repDts.sort((a, b) => a - b);
+        const med = repDts[Math.floor(repDts.length / 2)];
+        f.jackSpeedBpm = med > 0 ? Math.min(15e3 / med, 400) : 0;
+      }
+    }
+    {
+      let anchorNotes = 0;
+      for (let c = 0; c < K; c++) {
+        const arr = ctx.cols.colNotes[c];
+        const clo = lowerBound(arr, t0);
+        const chi = lowerBound(arr, t1);
+        let run = 1;
+        let dts = [];
+        const flush = () => {
+          if (run >= 3 && dts.length >= 2) {
+            const m = dts.reduce((x, y) => x + y, 0) / dts.length;
+            const v = dts.reduce((x, y) => x + (y - m) ** 2, 0) / dts.length;
+            if (m > 0 && Math.sqrt(v) / m < 0.3) anchorNotes += run;
+          }
+        };
+        for (let i = clo + 1; i < chi; i++) {
+          const dt = arr[i] - arr[i - 1];
+          const ref = dts.length ? dts[dts.length - 1] : dt;
+          if (dt > ref * 1.8 || dt < ref * 0.56 || dt > 1500) {
+            flush();
+            run = 1;
+            dts = [];
+          } else {
+            run++;
+            dts.push(dt);
+          }
+        }
+        flush();
+      }
+      f.anchorRate = notes ? anchorNotes / notes : 0;
+      const split2 = K <= 1 ? 1 : Math.ceil(K / 2);
+      const seq = [];
+      for (let i = loIdx; i < hiIdx; i++) {
+        const r = rows[i];
+        if (r.hits === 0 || r.t < t0 || r.t >= t1) continue;
+        let col = -1, left = 0;
+        for (let c = 0; c < K; c++) {
+          if (r.mask & 1 << c) {
+            col = c;
+            if (c < split2) left++;
+          }
+        }
+        seq.push({ t: r.t, col: r.hits === 1 ? col : -1, hand: left * 2 >= r.hits ? 0 : 1, hits: r.hits });
+      }
+      let altHandRows = 0;
+      {
+        let run = 1;
+        for (let i = 1; i < seq.length; i++) {
+          const cont = seq[i].hand !== seq[i - 1].hand && (i >= 2 ? seq[i].hand === seq[i - 2].hand : false);
+          if (cont) run++;
+          else {
+            if (run >= 4) altHandRows += run;
+            run = i + 1 < seq.length && seq[i + 1].hand !== seq[i].hand ? 2 : 1;
+          }
+        }
+        if (run >= 4) altHandRows += run;
+      }
+      f.altHandRate = seq.length ? altHandRows / seq.length : 0;
+      let trillRows = 0;
+      {
+        const singles = seq.filter((s) => s.hits === 1);
+        let run = 1;
+        for (let i = 1; i < singles.length; i++) {
+          const cont = singles[i].col !== singles[i - 1].col && (i >= 2 ? singles[i].col === singles[i - 2].col && singles[i - 1].col !== singles[i - 2].col : false);
+          if (cont) run++;
+          else {
+            if (run >= 5) trillRows += run;
+            run = 1;
+          }
+        }
+        if (run >= 5) trillRows += run;
+        f.trillRate = singles.length ? trillRows / singles.length : 0;
+      }
+      {
+        const singles = seq.filter((s) => s.hits === 1);
+        let dir = 0, run = 1, rollRows = 0;
+        for (let i = 1; i < singles.length; i++) {
+          const d = Math.sign(singles[i].col - singles[i - 1].col);
+          if (d !== 0 && (dir === 0 || d === dir)) {
+            dir = d;
+            run++;
+          } else {
+            if (run >= 4) rollRows += run;
+            run = d !== 0 ? 2 : 1;
+            dir = d;
+          }
+        }
+        if (run >= 4) rollRows += run;
+        f.rollRate = singles.length ? rollRows / singles.length : 0;
+      }
+      if (ctx.map.timingPoints.length && seq.length) {
+        const anchor = ctx.map.timingPoints[0].t;
+        let off = 0;
+        for (const s of seq) {
+          const q = beatLengthAt(ctx.map.timingPoints, s.t) / 4;
+          let d = (s.t - anchor) % q;
+          if (d < 0) d += q;
+          if (d > q / 2) d = q - d;
+          if (d > 40) off++;
+        }
+        f.offBeatRatio = off / seq.length;
+      }
+    }
+    const split = K <= 1 ? 1 : Math.ceil(K / 2);
+    {
+      let lnW = 0;
+      const heads = ctx.lnHeads;
+      const hFrom = lowerBoundObj(heads, t0, (h) => h.t);
+      const hTo = lowerBoundObj(heads, t1, (h) => h.t);
+      for (let i = hFrom; i < hTo; i++) lnW += 1 + Math.min(heads[i].dur, 1200) / 400;
+      const riceCount = lowerBound(ctx.riceTimes, t1) - lowerBound(ctx.riceTimes, t0);
+      const totalW = lnW + riceCount;
+      f.lnWeightRatio = totalW > 0 ? lnW / totalW : 0;
+      let heldSum = 0, heldCount = 0;
+      for (let i = loIdx; i < hiIdx; i++) {
+        const r = rows[i];
+        if (r.t < t0 || r.t >= t1 || r.hits === 0) continue;
+        const hm = held.heldMask[i];
+        if (hm) {
+          heldSum += popcount(hm);
+          heldCount++;
+          if ((r.mask & ~hm) !== 0) f.lockRatio += 1;
+        }
+      }
+      f.lockRatio /= rowCount;
+      f.heldCoverage = heldCount ? heldSum / heldCount / K : 0;
+      {
+        const hs = ctx.lnHeads;
+        const ts = ctx.lnTails;
+        const active = [];
+        const aLo = lowerBoundObj(hs, t0 - ctx.lnMaxDur, (h) => h.t);
+        const aHi = lowerBoundObj(hs, t1, (h) => h.t);
+        for (let i = aLo; i < aHi; i++) {
+          const h = hs[i];
+          if (h.t + h.dur >= t0) active.push({ start: h.t, end: h.t + h.dur });
+        }
+        const tLo = lowerBoundObj(ts, t0, (x) => x.t);
+        const tHi = upperBoundObj(ts, t1, (x) => x.t);
+        for (let i = tLo; i < tHi; i++) {
+          const tl = ts[i];
+          if (tl.start < t0) active.push({ start: tl.start, end: tl.t });
+        }
+        let area = 0;
+        for (const ln of active) {
+          const s = Math.max(ln.start, t0);
+          const e = Math.min(ln.end, t1);
+          if (e > s) area += e - s;
+        }
+        f.lnAreaRatio = area / ((t1 - t0) * K);
+      }
+      const tails = ctx.lnTails;
+      const ti = lowerBoundObj(tails, t0, (x) => x.t);
+      const tj = lowerBoundObj(tails, t1, (x) => x.t);
+      const nTails = tj - ti;
+      f.tailRate = nTails / durS;
+      if (nTails > 0) {
+        let indep = 0;
+        const durs = [];
+        const gaps = [];
+        for (let i = ti; i < tj; i++) {
+          durs.push(tails[i].t - tails[i].start);
+          const ev = ctx.allEvents;
+          const ei = lowerBoundObj(ev, tails[i].t, (e) => e.t);
+          if (ei < ev.length && ev[ei].t - tails[i].t < 3e3) {
+            if (ev[ei].col !== tails[i].col) indep++;
+          }
+          const carr = ctx.cols.colNotes[tails[i].col];
+          const ci = lowerBound(carr, tails[i].t);
+          if (ci < carr.length) {
+            const g = carr[ci] - tails[i].t;
+            if (g < 1500) gaps.push(g);
+          }
+        }
+        f.tailIndependence = indep / nTails;
+        const meanDur = durs.reduce((a, b) => a + b, 0) / durs.length;
+        const varDur = durs.reduce((a, b) => a + (b - meanDur) ** 2, 0) / durs.length;
+        f.tailScatter = meanDur > 0 ? Math.sqrt(varDur) / meanDur : 0;
+        let shortLn = 0;
+        for (let i = hFrom; i < hTo; i++) if (heads[i].dur < 300) shortLn++;
+        const nLnHeads = hTo - hFrom;
+        f.shortLnRatio = nLnHeads ? shortLn / nLnHeads : 0;
+        if (gaps.length >= 3) {
+          const mg = gaps.reduce((a, b) => a + b, 0) / gaps.length;
+          const vg = gaps.reduce((a, b) => a + (b - mg) ** 2, 0) / gaps.length;
+          const cv = mg > 0 ? Math.sqrt(vg) / mg : 1;
+          const smallness = clamp01(1 - mg / 800);
+          const uniformity = clamp01(1 - cv);
+          f.invGapScore = (smallness * 0.5 + uniformity * 0.5) * Math.min(1, gaps.length / Math.max(3, nTails));
+        }
+      }
+    }
+    f.cutDemand = cutDemandInWindow(ctx, t0, t1);
+    return f;
+  }
+  function clamp01(v) {
+    return v < 0 ? 0 : v > 1 ? 1 : v;
+  }
+  function computeAllWindows(ctx) {
+    const out = [];
+    const { firstNote, lastNote } = ctx.map;
+    const step = CONFIG.winStepMs;
+    const win = CONFIG.winMs;
+    for (let t = firstNote; t < lastNote; t += step) {
+      out.push(computeWindowFeatures(ctx, t, Math.min(t + win, lastNote)));
+    }
+    return out;
+  }
+
+  // src/segment/segmenter.ts
+  var SEG_FEATURES = [
+    "nps",
+    "chordMean",
+    "largeChordRatio",
+    "multiRatio",
+    "singleRatio",
+    "jackRowRatio",
+    "overlapDegree",
+    "jackSpeedBpm",
+    "cutFreeRatio",
+    "cutDemand",
+    "rhythmSteady",
+    "gridRatio",
+    "anchorRate",
+    "offBeatRatio",
+    "techRate",
+    "lnWeightRatio",
+    "lockRatio",
+    "heldCoverage",
+    "tailRate",
+    "tailIndependence",
+    "tailScatter",
+    "shortLnRatio",
+    "invGapScore"
+  ];
+  function techRate(w) {
+    return Math.max(w.trillRate, w.altHandRate, w.rollRate);
+  }
+  function segFeatValue(w, k) {
+    switch (k) {
+      case "techRate":
+        return techRate(w);
+      default:
+        return w[k];
+    }
+  }
+  function normalizeWindows(windows) {
+    const names = [...SEG_FEATURES];
+    const n = windows.length;
+    const values = new Array(n);
+    if (n === 0) return { values, featureNames: names };
+    for (const key of names) {
+      const raw = new Float64Array(n);
+      for (let i = 0; i < n; i++) raw[i] = segFeatValue(windows[i], key);
+      const sorted = Float64Array.from(raw).sort();
+      const q = (p) => sorted[Math.min(n - 1, Math.max(0, Math.floor(p * (n - 1))))];
+      const med = q(0.5);
+      let scale = q(0.9) - q(0.1);
+      if (scale < 1e-6) scale = Math.max(Math.abs(med) * 0.5, 1e-6);
+      const logTailed = key === "cutDemand" || key === "jackSpeedBpm" || key === "nps" || key === "tailRate";
+      for (let i = 0; i < n; i++) {
+        let x = raw[i];
+        if (logTailed) x = Math.log1p(Math.max(0, x) / 5);
+        const z = (x - (logTailed ? Math.log1p(Math.max(0, med) / 5) : med)) / scale;
+        values[i] = values[i] ?? new Float64Array(names.length);
+        values[i][names.indexOf(key)] = Math.max(-1, Math.min(2, z));
+      }
+    }
+    return { values, featureNames: names };
+  }
+  function l1(a, b) {
+    let s = 0;
+    for (let i = 0; i < a.length; i++) s += Math.abs(a[i] - b[i]);
+    return s / a.length;
+  }
+  function meanVec(norm, from, to) {
+    const out = new Float64Array(norm.featureNames.length);
+    let cnt = 0;
+    for (let i = from; i < to && i < norm.values.length; i++) {
+      for (let j = 0; j < out.length; j++) out[j] += norm.values[i][j];
+      cnt++;
+    }
+    if (cnt > 0) for (let j = 0; j < out.length; j++) out[j] /= cnt;
+    return out;
+  }
+  function detectBoundaries(norm, minSegWindows) {
+    const n = norm.values.length;
+    if (n < minSegWindows * 2) return [];
+    const half = Math.max(2, Math.round(minSegWindows / 2));
+    const dist = new Float64Array(n);
+    for (let i = 0; i < n; i++) {
+      const a = meanVec(norm, Math.max(0, i - half), i);
+      const b = meanVec(norm, i, Math.min(n, i + half));
+      dist[i] = l1(a, b);
+    }
+    const sm = new Float64Array(n);
+    const k = 1;
+    for (let i = 0; i < n; i++) {
+      let s = 0, c = 0;
+      for (let j = Math.max(0, i - k); j <= Math.min(n - 1, i + k); j++) {
+        s += dist[j];
+        c++;
+      }
+      sm[i] = s / c;
+    }
+    const prom = new Float64Array(n);
+    const baseR = minSegWindows;
+    for (let i = 0; i < n; i++) {
+      const vals = [];
+      for (let j = Math.max(0, i - baseR); j <= Math.min(n - 1, i + baseR); j++) vals.push(sm[j]);
+      vals.sort((a, b) => a - b);
+      const med = vals[Math.floor(vals.length / 2)];
+      let scale = vals[Math.floor(vals.length * 0.9)] - med;
+      if (scale < 0.02) scale = 0.02;
+      prom[i] = sm[i] - med;
+      void scale;
+    }
+    const q = Math.max(1, Math.round(minSegWindows / 6));
+    const cands = [];
+    for (let i = 1; i < n - 1; i++) {
+      let isMax = true;
+      for (let j = Math.max(0, i - q); j <= Math.min(n - 1, i + q); j++) {
+        if (sm[j] > sm[i]) {
+          isMax = false;
+          break;
+        }
+      }
+      if (isMax && prom[i] > CONFIG.segProminenceAbs) cands.push({ i, v: prom[i] });
+    }
+    cands.sort((a, b) => b.v - a.v);
+    const promSorted = Float64Array.from(prom).sort();
+    const refProm = promSorted[Math.floor(promSorted.length * 0.95)] || CONFIG.segProminenceAbs;
+    const relThr = Math.max(CONFIG.segProminenceAbs, refProm * CONFIG.segProminenceRel);
+    const picked = [];
+    for (const c of cands) {
+      if (c.v < relThr) continue;
+      if (picked.every((p) => Math.abs(p - c.i) >= minSegWindows)) picked.push(c.i);
+    }
+    return picked.sort((a, b) => a - b);
+  }
+  function snapBoundary(rows, t, snapWinMs = 600) {
+    let lo = 0, hi = rows.length - 1, best = t, bestGap = 0;
+    let i0 = 0;
+    {
+      let a = 0, b = rows.length;
+      while (a < b) {
+        const m = a + b >> 1;
+        if (rows[m].t < t - snapWinMs) a = m + 1;
+        else b = m;
+      }
+      i0 = a;
+    }
+    for (let i = Math.max(1, i0); i < rows.length && rows[i].t <= t + snapWinMs; i++) {
+      const gap = rows[i].t - rows[i - 1].t;
+      const mid = (rows[i].t + rows[i - 1].t) / 2;
+      if (gap > bestGap) {
+        bestGap = gap;
+        best = Math.abs(mid - t) <= snapWinMs ? mid : t;
+      }
+    }
+    return best;
+  }
+  function segmentMap(input) {
+    const { map, rows, windows, norm } = input;
+    const step = CONFIG.winStepMs;
+    const minSegWindows = Math.max(2, Math.round(CONFIG.minSegLenMs / step));
+    const bounds = detectBoundaries(norm, minSegWindows);
+    const snapped = bounds.map((bi) => snapBoundary(rows, windows[Math.min(bi, windows.length - 1)].t + step / 2));
+    const points = [map.firstNote, ...snapped, map.lastNote];
+    const segs = [];
+    let prevW = 0;
+    for (let i = 0; i < points.length - 1; i++) {
+      let s = points[i];
+      let e = points[i + 1];
+      if (e - s < 50) continue;
+      const wEnd = Math.min(windows.length, Math.round((e - map.firstNote) / step));
+      segs.push({ start: s, end: e, windowRange: [prevW, Math.max(prevW + 1, wEnd)] });
+      prevW = Math.max(prevW + 1, wEnd);
+    }
+    const vecs = segs.map((s) => meanVec(norm, s.windowRange[0], s.windowRange[1]));
+    const merged = [];
+    for (let i = 0; i < segs.length; i++) {
+      const seg = segs[i];
+      if (seg.end - seg.start >= CONFIG.minSegLenMs || merged.length === 0) {
+        merged.push({ ...seg });
+        continue;
+      }
+      const last = merged[merged.length - 1];
+      const distPrev = l1(vecs[i], vecs[i - 1]);
+      const distNext = i + 1 < segs.length ? l1(vecs[i], vecs[i + 1]) : Infinity;
+      if (CONFIG.mergeBySimilarity && distNext < distPrev && i + 1 < segs.length) {
+        segs[i + 1].start = seg.start;
+        segs[i + 1].windowRange[0] = seg.windowRange[0];
+      } else {
+        last.end = seg.end;
+        last.windowRange[1] = seg.windowRange[1];
+      }
+    }
+    const out = merged.filter((s) => s.end - s.start >= 50);
+    for (let i = 1; i < out.length; i++) out[i].start = Math.max(out[i].start, out[i - 1].end);
+    return out;
+  }
+  function npsInRange(rows, start, end) {
+    let a = 0, b = rows.length;
+    while (a < b) {
+      const m = a + b >> 1;
+      if (rows[m].t < start) a = m + 1;
+      else b = m;
+    }
+    let notes = 0;
+    for (let i = a; i < rows.length && rows[i].t < end; i++) notes += rows[i].hits;
+    const dur = Math.max(0.5, (end - start) / 1e3);
+    return notes / dur;
+  }
+  function markBreaks(map, rows, segs) {
+    const npss = segs.map((s) => npsInRange(rows, s.start, s.end));
+    const sorted = [...npss].sort((a, b) => a - b);
+    const q = sorted[Math.floor(CONFIG.breakNpsQuantile * (sorted.length - 1))] ?? 0;
+    const out = [];
+    for (let i = 0; i < segs.length; i++) {
+      const s = segs[i];
+      const nps = npss[i];
+      let isBreak = nps < CONFIG.breakAbsNps;
+      if (!isBreak && nps <= Math.max(q, 0) * 0.55 && nps < 3) isBreak = true;
+      if (!isBreak) {
+        let a = 0, b = rows.length;
+        while (a < b) {
+          const m = a + b >> 1;
+          if (rows[m].t < s.start) a = m + 1;
+          else b = m;
+        }
+        let prevT = s.start;
+        for (let ri = a; ri < rows.length && rows[ri].t < s.end; ri++) {
+          if (rows[ri].t - prevT >= CONFIG.restGapMs) {
+            isBreak = true;
+            break;
+          }
+          prevT = rows[ri].t;
+        }
+      }
+      out.push({ start: s.start, end: s.end, family: isBreak ? "break" : "rc" });
+    }
+    void map;
+    return out;
+  }
+
+  // src/classify/extras.ts
+  function lowerBoundRow(rows, t) {
+    let lo = 0, hi = rows.length;
+    while (lo < hi) {
+      const m = lo + hi >> 1;
+      if (rows[m].t < t) lo = m + 1;
+      else hi = m;
+    }
+    return lo;
+  }
+  function computeSegmentExtras(ctx, start, end) {
+    const rows = ctx.rows;
+    const K = ctx.map.keys;
+    const lo = Math.max(0, lowerBoundRow(rows, start) - 1);
+    const hi = lowerBoundRow(rows, end);
+    let rowCount = 0, notes = 0;
+    let lnHeadRowCount = 0, lnHeadSum = 0;
+    let lnHeadPairs = 0, lnHeadOverlaps = 0;
+    let prevHeadRowIdx = -1;
+    let tailRows = 0, singleTailRows = 0;
+    const colSeen = new Array(K).fill(0);
+    const chordMasks = [];
+    const chordHits = [];
+    const chordTimes = [];
+    let prevT = start;
+    let maxGap = 0;
+    for (let i = lo; i < hi; i++) {
+      const r = rows[i];
+      if (r.t < start || r.t >= end) continue;
+      if (r.hits === 0 && !r.lnTailMask) continue;
+      if (r.t - prevT > maxGap) maxGap = r.t - prevT;
+      prevT = r.t;
+      if (r.hits > 0) {
+        rowCount++;
+        notes += r.hits;
+        chordMasks.push(r.mask);
+        chordHits.push(r.hits);
+        chordTimes.push(r.t);
+        for (let c = 0; c < K; c++) if (r.mask & 1 << c) colSeen[c]++;
+      }
+      if (r.lnTailMask) {
+        tailRows++;
+        if (popcount(r.lnTailMask) === 1 && popcount(r.mask) === 0) singleTailRows++;
+      }
+      if (r.lnHeadMask) {
+        lnHeadRowCount++;
+        lnHeadSum += popcount(r.lnHeadMask);
+        if (prevHeadRowIdx >= 0 && rows[prevHeadRowIdx].lnHeadMask) {
+          lnHeadPairs++;
+          if (rows[prevHeadRowIdx].lnHeadMask & r.lnHeadMask) lnHeadOverlaps++;
+        }
+        prevHeadRowIdx = i;
+      } else {
+        prevHeadRowIdx = -1;
+      }
+    }
+    const runNoteCount = { n: 0 };
+    const runCols = /* @__PURE__ */ new Set();
+    for (let c = 0; c < K; c++) {
+      const arr = ctx.cols.colNotes[c];
+      let a = 0, b = arr.length;
+      while (a < b) {
+        const m = a + b >> 1;
+        if (arr[m] < start) a = m + 1;
+        else b = m;
+      }
+      let hiIdx = a;
+      {
+        let lo2 = a, hi2 = arr.length;
+        while (lo2 < hi2) {
+          const m = lo2 + hi2 >> 1;
+          if (arr[m] < end) lo2 = m + 1;
+          else hi2 = m;
+        }
+        hiIdx = lo2;
+      }
+      void b;
+      let runLen2 = 1;
+      let dts = [];
+      const flush = (endIdx) => {
+        if (runLen2 >= 4 && dts.length >= 3) {
+          const med = median(dts);
+          if (med > 30 && med <= 320 && stdevCv(dts) < 0.35) {
+            runNoteCount.n += runLen2;
+            runCols.add(c);
+          }
+        }
+        void endIdx;
+      };
+      for (let i = a + 1; i < hiIdx; i++) {
+        const dt = arr[i] - arr[i - 1];
+        const refMed = dts.length ? median(dts) : dt;
+        if (dt > refMed * 2.2 || dt < refMed * 0.45 || dt > 350) {
+          flush(i);
+          runLen2 = 1;
+          dts = [];
+        } else {
+          runLen2++;
+          dts.push(dt);
+        }
+      }
+      flush(hiIdx);
+    }
+    const durS = Math.max(0.5, (end - start) / 1e3);
+    let seenCols = 0;
+    for (let c = 0; c < K; c++) if (colSeen[c] > 0) seenCols++;
+    let chordOverlapRatio = 0, chordOverlapJaccard = 0, maxLockRun = 0, avgOverlapSize = 0;
+    {
+      let pairs = 0, inter = 0, jacSum = 0, interSum = 0, cur = 0;
+      for (let i = 1; i < chordMasks.length; i++) {
+        const a = chordMasks[i - 1], b = chordMasks[i];
+        const ia = popcount(a & b);
+        pairs++;
+        if (ia > 0) {
+          inter++;
+          cur++;
+          if (cur > maxLockRun) maxLockRun = cur;
+          interSum += ia;
+          jacSum += ia / popcount(a | b);
+        } else {
+          cur = 0;
+        }
+      }
+      if (pairs > 0) {
+        chordOverlapRatio = inter / pairs;
+        chordOverlapJaccard = jacSum / pairs;
+        avgOverlapSize = inter > 0 ? interSum / inter : 0;
+      }
+    }
+    let chordGapMed = 0, chordGapCv = 1;
+    {
+      const gaps = [];
+      for (let i = 1; i < chordTimes.length; i++) {
+        const dt = chordTimes[i] - chordTimes[i - 1];
+        if (dt >= 40 && dt <= 1e3) gaps.push(dt);
+      }
+      if (gaps.length >= 3) {
+        gaps.sort((a, b) => a - b);
+        chordGapMed = gaps[Math.floor(gaps.length / 2)];
+        const m = gaps.reduce((a, b) => a + b, 0) / gaps.length;
+        chordGapCv = m > 0 ? Math.sqrt(gaps.reduce((a, b) => a + (b - m) ** 2, 0) / gaps.length) / m : 1;
+      }
+    }
+    let chord2Count = 0;
+    for (const h of chordHits) if (h === 2) chord2Count++;
+    const chord2Ratio = chordHits.length ? chord2Count / chordHits.length : 0;
+    let wSum = 0;
+    for (const h of chordHits) wSum += Math.pow(h, 1.4);
+    const weightedNps = wSum / durS;
+    let segIvLogStd = 0;
+    let segRhythmChangeRate = 0;
+    {
+      const ivs = [];
+      let prev = -1;
+      for (let i = lo; i < hi; i++) {
+        const r = rows[i];
+        if (r.hits === 0 || r.t < start || r.t >= end) continue;
+        if (prev >= 0) ivs.push(r.t - prev);
+        prev = r.t;
+      }
+      if (ivs.length >= 4) {
+        const logs = ivs.filter((v) => v >= 25).map((v) => Math.log(v));
+        if (logs.length >= 3) {
+          const m = logs.reduce((a, b) => a + b, 0) / logs.length;
+          const sd = Math.sqrt(logs.reduce((a, b) => a + (b - m) ** 2, 0) / logs.length);
+          segIvLogStd = sd;
+        }
+        let changes = 0, pairs = 0;
+        for (let i = 1; i < ivs.length; i++) {
+          const a = ivs[i - 1], b = ivs[i];
+          if (a < 25 || b < 25) continue;
+          pairs++;
+          const ratio = Math.max(a, b) / Math.min(a, b);
+          if (ratio > 1.35) changes++;
+        }
+        if (pairs >= 3) segRhythmChangeRate = changes / pairs;
+      }
+    }
+    let jackHits = 0, jackMatch = 0;
+    let heldRowHits = 0, heldRowJacks = 0;
+    const jackDts = [];
+    const tps = ctx.map.timingPoints;
+    const anchorOf = (t) => {
+      let lo2 = 0, hi2 = tps.length;
+      while (lo2 < hi2) {
+        const m = lo2 + hi2 >> 1;
+        if (tps[m].t <= t) lo2 = m + 1;
+        else hi2 = m;
+      }
+      return tps[Math.max(0, lo2 - 1)];
+    };
+    const offGrid = (t) => {
+      const tp = anchorOf(t);
+      const grid = tp.beatLength / 4;
+      if (grid <= 0) return false;
+      let ph = (t - tp.t) / grid % 1;
+      if (ph < 0) ph += 1;
+      return Math.min(ph, 1 - ph) > 0.15;
+    };
+    let riceN = 0, riceOff = 0, runN = 0, runOff = 0, runCount = 0;
+    const runLen = new Array(K).fill(1);
+    const strictEvents = [];
+    for (const h of ctx.lnHeads) {
+      if (h.t + h.dur <= start || h.t >= end) continue;
+      strictEvents.push({ t: Math.max(h.t, start), col: h.col, up: true });
+      strictEvents.push({ t: Math.min(h.t + h.dur, end), col: h.col, up: false });
+    }
+    strictEvents.sort((a, b) => a.t - b.t || (a.up ? 1 : 0) - (b.up ? 1 : 0));
+    const strictHeld = new Int32Array(rows.length);
+    {
+      let msk = 0, ei2 = 0;
+      for (let i = lo; i < hi; i++) {
+        const t = rows[i].t;
+        while (ei2 < strictEvents.length && strictEvents[ei2].t < t) {
+          const e = strictEvents[ei2];
+          if (e.up) msk |= 1 << e.col;
+          else msk &= ~(1 << e.col);
+          ei2++;
+        }
+        while (ei2 < strictEvents.length && strictEvents[ei2].t === t && !strictEvents[ei2].up) {
+          msk &= ~(1 << strictEvents[ei2].col);
+          ei2++;
+        }
+        strictHeld[i] = msk;
+        while (ei2 < strictEvents.length && strictEvents[ei2].t === t) {
+          msk |= 1 << strictEvents[ei2].col;
+          ei2++;
+        }
+      }
+    }
+    const lastIvs = [];
+    let prevPlayable = -1;
+    for (let i = lo; i < hi; i++) {
+      const r = rows[i];
+      if (r.t < start || r.t >= end || r.hits === 0) continue;
+      if (prevPlayable >= 0) {
+        lastIvs.push(r.t - prevPlayable);
+        if (lastIvs.length > 3) lastIvs.shift();
+      }
+      prevPlayable = r.t;
+      const rowDt = lastIvs.length ? median(lastIvs) : 0;
+      const jackLimit = rowDt >= 15 && rowDt <= 400 ? rowDt * 1.35 + 10 : 0;
+      const hm = strictHeld[i];
+      const lockedRow = hm !== 0;
+      for (let c = 0; c < K; c++) {
+        const bit = 1 << c;
+        if (!(r.mask & bit)) continue;
+        const onHeld = (hm & bit) !== 0;
+        if ((r.lnHeadMask & bit) === 0) {
+          riceN++;
+          if (offGrid(r.t)) riceOff++;
+        }
+        const arr = ctx.cols.colNotes[c];
+        const p = predIdx(arr, r.t);
+        let isJack = false;
+        if (p >= 0 && jackLimit > 0) {
+          const dt = r.t - arr[p];
+          if (dt >= 20 && dt <= jackLimit) {
+            isJack = true;
+            jackHits++;
+            if (Math.abs(dt - rowDt) <= 0.3 * rowDt) jackMatch++;
+            runLen[c]++;
+            if (runLen[c] === 2) runCount++;
+            if (runLen[c] >= 2) {
+              runN++;
+              if (offGrid(r.t)) runOff++;
+            }
+            if (runLen[c] >= 3) jackDts.push(dt);
+          } else {
+            runLen[c] = 1;
+          }
+        } else {
+          runLen[c] = 1;
+        }
+        if (lockedRow && !onHeld) heldRowHits++;
+        if (lockedRow && !onHeld && isJack) heldRowJacks++;
+      }
+    }
+    const medJackDt = median(jackDts);
+    const allOff = riceN ? riceOff / riceN : 0;
+    const jackOff = runN ? runOff / runN : 0;
+    const techJackScore = 0.5 * allOff + 0.5 * (runCount >= 3 ? jackOff : allOff);
+    const colLns = [];
+    for (let c = 0; c < K; c++) colLns.push([]);
+    for (const h of ctx.lnHeads) colLns[h.col].push(h.t, h.t + h.dur);
+    const tailTimes = [];
+    for (const x of ctx.lnTails) tailTimes.push(x.t);
+    tailTimes.sort((x, y) => x - y);
+    let longLn = 0, tailSum = 0, freeLn = 0, holdAdjW = 0;
+    const tailGaps = [];
+    {
+      const heads = ctx.lnHeads;
+      let a = 0, b = heads.length;
+      while (a < b) {
+        const m = a + b >> 1;
+        if (heads[m].t < start) a = m + 1;
+        else b = m;
+      }
+      for (let i = a; i < heads.length && heads[i].t < end; i++) {
+        const h = heads[i];
+        if (h.dur <= 100) continue;
+        longLn++;
+        const tt = h.t + h.dur;
+        tailSum += countNear(tailTimes, tt, 10);
+        {
+          const arr = ctx.cols.colNotes[h.col];
+          let lo2 = 0, hi2 = arr.length;
+          while (lo2 < hi2) {
+            const m = lo2 + hi2 >> 1;
+            if (arr[m] <= tt) lo2 = m + 1;
+            else hi2 = m;
+          }
+          tailGaps.push(lo2 < arr.length ? Math.min(arr[lo2] - tt, 4e3) : 4e3);
+        }
+        let free = true;
+        let holdW = 0;
+        for (const adj of [h.col - 1, h.col + 1]) {
+          if (adj < 0 || adj >= K) continue;
+          if (hasHitNear(ctx.cols.colNotes[adj], tt, 10)) free = false;
+          const ivs = colLns[adj];
+          for (let j = 0; j + 1 < ivs.length; j += 2) {
+            if (ivs[j] < tt - 10 && ivs[j + 1] > tt + 10) {
+              holdW += 1;
+              break;
+            }
+          }
+        }
+        if (free) freeLn++;
+        holdAdjW += holdW;
+      }
+    }
+    return {
+      rowCount,
+      notes,
+      lnHeadRowCount,
+      lnHeadChordMean: lnHeadRowCount ? lnHeadSum / lnHeadRowCount : 0,
+      lnHeadOverlapRatio: lnHeadPairs ? lnHeadOverlaps / lnHeadPairs : 0,
+      lnHeadRate: lnHeadRowCount / durS,
+      tailSingleRatio: tailRows ? singleTailRows / tailRows : 0,
+      vibroFraction: notes ? runNoteCount.n / notes : 0,
+      vibroWidth: runCols.size,
+      wideSpreadRatio: notes ? Math.min(1, seenCols / 5) : 0,
+      maxGapMs: maxGap,
+      segIvLogStd,
+      segRhythmChangeRate,
+      jackHitRatio: notes ? jackHits / notes : 0,
+      shortLnBodyRatio: shortLnBodyRatio(ctx, start, end),
+      jackChordPerRow: rowCount ? jackHits / rowCount : 0,
+      jackRunBpm: medJackDt > 0 ? Math.min(15e3 / medJackDt, 500) : 0,
+      jackRowMatchRatio: jackHits ? jackMatch / jackHits : 0,
+      // lockJackRatio: presses that are row-rate same-column repeats while
+      // another lane is held (denominator = all presses, per research definition)
+      heldJackRatio: notes ? heldRowJacks / notes : 0,
+      longLnRatio: notes ? longLn / notes : 0,
+      tailChordMean: longLn ? tailSum / longLn : 0,
+      tailFreeRatio: longLn ? freeLn / longLn : 0,
+      tailHoldAdjWeight: longLn ? holdAdjW / longLn : 0,
+      tailGapMed: median(tailGaps),
+      tailGapCv: tailGapCv(tailGaps),
+      invHoleFrac: computeInvHoleFrac(ctx, start, end),
+      offGridRatio: allOff,
+      techJackScore,
+      chordOverlapRatio,
+      chordOverlapJaccard,
+      maxLockRun,
+      avgOverlapSize,
+      chord2Ratio,
+      weightedNps,
+      chordGapMed,
+      chordGapCv
+    };
+  }
+  function shortLnBodyRatio(ctx, start, end) {
+    let n = 0, short = 0;
+    for (const h of ctx.lnHeads) {
+      if (h.t < start) continue;
+      if (h.t >= end) break;
+      n++;
+      if (h.dur < 90) short++;
+    }
+    return n ? short / n : 0;
+  }
+  function computeInvHoleFrac(ctx, start, end) {
+    const K = ctx.map.keys;
+    const dur = end - start;
+    if (dur <= 0) return 0;
+    let worst = 0;
+    for (let c = 0; c < K; c++) {
+      const marks = [];
+      for (const h of ctx.lnHeads) {
+        if (h.col !== c) continue;
+        if (h.t + h.dur <= start) continue;
+        if (h.t >= end) break;
+        marks.push([Math.max(h.t, start), Math.min(h.t + h.dur, end)]);
+      }
+      const notes = ctx.cols.colNotes[c];
+      let lo = 0, hi = notes.length;
+      while (lo < hi) {
+        const m = lo + hi >> 1;
+        if (notes[m] < start) lo = m + 1;
+        else hi = m;
+      }
+      for (let i = lo; i < notes.length && notes[i] < end; i++) marks.push([notes[i], notes[i]]);
+      if (!marks.length) {
+        worst = Math.max(worst, 1);
+        continue;
+      }
+      marks.sort((a, b) => a[0] - b[0] || a[1] - b[1]);
+      let holeMs = 0;
+      let prevEnd = marks[0][1];
+      if (marks[0][0] - start > 1e3) holeMs += marks[0][0] - start;
+      for (let i = 1; i < marks.length; i++) {
+        const gap = marks[i][0] - prevEnd;
+        if (gap > 1e3) holeMs += gap;
+        if (marks[i][1] > prevEnd) prevEnd = marks[i][1];
+      }
+      if (end - prevEnd > 1e3) holeMs += end - prevEnd;
+      worst = Math.max(worst, Math.min(1, holeMs / dur));
+    }
+    return worst;
+  }
+  function median(a) {
+    if (!a.length) return 0;
+    const s = [...a].sort((x, y) => x - y);
+    return s[Math.floor(s.length / 2)];
+  }
+  function predIdx(arr, t) {
+    let lo = 0, hi = arr.length;
+    while (lo < hi) {
+      const m = lo + hi >> 1;
+      if (arr[m] < t) lo = m + 1;
+      else hi = m;
+    }
+    return lo - 1;
+  }
+  function countNear(arr, t, tol) {
+    let a = 0, b = arr.length;
+    while (a < b) {
+      const m = a + b >> 1;
+      if (arr[m] < t - tol) a = m + 1;
+      else b = m;
+    }
+    let c = 0;
+    for (let i = a; i < arr.length && arr[i] <= t + tol; i++) c++;
+    return c;
+  }
+  function hasHitNear(arr, t, tol) {
+    let lo = 0, hi = arr.length;
+    while (lo < hi) {
+      const m = lo + hi >> 1;
+      if (arr[m] < t - tol) lo = m + 1;
+      else hi = m;
+    }
+    return lo < arr.length && arr[lo] <= t + tol;
+  }
+  function tailGapCv(gaps) {
+    if (gaps.length < 2) return 0;
+    const m = gaps.reduce((a, b) => a + b, 0) / gaps.length;
+    if (m <= 0) return 0;
+    const v = gaps.reduce((a, b) => a + (b - m) ** 2, 0) / gaps.length;
+    return Math.min(2, Math.sqrt(v) / m);
+  }
+  function stdevCv(a) {
+    if (a.length < 2) return 0;
+    const m = a.reduce((x, y) => x + y, 0) / a.length;
+    const v = a.reduce((x, y) => x + (y - m) ** 2, 0) / a.length;
+    return m > 0 ? Math.sqrt(v) / m : 0;
+  }
+  var MEDIAN_KEYS = [
+    "nps",
+    "equivBpm",
+    "gridRatio",
+    "rhythmSteady",
+    "chordMean",
+    "largeChordRatio",
+    "multiRatio",
+    "singleRatio",
+    "jackRowRatio",
+    "overlapDegree",
+    "jackSpeedBpm",
+    "cutFreeRatio",
+    "cutDemand",
+    "anchorRate",
+    "trillRate",
+    "altHandRate",
+    "rollRate",
+    "graceRate",
+    "offBeatRatio",
+    "lnWeightRatio",
+    "lockRatio",
+    "lnAreaRatio",
+    "heldCoverage",
+    "tailRate",
+    "tailIndependence",
+    "tailScatter",
+    "shortLnRatio",
+    "invGapScore"
+  ];
+  function medianOf(windows, from, to, k) {
+    const vals = [];
+    for (let i = from; i < to && i < windows.length; i++) vals.push(windows[i][k]);
+    if (!vals.length) return 0;
+    vals.sort((a, b) => a - b);
+    return vals[Math.floor(vals.length / 2)];
+  }
+  function computeMapMedians(windows) {
+    const n = Math.max(1, windows.length);
+    return {
+      mapChordMedian: medianOf(windows, 0, n, "chordMean"),
+      mapLargeMedian: medianOf(windows, 0, n, "largeChordRatio"),
+      mapNpsMedian: medianOf(windows, 0, n, "nps")
+    };
+  }
+  function medianWindowFeatures(windows, from, to, mapMedians) {
+    const out = {};
+    for (const k of MEDIAN_KEYS) out[k] = 0;
+    for (const k of MEDIAN_KEYS) {
+      out[k] = medianOf(windows, from, to, k);
+    }
+    return {
+      ...out,
+      // humans judge cut size relative to the map's own baseline, not absolutely
+      ...mapMedians ?? computeMapMedians(windows)
+    };
+  }
+
+  // src/classify/params.ts
+  var RC_DEFAULTS = {
+    vibroFracLo: 0.28,
+    vibroFracHi: 0.5,
+    vibroBpmLo: 125,
+    vibroBpmHi: 170,
+    cjMultiLo: 0.62,
+    cjMultiHi: 0.88,
+    cjChLo: 2.3,
+    cjChHi: 2.9,
+    cjJackLo: 0.18,
+    cjJackHi: 0.5,
+    cjOvlLo: 0.35,
+    cjOvlHi: 0.68,
+    mjJackLo: 0.1,
+    mjJackHi: 0.38,
+    mjOvlLo: 0.15,
+    mjOvlHi: 0.5,
+    mjBpmLo: 125,
+    mjBpmHi: 185,
+    dcMultiLo: 0.76,
+    dcMultiHi: 0.9,
+    dcLargeLo: 0.42,
+    dcLargeHi: 0.72,
+    dcFreeLo: 0.72,
+    dcFreeHi: 0.95,
+    fcMultiLo: 0.42,
+    fcMultiHi: 0.78,
+    fcSingleLo: 0.15,
+    fcSingleHi: 0.42,
+    fcBpmLo: 180,
+    fcBpmHi: 215,
+    spSingleLo: 0.48,
+    spSingleHi: 0.75,
+    spBpmW: 0.4,
+    techJackLo: 0.04,
+    techJackHi: 0.18,
+    techSpecLo: 0.06,
+    techSpecHi: 0.25,
+    wildcardBase: 0.3
+  };
+  var LN_DEFAULTS = {
+    invCovLo: 0.45,
+    invCovHi: 0.72,
+    invGapLo: 0.6,
+    invGapHi: 0.86,
+    invAreaLo: 0.5,
+    invAreaHi: 0.75,
+    coLockLo: 0.38,
+    coLockHi: 0.64,
+    teShortLo: 0.55,
+    teShortHi: 0.88,
+    teTailLo: 9,
+    teTailHi: 16,
+    relBpmHi: 155,
+    relNpsHi: 21,
+    denShortLo: 0.6,
+    denShortHi: 0.88,
+    denTailLo: 8,
+    denTailHi: 15,
+    denHeadChLo: 1.35,
+    denHeadChHi: 2.1,
+    lnWildBase: 0.26
+  };
+
+  // src/classify/scoreRc.ts
+  function ss(x, lo, hi) {
+    if (hi <= lo) return x >= hi ? 1 : 0;
+    const t = Math.max(0, Math.min(1, (x - lo) / (hi - lo)));
+    return t * t * (3 - 2 * t);
+  }
+  function scoreRc(inp) {
+    const p = { ...RC_DEFAULTS, ...inp.params };
+    const { f, extras } = inp;
+    const active = f.nps > 2.5 ? 1 : ss(f.nps, 1.2, 2.5);
+    const cutDemNorm = inp.cutDemandRef > 0 ? f.cutDemand / inp.cutDemandRef : 0;
+    const vibro = active * ss(extras.vibroFraction, p.vibroFracLo, p.vibroFracHi) * ss(f.jackSpeedBpm, p.vibroBpmLo, p.vibroBpmHi) * (extras.vibroWidth <= 4 ? 1 : ss(7 - extras.vibroWidth, 0, 3));
+    const chordjack = active * ss(f.multiRatio, p.cjMultiLo, p.cjMultiHi) * ss(f.chordMean, p.cjChLo, p.cjChHi) * ss(f.jackRowRatio, p.cjJackLo, p.cjJackHi) * (0.35 + 0.65 * ss(f.overlapDegree, p.cjOvlLo, p.cjOvlHi));
+    const minijack = active * ss(f.jackRowRatio, p.mjJackLo, p.mjJackHi) * ss(f.overlapDegree, p.mjOvlLo, p.mjOvlHi) * (1 - 0.7 * ss(f.chordMean, 3.2, 4.2)) * (0.35 + 0.65 * ss(f.equivBpm, p.mjBpmLo, p.mjBpmHi));
+    const denseCs = active * ss(f.multiRatio, p.dcMultiLo, p.dcMultiHi) * ss(f.largeChordRatio, p.dcLargeLo, p.dcLargeHi) * ss(f.cutFreeRatio, p.dcFreeLo, p.dcFreeHi) * (0.5 + 0.5 * ss(cutDemNorm, 0.15, 0.7));
+    const fastCs = active * ss(f.multiRatio, p.fcMultiLo, p.fcMultiHi) * ss(f.singleRatio, p.fcSingleLo, p.fcSingleHi) * ss(f.cutFreeRatio, 0.75, 0.97) * (0.35 + 0.65 * ss(f.equivBpm, p.fcBpmLo, p.fcBpmHi));
+    const speed = active * ss(f.singleRatio, p.spSingleLo, p.spSingleHi) * (0.6 - p.spBpmW + ss(f.equivBpm, 190, 245) * p.spBpmW + ss(f.nps, 16, 26) * 0.3);
+    const techSpec = Math.max(
+      extras.segRhythmChangeRate,
+      f.trillRate,
+      f.rollRate,
+      f.altHandRate * 1.5,
+      f.offBeatRatio * 1.3
+    );
+    const tech = active * ss(extras.segIvLogStd, 0.25, 0.55) * (0.3 + 0.7 * ss(techSpec, p.techSpecLo, p.techSpecHi)) * (0.4 + 0.6 * ss(1 - f.rhythmSteady, 0.05, 0.3)) * ss(f.nps, 2.5, 6);
+    const scores = {
+      vibro,
+      chordjack,
+      minijack,
+      "dense chordstream": denseCs,
+      "fast chordstream": fastCs,
+      speed,
+      tech,
+      wildcard: active * p.wildcardBase
+    };
+    for (const k of Object.keys(scores)) scores[k] = Math.max(0, Math.min(1, scores[k]));
+    return scores;
+  }
+
+  // src/classify/scoreLn.ts
+  function ss2(x, lo, hi) {
+    if (hi <= lo) return x >= hi ? 1 : 0;
+    const t = Math.max(0, Math.min(1, (x - lo) / (hi - lo)));
+    return t * t * (3 - 2 * t);
+  }
+  function scoreLn(inp) {
+    const p = { ...LN_DEFAULTS, ...inp.params };
+    const { f, extras } = inp;
+    const lnPresence = ss2(f.lnWeightRatio, 0.45, 0.7);
+    const inverse = lnPresence * // inverse requires lanes essentially filled: hole-y LN sections are not
+    // inverse no matter how the rest of the evidence looks
+    (1 - Math.min(1, extras.invHoleFrac * 4)) * ss2(f.heldCoverage, p.invCovLo, p.invCovHi) * (0.15 + 0.85 * ss2(f.invGapScore, p.invGapLo, p.invGapHi)) * (0.4 + 0.6 * ss2(f.lnAreaRatio, p.invAreaLo, p.invAreaHi)) * (1 - 0.6 * ss2(f.lockRatio, 0.25, 0.55));
+    const coordination = lnPresence * ss2(f.lockRatio, p.coLockLo, p.coLockHi) * (0.5 + 0.5 * ss2(f.heldCoverage, 0.18, 0.42)) * (1 - 0.3 * ss2(f.heldCoverage, 0.7, 0.95));
+    const technical = lnPresence * ss2(f.shortLnRatio, p.teShortLo, p.teShortHi) * ss2(f.tailRate, p.teTailLo, p.teTailHi) * (0.35 + 0.65 * ss2(Math.max(extras.segIvLogStd * 2, extras.segRhythmChangeRate), 0.35, 0.75)) * (1 - 0.7 * ss2(f.lockRatio, 0.12, 0.42)) * (1 - 0.4 * ss2(f.heldCoverage, 0.62, 0.85));
+    const release = lnPresence * (1 - ss2(f.equivBpm, 100, p.relBpmHi)) * (1 - ss2(f.nps, 13, p.relNpsHi)) * (0.35 + 0.65 * (1 - ss2(f.rhythmSteady, 0.55, 0.85))) * (0.5 + 0.5 * ss2(extras.tailSingleRatio, 0.25, 0.55));
+    const density = lnPresence * (0.22 + 0.38 * ss2(f.shortLnRatio, p.denShortLo, p.denShortHi) * ss2(f.tailRate, p.denTailLo, p.denTailHi) + 0.4 * ss2(extras.lnHeadChordMean, p.denHeadChLo, p.denHeadChHi)) * (1 - 0.45 * ss2(extras.segRhythmChangeRate, 0.3, 0.6));
+    const scores = {
+      inverse,
+      coordination,
+      technical,
+      release,
+      density,
+      "ln wildcard": lnPresence * p.lnWildBase
+    };
+    for (const k of Object.keys(scores)) scores[k] = Math.max(0, Math.min(1, scores[k]));
+    return scores;
+  }
+
+  // src/classify/featuresVec.ts
+  var VEC_KEYS = [
+    "nps",
+    "logEquivBpm",
+    "cutSizeNorm",
+    "gridRatio",
+    "rhythmSteady",
+    "chordMean",
+    "largeChordRatio",
+    "multiRatio",
+    "singleRatio",
+    "jackRowRatio",
+    "overlapDegree",
+    "jackSpeedBpm",
+    "jackHitRatio",
+    "heldJackRatio",
+    "jackChordPerRow",
+    "jackRunBpm",
+    "jackRowMatchRatio",
+    "longLnRatio",
+    "tailChordMean",
+    "tailFreeRatio",
+    "tailHoldAdjWeight",
+    "shortLnBodyRatio",
+    "invHoleFrac",
+    "offGridRatio",
+    "techJackScore",
+    "cutFreeRatio",
+    "logCutDemand",
+    "anchorRate",
+    "trillRate",
+    "altHandRate",
+    "rollRate",
+    "offBeatRatio",
+    "graceRate",
+    "lnWeightRatio",
+    "lockRatio",
+    "heldCoverage",
+    "lnAreaRatio",
+    "tailRate",
+    "tailIndependence",
+    "tailScatter",
+    "shortLnRatio",
+    "invGapScore",
+    // extras
+    "lnHeadChordMean",
+    "lnHeadRate",
+    "tailSingleRatio",
+    "vibroFraction",
+    "vibroWidth",
+    "wideSpreadRatio",
+    "segIvLogStd",
+    "segRhythmChangeRate",
+    "chordOverlapRatio",
+    "chordOverlapJaccard",
+    "maxLockRun",
+    "avgOverlapSize",
+    "chord2Ratio",
+    "weightedNps"
+  ];
+  function buildVector(f, extras, cutDemandRef) {
+    return {
+      nps: f.nps,
+      logEquivBpm: Math.log1p(Math.max(0, f.equivBpm) / 50),
+      // chord size relative to tempo: annotator rule "at lower bpm a smaller cut
+      // still counts as dense" — captures dCS/fCS boundary jointly.
+      cutSizeNorm: f.chordMean * (160 / Math.min(260, Math.max(90, f.equivBpm || 160))),
+      gridRatio: f.gridRatio,
+      rhythmSteady: f.rhythmSteady,
+      chordMean: f.chordMean,
+      largeChordRatio: f.largeChordRatio,
+      multiRatio: f.multiRatio,
+      singleRatio: f.singleRatio,
+      jackRowRatio: f.jackRowRatio,
+      overlapDegree: f.overlapDegree,
+      jackSpeedBpm: f.jackSpeedBpm / 100,
+      jackHitRatio: extras.jackHitRatio,
+      heldJackRatio: extras.heldJackRatio,
+      jackChordPerRow: extras.jackChordPerRow / 3,
+      jackRunBpm: extras.jackRunBpm / 100,
+      jackRowMatchRatio: extras.jackRowMatchRatio,
+      longLnRatio: extras.longLnRatio,
+      tailChordMean: extras.tailChordMean / 3,
+      tailFreeRatio: extras.tailFreeRatio,
+      tailHoldAdjWeight: extras.tailHoldAdjWeight / 2,
+      shortLnBodyRatio: extras.shortLnBodyRatio,
+      invHoleFrac: extras.invHoleFrac,
+      offGridRatio: extras.offGridRatio,
+      techJackScore: extras.techJackScore,
+      cutFreeRatio: f.cutFreeRatio,
+      logCutDemand: Math.log1p(f.cutDemand / Math.max(1, cutDemandRef)),
+      anchorRate: f.anchorRate,
+      trillRate: f.trillRate,
+      altHandRate: f.altHandRate,
+      rollRate: f.rollRate,
+      offBeatRatio: f.offBeatRatio,
+      graceRate: f.graceRate,
+      lnWeightRatio: f.lnWeightRatio,
+      lockRatio: f.lockRatio,
+      heldCoverage: f.heldCoverage,
+      lnAreaRatio: f.lnAreaRatio,
+      tailRate: f.tailRate / 20,
+      tailIndependence: f.tailIndependence,
+      tailScatter: Math.min(2, f.tailScatter),
+      shortLnRatio: f.shortLnRatio,
+      invGapScore: f.invGapScore,
+      lnHeadChordMean: extras.lnHeadChordMean,
+      lnHeadRate: extras.lnHeadRate / 10,
+      tailSingleRatio: extras.tailSingleRatio,
+      vibroFraction: extras.vibroFraction,
+      vibroWidth: extras.vibroWidth / 7,
+      wideSpreadRatio: extras.wideSpreadRatio,
+      segIvLogStd: extras.segIvLogStd,
+      segRhythmChangeRate: extras.segRhythmChangeRate,
+      chordOverlapRatio: extras.chordOverlapRatio,
+      chordOverlapJaccard: extras.chordOverlapJaccard,
+      maxLockRun: extras.maxLockRun / 8,
+      avgOverlapSize: extras.avgOverlapSize / 3,
+      chord2Ratio: extras.chord2Ratio,
+      weightedNps: extras.weightedNps / 25
+    };
+  }
+
+  // src/classify/model.generated.json
+  var model_generated_default = { rc: { classes: ["chordjack", "dense chordstream", "fast chordstream", "minijack", "speed", "tech", "wildcard"], mean: [20.93774838995434, 1.4080974987551738, 2.1914240366760316, 0.9428981373793501, 0.9047728505549114, 2.135125524957002, 0.4640193509852115, 0.7384616476328464, 0.3892548428295238, 0.1749313535443446, 0.3436237658643697, 0.5685865327287285, 0.09375885928972184, 0.00131894588553609, 0.08704903896278011, 0.38128399027490567, 0.6639062392530343, 0.01628625953791638, 0.0828330674170041, 0.08879070240106783, 0.0029161940451753075, 0.009124992427688508, 0.2447181762705806, 0.23322288545180636, 0.2336716483837912, 0.8201089820645772, 0.43007010016086944, 0.46037071170267907, 9239807033924681e-19, 0.11886746893020556, 0.05025347629376421, 0.03815928518425371, 0.006387494746760668, 0.02017262474484937, 0.034352040479491454, 0.012432056155795635, 0.010465802987861808, 0.008374183006535944, 0.00610639680708885, 0.005829082362775315, 0.022107485299526827, 0.011029528955607036, 0.21196370109876272, 0.016064058527189583, 0.04658207007707588, 0.4347897581044773, 0.6751867413632097, 0.9985294117647026, 0.3355506613281114, 0.22125833940306475, 0.18376148063492448, 0.08235852970854024, 0.4648692810457504, 0.44651437060431864, 0.2659941553302713, 1.2010059101611925], std: [9.181886191066749, 0.4202068551252959, 1.2934606024495643, 0.22482493974973877, 0.21566483288699292, 0.7790262997355679, 0.2966722209852889, 0.27703992425212104, 0.3052272695380964, 0.2563545624583077, 0.3684423947809091, 0.25120946851322623, 0.13541507427563376, 0.013070398959398552, 0.16074159436203317, 0.5362603558437544, 0.43651095557819475, 0.0764787430824936, 0.26521568389214484, 0.26192757580134235, 0.030560007380948353, 0.08032078635067129, 0.3130880970139673, 0.3452014041820118, 0.35102493271700824, 0.2655197184600404, 0.2428473213721715, 0.28251112317011096, 0.023618187965021388, 0.19303825208268258, 0.15249938204732497, 0.13557493015228117, 0.0371712088554391, 0.10280477789455703, 0.16557076315505753, 0.05782422417271025, 0.04748186083697971, 0.0491069313440768, 0.05791289350157722, 0.04124740260298424, 0.13946490453469046, 0.07353220315536717, 0.6644342245234114, 0.06981536470505975, 0.1916448780333269, 0.31905448147980114, 0.37533749226731916, 0.029668001473282305, 0.2186480723780999, 0.1977957881135459, 0.23621557542828178, 0.12149826275668694, 1.0153370963315904, 0.28630106829735574, 0.18587684793965256, 0.597515807979952], W: [-0.11281779061822943, -0.1392633451559788, 0.23541388960450754, 0.2973549693062095, 0.07725064495728294, -0.11591181820101619, -0.053459121901487244, -0.10752925172531122, -0.10649833691336684, 0.1845561648626616, 0.25695345704461603, -0.21015717589290123, 0.4112642302862858, -0.109120887067381, 0.22756313663341485, 0.20084862951287888, 0.302933726262374, 0.20087787054952516, 0.07912037800770207, 0.06996569769779942, 0.19096942596946517, -0.02092651613213297, 0.10238509104189875, 0.13142181998695768, 0.13334556807163167, -0.1976241892872756, 0.7285948122733158, -0.6451267869509192, 0.0013242352573720336, -0.08102031126022896, -0.1688425822974419, 0.5441337254156035, 0.02559328854199168, 0.004297322375617219, 0.012774106157057286, -0.1394397679378785, -0.19598492567675138, 0.06277637893189968, -0.05340905389615265, 0.06794453320508406, 0.23408387690711302, 0.17262129880698146, 0.061736333908749566, 0.057474758005859584, 0.14289634721599498, -0.09500654755474262, -0.030797622223572147, 0.08768285474678499, -0.4583827067060617, -0.38577440530877, 0.24405603995388134, 0.06917191739891904, -0.04227926733244097, 0.19321295451298182, 0.12503029156743264, 0.07876252639208031, 0.2978421081392673, -0.24839843909618362, 0.2811363673074207, -0.035124798624274214, -0.37069410233448513, 0.3971094223259367, 0.17799541499577298, -0.10100267151812879, -0.20029236937727313, -0.24588650987718505, -0.28832570840406274, 0.2996850915867223, -0.08800414225683471, 0.14280100415099853, 0.022497590286543655, 0.02994699254130813, -0.07324069710973151, -0.0652777509403595, -0.02565340573712316, -0.003909181845370043, -0.17301993626507767, 0.07901951517348317, 0.5969920864438635, 0.24482465027824868, 0.2624548827022429, 0.27183194758278967, -0.3672886578426847, 0.18550623263006746, -0.057589732151321335, 0.06506711219704807, -0.23091038398355984, -0.4783846211139561, -0.02861528677787629, 0.16058967810605362, 0.059610753531296204, -0.004381951686723081, -0.07036685518188207, 0.07382002352135333, -0.015953698318197245, 0.0344581675750286, 0.022354316084196003, -0.06029477482438648, 0.007681403449231488, 0.13935184522010519, -0.10978357011311386, 0.23217320922621326, -0.37763328294401227, -0.010514274127988738, -0.18911221483313828, 0.040440285329577184, -0.1991921527365222, 0.033271824468392525, 0.06795179836223177, 0.13496101620785994, -0.03439034318173883, 0.5280481989000204, -0.07740147702385074, -0.0021802974352554934, -0.23580956635534658, -0.236709064068437, 0.0019315049769862104, -0.06328576963389301, 0.24799790874516664, 0.2217647052936303, -0.1652413563780953, -0.02213065101391793, -0.420060284870252, -0.20781370717700484, -0.14665697251624651, -0.16610027769983796, -0.19816805794818665, -0.1333578408398787, -0.25274137878015734, 0.09055665669089116, 0.09655249495094886, 0.1239025358780989, 0.196831912923072, 0.1244186882113548, 0.03853670982563939, -0.5106159208638094, -0.48298196262524107, -0.0828224257912376, -0.16887482456768713, 0.05950622681271993, -0.011597718536621903, 0.21014246639099063, -0.3263400405709306, -0.2922667272453767, 0.09921830342791352, -0.20292455647886012, 0.2191292543331272, 0.1555830877197135, 0.26939841302447504, -0.12439021573627497, -0.055461141955499234, -0.06047683751090291, 0.10960179473098504, -0.01113912672160206, 0.026396687607151234, 0.1187729105316505, -0.09034387659138884, 0.5186249557684731, -0.10874688180415412, -0.12933160778264835, 0.17763503992837512, -0.1277485771876028, 0.024818686588251856, 0.027763106476622813, 0.07756996979596488, 0.09189541110155212, 0.023520154820347763, -0.11597477836429199, -0.17695932215603005, -0.1136090905481436, 0.10862118671668532, -0.23260457159255218, 0.24767881139644307, 0.3739372050246205, 0.021134194556443404, 0.033021298714894134, -0.2918883669529386, 0.15126004125365597, 0.08835687886367154, 0.5666786048469167, -0.11396704685431429, -0.2083145381505132, -0.08975133369190752, 0.44239193667852, 0.10753169885831809, -0.08963292355734644, 0.08463217009135818, 0.11199876148791958, -0.12812281089950683, -0.1345411855397059, -0.18245723910121991, -0.28193680671494015, -0.21571652131843794, -0.11462842153726807, 0.26353658073630676, 0.08223158227592149, 0.002871459375200859, 0.04494452526241003, -0.17951437146025534, -0.17350349381326186, -0.06877873822658553, 0.09783122635915047, -0.22859753368127958, 0.19444373434873916, 0.1872564619414392, 0.09157695670094124, 0.12954181487510052, -0.06814769541176492, -0.20436535520026983, -0.005763443852793948, 0.21746483444566, -0.093009701828685, 0.22476518562379355, -0.757192110172828, -0.09235862373539139, 0.08978465711081426, -0.31424412131586477, -0.009655921654276867, 0.1393110595772085, 0.07619071983604656, -0.18417910215181404, -0.5562961709547659, -0.0035936415025293145, -0.017931391257151617, 0.09652082639593475, 0.3649583822334789, -0.1469045427114981, 0.053366886284030586, 4827459133347083e-20, -0.18915166401274852, -0.4058503594715235, -0.006396972274225326, 0.17570401337517566, 0.16512953644368616, -0.03746866287450656, -0.14722073927115603, -0.17770903920967449, 0.22009123346697076, 0.036837255758299124, -0.2976488240261254, -0.2281961241806814, -0.06976785614173604, 0.003113079936800103, -0.18736092288737677, -0.05750839516646914, -0.06919764236837778, 0.13668008019312772, 0.36193651924200015, 0.36112895774831505, -0.14775088336873882, -0.6201355402408327, 0.40712325691732293, 0.03727131235953444, -0.08041495475472489, 0.22798992064965767, 0.4012750473538711, -0.027952176089621944, 0.008870288172278772, 0.12962320904612584, -0.028731849823358784, -0.0011436599555895795, -0.0602129435732264, -0.048451510462888904, 0.049707301182298484, -0.1411106097184829, -0.09043044694112623, -0.054968254812264125, -0.11981700154821551, -0.2506000315179192, 0.07620939713290777, -0.18679408038167586, -0.04451452099527746, 0.09115960596058269, -0.3671655756297953, 0.01174651620880332, -0.039838305220031296, -0.10692114052973498, 0.15314565625796928, 0.03818697830999922, -0.2516322076379783, 0.07628010686882401, 0.22593853823002666, -0.10789651476386082, 0.1702479566970622, -0.22350270927587831, -0.308877300647033, -0.33208651604069983, -0.150223227715324, 0.3311588403105332, -0.20025538525410663, 0.359012908773347, 0.09573574128427673, 0.07520020428684067, 0.1462124781748106, -0.012337939140700006, 0.27493194046900754, -0.07233094187184286, -0.09069598632389517, -0.08529287784181333, 0.04890320929270542, -0.05158594074062084, 0.04099391581093745, -0.3660914602678893, 0.15395699721574557, 0.053269682576109256, 0.24172001777008606, -0.10721949368901139, -0.17690357866259585, 0.008078268070255232, 0.4252623404838714, 0.1152448413373059, 0.28769000820628815, 0.1997658547657003, -0.1096373915788308, -0.1554713786880494, -0.1631933860064374, -0.16756839582412034, -0.07495652424082336, -0.020285952531865502, -0.045388548977797684, -0.051648328596470436, -0.032955493808473915, -0.11344004635929564, -0.05529445040116172, 0.0943018675138794, -0.26354858255153, 0.16469751219973533, 0.029324855370068865, 0.5130920717256064, 0.3096745135418567, -0.20890010542981652, -0.11150757958765305, 0.09088678522636108, 0.10183372048681946, 0.1800554913779259, -0.13993162319966682, -0.1034644516059156, -0.08744574822794379, -0.13456081979790804, -0.016531378002038598, 0.2672875756883169, -0.093820074855866, 0.3442684791163275, 0.11036611922446493, 0.2570575759359646, -0.032673196414794145, 0.0415314114671868, -0.39690781537685327, 0.03987276626394297, -0.025569012875047394, 0.013359348102536764, -0.5171128343357114, 0.21604371682172127, 0.023939989722920853, -0.15247183940787262, -0.1635000996237769, 0.022435744179137334, -0.019766775155558847, -0.32604526813542006, -0.09958725914420369, -0.11150060715461887, 0.029273954631644238, 0.2713871233305933, 0.0876630669774818, 0.01964217562558065, -0.5839811783193662, 0.5623726163252236, -0.2889439388031684, -0.19923124564152156, 0.040973433044590925, -0.0370684106982777, -0.014279866614055392, -0.02159103832757063, 0.03138632439613035, 0.06401954228950352, 0.021903079938054248, 0.03108430579292893, 0.027961987341401144, -0.1448709582392325, -0.04747835997955303, -0.011235922131245746, 0.28873967815150525, 0.6316329788890699, -0.022431964321753418, 0.1798523252404994, 0.5402296809090112, -0.011840044161806495, -0.055051683372296295, 0.0969709566294323, -0.11875258761241698, -0.3288089313914372, -0.08134072483301225], b: [-0.10887388993600251, 0.7669278338472332, 0.019152284989763346, -0.15373585138642026, 0.25434888460891064, 0.02402177012380764, -0.8018410322472921], keys: ["nps", "logEquivBpm", "cutSizeNorm", "gridRatio", "rhythmSteady", "chordMean", "largeChordRatio", "multiRatio", "singleRatio", "jackRowRatio", "overlapDegree", "jackSpeedBpm", "jackHitRatio", "heldJackRatio", "jackChordPerRow", "jackRunBpm", "jackRowMatchRatio", "longLnRatio", "tailChordMean", "tailFreeRatio", "tailHoldAdjWeight", "shortLnBodyRatio", "invHoleFrac", "offGridRatio", "techJackScore", "cutFreeRatio", "logCutDemand", "anchorRate", "trillRate", "altHandRate", "rollRate", "offBeatRatio", "graceRate", "lnWeightRatio", "lockRatio", "heldCoverage", "lnAreaRatio", "tailRate", "tailIndependence", "tailScatter", "shortLnRatio", "invGapScore", "lnHeadChordMean", "lnHeadRate", "tailSingleRatio", "vibroFraction", "vibroWidth", "wideSpreadRatio", "segIvLogStd", "segRhythmChangeRate", "chordOverlapRatio", "chordOverlapJaccard", "maxLockRun", "avgOverlapSize", "chord2Ratio", "weightedNps"] }, ln: { classes: ["coordination", "density", "inverse", "ln wildcard", "release", "technical"], mean: [15.972709210533452, 1.0923710703776033, 2.5498025283167047, 0.8159490285789012, 0.6517508204080409, 2.142748428885941, 0.46349554834915074, 0.7668524552330663, 0.3670087427509474, 0.08497744026273657, 0.16515687230756754, 0.36000521501957317, 0.0894029667379305, 0.05637386719172953, 0.07737407390095295, 0.32407891774181286, 0.7032609153996814, 0.56045445852904, 0.743785024089873, 0.6623329711645859, 0.202011608269886, 0.18794808566930513, 0.23031219161622682, 0.2287301690768112, 0.2504976976402478, 0.770247833229595, 0.40734296580687374, 0.28754268548061224, 0, 0.06801014763066617, 0.024414526716691174, 0.10929418135470344, 0.003339442805426711, 0.8187654853479378, 0.2947432663094991, 0.4867968410085562, 0.5003151570703518, 0.5933564799139865, 0.3597656081006826, 0.5019636893365831, 0.610804303844713, 0.5500215671958975, 1.8409430698848972, 0.6440958944730771, 0.4185918120352241, 0.28173054248125246, 0.4577280802591697, 0.9976591075347727, 0.3441398906317693, 0.24043486422603422, 0.20614721014366094, 0.07902949325192737, 0.429407461594736, 0.4310434274386964, 0.27982382098889513, 0.9236890246994582], std: [8.964356418729299, 0.5897303258238599, 1.3013697273224998, 0.3809410095679509, 0.44335756559607875, 0.6735276311559297, 0.2936637946231972, 0.25585433429091503, 0.28550505660552516, 0.18372871059365425, 0.307768096900298, 0.2994556840619319, 0.11030490829351562, 0.08768868829261041, 0.11899193717260889, 0.4813017699096504, 0.4266597958210613, 0.2665412569352661, 0.2639194987172153, 0.2422204923111378, 0.1770330353417038, 0.24849235502673822, 0.308628405540351, 0.37674209107225515, 0.37744117406927735, 0.3604613300334198, 0.2808505984344401, 0.2791535307764144, 1e-6, 0.16758497461665722, 0.11368237408558736, 0.28424388663716116, 0.029200926667748952, 0.21869468155646854, 0.3140935589145856, 0.20537041620838742, 0.24044043222302516, 0.4056577982823191, 0.20959509703065382, 0.257177614883311, 0.36530440498608024, 0.2608787412555152, 0.6137293206666724, 0.4456264497830043, 0.31561763047950386, 0.30749473674398625, 0.43281862911790925, 0.028527751143481727, 0.21180949001936877, 0.19034393430007804, 0.22180113461803805, 0.09449213050404882, 0.6330951650122412, 0.23122060874529352, 0.18194252177986717, 0.536298314587527], W: [0.05105452731083738, 0.13615445199589762, 0.009753207832122208, 0.1236094283620807, -0.14288207455387242, 0.0763955698397503, 0.1123490554280606, 0.05308476540148476, -0.2006332472929359, 0.1339493150899519, 0.35159002448941307, 0.012991586540062034, 0.16654209078816146, 0.20283727562941586, 0.09786942550248749, -0.062266067217413915, 0.08863541035871249, 0.1716746380532528, 0.2059847452603893, -0.3793858091401414, -0.40891052864863836, -0.08467197617452239, -0.2247183714853586, -0.2895216829444947, -0.41469076352991496, 0.2710819811222212, 0.03603056739463045, -0.3805931713844531, 0, -0.012502278261808473, -0.0021503455144078545, 0.3301176692700385, -0.30587196332699523, -0.2739519790681863, 0.13374661768325224, -0.2309759116617263, -0.0814605880957565, -0.2574487123175539, 0.38148663894937435, 0.1161705798042186, -0.12152799423775558, -0.1317173228328198, -0.04926154374111001, -0.26533822358446224, -0.12851777133591546, -0.10355371090499974, 0.09877513087347736, 0.13712170624690043, 0.05957645703954457, -0.11944032210417015, 0.1640162467646904, -0.16741299524305817, 0.08735225020673432, -0.2880028723980621, 0.08713250084149426, 0.02396476148112601, -0.0800007600219727, 0.06816254069599084, 0.16420865038423968, 0.13701041274663311, 0.11450989446216502, 0.33171784063015614, 0.2124312780814256, 0.17071080115404502, 0.0035315979046685745, 0.047165498191124665, -0.44980074033805956, 0.010395852144262446, -0.011445806855275934, 0.011633232122204159, 0.07981668210428752, 0.15469561216853514, 0.00751613462145558, -0.2130670739671315, 0.23728400409972553, -0.26882138605688055, -0.18971398847799273, -0.023956486921209393, 0.09376498408125498, 0.041851926608205366, -0.03737978094689256, 0.34929604734184166, -0.3289482602918475, 0.3692393778070024, 0, 0.027095054853906314, 0.011249281609127122, -0.5894779081883857, 0.29228629752697, -0.10828331163497258, 0.3294016526375409, -0.1633358131148588, -0.12016769477186542, -0.032018082613000654, 0.14799973857677406, 0.10527593315821476, 0.09528977120015802, -0.036558655216672196, -0.13338368392912897, -0.04737935567379809, -0.04614304686830644, -0.07005203096141244, -0.19701703635734183, -0.12476779749100758, 0.1262644526799178, -0.110518559163413, -0.14367601295156276, -0.2677928208287168, 0.08213799128375301, 0.3148759862484422, -0.05395016880210348, 0.0922656446623978, 0.03832497130188643, -0.1087386305373548, -0.08370985300645577, -0.11829713393537263, -0.07965859251331939, -0.025092673813921194, -0.2796631281789168, -0.24502901908790203, 0.06964064845341239, -0.057101170877972264, -0.03842044591221056, 0.07978126285271998, -0.15048072142392271, -0.03379391887762717, -0.12046350668252652, 0.15145145362809867, -0.07962544988445501, 0.12167447652270162, 0.6124009976136844, 0.16163682034590146, 0.6262324844562808, -0.18826335959309837, 0.4754121395068967, -0.14831526434109585, 0.19514939707863116, -0.16979586293000293, 0.120600975353191, -0.03142738612078493, 0, 0.25758406976950576, 0.1283324061059421, 0.37516946781592797, -0.0784887066887074, -0.023684485750657097, 0.08432899248872504, 0.5337276550652109, 0.6241267310278348, 0.25184850217361326, 0.11323697126211468, -0.26090991981999556, -0.354601060338413, 0.4727936072375938, 0.12207781998360671, 0.07534266446177552, 0.4609394841582948, 0.10708838233434605, -0.08743011139977386, -0.162189481348484, -0.2652873873207766, -0.03397093570750794, -0.18237709248725775, 0.0922587888633575, -0.0693625258827298, 0.23740123684931388, -0.03134746635924755, 0.045724802379521375, 0.287964570554874, 0.06517366391329295, -0.0716841524986478, -0.09632503874395497, -0.020250504414171762, -0.1449324012090893, -0.15791455272124583, -0.07606971509360941, 0.15511532418892027, 0.09958666298230294, -0.23161424949200451, 0.10643268335906336, -0.05412952159360003, -0.034387914571814955, 0.0441262250191749, -0.430231782488165, -0.05358151245786507, -0.060932600740772724, -0.26927637874715127, 0.5327292135326305, 0.2290008131178005, 0.17097880927090575, -0.19500523826105717, 0.06742560286410489, 0.014455229751874117, -0.18249952585746965, -0.19290223073739307, 0.1987738332336329, 0, -0.07724412113694262, 0.09180212725606404, -0.07492253135527466, 0.07642769084918762, -0.13378886221600345, 0.0732870947608196, 0.23481365483236336, 0.008649801735378894, -0.08571198186000953, -0.3098131517860218, -0.2559966899023739, 0.07347379884693506, 0.12736668146217348, -0.1353975425502181, 0.18857757934154196, -0.18750386848365416, 0.450995062241002, 0.11489887894839833, 0.023181717494873463, 0.11401749042325232, 0.23222004728663012, 0.06567098927782147, 0.04073554680845086, -0.03615335781166415, -0.2500993370626585, 0.01668334849045055, 0.05985020044772397, -0.3937912194289597, -0.3384469771821769, 0.13774922689113006, -0.17979179751636687, 0.017942847144341936, 0.00850397357340041, 0.11029698177025513, 0.0892273341612643, -0.06432701318440631, 0.01196138025170388, -0.13472487271673636, -0.324184527975751, -0.11818952096650853, -0.26948317325736987, -0.15323811561761855, 0.02572337275741769, -0.12106570766610761, 0.18275543887459725, -0.6799064058906248, -0.006507036077687273, 0.1642323865409963, 0.026712131322030506, -0.09929577851901188, -0.09790966311755538, -0.13791632722140335, 0.00560015762114517, 0.5319379019380989, -0.13179097878950477, 0, -0.16001678763096183, 0.07097149001169731, 0.006451273152772867, 0.049723944311750694, 0.4063451119034303, -0.2817434389639062, -0.005571997729548492, -0.022747533117600426, -0.036301482811088144, -0.11138575535061514, 0.1731413030460878, 0.0070902652976213235, -0.2391627735837154, 0.09070405092959395, -0.15228839398830865, 0.009440458227031247, -0.11759630160166647, -0.23388387488291854, 0.1886780289614109, -0.260688152413479, 0.05909115437956577, 0.033359007397682106, 0.2272185216401458, -0.10277277612339376, -0.06096997164455401, -0.03757460134886147, -0.4382209421595358, 0.0964479102833346, 0.17769495111435005, -0.15631707960238853, 0.13379412908698105, 0.1103384298748565, -0.24659230902029675, 0.002500365620421401, 0.00807583346471717, 0.0366726899303409, -0.23556168563711102, 0.5029702839695975, 0.11458314307964274, 0.16770348005114552, 0.12319449895519165, 0.051889289674195226, 0.16062741115152748, 0.15812112502825948, -0.20210487874264735, -0.10648696233602242, -0.03965180260382248, -0.42084116698844565, 0.09920088209589376, -0.05015773532272349, 0.4264690809308368, 0.3803822448677054, -0.27368279729773565, -0.16671895365667977, -0.024201674745892313, 0, -0.03491593759369932, -0.30020495946842307, -0.047337970695079994, -0.0340772626722056, 0.13336352676638902, -0.33902091860643185, -0.36865758739144094, -0.40840071677799167, 0.159631757428039, -0.2215244416516259, 0.12231879371384816, 0.3002752192314544, -0.19272153706655978, 0.10526089930725652, 0.20108572944325148, -0.10821525569745011, -0.2668814011072695, 0.30465701281815794, -0.06202417386369325, 0.22611713959154076, -0.02738138469110479, 0.06300686199862603, 0.07499295875982075, 0.038798418327300375, 0.04679495800751869, 0.019056387178267756, 0.21641553318876638], b: [0.2080768452866238, 0.5230130241461083, 0.09054630653356746, -0.9365705008910924, 0.3532087855775399, -0.23827446065274693], keys: ["nps", "logEquivBpm", "cutSizeNorm", "gridRatio", "rhythmSteady", "chordMean", "largeChordRatio", "multiRatio", "singleRatio", "jackRowRatio", "overlapDegree", "jackSpeedBpm", "jackHitRatio", "heldJackRatio", "jackChordPerRow", "jackRunBpm", "jackRowMatchRatio", "longLnRatio", "tailChordMean", "tailFreeRatio", "tailHoldAdjWeight", "shortLnBodyRatio", "invHoleFrac", "offGridRatio", "techJackScore", "cutFreeRatio", "logCutDemand", "anchorRate", "trillRate", "altHandRate", "rollRate", "offBeatRatio", "graceRate", "lnWeightRatio", "lockRatio", "heldCoverage", "lnAreaRatio", "tailRate", "tailIndependence", "tailScatter", "shortLnRatio", "invGapScore", "lnHeadChordMean", "lnHeadRate", "tailSingleRatio", "vibroFraction", "vibroWidth", "wideSpreadRatio", "segIvLogStd", "segRhythmChangeRate", "chordOverlapRatio", "chordOverlapJaccard", "maxLockRun", "avgOverlapSize", "chord2Ratio", "weightedNps"] }, version: 1 };
+
+  // src/classify/pipeline.ts
+  var MODEL = model_generated_default;
+  function modelScores(fam, f, extras, cutDemandRef) {
+    if(fam==="ln"&&extras.__spmLnAdapter)return extras.__spmLnAdapter;
+    const m = MODEL[fam];
+    const vec = buildVector(f, extras, cutDemandRef);
+    const x = VEC_KEYS.map((k) => vec[k]);
+    const D = m.mean.length;
+    const K = m.classes.length;
+    const out = {};
+    let max = -Infinity;
+    const z = new Float64Array(K);
+    for (let k = 0; k < K; k++) {
+      let acc = m.b[k];
+      for (let j = 0; j < D; j++) acc += m.W[k * D + j] * (x[j] - m.mean[j]) / m.std[j];
+      z[k] = acc;
+      if (acc > max) max = acc;
+    }
+    let sum = 0;
+    for (let k = 0; k < K; k++) {
+      z[k] = Math.exp(z[k] - max);
+      sum += z[k];
+    }
+    for (let k = 0; k < K; k++) out[m.classes[k]] = z[k] / sum;
+    return out;
+  }
+  function classifySegments(cm, opts = {}) {
+    const out = [];
+    const lnDom = opts.lnDominantRatio ?? CONFIG.lnDominantRatio;
+    const mapMeds = computeMapMedians(cm.windows);
+    const segF = cm.rawSegs.map((s, i) => cm.extras[i].rowCount ? medianWindowFeatures(cm.windows, s.windowRange[0], s.windowRange[1], mapMeds) : null);
+    const npsAll = segF.filter((f) => f !== null).map((f) => f.nps).sort((a, b) => a - b);
+    const mapNps = npsAll.length ? npsAll[Math.floor(npsAll.length / 2)] : 0;
+    for (let i = 0; i < cm.rawSegs.length; i++) {
+      const s = cm.rawSegs[i];
+      if (s.family0 === "break" || cm.extras[i].rowCount === 0) {
+        out.push({ start: s.start, end: s.end, tag: "break", confidence: 1, family: "break" });
+        continue;
+      }
+      const f = segF[i];
+      const ex = cm.extras[i];
+      const lowStakes = s.end - s.start >= 2500 && f.nps < mapNps && (f.nps < 18.5 && ex.segIvLogStd > 0.41 || f.chordMean < 1.9 && ex.vibroFraction > 0.3 && ex.segRhythmChangeRate < 0.1 || f.nps < 22.5 && ex.segIvLogStd > 0.25 && ex.vibroFraction < 0.45 && f.lnWeightRatio < 0.5);
+      if (lowStakes) {
+        out.push({ start: s.start, end: s.end, tag: "break", confidence: 1, family: "break" });
+        continue;
+      }
+      const extras = cm.extras[i];
+      const lnDominant = f.lnWeightRatio >= lnDom || f.lockRatio >= 0.5 && f.heldCoverage >= 0.15 && f.lnWeightRatio >= 0.2;
+      let tag;
+      let secondary;
+      let confidence;
+      let scores;
+      const scorer = opts.scorer ?? "model";
+      void scorer;
+      if (lnDominant) {
+        const rule = scoreLn({ f, extras, params: opts.lnParams });
+        if (scorer === "rules") scores = rule;
+        else {
+          const mdl = modelScores("ln", f, extras, cm.cutDemandRef);
+          scores = blendScores(mdl, rule, scorer);
+        }
+      } else {
+        const rule = scoreRc({ f, extras, cutDemandRef: cm.cutDemandRef, params: opts.rcParams });
+        if (scorer === "rules") scores = rule;
+        else {
+          const mdl = modelScores("rc", f, extras, cm.cutDemandRef);
+          scores = blendScores(mdl, rule, scorer);
+        }
+      }
+      const ranked = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+      tag = ranked[0][0];
+      confidence = ranked[0][1];
+      const demote = opts.wildcardDemote ?? 0.3;
+      if ((tag === "wildcard" || tag === "ln wildcard") && ranked.length > 1) {
+        for (const r of ranked.slice(1)) {
+          if (r[0] !== "wildcard" && r[0] !== "ln wildcard" && r[1] > demote) {
+            tag = r[0];
+            confidence = r[1];
+            break;
+          }
+        }
+      }
+      const margin = opts.secondaryMargin ?? CONFIG.secondaryMargin;
+      if (ranked.length > 1 && ranked[1][1] >= ranked[0][1] * margin && ranked[1][1] > 0.3) {
+        secondary = ranked[1][0];
+      }
+      out.push({
+        start: s.start,
+        end: s.end,
+        tag,
+        secondary,
+        equivBpm: equivBpmFor(tag, f, extras),
+        confidence: Math.min(1, confidence),
+        family: lnDominant ? "ln" : "rc",
+        scores
+      });
+    }
+    const medians = out.map((_, i) => segF[i] ?? medianWindowFeatures(cm.windows, cm.rawSegs[i].windowRange[0], cm.rawSegs[i].windowRange[1], mapMeds));
+    const diffs = out.map((seg, i) => {
+      if (seg.family === "break") return Infinity;
+      return medians[i].nps * (0.5 + medians[i].chordMean / 3) * (0.6 + medians[i].jackSpeedBpm / 150);
+    });
+    const finite = diffs.filter((d) => Number.isFinite(d)).sort((a, b) => a - b);
+    const p15 = finite.length ? finite[Math.floor(finite.length * 0.15)] : Infinity;
+    const allNps = medians.map((m) => m.nps).sort((a, b) => a - b);
+    const medNps = allNps[Math.floor(allNps.length / 2)] ?? 0;
+    for (let i = 0; i < out.length; i++) {
+      const seg = out[i];
+      if (seg.family === "break") continue;
+      const dur = seg.end - seg.start;
+      const easyAmbiguous = seg.confidence < 0.5 && diffs[i] <= Math.max(p15, 1) && (medians[i].nps ?? 0) < mapNps;
+      const shortSparse = dur < 2e4 && medians[i].nps > 0 && medians[i].nps < medNps * 0.4 && medians[i].nps < 4;
+      if (easyAmbiguous || shortSparse) {
+        seg.tag = "break";
+        seg.secondary = void 0;
+        seg.family = "break";
+        seg.equivBpm = void 0;
+      }
+    }
+    return out;
+  }
+  function blendScores(mdl, rule, mode) {
+    const out = {};
+    const keys = /* @__PURE__ */ new Set([...Object.keys(mdl), ...Object.keys(rule)]);
+    for (const k of keys) {
+      if (k === "vibro") {
+        out[k] = Math.min(1, (rule[k] ?? 0) * 2);
+        continue;
+      }
+      if (k === "wildcard" || k === "ln wildcard") {
+        out[k] = (rule[k] ?? 0) * 0.6;
+        continue;
+      }
+      if (mode === "model") out[k] = (mdl[k] ?? 0) * 1.4;
+      else out[k] = 0.5 * ((mdl[k] ?? 0) + (rule[k] ?? 0));
+    }
+    return out;
+  }
+  function equivBpmFor(tag, f, ex) {
+    if (tag === "chordjack" || tag === "minijack") {
+      if (ex && ex.chordGapMed > 0) {
+        if (ex.chordGapCv <= 0.6) return Math.round(15e3 / ex.chordGapMed);
+        return void 0;
+      }
+      return f.jackSpeedBpm > 0 ? Math.round(f.jackSpeedBpm) : void 0;
+    }
+    if (tag === "dense chordstream" || tag === "fast chordstream" || tag === "speed" || tag === "tech" || tag === "wildcard" || tag === "coordination" || tag === "density") {
+      return f.equivBpm > 0 ? Math.round(f.equivBpm) : void 0;
+    }
+    return void 0;
+  }
+
+  // src/classify/smooth.ts
+  function smoothSegments(segments) {
+    const minDisplay = CONFIG.minSegLenMs * 0.6;
+    const out = [];
+    for (const seg of segments) {
+      const last = out[out.length - 1];
+      if (last && last.tag === seg.tag && last.secondary === seg.secondary && last.family === seg.family && seg.end - seg.start < minDisplay) {
+        last.end = seg.end;
+        continue;
+      }
+      out.push(seg);
+    }
+    const out2 = [];
+    for (let i = 0; i < out.length; i++) {
+      const seg = out[i];
+      const prev = out2[out2.length - 1];
+      const next = out[i + 1];
+      if (seg.family === "break" && seg.end - seg.start < minDisplay && prev && next && next.tag === prev.tag) {
+        prev.end = seg.end;
+        continue;
+      }
+      out2.push(seg);
+    }
+    return out2;
+  }
+
+  // src/aggregate/overall.ts
+  var NON_AGGR = /* @__PURE__ */ new Set([
+    "break",
+    "rc mix",
+    "ln mix",
+    "hybrid",
+    "wildcard",
+    "ln wildcard"
+  ]);
+  function aggregateOverall(segments, params = {}) {
+    const dominantShare = params.dominantShare ?? CONFIG.overallDominantShare;
+    const mixShare = params.mixShare ?? CONFIG.overallMixShare;
+    const secondRel = params.secondRel ?? 0.75;
+    const weights = {};
+    let lnW = 0;
+    let rcW = 0;
+    const famTags = { rc: /* @__PURE__ */ new Set(), ln: /* @__PURE__ */ new Set() };
+    let total = 0;
+    for (const seg of segments) {
+      if (seg.family === "break") continue;
+      const durS = Math.max(0.5, (seg.end - seg.start) / 1e3);
+      if (seg.family === "rc") {
+        rcW += durS;
+        if (!NON_AGGR.has(seg.tag)) famTags.rc.add(seg.tag);
+      } else if (seg.family === "ln") {
+        lnW += durS;
+        if (!NON_AGGR.has(seg.tag)) famTags.ln.add(seg.tag);
+      }
+      if (NON_AGGR.has(seg.tag)) continue;
+      total += durS;
+      const t = seg.tag;
+      weights[t] = (weights[t] ?? 0) + durS * Math.max(0.4, seg.confidence);
+    }
+    if (total <= 0) return { tags: [], sort: "rc", weights };
+    const entries = Object.entries(weights).sort((a, b) => b[1] - a[1]);
+    const topShare = entries.length ? entries[0][1] / total : 0;
+    const shares = entries.map(([t, w]) => [t, w / total]);
+    const significant = shares.filter(([, s]) => s >= mixShare);
+    const lnRatioW = lnW / Math.max(1, lnW + rcW);
+    const sort = lnRatioW < 0.18 ? "rc" : lnRatioW > 0.68 ? "ln" : "hb";
+    let tags;
+    const allFamCount = famTags.rc.size + famTags.ln.size;
+    if (significant.length >= 3 && allFamCount >= 3 && topShare < dominantShare) {
+      if (sort === "rc") tags = ["rc mix"];
+      else if (sort === "ln") tags = ["ln mix"];
+      else tags = ["hybrid"];
+    } else if (entries.length >= 2 && shares[1][1] >= secondRel * topShare && topShare < 0.55) {
+      tags = [entries[0][0], entries[1][0]];
+    } else if (entries.length) {
+      tags = [entries[0][0]];
+    } else {
+      tags = [];
+    }
+    return { tags, sort, weights };
+  }
+
+  // src/index.ts
+  function rescale(map, rate) {
+    return {
+      ...map,
+      notes: map.notes.map((n) => ({
+        t: Math.round(n.t / rate),
+        col: n.col,
+        lnEnd: n.lnEnd != null ? Math.round(n.lnEnd / rate) : null
+      })),
+      timingPoints: map.timingPoints.map((tp) => ({ t: Math.round(tp.t / rate), beatLength: tp.beatLength / rate })),
+      breaks: map.breaks.map(([a, b]) => [Math.round(a / rate), Math.round(b / rate)]),
+      firstNote: Math.round(map.firstNote / rate),
+      lastNote: Math.round(map.lastNote / rate)
+    };
+  }
+  function buildCachedMap(osuText, opts = {}) {
+    let map = parseOsu(osuText);
+    const rate = opts.speedRate ?? 1;
+    if (rate !== 1) map = rescale(map, rate);
+    const rows = buildRows(map);
+    attachTails(map, rows);
+    const cols = buildColumnData(map);
+    const held = computeHeld(map, rows);
+    const ctx = buildFeatureContext(map, rows, held, cols);
+    const windows = computeAllWindows(ctx);
+    const norm = normalizeWindows(windows);
+    const activeCut = windows.map((w) => w.cutDemand).filter((v) => v > 0).sort((a, b) => a - b);
+    const cutDemandRef = activeCut.length ? activeCut[Math.floor(activeCut.length * 0.8)] : 1;
+    const rawSegs0 = segmentMap({ map, rows, windows, norm });
+    const marks = markBreaks(map, rows, rawSegs0);
+    const rawSegs = rawSegs0.map((s, i) => ({
+      start: s.start,
+      end: s.end,
+      windowRange: s.windowRange,
+      family0: marks[i].family
+    }));
+    const extras = rawSegs.map((s) => computeSegmentExtras(ctx, s.start, s.end));
+    return { cutDemandRef, rawSegs, extras, windows };
+  }
+  function analyzeMap(osuText, opts = {}) {
+    let map = parseOsu(osuText);
+    const rate = opts.speedRate ?? 1;
+    if (rate !== 1) map = rescale(map, rate);
+    const cm = buildCachedMap(osuText, opts);
+    const segments = smoothSegments(classifySegments(cm, { scorer: "model" }));
+    const overall = aggregateOverall(segments);
+    return { map, segments, overall, debug: { windows: cm.windows, norm: void 0, ctx: void 0 } };
+  }
+  function extractIntermediate(osuText, opts = {}) {
+    const res = analyzeMap(osuText, opts);
+    const dbg = res.debug;
+    return { map: res.map, windows: dbg.windows, segments: res.segments, overall: res.overall };
+  }
+  Object.assign(index_exports,{lab:{CONFIG,RC_DEFAULTS,LN_DEFAULTS,VEC_KEYS,MEDIAN_KEYS,MODEL,parseOsu,rescale,buildRows,attachTails,buildColumnData,computeHeld,buildFeatureContext,computeWindowFeatures,computeAllWindows,normalizeWindows,segmentMap,markBreaks,computeSegmentExtras,computeMapMedians,medianWindowFeatures,buildVector,modelScores,scoreRc,scoreLn,blendScores,classifySegments,smoothSegments,aggregateOverall}});
+  return __toCommonJS(index_exports);
+})();
+
+if (typeof module !== "undefined") module.exports = TagClassifier;
+
+})(module,module.exports);
+ const api=module.exports;Object.assign(api.lab.CONFIG,config);return api;
 }
-module.exports={decode,segmentsFrom,family};
+function context(lab,text,rate=1){
+ let map=lab.parseOsu(text);if(rate!==1)map=lab.rescale(map,rate);
+ const rows=lab.buildRows(map);lab.attachTails(map,rows);
+ const cols=lab.buildColumnData(map),held=lab.computeHeld(map,rows),ctx=lab.buildFeatureContext(map,rows,held,cols);
+ const windows=lab.computeAllWindows(ctx);return {map,ctx,rows,windows};
+}
+function inspectPrepared(api,{map,ctx,rows,windows},{intervals}={}){
+ const lab=api.lab;
+ const norm=lab.normalizeWindows(windows);
+ const activeCut=windows.map(w=>w.cutDemand).filter(v=>v>0).sort((a,b)=>a-b);
+ const cutDemandRef=activeCut.length?activeCut[Math.floor(activeCut.length*.8)]:1;
+ const raw=lab.segmentMap({map,rows,windows,norm});
+ const autoMarks=lab.markBreaks(map,rows,raw);
+ const rawSegs=raw.map((s,i)=>({...s,family0:autoMarks[i].family}));
+ const cm={windows,cutDemandRef,rawSegs,extras:rawSegs.map(s=>lab.computeSegmentExtras(ctx,s.start,s.end))};
+ const segments=intervals?intervals.map(s=>({start:s.start,end:s.end,
+  windowRange:s.windowRange??[Math.max(0,Math.floor((s.start-map.firstNote)/lab.CONFIG.winStepMs)),
+    Math.min(windows.length,Math.max(1,Math.ceil((s.end-map.firstNote)/lab.CONFIG.winStepMs)))]})):cm.rawSegs;
+ const marks=lab.markBreaks(map,rows,segments),mapMedians=lab.computeMapMedians(windows);
+ const rowsOut=segments.map((s,i)=>{
+  const extra=intervals?lab.computeSegmentExtras(ctx,s.start,s.end):cm.extras[i];
+  const f=lab.medianWindowFeatures(windows,s.windowRange[0],s.windowRange[1],mapMedians);
+  const vector=lab.buildVector(f,extra,cm.cutDemandRef);
+  return {...s,f,extra,vector:lab.VEC_KEYS.map(k=>vector[k]),
+   modelRc:lab.modelScores('rc',f,extra,cm.cutDemandRef),modelLn:lab.modelScores('ln',f,extra,cm.cutDemandRef),
+   ruleRc:lab.scoreRc({f,extras:extra,cutDemandRef:cm.cutDemandRef}),ruleLn:lab.scoreLn({f,extras:extra}),
+   family0:marks[i].family};
+ });
+ const cache={...cm,windows,rawSegs:segments.map((s,i)=>({...s,family0:marks[i].family})),extras:rowsOut.map(r=>r.extra)};
+ const classified=lab.classifySegments(cache,{scorer:'model'});
+ return {map,ctx,cache,cutDemandRef:cm.cutDemandRef,windows,segments:rowsOut,classified,
+   smoothed:lab.smoothSegments(classified.map(s=>({...s}))),featureKeys:lab.VEC_KEYS};
+}
+module.exports={loadLab,context,inspectPrepared};
+},
+function(module,exports,load){
+'use strict';
+
+/** Milliseconds after rate conversion; tail intervals are half-open [head, tail). */
+function parseOsu(text, { speedRate = 1 } = {}) {
+  if (!Number.isFinite(speedRate) || speedRate <= 0) throw new RangeError('speedRate must be finite and positive');
+  let section = '', mode = null, keys = null;
+  const rawNotes = [], timingPoints = [], breaks = [], meta = {}, warnings=[];
+  for (const raw of text.replace(/^\uFEFF/, '').split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line || line.startsWith('//')) continue;
+    if (line.startsWith('[')) { section = line.slice(1, -1).toLowerCase(); continue; }
+    if (['general', 'difficulty', 'metadata'].includes(section)) {
+      const at = line.indexOf(':'); if (at < 0) continue;
+      const k = line.slice(0, at).trim(), v = line.slice(at + 1).trim();
+      if (k === 'Mode') mode = Number(v);
+      if (k === 'CircleSize') keys = Number(v);
+      if (section === 'metadata') meta[k] = v;
+      if (k === 'OverallDifficulty') meta.od = Number(v);
+    } else if (section === 'timingpoints') {
+      const p = line.split(','), t = Number(p[0]), beatLength = Number(p[1]);
+      if(!Number.isFinite(t)||!Number.isFinite(beatLength)){warnings.push('IgnoredNonfiniteTimingPoint');continue;}
+      if (beatLength > 0 && (p[6] === undefined || p[6].trim() !== '0'))
+        timingPoints.push({ t: t / speedRate, beatLength: beatLength / speedRate });
+    } else if (section === 'events') {
+      const p = line.split(/\s*,\s*|\s+/);
+      if (p[0] === '2' || p[0] === 'Break') {
+        const a = Number(p[1]), b = Number(p[2]);
+        if (Number.isFinite(a) && b > a) breaks.push([a / speedRate, b / speedRate]);
+      }
+    } else if (section === 'hitobjects') rawNotes.push(line.split(','));
+  }
+  if (mode !== 3) throw new Error('NotMania');
+  if (![4, 6, 7].includes(keys)) throw new Error('UnsupportedKeys: expected 4, 6 or 7');
+  const notes = [];
+  for (const p of rawNotes) {
+    const x = Number(p[0]), t = Number(p[2]), type = Number(p[3]);
+    if (p.length < 5 || !Number.isFinite(x) || !Number.isFinite(t) || !Number.isInteger(type))
+      throw new Error('InvalidHitObject');
+    if (!(type & 129)) continue;
+    const end = type & 128 ? Number((p[5] ?? '').split(':')[0]) : null;
+    if (end !== null && (!Number.isFinite(end) || end < t)) throw new Error('InvalidHoldTail');
+    notes.push({ t: t / speedRate, col: Math.min(keys - 1, Math.max(0, Math.floor(x * keys / 512))),
+      lnEnd: end !== null && end > t ? end / speedRate : null });
+  }
+  notes.sort((a, b) => a.t - b.t || a.col - b.col);
+  if (!notes.length) throw new Error('EmptyBeatmap');
+  Object.assign(meta,{title:meta.Title,artist:meta.Artist,version:meta.Version,creator:meta.Creator});
+  timingPoints.sort((a, b) => a.t - b.t);
+  // Duplicate objects on one key at the same time are one physical action.
+  const unique = [];
+  for (const n of notes) {
+    const last = unique.at(-1);
+    if (last && last.t === n.t && last.col === n.col) {
+      const end = Math.max(last.lnEnd ?? n.t, n.lnEnd ?? n.t); last.lnEnd = end > n.t ? end : null;
+    }
+    else unique.push(n);
+  }
+  return { keys, notes: unique, timingPoints, breaks, meta, warnings,
+    firstNote: unique[0].t, lastNote: unique.reduce((end,n)=>Math.max(end,n.lnEnd??n.t),unique[0].t) };
+}
+
+function popcount(mask) { let n = 0; while (mask) { mask &= mask - 1; n++; } return n; }
+function lowerBound(a, t, key = x => x) {
+  let lo = 0, hi = a.length;
+  while (lo < hi) { const mid = (lo + hi) >>> 1; if (key(a[mid]) < t) lo = mid + 1; else hi = mid; }
+  return lo;
+}
+function prepare(map, rowMergeMs = 10) {
+  const rows = [], cols = Array.from({ length: map.keys }, () => []), tails = [];
+  for (const n of map.notes) {
+    cols[n.col].push(n);
+    let r = rows.at(-1);
+    if (!r || n.t - r.t > rowMergeMs) rows.push(r = { t: n.t, mask: 0, lnMask: 0 });
+    r.mask |= 1 << n.col; if (n.lnEnd !== null) { r.lnMask |= 1 << n.col; tails.push({ t: n.lnEnd, col: n.col, start: n.t }); }
+  }
+  // Union overlapping holds per column: occupancy never exceeds one finger per key.
+  const holds = cols.map(notes => {
+    const out = [];
+    for (const n of notes) if (n.lnEnd !== null) {
+      const last = out.at(-1);
+      if (last && n.t < last[1]) last[1] = Math.max(last[1], n.lnEnd);
+      else out.push([n.t, n.lnEnd]);
+    }
+    return out;
+  });
+  tails.sort((a, b) => a.t - b.t || a.col - b.col);
+  return { map, rows, cols, tails, holds, rowMergeMs };
+}
+module.exports = { parseOsu, prepare, popcount, lowerBound };
+
+},
+function(module,exports,load){
+'use strict';
+const {lowerBound:lb}=load(3);
+const KEYS=['tailRatePerKey','headIsolation','sameFingerRecovery','tailAsynchrony','tailTimingVariability',
+ 'heldOtherAtTail','sameHandOrder','releaseChordFraction','independentHeldRelease'];
+const mean=a=>a.length?a.reduce((s,x)=>s+x,0)/a.length:0;
+const sd=a=>{const m=mean(a);return Math.sqrt(mean(a.map(x=>(x-m)**2)));};
+const ratio=(gap,scale)=>Number.isFinite(gap)?gap/(gap+scale):1;
+
+function releaseContext(ctx){
+ // Timing-normalized geometry uses the active quarter-beat. Without timing
+ // points use a scale inferred from actual event gaps, not a new fixed-ms gate.
+ const times=[...new Set([...ctx.map.notes.map(n=>n.t),...ctx.tails.map(n=>n.t)])].sort((a,b)=>a-b);
+ const gaps=times.slice(1).map((t,i)=>t-times[i]).sort((a,b)=>a-b);
+ return {...ctx,releaseFallbackScale:gaps[Math.floor((gaps.length-1)/2)]||1};
+}
+function scaleAt(ctx,t){
+ const points=ctx.map.timingPoints;
+ const index=Math.max(0,lb(points,t+1e-8,p=>p.t)-1);
+ return points.length?points[index].beatLength/4:ctx.releaseFallbackScale;
+}
+function releaseGeometry(ctx,start,end){
+ const K=ctx.map.keys,tails=ctx.tails,heads=ctx.map.notes;
+ const lo=lb(tails,start,n=>n.t),hi=lb(tails,end,n=>n.t),n=hi-lo;
+ if(!n)return {values:KEYS.map(()=>0),metrics:Object.fromEntries(KEYS.map(k=>[k,0])),tails:0};
+ const isolation=[],recovery=[],asynchrony=[],held=[],interaction=[],rhythm=[],width=[];let order=0;
+ const hand=c=>K===7&&c===3?-1:c<Math.floor(K/2)?0:1;
+ for(let j=lo;j<hi;j++){
+  const tail=tails[j],scale=scaleAt(ctx,tail.t),i=lb(heads,tail.t,n=>n.t);
+  const before=i>0?tail.t-heads[i-1].t:Infinity,after=i<heads.length?heads[i].t-tail.t:Infinity;
+  const independent=ratio(Math.min(before,after),scale);isolation.push(independent);
+  const same=ctx.cols[tail.col],next=same[lb(same,tail.t,n=>n.t)];
+  recovery.push(ratio(next?next.t-tail.t:Infinity,scale));
+  const previous=j?tail.t-tails[j-1].t:Infinity,following=j+1<tails.length?tails[j+1].t-tail.t:Infinity;
+  asynchrony.push(ratio(Math.min(previous,following),scale));
+  let other=0;
+  for(let col=0;col<K;col++){
+   if(col===tail.col)continue;
+   const holds=ctx.holds[col],last=lb(holds,tail.t,h=>h[0])-1;
+   // Immediately BEFORE release: new simultaneous heads do not count, other
+   // simultaneous tails are still held. No epsilon-time magic is needed.
+   if(last>=0&&holds[last][1]>=tail.t)other++;
+  }
+  const load=other/Math.max(1,K-1);held.push(load);interaction.push(load*independent);
+  const a=lb(tails,tail.t,n=>n.t),b=lb(tails,tail.t+1e-8,n=>n.t);width.push((b-a)/K);
+  if(j>lo&&tail.t>tails[j-1].t)rhythm.push(Math.log1p((tail.t-tails[j-1].t)/scale));
+  if(j>0&&j+1<tails.length){
+   const a=tails[j-1],b=tail,c=tails[j+1],h=hand(b.col);
+   // All three timestamp groups must be singletons. Strict a.t < b.t < c.t
+   // alone is insufficient: a/c can be the last/first member of a chord,
+   // whose arbitrary column ordering reverses under a physical mirror.
+   const uniqueEndpoints=(j<2||tails[j-2].t<a.t)&&(j+2>=tails.length||c.t<tails[j+2].t);
+   if(uniqueEndpoints&&a.t<b.t&&b.t<c.t&&h>=0&&hand(a.col)===h&&hand(c.col)===h&&new Set([a.col,b.col,c.col]).size===3){
+    const distance=Math.abs(a.col-b.col)+Math.abs(b.col-c.col),span=Math.max(a.col,b.col,c.col)-Math.min(a.col,b.col,c.col);
+    order+=(distance-span)/Math.max(1,Math.floor(K/2)-1)*Math.exp(-(c.t-a.t)/(3*scale));
+   }
+  }
+ }
+ const values=[n/((end-start)/1000)/K,mean(isolation),mean(recovery),mean(asynchrony),sd(rhythm),
+  mean(held),order/n,mean(width),mean(interaction)];
+ if(values.some(v=>!Number.isFinite(v)))throw Error('Nonfinite release geometry');
+ return {values,metrics:Object.fromEntries(KEYS.map((k,i)=>[k,values[i]])),tails:n};
+}
+module.exports={KEYS,releaseContext,releaseGeometry};
+
+},
+function(module,exports,load){
+'use strict';
+// Research consumer of the complete native segmenter + expert/gating pipeline.
+// This is not another flat classifier and does not alter the archived engine.
+const {loadLab,context,inspectPrepared}=load(2);
+const patches=load(6);
+const CLASSES=['chordjack','minijack','dense chordstream','fast chordstream','speed','tech','vibro','anchor',
+ 'coordination','density','inverse','release','technical','wildcard','ln wildcard','break'];
+const BOUNDARIES=[1500,3000,6000].flatMap(minSegLenMs=>[.025,.05,.1].map(segProminenceAbs=>({minSegLenMs,segProminenceAbs})));
+const HEADS=[.35,.45,.55].flatMap(lnDominantRatio=>['model','blend'].map(scorer=>({lnDominantRatio,scorer})));
+const logical=patches.logical,neutral=logical.concat(patches.neutralHands,patches.coverage);
+const TREATMENTS={original:[],area:[patches.area],adjacency:[patches.adjacency],heldOrder:[patches.heldOrder],
+ phase:[patches.phase],sustaining:[patches.sustaining],neutralHands:[patches.neutralHands],coverage:[patches.coverage],
+ transformedScale:[patches.transformedScale],logical,logical_neutral:neutral};
+for(const ms of [20,40,80]){
+ TREATMENTS['release_'+ms]=[patches.releaseAt(ms)];
+ TREATMENTS['logical_release_'+ms]=neutral.concat(patches.releaseAt(ms));
+ TREATMENTS['full_'+ms]=neutral.concat(patches.releaseAt(ms),patches.transformedScale);
+}
+const SPEC={id:'native-label-free-r1',classes:CLASSES,boundaries:BOUNDARIES,heads:HEADS,
+ fixed:{winMs:1000,winStepMs:250,segProminenceRel:.35},
+ scoreSemantics:'normalized within-family decision support, not calibrated correctness; rejected wildcard mass is conditioned away',
+ treatmentPatches:Object.fromEntries(Object.entries(TREATMENTS).map(([k,ps])=>[k,ps.map(p=>p.id)]))};
+
+function decisionSupport(segment){
+ if(segment.family==='break')return CLASSES.map(k=>k==='break'?1:0);
+ const values=CLASSES.map(k=>Math.max(0,segment.scores?.[k]||0));
+ let top=values.indexOf(Math.max(...values));
+ // The native decision rejects a leading wildcard if a concrete class clears
+ // its demotion threshold. Its support is conditional on that explicit gate.
+ if(['wildcard','ln wildcard'].includes(CLASSES[top])&&!['wildcard','ln wildcard'].includes(segment.tag)){
+  values[CLASSES.indexOf('wildcard')]=0;values[CLASSES.indexOf('ln wildcard')]=0;
+ }
+ const sum=values.reduce((a,b)=>a+b,0);
+ if(!(sum>0))throw Error('Native decision has no finite class support');
+ const p=values.map(v=>v/sum);top=p.indexOf(Math.max(...p));
+ if(CLASSES[top]!==segment.tag)throw Error('Decision/support mismatch: '+segment.tag+' versus '+CLASSES[top]);
+ return p;
+}
+function compact(segment,raw,burdens){
+ let sum=0,duration=0;
+ raw.forEach((s,i)=>{const d=Math.max(0,Math.min(s.end,segment.end)-Math.max(s.start,segment.start));sum+=d*burdens[i];duration+=d;});
+ const probability=decisionSupport(segment);
+ return {start:segment.start,end:segment.end,tag:segment.tag,family:segment.family,confidence:segment.confidence,
+  probability,burden:duration?sum/duration:0};
+}
+function extractNative(api,prepared){
+ const partitions=[];
+ for(const boundary of BOUNDARIES){
+  Object.assign(api.lab.CONFIG,boundary);
+  const view=inspectPrepared(api,prepared),burdens=view.segments.map(s=>s.f.nps*(.5+s.f.chordMean/3)*(.6+s.f.jackSpeedBpm/150));
+  const cases=HEADS.map(head=>{
+   const classified=api.lab.classifySegments(view.cache,head);
+   const smoothed=api.lab.smoothSegments(structuredClone(classified));
+   return {head,raw:classified.map(s=>compact(s,classified,burdens)),legacy:smoothed.map(s=>compact(s,classified,burdens))};
+  });
+  partitions.push({boundary,cases});
+ }
+ return partitions;
+}
+function nativeApi(treatment){
+ if(!Object.hasOwn(TREATMENTS,treatment))throw Error('Unknown native treatment '+treatment);
+ return loadLab({patches:TREATMENTS[treatment]});
+}
+module.exports={CLASSES,BOUNDARIES,HEADS,TREATMENTS,SPEC,decisionSupport,extractNative,nativeApi};
+
+},
+function(module,exports,load){
+'use strict';
+// Explicit, independently selectable research treatments. Never edit the archive.
+function patch(id,description,apply){return {id,description,apply};}
+const area=patch('area','Integrate LN union per lane once, clipped to the window',(s,r)=>{
+ const from='        const hs = ctx.lnHeads;\n        const ts = ctx.lnTails;';
+ const to='        f.lnAreaRatio = area / ((t1 - t0) * K);';
+ const a=s.indexOf(from),b=s.indexOf(to,a);if(a<0||b<0)throw Error('area anchors missing');
+ const old=s.slice(a,b+to.length);
+ return r(s,old,`        const lanes = Array.from({length:K},()=>[]);
+        const aLo = lowerBoundObj(ctx.lnHeads,t0-ctx.lnMaxDur,h=>h.t);
+        const aHi = lowerBoundObj(ctx.lnHeads,t1,h=>h.t);
+        for(let i=aLo;i<aHi;i++){
+          const h=ctx.lnHeads[i],start=Math.max(t0,h.t),end=Math.min(t1,h.t+h.dur);
+          if(end>start)lanes[h.col].push([start,end]);
+        }
+        let area=0;
+        for(const intervals of lanes){
+          let end=-Infinity;
+          for(const [a,b] of intervals){if(b>end){area+=b-Math.max(a,end);end=b;}}
+        }
+        f.lnAreaRatio = area / ((t1 - t0) * K);`);
+});
+const adjacency=patch('head_adjacency','Head-to-head row statistics skip release-only rows',(s,r)=>r(s,
+ `      if (i > 0 && rows[i - 1].hits > 0) {\n        const prev = rows[i - 1];`,
+ `      let previous=i-1;while(previous>=0&&rows[previous].hits===0)previous--;
+      if (previous >= 0) {
+        const prev = rows[previous];`));
+const heldOrder=patch('held_order','Half-open holds: process tails before heads at identical time',(s,r)=>r(s,
+ '    events.sort((a, b) => a.t - b.t || a.type - b.type);',
+ '    events.sort((a, b) => a.t - b.t || b.type - a.type);'));
+const phase=patch('timing_phase','Use each active uninherited timing point as beat phase origin',(s,r)=>r(s,
+ `          const q = beatLengthAt(ctx.map.timingPoints, s.t) / 4;\n          let d = (s.t - anchor) % q;`,
+ `          const points=ctx.map.timingPoints;
+          const pi=Math.max(0,upperBoundObj(points,s.t,p=>p.t)-1);
+          const q = points[pi].beatLength / 4;
+          let d = (s.t - points[pi].t) % q;`));
+// A replacement feature, not a unique correction of the ambiguous old name.
+// Every actual head event matters, regardless of lane or input ordering; a
+// release >40 ms from its nearest head is temporally independent.
+const releaseIsolation=patch('release_isolation','Release independence = fraction >40 ms from nearest head',(s,r)=>r(s,
+ `          const ev = ctx.allEvents;
+          const ei = lowerBoundObj(ev, tails[i].t, (e) => e.t);
+          if (ei < ev.length && ev[ei].t - tails[i].t < 3e3) {
+            if (ev[ei].col !== tails[i].col) indep++;
+          }`,
+ `          const ns=ctx.map.notes,ei=lowerBoundObj(ns,tails[i].t,n=>n.t);
+          const before=ei>0?tails[i].t-ns[ei-1].t:Infinity;
+          const after=ei<ns.length?ns[ei].t-tails[i].t:Infinity;
+          if(Math.min(before,after)>40)indep++;`));
+const sustaining=patch('sustaining','Compute hold occupancy and releases in windows without heads',(s,r)=>{
+ s=r(s,'    if (rowCount === 0) return f;',
+  '    // Sustain-only windows still carry occupancy and release evidence.');
+ return r(s,'      f.lockRatio /= rowCount;','      f.lockRatio /= Math.max(1,rowCount);');
+});
+const transformedScale=patch('transformed_scale','Normalize log-transformed signals by a quantile span in the SAME transformed domain',(s,r)=>{
+ const declaration='      const logTailed = key === "cutDemand" || key === "jackSpeedBpm" || key === "nps" || key === "tailRate";';
+ s=r(s,declaration,'');
+ return r(s,`      let scale = q(0.9) - q(0.1);
+      if (scale < 1e-6) scale = Math.max(Math.abs(med) * 0.5, 1e-6);`,
+ `${declaration}
+      const transform=x=>logTailed?Math.log1p(Math.max(0,x)/5):x;
+      let scale = transform(q(0.9)) - transform(q(0.1));
+      if (scale < 1e-6) scale = Math.max(Math.abs(transform(med)) * 0.5, 1e-6);`);
+});
+const weightedShares=patch('weighted_shares','Compute class shares with the SAME weighted-time numerator and denominator',(s,r)=>r(s,
+ '      total += durS;',
+ '      total += durS * Math.max(0.4, seg.confidence);'));
+const neutralHands=patch('neutral_hands','Hand alternation excludes neutral/tied rows and the flexible 7K centre',(s,r)=>{
+ s=r(s,'      const split2 = K <= 1 ? 1 : Math.ceil(K / 2);','      const split2 = Math.floor(K / 2);');
+ s=r(s,'        let col = -1, left = 0;','        let col = -1, left = 0, right = 0;');
+ s=r(s,'            if (c < split2) left++;','            if (c < split2) left++;\n            else if(c>=Math.ceil(K/2))right++;');
+ s=r(s,'hand: left * 2 >= r.hits ? 0 : 1','hand: left>right?0:right>left?1:-1');
+ s=r(s,'const cont = seq[i].hand !== seq[i - 1].hand && (i >= 2 ?',
+  'const cont = seq[i].hand>=0 && seq[i-1].hand>=0 && seq[i].hand !== seq[i - 1].hand && (i >= 2 ?');
+ return r(s,'run = i + 1 < seq.length && seq[i + 1].hand !== seq[i].hand ? 2 : 1;',
+  'run = i + 1 < seq.length && seq[i].hand>=0 && seq[i+1].hand>=0 && seq[i + 1].hand !== seq[i].hand ? 2 : 1;');
+});
+function releaseAt(ms){
+ if(![20,40,80].includes(ms))throw Error('Release scale must belong to the declared research grid');
+ return patch('release_isolation_'+ms,`Release isolation with ${ms} ms nearest-head tolerance`,(s,r)=>{
+  const applied=releaseIsolation.apply(s,r);
+  return ms===40?applied:r(applied,'if(Math.min(before,after)>40)indep++;',`if(Math.min(before,after)>${ms})indep++;`);
+ });
+}
+const coverage=patch('partition_coverage','Short boundary fragments remain assigned to a neighbouring native segment',(s,r)=>r(s,
+ '    for (let i = 1; i < out.length; i++) out[i].start = Math.max(out[i].start, out[i - 1].end);\n    return out;',
+ `    if(!out.length&&map.lastNote>map.firstNote){
+      out.push({start:map.firstNote,end:map.lastNote,windowRange:[0,windows.length]});
+    }
+    if(out.length){
+      out[0].start=map.firstNote;
+      for(let i=1;i<out.length;i++)out[i].start=out[i-1].end;
+      out[out.length-1].end=map.lastNote;
+    }
+    return out;`));
+module.exports={area,adjacency,heldOrder,phase,releaseIsolation,sustaining,
+ transformedScale,weightedShares,neutralHands,releaseAt,coverage,
+ logical:[area,adjacency,heldOrder,phase,sustaining]};
+
+},
+function(module,exports,load){
+'use strict';
+// Actual JS consumer used to cross-check the vectorized research evaluator.
+const {CLASSES}=load(5);
+const {aggregateEvidence,coalesceForDisplay,supportMetrics}=load(8);
+function selectNativeSegments(value,config){
+ const source=value.partitions[config.partition].cases[config.head];
+ const rows=source[config.smoothing==='legacy'?'legacy':'raw'];
+ const extraGate=config.extraGate??'all';
+ if(!['all','ln_protected','off'].includes(extraGate))throw Error('Unknown extra relative-burden gate treatment');
+ if(!config.burdenGate||extraGate==='off')return rows;
+ const active=rows.filter(s=>s.burden>0).map(s=>[s.burden,s.end-s.start]).sort((a,b)=>a[0]-b[0]);
+ const total=active.reduce((s,x)=>s+x[1],0);let time=0,reference=1;
+ for(const [burden,duration]of active){time+=duration;reference=burden;if(time>=.75*total)break;}
+ return rows.map(s=>s.family!=='break'&&!(extraGate==='ln_protected'&&s.family==='ln')&&s.burden/reference<config.burdenGate?
+  {...s,tag:'break',family:'break',confidence:1,probability:CLASSES.map(k=>k==='break'?1:0)}:s);
+}
+function evaluateCachedNative(value,config){
+ const rows=selectNativeSegments(value,config),options={...config,lnLow:config.familyThresholds[0],lnHigh:config.familyThresholds[1]};
+ const overall=aggregateEvidence(rows,options);
+ const segments=config.smoothing==='coherent'&&config.mode==='soft'?coalesceForDisplay(rows,options):rows.map(s=>({...s,metrics:supportMetrics(s.probability)}));
+ return {segments,overall};
+}
+module.exports={selectNativeSegments,evaluateCachedNative};
+
+},
+function(module,exports,load){
+'use strict';
+const {composition}=load(9);
+const {CLASSES}=load(5);
+const NON_AGGR=new Set(['break','wildcard','ln wildcard','rc mix','ln mix','hybrid']);
+const LN=new Set(['coordination','density','inverse','release','technical','ln wildcard']);
+const BREAK=CLASSES.indexOf('break');
+const defaults={mode:'soft',effortPower:0,confidencePower:0,dominantShare:.52,mixShare:.07,
+ secondRel:.75,twoTagMaxShare:.55,lnLow:.18,lnHigh:.68,minEvidence:.25,minimumDiversity:0};
+const settings=options=>({...defaults,...options,
+ excludeVibroFromMix:options.excludeVibroFromMix??(options.mode!=='legacy')});
+const atoms=segments=>segments.flatMap(s=>s.components?atoms(s.components):[s]);
+function supportMetrics(p){
+ const ranked=[...p].sort((a,b)=>b-a);
+ return {maximum:ranked[0],margin:ranked[0]-ranked[1],concentration:p.reduce((s,x)=>s+x*x,0),
+  entropy:-p.reduce((s,x)=>s+(x?x*Math.log(x):0),0)/Math.log(p.length)};
+}
+function evidence(segments,options={}){
+ const p=settings(options),rows=atoms(segments);
+ const active=rows.filter(s=>s.burden>0).map(s=>[s.burden,Math.max(0,s.end-s.start)]).sort((a,b)=>a[0]-b[0]);
+ const mass=active.reduce((s,x)=>s+x[1],0);let acc=0,reference=1;
+ for(const [value,time]of active){acc+=time;reference=value;if(acc>=.75*mass)break;}
+ return rows.map(s=>{
+  const duration=Math.max(0,s.end-s.start),effort=Math.max(1e-4,(s.burden||0)/reference)**p.effortPower;
+  const metrics=s.probability?supportMetrics(s.probability):null;
+  const concentration=p.mode==='soft'?metrics.concentration:Math.max(.4,s.confidence);
+  const base=(p.mode==='soft'?duration/1000:Math.max(.5,duration/1000))*effort;
+  // The native Break decision is an eligibility gate, not a source of tiny
+  // residual fine-class votes that a very long rest can accumulate.
+  return {...s,metrics,evidenceBase:base,evidenceWeight:p.mode==='soft'&&s.tag==='break'?0:base*concentration**p.confidencePower};
+ });
+}
+function aggregateEvidence(segments,options={}){
+ const p=settings(options),rows=evidence(segments,p),weights={};
+ if(!rows.length)return {tags:[],sort:'rc',weights,shares:{},diversity:0,distribution:CLASSES.map(()=>0),activeWeight:0};
+ let total=0,lnW=0,rcW=0,diversity=0,distribution=null;
+ const familyTags={rc:new Set(),ln:new Set()};
+ if(p.mode==='soft'){
+  const summary=composition(rows.map(s=>s.probability),rows.map(s=>s.evidenceWeight),{breakIndex:BREAK});
+  diversity=summary.diversity;distribution=CLASSES.map(()=>0);total=summary.activeWeight;
+  summary.indices.forEach((k,j)=>distribution[k]=summary.distribution[j]);
+  for(let k=0;k<CLASSES.length;k++){
+   const tag=CLASSES[k],mass=total*distribution[k];
+   if(LN.has(tag))lnW+=mass;else if(tag!=='break')rcW+=mass;
+   if(!NON_AGGR.has(tag)&&mass>0)weights[tag]=mass;
+  }
+ }else{
+  for(const s of rows){
+   if(s.family==='break')continue;
+   if(s.family==='ln')lnW+=s.evidenceBase;else if(s.family==='rc')rcW+=s.evidenceBase;
+   if(NON_AGGR.has(s.tag))continue;
+   if(!p.excludeVibroFromMix||s.tag!=='vibro')familyTags[s.family].add(s.tag);
+   weights[s.tag]=(weights[s.tag]||0)+s.evidenceWeight;
+   total+=p.mode==='legacy'?s.evidenceBase:s.evidenceWeight;
+  }
+ }
+ const lnRatio=lnW/(p.mode==='soft'?(lnW+rcW||1):Math.max(1,lnW+rcW));
+ const sort=lnRatio<p.lnLow?'rc':lnRatio>p.lnHigh?'ln':'hb';
+ if(!(total>0))return {tags:[],sort:p.mode==='legacy'?'rc':sort,weights,shares:{},diversity,distribution,activeWeight:0};
+ const ranked=Object.entries(weights).map(([tag,w])=>[tag,w/total]).sort((a,b)=>b[1]-a[1]);
+ const top=ranked[0]?.[1]||0,significant=ranked.filter(([tag,share])=>share>=p.mixShare&&(!p.excludeVibroFromMix||tag!=='vibro'));
+ let tags=[];
+ const enoughFamilies=p.mode==='soft'?significant.length>=3:familyTags.rc.size+familyTags.ln.size>=3;
+ if(p.mode==='soft'&&top<p.minEvidence)tags=[];
+ else if(significant.length>=3&&enoughFamilies&&top<p.dominantShare){
+  if(p.mode!=='soft'||diversity>=p.minimumDiversity)tags=[sort==='rc'?'rc mix':sort==='ln'?'ln mix':'hybrid'];
+ }else if(ranked.length>=2&&ranked[1][1]>=p.secondRel*top&&top<p.twoTagMaxShare)tags=[ranked[0][0],ranked[1][0]];
+ else if(ranked.length)tags=[ranked[0][0]];
+ return {tags,sort,weights,shares:Object.fromEntries(ranked),diversity,distribution,activeWeight:total};
+}
+function coalesceForDisplay(segments,options={}){
+ const rows=evidence(segments,{...options,mode:'soft'}),groups=[];
+ for(const row of rows){
+  const last=groups.at(-1);
+  if(last&&last.end===row.start&&last.tag===row.tag&&last.family===row.family){last.end=row.end;last.components.push(row);}
+  else groups.push({start:row.start,end:row.end,tag:row.tag,family:row.family,components:[row]});
+ }
+ return groups.map(g=>{
+  const weight=g.components.reduce((s,r)=>s+r.evidenceWeight,0);
+  const displayWeights=g.components.map(r=>weight?r.evidenceWeight:r.end-r.start),displayTotal=displayWeights.reduce((a,b)=>a+b,0);
+  const probability=CLASSES.map((_,k)=>g.components.reduce((s,r,i)=>s+displayWeights[i]*r.probability[k],0)/displayTotal);
+  return {...g,probability,metrics:supportMetrics(probability),aggregationWeight:weight};
+ });
+}
+module.exports={aggregateEvidence,evidence,supportMetrics,coalesceForDisplay,defaults};
+
+},
+function(module,exports,load){
+'use strict';
+/** Separate uncertain local labels from genuine between-segment diversity.
+ * Inputs are probability vectors (not raw legacy scores), nonnegative evidence
+ * weights and an optional Break index. Break mass reduces active evidence.
+ * Entropies are divided by log(number of non-Break classes).
+ */
+function composition(probabilities,weights,{breakIndex=-1}={}){
+ if(!probabilities.length||probabilities.length!==weights.length)throw Error('ShapeMismatch');
+ const D=probabilities[0].length,indices=Array.from({length:D},(_,i)=>i).filter(i=>i!==breakIndex);
+ if(indices.length<2)throw Error('NeedAtLeastTwoActiveClasses');
+ const dist=Array(indices.length).fill(0),rows=[];let total=0;
+ const H=p=>-p.reduce((s,x)=>s+(x>0?x*Math.log(x):0),0)/Math.log(indices.length);
+ probabilities.forEach((p,i)=>{
+  if(p.length!==D||p.some(x=>!Number.isFinite(x)||x<0)||Math.abs(p.reduce((a,b)=>a+b,0)-1)>1e-9)throw Error('InvalidProbability');
+  if(!Number.isFinite(weights[i])||weights[i]<0)throw Error('InvalidWeight');
+  const active=indices.reduce((s,j)=>s+p[j],0),weight=weights[i]*active;
+  if(!weight)return;
+  const q=indices.map(j=>p[j]/active);total+=weight;
+  for(let j=0;j<q.length;j++)dist[j]+=weight*q[j];rows.push({q,weight});
+ });
+ if(!total)return {indices,distribution:dist,activeWeight:0,entropy:0,meanLocalEntropy:0,diversity:0};
+ for(let j=0;j<dist.length;j++)dist[j]/=total;
+ const entropy=H(dist),local=rows.reduce((s,r)=>s+r.weight/total*H(r.q),0);
+ return {indices,distribution:dist,activeWeight:total,entropy,meanLocalEntropy:local,
+  diversity:Math.max(0,entropy-local)};
+}
+module.exports={composition};
+
+}],cache={};
+function load(id){if(!cache[id]){const m=cache[id]={exports:{}};modules[id](m,m.exports,load);}return cache[id].exports;}
+return load(0);})();
+
+},
+function(module,exports,load){
+/* Generated by node scripts/build-coarse.cjs; MIT; do not edit. */
+module.exports=(()=>{
+const modules=[function(module,exports,load){
+'use strict';
+const anchor=load(1),release=load(3);
+const {lowerBound}=load(2);
+function describeInterval(ctx,start,end){
+ const rows=ctx.rows.slice(lowerBound(ctx.rows,start,r=>r.t),lowerBound(ctx.rows,end,r=>r.t));
+ const values=anchor.describe(rows,ctx.map.keys);
+ return {start,end,anchor:Object.fromEntries(anchor.KEYS.map((k,i)=>[k,values[i]])),
+  release:release.releaseGeometry(ctx,start,end).metrics};
+}
+module.exports={prepare:release.releaseContext,describeInterval};
+
+},
+function(module,exports,load){
+'use strict';
+// Key-count-aware morphology. These are descriptors, not local truth labels.
+const {popcount,lowerBound}=load(2);
+const KEYS=['peakShare','peakExcess','repeatConcentration','runAsymmetry','runCoverage','regularity','regularAnchor'];
+function describe(rows,K){
+ const N=rows.length,counts=Array(K).fill(0),pairs=Array(K).fill(0),longest=Array(K).fill(0),run=Array(K).fill(0);
+ const times=Array.from({length:K},()=>[]);
+ for(let i=0;i<N;i++)for(let c=0;c<K;c++){
+  if(rows[i].mask&(1<<c)){
+   counts[c]++;times[c].push(rows[i].t);run[c]++;longest[c]=Math.max(longest[c],run[c]);
+   if(i&&(rows[i-1].mask&(1<<c)))pairs[c]++;
+  }else run[c]=0;
+ }
+ const total=counts.reduce((a,b)=>a+b,0),repeat=pairs.reduce((a,b)=>a+b,0);
+ const sorted=[...longest].sort((a,b)=>a-b),peakCount=Math.max(...counts);
+ const steady=times.map(a=>{
+  const iv=a.slice(1).map((t,i)=>t-a[i]),mean=iv.reduce((a,b)=>a+b,0)/Math.max(1,iv.length);
+  const cv=mean>0?Math.sqrt(iv.reduce((s,v)=>s+(v-mean)**2,0)/Math.max(1,iv.length))/mean:Infinity;
+  return iv.length>=2?1/(1+cv):0;
+ });
+ const peak=total?Math.max(...counts)/total:0,excess=total?Math.max(0,(peak-1/K)/(1-1/K)):0;
+ const concentration=repeat?Math.max(0,(Math.max(...pairs)/repeat-1/K)/(1-1/K)):0;
+ const asymmetry=N?(sorted[K-1]-sorted[Math.floor((K-1)/2)])/N:0;
+ const regularity=Math.max(...steady.filter((_,c)=>counts[c]===peakCount));
+ return [peak,excess,concentration,asymmetry,N?sorted[K-1]/N:0,regularity,excess*regularity];
+}
+function windows(ctx,ms){
+ const start=ctx.map.firstNote,end=ctx.map.lastNote+1,out=[];
+ for(let t=start;t<end;t+=ms/2){
+  const rows=ctx.rows.slice(lowerBound(ctx.rows,t,r=>r.t),lowerBound(ctx.rows,t+ms,r=>r.t));
+  if(rows.length>=3)out.push(describe(rows,ctx.map.keys));
+ }
+ return out;
+}
+function pooled(ctx,ms){
+ const ws=windows(ctx,ms),out=[];
+ for(let j=0;j<KEYS.length;j++){
+  const a=ws.map(w=>w[j]).sort((a,b)=>a-b),mean=a.reduce((s,v)=>s+v,0)/Math.max(1,a.length);
+  out.push(mean,Math.sqrt(a.reduce((s,v)=>s+(v-mean)**2,0)/Math.max(1,a.length)),a[Math.floor(.9*(a.length-1))]||0);
+ }
+ return out;
+}
+module.exports={KEYS,describe,windows,pooled};
+
+},
+function(module,exports,load){
+'use strict';
+
+/** Milliseconds after rate conversion; tail intervals are half-open [head, tail). */
+function parseOsu(text, { speedRate = 1 } = {}) {
+  if (!Number.isFinite(speedRate) || speedRate <= 0) throw new RangeError('speedRate must be finite and positive');
+  let section = '', mode = null, keys = null;
+  const rawNotes = [], timingPoints = [], breaks = [], meta = {}, warnings=[];
+  for (const raw of text.replace(/^\uFEFF/, '').split(/\r?\n/)) {
+    const line = raw.trim();
+    if (!line || line.startsWith('//')) continue;
+    if (line.startsWith('[')) { section = line.slice(1, -1).toLowerCase(); continue; }
+    if (['general', 'difficulty', 'metadata'].includes(section)) {
+      const at = line.indexOf(':'); if (at < 0) continue;
+      const k = line.slice(0, at).trim(), v = line.slice(at + 1).trim();
+      if (k === 'Mode') mode = Number(v);
+      if (k === 'CircleSize') keys = Number(v);
+      if (section === 'metadata') meta[k] = v;
+      if (k === 'OverallDifficulty') meta.od = Number(v);
+    } else if (section === 'timingpoints') {
+      const p = line.split(','), t = Number(p[0]), beatLength = Number(p[1]);
+      if(!Number.isFinite(t)||!Number.isFinite(beatLength)){warnings.push('IgnoredNonfiniteTimingPoint');continue;}
+      if (beatLength > 0 && (p[6] === undefined || p[6].trim() !== '0'))
+        timingPoints.push({ t: t / speedRate, beatLength: beatLength / speedRate });
+    } else if (section === 'events') {
+      const p = line.split(/\s*,\s*|\s+/);
+      if (p[0] === '2' || p[0] === 'Break') {
+        const a = Number(p[1]), b = Number(p[2]);
+        if (Number.isFinite(a) && b > a) breaks.push([a / speedRate, b / speedRate]);
+      }
+    } else if (section === 'hitobjects') rawNotes.push(line.split(','));
+  }
+  if (mode !== 3) throw new Error('NotMania');
+  if (![4, 6, 7].includes(keys)) throw new Error('UnsupportedKeys: expected 4, 6 or 7');
+  const notes = [];
+  for (const p of rawNotes) {
+    const x = Number(p[0]), t = Number(p[2]), type = Number(p[3]);
+    if (p.length < 5 || !Number.isFinite(x) || !Number.isFinite(t) || !Number.isInteger(type))
+      throw new Error('InvalidHitObject');
+    if (!(type & 129)) continue;
+    const end = type & 128 ? Number((p[5] ?? '').split(':')[0]) : null;
+    if (end !== null && (!Number.isFinite(end) || end < t)) throw new Error('InvalidHoldTail');
+    notes.push({ t: t / speedRate, col: Math.min(keys - 1, Math.max(0, Math.floor(x * keys / 512))),
+      lnEnd: end !== null && end > t ? end / speedRate : null });
+  }
+  notes.sort((a, b) => a.t - b.t || a.col - b.col);
+  if (!notes.length) throw new Error('EmptyBeatmap');
+  Object.assign(meta,{title:meta.Title,artist:meta.Artist,version:meta.Version,creator:meta.Creator});
+  timingPoints.sort((a, b) => a.t - b.t);
+  // Duplicate objects on one key at the same time are one physical action.
+  const unique = [];
+  for (const n of notes) {
+    const last = unique.at(-1);
+    if (last && last.t === n.t && last.col === n.col) {
+      const end = Math.max(last.lnEnd ?? n.t, n.lnEnd ?? n.t); last.lnEnd = end > n.t ? end : null;
+    }
+    else unique.push(n);
+  }
+  return { keys, notes: unique, timingPoints, breaks, meta, warnings,
+    firstNote: unique[0].t, lastNote: unique.reduce((end,n)=>Math.max(end,n.lnEnd??n.t),unique[0].t) };
+}
+
+function popcount(mask) { let n = 0; while (mask) { mask &= mask - 1; n++; } return n; }
+function lowerBound(a, t, key = x => x) {
+  let lo = 0, hi = a.length;
+  while (lo < hi) { const mid = (lo + hi) >>> 1; if (key(a[mid]) < t) lo = mid + 1; else hi = mid; }
+  return lo;
+}
+function prepare(map, rowMergeMs = 10) {
+  const rows = [], cols = Array.from({ length: map.keys }, () => []), tails = [];
+  for (const n of map.notes) {
+    cols[n.col].push(n);
+    let r = rows.at(-1);
+    if (!r || n.t - r.t > rowMergeMs) rows.push(r = { t: n.t, mask: 0, lnMask: 0 });
+    r.mask |= 1 << n.col; if (n.lnEnd !== null) { r.lnMask |= 1 << n.col; tails.push({ t: n.lnEnd, col: n.col, start: n.t }); }
+  }
+  // Union overlapping holds per column: occupancy never exceeds one finger per key.
+  const holds = cols.map(notes => {
+    const out = [];
+    for (const n of notes) if (n.lnEnd !== null) {
+      const last = out.at(-1);
+      if (last && n.t < last[1]) last[1] = Math.max(last[1], n.lnEnd);
+      else out.push([n.t, n.lnEnd]);
+    }
+    return out;
+  });
+  tails.sort((a, b) => a.t - b.t || a.col - b.col);
+  return { map, rows, cols, tails, holds, rowMergeMs };
+}
+module.exports = { parseOsu, prepare, popcount, lowerBound };
+
+},
+function(module,exports,load){
+'use strict';
+const {lowerBound:lb}=load(2);
+const KEYS=['tailRatePerKey','headIsolation','sameFingerRecovery','tailAsynchrony','tailTimingVariability',
+ 'heldOtherAtTail','sameHandOrder','releaseChordFraction','independentHeldRelease'];
+const mean=a=>a.length?a.reduce((s,x)=>s+x,0)/a.length:0;
+const sd=a=>{const m=mean(a);return Math.sqrt(mean(a.map(x=>(x-m)**2)));};
+const ratio=(gap,scale)=>Number.isFinite(gap)?gap/(gap+scale):1;
+
+function releaseContext(ctx){
+ // Timing-normalized geometry uses the active quarter-beat. Without timing
+ // points use a scale inferred from actual event gaps, not a new fixed-ms gate.
+ const times=[...new Set([...ctx.map.notes.map(n=>n.t),...ctx.tails.map(n=>n.t)])].sort((a,b)=>a-b);
+ const gaps=times.slice(1).map((t,i)=>t-times[i]).sort((a,b)=>a-b);
+ return {...ctx,releaseFallbackScale:gaps[Math.floor((gaps.length-1)/2)]||1};
+}
+function scaleAt(ctx,t){
+ const points=ctx.map.timingPoints;
+ const index=Math.max(0,lb(points,t+1e-8,p=>p.t)-1);
+ return points.length?points[index].beatLength/4:ctx.releaseFallbackScale;
+}
+function releaseGeometry(ctx,start,end){
+ const K=ctx.map.keys,tails=ctx.tails,heads=ctx.map.notes;
+ const lo=lb(tails,start,n=>n.t),hi=lb(tails,end,n=>n.t),n=hi-lo;
+ if(!n)return {values:KEYS.map(()=>0),metrics:Object.fromEntries(KEYS.map(k=>[k,0])),tails:0};
+ const isolation=[],recovery=[],asynchrony=[],held=[],interaction=[],rhythm=[],width=[];let order=0;
+ const hand=c=>K===7&&c===3?-1:c<Math.floor(K/2)?0:1;
+ for(let j=lo;j<hi;j++){
+  const tail=tails[j],scale=scaleAt(ctx,tail.t),i=lb(heads,tail.t,n=>n.t);
+  const before=i>0?tail.t-heads[i-1].t:Infinity,after=i<heads.length?heads[i].t-tail.t:Infinity;
+  const independent=ratio(Math.min(before,after),scale);isolation.push(independent);
+  const same=ctx.cols[tail.col],next=same[lb(same,tail.t,n=>n.t)];
+  recovery.push(ratio(next?next.t-tail.t:Infinity,scale));
+  const previous=j?tail.t-tails[j-1].t:Infinity,following=j+1<tails.length?tails[j+1].t-tail.t:Infinity;
+  asynchrony.push(ratio(Math.min(previous,following),scale));
+  let other=0;
+  for(let col=0;col<K;col++){
+   if(col===tail.col)continue;
+   const holds=ctx.holds[col],last=lb(holds,tail.t,h=>h[0])-1;
+   // Immediately BEFORE release: new simultaneous heads do not count, other
+   // simultaneous tails are still held. No epsilon-time magic is needed.
+   if(last>=0&&holds[last][1]>=tail.t)other++;
+  }
+  const load=other/Math.max(1,K-1);held.push(load);interaction.push(load*independent);
+  const a=lb(tails,tail.t,n=>n.t),b=lb(tails,tail.t+1e-8,n=>n.t);width.push((b-a)/K);
+  if(j>lo&&tail.t>tails[j-1].t)rhythm.push(Math.log1p((tail.t-tails[j-1].t)/scale));
+  if(j>0&&j+1<tails.length){
+   const a=tails[j-1],b=tail,c=tails[j+1],h=hand(b.col);
+   // All three timestamp groups must be singletons. Strict a.t < b.t < c.t
+   // alone is insufficient: a/c can be the last/first member of a chord,
+   // whose arbitrary column ordering reverses under a physical mirror.
+   const uniqueEndpoints=(j<2||tails[j-2].t<a.t)&&(j+2>=tails.length||c.t<tails[j+2].t);
+   if(uniqueEndpoints&&a.t<b.t&&b.t<c.t&&h>=0&&hand(a.col)===h&&hand(c.col)===h&&new Set([a.col,b.col,c.col]).size===3){
+    const distance=Math.abs(a.col-b.col)+Math.abs(b.col-c.col),span=Math.max(a.col,b.col,c.col)-Math.min(a.col,b.col,c.col);
+    order+=(distance-span)/Math.max(1,Math.floor(K/2)-1)*Math.exp(-(c.t-a.t)/(3*scale));
+   }
+  }
+ }
+ const values=[n/((end-start)/1000)/K,mean(isolation),mean(recovery),mean(asynchrony),sd(rhythm),
+  mean(held),order/n,mean(width),mean(interaction)];
+ if(values.some(v=>!Number.isFinite(v)))throw Error('Nonfinite release geometry');
+ return {values,metrics:Object.fromEntries(KEYS.map((k,i)=>[k,values[i]])),tails:n};
+}
+module.exports={KEYS,releaseContext,releaseGeometry};
+
+}],cache={};
+function load(id){if(!cache[id]){const m=cache[id]={exports:{}};modules[id](m,m.exports,load);}return cache[id].exports;}
+return load(0);})();
 
 },
 function(module,exports,load){
@@ -7379,831 +10742,15 @@ module.exports={
 ;
 },
 function(module,exports,load){
-module.exports={
-  "model": {
-    "classes": [
-      "chordjack",
-      "minijack",
-      "dense chordstream",
-      "fast chordstream",
-      "speed",
-      "tech",
-      "vibro",
-      "coordination",
-      "density",
-      "inverse",
-      "release",
-      "technical",
-      "wildcard",
-      "ln wildcard",
-      "break"
-    ],
-    "mean": [
-      3.4221688903780283,
-      11.576728536283252,
-      0.31288743744862413,
-      0.6255226820075029,
-      0.37447731799250494,
-      0.41834193327980385,
-      0.11419314548872336,
-      0.16680618466788255,
-      0.27198814733736465,
-      0.5416187028788395,
-      0.9873432988785182,
-      0.036367179165165964,
-      0.4598774698391877,
-      0.16151955439148327,
-      0.3450428773117362,
-      0.1995064733723794,
-      0.04752539348847736,
-      0.08566887353684305,
-      198.36499061357898,
-      0.3824498649312103,
-      0.2345617275763797,
-      0.15422103973466242,
-      0.06046911674613718,
-      0.13289340288906876,
-      0.4476721918539546,
-      0.22568216720230422,
-      0.23103746162942362,
-      1.3626174518631227,
-      0.43159939289281013,
-      0.15450797264801486,
-      0.019908510043366707,
-      0.17641091270254614,
-      0.08246921939055842,
-      0.7784672741320728,
-      0.00623710004090975,
-      0.0614507481351992,
-      4.636092653325838,
-      0.5192636323801384,
-      0.15704145837085604,
-      0.9917433339416077
-    ],
-    "scale": [
-      1.2787223449580263,
-      5.359773004882984,
-      0.09014538001880384,
-      0.24105177422995208,
-      0.24105177422995208,
-      0.36964711024005836,
-      0.1470303224517857,
-      0.20817757033493914,
-      0.15314026591754812,
-      0.11673058562696444,
-      0.03234001350955353,
-      0.04628603913339699,
-      0.06761306385101282,
-      0.07734681830054363,
-      0.20651470041132755,
-      0.21312171420454348,
-      0.08130921381079464,
-      0.09300418021445266,
-      112.9017829445585,
-      0.30115896002073167,
-      0.20957395209803356,
-      0.166693678644309,
-      0.06370201207063218,
-      0.13548083503787298,
-      0.38839042842959337,
-      0.2799757282380848,
-      0.20784426434820527,
-      1.3880120285299435,
-      0.3616602378452854,
-      0.14407399788816014,
-      0.05985316523564636,
-      0.028565429546351787,
-      0.14218631444463478,
-      0.11141885696877898,
-      0.028001154953189875,
-      0.10476541716387501,
-      1.8684694177754733,
-      0.15852578904283618,
-      0.1573505222370318,
-      0.05368426684339527
-    ],
-    "W": [
-      [
-        0.126816977858193,
-        -0.17807436592965864,
-        0.12523868572081326,
-        0.2842398760646567,
-        -0.28423987606465667,
-        -0.3217707364104612,
-        0.4256953929168474,
-        0.5040235336994234,
-        0.10279726456793867,
-        0.3001815818138148,
-        -0.017995287708340288,
-        0.12202192713196693,
-        0.19528966625094904,
-        -0.15025280056853044,
-        -0.11011680899478221,
-        -0.30834476270884187,
-        0.16592699935198962,
-        0.0629202266461243,
-        -0.13853281652746968,
-        -0.2055374609995294,
-        -0.2913968849267322,
-        -0.26790563411888574,
-        0.021279690468630524,
-        -0.21284336030581594,
-        -0.2681948986742268,
-        -0.06737814360445274,
-        0.25568411708063116,
-        -0.23678768891453975,
-        -0.3177652494670951,
-        -0.28281100266435183,
-        -0.004702546329415314,
-        0.18613341806811107,
-        -0.1144610079928851,
-        0.10056177621431604,
-        -0.1243172478429669,
-        0.044887986593389814,
-        0.23374240106690722,
-        -0.044011336392207716,
-        0.06454881216339556,
-        -0.14102203256649853
-      ],
-      [
-        0.00986613417174755,
-        -0.0537447460590282,
-        0.12015597738850986,
-        0.050278089170850436,
-        -0.05027808917085036,
-        -0.14330123445412624,
-        0.34204759726127876,
-        0.29442477115330007,
-        0.12135927252693879,
-        0.03623793058312603,
-        0.0005829952080710106,
-        0.09326422364550552,
-        0.31451427784764807,
-        0.1929083746277716,
-        -0.093577238619075,
-        -0.053201438238508564,
-        -0.08359002213081725,
-        -0.2608616351761823,
-        -0.022863428612088645,
-        0.0656487770291604,
-        -0.14499094944585686,
-        -0.09865486643343259,
-        -0.18661959841278988,
-        -0.11210108514319511,
-        -0.16848641246160667,
-        0.03162686759656741,
-        -0.24801468231138896,
-        -0.12622158018443155,
-        -0.30462946945098857,
-        -0.22866421182771537,
-        -0.03853850583147123,
-        -0.060949857113386345,
-        -0.003170865028002915,
-        0.2459286527066883,
-        0.12925025732497847,
-        -0.1129517543738285,
-        0.018869596421068374,
-        -0.015277804423721859,
-        0.04648049150857358,
-        0.06812438685500229
-      ],
-      [
-        0.2651946936022845,
-        -0.12644190506579905,
-        0.4715197624762764,
-        -0.06231777284851664,
-        0.06231777284851679,
-        -0.3670499106409512,
-        -0.31701306289201153,
-        -0.47481333176796503,
-        0.17392381733298654,
-        0.4433970969842898,
-        -0.12181879715777365,
-        -0.10542761119838218,
-        -0.1247626063040729,
-        0.19537765725509945,
-        -0.12165307446465906,
-        -0.17334659106830422,
-        0.0724996841549431,
-        0.3383477010537261,
-        -0.09168322496640584,
-        -0.07653431993754575,
-        -0.346147388516444,
-        -0.31229854599493584,
-        -0.3108612703634644,
-        -0.25996437415567003,
-        -0.3451882966778115,
-        0.0015892785472091209,
-        -0.4319060163356355,
-        -0.31093260458015975,
-        0.056408975428558945,
-        -0.2943228051222568,
-        0.1983481271434871,
-        -0.06653679059441299,
-        0.3570507168647426,
-        0.1820020388053726,
-        0.19433034068155486,
-        0.3440288026343145,
-        -0.09012469811140984,
-        0.14817540797808804,
-        0.3517334935059505,
-        0.24886854476949907
-      ],
-      [
-        0.12071688741983544,
-        0.07402319854259967,
-        -0.00010344180681918956,
-        0.011752353523092942,
-        -0.011752353523092765,
-        -0.3494714057969663,
-        -0.1829315902403883,
-        -0.07417935291777851,
-        -0.39297189832285473,
-        0.025438822520456233,
-        0.01973108675665184,
-        0.09960230346553794,
-        -0.1000991780623969,
-        0.034587482733270114,
-        -0.11897989031194675,
-        -0.2248632527798258,
-        -0.04437096744868184,
-        -0.45854564546568016,
-        0.06008737297117203,
-        -0.008366543620568259,
-        -0.1962498863654809,
-        -0.24560416986104958,
-        0.17319219364444927,
-        -0.12181337707655927,
-        -0.1308894035271709,
-        -0.12897906788704155,
-        0.2191483532855934,
-        -0.25615743807567287,
-        0.1479998102756546,
-        -0.07135169034288107,
-        -0.017561673887911963,
-        -0.1416996725880142,
-        0.10035167057551578,
-        0.02724031426301232,
-        -0.05191253559922939,
-        -0.23283533657007063,
-        -0.01477247564802467,
-        -0.04662304257847653,
-        -0.09352889355940566,
-        -0.037738509653759265
-      ],
-      [
-        0.05350875809638329,
-        0.40261123908085017,
-        -0.2810163112514989,
-        -0.12174674219231409,
-        0.12174674219231425,
-        -0.1457358249230361,
-        -0.08404845498905743,
-        -0.11387074917150944,
-        -0.43557222421887004,
-        -0.3710884179817892,
-        0.04222058025061686,
-        -0.13210471519059425,
-        -0.2802080216598694,
-        0.04471737703337992,
-        -0.024438306591775105,
-        -0.26230672076797307,
-        -0.22582215608345702,
-        0.304689952009521,
-        0.287141183432347,
-        0.10329103895213174,
-        -0.10402827460008324,
-        -0.06340395760799106,
-        -0.19341942098038073,
-        -0.167707750853407,
-        -0.1806426626561505,
-        -0.3658764407357184,
-        -0.06356013726584515,
-        -0.1114474242762644,
-        0.14974400521815728,
-        0.2074240794703917,
-        -0.043675213619860084,
-        -0.05123803985280182,
-        -0.16163807565379587,
-        -0.26843724397294677,
-        -0.18487527705295215,
-        -0.1252256313869631,
-        -0.0278925266896298,
-        0.051565231939647196,
-        0.038980155666261916,
-        0.062300377100821945
-      ],
-      [
-        0.0444552819486995,
-        0.26584110303696323,
-        -0.22212397531928915,
-        0.023302393421568927,
-        -0.02330239342156886,
-        -0.22754888208994692,
-        0.08572137070541902,
-        0.07804821269862583,
-        0.20337617789765475,
-        -0.19860270399528207,
-        0.16087244254464791,
-        0.05614391380686945,
-        -0.43466545407942897,
-        -0.4200269989654349,
-        0.36197558366627774,
-        0.3405876124143915,
-        -0.008298666950270301,
-        0.07842723499909378,
-        0.2903902522489037,
-        0.15045152926115232,
-        -0.21272867160828432,
-        -0.20135104578490085,
-        -0.2310387219286666,
-        -0.3413517177803581,
-        -0.38742286185710306,
-        0.15581795179162716,
-        -0.13881716459995252,
-        -0.2236594297635003,
-        -0.2595417197242541,
-        -0.32555974593639964,
-        -0.10045779613762018,
-        -0.06868173268232325,
-        0.04101265036372034,
-        -0.10124629788122731,
-        0.13353417566519504,
-        -0.1822620447594871,
-        -0.04589081642610924,
-        -0.10042848560045793,
-        -0.07181271504542577,
-        -0.06574899390829685
-      ],
-      [
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0,
-        0.0
-      ],
-      [
-        -0.28151100284724456,
-        -0.34568281273840024,
-        -0.06891961385568718,
-        0.1689781202858716,
-        -0.16897812028587195,
-        0.2043327666829439,
-        0.3694716956863418,
-        0.5308419779786663,
-        -0.032687732442894295,
-        -0.07823043243107762,
-        -0.0007905813071461085,
-        0.14221042730573982,
-        -0.19478175432921851,
-        0.10457585183651942,
-        -0.06560985550085593,
-        -0.04935291647960542,
-        0.07562319243411271,
-        -0.12876926303852998,
-        -0.2994734000226976,
-        -0.21425940184891254,
-        0.28760520205657125,
-        0.23888731447063277,
-        0.186057686682748,
-        0.1332271697139878,
-        0.17411643731930931,
-        -0.1848472058374508,
-        0.28247059515879236,
-        0.027513410753732034,
-        0.11487167506414034,
-        0.2509425697325581,
-        -0.14448834620312112,
-        -0.10302560157149827,
-        0.044395570632615663,
-        0.03501730033023637,
-        0.07766319306815701,
-        -0.232044591099041,
-        0.05249498651959649,
-        0.13657793977032476,
-        -0.2903827097136637,
-        -0.10374955850381326
-      ],
-      [
-        -0.024260870985063177,
-        -0.18976326464125837,
-        0.5200345817428953,
-        -0.06705418124241204,
-        0.06705418124241236,
-        0.3343503918115107,
-        -0.22231948009046446,
-        -0.3538006577948107,
-        0.3808895661061224,
-        0.19496355123442918,
-        0.12712183298704266,
-        0.010928998757132055,
-        0.11545912122453711,
-        -0.09791333061245885,
-        0.06438253342583983,
-        -0.005864631975649652,
-        0.03619539320230209,
-        0.19516716259389105,
-        -0.11357402873320895,
-        -0.2843866136497823,
-        0.24620127150705387,
-        -0.05992245457356519,
-        0.31792820301015695,
-        0.16813974357657058,
-        0.4494293713896975,
-        -0.24577777337578158,
-        -0.07716679226009776,
-        0.563106047760756,
-        0.2677914370060704,
-        -0.08184564118152425,
-        0.17415218386275919,
-        -0.22029579274001054,
-        0.047457606976852584,
-        0.07146810845953691,
-        0.09172049114619997,
-        0.11189081877626966,
-        0.15881943424579703,
-        0.09783693259522551,
-        0.01135241536642892,
-        -0.27013988455311244
-      ],
-      [
-        -0.126943402279474,
-        0.04275280173921066,
-        -0.025419179974697774,
-        -0.03494238198440474,
-        0.034942381984404615,
-        0.24999019036481518,
-        -0.1068019554021754,
-        -0.06657861249062032,
-        0.02796821569932701,
-        0.0366298889071007,
-        -0.010954164789851418,
-        -0.00903215140167774,
-        -0.002262397396971898,
-        0.08399115151462697,
-        -0.09175383115813443,
-        -0.19148122350582233,
-        -0.14741317861787875,
-        -0.1220303176216147,
-        0.17177144311054843,
-        -0.06862482302409617,
-        0.6557835849179268,
-        0.8101521009222332,
-        -0.12031991226356645,
-        0.9036286514440814,
-        0.2977797468404353,
-        0.2462922124510764,
-        -0.4045337635610018,
-        0.20711729043628863,
-        -0.3318619364406286,
-        0.4809657399998552,
-        -0.10727655093887407,
-        0.045523557587469815,
-        0.132950160017196,
-        -0.3924045924670185,
-        0.018552115901121047,
-        0.24420146024619038,
-        0.09790121430595612,
-        -0.06453065969572022,
-        -0.007937949296802785,
-        0.007694519204455834
-      ],
-      [
-        -0.6733205427142568,
-        -0.541680307285081,
-        0.042735464978549915,
-        -0.10972874485338763,
-        0.10972874485338774,
-        0.45063339242813394,
-        -0.13609823059341317,
-        -0.07754163890083236,
-        0.015884027862900236,
-        0.07392350152732498,
-        -0.06296706835614876,
-        -0.0778612038791753,
-        0.03934554317865027,
-        0.04208636079067512,
-        -0.20300164084160552,
-        0.06971163664762571,
-        0.08166463287669642,
-        -0.44327581113821796,
-        -0.44323092628239874,
-        -0.2410757670039245,
-        0.30077026643743454,
-        0.49518162859905795,
-        -0.19911845827910082,
-        0.05519331201705702,
-        0.3612031082374972,
-        0.2748696706079754,
-        0.16184567517775875,
-        -0.2794451509442244,
-        0.2433476161331686,
-        0.06715870052129323,
-        0.19496282405349483,
-        0.33670116541339656,
-        0.0628492592732691,
-        0.06975758968584903,
-        0.020161007343610236,
-        0.16947443410395446,
-        -0.6550099715288649,
-        0.0174624216791264,
-        0.22479625864770142,
-        0.136692586577583
-      ],
-      [
-        0.06404864583268952,
-        0.05486000810797985,
-        -0.14503938962390567,
-        0.04982218036367258,
-        -0.04982218036367293,
-        0.3467485020065701,
-        0.09134022556554089,
-        0.18249972676571294,
-        0.1408684407380562,
-        -0.10227688238521039,
-        0.12493359068721657,
-        -0.058381249782077003,
-        0.006971763834476116,
-        -0.02839963229924885,
-        0.07148754626701757,
-        0.25382696940327143,
-        0.16280602526823126,
-        0.7641586649757904,
-        0.107560149234359,
-        0.18949458345376227,
-        0.14005043558256258,
-        -0.07313314668225508,
-        0.3409486483360599,
-        -0.28542153903011325,
-        0.0031575236394873036,
-        -0.07223548656248945,
-        0.3737377508314363,
-        0.4311903712357416,
-        0.25114911928153494,
-        -0.03505548847803088,
-        0.030404156131848624,
-        0.15980505804530523,
-        -0.1952001221794517,
-        0.19986461834778244,
-        0.029891814116901727,
-        -0.05701808033646771,
-        0.27715930629553365,
-        -0.15547884536707934,
-        -0.37405230310039683,
-        0.04226840781777061
-      ],
-      [
-        0.2545635198464152,
-        0.15962674195471224,
-        -0.030318518104099457,
-        -0.07395499888101977,
-        0.07395499888101964,
-        -0.18763287105488502,
-        -0.23835342536135717,
-        -0.20913112418427074,
-        0.014247757562935098,
-        0.1012208804707388,
-        0.07980682321432667,
-        -0.13682881262921098,
-        0.5137123679365556,
-        0.24546383758888776,
-        0.1469288110700439,
-        0.20140429398014967,
-        0.004682822973801676,
-        -0.1310187611125438,
-        0.05768248363278498,
-        0.05259858034948784,
-        -0.17953155168692306,
-        -0.144057150584949,
-        -0.14007342038666692,
-        -0.16739155927194777,
-        -0.2400301458207237,
-        0.17186640675173107,
-        -0.38730361080393155,
-        -0.2027839288723667,
-        -0.3527607208894824,
-        -0.027584672366445656,
-        0.005378627650016211,
-        -0.165956276919605,
-        -0.07606629210256441,
-        0.02647741312016488,
-        -0.16104311137331043,
-        0.2610982910147771,
-        0.02378148162861159,
-        0.08841742686302582,
-        -0.19917935181581445,
-        0.037111012805881916
-      ],
-      [
-        0.36230070286517124,
-        0.45431376559233183,
-        -0.15017030423596375,
-        -0.13672281080947668,
-        0.1367228108094762,
-        0.1351145234279203,
-        -0.24827625798010036,
-        -0.1900647164575079,
-        -0.21946160252683686,
-        -0.10652166817018015,
-        -0.14650607659894155,
-        0.008794845341339922,
-        0.0614178866771262,
-        -0.18877156786924965,
-        0.23446676474489392,
-        0.24622193205875167,
-        -0.03728223247055709,
-        0.4636079947962045,
-        0.0994933948977334,
-        0.2675289438299866,
-        0.1300167033556754,
-        0.1451970343267312,
-        0.35953270977356805,
-        0.2927637712193536,
-        0.34414468411998567,
-        0.05070285086617092,
-        0.2798636993568401,
-        0.19839523327566894,
-        0.26046815173645277,
-        0.10298486598228764,
-        -0.26618452349453214,
-        0.0303654563135869,
-        0.020108706395356172,
-        -0.3707059520401265,
-        -0.21957317753680164,
-        -0.2942607783216351,
-        0.26214987487418,
-        -0.04977492658354178,
-        -0.09192011127116342,
-        0.10288039718353276
-      ],
-      [
-        -0.19543578281538007,
-        -0.018641456335421844,
-        -0.3565737381350836,
-        0.018094619981817356,
-        -0.01809461998181672,
-        0.021341098648478222,
-        0.2215661754135409,
-        -0.02985803861043392,
-        -0.10062108278340465,
-        -0.3552731490777409,
-        -0.19423737573037256,
-        -0.013330895372972738,
-        -0.10993121511798437,
-        -0.058343763065307495,
-        -0.050110592691238756,
-        0.1570090930203404,
-        -0.05262152656041436,
-        -0.6628175035215823,
-        0.03523154561642078,
-        0.2697714772086775,
-        -0.2853538567074202,
-        -0.22308710667669104,
-        -0.01748832930097929,
-        0.11564211564601652,
-        0.09102381012838144,
-        0.1323288793905752,
-        0.1785519762468013,
-        0.32011289214897404,
-        0.07477830582870981,
-        0.23771930221322082,
-        0.11963923760120004,
-        0.11985510863418014,
-        -0.2556399781425686,
-        0.1744762744283595,
-        0.04661795415754217,
-        0.06101642347859825,
-        -0.2912278069536122,
-        -0.06391026018423178,
-        0.3909224069443595,
-        -0.08754125312906615
-      ]
-    ],
-    "b": [
-      -0.35101690942489794,
-      -1.3394496519948014,
-      0.11509542810087844,
-      0.41241076599932036,
-      -0.7674342139184225,
-      -0.26319110472783624,
-      -30.0,
-      0.5640237582811107,
-      1.8912395412224823,
-      -1.0958669534007546,
-      -0.7900974495231479,
-      0.9600872090811643,
-      -0.7723984155120133,
-      -0.28043859795769016,
-      1.7170365937745529
-    ],
-    "multilabel": false,
-    "temperature": 1.0,
-    "C": 0.3,
-    "classWeight": null
-  },
-  "indices": [
-    0,
-    1,
-    2,
-    3,
-    4,
-    5,
-    6,
-    7,
-    8,
-    9,
-    10,
-    11,
-    12,
-    13,
-    14,
-    15,
-    16,
-    17,
-    18,
-    19,
-    20,
-    21,
-    22,
-    23,
-    24,
-    25,
-    26,
-    27,
-    28,
-    29,
-    30,
-    31,
-    32,
-    33,
-    34,
-    35,
-    36,
-    37,
-    38,
-    39
-  ],
-  "windowMs": 4000,
-  "stepMs": 2000,
-  "smoothingPenalty": 1.0,
-  "selection": "mean inner-validation accuracy; NLL tie break; outer test not consulted"
-}
+module.exports={"model":{"classes":["jack","chordstream","speed","tech","ln"],"keys":["npsPerKey","rowRate","chordFraction","multiFraction","singleFraction","lnHeadFraction","overlap","repeatFraction","cutReturn","chordChange","columnEntropy","handImbalance","sameHand","crossCut","logIoiSd","ioiChange","graceFraction","gridResidual","rowBpm","ioiCv","occupancy","minOccupancy","occupancySd","heldAtHead","lockFraction","releaseIndependence","releaseScatter","tailRate","shortHoldFraction","inverseGap","lnHeadOverlap","maskEntropy","trillFraction","rollFraction","effort","sustain","burstiness","activeFraction","peakExcess","repeatConcentration","runAsymmetry","runCoverage","regularity","regularAnchor","release:tailRatePerKey","release:headIsolation","release:sameFingerRecovery","release:tailAsynchrony","release:tailTimingVariability","release:heldOtherAtTail","release:sameHandOrder","release:releaseChordFraction","release:independentHeldRelease"],"mean":[5.279919412126102,13.244435229650557,0.42874161807871747,0.4807021796435301,0.5163551854153847,0.08945382953885336,0.24870351397064824,0.30692689325120126,0.3164516044733976,0.6034787926605629,0.9776394119276226,0.06174495662060625,0.3715731292302074,0.20521095241315632,0.20967672348431854,0.1376341848072169,0.018459576715618622,0.07427099118108489,219.3060979764644,0.23696579922239105,0.05334877370168715,0.03257397343020707,0.02029446250292978,0.020058467450332296,0.060735862662294526,0.07992934144216184,0.04654367546496631,0.2884756887475926,0.12645360902098599,0.046149233839953605,0.00823540262094189,0.711364937195293,0.028986404434343242,0.07384338343353529,6.88397497454446,0.5747720623851992,0.10229555415218201,0.9906013118792755,0.057904449932632496,0.20223002713994806,0.05951550879363238,0.1609332388724863,0.7476448274488829,0.039319693665753455,0.2884756887475926,0.04115481408110655,0.14152795255655595,0.10336315091076181,0.03300751937605254,0.051610610387062224,0,0.07433874792545599,0.01618700913656663],"scale":[2.1935486695134463,6.6508228078045875,0.157735762309571,0.3236165509698905,0.32377860621447824,0.24224920713105502,0.30594715572498277,0.36588498099636685,0.20343133863699642,0.1421839966724101,0.0960538362584874,0.10580700562225097,0.12275551372520518,0.11232193073152011,0.22048825954079068,0.2046992799083205,0.0580738406195362,0.09725057002273887,109.89458782395833,0.26933534374282564,0.14205849323051425,0.11569189154027297,0.05706167714600268,0.0702998143385303,0.19373035928328708,0.24210804484109502,0.13125031087455372,0.9415796913029272,0.3080771753699684,0.11798196022326048,0.0520494521066025,0.1351137486840709,0.0772636888174803,0.10974327558757511,3.562801071294435,0.18239102869872695,0.15986184834402556,0.07798926972681207,0.08737016270744698,0.29376281235424306,0.12491206193027349,0.18366516198570632,0.15247153607655767,0.055730457434987404,0.9415796913029272,0.13153094579787694,0.28620660844881013,0.25508602885715637,0.11083701337683818,0.16414313139758036,0.000001,0.16418621774059727,0.07199005796992769],"theta":[-0.016435166913162626,-1.3842836689378597,0.7244294857190035,0.08329273025071932,-0.08309388144608267,0.21711421725354593,1.0651850278765715,-0.25560034994276914,0.4953622291808683,-0.27909034336080696,-0.16925989678498085,-0.1526858577172876,-0.03333149993072315,-0.13557233634158694,-1.0349343976819005,0.2540633496873821,-0.27915011629926306,-0.08341328130993954,-0.8757299704267615,0.023167480401531722,-0.03221793590273827,-0.0439568167571802,-0.07727655319330713,-0.24852376151171976,-0.3755914631779143,0.2355193521637449,0.09715358387797791,-0.0581220710015971,-0.308595344771333,-0.6397064276743021,-0.08272970456436958,0.10279510161542962,0.3535038738631565,0.22737897252684336,1.325824158203633,0.046041365662269886,0.24820517596465724,-0.002439259696400067,0.24908796248417797,0.20653542216490217,-0.08634662030131078,-0.17458445087326227,-0.27817556125335413,0.14634362893453862,-0.0581220710015971,-0.058495378248641254,0.03316317764664285,0.01868750133632864,-0.009073782344781142,-0.014340926608562624,0,0.2262835850988253,-0.11281249568162183,1.6720109422205944,0.29663578422095044,0.10096465768417723,-0.07819597916122302,0.07815483959432161,-0.25226332473861734,-1.6831789677264049,-1.8747468713562552,0.6408664156493771,1.181878657087938,-0.2797977790560151,0.055844011918846026,0.24205615932636096,-0.4198514837905545,-0.9274320058690463,-0.8181210224569119,-0.03618261718111116,-1.1128187839247414,0.2912629993518205,0.7812998590801511,0.02126508838363655,0.02847900559363647,0.021933423421365412,-0.14962800691762884,-0.17609620823985725,0.11680721271530357,-0.008838900027990496,0.0007421474586800525,-0.11103396314472513,-0.09656802389672191,0.05163334136746481,0.7508064783514041,0.5160772787940295,-0.030938479182748554,-0.05007047507438384,0.014905050323055625,0.5648993943452253,-0.3418674817466625,0.3403525787810142,-0.4978021106422302,0.8888435212670088,0.4623006423412172,0.13373002773785198,0.2562619716456647,0.0007421474586800525,0.04125047626520385,0.4510296867560113,0.01446591723916917,-0.2330480345399729,-0.18140898429709096,0,-0.10230532839289666,0.019744185183523267,-1.3777932443302432,0.5759018827985656,0.8866546202498233,0.3791053894635187,-0.3790410449361656,-0.6247079534039149,0.30662847802114035,1.2591926825622979,-2.1788733086618546,0.0407432424675463,0.1660135392466575,0.12834441586511897,-0.8779537843332577,0.9170917043801436,0.020066449786844208,-1.1480045677249648,0.4501480487365904,0.8209150899122396,1.2969962991525161,0.3724268785525085,0.011643931460333714,-0.22531186803655637,0.1079544627253335,0.3349034322400325,0.6442470358511976,0.22948667646946397,0.1225641355980448,-0.3487150465656924,-0.07907670679384297,0.07994621483420403,-0.07182484956482757,-1.4525294268537345,-1.5309737706328772,0.39635553984823446,-1.3958175579218637,0.10630141001755278,-0.009349581424586879,0.5745933717118922,-0.21893537260906523,-0.2454667039714344,-0.1478049151015902,0.3403772073780239,1.2036037510543547,-0.4806691815964465,-0.3487150465656924,-0.05926838246689306,0.10526176520455116,-0.07717932495853884,0.06928071335803235,-0.14579928393662903,0,-0.10141376614259963,0.005588238464293497,0.3592420126423235,0.9698541778299943,-1.7446282490800071,-0.4929393792938335,0.49247671798408127,-0.3699861299838123,0.3707297036201165,0.6896225258783939,0.7253276006575662,-1.0739542746271948,0.7208441754803321,0.01375696961633981,0.4999562126522759,-0.3465906422898033,2.1586116240368405,1.4039003753015655,0.005091360157595908,0.5924725961944577,-0.39840740681020836,-0.9343592520374233,-0.31992273631756607,-0.180690814996093,0.1651137204751642,-0.4597883765045141,-0.4738424411999477,-0.0259600286085632,-0.11125469549117172,-0.23510646741024638,0.3187953364732402,0.23943207666198793,0.2464435781965406,0.6157359282281714,0.5826161858030482,-0.791629811728528,0.7776249250415663,-0.07832879098396107,-0.8417174998225715,-0.1401681270292854,-0.3402443667269217,0.41049065158874914,-0.7077837003059586,-0.9515653018907796,-0.9653454905163628,0.29876592263572244,-0.23510646741024638,-0.042838059381215064,-0.41807062449829513,0.4291142282475153,-0.013458978020490064,-0.12524795057053198,0,0.42438644939094283,0.16357107342423144,-0.6370245436195326,-0.45810817591180153,0.03257948542700487,0.10873723874065838,-0.10849663119619839,1.0298431908728636,-0.05936424179144531,0.18153201285825363,0.31731706317403113,0.13042271843253386,-0.437800038885986,-0.04525953968302805,0.16927291228536212,-0.015077241958173858,-0.2163116702726916,0.30816186519289335,-0.13990667541380988,-0.21715562087187817,-0.31412192126745325,-0.24253496599677526,0.31923165237637324,0.42148049419617256,-0.2177250534285621,0.5230367126938454,0.38128307676658657,-0.555853212739959,-0.09962412395678735,0.6412014375189236,0.17991067823659457,0.4168961600748415,-0.14352236543482433,-0.016808081341280916,0.07877643217263483,0.19883377853625495,-0.6575610502489732,-0.08891903501892,0.037962510937295725,-0.09011850323954447,-0.030260801929206278,0.12624274086001214,0.05309171444183849,0.3234719030448148,-0.0938127270224725,-0.22070234161950378,0.6412014375189236,0.11935134383155006,-0.17138400510887766,-0.38508832186445613,0.18630008154723318,0.4667971454128561,0,-0.44695093995422813,-0.07609100139041793,0.6675472046948728,-0.4938103570696349,-0.10967916018131851,0.4553399374939525,-0.5193976249377921,1,1],"pool":{"effortPower":1,"confidencePower":1},"spec":{"representation":"physical","weak4Only":true,"noStrong":true},"config":{"windowMs":2000,"burdenGate":0,"localL2":0.0003,"strongWeight":0,"source4Weight":1},"clip":6},"postprocess":{"physicalSupport":"both"},"evidence":{"allTrainingFit":true,"humanSixKeyAccuracy":null,"reportedAccuracySource":"matching nested outer study; this final fit is not an independent test","fineClassesValidated":false,"taxonomy":"five supported coarse morphologies; 4K source stamina means jump/handstream chordstream bucket"},"provenance":{"source":"research/rework/results/coarse-final-r1/4k/profile.json","selection":"all-data choice from repeated inner held-out predictions; not an outer winner","fitStatus":"small_projected_gradient"}}
 ;
 },
 function(module,exports,load){
-module.exports={
-  "classes": [
-    "jack",
-    "ln",
-    "speed",
-    "stamina",
-    "tech"
-  ],
-  "lambda": 1,
-  "threshold": 0.55,
-  "segmentLambda": 0.6666666666666666,
-  "evidenceLevel": "source-label-preserving projection surrogate, not human 6K labels",
-  "projection": "4→6 symmetric vacant-column embedding; 7→6 remove center column; source song groups retain original split",
-  "sort": {
-    "rcMax": 0.1,
-    "lnMin": 0.68
-  }
-}
+module.exports={"model":{"classes":["jack","chordstream","speed","tech","ln"],"keys":["npsPerKey","rowRate","chordFraction","multiFraction","singleFraction","lnHeadFraction","overlap","repeatFraction","cutReturn","chordChange","columnEntropy","handImbalance","sameHand","crossCut","logIoiSd","ioiChange","graceFraction","gridResidual","rowBpm","ioiCv","occupancy","minOccupancy","occupancySd","heldAtHead","lockFraction","releaseIndependence","releaseScatter","tailRate","shortHoldFraction","inverseGap","lnHeadOverlap","maskEntropy","trillFraction","rollFraction","effort","sustain","burstiness","activeFraction","peakExcess","repeatConcentration","runAsymmetry","runCoverage","regularity","regularAnchor","release:tailRatePerKey","release:headIsolation","release:sameFingerRecovery","release:tailAsynchrony","release:tailTimingVariability","release:heldOtherAtTail","release:sameHandOrder","release:releaseChordFraction","release:independentHeldRelease"],"mean":[3.8102854171185996,11.33435692763564,0.34828855536377584,0.5668077986916134,0.430485113760637,0.3239853674097052,0.17122592341062673,0.22872593378245,0.27786863357834696,0.5499626962182212,0.9693347721441289,0.06208813775274959,0.4311603873581525,0.1705784921589046,0.2609823884634247,0.18352309512190756,0.030240161621824278,0.08668648753339508,192.54365255266953,0.2813704117207267,0.18080405878888858,0.10123410969036599,0.061850005237880264,0.09850735464701804,0.3192485062790656,0.18325946868276102,0.15588244963185552,0.9178092768115409,0.31579442736293395,0.11658944857066052,0.01988728760559236,0.7887459141909564,0.015570024898991522,0.06408114378390901,5.122037501247164,0.5669826326694604,0.10661922032135285,0.992320710451858,0.05976049950630766,0.23828038374531713,0.054037596393355126,0.14636265125048945,0.7460133266622853,0.041372393537714415,0.9178092768115409,0.08121237122286377,0.3265305103459651,0.13381569855607048,0.10873162285206922,0.19010515171718126,0.0005169173310446513,0.15110384504602684,0.04064046187076548],"scale":[2.005947991249914,5.815095405189197,0.13548036575630326,0.2964832601824913,0.2958602476264529,0.38653115911499597,0.23846581000613018,0.30091047021990774,0.1872892576608385,0.1429564555514492,0.09270963606277345,0.09147279033342574,0.1105740814390408,0.09993093542727277,0.23149490455690075,0.23496768356427553,0.0733905922031038,0.1104879102169742,109.39048298521901,0.2632114788068615,0.22400645300166316,0.1679937483014407,0.08569614207939032,0.1454634642613366,0.3959140313316175,0.30022528695516587,0.2085203364045078,1.3120336736313871,0.3810616619798569,0.15570355783541254,0.07615138964646483,0.14349769583244734,0.057064954738114744,0.11423614061166927,2.9691823948693123,0.17423600956538085,0.14807178895040737,0.0716534511379821,0.07158439722188445,0.31709016809649704,0.1084299495915473,0.15511796721956134,0.17036564497369258,0.04768206778773865,1.3120336736313871,0.14413406622000763,0.3349559723998116,0.22770018887010682,0.15851342106099708,0.2517562367040918,0.003339600891529345,0.1765429859865617,0.09010556466617164],"theta":[-0.1454800971112197,-0.44462168766181026,0.2681353558003216,0.4105739627595997,-0.39979662108167197,-0.20063238696125443,0.7786883143938137,0.8286837675926502,0.19024752987513685,-0.02440222916614501,-0.07719198506457405,-0.0027578450833402827,0.09132473156377048,-0.19239126296704698,-0.1467249834032028,-0.25414688553375653,-0.009453952304081383,-0.004796282450037915,-0.1599661595082081,-0.06555426064740894,-0.21144989903606368,-0.07609206531502259,-0.1944914079737374,0.018054928666679723,-0.013292994366145616,0.23416612148135962,0.21127973385808646,-0.15582654504868382,-0.40825044542283034,-0.19041633646264378,-0.17743438155119903,0.21528167793599629,-0.08106761628662969,0.345249985375474,0.1437849651849156,-0.3078211484855292,0.1404620950702318,0.10833556192540615,0.09041891917113073,0.026601071736976675,-0.044934308644021675,0.01319786006932443,-0.08961512428735632,0.002937608294207289,-0.15582654504868382,0.12811946118925593,-0.03741199606303431,0.00956408470618266,0.11551736780692219,0.16648676223883702,0.13264640549273124,-0.13922620337503905,0.013728703135495025,0.3773682733325688,0.011142365961443594,-0.11405374610928921,0.14591485634042248,-0.14575215576320544,-0.15663379109180253,-0.806038859475758,-1.0127775136378685,0.4156979624670546,0.5713352110963614,-0.034141633723495754,-0.2586970991698689,0.2514802032544105,-0.14325784786994308,-0.4494114468067213,-0.5129431813000794,-0.33937941626963547,-0.7557514545525866,0.07922485182535914,0.45449347595855194,-0.08637620915779501,-0.033689792734916034,0.113248229254004,0.11587547098807227,0.13371977375232597,-0.1002860801714474,-0.027032981647146632,-0.13415358565425808,0.07949262552911011,-0.2990308088765735,0.00784395195876104,0.33196722182662525,-0.10186875818290955,-0.29178855098875917,-0.13651701073755038,0.17051864032444375,0.2343581004268138,0.05013072732842159,-0.016447032528010115,-0.2533751237534824,0.14451382383992242,-0.06949231502041879,0.059488665909612166,-0.045077339130500084,-0.13415358565425808,-0.05871278459875778,0.11527396248237518,-0.07206364010513615,-0.41095627607119084,-0.03462332367113953,-0.06805293953920052,-0.07733973932973516,-0.08103840733615081,-0.12625034176366148,0.3626714405855717,-0.2104248189841919,-0.3761534063972092,0.38672923227039446,-0.18798248420551958,-0.30624585943966376,-0.2641191687890604,-1.287758819644682,-0.24626026919660993,0.18389175940481717,0.2367498917153311,-0.3626115806792774,0.32092065359366473,-0.08422970635437355,-0.5250769890495481,-0.1635426014046047,0.6957447285045496,-0.01325919762553399,-0.0653470379823504,-0.09722655459290154,-0.07920797938327898,-0.09854283856898255,-0.15973758933885132,-0.1865582152271464,-0.09069117332488381,-0.04274269267762393,-0.08796491146544577,-0.04676127357452833,-0.06816856584492753,-0.002612621348028928,-0.5522471583884804,-0.31544457741761267,0.358375001314926,-0.20973938056156277,0.1663838791209164,0.001178502125869543,-0.012061626985216928,-0.056053205295918763,-0.19292082469880514,0.005813374313707405,-0.015646641299178247,0.6651961857249507,-0.01802239377017999,-0.08796491146544577,-0.041741321212536146,-0.08573979111208253,-0.17127980740845425,0.007506412299071962,-0.057559177996907185,-0.121091804757656,0.06697332233633109,-0.04426219596536523,0.20935841077985806,0.29963369241125404,-0.0028511643053623576,-0.44584774905496743,0.4700764421968451,-0.19083684637139783,0.2900092626577671,0.30426210859959685,0.3873099688911803,-0.3514071466519548,0.1989081358330814,0.16406983137015643,-0.19107278781769185,-0.05882406067326246,0.9409752269328716,0.7077583977280545,0.1111498388654754,0.20152173818435223,-0.06348981376521484,-0.027879959761823607,-0.1402256351704245,-0.03908582147556566,-0.1647302798022989,-0.27557940265108105,-0.5400833278702967,0.13362948603822528,-0.5733773949446901,-0.12278036648141817,0.2361557609367033,0.2704736469671332,0.04588643338136311,-0.022351293495543285,0.5148633550919419,-0.4595220364041804,0.29891534745614656,-0.07475937353383658,-0.38056045597376137,-0.004054771391095623,0.02908930283510649,0.27403374488500915,-0.0741392898746226,-0.03182635116335018,-0.6706618382347476,0.07379937896705736,-0.12278036648141817,0.08099864235599302,-0.3093587108357274,0.08217579927940714,-0.20212502034360202,-0.20728894017954985,-0.04318730437318643,0.052276433944173833,0.033847209158924196,-0.3149962452375214,-0.22882581129641666,0.05919437359850586,0.2655123363521375,-0.3112568976223638,0.7360855086299726,0.04358714186384939,0.1439508062346935,0.29450335841131,0.050734433918347914,-0.27146627644982607,-0.13936477883227458,0.21087943367879025,0.0735525179165928,-0.26060909036857577,0.5844086581553315,0.4012261311128499,-0.1367187296862714,0.15749031907359165,-0.2957122175669673,0.5352782979571813,0.22807565890878168,0.3445162970910243,0.30138659233518195,0.6062147637112515,-0.17681835402323384,0.43187333541138156,0.5007254086497986,0.13936333253153238,0.2871420642170144,0.12631661755910967,0.027349552121400236,-0.016482403204775065,0.047685600702517095,-0.09644392134195243,0.04567800257400047,0.004561758350847531,-0.1423498908775164,-0.04700798418230698,0.1456611318303018,-0.031253599634999504,0.1037674474136104,0.03559211088754428,-0.01363725436058482,0.5007254086497986,-0.10866399773396246,0.3172365355284719,0.15160356352800142,0.49005751630879085,0.13298467960877033,0.09968564317731474,0.09731618642425055,0.0777246910071021,0.43065012290210475,0.25582436664233904,-2.9122713541687864,0.039838509881614095,2.1859583547427826,1,1],"pool":{"effortPower":1,"confidencePower":1},"spec":{"representation":"physical"},"config":{"windowMs":2000,"burdenGate":0.2,"localL2":0.003,"strongWeight":0.5,"source4Weight":0.75},"clip":6},"postprocess":{"physicalSupport":"both"},"evidence":{"allTrainingFit":true,"humanSixKeyAccuracy":null,"reportedAccuracySource":"matching nested outer study; this final fit is not an independent test","fineClassesValidated":false,"taxonomy":"five supported coarse morphologies; 4K source stamina means jump/handstream chordstream bucket"},"provenance":{"source":"research/rework/results/coarse-final-r1/6k/profile.json","selection":"all-data choice from repeated inner held-out predictions; not an outer winner","fitStatus":"small_projected_gradient"}}
+;
+},
+function(module,exports,load){
+module.exports={"model":{"variant":"geometry3","keys":["a","b","ab"],"mean":[0.15012549940519423,0.44080577995019266,0.07817850659787497],"scale":[0.13468251054135888,0.18712317185882127,0.09852224582655227],"delta":[0.1296491969099986,0.07437107227403514,0.0036915451859722355,0.2301577721715137],"clip":6},"policy":{"partition":0,"head":0,"burdenGate":0.3,"smoothing":"coherent","mode":"normalized","effortPower":0,"confidencePower":0,"dominantShare":0.65,"mixShare":0.07,"secondRel":0.9,"twoTagMaxShare":0.55,"familyThresholds":[0.3,0.8],"minEvidence":0.25,"minimumDiversity":0,"lnRatio":0.35,"scorer":"model","excludeVibroFromMix":true},"extraGate":"ln_protected","evidence":{"historicalPriorExposure":"unknown","allTrainingFit":true,"defaultReplacementAccepted":false,"meaning":"all-data fit for explicit opt-in use, not a new independent test score"},"provenance":{"source":"research/rework/results/ln-final-r1/profile.json","selection":"all-data choice from repeated inner held-out predictions; not an outer winner","fitStatus":"small_gradient"}}
 ;
 }],cache={};
 function load(id){if(!cache[id]){const m=cache[id]={exports:{}};modules[id](m,m.exports,load);}return cache[id].exports;}

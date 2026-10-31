@@ -1,0 +1,32 @@
+{
+  "outerOpened": false,
+  "candidate": 8005,
+  "config": {
+    "modelId": 21,
+    "lnRatio": 0.45,
+    "scorer": "model",
+    "smoothing": "coherent",
+    "effortPower": 1.0,
+    "confidencePower": 0.0,
+    "dominantShare": 0.65,
+    "mixShare": 0.07,
+    "secondRel": 0.75,
+    "twoTagMaxShare": 0.65,
+    "familyThresholds": [
+      0.3,
+      0.8
+    ],
+    "minEvidence": 0.25,
+    "minimumDiversity": 0.0,
+    "mode": "normalized",
+    "partition": 0,
+    "head": 0,
+    "burdenGate": 0.0,
+    "excludeVibroFromMix": true
+  },
+  "inner": {
+    "joint": 0.4907648681317276,
+    "mapMacroF1": 0.4301019160351788,
+    "segmentChartAccuracy": 0.5514278202282764
+  }
+}

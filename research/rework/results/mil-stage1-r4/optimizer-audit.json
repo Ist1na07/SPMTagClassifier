@@ -1,0 +1,29 @@
+{
+  "inner": {
+    "fits": 5904,
+    "headStatuses": {
+      "small_gradient_reused": 1209,
+      "train_prediction_stable": 3078,
+      "small_gradient": 1617
+    },
+    "localStageStatuses": {
+      "small_gradient": 1152
+    },
+    "unaccepted": [],
+    "maxReportedGradient": 0.0026673880743193178
+  },
+  "outer": {
+    "fits": 66,
+    "headStatuses": {
+      "train_prediction_stable": 36,
+      "small_gradient": 30
+    },
+    "localStageStatuses": {
+      "small_gradient": 12
+    },
+    "unaccepted": [],
+    "maxReportedGradient": 0.0006868258066829383
+  },
+  "accepted": true,
+  "meaning": "Prediction/loss stability is an allowed training-only stopping condition, not a stationary-point claim."
+}

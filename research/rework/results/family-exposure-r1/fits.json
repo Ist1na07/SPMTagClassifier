@@ -1,0 +1,2580 @@
+[
+  {
+    "optimizer": "gd500",
+    "held": -1,
+    "fit": {
+      "rc": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.8261995205451343,
+        "gradientMax": 0.013903499488961569,
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 37,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.6081570272664016,
+        "gradientMax": 0.013243245780587488,
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 89,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125700.0,
+          "accuracy": 0.6925619834710743,
+          "interiorAccuracy": 0.7700787401574803,
+          "partialLabelNll": 8.398788222421802,
+          "breakRecall": 0.803409090909091,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 181546.5,
+          "accuracy": 0.75644375,
+          "interiorAccuracy": 0.8062345862257947,
+          "partialLabelNll": 3.2383803095999353,
+          "breakRecall": 0.8317777604936352,
+          "nonBreakAccuracy": 0.7420182793937318
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 156567.5,
+          "accuracy": 0.6510489219701853,
+          "interiorAccuracy": 0.6714490001640997,
+          "partialLabelNll": 4.596064201245236,
+          "breakRecall": 0.9882035875231951,
+          "nonBreakAccuracy": 0.5473083197389886
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 265960.0,
+          "accuracy": 0.6523776117426008,
+          "interiorAccuracy": 0.7195797474437693,
+          "partialLabelNll": 5.858030509808549,
+          "breakRecall": 0.4722286493661483,
+          "nonBreakAccuracy": 0.6978169989648637
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 104824.5,
+          "accuracy": 0.49697287200250323,
+          "interiorAccuracy": 0.5463830198402474,
+          "partialLabelNll": 6.520418845251664,
+          "breakRecall": 0.4004118891239007,
+          "nonBreakAccuracy": 0.5230978670088127
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 171965.0,
+          "accuracy": 0.8182808797358128,
+          "interiorAccuracy": 0.8325732164500944,
+          "partialLabelNll": 5.190625130851878,
+          "breakRecall": 0.7661623425715919,
+          "nonBreakAccuracy": 0.8738691342485151
+        }
+      ],
+      "chartMeanAccuracy": 0.6779476698203627,
+      "durationAccuracy": 0.6752092748381177,
+      "meanInteriorAccuracy": 0.724383051713581,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.01538487104917441,
+            "confidence": 0.27380529099246054,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.07640312814052577,
+            "confidence": 0.3623758673582496,
+            "accuracy": 0.42244928280864497
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.19442333310483254,
+            "confidence": 0.4470704805407456,
+            "accuracy": 0.4578692522193991
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.10808860186519649,
+            "confidence": 0.5401363417069085,
+            "accuracy": 0.46896682518865096
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.08287045486703801,
+            "confidence": 0.6481067239087026,
+            "accuracy": 0.7853735018214552
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.14688270374935214,
+            "confidence": 0.7592751412732291,
+            "accuracy": 0.724639394428219
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.08756346272120394,
+            "confidence": 0.8254703780386198,
+            "accuracy": 0.7379867157127851
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.2883398601233183,
+            "confidence": 0.9986208952964724,
+            "accuracy": 0.7766354303923165
+          }
+        ],
+        "ece": 0.10672943717974975,
+        "brier": 0.5579162150346427
+      },
+      "largestErrors": [
+        [
+          "ln wildcard -> technical",
+          41905.0
+        ],
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> technical",
+          28812.0
+        ],
+        [
+          "break -> coordination",
+          23079.5
+        ],
+        [
+          "coordination -> density",
+          22977.0
+        ],
+        [
+          "wildcard -> break",
+          19725.0
+        ],
+        [
+          "ln wildcard -> density",
+          17602.0
+        ],
+        [
+          "break -> inverse",
+          14942.0
+        ],
+        [
+          "density -> coordination",
+          14343.0
+        ],
+        [
+          "fast chordstream|wildcard -> dense chordstream",
+          14087.0
+        ],
+        [
+          "break -> density",
+          12120.5
+        ],
+        [
+          "break -> fast chordstream",
+          11793.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "break -> release",
+          10168.5
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "release -> coordination",
+          9208.0
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          9075.0
+        ],
+        [
+          "chordjack -> fast chordstream",
+          8596.0
+        ],
+        [
+          "inverse -> break",
+          8551.5
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "gd500",
+    "held": 0,
+    "fit": {
+      "rc": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.8292423138063614,
+        "gradientMax": 0.014164912210632392,
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 30,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.5982868896828734,
+        "gradientMax": 0.014100123048880135,
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 81,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 117337.5,
+          "accuracy": 0.6464876033057851,
+          "interiorAccuracy": 0.7283464566929134,
+          "partialLabelNll": 8.459561021116626,
+          "breakRecall": 0.803409090909091,
+          "nonBreakAccuracy": 0.6116161616161616
+        }
+      ],
+      "chartMeanAccuracy": 0.6464876033057851,
+      "durationAccuracy": 0.6464876033057851,
+      "meanInteriorAccuracy": 0.7283464566929134,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.06903765690376569,
+            "confidence": 0.2794272102479381,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.04131799163179917,
+            "confidence": 0.3487276562309797,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.12238493723849372,
+            "confidence": 0.4587382547572424,
+            "accuracy": 0.42735042735042733
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.12160041841004184,
+            "confidence": 0.5293842833183091,
+            "accuracy": 0.546236559139785
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.15010460251046026,
+            "confidence": 0.630594994608648,
+            "accuracy": 0.7979094076655052
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.1574267782426778,
+            "confidence": 0.7653673593975711,
+            "accuracy": 0.823920265780731
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.3378661087866109,
+            "confidence": 1.0,
+            "accuracy": 0.5472136222910217
+          }
+        ],
+        "ece": 0.22696335009433025,
+        "brier": 0.7171666287431281
+      },
+      "largestErrors": [
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "ln wildcard -> break",
+          8925.0
+        ],
+        [
+          "technical -> coordination",
+          7200.0
+        ],
+        [
+          "inverse -> break",
+          7200.0
+        ],
+        [
+          "fast chordstream -> break",
+          5062.5
+        ],
+        [
+          "wildcard -> tech",
+          4275.0
+        ],
+        [
+          "ln wildcard -> technical",
+          4087.5
+        ],
+        [
+          "chordjack -> tech",
+          2400.0
+        ],
+        [
+          "chordjack -> dense chordstream",
+          2400.0
+        ],
+        [
+          "break -> tech",
+          1800.0
+        ],
+        [
+          "dense chordstream -> fast chordstream",
+          1200.0
+        ],
+        [
+          "break -> fast chordstream",
+          1200.0
+        ],
+        [
+          "chordjack -> coordination",
+          1200.0
+        ],
+        [
+          "break -> technical",
+          1162.5
+        ],
+        [
+          "break -> dense chordstream",
+          1050.0
+        ],
+        [
+          "dense chordstream -> coordination",
+          900.0
+        ],
+        [
+          "fast chordstream -> inverse",
+          712.5
+        ],
+        [
+          "ln wildcard -> tech",
+          675.0
+        ],
+        [
+          "break -> chordjack",
+          525.0
+        ],
+        [
+          "tech -> dense chordstream",
+          525.0
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "gd500",
+    "held": 1,
+    "fit": {
+      "rc": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.8261995205451343,
+        "gradientMax": 0.013903499488961569,
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 37,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.6038691746505944,
+        "gradientMax": 0.013394058561430899,
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 67,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 125603.5,
+          "accuracy": 0.5233479166666667,
+          "interiorAccuracy": 0.4954386645962733,
+          "partialLabelNll": 4.126452087678148,
+          "breakRecall": 0.8317777604936352,
+          "nonBreakAccuracy": 0.46428766463617455
+        }
+      ],
+      "chartMeanAccuracy": 0.5233479166666667,
+      "durationAccuracy": 0.5233479166666667,
+      "meanInteriorAccuracy": 0.4954386645962733,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.14081967320218736,
+            "confidence": 0.3740957904217233,
+            "accuracy": 0.8184559710494571
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.13424713022912435,
+            "confidence": 0.4422149956823904,
+            "accuracy": 0.27932158847576405
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.23500107800158107,
+            "confidence": 0.5338645076619997,
+            "accuracy": 0.507471607890018
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.11787457288270689,
+            "confidence": 0.644178716446227,
+            "accuracy": 0.21846247644385325
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.030507444744252293,
+            "confidence": 0.7809136415214291,
+            "accuracy": 0.9303994003640647
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.10944329385016431,
+            "confidence": 0.8478758038472669,
+            "accuracy": 0.6269289317374563
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.23210680708998374,
+            "confidence": 1.0,
+            "accuracy": 0.9030582804385459
+          }
+        ],
+        "ece": 0.19206852270706604,
+        "brier": 0.5341038852090666
+      },
+      "largestErrors": [
+        [
+          "technical|ln wildcard -> density",
+          39298.5
+        ],
+        [
+          "ln wildcard -> density",
+          20701.5
+        ],
+        [
+          "technical -> density",
+          14808.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "coordination -> density",
+          7347.0
+        ],
+        [
+          "density -> coordination",
+          4820.5
+        ],
+        [
+          "technical|ln wildcard -> break",
+          4783.5
+        ],
+        [
+          "break -> inverse",
+          3654.5
+        ],
+        [
+          "technical -> break",
+          2219.0
+        ],
+        [
+          "density -> technical",
+          1951.5
+        ],
+        [
+          "break -> technical",
+          1770.0
+        ],
+        [
+          "inverse -> break",
+          1225.0
+        ],
+        [
+          "break -> density",
+          1064.0
+        ],
+        [
+          "density -> ln wildcard",
+          880.5
+        ],
+        [
+          "inverse|density -> ln wildcard",
+          497.5
+        ],
+        [
+          "technical -> ln wildcard",
+          114.5
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "gd500",
+    "held": 2,
+    "fit": {
+      "rc": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.7479017238726102,
+        "gradientMax": 0.01239076277169212,
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 20,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.6081570272664016,
+        "gradientMax": 0.013243245780587488,
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 89,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 94352.5,
+          "accuracy": 0.39234255774788446,
+          "interiorAccuracy": 0.3986215626977987,
+          "partialLabelNll": 4.926869986266323,
+          "breakRecall": 0.9882035875231951,
+          "nonBreakAccuracy": 0.20899945622620988
+        }
+      ],
+      "chartMeanAccuracy": 0.39234255774788446,
+      "durationAccuracy": 0.39234255774788446,
+      "meanInteriorAccuracy": 0.3986215626977987,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.04554991166077739,
+            "confidence": 0.3825584187734809,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.44695505742049474,
+            "confidence": 0.4293902799252522,
+            "accuracy": 0.474784595905006
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.04948376766784452,
+            "confidence": 0.504762945300071,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.007867712014134276,
+            "confidence": 0.6688089667006769,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.4501435512367491,
+            "confidence": 1.0,
+            "accuracy": 0.6858518336808537
+          }
+        ],
+        "ece": 0.20936606114196438,
+        "brier": 0.6958004465676022
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          39262.5
+        ],
+        [
+          "wildcard|dense chordstream -> speed",
+          23575.0
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "dense chordstream|wildcard -> tech",
+          11850.0
+        ],
+        [
+          "wildcard -> tech",
+          9150.0
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          9075.0
+        ],
+        [
+          "wildcard|dense chordstream -> tech",
+          7250.0
+        ],
+        [
+          "dense chordstream|wildcard -> speed",
+          7090.0
+        ],
+        [
+          "chordjack -> fast chordstream",
+          6900.0
+        ],
+        [
+          "chordjack -> break",
+          5400.0
+        ],
+        [
+          "chordjack -> minijack",
+          3300.0
+        ],
+        [
+          "dense chordstream -> speed",
+          1425.0
+        ],
+        [
+          "dense chordstream -> break",
+          1012.5
+        ],
+        [
+          "break -> speed",
+          610.0
+        ],
+        [
+          "dense chordstream|wildcard -> break",
+          525.0
+        ],
+        [
+          "wildcard -> fast chordstream",
+          450.0
+        ],
+        [
+          "break -> fast chordstream",
+          57.5
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "gd500",
+    "held": 3,
+    "fit": {
+      "rc": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.8282992006145143,
+        "gradientMax": 0.013808432873665307,
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 26,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.5925603483162311,
+        "gradientMax": 0.01300477208277699,
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 60,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 216357.0,
+          "accuracy": 0.5307056058948484,
+          "interiorAccuracy": 0.5798375520889322,
+          "partialLabelNll": 6.0640458428427495,
+          "breakRecall": 0.4722286493661483,
+          "nonBreakAccuracy": 0.5454553831693599
+        }
+      ],
+      "chartMeanAccuracy": 0.5307056058948484,
+      "durationAccuracy": 0.5307056058948484,
+      "meanInteriorAccuracy": 0.5798375520889322,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.20066147057102648,
+            "confidence": 0.35087267632558916,
+            "accuracy": 0.22244133760992005
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.20784279911680745,
+            "confidence": 0.45553923672814917,
+            "accuracy": 0.23524661816781
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.044589213841610444,
+            "confidence": 0.5903029414875505,
+            "accuracy": 0.36499879139473046
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.11179714902488522,
+            "confidence": 0.6537778716645046,
+            "accuracy": 0.6367755619215513
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.2570927937277316,
+            "confidence": 0.755551653874541,
+            "accuracy": 0.6686150971420357
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.05811887377552497,
+            "confidence": 0.8123685221812088,
+            "accuracy": 0.3254649499284692
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.11989769994241387,
+            "confidence": 1.0,
+            "accuracy": 0.9959804286686615
+          }
+        ],
+        "ece": 0.13463538730585545,
+        "brier": 0.6868799125254763
+      },
+      "largestErrors": [
+        [
+          "break -> technical",
+          23286.0
+        ],
+        [
+          "chordjack -> dense chordstream",
+          21062.0
+        ],
+        [
+          "release -> coordination",
+          15625.0
+        ],
+        [
+          "fast chordstream|wildcard -> dense chordstream",
+          14087.0
+        ],
+        [
+          "release -> inverse",
+          9433.5
+        ],
+        [
+          "chordjack -> minijack",
+          8750.0
+        ],
+        [
+          "coordination -> density",
+          8658.0
+        ],
+        [
+          "density -> inverse",
+          8011.5
+        ],
+        [
+          "ln wildcard -> inverse",
+          7800.0
+        ],
+        [
+          "break -> fast chordstream",
+          7501.5
+        ],
+        [
+          "break -> density",
+          5798.5
+        ],
+        [
+          "density -> ln wildcard",
+          5511.0
+        ],
+        [
+          "release -> density",
+          5298.0
+        ],
+        [
+          "coordination|chordjack -> density",
+          4542.0
+        ],
+        [
+          "break -> inverse",
+          4447.5
+        ],
+        [
+          "ln wildcard -> dense chordstream",
+          4236.0
+        ],
+        [
+          "dense chordstream|wildcard -> minijack",
+          4116.0
+        ],
+        [
+          "speed -> chordjack",
+          3239.0
+        ],
+        [
+          "ln wildcard -> chordjack",
+          3131.0
+        ],
+        [
+          "release -> technical",
+          2958.0
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "gd500",
+    "held": 4,
+    "fit": {
+      "rc": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.8261995205451343,
+        "gradientMax": 0.013903499488961569,
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 37,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.582018124871142,
+        "gradientMax": 0.013613443611802278,
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 72,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 80365.5,
+          "accuracy": 0.3810127722518798,
+          "interiorAccuracy": 0.40421283174439576,
+          "partialLabelNll": 6.145760424705919,
+          "breakRecall": 0.4904708894578649,
+          "nonBreakAccuracy": 0.3513984013107565
+        }
+      ],
+      "chartMeanAccuracy": 0.3810127722518798,
+      "durationAccuracy": 0.3810127722518798,
+      "meanInteriorAccuracy": 0.40421283174439576,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.06790510890667802,
+            "confidence": 0.28954881646464287,
+            "accuracy": 1.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.2176883593521449,
+            "confidence": 0.3823816499467309,
+            "accuracy": 0.3840054732263936
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.16048775298529294,
+            "confidence": 0.4339182137278839,
+            "accuracy": 0.173170933797332
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.08658280364883914,
+            "confidence": 0.5639085694578454,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.026371639052152868,
+            "confidence": 0.6401861561739186,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.1949815164490306,
+            "confidence": 0.7556287031892716,
+            "accuracy": 0.3310373047807406
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.085104119571288,
+            "confidence": 0.8263230377319045,
+            "accuracy": 0.7538437500000001
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.16087870003457355,
+            "confidence": 1.0,
+            "accuracy": 0.7283442438669576
+          }
+        ],
+        "ece": 0.28881042625770653,
+        "brier": 0.8010784933474118
+      },
+      "largestErrors": [
+        [
+          "ln wildcard|density -> technical",
+          22489.0
+        ],
+        [
+          "ln wildcard -> technical",
+          19929.5
+        ],
+        [
+          "technical -> density",
+          10787.0
+        ],
+        [
+          "release -> technical",
+          10786.0
+        ],
+        [
+          "coordination -> density",
+          9806.5
+        ],
+        [
+          "density -> coordination",
+          9522.5
+        ],
+        [
+          "break -> inverse",
+          6840.0
+        ],
+        [
+          "inverse -> density",
+          6615.5
+        ],
+        [
+          "break -> release",
+          6123.5
+        ],
+        [
+          "ln wildcard -> density",
+          6109.5
+        ],
+        [
+          "break -> density",
+          5645.0
+        ],
+        [
+          "release -> break",
+          5393.0
+        ],
+        [
+          "break -> fast chordstream",
+          3034.0
+        ],
+        [
+          "ln wildcard -> break",
+          2697.0
+        ],
+        [
+          "density -> technical",
+          2570.0
+        ],
+        [
+          "break -> technical",
+          1243.0
+        ],
+        [
+          "coordination -> release",
+          421.5
+        ],
+        [
+          "inverse -> ln wildcard",
+          421.5
+        ],
+        [
+          "inverse -> break",
+          126.5
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "gd500",
+    "held": 5,
+    "fit": {
+      "rc": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.8268669614237164,
+        "gradientMax": 0.013895426444694213,
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 35,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "policy": "prespecified source-style GD500/lr.08",
+        "epochs": 500,
+        "loss": 0.6088753324454957,
+        "gradientMax": 0.013069677210740076,
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 76,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 129119.0,
+          "accuracy": 0.6144018196179944,
+          "interiorAccuracy": 0.6220368125828001,
+          "partialLabelNll": 5.413546037761213,
+          "breakRecall": 0.7661623425715919,
+          "nonBreakAccuracy": 0.4525380560909413
+        }
+      ],
+      "chartMeanAccuracy": 0.6144018196179944,
+      "durationAccuracy": 0.6144018196179944,
+      "meanInteriorAccuracy": 0.6220368125828001,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.056595951582772475,
+            "confidence": 0.37569833824951,
+            "accuracy": 0.4312714776632302
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.16082606136602093,
+            "confidence": 0.478621611114028,
+            "accuracy": 0.17808611526588805
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.14207334237531027,
+            "confidence": 0.5632930974724643,
+            "accuracy": 0.7357433625130589
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.07411520843462907,
+            "confidence": 0.6432080552580556,
+            "accuracy": 1.0
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.13960385904752157,
+            "confidence": 0.7759648074021842,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.42678557719374566,
+            "confidence": 1.0,
+            "accuracy": 0.9965462449407885
+          }
+        ],
+        "ece": 0.2122251441505165,
+        "brier": 0.44669200538740805
+      },
+      "largestErrors": [
+        [
+          "coordination -> technical",
+          39442.5
+        ],
+        [
+          "break -> coordination",
+          16385.0
+        ],
+        [
+          "break -> technical",
+          8294.5
+        ],
+        [
+          "coordination|density -> technical",
+          6635.0
+        ],
+        [
+          "chordjack|fast chordstream -> tech",
+          2942.0
+        ],
+        [
+          "chordjack|fast chordstream -> break",
+          2827.0
+        ],
+        [
+          "chordjack|fast chordstream -> coordination",
+          1615.0
+        ],
+        [
+          "coordination -> density",
+          1000.0
+        ],
+        [
+          "chordjack -> dense chordstream",
+          846.0
+        ],
+        [
+          "break -> tech",
+          346.5
+        ],
+        [
+          "coordination -> break",
+          288.0
+        ],
+        [
+          "break -> density",
+          211.5
+        ],
+        [
+          "break -> dense chordstream",
+          125.0
+        ],
+        [
+          "chordjack -> technical",
+          77.0
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "converged",
+    "held": -1,
+    "fit": {
+      "rc": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.6456444581471399,
+            "gradientMax": 1.28042478920998e-07,
+            "evaluations": 194
+          }
+        ],
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 37,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.4781874446417257,
+            "gradientMax": 1.4602622695205573e-07,
+            "evaluations": 212
+          }
+        ],
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 89,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 132750.0,
+          "accuracy": 0.731404958677686,
+          "interiorAccuracy": 0.8110236220472441,
+          "partialLabelNll": 7.1253145703309455,
+          "breakRecall": 0.7988636363636363,
+          "nonBreakAccuracy": 0.7164141414141414
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 203051.0,
+          "accuracy": 0.8460458333333334,
+          "interiorAccuracy": 0.906272835221045,
+          "partialLabelNll": 2.3111566803520702,
+          "breakRecall": 0.6646314588680615,
+          "nonBreakAccuracy": 0.8807842962036251
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 160017.5,
+          "accuracy": 0.6653949310767824,
+          "interiorAccuracy": 0.687624539934829,
+          "partialLabelNll": 4.561860042549378,
+          "breakRecall": 0.9882035875231951,
+          "nonBreakAccuracy": 0.566068515497553
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 278115.0,
+          "accuracy": 0.6821928090306566,
+          "interiorAccuracy": 0.7484918712810558,
+          "partialLabelNll": 5.92348767806629,
+          "breakRecall": 0.4722286493661483,
+          "nonBreakAccuracy": 0.7351525520562967
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 143630.0,
+          "accuracy": 0.680949716962347,
+          "interiorAccuracy": 0.7383792836897707,
+          "partialLabelNll": 6.388760763638176,
+          "breakRecall": 0.4004118891239007,
+          "nonBreakAccuracy": 0.7568504496689978
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 171965.0,
+          "accuracy": 0.8182808797358128,
+          "interiorAccuracy": 0.8325732164500944,
+          "partialLabelNll": 5.134881860772448,
+          "breakRecall": 0.7661623425715919,
+          "nonBreakAccuracy": 0.8738691342485151
+        }
+      ],
+      "chartMeanAccuracy": 0.7373781881361031,
+      "durationAccuracy": 0.7308627308664203,
+      "meanInteriorAccuracy": 0.7873942281040064,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.025760475611376378,
+            "confidence": 0.3414071008109946,
+            "accuracy": 0.7505896046900009
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.0758683438343075,
+            "confidence": 0.47117352871060414,
+            "accuracy": 0.3939638858585049
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.08410683009804926,
+            "confidence": 0.5570315189181746,
+            "accuracy": 0.5935572606470112
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.15405578261634303,
+            "confidence": 0.6397101238026046,
+            "accuracy": 0.5946972452123113
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.15146473070598965,
+            "confidence": 0.7554490709813231,
+            "accuracy": 0.5997726229615635
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.2290829451326944,
+            "confidence": 0.8446046365133363,
+            "accuracy": 0.8130594968039132
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.27961730762188136,
+            "confidence": 0.9968338071404149,
+            "accuracy": 0.8107473273132864
+          }
+        ],
+        "ece": 0.10924876903556291,
+        "brier": 0.5210058736671312
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> technical",
+          39456.0
+        ],
+        [
+          "break -> coordination",
+          23079.5
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "break -> inverse",
+          16105.5
+        ],
+        [
+          "coordination -> density",
+          14972.5
+        ],
+        [
+          "fast chordstream|wildcard -> dense chordstream",
+          14087.0
+        ],
+        [
+          "break -> density",
+          12120.5
+        ],
+        [
+          "break -> fast chordstream",
+          11793.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "density -> technical",
+          10371.5
+        ],
+        [
+          "density -> coordination",
+          9522.5
+        ],
+        [
+          "release -> coordination",
+          9414.0
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "chordjack -> fast chordstream",
+          8596.0
+        ],
+        [
+          "density -> inverse",
+          8011.5
+        ],
+        [
+          "chordjack -> dense chordstream",
+          7210.0
+        ],
+        [
+          "technical -> coordination",
+          7200.0
+        ],
+        [
+          "technical -> density",
+          7119.0
+        ],
+        [
+          "coordination -> technical",
+          6640.5
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "converged",
+    "held": 0,
+    "fit": {
+      "rc": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.6465860065911171,
+            "gradientMax": 9.871534930030123e-08,
+            "evaluations": 306
+          }
+        ],
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 30,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.4661362308166779,
+            "gradientMax": 1.3744229991169117e-07,
+            "evaluations": 281
+          }
+        ],
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 81,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 109725.0,
+          "accuracy": 0.6045454545454545,
+          "interiorAccuracy": 0.6874015748031496,
+          "partialLabelNll": 5.710226151474211,
+          "breakRecall": 0.7988636363636363,
+          "nonBreakAccuracy": 0.5613636363636364
+        }
+      ],
+      "chartMeanAccuracy": 0.6045454545454545,
+      "durationAccuracy": 0.6045454545454545,
+      "meanInteriorAccuracy": 0.6874015748031496,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.23692468619246862,
+            "confidence": 0.44454816521995333,
+            "accuracy": 0.40066225165562913
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.03634937238493724,
+            "confidence": 0.5340473290120292,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.06276150627615062,
+            "confidence": 0.6997913199184594,
+            "accuracy": 0.9750000000000001
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.21652719665271966,
+            "confidence": 0.7591499431722905,
+            "accuracy": 0.5120772946859904
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.22803347280334726,
+            "confidence": 0.841922293504323,
+            "accuracy": 0.5688073394495413
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.21914225941422594,
+            "confidence": 1.0,
+            "accuracy": 0.8389021479713603
+          }
+        ],
+        "ece": 0.198214933958657,
+        "brier": 0.657539325744526
+      },
+      "largestErrors": [
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "ln wildcard -> inverse",
+          8925.0
+        ],
+        [
+          "tech|technical -> fast chordstream",
+          7350.0
+        ],
+        [
+          "technical -> coordination",
+          7200.0
+        ],
+        [
+          "inverse -> release",
+          7200.0
+        ],
+        [
+          "fast chordstream -> break",
+          5062.5
+        ],
+        [
+          "wildcard -> tech",
+          4275.0
+        ],
+        [
+          "inverse|coordination -> density",
+          4200.0
+        ],
+        [
+          "chordjack -> tech",
+          2400.0
+        ],
+        [
+          "chordjack -> dense chordstream",
+          2400.0
+        ],
+        [
+          "break -> tech",
+          1800.0
+        ],
+        [
+          "dense chordstream -> fast chordstream",
+          1200.0
+        ],
+        [
+          "break -> fast chordstream",
+          1200.0
+        ],
+        [
+          "chordjack -> coordination",
+          1200.0
+        ],
+        [
+          "break -> ln wildcard",
+          1162.5
+        ],
+        [
+          "ln wildcard -> fast chordstream",
+          1087.5
+        ],
+        [
+          "break -> dense chordstream",
+          1050.0
+        ],
+        [
+          "dense chordstream -> coordination",
+          900.0
+        ],
+        [
+          "fast chordstream -> density",
+          712.5
+        ],
+        [
+          "break -> chordjack",
+          525.0
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "converged",
+    "held": 1,
+    "fit": {
+      "rc": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.6456444581471399,
+            "gradientMax": 1.28042478920998e-07,
+            "evaluations": 194
+          }
+        ],
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 37,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.47548833561116416,
+            "gradientMax": 1.9053316159704687e-07,
+            "evaluations": 217
+          }
+        ],
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 67,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 117950.0,
+          "accuracy": 0.49145833333333333,
+          "interiorAccuracy": 0.47611435878699304,
+          "partialLabelNll": 4.492851705266185,
+          "breakRecall": 0.690907676751964,
+          "nonBreakAccuracy": 0.45326641148990465
+        }
+      ],
+      "chartMeanAccuracy": 0.49145833333333333,
+      "durationAccuracy": 0.49145833333333333,
+      "meanInteriorAccuracy": 0.47611435878699304,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.15181528932909102,
+            "confidence": 0.371607598599268,
+            "accuracy": 0.11363342944442052
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.2786209419773816,
+            "confidence": 0.4624203387408672,
+            "accuracy": 0.2377831449608404
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.0655032960715009,
+            "confidence": 0.5861495229339767,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.06300102573483775,
+            "confidence": 0.658702545482446,
+            "accuracy": 0.4087420927097376
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.03525065170095583,
+            "confidence": 0.708003402575918,
+            "accuracy": 0.6950236308034473
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.20782563814426927,
+            "confidence": 0.8432574114932182,
+            "accuracy": 0.6772398616787173
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.19798315704196368,
+            "confidence": 0.9902795210732708,
+            "accuracy": 0.8794033692477765
+          }
+        ],
+        "ece": 0.21280739955089145,
+        "brier": 0.6107454236574014
+      },
+      "largestErrors": [
+        [
+          "technical|ln wildcard -> density",
+          23112.0
+        ],
+        [
+          "technical -> coordination",
+          20548.0
+        ],
+        [
+          "ln wildcard -> density",
+          17602.0
+        ],
+        [
+          "ln wildcard -> inverse",
+          9910.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "coordination -> density",
+          7347.0
+        ],
+        [
+          "break -> technical",
+          5433.5
+        ],
+        [
+          "density -> technical",
+          4860.5
+        ],
+        [
+          "density -> coordination",
+          4820.5
+        ],
+        [
+          "technical|ln wildcard -> break",
+          4783.5
+        ],
+        [
+          "break -> inverse",
+          3654.5
+        ],
+        [
+          "ln wildcard -> technical",
+          3099.5
+        ],
+        [
+          "break -> density",
+          2834.0
+        ],
+        [
+          "technical -> density",
+          2066.5
+        ],
+        [
+          "inverse -> technical",
+          1225.0
+        ],
+        [
+          "density -> inverse",
+          880.5
+        ],
+        [
+          "inverse|density -> ln wildcard",
+          497.5
+        ],
+        [
+          "technical -> inverse",
+          114.5
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "converged",
+    "held": 2,
+    "fit": {
+      "rc": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.5918687135301118,
+            "gradientMax": 1.62330851482854e-07,
+            "evaluations": 236
+          }
+        ],
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 20,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.4781874446417257,
+            "gradientMax": 1.4602622695205573e-07,
+            "evaluations": 212
+          }
+        ],
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 89,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 94352.5,
+          "accuracy": 0.39234255774788446,
+          "interiorAccuracy": 0.3986215626977987,
+          "partialLabelNll": 5.1079717004613725,
+          "breakRecall": 0.9882035875231951,
+          "nonBreakAccuracy": 0.20899945622620988
+        }
+      ],
+      "chartMeanAccuracy": 0.39234255774788446,
+      "durationAccuracy": 0.39234255774788446,
+      "meanInteriorAccuracy": 0.3986215626977987,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.003367932862190813,
+            "confidence": 0.38248662926894395,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.09606890459363958,
+            "confidence": 0.563954318922013,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.3628395538869258,
+            "confidence": 0.6414616372909526,
+            "accuracy": 0.5848518278997223
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.0875800574204947,
+            "confidence": 0.7246167606663128,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.4501435512367491,
+            "confidence": 1.0,
+            "accuracy": 0.6858518336808537
+          }
+        ],
+        "ece": 0.2808806896413132,
+        "brier": 0.7529434193400565
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          39262.5
+        ],
+        [
+          "wildcard|dense chordstream -> speed",
+          23575.0
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          16325.0
+        ],
+        [
+          "dense chordstream|wildcard -> fast chordstream",
+          11850.0
+        ],
+        [
+          "wildcard -> tech",
+          9150.0
+        ],
+        [
+          "dense chordstream|wildcard -> tech",
+          7090.0
+        ],
+        [
+          "chordjack -> fast chordstream",
+          6900.0
+        ],
+        [
+          "chordjack -> break",
+          5400.0
+        ],
+        [
+          "chordjack -> minijack",
+          3300.0
+        ],
+        [
+          "dense chordstream -> speed",
+          1425.0
+        ],
+        [
+          "dense chordstream -> break",
+          1012.5
+        ],
+        [
+          "break -> tech",
+          610.0
+        ],
+        [
+          "dense chordstream|wildcard -> break",
+          525.0
+        ],
+        [
+          "wildcard -> fast chordstream",
+          450.0
+        ],
+        [
+          "break -> fast chordstream",
+          57.5
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "converged",
+    "held": 3,
+    "fit": {
+      "rc": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.6459111710900596,
+            "gradientMax": 1.6891197312035523e-07,
+            "evaluations": 576
+          }
+        ],
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 26,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.45774451984595965,
+            "gradientMax": 9.893332448510529e-08,
+            "evaluations": 207
+          }
+        ],
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 60,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 208571.0,
+          "accuracy": 0.511607199799842,
+          "interiorAccuracy": 0.55441277830824,
+          "partialLabelNll": 6.353929464252259,
+          "breakRecall": 0.4722286493661483,
+          "nonBreakAccuracy": 0.5215397421681344
+        }
+      ],
+      "chartMeanAccuracy": 0.511607199799842,
+      "durationAccuracy": 0.511607199799842,
+      "meanInteriorAccuracy": 0.55441277830824,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.024098407605063883,
+            "confidence": 0.28791221676555934,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.06291207183792123,
+            "confidence": 0.35107208872359047,
+            "accuracy": 0.6347928241024009
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.18510397836978915,
+            "confidence": 0.46360047321458286,
+            "accuracy": 0.20071037614999418
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.12350068210303297,
+            "confidence": 0.5357228162602438,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.12769646261059153,
+            "confidence": 0.645276368185838,
+            "accuracy": 0.5597221887283864
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.19065626626346113,
+            "confidence": 0.7489416657157728,
+            "accuracy": 0.572166946633932
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.1661344312677262,
+            "confidence": 0.8543323279050029,
+            "accuracy": 0.5428089491927561
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.11989769994241387,
+            "confidence": 1.0,
+            "accuracy": 0.9959804286686615
+          }
+        ],
+        "ece": 0.23647669200165267,
+        "brier": 0.7461492762099379
+      },
+      "largestErrors": [
+        [
+          "break -> technical",
+          21411.0
+        ],
+        [
+          "chordjack -> dense chordstream",
+          21062.0
+        ],
+        [
+          "coordination -> density",
+          16467.5
+        ],
+        [
+          "release -> density",
+          15717.0
+        ],
+        [
+          "release -> coordination",
+          15625.0
+        ],
+        [
+          "fast chordstream|wildcard -> dense chordstream",
+          14087.0
+        ],
+        [
+          "density -> technical",
+          12098.0
+        ],
+        [
+          "release -> inverse",
+          9356.0
+        ],
+        [
+          "density -> inverse",
+          8011.5
+        ],
+        [
+          "break -> density",
+          7689.5
+        ],
+        [
+          "break -> fast chordstream",
+          7501.5
+        ],
+        [
+          "coordination|chordjack -> density",
+          4542.0
+        ],
+        [
+          "break -> inverse",
+          4447.5
+        ],
+        [
+          "ln wildcard -> dense chordstream",
+          4236.0
+        ],
+        [
+          "speed -> tech",
+          4174.0
+        ],
+        [
+          "dense chordstream|wildcard -> minijack",
+          4116.0
+        ],
+        [
+          "ln wildcard -> tech",
+          3131.0
+        ],
+        [
+          "tech -> dense chordstream",
+          2487.0
+        ],
+        [
+          "technical -> density",
+          2357.5
+        ],
+        [
+          "speed|tech -> dense chordstream",
+          2332.0
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "converged",
+    "held": 4,
+    "fit": {
+      "rc": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.6456444581471399,
+            "gradientMax": 1.28042478920998e-07,
+            "evaluations": 194
+          }
+        ],
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 37,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.45334796963494234,
+            "gradientMax": 1.2353775248434562e-07,
+            "evaluations": 301
+          }
+        ],
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 72,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 53821.5,
+          "accuracy": 0.2551676891421636,
+          "interiorAccuracy": 0.2583773511981448,
+          "partialLabelNll": 7.106990120171216,
+          "breakRecall": 0.4004118891239007,
+          "nonBreakAccuracy": 0.2158712374481209
+        }
+      ],
+      "chartMeanAccuracy": 0.2551676891421636,
+      "durationAccuracy": 0.2551676891421636,
+      "meanInteriorAccuracy": 0.2583773511981448,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.10697321879737241,
+            "confidence": 0.3813053949185998,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.2769527406186006,
+            "confidence": 0.4301615274529102,
+            "accuracy": 0.21526450733168803
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.08509082205260499,
+            "confidence": 0.5607463032091891,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.09696816574027287,
+            "confidence": 0.6341855950498153,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.13440865934416638,
+            "confidence": 0.772136241482368,
+            "accuracy": 0.5440352994716952
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.16024307864152548,
+            "confidence": 0.8365713458783238,
+            "accuracy": 0.346837501867127
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.1393633148054573,
+            "confidence": 1.0,
+            "accuracy": 0.6864050990420213
+          }
+        ],
+        "ece": 0.3623547875001939,
+        "brier": 0.9308096838359817
+      },
+      "largestErrors": [
+        [
+          "ln wildcard|density -> technical",
+          22489.0
+        ],
+        [
+          "ln wildcard -> density",
+          18876.0
+        ],
+        [
+          "technical -> density",
+          10787.0
+        ],
+        [
+          "inverse -> technical",
+          9690.5
+        ],
+        [
+          "density -> coordination",
+          9522.5
+        ],
+        [
+          "break -> technical",
+          9361.0
+        ],
+        [
+          "release -> inverse",
+          9353.5
+        ],
+        [
+          "ln wildcard -> technical",
+          9142.5
+        ],
+        [
+          "inverse -> density",
+          6615.5
+        ],
+        [
+          "density -> technical",
+          6531.5
+        ],
+        [
+          "ln wildcard -> inverse",
+          6025.5
+        ],
+        [
+          "break -> inverse",
+          5772.5
+        ],
+        [
+          "coordination -> density",
+          5393.0
+        ],
+        [
+          "release -> break",
+          5393.0
+        ],
+        [
+          "coordination -> technical",
+          4835.0
+        ],
+        [
+          "break -> density",
+          4718.0
+        ],
+        [
+          "break -> release",
+          4045.0
+        ],
+        [
+          "break -> fast chordstream",
+          3034.0
+        ],
+        [
+          "ln wildcard -> break",
+          2697.0
+        ],
+        [
+          "release -> ln wildcard",
+          1432.5
+        ]
+      ]
+    }
+  },
+  {
+    "optimizer": "converged",
+    "held": 5,
+    "fit": {
+      "rc": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.6467700009032346,
+            "gradientMax": 9.203323422416832e-08,
+            "evaluations": 163
+          }
+        ],
+        "weakCharts": 99,
+        "weakSegments": 1287,
+        "strongRows": 35,
+        "definiteFamilyStrongCharts": null
+      },
+      "ln": {
+        "adamSteps": 250,
+        "status": "small_gradient",
+        "checks": [
+          {
+            "chunk": 1,
+            "loss": 0.479203470276994,
+            "gradientMax": 9.789213118154699e-08,
+            "evaluations": 240
+          }
+        ],
+        "weakCharts": 80,
+        "weakSegments": 1323,
+        "strongRows": 76,
+        "definiteFamilyStrongCharts": null
+      }
+    },
+    "metrics": {
+      "charts": [
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 145003.0,
+          "accuracy": 0.689984487566261,
+          "interiorAccuracy": 0.7097443414042901,
+          "partialLabelNll": 5.400298950774814,
+          "breakRecall": 0.7661623425715919,
+          "nonBreakAccuracy": 0.6087352004090784
+        }
+      ],
+      "chartMeanAccuracy": 0.689984487566261,
+      "durationAccuracy": 0.689984487566261,
+      "meanInteriorAccuracy": 0.7097443414042901,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.028349156792998438,
+            "confidence": 0.2919872734219811,
+            "accuracy": 0.8609857374977432
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.01914169460296338,
+            "confidence": 0.3754849229311315,
+            "accuracy": 0.2262032085561497
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.09483071883716765,
+            "confidence": 0.4458346462661609,
+            "accuracy": 0.47224545969722315
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.017716303708063565,
+            "confidence": 0.5052906881442655,
+            "accuracy": 0.9334103712263471
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.11633953476469534,
+            "confidence": 0.6700612718185515,
+            "accuracy": 0.738572874048656
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.2652404227550733,
+            "confidence": 0.752509262773185,
+            "accuracy": 0.4597676752083977
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.03159659134529263,
+            "confidence": 0.8314330118637848,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.42678557719374566,
+            "confidence": 1.0,
+            "accuracy": 0.9965462449407885
+          }
+        ],
+        "ece": 0.1424393587374428,
+        "brier": 0.42225545665396125
+      },
+      "largestErrors": [
+        [
+          "coordination -> technical",
+          24577.5
+        ],
+        [
+          "break -> coordination",
+          16385.0
+        ],
+        [
+          "break -> technical",
+          8294.5
+        ],
+        [
+          "coordination|density -> technical",
+          6635.0
+        ],
+        [
+          "chordjack|fast chordstream -> break",
+          2827.0
+        ],
+        [
+          "dense chordstream -> chordjack",
+          2769.0
+        ],
+        [
+          "chordjack|fast chordstream -> coordination",
+          1615.0
+        ],
+        [
+          "coordination -> density",
+          1000.0
+        ],
+        [
+          "break -> chordjack",
+          471.5
+        ],
+        [
+          "coordination -> break",
+          288.0
+        ],
+        [
+          "break -> density",
+          211.5
+        ],
+        [
+          "chordjack -> technical",
+          77.0
+        ]
+      ]
+    }
+  }
+]

@@ -1,0 +1,6 @@
+{
+  "state": "failed_before_any_selection",
+  "cause": "Seed configuration inherited native partition4/head2 but actual cold-family wrapper contains only partition0/head0; IndexError in pack. No scores or fitted-model checkpoints produced.",
+  "replacement": "family-joint-r2",
+  "action": "Fix wrapper indices, checkpoint every individual inner fit, test all actual routing/display paths before relaunch."
+}

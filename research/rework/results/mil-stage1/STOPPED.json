@@ -1,0 +1,8 @@
+{
+  "status": "stopped before outer scoring",
+  "completedInnerFits": 1152,
+  "reason": "Conditional non-Break normalization erases absolute support: a chart with every segment classified Break can still receive a confident fine tag. Stop the invalid configuration rather than finish a large search.",
+  "outerTestPredictionsCreated": false,
+  "continuation": "r2 adds an active-evidence existence likelihood to weak supervision and enforces all-local-Break => empty overall output; conditional composition remains meaningful for short-challenge/long-rest charts.",
+  "counterexample": "r1 inferred a confident Chordjack chart from one segment with P(Break)=0.99; its weak chart loss gradient to the Break logit was exactly zero. Both regression tests now pass in r2."
+}

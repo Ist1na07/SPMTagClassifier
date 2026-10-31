@@ -17,6 +17,8 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           package-manager-cache: false
+      - run: npm ci
       - run: npm run build
       - run: npm test
-      - run: git diff --exit-code -- dist/tag-engine.js
+      - run: npm run test:types
+      - run: git diff --exit-code -- dist/tag-engine.js src/generated/

@@ -1,0 +1,853 @@
+{
+  "scope": "retrospective diagnostic; fixed weak training corpus; full-manual resubstitution versus leave-one-manual accuracy; fixed original boundaries and historical-style config, no hyperparameter selection",
+  "metrics": {
+    "gd500": {
+      "fullManualResubstitution": {
+        "charts": [
+          {
+            "chart": "AA",
+            "labelledMs": 181500.0,
+            "correctMs": 125700.0,
+            "accuracy": 0.6925619834710743,
+            "interiorAccuracy": 0.7700787401574803,
+            "partialLabelNll": 8.398788222421802,
+            "breakRecall": 0.803409090909091,
+            "nonBreakAccuracy": 0.6679292929292929
+          },
+          {
+            "chart": "AH",
+            "labelledMs": 240000.0,
+            "correctMs": 181546.5,
+            "accuracy": 0.75644375,
+            "interiorAccuracy": 0.8062345862257947,
+            "partialLabelNll": 3.2383803095999353,
+            "breakRecall": 0.8317777604936352,
+            "nonBreakAccuracy": 0.7420182793937318
+          },
+          {
+            "chart": "BE",
+            "labelledMs": 240485.0,
+            "correctMs": 156567.5,
+            "accuracy": 0.6510489219701853,
+            "interiorAccuracy": 0.6714490001640997,
+            "partialLabelNll": 4.596064201245236,
+            "breakRecall": 0.9882035875231951,
+            "nonBreakAccuracy": 0.5473083197389886
+          },
+          {
+            "chart": "DS",
+            "labelledMs": 407678.0,
+            "correctMs": 265960.0,
+            "accuracy": 0.6523776117426008,
+            "interiorAccuracy": 0.7195797474437693,
+            "partialLabelNll": 5.858030509808549,
+            "breakRecall": 0.4722286493661483,
+            "nonBreakAccuracy": 0.6978169989648637
+          },
+          {
+            "chart": "EE",
+            "labelledMs": 210926.0,
+            "correctMs": 104824.5,
+            "accuracy": 0.49697287200250323,
+            "interiorAccuracy": 0.5463830198402474,
+            "partialLabelNll": 6.520418845251664,
+            "breakRecall": 0.4004118891239007,
+            "nonBreakAccuracy": 0.5230978670088127
+          },
+          {
+            "chart": "RJ",
+            "labelledMs": 210154.0,
+            "correctMs": 171965.0,
+            "accuracy": 0.8182808797358128,
+            "interiorAccuracy": 0.8325732164500944,
+            "partialLabelNll": 5.190625130851878,
+            "breakRecall": 0.7661623425715919,
+            "nonBreakAccuracy": 0.8738691342485151
+          }
+        ],
+        "chartMeanAccuracy": 0.6779476698203627,
+        "durationAccuracy": 0.6752092748381177,
+        "meanInteriorAccuracy": 0.724383051713581,
+        "singletonCalibration": {
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "weight": 0.01538487104917441,
+              "confidence": 0.27380529099246054,
+              "accuracy": 0.0
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "weight": 0.07640312814052577,
+              "confidence": 0.3623758673582496,
+              "accuracy": 0.42244928280864497
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "weight": 0.19442333310483254,
+              "confidence": 0.4470704805407456,
+              "accuracy": 0.4578692522193991
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "weight": 0.10808860186519649,
+              "confidence": 0.5401363417069085,
+              "accuracy": 0.46896682518865096
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "weight": 0.08287045486703801,
+              "confidence": 0.6481067239087026,
+              "accuracy": 0.7853735018214552
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "weight": 0.14688270374935214,
+              "confidence": 0.7592751412732291,
+              "accuracy": 0.724639394428219
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "weight": 0.08756346272120394,
+              "confidence": 0.8254703780386198,
+              "accuracy": 0.7379867157127851
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "weight": 0.2883398601233183,
+              "confidence": 0.9986208952964724,
+              "accuracy": 0.7766354303923165
+            }
+          ],
+          "ece": 0.10672943717974975,
+          "brier": 0.5579162150346427
+        },
+        "largestErrors": [
+          [
+            "ln wildcard -> technical",
+            41905.0
+          ],
+          [
+            "dense chordstream -> fast chordstream",
+            40788.0
+          ],
+          [
+            "break -> technical",
+            28812.0
+          ],
+          [
+            "break -> coordination",
+            23079.5
+          ],
+          [
+            "coordination -> density",
+            22977.0
+          ],
+          [
+            "wildcard -> break",
+            19725.0
+          ],
+          [
+            "ln wildcard -> density",
+            17602.0
+          ],
+          [
+            "break -> inverse",
+            14942.0
+          ],
+          [
+            "density -> coordination",
+            14343.0
+          ],
+          [
+            "fast chordstream|wildcard -> dense chordstream",
+            14087.0
+          ],
+          [
+            "break -> density",
+            12120.5
+          ],
+          [
+            "break -> fast chordstream",
+            11793.0
+          ],
+          [
+            "ln wildcard -> break",
+            11622.0
+          ],
+          [
+            "break -> release",
+            10168.5
+          ],
+          [
+            "technical -> chordjack",
+            9375.0
+          ],
+          [
+            "density|inverse -> break",
+            9260.5
+          ],
+          [
+            "release -> coordination",
+            9208.0
+          ],
+          [
+            "wildcard|dense chordstream -> fast chordstream",
+            9075.0
+          ],
+          [
+            "chordjack -> fast chordstream",
+            8596.0
+          ],
+          [
+            "inverse -> break",
+            8551.5
+          ]
+        ]
+      },
+      "leaveOneManual": {
+        "charts": [
+          {
+            "chart": "AA",
+            "labelledMs": 181500.0,
+            "correctMs": 117337.5,
+            "accuracy": 0.6464876033057851,
+            "interiorAccuracy": 0.7283464566929134,
+            "partialLabelNll": 8.459561021116626,
+            "breakRecall": 0.803409090909091,
+            "nonBreakAccuracy": 0.6116161616161616
+          },
+          {
+            "chart": "AH",
+            "labelledMs": 240000.0,
+            "correctMs": 125603.5,
+            "accuracy": 0.5233479166666667,
+            "interiorAccuracy": 0.4954386645962733,
+            "partialLabelNll": 4.126452087678148,
+            "breakRecall": 0.8317777604936352,
+            "nonBreakAccuracy": 0.46428766463617455
+          },
+          {
+            "chart": "BE",
+            "labelledMs": 240485.0,
+            "correctMs": 94352.5,
+            "accuracy": 0.39234255774788446,
+            "interiorAccuracy": 0.3986215626977987,
+            "partialLabelNll": 4.926869986266323,
+            "breakRecall": 0.9882035875231951,
+            "nonBreakAccuracy": 0.20899945622620988
+          },
+          {
+            "chart": "DS",
+            "labelledMs": 407678.0,
+            "correctMs": 216357.0,
+            "accuracy": 0.5307056058948484,
+            "interiorAccuracy": 0.5798375520889322,
+            "partialLabelNll": 6.0640458428427495,
+            "breakRecall": 0.4722286493661483,
+            "nonBreakAccuracy": 0.5454553831693599
+          },
+          {
+            "chart": "EE",
+            "labelledMs": 210926.0,
+            "correctMs": 80365.5,
+            "accuracy": 0.3810127722518798,
+            "interiorAccuracy": 0.40421283174439576,
+            "partialLabelNll": 6.145760424705919,
+            "breakRecall": 0.4904708894578649,
+            "nonBreakAccuracy": 0.3513984013107565
+          },
+          {
+            "chart": "RJ",
+            "labelledMs": 210154.0,
+            "correctMs": 129119.0,
+            "accuracy": 0.6144018196179944,
+            "interiorAccuracy": 0.6220368125828001,
+            "partialLabelNll": 5.413546037761213,
+            "breakRecall": 0.7661623425715919,
+            "nonBreakAccuracy": 0.4525380560909413
+          }
+        ],
+        "chartMeanAccuracy": 0.5147163792475098,
+        "durationAccuracy": 0.5119158701399236,
+        "meanInteriorAccuracy": 0.5380823134005189,
+        "singletonCalibration": {
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "weight": 0.022823794301740617,
+              "confidence": 0.284446159356993,
+              "accuracy": 0.4958648856316538
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "weight": 0.11710555966678463,
+              "confidence": 0.3692166600986213,
+              "accuracy": 0.3812683334223977
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "weight": 0.20545728972603902,
+              "confidence": 0.44512158086748593,
+              "accuracy": 0.3304285868162024
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "weight": 0.11322177065753788,
+              "confidence": 0.5446310037546566,
+              "accuracy": 0.451155131320017
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "weight": 0.0813551473198281,
+              "confidence": 0.6422340159351502,
+              "accuracy": 0.5957950131529907
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "weight": 0.12993539870186896,
+              "confidence": 0.7622008074606259,
+              "accuracy": 0.5060636595174197
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "weight": 0.04211104786616288,
+              "confidence": 0.8324488450350027,
+              "accuracy": 0.6003334832018107
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "weight": 0.28794640738067945,
+              "confidence": 1.0,
+              "accuracy": 0.7901499830262714
+            }
+          ],
+          "ece": 0.14765066017314354,
+          "brier": 0.6469505016370279
+        },
+        "largestErrors": [
+          [
+            "dense chordstream -> fast chordstream",
+            40788.0
+          ],
+          [
+            "coordination -> technical",
+            39488.0
+          ],
+          [
+            "technical|ln wildcard -> density",
+            39298.5
+          ],
+          [
+            "break -> technical",
+            35756.0
+          ],
+          [
+            "technical -> density",
+            27953.0
+          ],
+          [
+            "coordination -> density",
+            26811.5
+          ],
+          [
+            "ln wildcard -> density",
+            26811.0
+          ],
+          [
+            "chordjack -> dense chordstream",
+            24308.0
+          ],
+          [
+            "ln wildcard -> technical",
+            24017.0
+          ],
+          [
+            "wildcard|dense chordstream -> speed",
+            23575.0
+          ],
+          [
+            "ln wildcard|density -> technical",
+            22489.0
+          ],
+          [
+            "wildcard -> break",
+            19725.0
+          ],
+          [
+            "break -> coordination",
+            16701.0
+          ],
+          [
+            "release -> coordination",
+            15625.0
+          ],
+          [
+            "break -> inverse",
+            14942.0
+          ],
+          [
+            "density -> coordination",
+            14343.0
+          ],
+          [
+            "fast chordstream|wildcard -> dense chordstream",
+            14087.0
+          ],
+          [
+            "release -> technical",
+            13744.0
+          ],
+          [
+            "wildcard -> tech",
+            13425.0
+          ],
+          [
+            "break -> density",
+            13131.5
+          ]
+        ]
+      }
+    },
+    "converged": {
+      "fullManualResubstitution": {
+        "charts": [
+          {
+            "chart": "AA",
+            "labelledMs": 181500.0,
+            "correctMs": 132750.0,
+            "accuracy": 0.731404958677686,
+            "interiorAccuracy": 0.8110236220472441,
+            "partialLabelNll": 7.1253145703309455,
+            "breakRecall": 0.7988636363636363,
+            "nonBreakAccuracy": 0.7164141414141414
+          },
+          {
+            "chart": "AH",
+            "labelledMs": 240000.0,
+            "correctMs": 203051.0,
+            "accuracy": 0.8460458333333334,
+            "interiorAccuracy": 0.906272835221045,
+            "partialLabelNll": 2.3111566803520702,
+            "breakRecall": 0.6646314588680615,
+            "nonBreakAccuracy": 0.8807842962036251
+          },
+          {
+            "chart": "BE",
+            "labelledMs": 240485.0,
+            "correctMs": 160017.5,
+            "accuracy": 0.6653949310767824,
+            "interiorAccuracy": 0.687624539934829,
+            "partialLabelNll": 4.561860042549378,
+            "breakRecall": 0.9882035875231951,
+            "nonBreakAccuracy": 0.566068515497553
+          },
+          {
+            "chart": "DS",
+            "labelledMs": 407678.0,
+            "correctMs": 278115.0,
+            "accuracy": 0.6821928090306566,
+            "interiorAccuracy": 0.7484918712810558,
+            "partialLabelNll": 5.92348767806629,
+            "breakRecall": 0.4722286493661483,
+            "nonBreakAccuracy": 0.7351525520562967
+          },
+          {
+            "chart": "EE",
+            "labelledMs": 210926.0,
+            "correctMs": 143630.0,
+            "accuracy": 0.680949716962347,
+            "interiorAccuracy": 0.7383792836897707,
+            "partialLabelNll": 6.388760763638176,
+            "breakRecall": 0.4004118891239007,
+            "nonBreakAccuracy": 0.7568504496689978
+          },
+          {
+            "chart": "RJ",
+            "labelledMs": 210154.0,
+            "correctMs": 171965.0,
+            "accuracy": 0.8182808797358128,
+            "interiorAccuracy": 0.8325732164500944,
+            "partialLabelNll": 5.134881860772448,
+            "breakRecall": 0.7661623425715919,
+            "nonBreakAccuracy": 0.8738691342485151
+          }
+        ],
+        "chartMeanAccuracy": 0.7373781881361031,
+        "durationAccuracy": 0.7308627308664203,
+        "meanInteriorAccuracy": 0.7873942281040064,
+        "singletonCalibration": {
+          "bins": [
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "weight": 0.025760475611376378,
+              "confidence": 0.3414071008109946,
+              "accuracy": 0.7505896046900009
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "weight": 0.0758683438343075,
+              "confidence": 0.47117352871060414,
+              "accuracy": 0.3939638858585049
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "weight": 0.08410683009804926,
+              "confidence": 0.5570315189181746,
+              "accuracy": 0.5935572606470112
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "weight": 0.15405578261634303,
+              "confidence": 0.6397101238026046,
+              "accuracy": 0.5946972452123113
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "weight": 0.15146473070598965,
+              "confidence": 0.7554490709813231,
+              "accuracy": 0.5997726229615635
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "weight": 0.2290829451326944,
+              "confidence": 0.8446046365133363,
+              "accuracy": 0.8130594968039132
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "weight": 0.27961730762188136,
+              "confidence": 0.9968338071404149,
+              "accuracy": 0.8107473273132864
+            }
+          ],
+          "ece": 0.10924876903556291,
+          "brier": 0.5210058736671312
+        },
+        "largestErrors": [
+          [
+            "dense chordstream -> fast chordstream",
+            40788.0
+          ],
+          [
+            "break -> technical",
+            39456.0
+          ],
+          [
+            "break -> coordination",
+            23079.5
+          ],
+          [
+            "wildcard -> break",
+            19200.0
+          ],
+          [
+            "break -> inverse",
+            16105.5
+          ],
+          [
+            "coordination -> density",
+            14972.5
+          ],
+          [
+            "fast chordstream|wildcard -> dense chordstream",
+            14087.0
+          ],
+          [
+            "break -> density",
+            12120.5
+          ],
+          [
+            "break -> fast chordstream",
+            11793.0
+          ],
+          [
+            "ln wildcard -> break",
+            11622.0
+          ],
+          [
+            "density -> technical",
+            10371.5
+          ],
+          [
+            "density -> coordination",
+            9522.5
+          ],
+          [
+            "release -> coordination",
+            9414.0
+          ],
+          [
+            "technical -> chordjack",
+            9375.0
+          ],
+          [
+            "chordjack -> fast chordstream",
+            8596.0
+          ],
+          [
+            "density -> inverse",
+            8011.5
+          ],
+          [
+            "chordjack -> dense chordstream",
+            7210.0
+          ],
+          [
+            "technical -> coordination",
+            7200.0
+          ],
+          [
+            "technical -> density",
+            7119.0
+          ],
+          [
+            "coordination -> technical",
+            6640.5
+          ]
+        ]
+      },
+      "leaveOneManual": {
+        "charts": [
+          {
+            "chart": "AA",
+            "labelledMs": 181500.0,
+            "correctMs": 109725.0,
+            "accuracy": 0.6045454545454545,
+            "interiorAccuracy": 0.6874015748031496,
+            "partialLabelNll": 5.710226151474211,
+            "breakRecall": 0.7988636363636363,
+            "nonBreakAccuracy": 0.5613636363636364
+          },
+          {
+            "chart": "AH",
+            "labelledMs": 240000.0,
+            "correctMs": 117950.0,
+            "accuracy": 0.49145833333333333,
+            "interiorAccuracy": 0.47611435878699304,
+            "partialLabelNll": 4.492851705266185,
+            "breakRecall": 0.690907676751964,
+            "nonBreakAccuracy": 0.45326641148990465
+          },
+          {
+            "chart": "BE",
+            "labelledMs": 240485.0,
+            "correctMs": 94352.5,
+            "accuracy": 0.39234255774788446,
+            "interiorAccuracy": 0.3986215626977987,
+            "partialLabelNll": 5.1079717004613725,
+            "breakRecall": 0.9882035875231951,
+            "nonBreakAccuracy": 0.20899945622620988
+          },
+          {
+            "chart": "DS",
+            "labelledMs": 407678.0,
+            "correctMs": 208571.0,
+            "accuracy": 0.511607199799842,
+            "interiorAccuracy": 0.55441277830824,
+            "partialLabelNll": 6.353929464252259,
+            "breakRecall": 0.4722286493661483,
+            "nonBreakAccuracy": 0.5215397421681344
+          },
+          {
+            "chart": "EE",
+            "labelledMs": 210926.0,
+            "correctMs": 53821.5,
+            "accuracy": 0.2551676891421636,
+            "interiorAccuracy": 0.2583773511981448,
+            "partialLabelNll": 7.106990120171216,
+            "breakRecall": 0.4004118891239007,
+            "nonBreakAccuracy": 0.2158712374481209
+          },
+          {
+            "chart": "RJ",
+            "labelledMs": 210154.0,
+            "correctMs": 145003.0,
+            "accuracy": 0.689984487566261,
+            "interiorAccuracy": 0.7097443414042901,
+            "partialLabelNll": 5.400298950774814,
+            "breakRecall": 0.7661623425715919,
+            "nonBreakAccuracy": 0.6087352004090784
+          }
+        ],
+        "chartMeanAccuracy": 0.4908509536891565,
+        "durationAccuracy": 0.4893016435428508,
+        "meanInteriorAccuracy": 0.5141119945331027,
+        "singletonCalibration": {
+          "bins": [
+            {
+              "lower": 0.2,
+              "upper": 0.3,
+              "weight": 0.008741260733010386,
+              "confidence": 0.2901148818734461,
+              "accuracy": 0.46538328231235626
+            },
+            {
+              "lower": 0.3,
+              "upper": 0.4,
+              "weight": 0.05736836790492314,
+              "confidence": 0.3711902124242872,
+              "accuracy": 0.17872025619598683
+            },
+            {
+              "lower": 0.4,
+              "upper": 0.5,
+              "weight": 0.17873884433256793,
+              "confidence": 0.4488783179728573,
+              "accuracy": 0.28228512573564085
+            },
+            {
+              "lower": 0.5,
+              "upper": 0.6,
+              "weight": 0.0707048968189632,
+              "confidence": 0.5535068423398841,
+              "accuracy": 0.03898028369766127
+            },
+            {
+              "lower": 0.6,
+              "upper": 0.7,
+              "weight": 0.13826770816891232,
+              "confidence": 0.6509310753512563,
+              "accuracy": 0.5503222579276343
+            },
+            {
+              "lower": 0.7,
+              "upper": 0.8,
+              "weight": 0.1549438756894785,
+              "confidence": 0.7518467127171495,
+              "accuracy": 0.47279263385881476
+            },
+            {
+              "lower": 0.8,
+              "upper": 0.9,
+              "weight": 0.1323055353670268,
+              "confidence": 0.8433713735765429,
+              "accuracy": 0.5243072198943572
+            },
+            {
+              "lower": 0.9,
+              "upper": 1.0,
+              "weight": 0.25888592660575926,
+              "confidence": 0.998761043051467,
+              "accuracy": 0.8414676311283211
+            }
+          ],
+          "ece": 0.21882318868855036,
+          "brier": 0.6867417036744953
+        },
+        "largestErrors": [
+          [
+            "break -> technical",
+            44500.0
+          ],
+          [
+            "dense chordstream -> fast chordstream",
+            40788.0
+          ],
+          [
+            "ln wildcard -> density",
+            36478.0
+          ],
+          [
+            "coordination -> density",
+            30207.5
+          ],
+          [
+            "coordination -> technical",
+            29458.0
+          ],
+          [
+            "technical -> coordination",
+            27748.0
+          ],
+          [
+            "ln wildcard -> inverse",
+            26948.0
+          ],
+          [
+            "wildcard|dense chordstream -> speed",
+            23575.0
+          ],
+          [
+            "density -> technical",
+            23490.0
+          ],
+          [
+            "chordjack -> dense chordstream",
+            23462.0
+          ],
+          [
+            "technical|ln wildcard -> density",
+            23112.0
+          ],
+          [
+            "ln wildcard|density -> technical",
+            22489.0
+          ],
+          [
+            "wildcard -> break",
+            19200.0
+          ],
+          [
+            "release -> inverse",
+            18709.5
+          ],
+          [
+            "break -> coordination",
+            16685.0
+          ],
+          [
+            "wildcard|dense chordstream -> fast chordstream",
+            16325.0
+          ],
+          [
+            "break -> density",
+            15865.5
+          ],
+          [
+            "release -> density",
+            15717.0
+          ],
+          [
+            "release -> coordination",
+            15625.0
+          ],
+          [
+            "technical -> density",
+            15211.0
+          ]
+        ]
+      }
+    }
+  },
+  "optimizerEffect": {
+    "convergedMinusGd500": -0.023865425558353342,
+    "pairedChart95": [
+      -0.07309596736408093,
+      0.026113291279687607
+    ]
+  }
+}

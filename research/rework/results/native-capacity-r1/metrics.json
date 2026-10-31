@@ -1,0 +1,5440 @@
+{
+  "scope": "retrospective nested policy-capacity selection; expert coefficients frozen, historical exposure unknown",
+  "supportedClasses_atLeast5Groups": [
+    "chordjack",
+    "coordination",
+    "dense chordstream",
+    "density",
+    "fast chordstream",
+    "hybrid",
+    "ln mix",
+    "minijack",
+    "rc mix",
+    "release",
+    "speed",
+    "tech",
+    "technical"
+  ],
+  "map": {
+    "metric_repaired": {
+      "macroF1": 0.5206527087832402,
+      "microF1": 0.6183953033268101,
+      "sampleF1": 0.643611911623439,
+      "exactMatch": 0.5720461095100865,
+      "groupBalanced": {
+        "macroF1": 0.5174133371098172,
+        "microF1": 0.6206351786236712,
+        "sampleF1": 0.6365557865557866,
+        "exactMatch": 0.5874497574497574
+      },
+      "macroF1_atLeast5Groups": 0.6105238719253362,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8571428571428571,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.8571428571428571,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.75,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.6233766233766234,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.6923076923076923,
+          "recall": 0.675,
+          "f1-score": 0.6835443037974683,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.5405405405405406,
+          "recall": 0.625,
+          "f1-score": 0.5797101449275363,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.5714285714285714,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5517241379310345,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.8518518518518519,
+          "recall": 0.4791666666666667,
+          "f1-score": 0.6133333333333333,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.9411764705882353,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9142857142857143,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.36585365853658536,
+          "recall": 0.38461538461538464,
+          "f1-score": 0.375,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.8333333333333334,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.5882352941176471,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.5,
+          "recall": 0.6,
+          "f1-score": 0.5454545454545454,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8333333333333334,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7843137254901961,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8,
+          "recall": 0.6451612903225806,
+          "f1-score": 0.7142857142857143,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.9,
+          "recall": 0.47368421052631576,
+          "f1-score": 0.6206896551724138,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.3076923076923077,
+          "recall": 0.5714285714285714,
+          "f1-score": 0.4,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6638655462184874,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6183953033268101,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.573215330397371,
+          "recall": 0.49776710185553685,
+          "f1-score": 0.5206527087832402,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6837820526930317,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6137459395383742,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6714697406340058,
+          "recall": 0.6347262247838616,
+          "f1-score": 0.643611911623439,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.033960629297075565,
+        0.05219036419665254
+      ]
+    },
+    "capacity_minimum_control": {
+      "macroF1": 0.5158355187550758,
+      "microF1": 0.6119500984898227,
+      "sampleF1": 0.6354466858789626,
+      "exactMatch": 0.569164265129683,
+      "groupBalanced": {
+        "macroF1": 0.5070172714868502,
+        "microF1": 0.6055958616650942,
+        "sampleF1": 0.6203996303996303,
+        "exactMatch": 0.5719542619542619
+      },
+      "macroF1_atLeast5Groups": 0.6021559498652349,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8571428571428571,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.8571428571428571,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.7058823529411765,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.6075949367088608,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.675,
+          "recall": 0.675,
+          "f1-score": 0.675,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.5135135135135135,
+          "recall": 0.59375,
+          "f1-score": 0.5507246376811594,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.5714285714285714,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5517241379310345,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.84,
+          "recall": 0.4375,
+          "f1-score": 0.5753424657534246,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9411764705882353,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.38461538461538464,
+          "recall": 0.38461538461538464,
+          "f1-score": 0.38461538461538464,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.7142857142857143,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.5555555555555556,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.52,
+          "recall": 0.52,
+          "f1-score": 0.52,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8333333333333334,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7843137254901961,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8333333333333334,
+          "recall": 0.6451612903225806,
+          "f1-score": 0.7272727272727273,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.8571428571428571,
+          "recall": 0.47368421052631576,
+          "f1-score": 0.6101694915254238,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.32142857142857145,
+          "recall": 0.6428571428571429,
+          "f1-score": 0.42857142857142855,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6619318181818182,
+          "recall": 0.568986568986569,
+          "f1-score": 0.6119500984898227,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5663003817156066,
+          "recall": 0.4929736844885901,
+          "f1-score": 0.5158355187550758,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6775778234601765,
+          "recall": 0.568986568986569,
+          "f1-score": 0.6059756490848148,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6657060518731989,
+          "recall": 0.6231988472622478,
+          "f1-score": 0.6354466858789626,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.03925612110627602,
+        0.05336252116103642
+      ]
+    },
+    "capacity_unrestricted_control": {
+      "macroF1": 0.5347095396353483,
+      "microF1": 0.6539724228496389,
+      "sampleF1": 0.6825168107588857,
+      "exactMatch": 0.6181556195965417,
+      "groupBalanced": {
+        "macroF1": 0.5453584513726253,
+        "microF1": 0.6969807653423952,
+        "sampleF1": 0.7182328482328483,
+        "exactMatch": 0.6743520443520443
+      },
+      "macroF1_atLeast5Groups": 0.6268373617855912,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.90625,
+          "recall": 0.8285714285714286,
+          "f1-score": 0.8656716417910447,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.7857142857142857,
+          "recall": 0.4888888888888889,
+          "f1-score": 0.6027397260273972,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.7142857142857143,
+          "recall": 0.625,
+          "f1-score": 0.6666666666666666,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.6428571428571429,
+          "recall": 0.5625,
+          "f1-score": 0.6,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.5833333333333334,
+          "recall": 0.4666666666666667,
+          "f1-score": 0.5185185185185185,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.8863636363636364,
+          "recall": 0.8125,
+          "f1-score": 0.8478260869565217,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9411764705882353,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.47368421052631576,
+          "recall": 0.46153846153846156,
+          "f1-score": 0.4675324675324675,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.8,
+          "recall": 0.36363636363636365,
+          "f1-score": 0.5,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.47368421052631576,
+          "recall": 0.72,
+          "f1-score": 0.5714285714285714,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8695652173913043,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.8,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.782608695652174,
+          "recall": 0.5806451612903226,
+          "f1-score": 0.6666666666666666,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.9473684210526315,
+          "recall": 0.47368421052631576,
+          "f1-score": 0.631578947368421,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.32,
+          "recall": 0.5714285714285714,
+          "f1-score": 0.41025641025641024,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.7073863636363636,
+          "recall": 0.608058608058608,
+          "f1-score": 0.6539724228496389,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5991596981001679,
+          "recall": 0.5049817283633322,
+          "f1-score": 0.5347095396353483,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.7208072112951158,
+          "recall": 0.608058608058608,
+          "f1-score": 0.6475486234847024,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.7103746397694525,
+          "recall": 0.6721902017291066,
+          "f1-score": 0.6825168107588857,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.019991283335008898,
+        0.08256561870562931
+      ]
+    },
+    "metric_no_release": {
+      "macroF1": 0.519753784601964,
+      "microF1": 0.6216393442622951,
+      "sampleF1": 0.6484149855907781,
+      "exactMatch": 0.5864553314121037,
+      "groupBalanced": {
+        "macroF1": 0.5191274222777363,
+        "microF1": 0.6396024494746932,
+        "sampleF1": 0.6574451374451374,
+        "exactMatch": 0.6139015939015938
+      },
+      "macroF1_atLeast5Groups": 0.6118047228505321,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8484848484848485,
+          "recall": 0.8,
+          "f1-score": 0.8235294117647058,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.7058823529411765,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.6075949367088608,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.6944444444444444,
+          "recall": 0.625,
+          "f1-score": 0.6578947368421053,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.5294117647058824,
+          "recall": 0.5625,
+          "f1-score": 0.5454545454545454,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5925925925925926,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.8787878787878788,
+          "recall": 0.6041666666666666,
+          "f1-score": 0.7160493827160493,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.9375,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8823529411764706,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.425,
+          "recall": 0.4358974358974359,
+          "f1-score": 0.43037974683544306,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 1.0,
+          "recall": 0.36363636363636365,
+          "f1-score": 0.5333333333333333,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.4594594594594595,
+          "recall": 0.68,
+          "f1-score": 0.5483870967741935,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8695652173913043,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.8,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.782608695652174,
+          "recall": 0.5806451612903226,
+          "f1-score": 0.6666666666666666,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.9473684210526315,
+          "recall": 0.47368421052631576,
+          "f1-score": 0.631578947368421,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.3076923076923077,
+          "recall": 0.5714285714285714,
+          "f1-score": 0.4,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6713881019830028,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6216393442622951,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5913454151340456,
+          "recall": 0.4904528911874363,
+          "f1-score": 0.519753784601964,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6995443328383194,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6193752954716725,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6772334293948127,
+          "recall": 0.6361671469740634,
+          "f1-score": 0.6484149855907781,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.040998928262164176,
+        0.05185196789283545
+      ]
+    },
+    "metric_old_gain": {
+      "macroF1": 0.5209486095414988,
+      "microF1": 0.6183953033268101,
+      "sampleF1": 0.643611911623439,
+      "exactMatch": 0.5720461095100865,
+      "groupBalanced": {
+        "macroF1": 0.5192111276734988,
+        "microF1": 0.6206351786236712,
+        "sampleF1": 0.6365557865557866,
+        "exactMatch": 0.5874497574497574
+      },
+      "macroF1_atLeast5Groups": 0.6109108190707512,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8571428571428571,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.8571428571428571,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.75,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.6233766233766234,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.6923076923076923,
+          "recall": 0.675,
+          "f1-score": 0.6835443037974683,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.5555555555555556,
+          "recall": 0.625,
+          "f1-score": 0.5882352941176471,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.5714285714285714,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5517241379310345,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.8461538461538461,
+          "recall": 0.4583333333333333,
+          "f1-score": 0.5945945945945946,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.9411764705882353,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9142857142857143,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.37209302325581395,
+          "recall": 0.41025641025641024,
+          "f1-score": 0.3902439024390244,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.8333333333333334,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.5882352941176471,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.5,
+          "recall": 0.6,
+          "f1-score": 0.5454545454545454,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8333333333333334,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7843137254901961,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8,
+          "recall": 0.6451612903225806,
+          "f1-score": 0.7142857142857143,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.9,
+          "recall": 0.47368421052631576,
+          "f1-score": 0.6206896551724138,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.3076923076923077,
+          "recall": 0.5714285714285714,
+          "f1-score": 0.4,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6638655462184874,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6183953033268101,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.574130411223032,
+          "recall": 0.49804990728540105,
+          "f1-score": 0.5209486095414988,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6848817143072592,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.613667447498682,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6714697406340058,
+          "recall": 0.6347262247838616,
+          "f1-score": 0.643611911623439,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.03395785252471941,
+        0.05193092422730616
+      ]
+    },
+    "metric_full_scale": {
+      "macroF1": 0.5242256861680841,
+      "microF1": 0.6192031352057479,
+      "sampleF1": 0.6445725264169068,
+      "exactMatch": 0.5749279538904899,
+      "groupBalanced": {
+        "macroF1": 0.5128767410125957,
+        "microF1": 0.6147847805637549,
+        "sampleF1": 0.6323446523446523,
+        "exactMatch": 0.5844767844767844
+      },
+      "macroF1_atLeast5Groups": 0.6176525941293044,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8787878787878788,
+          "recall": 0.8285714285714286,
+          "f1-score": 0.8529411764705882,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.75,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.6233766233766234,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.6578947368421053,
+          "recall": 0.625,
+          "f1-score": 0.6410256410256411,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.5454545454545454,
+          "recall": 0.5625,
+          "f1-score": 0.5538461538461539,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.5,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5161290322580645,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.8518518518518519,
+          "recall": 0.4791666666666667,
+          "f1-score": 0.6133333333333333,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.9375,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.8823529411764706,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.4090909090909091,
+          "recall": 0.46153846153846156,
+          "f1-score": 0.43373493975903615,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 1.0,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.625,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.46875,
+          "recall": 0.6,
+          "f1-score": 0.5263157894736842,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8333333333333334,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7843137254901961,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.7916666666666666,
+          "recall": 0.6129032258064516,
+          "f1-score": 0.6909090909090909,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.8695652173913043,
+          "recall": 0.5263157894736842,
+          "f1-score": 0.6557377049180327,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.4,
+          "recall": 0.7142857142857143,
+          "f1-score": 0.5128205128205128,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6657303370786517,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6192031352057479,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5819938317305056,
+          "recall": 0.5003274989193296,
+          "f1-score": 0.5242256861680841,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6862643222387692,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6152577190520847,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6729106628242075,
+          "recall": 0.6347262247838616,
+          "f1-score": 0.6445725264169068,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.03937178407032768,
+        0.05214897769271487
+      ]
+    },
+    "metric_normalized": {
+      "macroF1": 0.5209486095414988,
+      "microF1": 0.6183953033268101,
+      "sampleF1": 0.643611911623439,
+      "exactMatch": 0.5720461095100865,
+      "groupBalanced": {
+        "macroF1": 0.5192111276734988,
+        "microF1": 0.6206351786236712,
+        "sampleF1": 0.6365557865557866,
+        "exactMatch": 0.5874497574497574
+      },
+      "macroF1_atLeast5Groups": 0.6109108190707512,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8571428571428571,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.8571428571428571,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.75,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.6233766233766234,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.6923076923076923,
+          "recall": 0.675,
+          "f1-score": 0.6835443037974683,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.5555555555555556,
+          "recall": 0.625,
+          "f1-score": 0.5882352941176471,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.5714285714285714,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5517241379310345,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.8461538461538461,
+          "recall": 0.4583333333333333,
+          "f1-score": 0.5945945945945946,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.9411764705882353,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9142857142857143,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.37209302325581395,
+          "recall": 0.41025641025641024,
+          "f1-score": 0.3902439024390244,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.8333333333333334,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.5882352941176471,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.5,
+          "recall": 0.6,
+          "f1-score": 0.5454545454545454,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8333333333333334,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7843137254901961,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8,
+          "recall": 0.6451612903225806,
+          "f1-score": 0.7142857142857143,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.9,
+          "recall": 0.47368421052631576,
+          "f1-score": 0.6206896551724138,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.3076923076923077,
+          "recall": 0.5714285714285714,
+          "f1-score": 0.4,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6638655462184874,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6183953033268101,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.574130411223032,
+          "recall": 0.49804990728540105,
+          "f1-score": 0.5209486095414988,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6848817143072592,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.613667447498682,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6714697406340058,
+          "recall": 0.6347262247838616,
+          "f1-score": 0.643611911623439,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.03395785252471941,
+        0.05193092422730616
+      ]
+    },
+    "metric_soft": {
+      "macroF1": 0.5099633799892307,
+      "microF1": 0.6166112956810631,
+      "sampleF1": 0.6239193083573487,
+      "exactMatch": 0.5489913544668588,
+      "groupBalanced": {
+        "macroF1": 0.49745398893506687,
+        "microF1": 0.6084354842393415,
+        "sampleF1": 0.615925155925156,
+        "exactMatch": 0.5608731808731808
+      },
+      "macroF1_atLeast5Groups": 0.5944769991714375,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8157894736842105,
+          "recall": 0.8857142857142857,
+          "f1-score": 0.8493150684931506,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.7857142857142857,
+          "recall": 0.4888888888888889,
+          "f1-score": 0.6027397260273972,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.6923076923076923,
+          "recall": 0.675,
+          "f1-score": 0.6835443037974683,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.45,
+          "recall": 0.5625,
+          "f1-score": 0.5,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.35714285714285715,
+          "recall": 0.3333333333333333,
+          "f1-score": 0.3448275862068966,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.84375,
+          "recall": 0.5625,
+          "f1-score": 0.675,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 1.0,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9411764705882353,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.5333333333333333,
+          "recall": 0.41025641025641024,
+          "f1-score": 0.463768115942029,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.8333333333333334,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.5882352941176471,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.5217391304347826,
+          "recall": 0.48,
+          "f1-score": 0.5,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8333333333333334,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7843137254901961,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.7727272727272727,
+          "recall": 0.5483870967741935,
+          "f1-score": 0.6415094339622641,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.9444444444444444,
+          "recall": 0.4473684210526316,
+          "f1-score": 0.6071428571428571,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.37037037037037035,
+          "recall": 0.7142857142857143,
+          "f1-score": 0.4878048780487805,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6763848396501457,
+          "recall": 0.5665445665445665,
+          "f1-score": 0.6166112956810631,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5737638545191714,
+          "recall": 0.4819064255576789,
+          "f1-score": 0.5099633799892307,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6904015091895607,
+          "recall": 0.5665445665445665,
+          "f1-score": 0.6084604110150851,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6455331412103746,
+          "recall": 0.6207973102785783,
+          "f1-score": 0.6239193083573487,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.04724621140370146,
+        0.04984357916363653
+      ]
+    },
+    "metric_no_effort": {
+      "macroF1": 0.5245652930903726,
+      "microF1": 0.6236138290932811,
+      "sampleF1": 0.6493756003842459,
+      "exactMatch": 0.5778097982708934,
+      "groupBalanced": {
+        "macroF1": 0.5221748727046913,
+        "microF1": 0.6267204108832038,
+        "sampleF1": 0.643042273042273,
+        "exactMatch": 0.5939362439362439
+      },
+      "macroF1_atLeast5Groups": 0.6156403283269707,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8571428571428571,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.8571428571428571,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.8,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.64,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.6923076923076923,
+          "recall": 0.675,
+          "f1-score": 0.6835443037974683,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.5405405405405406,
+          "recall": 0.625,
+          "f1-score": 0.5797101449275363,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.5714285714285714,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5517241379310345,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.8518518518518519,
+          "recall": 0.4791666666666667,
+          "f1-score": 0.6133333333333333,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.9411764705882353,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9142857142857143,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.3953488372093023,
+          "recall": 0.4358974358974359,
+          "f1-score": 0.4146341463414634,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.8333333333333334,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.5882352941176471,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.5,
+          "recall": 0.6,
+          "f1-score": 0.5454545454545454,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8333333333333334,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7843137254901961,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8,
+          "recall": 0.6451612903225806,
+          "f1-score": 0.7142857142857143,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.9,
+          "recall": 0.47368421052631576,
+          "f1-score": 0.6206896551724138,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.32,
+          "recall": 0.5714285714285714,
+          "f1-score": 0.41025641025641024,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6694677871148459,
+          "recall": 0.5836385836385837,
+          "f1-score": 0.6236138290932811,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5786154992785716,
+          "recall": 0.5007836931074222,
+          "f1-score": 0.5245652930903726,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6897591458811725,
+          "recall": 0.5836385836385837,
+          "f1-score": 0.6187846389887595,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6772334293948127,
+          "recall": 0.6404899135446686,
+          "f1-score": 0.6493756003842459,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.031035027564312048,
+        0.05607260751607684
+      ]
+    },
+    "metric_no_confidence": {
+      "macroF1": 0.5355740023165274,
+      "microF1": 0.6373770491803279,
+      "sampleF1": 0.6633045148895294,
+      "exactMatch": 0.5979827089337176,
+      "groupBalanced": {
+        "macroF1": 0.5375593799663241,
+        "microF1": 0.6498933735057617,
+        "sampleF1": 0.6675999075999076,
+        "exactMatch": 0.6226749826749827
+      },
+      "macroF1_atLeast5Groups": 0.6300363326996348,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8823529411764706,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.8695652173913043,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.8571428571428571,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.6575342465753424,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.6923076923076923,
+          "recall": 0.675,
+          "f1-score": 0.6835443037974683,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.5555555555555556,
+          "recall": 0.625,
+          "f1-score": 0.5882352941176471,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5925925925925926,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.8666666666666667,
+          "recall": 0.5416666666666666,
+          "f1-score": 0.6666666666666666,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.9411764705882353,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9142857142857143,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.40476190476190477,
+          "recall": 0.4358974358974359,
+          "f1-score": 0.41975308641975306,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.8333333333333334,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.5882352941176471,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.53125,
+          "recall": 0.68,
+          "f1-score": 0.5964912280701754,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8333333333333334,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7843137254901961,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.7916666666666666,
+          "recall": 0.6129032258064516,
+          "f1-score": 0.6909090909090909,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.9473684210526315,
+          "recall": 0.47368421052631576,
+          "f1-score": 0.631578947368421,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.3333333333333333,
+          "recall": 0.5714285714285714,
+          "f1-score": 0.42105263157894735,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6883852691218131,
+          "recall": 0.5934065934065934,
+          "f1-score": 0.6373770491803279,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5962891672109026,
+          "recall": 0.5072685128417677,
+          "f1-score": 0.5355740023165274,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.7084769070898137,
+          "recall": 0.5934065934065934,
+          "f1-score": 0.6324377656221666,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6930835734870316,
+          "recall": 0.6505763688760807,
+          "f1-score": 0.6633045148895294,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.018569923675205664,
+        0.06727457314034355
+      ]
+    },
+    "metric_no_diversity": {
+      "macroF1": 0.5206527087832402,
+      "microF1": 0.6183953033268101,
+      "sampleF1": 0.643611911623439,
+      "exactMatch": 0.5720461095100865,
+      "groupBalanced": {
+        "macroF1": 0.5174133371098172,
+        "microF1": 0.6206351786236712,
+        "sampleF1": 0.6365557865557866,
+        "exactMatch": 0.5874497574497574
+      },
+      "macroF1_atLeast5Groups": 0.6105238719253362,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8571428571428571,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.8571428571428571,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.75,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.6233766233766234,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.6923076923076923,
+          "recall": 0.675,
+          "f1-score": 0.6835443037974683,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.5405405405405406,
+          "recall": 0.625,
+          "f1-score": 0.5797101449275363,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.5714285714285714,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5517241379310345,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.8518518518518519,
+          "recall": 0.4791666666666667,
+          "f1-score": 0.6133333333333333,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.9411764705882353,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.9142857142857143,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.36585365853658536,
+          "recall": 0.38461538461538464,
+          "f1-score": 0.375,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.8333333333333334,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.5882352941176471,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.5,
+          "recall": 0.6,
+          "f1-score": 0.5454545454545454,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8333333333333334,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7843137254901961,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8,
+          "recall": 0.6451612903225806,
+          "f1-score": 0.7142857142857143,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.9,
+          "recall": 0.47368421052631576,
+          "f1-score": 0.6206896551724138,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.3076923076923077,
+          "recall": 0.5714285714285714,
+          "f1-score": 0.4,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6638655462184874,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6183953033268101,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.573215330397371,
+          "recall": 0.49776710185553685,
+          "f1-score": 0.5206527087832402,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6837820526930317,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6137459395383742,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6714697406340058,
+          "recall": 0.6347262247838616,
+          "f1-score": 0.643611911623439,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.033960629297075565,
+        0.05219036419665254
+      ]
+    },
+    "metric_original_control": {
+      "macroF1": 0.5179021278451159,
+      "microF1": 0.6200130804447351,
+      "sampleF1": 0.6479346781940443,
+      "exactMatch": 0.5835734870317003,
+      "groupBalanced": {
+        "macroF1": 0.5189303940480431,
+        "microF1": 0.6326507995488887,
+        "sampleF1": 0.6485793485793485,
+        "exactMatch": 0.6013721413721413
+      },
+      "macroF1_atLeast5Groups": 0.6124793007853134,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8108108108108109,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.8333333333333334,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.6111111111111112,
+          "recall": 0.4888888888888889,
+          "f1-score": 0.5432098765432098,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.7272727272727273,
+          "recall": 0.6,
+          "f1-score": 0.6575342465753424,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.4444444444444444,
+          "recall": 0.625,
+          "f1-score": 0.5194805194805194,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.5,
+          "recall": 0.4666666666666667,
+          "f1-score": 0.4827586206896552,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.9,
+          "recall": 0.5625,
+          "f1-score": 0.6923076923076923,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.8,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.8421052631578947,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.5172413793103449,
+          "recall": 0.38461538461538464,
+          "f1-score": 0.4411764705882353,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.8571428571428571,
+          "recall": 0.5454545454545454,
+          "f1-score": 0.6666666666666666,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.45454545454545453,
+          "recall": 0.6,
+          "f1-score": 0.5172413793103449,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.7692307692307693,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7547169811320755,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8260869565217391,
+          "recall": 0.6129032258064516,
+          "f1-score": 0.7037037037037037,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.9,
+          "recall": 0.47368421052631576,
+          "f1-score": 0.6206896551724138,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.45,
+          "recall": 0.6428571428571429,
+          "f1-score": 0.5294117647058824,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6676056338028169,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6200130804447351,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5628168535523682,
+          "recall": 0.4993730912698754,
+          "f1-score": 0.5179021278451159,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6798145487136157,
+          "recall": 0.5787545787545788,
+          "f1-score": 0.6119757600246237,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6743515850144092,
+          "recall": 0.638088376560999,
+          "f1-score": 0.6479346781940443,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.04051058070210839,
+        0.019868439096782146
+      ]
+    },
+    "metric_logical_control": {
+      "macroF1": 0.5268162566487854,
+      "microF1": 0.6314416177429876,
+      "sampleF1": 0.6618635926993276,
+      "exactMatch": 0.5965417867435159,
+      "groupBalanced": {
+        "macroF1": 0.5207301609670656,
+        "microF1": 0.6481751730131858,
+        "sampleF1": 0.671030261030261,
+        "exactMatch": 0.6287110187110186
+      },
+      "macroF1_atLeast5Groups": 0.6189834964568034,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.90625,
+          "recall": 0.8285714285714286,
+          "f1-score": 0.8656716417910447,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.7058823529411765,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.6075949367088608,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.6666666666666666,
+          "recall": 0.65,
+          "f1-score": 0.6582278481012658,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.5454545454545454,
+          "recall": 0.5625,
+          "f1-score": 0.5538461538461539,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.6153846153846154,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5714285714285714,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.8787878787878788,
+          "recall": 0.6041666666666666,
+          "f1-score": 0.7160493827160493,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 1.0,
+          "recall": 0.8333333333333334,
+          "f1-score": 0.9090909090909091,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.4444444444444444,
+          "recall": 0.5128205128205128,
+          "f1-score": 0.47619047619047616,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.8,
+          "recall": 0.36363636363636365,
+          "f1-score": 0.5,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.4594594594594595,
+          "recall": 0.68,
+          "f1-score": 0.5483870967741935,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8636363636363636,
+          "recall": 0.7037037037037037,
+          "f1-score": 0.7755102040816326,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8260869565217391,
+          "recall": 0.6129032258064516,
+          "f1-score": 0.7037037037037037,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.8947368421052632,
+          "recall": 0.4473684210526316,
+          "f1-score": 0.5964912280701754,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.375,
+          "recall": 0.6428571428571429,
+          "f1-score": 0.47368421052631576,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6778711484593838,
+          "recall": 0.590964590964591,
+          "f1-score": 0.6314416177429876,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.587164125023656,
+          "recall": 0.5005016155949943,
+          "f1-score": 0.5268162566487854,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.7006876673141673,
+          "recall": 0.590964590964591,
+          "f1-score": 0.6279852542638247,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6887608069164265,
+          "recall": 0.6527377521613833,
+          "f1-score": 0.6618635926993276,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.03600093729601728,
+        0.0613145848593404
+      ]
+    },
+    "original_fixed": {
+      "macroF1": 0.519842918759082,
+      "microF1": 0.6223369916074887,
+      "sampleF1": 0.6516810758885687,
+      "exactMatch": 0.5778097982708934,
+      "groupBalanced": {
+        "macroF1": 0.5271645847965161,
+        "microF1": 0.6155592572821466,
+        "sampleF1": 0.6332820512820513,
+        "exactMatch": 0.5798406098406099
+      },
+      "macroF1_atLeast5Groups": 0.6160047174016512,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8108108108108109,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.8333333333333334,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.625,
+          "recall": 0.4444444444444444,
+          "f1-score": 0.5194805194805194,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.7058823529411765,
+          "recall": 0.6,
+          "f1-score": 0.6486486486486487,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.4878048780487805,
+          "recall": 0.625,
+          "f1-score": 0.547945205479452,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.5333333333333333,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5333333333333333,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.88,
+          "recall": 0.4583333333333333,
+          "f1-score": 0.6027397260273972,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.7391304347826086,
+          "recall": 0.9444444444444444,
+          "f1-score": 0.8292682926829268,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.4634146341463415,
+          "recall": 0.48717948717948717,
+          "f1-score": 0.475,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5454545454545454,
+          "f1-score": 0.6,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.5517241379310345,
+          "recall": 0.64,
+          "f1-score": 0.5925925925925926,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7692307692307693,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8260869565217391,
+          "recall": 0.6129032258064516,
+          "f1-score": 0.7037037037037037,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.8695652173913043,
+          "recall": 0.5263157894736842,
+          "f1-score": 0.6557377049180327,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.4166666666666667,
+          "recall": 0.7142857142857143,
+          "f1-score": 0.5263157894736842,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6602739726027397,
+          "recall": 0.5885225885225885,
+          "f1-score": 0.6223369916074887,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5515344758376743,
+          "recall": 0.5135045832728844,
+          "f1-score": 0.519842918759082,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6718324570924706,
+          "recall": 0.5885225885225885,
+          "f1-score": 0.6129519444011031,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6772334293948127,
+          "recall": 0.6443323727185398,
+          "f1-score": 0.6516810758885687,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        0.0,
+        0.0
+      ]
+    },
+    "normalized_fixed": {
+      "macroF1": 0.5167522180474623,
+      "microF1": 0.6155861165684349,
+      "sampleF1": 0.639193083573487,
+      "exactMatch": 0.5720461095100865,
+      "groupBalanced": {
+        "macroF1": 0.5117078757740802,
+        "microF1": 0.6130935692722969,
+        "sampleF1": 0.6273060753060753,
+        "exactMatch": 0.5797505197505197
+      },
+      "macroF1_atLeast5Groups": 0.6109755725883818,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8108108108108109,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.8333333333333334,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.6111111111111112,
+          "recall": 0.4888888888888889,
+          "f1-score": 0.5432098765432098,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.7272727272727273,
+          "recall": 0.6,
+          "f1-score": 0.6575342465753424,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.43478260869565216,
+          "recall": 0.625,
+          "f1-score": 0.5128205128205128,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.5333333333333333,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5333333333333333,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.8846153846153846,
+          "recall": 0.4791666666666667,
+          "f1-score": 0.6216216216216216,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.8,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.8421052631578947,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.5172413793103449,
+          "recall": 0.38461538461538464,
+          "f1-score": 0.4411764705882353,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 0.8571428571428571,
+          "recall": 0.5454545454545454,
+          "f1-score": 0.6666666666666666,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.4827586206896552,
+          "recall": 0.56,
+          "f1-score": 0.5185185185185185,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.7407407407407407,
+          "recall": 0.7407407407407407,
+          "f1-score": 0.7407407407407407,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8260869565217391,
+          "recall": 0.6129032258064516,
+          "f1-score": 0.7037037037037037,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.8695652173913043,
+          "recall": 0.5263157894736842,
+          "f1-score": 0.6557377049180327,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.42857142857142855,
+          "recall": 0.6428571428571429,
+          "f1-score": 0.5142857142857142,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6638418079096046,
+          "recall": 0.5738705738705738,
+          "f1-score": 0.6155861165684349,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5602372456592405,
+          "recall": 0.49913573316874027,
+          "f1-score": 0.5167522180474623,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6747643322614079,
+          "recall": 0.5738705738705738,
+          "f1-score": 0.6069139779921281,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6685878962536023,
+          "recall": 0.6270413064361191,
+          "f1-score": 0.639193083573487,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.04077383999551889,
+        0.01628613585821897
+      ]
+    },
+    "original_aggregation_retuned": {
+      "macroF1": 0.5311490714919612,
+      "microF1": 0.631163708086785,
+      "sampleF1": 0.6628242074927954,
+      "exactMatch": 0.6095100864553314,
+      "groupBalanced": {
+        "macroF1": 0.5194630712858394,
+        "microF1": 0.6224795329267099,
+        "sampleF1": 0.6422430122430122,
+        "exactMatch": 0.6047054747054748
+      },
+      "macroF1_atLeast5Groups": 0.6298022270927267,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8333333333333334,
+          "recall": 0.8571428571428571,
+          "f1-score": 0.8450704225352113,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.6666666666666666,
+          "recall": 0.4444444444444444,
+          "f1-score": 0.5333333333333333,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.7666666666666667,
+          "recall": 0.575,
+          "f1-score": 0.6571428571428571,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.53125,
+          "recall": 0.53125,
+          "f1-score": 0.53125,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.6153846153846154,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5714285714285714,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.896551724137931,
+          "recall": 0.5416666666666666,
+          "f1-score": 0.6753246753246753,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.8,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.8421052631578947,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.4423076923076923,
+          "recall": 0.5897435897435898,
+          "f1-score": 0.5054945054945055,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 1.0,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.625,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.46153846153846156,
+          "recall": 0.72,
+          "f1-score": 0.5625,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.8260869565217391,
+          "recall": 0.7037037037037037,
+          "f1-score": 0.76,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8260869565217391,
+          "recall": 0.6129032258064516,
+          "f1-score": 0.7037037037037037,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.8947368421052632,
+          "recall": 0.4473684210526316,
+          "f1-score": 0.5964912280701754,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.6,
+          "recall": 0.6428571428571429,
+          "f1-score": 0.6206896551724138,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6837606837606838,
+          "recall": 0.5860805860805861,
+          "f1-score": 0.631163708086785,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5976829361873005,
+          "recall": 0.5025204545991273,
+          "f1-score": 0.5311490714919612,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.7047621253710517,
+          "recall": 0.5860805860805861,
+          "f1-score": 0.6235677879523388,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6887608069164265,
+          "recall": 0.6510566762728146,
+          "f1-score": 0.6628242074927954,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.029302930847759236,
+        0.0339500089378754
+      ]
+    },
+    "normalized_aggregation_retuned": {
+      "macroF1": 0.5213142013139376,
+      "microF1": 0.6172028890347997,
+      "sampleF1": 0.6484149855907781,
+      "exactMatch": 0.5951008645533141,
+      "groupBalanced": {
+        "macroF1": 0.5145907537085888,
+        "microF1": 0.6165235029774134,
+        "sampleF1": 0.6369276969276969,
+        "exactMatch": 0.6011919611919612
+      },
+      "macroF1_atLeast5Groups": 0.6169412430137727,
+      "perClass": {
+        "anchor": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 6.0
+        },
+        "chordjack": {
+          "precision": 0.8055555555555556,
+          "recall": 0.8285714285714286,
+          "f1-score": 0.8169014084507042,
+          "support": 35.0
+        },
+        "coordination": {
+          "precision": 0.6666666666666666,
+          "recall": 0.4444444444444444,
+          "f1-score": 0.5333333333333333,
+          "support": 22.5
+        },
+        "dense chordstream": {
+          "precision": 0.7419354838709677,
+          "recall": 0.575,
+          "f1-score": 0.647887323943662,
+          "support": 40.0
+        },
+        "density": {
+          "precision": 0.5333333333333333,
+          "recall": 0.5,
+          "f1-score": 0.5161290322580645,
+          "support": 32.0
+        },
+        "fast chordstream": {
+          "precision": 0.6666666666666666,
+          "recall": 0.5333333333333333,
+          "f1-score": 0.5925925925925926,
+          "support": 15.0
+        },
+        "hybrid": {
+          "precision": 0.9,
+          "recall": 0.5625,
+          "f1-score": 0.6923076923076923,
+          "support": 48.0
+        },
+        "inverse": {
+          "precision": 0.8,
+          "recall": 0.8888888888888888,
+          "f1-score": 0.8421052631578947,
+          "support": 18.0
+        },
+        "ln mix": {
+          "precision": 0.40384615384615385,
+          "recall": 0.5384615384615384,
+          "f1-score": 0.46153846153846156,
+          "support": 39.0
+        },
+        "ln wildcard": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 3.0
+        },
+        "minijack": {
+          "precision": 1.0,
+          "recall": 0.45454545454545453,
+          "f1-score": 0.625,
+          "support": 11.0
+        },
+        "rc mix": {
+          "precision": 0.425,
+          "recall": 0.68,
+          "f1-score": 0.5230769230769231,
+          "support": 25.0
+        },
+        "release": {
+          "precision": 0.782608695652174,
+          "recall": 0.6666666666666666,
+          "f1-score": 0.72,
+          "support": 27.0
+        },
+        "speed": {
+          "precision": 0.8181818181818182,
+          "recall": 0.5806451612903226,
+          "f1-score": 0.6792452830188679,
+          "support": 31.0
+        },
+        "tech": {
+          "precision": 0.9473684210526315,
+          "recall": 0.47368421052631576,
+          "f1-score": 0.631578947368421,
+          "support": 38.0
+        },
+        "technical": {
+          "precision": 0.5294117647058824,
+          "recall": 0.6428571428571429,
+          "f1-score": 0.5806451612903226,
+          "support": 14.0
+        },
+        "vibro": {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1-score": 0.0,
+          "support": 5.0
+        },
+        "micro avg": {
+          "precision": 0.6676136363636364,
+          "recall": 0.5738705738705738,
+          "f1-score": 0.6172028890347997,
+          "support": 409.5
+        },
+        "macro avg": {
+          "precision": 0.5894455623254029,
+          "recall": 0.49232930997561974,
+          "f1-score": 0.5213142013139376,
+          "support": 409.5
+        },
+        "weighted avg": {
+          "precision": 0.6955295880783328,
+          "recall": 0.5738705738705738,
+          "f1-score": 0.6126453803439608,
+          "support": 409.5
+        },
+        "samples avg": {
+          "precision": 0.6729106628242075,
+          "recall": 0.638088376560999,
+          "f1-score": 0.6484149855907781,
+          "support": 409.5
+        }
+      },
+      "pairedGroupBootstrapDeltaVsOriginal95": [
+        -0.03555417175168725,
+        0.023704824989642246
+      ]
+    }
+  },
+  "segment": {
+    "metric_repaired": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 166049.5,
+          "accuracy": 0.6918729166666666,
+          "interiorAccuracy": 0.7390390938984289,
+          "partialLabelNll": 3.895880880331069,
+          "breakRecall": 0.6760389930258485,
+          "nonBreakAccuracy": 0.6949049044576501
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 128710.0,
+          "accuracy": 0.5352100962638002,
+          "interiorAccuracy": 0.5565792249806597,
+          "partialLabelNll": 7.2340242426654475,
+          "breakRecall": 0.6575947689316957,
+          "nonBreakAccuracy": 0.49755301794453505
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 264085.0,
+          "accuracy": 0.6477783937323084,
+          "interiorAccuracy": 0.7207732874676717,
+          "partialLabelNll": 6.203098409283005,
+          "breakRecall": 0.4587417952433723,
+          "nonBreakAccuracy": 0.6954595298576918
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 118808.0,
+          "accuracy": 0.5632686344974067,
+          "interiorAccuracy": 0.6269904663746457,
+          "partialLabelNll": 7.155910028585109,
+          "breakRecall": 0.42213069130579983,
+          "nonBreakAccuracy": 0.6014541205100867
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 188647.0,
+          "accuracy": 0.8976607630594706,
+          "interiorAccuracy": 0.9435775291033628,
+          "partialLabelNll": 2.795606327781141,
+          "breakRecall": 0.9270435728642289,
+          "nonBreakAccuracy": 0.8663218345592574
+        }
+      ],
+      "chartMeanAccuracy": 0.6714265665434959,
+      "durationAccuracy": 0.6654648051340841,
+      "meanInteriorAccuracy": 0.7267964165770939,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.011470418770859745,
+            "confidence": 0.2862501951119076,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.1667391748536129,
+            "confidence": 0.36248243227385835,
+            "accuracy": 0.3559151257873094
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.12305271487111641,
+            "confidence": 0.4599552014594007,
+            "accuracy": 0.44258221716116336
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.09714955359473307,
+            "confidence": 0.5530304385342056,
+            "accuracy": 0.5111638942441492
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.17084254323482984,
+            "confidence": 0.6680321911112173,
+            "accuracy": 0.6983792746577036
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.08975921965839113,
+            "confidence": 0.7544199796204768,
+            "accuracy": 0.7627067976486941
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.07131033433719937,
+            "confidence": 0.8251297260373344,
+            "accuracy": 0.8752727531793758
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.26967604067925754,
+            "confidence": 0.9990759237169745,
+            "accuracy": 0.7987509817770905
+          }
+        ],
+        "ece": 0.07411049032173009,
+        "brier": 0.5580227760160614
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> fast chordstream",
+          31455.0
+        ],
+        [
+          "break -> technical",
+          29398.0
+        ],
+        [
+          "ln wildcard -> technical",
+          28715.5
+        ],
+        [
+          "density -> coordination",
+          20873.0
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "break -> release",
+          13413.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "break -> coordination",
+          12789.5
+        ],
+        [
+          "coordination -> technical",
+          12499.0
+        ],
+        [
+          "break -> density",
+          12239.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600.0
+        ],
+        [
+          "release -> inverse",
+          9509.5
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          9075.0
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.07270140088285922,
+        0.017933598034450566
+      ]
+    },
+    "capacity_minimum_control": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 154455.0,
+          "accuracy": 0.6435625,
+          "interiorAccuracy": 0.6946217345633906,
+          "partialLabelNll": 5.08055402262638,
+          "breakRecall": 0.5351689092841773,
+          "nonBreakAccuracy": 0.664318444712529
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 128710.0,
+          "accuracy": 0.5352100962638002,
+          "interiorAccuracy": 0.5565792249806597,
+          "partialLabelNll": 7.2340242426654475,
+          "breakRecall": 0.6575947689316957,
+          "nonBreakAccuracy": 0.49755301794453505
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 268930.0,
+          "accuracy": 0.659662773070904,
+          "interiorAccuracy": 0.7360917018141808,
+          "partialLabelNll": 6.187648542449417,
+          "breakRecall": 0.4587417952433723,
+          "nonBreakAccuracy": 0.7103415335374937
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 122249.5,
+          "accuracy": 0.5795847832889259,
+          "interiorAccuracy": 0.6336575624838959,
+          "partialLabelNll": 7.018173330445994,
+          "breakRecall": 0.33269509072692866,
+          "nonBreakAccuracy": 0.6463818662618742
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 188647.0,
+          "accuracy": 0.8976607630594706,
+          "interiorAccuracy": 0.9435775291033628,
+          "partialLabelNll": 2.7923941401833763,
+          "breakRecall": 0.9270435728642289,
+          "nonBreakAccuracy": 0.8663218345592574
+        }
+      ],
+      "chartMeanAccuracy": 0.6680749184540705,
+      "durationAccuracy": 0.663245777441182,
+      "meanInteriorAccuracy": 0.7230577750972141,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.011470418770859745,
+            "confidence": 0.2862501951119076,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.1676909441162462,
+            "confidence": 0.3624356690812631,
+            "accuracy": 0.3784752236166456
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.14144017712490847,
+            "confidence": 0.4526736733365113,
+            "accuracy": 0.46885441011562196
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.09541665543420794,
+            "confidence": 0.5489640032329309,
+            "accuracy": 0.47742421534058443
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.1591360085100866,
+            "confidence": 0.6683198824007208,
+            "accuracy": 0.7206906228188334
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.07782010377241169,
+            "confidence": 0.7553337548392677,
+            "accuracy": 0.6887539077057554
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.08428574315646756,
+            "confidence": 0.8211155751292121,
+            "accuracy": 0.8612138833389014
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.2627399491148118,
+            "confidence": 0.9990515289580763,
+            "accuracy": 0.7837652438827554
+          }
+        ],
+        "ece": 0.08854713572014043,
+        "brier": 0.5769557941899929
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> technical",
+          39650.5
+        ],
+        [
+          "ln wildcard -> technical",
+          30552.5
+        ],
+        [
+          "break -> fast chordstream",
+          30500.5
+        ],
+        [
+          "density -> coordination",
+          20873.0
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "ln wildcard -> break",
+          15869.5
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "break -> release",
+          13491.0
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "break -> coordination",
+          12789.5
+        ],
+        [
+          "coordination -> technical",
+          12499.0
+        ],
+        [
+          "break -> density",
+          12307.5
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600.0
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "break -> inverse",
+          9241.5
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          9075.0
+        ],
+        [
+          "release -> density",
+          8256.0
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.07869963746607213,
+        0.021986136622372768
+      ]
+    },
+    "capacity_unrestricted_control": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 165833.0,
+          "accuracy": 0.6909708333333333,
+          "interiorAccuracy": 0.7390390938984289,
+          "partialLabelNll": 3.759127219311774,
+          "breakRecall": 0.6525757693604003,
+          "nonBreakAccuracy": 0.698322982291527
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 146942.5,
+          "accuracy": 0.6110256356945339,
+          "interiorAccuracy": 0.6358159270459713,
+          "partialLabelNll": 4.605828338350344,
+          "breakRecall": 0.9798091366970045,
+          "nonBreakAccuracy": 0.49755301794453505
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 255731.0,
+          "accuracy": 0.6272867311947175,
+          "interiorAccuracy": 0.6916603959707354,
+          "partialLabelNll": 8.007533089521074,
+          "breakRecall": 0.4587417952433723,
+          "nonBreakAccuracy": 0.6697992081361097
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 118808.0,
+          "accuracy": 0.5632686344974067,
+          "interiorAccuracy": 0.6269904663746457,
+          "partialLabelNll": 7.155910028585109,
+          "breakRecall": 0.42213069130579983,
+          "nonBreakAccuracy": 0.6014541205100867
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 148807.5,
+          "accuracy": 0.7080878784129734,
+          "interiorAccuracy": 0.7420864221890239,
+          "partialLabelNll": 5.067937144172468,
+          "breakRecall": 0.758947834264535,
+          "nonBreakAccuracy": 0.6538419934704794
+        }
+      ],
+      "chartMeanAccuracy": 0.6489013846957145,
+      "durationAccuracy": 0.6452215438878466,
+      "meanInteriorAccuracy": 0.7015685338527669,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.011470418770859745,
+            "confidence": 0.2862501951119076,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.1444760370101928,
+            "confidence": 0.3600814582714802,
+            "accuracy": 0.3534623828934924
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.13630217824402838,
+            "confidence": 0.46050844346596176,
+            "accuracy": 0.4678603720798739
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.10446363038013379,
+            "confidence": 0.5528217972103272,
+            "accuracy": 0.48958276675060336
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.17831793263350598,
+            "confidence": 0.6654730511202691,
+            "accuracy": 0.7171230487844833
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.07656432994804002,
+            "confidence": 0.7508920228881252,
+            "accuracy": 0.6574773137432054
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.06873793922683126,
+            "confidence": 0.820771609232253,
+            "accuracy": 0.6676973788100019
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.2796675337864081,
+            "confidence": 0.9991089375662665,
+            "accuracy": 0.7710723654027618
+          }
+        ],
+        "ece": 0.10250675829338296,
+        "brier": 0.591965960896591
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> technical",
+          32245.0
+        ],
+        [
+          "coordination -> technical",
+          30124.5
+        ],
+        [
+          "ln wildcard -> technical",
+          28715.5
+        ],
+        [
+          "release -> break",
+          28609.0
+        ],
+        [
+          "break -> coordination",
+          28482.5
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "density -> coordination",
+          16104.0
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "break -> release",
+          13413.0
+        ],
+        [
+          "break -> fast chordstream",
+          13222.5
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "density -> technical",
+          12995.5
+        ],
+        [
+          "break -> density",
+          12143.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600.0
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.08723959611766881,
+        -0.00910171231390892
+      ]
+    },
+    "metric_no_release": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 166049.5,
+          "accuracy": 0.6918729166666666,
+          "interiorAccuracy": 0.7390390938984289,
+          "partialLabelNll": 3.895880880331069,
+          "breakRecall": 0.6760389930258485,
+          "nonBreakAccuracy": 0.6949049044576501
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 165842.5,
+          "accuracy": 0.689616816017631,
+          "interiorAccuracy": 0.7125911339287807,
+          "partialLabelNll": 3.0468788600236962,
+          "breakRecall": 0.9798091366970045,
+          "nonBreakAccuracy": 0.600326264274062
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 264085.0,
+          "accuracy": 0.6477783937323084,
+          "interiorAccuracy": 0.7207732874676717,
+          "partialLabelNll": 6.203098409283005,
+          "breakRecall": 0.4587417952433723,
+          "nonBreakAccuracy": 0.6954595298576918
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 118808.0,
+          "accuracy": 0.5632686344974067,
+          "interiorAccuracy": 0.6269904663746457,
+          "partialLabelNll": 7.155910028585109,
+          "breakRecall": 0.42213069130579983,
+          "nonBreakAccuracy": 0.6014541205100867
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 188647.0,
+          "accuracy": 0.8976607630594706,
+          "interiorAccuracy": 0.9435775291033628,
+          "partialLabelNll": 2.795606327781141,
+          "breakRecall": 0.9270435728642289,
+          "nonBreakAccuracy": 0.8663218345592574
+        }
+      ],
+      "chartMeanAccuracy": 0.6971610198358009,
+      "durationAccuracy": 0.6903735251481979,
+      "meanInteriorAccuracy": 0.7527984014017809,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.017589750337408627,
+            "confidence": 0.28169120285702287,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.11929135020696978,
+            "confidence": 0.3515610292749316,
+            "accuracy": 0.3805368850438516
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.14824319631987964,
+            "confidence": 0.4578071574899982,
+            "accuracy": 0.48166885216599714
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.10644817697518066,
+            "confidence": 0.5493450918738745,
+            "accuracy": 0.5533683871373477
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.17084254323482984,
+            "confidence": 0.6680321911112173,
+            "accuracy": 0.6983792746577036
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.08975921965839113,
+            "confidence": 0.7544199796204768,
+            "accuracy": 0.7627067976486941
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.07131033433719937,
+            "confidence": 0.8251297260373344,
+            "accuracy": 0.8752727531793758
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.2765154289301409,
+            "confidence": 0.9990987800056724,
+            "accuracy": 0.8396694316396612
+          }
+        ],
+        "ece": 0.06596583515334913,
+        "brier": 0.5186561661463992
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> technical",
+          29398.0
+        ],
+        [
+          "ln wildcard -> technical",
+          28715.5
+        ],
+        [
+          "density -> coordination",
+          20873.0
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "break -> release",
+          13413.0
+        ],
+        [
+          "break -> fast chordstream",
+          13222.5
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "break -> coordination",
+          12789.5
+        ],
+        [
+          "coordination -> technical",
+          12499.0
+        ],
+        [
+          "break -> density",
+          12239.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "release -> inverse",
+          9509.5
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "wildcard -> break",
+          8400.0
+        ],
+        [
+          "release -> density",
+          8256.0
+        ],
+        [
+          "ln wildcard -> density",
+          8035.5
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.034836189150772474,
+        0.032893141850096876
+      ]
+    },
+    "metric_old_gain": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 166049.5,
+          "accuracy": 0.6918729166666666,
+          "interiorAccuracy": 0.7390390938984289,
+          "partialLabelNll": 3.895880880331069,
+          "breakRecall": 0.6760389930258485,
+          "nonBreakAccuracy": 0.6949049044576501
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 128710.0,
+          "accuracy": 0.5352100962638002,
+          "interiorAccuracy": 0.5565792249806597,
+          "partialLabelNll": 7.2340242426654475,
+          "breakRecall": 0.6575947689316957,
+          "nonBreakAccuracy": 0.49755301794453505
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 264085.0,
+          "accuracy": 0.6477783937323084,
+          "interiorAccuracy": 0.7207732874676717,
+          "partialLabelNll": 6.203098409283005,
+          "breakRecall": 0.4587417952433723,
+          "nonBreakAccuracy": 0.6954595298576918
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 118808.0,
+          "accuracy": 0.5632686344974067,
+          "interiorAccuracy": 0.6269904663746457,
+          "partialLabelNll": 7.155910028585109,
+          "breakRecall": 0.42213069130579983,
+          "nonBreakAccuracy": 0.6014541205100867
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 188647.0,
+          "accuracy": 0.8976607630594706,
+          "interiorAccuracy": 0.9435775291033628,
+          "partialLabelNll": 2.795606327781141,
+          "breakRecall": 0.9270435728642289,
+          "nonBreakAccuracy": 0.8663218345592574
+        }
+      ],
+      "chartMeanAccuracy": 0.6714265665434959,
+      "durationAccuracy": 0.6654648051340841,
+      "meanInteriorAccuracy": 0.7267964165770939,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.011470418770859745,
+            "confidence": 0.2862501951119076,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.1667391748536129,
+            "confidence": 0.36248243227385835,
+            "accuracy": 0.3559151257873094
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.12305271487111641,
+            "confidence": 0.4599552014594007,
+            "accuracy": 0.44258221716116336
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.09714955359473307,
+            "confidence": 0.5530304385342056,
+            "accuracy": 0.5111638942441492
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.17084254323482984,
+            "confidence": 0.6680321911112173,
+            "accuracy": 0.6983792746577036
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.08975921965839113,
+            "confidence": 0.7544199796204768,
+            "accuracy": 0.7627067976486941
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.07131033433719937,
+            "confidence": 0.8251297260373344,
+            "accuracy": 0.8752727531793758
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.26967604067925754,
+            "confidence": 0.9990759237169745,
+            "accuracy": 0.7987509817770905
+          }
+        ],
+        "ece": 0.07411049032173009,
+        "brier": 0.5580227760160614
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> fast chordstream",
+          31455.0
+        ],
+        [
+          "break -> technical",
+          29398.0
+        ],
+        [
+          "ln wildcard -> technical",
+          28715.5
+        ],
+        [
+          "density -> coordination",
+          20873.0
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "break -> release",
+          13413.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "break -> coordination",
+          12789.5
+        ],
+        [
+          "coordination -> technical",
+          12499.0
+        ],
+        [
+          "break -> density",
+          12239.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600.0
+        ],
+        [
+          "release -> inverse",
+          9509.5
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          9075.0
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.07270140088285922,
+        0.017933598034450566
+      ]
+    },
+    "metric_full_scale": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 127162.5,
+          "accuracy": 0.7006198347107438,
+          "interiorAccuracy": 0.7856299212598425,
+          "partialLabelNll": 7.369347126537004,
+          "breakRecall": 0.759090909090909,
+          "nonBreakAccuracy": 0.6876262626262626
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 174249.5,
+          "accuracy": 0.7260395833333333,
+          "interiorAccuracy": 0.771736276032152,
+          "partialLabelNll": 4.02365628687408,
+          "breakRecall": 0.6961836612999404,
+          "nonBreakAccuracy": 0.7317565990994346
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 133700.0,
+          "accuracy": 0.5559598311745015,
+          "interiorAccuracy": 0.5741144478045808,
+          "partialLabelNll": 5.806491213002181,
+          "breakRecall": 0.8306088185914995,
+          "nonBreakAccuracy": 0.47145187601957583
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 256505.0,
+          "accuracy": 0.6291852883893662,
+          "interiorAccuracy": 0.6855504195569833,
+          "partialLabelNll": 5.547265857201207,
+          "breakRecall": 0.5410877163072202,
+          "nonBreakAccuracy": 0.6514063416686888
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 114645.5,
+          "accuracy": 0.5435342252733186,
+          "interiorAccuracy": 0.5966213604741046,
+          "partialLabelNll": 7.950516250888459,
+          "breakRecall": 0.24219080485361238,
+          "nonBreakAccuracy": 0.6250640017830144
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 177722.0,
+          "accuracy": 0.8456750763725649,
+          "interiorAccuracy": 0.8902302900470728,
+          "partialLabelNll": 3.5734689742377928,
+          "breakRecall": 0.8640906492596485,
+          "nonBreakAccuracy": 0.8260335129607048
+        }
+      ],
+      "chartMeanAccuracy": 0.6668356398756381,
+      "durationAccuracy": 0.6600631363018307,
+      "meanInteriorAccuracy": 0.7173137858624559,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.011470418770859745,
+            "confidence": 0.2862501951119076,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.1689654138987272,
+            "confidence": 0.35034302234428694,
+            "accuracy": 0.3627153906122205
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.0936628905990953,
+            "confidence": 0.45780970854794434,
+            "accuracy": 0.5093682982534367
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.10960333702085513,
+            "confidence": 0.5484510244183002,
+            "accuracy": 0.5117333454346534
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.17762891612639672,
+            "confidence": 0.663498784517318,
+            "accuracy": 0.6763389496624923
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.10375553004318608,
+            "confidence": 0.7624658542169588,
+            "accuracy": 0.686198100816063
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.07457142915240103,
+            "confidence": 0.8260387648457997,
+            "accuracy": 0.8495373915021901
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.26034206438847873,
+            "confidence": 0.9990427930504535,
+            "accuracy": 0.8219836453018362
+          }
+        ],
+        "ece": 0.07226967464132976,
+        "brier": 0.56006167965649
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          41800.5
+        ],
+        [
+          "break -> technical",
+          30676.0
+        ],
+        [
+          "release -> coordination",
+          20923.0
+        ],
+        [
+          "density -> coordination",
+          20255.5
+        ],
+        [
+          "ln wildcard -> technical",
+          19837.5
+        ],
+        [
+          "break -> coordination",
+          19601.5
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "break -> fast chordstream",
+          16214.5
+        ],
+        [
+          "break -> release",
+          15025.5
+        ],
+        [
+          "fast chordstream|wildcard -> dense chordstream",
+          14087.0
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          13875.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "coordination -> technical",
+          12920.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          9796.0
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600.0
+        ],
+        [
+          "release -> inverse",
+          9509.5
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "break -> minijack",
+          9210.0
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.06434846158289909,
+        0.003886470591342525
+      ]
+    },
+    "metric_normalized": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 166049.5,
+          "accuracy": 0.6918729166666666,
+          "interiorAccuracy": 0.7390390938984289,
+          "partialLabelNll": 3.895880880331069,
+          "breakRecall": 0.6760389930258485,
+          "nonBreakAccuracy": 0.6949049044576501
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 128710.0,
+          "accuracy": 0.5352100962638002,
+          "interiorAccuracy": 0.5565792249806597,
+          "partialLabelNll": 7.2340242426654475,
+          "breakRecall": 0.6575947689316957,
+          "nonBreakAccuracy": 0.49755301794453505
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 264085.0,
+          "accuracy": 0.6477783937323084,
+          "interiorAccuracy": 0.7207732874676717,
+          "partialLabelNll": 6.203098409283005,
+          "breakRecall": 0.4587417952433723,
+          "nonBreakAccuracy": 0.6954595298576918
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 118808.0,
+          "accuracy": 0.5632686344974067,
+          "interiorAccuracy": 0.6269904663746457,
+          "partialLabelNll": 7.155910028585109,
+          "breakRecall": 0.42213069130579983,
+          "nonBreakAccuracy": 0.6014541205100867
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 188647.0,
+          "accuracy": 0.8976607630594706,
+          "interiorAccuracy": 0.9435775291033628,
+          "partialLabelNll": 2.795606327781141,
+          "breakRecall": 0.9270435728642289,
+          "nonBreakAccuracy": 0.8663218345592574
+        }
+      ],
+      "chartMeanAccuracy": 0.6714265665434959,
+      "durationAccuracy": 0.6654648051340841,
+      "meanInteriorAccuracy": 0.7267964165770939,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.011470418770859745,
+            "confidence": 0.2862501951119076,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.1667391748536129,
+            "confidence": 0.36248243227385835,
+            "accuracy": 0.3559151257873094
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.12305271487111641,
+            "confidence": 0.4599552014594007,
+            "accuracy": 0.44258221716116336
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.09714955359473307,
+            "confidence": 0.5530304385342056,
+            "accuracy": 0.5111638942441492
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.17084254323482984,
+            "confidence": 0.6680321911112173,
+            "accuracy": 0.6983792746577036
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.08975921965839113,
+            "confidence": 0.7544199796204768,
+            "accuracy": 0.7627067976486941
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.07131033433719937,
+            "confidence": 0.8251297260373344,
+            "accuracy": 0.8752727531793758
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.26967604067925754,
+            "confidence": 0.9990759237169745,
+            "accuracy": 0.7987509817770905
+          }
+        ],
+        "ece": 0.07411049032173009,
+        "brier": 0.5580227760160614
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> fast chordstream",
+          31455.0
+        ],
+        [
+          "break -> technical",
+          29398.0
+        ],
+        [
+          "ln wildcard -> technical",
+          28715.5
+        ],
+        [
+          "density -> coordination",
+          20873.0
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "break -> release",
+          13413.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "break -> coordination",
+          12789.5
+        ],
+        [
+          "coordination -> technical",
+          12499.0
+        ],
+        [
+          "break -> density",
+          12239.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600.0
+        ],
+        [
+          "release -> inverse",
+          9509.5
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          9075.0
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.07270140088285922,
+        0.017933598034450566
+      ]
+    },
+    "metric_soft": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 151024.5,
+          "accuracy": 0.62926875,
+          "interiorAccuracy": 0.6545002511874315,
+          "partialLabelNll": 5.876562575172853,
+          "breakRecall": 0.6525757693604003,
+          "nonBreakAccuracy": 0.6248057628246181
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 165842.5,
+          "accuracy": 0.689616816017631,
+          "interiorAccuracy": 0.7125911339287807,
+          "partialLabelNll": 3.063675004675356,
+          "breakRecall": 0.9798091366970045,
+          "nonBreakAccuracy": 0.600326264274062
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 218731.5,
+          "accuracy": 0.5365300555830828,
+          "interiorAccuracy": 0.5934391658182784,
+          "partialLabelNll": 11.066873518664337,
+          "breakRecall": 0.45969165946150004,
+          "nonBreakAccuracy": 0.5559111810075531
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 124580.5,
+          "accuracy": 0.5906360524544153,
+          "interiorAccuracy": 0.6526475135274414,
+          "partialLabelNll": 6.768230398721382,
+          "breakRecall": 0.5506512301013025,
+          "nonBreakAccuracy": 0.6014541205100867
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 148807.5,
+          "accuracy": 0.7080878784129734,
+          "interiorAccuracy": 0.7420864221890239,
+          "partialLabelNll": 5.067937144172468,
+          "breakRecall": 0.758947834264535,
+          "nonBreakAccuracy": 0.6538419934704794
+        }
+      ],
+      "chartMeanAccuracy": 0.6411513579182374,
+      "durationAccuracy": 0.6270188758223249,
+      "meanInteriorAccuracy": 0.6881805640481252,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.017589750337408627,
+            "confidence": 0.28169120285702287,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.09680268679510319,
+            "confidence": 0.34930652627608316,
+            "accuracy": 0.3834253983046305
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.16552711472736908,
+            "confidence": 0.45386817514989863,
+            "accuracy": 0.42448465816154135
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.11607768260628976,
+            "confidence": 0.5460668499488059,
+            "accuracy": 0.5594986468890116
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.17521690439782783,
+            "confidence": 0.6650412445321987,
+            "accuracy": 0.714334033045117
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.08078775553899004,
+            "confidence": 0.7440882425734264,
+            "accuracy": 0.5286840945044973
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.05234980961576341,
+            "confidence": 0.8243650122926078,
+            "accuracy": 0.559831581184791
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.29564829598124803,
+            "confidence": 0.9991571024197355,
+            "accuracy": 0.7468376154348328
+          }
+        ],
+        "ece": 0.12916562565705925,
+        "brier": 0.6255008096521375
+      },
+      "largestErrors": [
+        [
+          "release -> break",
+          60598.0
+        ],
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> technical",
+          32245.0
+        ],
+        [
+          "ln wildcard -> technical",
+          31846.5
+        ],
+        [
+          "coordination -> technical",
+          30124.5
+        ],
+        [
+          "break -> coordination",
+          28482.5
+        ],
+        [
+          "density -> coordination",
+          16104.0
+        ],
+        [
+          "technical -> dense chordstream",
+          14808.5
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "technical -> density",
+          13274.0
+        ],
+        [
+          "break -> fast chordstream",
+          13222.5
+        ],
+        [
+          "density -> technical",
+          12995.5
+        ],
+        [
+          "ln wildcard -> density",
+          12271.5
+        ],
+        [
+          "break -> density",
+          12143.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "break -> inverse",
+          9241.5
+        ],
+        [
+          "wildcard -> break",
+          8400.0
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.10821615052739361,
+        0.003947054187110277
+      ]
+    },
+    "metric_no_effort": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 166049.5,
+          "accuracy": 0.6918729166666666,
+          "interiorAccuracy": 0.7390390938984289,
+          "partialLabelNll": 3.895880880331069,
+          "breakRecall": 0.6760389930258485,
+          "nonBreakAccuracy": 0.6949049044576501
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 128710.0,
+          "accuracy": 0.5352100962638002,
+          "interiorAccuracy": 0.5565792249806597,
+          "partialLabelNll": 7.2340242426654475,
+          "breakRecall": 0.6575947689316957,
+          "nonBreakAccuracy": 0.49755301794453505
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 264085.0,
+          "accuracy": 0.6477783937323084,
+          "interiorAccuracy": 0.7207732874676717,
+          "partialLabelNll": 6.203098409283005,
+          "breakRecall": 0.4587417952433723,
+          "nonBreakAccuracy": 0.6954595298576918
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 118808.0,
+          "accuracy": 0.5632686344974067,
+          "interiorAccuracy": 0.6269904663746457,
+          "partialLabelNll": 7.155910028585109,
+          "breakRecall": 0.42213069130579983,
+          "nonBreakAccuracy": 0.6014541205100867
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 188647.0,
+          "accuracy": 0.8976607630594706,
+          "interiorAccuracy": 0.9435775291033628,
+          "partialLabelNll": 2.795606327781141,
+          "breakRecall": 0.9270435728642289,
+          "nonBreakAccuracy": 0.8663218345592574
+        }
+      ],
+      "chartMeanAccuracy": 0.6714265665434959,
+      "durationAccuracy": 0.6654648051340841,
+      "meanInteriorAccuracy": 0.7267964165770939,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.011470418770859745,
+            "confidence": 0.2862501951119076,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.1667391748536129,
+            "confidence": 0.36248243227385835,
+            "accuracy": 0.3559151257873094
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.12305271487111641,
+            "confidence": 0.4599552014594007,
+            "accuracy": 0.44258221716116336
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.09714955359473307,
+            "confidence": 0.5530304385342056,
+            "accuracy": 0.5111638942441492
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.17084254323482984,
+            "confidence": 0.6680321911112173,
+            "accuracy": 0.6983792746577036
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.08975921965839113,
+            "confidence": 0.7544199796204768,
+            "accuracy": 0.7627067976486941
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.07131033433719937,
+            "confidence": 0.8251297260373344,
+            "accuracy": 0.8752727531793758
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.26967604067925754,
+            "confidence": 0.9990759237169745,
+            "accuracy": 0.7987509817770905
+          }
+        ],
+        "ece": 0.07411049032173009,
+        "brier": 0.5580227760160614
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> fast chordstream",
+          31455.0
+        ],
+        [
+          "break -> technical",
+          29398.0
+        ],
+        [
+          "ln wildcard -> technical",
+          28715.5
+        ],
+        [
+          "density -> coordination",
+          20873.0
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "break -> release",
+          13413.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "break -> coordination",
+          12789.5
+        ],
+        [
+          "coordination -> technical",
+          12499.0
+        ],
+        [
+          "break -> density",
+          12239.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600.0
+        ],
+        [
+          "release -> inverse",
+          9509.5
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          9075.0
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.07270140088285922,
+        0.017933598034450566
+      ]
+    },
+    "metric_no_confidence": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 166049.5,
+          "accuracy": 0.6918729166666666,
+          "interiorAccuracy": 0.7390390938984289,
+          "partialLabelNll": 3.895880880331069,
+          "breakRecall": 0.6760389930258485,
+          "nonBreakAccuracy": 0.6949049044576501
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 128710.0,
+          "accuracy": 0.5352100962638002,
+          "interiorAccuracy": 0.5565792249806597,
+          "partialLabelNll": 7.2340242426654475,
+          "breakRecall": 0.6575947689316957,
+          "nonBreakAccuracy": 0.49755301794453505
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 264085.0,
+          "accuracy": 0.6477783937323084,
+          "interiorAccuracy": 0.7207732874676717,
+          "partialLabelNll": 6.203098409283005,
+          "breakRecall": 0.4587417952433723,
+          "nonBreakAccuracy": 0.6954595298576918
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 118808.0,
+          "accuracy": 0.5632686344974067,
+          "interiorAccuracy": 0.6269904663746457,
+          "partialLabelNll": 7.155910028585109,
+          "breakRecall": 0.42213069130579983,
+          "nonBreakAccuracy": 0.6014541205100867
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 188647.0,
+          "accuracy": 0.8976607630594706,
+          "interiorAccuracy": 0.9435775291033628,
+          "partialLabelNll": 2.795606327781141,
+          "breakRecall": 0.9270435728642289,
+          "nonBreakAccuracy": 0.8663218345592574
+        }
+      ],
+      "chartMeanAccuracy": 0.6714265665434959,
+      "durationAccuracy": 0.6654648051340841,
+      "meanInteriorAccuracy": 0.7267964165770939,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.011470418770859745,
+            "confidence": 0.2862501951119076,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.1667391748536129,
+            "confidence": 0.36248243227385835,
+            "accuracy": 0.3559151257873094
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.12305271487111641,
+            "confidence": 0.4599552014594007,
+            "accuracy": 0.44258221716116336
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.09714955359473307,
+            "confidence": 0.5530304385342056,
+            "accuracy": 0.5111638942441492
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.17084254323482984,
+            "confidence": 0.6680321911112173,
+            "accuracy": 0.6983792746577036
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.08975921965839113,
+            "confidence": 0.7544199796204768,
+            "accuracy": 0.7627067976486941
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.07131033433719937,
+            "confidence": 0.8251297260373344,
+            "accuracy": 0.8752727531793758
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.26967604067925754,
+            "confidence": 0.9990759237169745,
+            "accuracy": 0.7987509817770905
+          }
+        ],
+        "ece": 0.07411049032173009,
+        "brier": 0.5580227760160614
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> fast chordstream",
+          31455.0
+        ],
+        [
+          "break -> technical",
+          29398.0
+        ],
+        [
+          "ln wildcard -> technical",
+          28715.5
+        ],
+        [
+          "density -> coordination",
+          20873.0
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "break -> release",
+          13413.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "break -> coordination",
+          12789.5
+        ],
+        [
+          "coordination -> technical",
+          12499.0
+        ],
+        [
+          "break -> density",
+          12239.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600.0
+        ],
+        [
+          "release -> inverse",
+          9509.5
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          9075.0
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.07270140088285922,
+        0.017933598034450566
+      ]
+    },
+    "metric_no_diversity": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 166049.5,
+          "accuracy": 0.6918729166666666,
+          "interiorAccuracy": 0.7390390938984289,
+          "partialLabelNll": 3.895880880331069,
+          "breakRecall": 0.6760389930258485,
+          "nonBreakAccuracy": 0.6949049044576501
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 128710.0,
+          "accuracy": 0.5352100962638002,
+          "interiorAccuracy": 0.5565792249806597,
+          "partialLabelNll": 7.2340242426654475,
+          "breakRecall": 0.6575947689316957,
+          "nonBreakAccuracy": 0.49755301794453505
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 264085.0,
+          "accuracy": 0.6477783937323084,
+          "interiorAccuracy": 0.7207732874676717,
+          "partialLabelNll": 6.203098409283005,
+          "breakRecall": 0.4587417952433723,
+          "nonBreakAccuracy": 0.6954595298576918
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 118808.0,
+          "accuracy": 0.5632686344974067,
+          "interiorAccuracy": 0.6269904663746457,
+          "partialLabelNll": 7.155910028585109,
+          "breakRecall": 0.42213069130579983,
+          "nonBreakAccuracy": 0.6014541205100867
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 188647.0,
+          "accuracy": 0.8976607630594706,
+          "interiorAccuracy": 0.9435775291033628,
+          "partialLabelNll": 2.795606327781141,
+          "breakRecall": 0.9270435728642289,
+          "nonBreakAccuracy": 0.8663218345592574
+        }
+      ],
+      "chartMeanAccuracy": 0.6714265665434959,
+      "durationAccuracy": 0.6654648051340841,
+      "meanInteriorAccuracy": 0.7267964165770939,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.011470418770859745,
+            "confidence": 0.2862501951119076,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.1667391748536129,
+            "confidence": 0.36248243227385835,
+            "accuracy": 0.3559151257873094
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.12305271487111641,
+            "confidence": 0.4599552014594007,
+            "accuracy": 0.44258221716116336
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.09714955359473307,
+            "confidence": 0.5530304385342056,
+            "accuracy": 0.5111638942441492
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.17084254323482984,
+            "confidence": 0.6680321911112173,
+            "accuracy": 0.6983792746577036
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.08975921965839113,
+            "confidence": 0.7544199796204768,
+            "accuracy": 0.7627067976486941
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.07131033433719937,
+            "confidence": 0.8251297260373344,
+            "accuracy": 0.8752727531793758
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.26967604067925754,
+            "confidence": 0.9990759237169745,
+            "accuracy": 0.7987509817770905
+          }
+        ],
+        "ece": 0.07411049032173009,
+        "brier": 0.5580227760160614
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> fast chordstream",
+          31455.0
+        ],
+        [
+          "break -> technical",
+          29398.0
+        ],
+        [
+          "ln wildcard -> technical",
+          28715.5
+        ],
+        [
+          "density -> coordination",
+          20873.0
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "break -> release",
+          13413.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "break -> coordination",
+          12789.5
+        ],
+        [
+          "coordination -> technical",
+          12499.0
+        ],
+        [
+          "break -> density",
+          12239.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600.0
+        ],
+        [
+          "release -> inverse",
+          9509.5
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          9075.0
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.07270140088285922,
+        0.017933598034450566
+      ]
+    },
+    "metric_original_control": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 121425.0,
+          "accuracy": 0.6690082644628099,
+          "interiorAccuracy": 0.7480314960629921,
+          "partialLabelNll": 8.46328068465932,
+          "breakRecall": 0.803409090909091,
+          "nonBreakAccuracy": 0.6391414141414141
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 166738.0,
+          "accuracy": 0.6947416666666667,
+          "interiorAccuracy": 0.7216957435147973,
+          "partialLabelNll": 5.379933030296333,
+          "breakRecall": 0.8317777604936352,
+          "nonBreakAccuracy": 0.6685010599268228
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 156567.5,
+          "accuracy": 0.6510489219701853,
+          "interiorAccuracy": 0.6714490001640997,
+          "partialLabelNll": 4.596173233933075,
+          "breakRecall": 0.9882035875231951,
+          "nonBreakAccuracy": 0.5473083197389886
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 209750.0,
+          "accuracy": 0.514499188084714,
+          "interiorAccuracy": 0.5591932617947047,
+          "partialLabelNll": 11.705049694356685,
+          "breakRecall": 0.4960117880585019,
+          "nonBreakAccuracy": 0.51916230752455
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 128894.0,
+          "accuracy": 0.6110863525596655,
+          "interiorAccuracy": 0.6664390620973976,
+          "partialLabelNll": 6.54692955185236,
+          "breakRecall": 0.4004118891239007,
+          "nonBreakAccuracy": 0.6680852473631266
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 178138.5,
+          "accuracy": 0.8476569563272648,
+          "interiorAccuracy": 0.8673760464526313,
+          "partialLabelNll": 5.1652558947466956,
+          "breakRecall": 0.7661623425715919,
+          "nonBreakAccuracy": 0.9345769578727924
+        }
+      ],
+      "chartMeanAccuracy": 0.6646735583452176,
+      "durationAccuracy": 0.6449891094574987,
+      "meanInteriorAccuracy": 0.7056974350144372,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.0020026832465435494,
+            "confidence": 0.26943032054251786,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.07941872158915543,
+            "confidence": 0.3525360035037346,
+            "accuracy": 0.45111552913574776
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.13933828857402314,
+            "confidence": 0.4562193073548385,
+            "accuracy": 0.4586034264048902
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.14440614929904103,
+            "confidence": 0.536053795397677,
+            "accuracy": 0.5079936869052618
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.12841922167515432,
+            "confidence": 0.679046634542671,
+            "accuracy": 0.6519719676099608
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.11532314851259629,
+            "confidence": 0.765887852265096,
+            "accuracy": 0.6553113818312362
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.0644043309727235,
+            "confidence": 0.831101734386201,
+            "accuracy": 0.7921902747034872
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.3266438717514043,
+            "confidence": 0.9988870328671705,
+            "accuracy": 0.6886316840232666
+          }
+        ],
+        "ece": 0.13283669366141246,
+        "brier": 0.6394785012911229
+      },
+      "largestErrors": [
+        [
+          "release -> break",
+          64919.5
+        ],
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> technical",
+          28728.0
+        ],
+        [
+          "break -> coordination",
+          21204.5
+        ],
+        [
+          "wildcard -> break",
+          19725.0
+        ],
+        [
+          "ln wildcard -> density",
+          17602.0
+        ],
+        [
+          "break -> density",
+          16165.5
+        ],
+        [
+          "coordination -> density",
+          15420.0
+        ],
+        [
+          "technical -> dense chordstream",
+          14808.5
+        ],
+        [
+          "density -> coordination",
+          14343.0
+        ],
+        [
+          "inverse -> break",
+          14302.5
+        ],
+        [
+          "fast chordstream|wildcard -> dense chordstream",
+          14087.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "ln wildcard -> technical",
+          12242.0
+        ],
+        [
+          "break -> release",
+          11896.0
+        ],
+        [
+          "break -> fast chordstream",
+          11793.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "break -> inverse",
+          9091.5
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.07297776755558986,
+        0.0
+      ]
+    },
+    "metric_logical_control": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 166049.5,
+          "accuracy": 0.6918729166666666,
+          "interiorAccuracy": 0.7390390938984289,
+          "partialLabelNll": 3.895880880331069,
+          "breakRecall": 0.6760389930258485,
+          "nonBreakAccuracy": 0.6949049044576501
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 128710.0,
+          "accuracy": 0.5352100962638002,
+          "interiorAccuracy": 0.5565792249806597,
+          "partialLabelNll": 7.2340242426654475,
+          "breakRecall": 0.6575947689316957,
+          "nonBreakAccuracy": 0.49755301794453505
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 218731.5,
+          "accuracy": 0.5365300555830828,
+          "interiorAccuracy": 0.5934391658182784,
+          "partialLabelNll": 11.066873518664337,
+          "breakRecall": 0.45969165946150004,
+          "nonBreakAccuracy": 0.5559111810075531
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 118808.0,
+          "accuracy": 0.5632686344974067,
+          "interiorAccuracy": 0.6269904663746457,
+          "partialLabelNll": 7.155910028585109,
+          "breakRecall": 0.42213069130579983,
+          "nonBreakAccuracy": 0.6014541205100867
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 188647.0,
+          "accuracy": 0.8976607630594706,
+          "interiorAccuracy": 0.9435775291033628,
+          "partialLabelNll": 2.795606327781141,
+          "breakRecall": 0.9270435728642289,
+          "nonBreakAccuracy": 0.8663218345592574
+        }
+      ],
+      "chartMeanAccuracy": 0.6528851768519582,
+      "durationAccuracy": 0.6350413854031177,
+      "meanInteriorAccuracy": 0.7055740629688617,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.011470418770859745,
+            "confidence": 0.2862501951119076,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.16192749995962372,
+            "confidence": 0.36277038807034395,
+            "accuracy": 0.33677614680214535
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.11968941827588322,
+            "confidence": 0.4590034602517934,
+            "accuracy": 0.42159922476890294
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.0894290608381643,
+            "confidence": 0.5537524388835688,
+            "accuracy": 0.5124734662580052
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.168130041707925,
+            "confidence": 0.6675720297261445,
+            "accuracy": 0.6935131206395038
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.08351148435337458,
+            "confidence": 0.7550275177304071,
+            "accuracy": 0.7611975713089496
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.0668345785064759,
+            "confidence": 0.8239476503028645,
+            "accuracy": 0.8879115309561728
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.29900749758769357,
+            "confidence": 0.999166571957886,
+            "accuracy": 0.7205305456470958
+          }
+        ],
+        "ece": 0.10812703005151694,
+        "brier": 0.6036907770673688
+      },
+      "largestErrors": [
+        [
+          "release -> break",
+          56869.5
+        ],
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "ln wildcard -> technical",
+          31846.5
+        ],
+        [
+          "break -> fast chordstream",
+          31455.0
+        ],
+        [
+          "break -> technical",
+          29398.0
+        ],
+        [
+          "density -> coordination",
+          20873.0
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "break -> release",
+          13413.0
+        ],
+        [
+          "technical -> density",
+          13274.0
+        ],
+        [
+          "break -> coordination",
+          12789.5
+        ],
+        [
+          "coordination -> technical",
+          12499.0
+        ],
+        [
+          "ln wildcard -> density",
+          12271.5
+        ],
+        [
+          "break -> density",
+          12239.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600.0
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "break -> inverse",
+          9241.5
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        -0.09108486995756207,
+        0.007438347351410524
+      ]
+    },
+    "original_fixed": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 121425.0,
+          "accuracy": 0.6690082644628099,
+          "interiorAccuracy": 0.7480314960629921,
+          "partialLabelNll": null,
+          "breakRecall": 0.803409090909091,
+          "nonBreakAccuracy": 0.6391414141414141
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 181546.5,
+          "accuracy": 0.75644375,
+          "interiorAccuracy": 0.8062345862257947,
+          "partialLabelNll": null,
+          "breakRecall": 0.8317777604936352,
+          "nonBreakAccuracy": 0.7420182793937318
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 156567.5,
+          "accuracy": 0.6510489219701853,
+          "interiorAccuracy": 0.6714490001640997,
+          "partialLabelNll": null,
+          "breakRecall": 0.9882035875231951,
+          "nonBreakAccuracy": 0.5473083197389886
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 260868.0,
+          "accuracy": 0.6398873620847826,
+          "interiorAccuracy": 0.7059907804961333,
+          "partialLabelNll": null,
+          "breakRecall": 0.4722286493661483,
+          "nonBreakAccuracy": 0.6821763049013856
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 128894.0,
+          "accuracy": 0.6110863525596655,
+          "interiorAccuracy": 0.6664390620973976,
+          "partialLabelNll": null,
+          "breakRecall": 0.4004118891239007,
+          "nonBreakAccuracy": 0.6680852473631266
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 178138.5,
+          "accuracy": 0.8476569563272648,
+          "interiorAccuracy": 0.8673760464526313,
+          "partialLabelNll": null,
+          "breakRecall": 0.7661623425715919,
+          "nonBreakAccuracy": 0.9345769578727924
+        }
+      ],
+      "chartMeanAccuracy": 0.6958552679007847,
+      "durationAccuracy": 0.6892130300125507,
+      "meanInteriorAccuracy": 0.7442534952498415,
+      "singletonCalibration": {
+        "bins": [],
+        "ece": null,
+        "brier": null
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> technical",
+          28728.0
+        ],
+        [
+          "coordination -> density",
+          22977.0
+        ],
+        [
+          "break -> coordination",
+          21204.5
+        ],
+        [
+          "wildcard -> break",
+          19725.0
+        ],
+        [
+          "break -> density",
+          18040.5
+        ],
+        [
+          "ln wildcard -> density",
+          17602.0
+        ],
+        [
+          "density -> coordination",
+          14343.0
+        ],
+        [
+          "fast chordstream|wildcard -> dense chordstream",
+          14087.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "ln wildcard -> technical",
+          12242.0
+        ],
+        [
+          "break -> release",
+          11896.0
+        ],
+        [
+          "break -> fast chordstream",
+          11793.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "break -> inverse",
+          9169.5
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          9075.0
+        ],
+        [
+          "chordjack -> fast chordstream",
+          8596.0
+        ],
+        [
+          "inverse -> break",
+          8551.5
+        ]
+      ],
+      "pairedChartBootstrapDeltaVsOriginal95": [
+        0.0,
+        0.0
+      ]
+    }
+  }
+}
