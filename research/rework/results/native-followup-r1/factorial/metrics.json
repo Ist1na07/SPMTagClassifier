@@ -1,0 +1,1721 @@
+{
+  "scope": "four completed retuned factorial cells; fixed historical experts; retrospective followup, unknown original exposure",
+  "cellSources": {
+    "base": "research\\rework\\results\\native-joint-r1\\logical_neutral",
+    "release": "research\\rework\\results\\native-joint-r1\\logical_release",
+    "scale": "research\\rework\\results\\native-followup-r1\\factorial_scale",
+    "both": "research\\rework\\results\\native-joint-r1\\full"
+  },
+  "map": {
+    "base": {
+      "macroF1": 0.5410853842715863,
+      "microF1": 0.6653569089718402,
+      "sampleF1": 0.696926032660903,
+      "exactMatch": 0.6325648414985591
+    },
+    "release": {
+      "macroF1": 0.5261614815585695,
+      "microF1": 0.64,
+      "sampleF1": 0.6690682036503363,
+      "exactMatch": 0.6066282420749279
+    },
+    "scale": {
+      "macroF1": 0.5215504746776889,
+      "microF1": 0.6277084701247537,
+      "sampleF1": 0.6532180595581173,
+      "exactMatch": 0.5864553314121037
+    },
+    "both": {
+      "macroF1": 0.5234687353603394,
+      "microF1": 0.6333549643088904,
+      "sampleF1": 0.6622478386167148,
+      "exactMatch": 0.5922190201729106
+    }
+  },
+  "segment": {
+    "base": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 125737.5,
+          "accuracy": 0.6927685950413223,
+          "interiorAccuracy": 0.7738188976377953,
+          "partialLabelNll": 7.154223600495327,
+          "breakRecall": 0.8045454545454546,
+          "nonBreakAccuracy": 0.6679292929292929
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 166049.5,
+          "accuracy": 0.6918729166666666,
+          "interiorAccuracy": 0.7390390938984289,
+          "partialLabelNll": 3.895880880331069,
+          "breakRecall": 0.6760389930258485,
+          "nonBreakAccuracy": 0.6949049044576501
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 165842.5,
+          "accuracy": 0.689616816017631,
+          "interiorAccuracy": 0.7125911339287807,
+          "partialLabelNll": 3.063675004675356,
+          "breakRecall": 0.9798091366970045,
+          "nonBreakAccuracy": 0.600326264274062
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 264085.0,
+          "accuracy": 0.6477783937323084,
+          "interiorAccuracy": 0.7207732874676717,
+          "partialLabelNll": 6.203098409283005,
+          "breakRecall": 0.4587417952433723,
+          "nonBreakAccuracy": 0.6954595298576918
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 118808.0,
+          "accuracy": 0.5632686344974067,
+          "interiorAccuracy": 0.6269904663746457,
+          "partialLabelNll": 7.155910028585109,
+          "breakRecall": 0.42213069130579983,
+          "nonBreakAccuracy": 0.6014541205100867
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 188647.0,
+          "accuracy": 0.8976607630594706,
+          "interiorAccuracy": 0.9435775291033628,
+          "partialLabelNll": 2.795606327781141,
+          "breakRecall": 0.9270435728642289,
+          "nonBreakAccuracy": 0.8663218345592574
+        }
+      ],
+      "chartMeanAccuracy": 0.6971610198358009,
+      "durationAccuracy": 0.6903735251481979,
+      "meanInteriorAccuracy": 0.7527984014017809,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.017589750337408627,
+            "confidence": 0.28169120285702287,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.10490171902322419,
+            "confidence": 0.3484980178646657,
+            "accuracy": 0.4327360813828566
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.15424750285698213,
+            "confidence": 0.45491048394474415,
+            "accuracy": 0.40855640706613416
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.11483350162182376,
+            "confidence": 0.5463453469095548,
+            "accuracy": 0.5859821367697582
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.17084254323482984,
+            "confidence": 0.6680321911112173,
+            "accuracy": 0.6983792746577036
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.08975921965839113,
+            "confidence": 0.7544199796204768,
+            "accuracy": 0.7627067976486941
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.07131033433719937,
+            "confidence": 0.8251297260373344,
+            "accuracy": 0.8752727531793758
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.2765154289301409,
+            "confidence": 0.9990987800056724,
+            "accuracy": 0.8396694316396612
+          }
+        ],
+        "ece": 0.07908200950937098,
+        "brier": 0.5203902765516066
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "break -> technical",
+          29398.0
+        ],
+        [
+          "ln wildcard -> technical",
+          28715.5
+        ],
+        [
+          "density -> coordination",
+          20873.0
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "break -> release",
+          13413.0
+        ],
+        [
+          "break -> fast chordstream",
+          13222.5
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "break -> coordination",
+          12789.5
+        ],
+        [
+          "coordination -> technical",
+          12499.0
+        ],
+        [
+          "break -> density",
+          12239.0
+        ],
+        [
+          "ln wildcard -> break",
+          11622.0
+        ],
+        [
+          "release -> inverse",
+          9509.5
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "wildcard -> break",
+          8400.0
+        ],
+        [
+          "release -> density",
+          8256.0
+        ],
+        [
+          "ln wildcard -> density",
+          8035.5
+        ]
+      ]
+    },
+    "release": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 128100.0,
+          "accuracy": 0.7057851239669422,
+          "interiorAccuracy": 0.7889763779527559,
+          "partialLabelNll": 7.189373769368803,
+          "breakRecall": 0.8011363636363636,
+          "nonBreakAccuracy": 0.6845959595959596
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 160859.0,
+          "accuracy": 0.6702458333333333,
+          "interiorAccuracy": 0.7269250091340884,
+          "partialLabelNll": 3.768726037262077,
+          "breakRecall": 0.6525757693604003,
+          "nonBreakAccuracy": 0.6736294178097494
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 165842.5,
+          "accuracy": 0.689616816017631,
+          "interiorAccuracy": 0.7125911339287807,
+          "partialLabelNll": 3.063675004675356,
+          "breakRecall": 0.9798091366970045,
+          "nonBreakAccuracy": 0.600326264274062
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 277714.5,
+          "accuracy": 0.6812104160636581,
+          "interiorAccuracy": 0.7524708649766351,
+          "partialLabelNll": 6.211108508321209,
+          "breakRecall": 0.4587417952433723,
+          "nonBreakAccuracy": 0.7373241880937828
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 103443.0,
+          "accuracy": 0.49042318158975184,
+          "interiorAccuracy": 0.534195439319763,
+          "partialLabelNll": 6.432952070610446,
+          "breakRecall": 0.7753311811198932,
+          "nonBreakAccuracy": 0.4133400798742252
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 148807.5,
+          "accuracy": 0.7080878784129734,
+          "interiorAccuracy": 0.7420864221890239,
+          "partialLabelNll": 5.067937144172468,
+          "breakRecall": 0.758947834264535,
+          "nonBreakAccuracy": 0.6538419934704794
+        }
+      ],
+      "chartMeanAccuracy": 0.6575615415640484,
+      "durationAccuracy": 0.6605877069354007,
+      "meanInteriorAccuracy": 0.7095408745835078,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.017821879616088672,
+            "confidence": 0.2801176541446945,
+            "accuracy": 0.2508006661625432
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.10933246098644427,
+            "confidence": 0.36233746208745266,
+            "accuracy": 0.4542742750266804
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.158063810873917,
+            "confidence": 0.4517752052078896,
+            "accuracy": 0.3460292130402368
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.15576040943245298,
+            "confidence": 0.5503411060676829,
+            "accuracy": 0.7150202939205101
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.12550675276817133,
+            "confidence": 0.6463548514915372,
+            "accuracy": 0.5873071071585226
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.080714575282371,
+            "confidence": 0.7471133630976605,
+            "accuracy": 0.7095661362165074
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.06846893971276632,
+            "confidence": 0.8533470700549209,
+            "accuracy": 0.6361542805706262
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.28433117132778846,
+            "confidence": 0.9991315690092477,
+            "accuracy": 0.8074268056929198
+          }
+        ],
+        "ece": 0.13275937310840377,
+        "brier": 0.5677172407992195
+      },
+      "largestErrors": [
+        [
+          "dense chordstream -> fast chordstream",
+          40788.0
+        ],
+        [
+          "coordination -> technical",
+          30577.5
+        ],
+        [
+          "break -> coordination",
+          28482.5
+        ],
+        [
+          "ln wildcard -> technical",
+          25665.5
+        ],
+        [
+          "break -> technical",
+          24842.0
+        ],
+        [
+          "density -> technical",
+          24714.0
+        ],
+        [
+          "ln wildcard -> break",
+          22254.0
+        ],
+        [
+          "density -> inverse",
+          13522.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "break -> density",
+          13260.5
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "ln wildcard|density -> inverse",
+          11797.5
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "break -> ln wildcard",
+          9276.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "release -> break",
+          8857.0
+        ],
+        [
+          "break -> fast chordstream",
+          8797.0
+        ],
+        [
+          "release -> coordination",
+          8423.0
+        ],
+        [
+          "wildcard -> break",
+          8400.0
+        ]
+      ]
+    },
+    "scale": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 127162.5,
+          "accuracy": 0.7006198347107438,
+          "interiorAccuracy": 0.7856299212598425,
+          "partialLabelNll": 7.369347126537004,
+          "breakRecall": 0.759090909090909,
+          "nonBreakAccuracy": 0.6876262626262626
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 159441.0,
+          "accuracy": 0.6643375,
+          "interiorAccuracy": 0.6871974333211546,
+          "partialLabelNll": 6.141091642735156,
+          "breakRecall": 0.6961836612999404,
+          "nonBreakAccuracy": 0.6582393796325257
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 154650.0,
+          "accuracy": 0.6430754516913737,
+          "interiorAccuracy": 0.6664791241765713,
+          "partialLabelNll": 5.127066585918191,
+          "breakRecall": 0.8306088185914995,
+          "nonBreakAccuracy": 0.5853724850462207
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 226591.0,
+          "accuracy": 0.5558087510240926,
+          "interiorAccuracy": 0.5970498219965474,
+          "partialLabelNll": 9.553763469007547,
+          "breakRecall": 0.5410877163072202,
+          "nonBreakAccuracy": 0.5595218714772346
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 114645.5,
+          "accuracy": 0.5435342252733186,
+          "interiorAccuracy": 0.5966213604741046,
+          "partialLabelNll": 7.950516250888459,
+          "breakRecall": 0.24219080485361238,
+          "nonBreakAccuracy": 0.6250640017830144
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 177722.0,
+          "accuracy": 0.8456750763725649,
+          "interiorAccuracy": 0.8902302900470728,
+          "partialLabelNll": 3.5734689742377928,
+          "breakRecall": 0.8640906492596485,
+          "nonBreakAccuracy": 0.8260335129607048
+        }
+      ],
+      "chartMeanAccuracy": 0.6588418065120156,
+      "durationAccuracy": 0.6441163902832346,
+      "meanInteriorAccuracy": 0.7038679918792154,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.011470418770859745,
+            "confidence": 0.2862501951119076,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.14012686813312564,
+            "confidence": 0.3519571390392513,
+            "accuracy": 0.33583895142501785
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.1066061000193453,
+            "confidence": 0.45319330175635913,
+            "accuracy": 0.5689366424923408
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.11349261132981484,
+            "confidence": 0.545801500557108,
+            "accuracy": 0.5419213649514169
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.1748458433677134,
+            "confidence": 0.6629907281988116,
+            "accuracy": 0.6715907611755823
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.11794081073212044,
+            "confidence": 0.7554462833953711,
+            "accuracy": 0.5872207691548627
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.053970838560808795,
+            "confidence": 0.8326857033413737,
+            "accuracy": 0.8218237778996991
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.28154650908621187,
+            "confidence": 0.9991148843077446,
+            "accuracy": 0.7600766203992232
+          }
+        ],
+        "ece": 0.10755226316292753,
+        "brier": 0.6084867220160721
+      },
+      "largestErrors": [
+        [
+          "release -> break",
+          54304.5
+        ],
+        [
+          "dense chordstream -> fast chordstream",
+          41800.5
+        ],
+        [
+          "break -> technical",
+          30676.0
+        ],
+        [
+          "density -> coordination",
+          20255.5
+        ],
+        [
+          "ln wildcard -> technical",
+          19837.5
+        ],
+        [
+          "break -> coordination",
+          19601.5
+        ],
+        [
+          "break -> fast chordstream",
+          16214.5
+        ],
+        [
+          "wildcard -> break",
+          15050.0
+        ],
+        [
+          "break -> release",
+          15025.5
+        ],
+        [
+          "technical -> dense chordstream",
+          14808.5
+        ],
+        [
+          "fast chordstream|wildcard -> dense chordstream",
+          14087.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "coordination -> technical",
+          12920.5
+        ],
+        [
+          "density|ln wildcard -> technical",
+          9796.0
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ],
+        [
+          "break -> inverse",
+          9319.5
+        ],
+        [
+          "density|inverse -> break",
+          9260.5
+        ],
+        [
+          "break -> minijack",
+          9210.0
+        ],
+        [
+          "ln wildcard -> break",
+          8925.0
+        ],
+        [
+          "chordjack -> fast chordstream",
+          8596.0
+        ]
+      ]
+    },
+    "both": {
+      "charts": [
+        {
+          "chart": "AA",
+          "labelledMs": 181500.0,
+          "correctMs": 128587.5,
+          "accuracy": 0.7084710743801653,
+          "interiorAccuracy": 0.7889763779527559,
+          "partialLabelNll": 7.08980789372211,
+          "breakRecall": 0.8022727272727272,
+          "nonBreakAccuracy": 0.6876262626262626
+        },
+        {
+          "chart": "AH",
+          "labelledMs": 240000.0,
+          "correctMs": 164951.5,
+          "accuracy": 0.6872979166666666,
+          "interiorAccuracy": 0.7333816678845452,
+          "partialLabelNll": 3.5102504299140174,
+          "breakRecall": 0.6961836612999404,
+          "nonBreakAccuracy": 0.6855964136246518
+        },
+        {
+          "chart": "BE",
+          "labelledMs": 240485.0,
+          "correctMs": 133700.0,
+          "accuracy": 0.5559598311745015,
+          "interiorAccuracy": 0.5741144478045808,
+          "partialLabelNll": 5.806491213002181,
+          "breakRecall": 0.8306088185914995,
+          "nonBreakAccuracy": 0.47145187601957583
+        },
+        {
+          "chart": "DS",
+          "labelledMs": 407678.0,
+          "correctMs": 233879.5,
+          "accuracy": 0.5736868312737013,
+          "interiorAccuracy": 0.6285482126935747,
+          "partialLabelNll": 10.750987412546898,
+          "breakRecall": 0.4680577712288564,
+          "nonBreakAccuracy": 0.6003298920939547
+        },
+        {
+          "chart": "EE",
+          "labelledMs": 210926.0,
+          "correctMs": 86271.0,
+          "accuracy": 0.40901074310421665,
+          "interiorAccuracy": 0.4391780468951301,
+          "partialLabelNll": 6.928547491107802,
+          "breakRecall": 0.4066681509517978,
+          "nonBreakAccuracy": 0.4096445416267597
+        },
+        {
+          "chart": "RJ",
+          "labelledMs": 210154.0,
+          "correctMs": 166606.0,
+          "accuracy": 0.792780532371499,
+          "interiorAccuracy": 0.8418834737999267,
+          "partialLabelNll": 2.582086398773747,
+          "breakRecall": 0.9279194556618908,
+          "nonBreakAccuracy": 0.6486449278212643
+        }
+      ],
+      "chartMeanAccuracy": 0.6212011548284584,
+      "durationAccuracy": 0.6131140645973182,
+      "meanInteriorAccuracy": 0.6676803711717523,
+      "singletonCalibration": {
+        "bins": [
+          {
+            "lower": 0.2,
+            "upper": 0.3,
+            "weight": 0.007232808769556101,
+            "confidence": 0.28917822268146115,
+            "accuracy": 0.0
+          },
+          {
+            "lower": 0.3,
+            "upper": 0.4,
+            "weight": 0.1808982446404999,
+            "confidence": 0.3582100683331317,
+            "accuracy": 0.3733758219867593
+          },
+          {
+            "lower": 0.4,
+            "upper": 0.5,
+            "weight": 0.14335961286784707,
+            "confidence": 0.4529252058824575,
+            "accuracy": 0.33921355529010283
+          },
+          {
+            "lower": 0.5,
+            "upper": 0.6,
+            "weight": 0.1220553416988119,
+            "confidence": 0.5524271087185021,
+            "accuracy": 0.6841124678055679
+          },
+          {
+            "lower": 0.6,
+            "upper": 0.7,
+            "weight": 0.10212944892674358,
+            "confidence": 0.6516028106384765,
+            "accuracy": 0.6020021198618065
+          },
+          {
+            "lower": 0.7,
+            "upper": 0.8,
+            "weight": 0.09101150009420336,
+            "confidence": 0.7539875174539525,
+            "accuracy": 0.6961603549612199
+          },
+          {
+            "lower": 0.8,
+            "upper": 0.9,
+            "weight": 0.03177128598943037,
+            "confidence": 0.8473325105363497,
+            "accuracy": 0.7337929398219452
+          },
+          {
+            "lower": 0.9,
+            "upper": 1.0,
+            "weight": 0.3215417570129077,
+            "confidence": 0.9943788874259092,
+            "accuracy": 0.749994317543048
+          }
+        ],
+        "ece": 0.1297253588864784,
+        "brier": 0.6150723498997385
+      },
+      "largestErrors": [
+        [
+          "release -> break",
+          56869.5
+        ],
+        [
+          "dense chordstream -> fast chordstream",
+          41800.5
+        ],
+        [
+          "break -> technical",
+          37438.0
+        ],
+        [
+          "ln wildcard -> technical",
+          28409.5
+        ],
+        [
+          "coordination -> technical",
+          22129.5
+        ],
+        [
+          "wildcard -> break",
+          19200.0
+        ],
+        [
+          "density -> coordination",
+          15486.5
+        ],
+        [
+          "break -> inverse",
+          15014.0
+        ],
+        [
+          "wildcard|dense chordstream -> fast chordstream",
+          13875.0
+        ],
+        [
+          "density -> ln wildcard",
+          13494.0
+        ],
+        [
+          "density|ln wildcard -> technical",
+          13469.0
+        ],
+        [
+          "technical -> density",
+          13144.5
+        ],
+        [
+          "ln wildcard -> density",
+          12043.5
+        ],
+        [
+          "ln wildcard|density -> inverse",
+          11797.5
+        ],
+        [
+          "break -> coordination",
+          11253.5
+        ],
+        [
+          "break -> density",
+          10770.0
+        ],
+        [
+          "density -> inverse",
+          10424.5
+        ],
+        [
+          "density -> technical",
+          9764.5
+        ],
+        [
+          "wildcard -> fast chordstream",
+          9600.0
+        ],
+        [
+          "technical -> chordjack",
+          9375.0
+        ]
+      ]
+    }
+  },
+  "effects": {
+    "release_minus_base": {
+      "map": {
+        "delta": -0.014923902713016801,
+        "paired95": [
+          -0.06706530127139113,
+          0.009815230874824315
+        ]
+      },
+      "segment": {
+        "delta": -0.039599478271752475,
+        "paired95": [
+          -0.10321820189154873,
+          0.008928771274562857
+        ]
+      }
+    },
+    "scale_minus_base": {
+      "map": {
+        "delta": -0.019534909593897365,
+        "paired95": [
+          -0.07147087994308055,
+          0.0046222793259341624
+        ]
+      },
+      "segment": {
+        "delta": -0.038319213323785295,
+        "paired95": [
+          -0.06349889790712626,
+          -0.015007018776613035
+        ]
+      }
+    },
+    "both_minus_base": {
+      "map": {
+        "delta": -0.017616648911246813,
+        "paired95": [
+          -0.07355387057841303,
+          0.005446884709693256
+        ]
+      },
+      "segment": {
+        "delta": -0.07595986500734253,
+        "paired95": [
+          -0.1258002576032029,
+          -0.024367607596395113
+        ]
+      }
+    },
+    "scale_given_release": {
+      "map": {
+        "delta": -0.0026927461982300116,
+        "paired95": [
+          -0.026386403486153998,
+          0.013275218694717917
+        ]
+      },
+      "segment": {
+        "delta": -0.036360386735590056,
+        "paired95": [
+          -0.0954721067871327,
+          0.02967290403608136
+        ]
+      }
+    },
+    "release_given_scale": {
+      "map": {
+        "delta": 0.0019182606826505522,
+        "paired95": [
+          -0.02424537035431419,
+          0.021271341150630167
+        ]
+      },
+      "segment": {
+        "delta": -0.037640651683557236,
+        "paired95": [
+          -0.08761708846260585,
+          0.006105614916817825
+        ]
+      }
+    },
+    "interaction": {
+      "map": {
+        "delta": 0.016842163395667353,
+        "paired95": [
+          -0.015900015583276174,
+          0.06663975573952684
+        ]
+      },
+      "segment": {
+        "delta": 0.0019588265881952394,
+        "paired95": [
+          -0.052446304803014376,
+          0.06402508355702607
+        ]
+      }
+    }
+  },
+  "selections": {
+    "base": {
+      "outerOpened": false,
+      "selections": [
+        {
+          "outer": 0,
+          "candidate": 6788,
+          "config": {
+            "source": "logical_neutral",
+            "partition": 3,
+            "head": 0,
+            "burdenGate": 0.0,
+            "smoothing": "legacy",
+            "mode": "legacy",
+            "effortPower": 0.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.52,
+            "mixShare": 0.04,
+            "secondRel": 0.75,
+            "twoTagMaxShare": 0.45,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": false
+          },
+          "inner": {
+            "joint": 0.6235027568608796,
+            "mapMacroF1": 0.5491580722711724,
+            "segmentChartAccuracy": 0.6978474414505869
+          }
+        },
+        {
+          "outer": 1,
+          "candidate": 5343,
+          "config": {
+            "source": "logical_neutral",
+            "partition": 3,
+            "head": 2,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 1.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.04,
+            "secondRel": 0.75,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.6419184986402748,
+            "mapMacroF1": 0.5856183568109217,
+            "segmentChartAccuracy": 0.6982186404696279
+          }
+        },
+        {
+          "outer": 2,
+          "candidate": 979,
+          "config": {
+            "source": "logical_neutral",
+            "partition": 3,
+            "head": 0,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 1.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.04,
+            "secondRel": 0.6,
+            "twoTagMaxShare": 0.65,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.623789690927798,
+            "mapMacroF1": 0.5491015846002709,
+            "segmentChartAccuracy": 0.6984777972553251
+          }
+        },
+        {
+          "outer": 3,
+          "candidate": 5343,
+          "config": {
+            "source": "logical_neutral",
+            "partition": 3,
+            "head": 2,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 1.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.04,
+            "secondRel": 0.75,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.6186379901037119,
+            "mapMacroF1": 0.5302384351509243,
+            "segmentChartAccuracy": 0.7070375450564995
+          }
+        },
+        {
+          "outer": 4,
+          "candidate": 5759,
+          "config": {
+            "source": "logical_neutral",
+            "partition": 3,
+            "head": 0,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 0.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75,
+            "twoTagMaxShare": 0.65,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.6366347804553615,
+            "mapMacroF1": 0.5495221273513531,
+            "segmentChartAccuracy": 0.7237474335593699
+          }
+        },
+        {
+          "outer": 5,
+          "candidate": 5343,
+          "config": {
+            "source": "logical_neutral",
+            "partition": 3,
+            "head": 2,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 1.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.04,
+            "secondRel": 0.75,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.6087945436031368,
+            "mapMacroF1": 0.5605280160152067,
+            "segmentChartAccuracy": 0.6570610711910669
+          }
+        }
+      ]
+    },
+    "release": {
+      "outerOpened": false,
+      "selections": [
+        {
+          "outer": 0,
+          "candidate": 6407,
+          "config": {
+            "source": "logical_release_40",
+            "partition": 3,
+            "head": 0,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 0.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75,
+            "twoTagMaxShare": 0.65,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.6099046409197422,
+            "mapMacroF1": 0.5505637012305858,
+            "segmentChartAccuracy": 0.6692455806088986
+          }
+        },
+        {
+          "outer": 1,
+          "candidate": 5991,
+          "config": {
+            "source": "logical_release_40",
+            "partition": 3,
+            "head": 2,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 1.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.04,
+            "secondRel": 0.75,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.6267335477706255,
+            "mapMacroF1": 0.5769851239929696,
+            "segmentChartAccuracy": 0.6764819715482815
+          }
+        },
+        {
+          "outer": 2,
+          "candidate": 5991,
+          "config": {
+            "source": "logical_release_40",
+            "partition": 3,
+            "head": 2,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 1.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.04,
+            "secondRel": 0.75,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.6077539473910086,
+            "mapMacroF1": 0.5429001197705953,
+            "segmentChartAccuracy": 0.672607775011422
+          }
+        },
+        {
+          "outer": 3,
+          "candidate": 5991,
+          "config": {
+            "source": "logical_release_40",
+            "partition": 3,
+            "head": 2,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 1.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.04,
+            "secondRel": 0.75,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.5987836402710033,
+            "mapMacroF1": 0.52327822553979,
+            "segmentChartAccuracy": 0.6742890550022166
+          }
+        },
+        {
+          "outer": 4,
+          "candidate": 6516,
+          "config": {
+            "source": "logical_release_20",
+            "partition": 3,
+            "head": 4,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 0.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.07,
+            "secondRel": 0.6,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.18,
+              0.68
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.6275353121307725,
+            "mapMacroF1": 0.5508470871591086,
+            "segmentChartAccuracy": 0.7042235371024365
+          }
+        },
+        {
+          "outer": 5,
+          "candidate": 5991,
+          "config": {
+            "source": "logical_release_40",
+            "partition": 3,
+            "head": 2,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 1.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.04,
+            "secondRel": 0.75,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.6143801894076142,
+            "mapMacroF1": 0.5598468162828749,
+            "segmentChartAccuracy": 0.6689135625323536
+          }
+        }
+      ]
+    },
+    "scale": {
+      "outerOpened": false,
+      "selections": [
+        {
+          "outer": 0,
+          "candidate": 793,
+          "config": {
+            "source": "logical_neutral_scale",
+            "partition": 3,
+            "head": 2,
+            "burdenGate": 0.3,
+            "smoothing": "coherent",
+            "mode": "legacy",
+            "effortPower": 0.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.52,
+            "mixShare": 0.04,
+            "secondRel": 0.6,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": false
+          },
+          "inner": {
+            "joint": 0.6117427725972588,
+            "mapMacroF1": 0.5486577634755684,
+            "segmentChartAccuracy": 0.6748277817189493
+          }
+        },
+        {
+          "outer": 1,
+          "candidate": 1307,
+          "config": {
+            "source": "logical_neutral_scale",
+            "partition": 3,
+            "head": 4,
+            "burdenGate": 0.0,
+            "smoothing": "legacy",
+            "mode": "legacy",
+            "effortPower": 1.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.52,
+            "mixShare": 0.04,
+            "secondRel": 0.6,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": false
+          },
+          "inner": {
+            "joint": 0.627271159502292,
+            "mapMacroF1": 0.5775251257068179,
+            "segmentChartAccuracy": 0.6770171932977659
+          }
+        },
+        {
+          "outer": 2,
+          "candidate": 7294,
+          "config": {
+            "source": "logical_neutral_scale",
+            "partition": 3,
+            "head": 2,
+            "burdenGate": 0.15,
+            "smoothing": "coherent",
+            "mode": "legacy",
+            "effortPower": 0.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.4,
+            "mixShare": 0.04,
+            "secondRel": 0.75,
+            "twoTagMaxShare": 0.65,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": false
+          },
+          "inner": {
+            "joint": 0.6151013428640666,
+            "mapMacroF1": 0.5377879259796841,
+            "segmentChartAccuracy": 0.692414759748449
+          }
+        },
+        {
+          "outer": 3,
+          "candidate": 2747,
+          "config": {
+            "source": "logical_neutral_scale",
+            "partition": 3,
+            "head": 2,
+            "burdenGate": 0.3,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 1.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.07,
+            "secondRel": 0.9,
+            "twoTagMaxShare": 0.45,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.607705065278388,
+            "mapMacroF1": 0.5116201321004963,
+            "segmentChartAccuracy": 0.7037899984562795
+          }
+        },
+        {
+          "outer": 4,
+          "candidate": 5868,
+          "config": {
+            "source": "logical_neutral_scale",
+            "partition": 3,
+            "head": 4,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 0.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.07,
+            "secondRel": 0.6,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.18,
+              0.68
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.6292347159983267,
+            "mapMacroF1": 0.5572915837535513,
+            "segmentChartAccuracy": 0.7011778482431023
+          }
+        },
+        {
+          "outer": 5,
+          "candidate": 4954,
+          "config": {
+            "source": "logical_neutral_scale",
+            "partition": 3,
+            "head": 0,
+            "burdenGate": 0.15,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 0.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.07,
+            "secondRel": 0.9,
+            "twoTagMaxShare": 0.45,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.603099580960778,
+            "mapMacroF1": 0.5544963904534549,
+            "segmentChartAccuracy": 0.651702771468101
+          }
+        }
+      ]
+    },
+    "both": {
+      "outerOpened": false,
+      "selections": [
+        {
+          "outer": 0,
+          "candidate": 5656,
+          "config": {
+            "source": "full_40",
+            "partition": 3,
+            "head": 0,
+            "burdenGate": 0.0,
+            "smoothing": "legacy",
+            "mode": "legacy",
+            "effortPower": 0.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.6,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": false
+          },
+          "inner": {
+            "joint": 0.6117807557438453,
+            "mapMacroF1": 0.5436566908248437,
+            "segmentChartAccuracy": 0.679904820662847
+          }
+        },
+        {
+          "outer": 1,
+          "candidate": 5656,
+          "config": {
+            "source": "full_40",
+            "partition": 3,
+            "head": 0,
+            "burdenGate": 0.0,
+            "smoothing": "legacy",
+            "mode": "legacy",
+            "effortPower": 0.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.6,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": false
+          },
+          "inner": {
+            "joint": 0.6254791605198333,
+            "mapMacroF1": 0.56681886883412,
+            "segmentChartAccuracy": 0.6841394522055466
+          }
+        },
+        {
+          "outer": 2,
+          "candidate": 1259,
+          "config": {
+            "source": "full_40",
+            "partition": 4,
+            "head": 2,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "legacy",
+            "effortPower": 0.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.6,
+            "twoTagMaxShare": 0.45,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": false
+          },
+          "inner": {
+            "joint": 0.6133608788545661,
+            "mapMacroF1": 0.5308202825279466,
+            "segmentChartAccuracy": 0.6959014751811857
+          }
+        },
+        {
+          "outer": 3,
+          "candidate": 4473,
+          "config": {
+            "source": "full_40",
+            "partition": 3,
+            "head": 2,
+            "burdenGate": 0.3,
+            "smoothing": "legacy",
+            "mode": "legacy",
+            "effortPower": 0.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.52,
+            "mixShare": 0.12,
+            "secondRel": 0.6,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": false
+          },
+          "inner": {
+            "joint": 0.5978325066751626,
+            "mapMacroF1": 0.5053365405407559,
+            "segmentChartAccuracy": 0.6903284728095694
+          }
+        },
+        {
+          "outer": 4,
+          "candidate": 6516,
+          "config": {
+            "source": "full_20",
+            "partition": 3,
+            "head": 4,
+            "burdenGate": 0.0,
+            "smoothing": "coherent",
+            "mode": "normalized",
+            "effortPower": 0.0,
+            "confidencePower": 1.0,
+            "dominantShare": 0.65,
+            "mixShare": 0.07,
+            "secondRel": 0.6,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.18,
+              0.68
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": true
+          },
+          "inner": {
+            "joint": 0.6305288721326802,
+            "mapMacroF1": 0.5491717485801179,
+            "segmentChartAccuracy": 0.7118859956852425
+          }
+        },
+        {
+          "outer": 5,
+          "candidate": 5656,
+          "config": {
+            "source": "full_40",
+            "partition": 3,
+            "head": 0,
+            "burdenGate": 0.0,
+            "smoothing": "legacy",
+            "mode": "legacy",
+            "effortPower": 0.0,
+            "confidencePower": 0.0,
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.6,
+            "twoTagMaxShare": 0.55,
+            "familyThresholds": [
+              0.3,
+              0.8
+            ],
+            "minEvidence": 0.25,
+            "minimumDiversity": 0.0,
+            "excludeVibroFromMix": false
+          },
+          "inner": {
+            "joint": 0.6052874781997962,
+            "mapMacroF1": 0.5475320273350122,
+            "segmentChartAccuracy": 0.6630429290645803
+          }
+        }
+      ]
+    }
+  }
+}

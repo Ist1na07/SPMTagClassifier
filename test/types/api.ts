@@ -1,0 +1,15 @@
+import { analyzeMap, extractIntermediate, buildCachedMap, buildEvidenceMap, legacy, type GeometryEvidence } from '../..';
+declare const text: string;
+const result = analyzeMap(text, { algorithm: 'modern', speedRate: 1.5 });
+const composition: Record<string, number> | undefined = result.overall.composition;
+const isolation: number | undefined = result.segments[0]?.evidence?.geometry?.release.headIsolation;
+const sourceStart: number | undefined = result.segments[0]?.evidence?.sourceStart;
+const classes: string[] | undefined = result.modelInfo?.classes;
+const familyMass: number | undefined = result.coarse?.familyMass.ln;
+const weight: number | undefined = result.segments[0]?.aggregationWeight;
+const confidenceExponent: number | undefined = result.modelInfo?.aggregationPolicy?.confidencePower;
+const geometry: GeometryEvidence | undefined = result.descriptors?.[0]?.geometry;
+extractIntermediate(text, { algorithm: 'stable' }).segments;
+buildCachedMap(text).rawSegs;
+buildEvidenceMap(text).featureKeys;
+legacy.analyzeMap(text, { algorithm: 'legacy' }).overall.tags;

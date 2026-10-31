@@ -1,0 +1,8 @@
+{
+  "status": "failed_and_superseded",
+  "reason": "Real six-key mirror fixture exposed tied-release endpoint column-order dependence in sameHandOrder. All 2343 cached inference cases reached the mirror stage, but the full audit did not pass.",
+  "firstCounterexample": "spm_dataset_6k-0.1.0/bm6k_1988/1987",
+  "repairedKernel": "release-geometry.cjs: require three singleton timestamp groups",
+  "replacement": "../six-baseline-runtime-r2",
+  "scope": "Baseline numeric fixture model only, not selected final six-key classification."
+}

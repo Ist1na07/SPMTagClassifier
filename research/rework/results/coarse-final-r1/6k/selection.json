@@ -1,0 +1,35 @@
+{
+  "target": {
+    "variant": "full53",
+    "mode": "both",
+    "criterion": "shared"
+  },
+  "readsOuterPredictions": false,
+  "innerPredictionScope": {
+    "weakRecords": 1559,
+    "manualRecords": 6,
+    "heldOutInnerPredictionsPerRecord": 5,
+    "weakPredictionRows": 7795,
+    "scope": "repeated inner CV for all-data configuration choice; roughly5/9 training fraction per expert, not new nested outer performance or a five-model vote"
+  },
+  "configId": 26,
+  "config": {
+    "windowMs": 2000,
+    "burdenGate": 0.2,
+    "localL2": 0.003,
+    "strongWeight": 0.5,
+    "source4Weight": 0.75
+  },
+  "score": 0.7795705473676604,
+  "map4": {
+    "macroF1": 0.9475269154664477,
+    "accuracy": 0.9460076045627377,
+    "records": 6575
+  },
+  "map7": {
+    "macroF1": 0.8975090237788272,
+    "accuracy": 0.9366255144032921,
+    "records": 1220
+  },
+  "segmentChartAccuracy": 0.6366231251126833
+}

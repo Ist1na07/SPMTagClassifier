@@ -1,0 +1,2678 @@
+{
+  "scope": "synthetic definition-level counterexamples and native-key equivalence; not human accuracy, no parameter selection",
+  "profile": {
+    "classes": [
+      "jack",
+      "chordstream",
+      "speed",
+      "tech",
+      "ln"
+    ],
+    "keys": [
+      "npsPerKey",
+      "rowRate",
+      "chordFraction",
+      "multiFraction",
+      "singleFraction",
+      "lnHeadFraction",
+      "overlap",
+      "repeatFraction",
+      "cutReturn",
+      "chordChange",
+      "columnEntropy",
+      "handImbalance",
+      "sameHand",
+      "crossCut",
+      "logIoiSd",
+      "ioiChange",
+      "graceFraction",
+      "gridResidual",
+      "rowBpm",
+      "ioiCv",
+      "occupancy",
+      "minOccupancy",
+      "occupancySd",
+      "heldAtHead",
+      "lockFraction",
+      "releaseIndependence",
+      "releaseScatter",
+      "tailRate",
+      "shortHoldFraction",
+      "inverseGap",
+      "lnHeadOverlap",
+      "maskEntropy",
+      "trillFraction",
+      "rollFraction",
+      "effort",
+      "sustain",
+      "burstiness",
+      "activeFraction",
+      "peakExcess",
+      "repeatConcentration",
+      "runAsymmetry",
+      "runCoverage",
+      "regularity",
+      "regularAnchor",
+      "release:tailRatePerKey",
+      "release:headIsolation",
+      "release:sameFingerRecovery",
+      "release:tailAsynchrony",
+      "release:tailTimingVariability",
+      "release:heldOtherAtTail",
+      "release:sameHandOrder",
+      "release:releaseChordFraction",
+      "release:independentHeldRelease"
+    ],
+    "mean": [
+      5.279919412126102,
+      13.244435229650557,
+      0.42874161807871747,
+      0.4807021796435301,
+      0.5163551854153847,
+      0.08945382953885336,
+      0.24870351397064824,
+      0.30692689325120126,
+      0.3164516044733976,
+      0.6034787926605629,
+      0.9776394119276226,
+      0.06174495662060625,
+      0.3715731292302074,
+      0.20521095241315632,
+      0.20967672348431854,
+      0.1376341848072169,
+      0.018459576715618622,
+      0.07427099118108489,
+      219.3060979764644,
+      0.23696579922239105,
+      0.05334877370168715,
+      0.03257397343020707,
+      0.02029446250292978,
+      0.020058467450332296,
+      0.060735862662294526,
+      0.07992934144216184,
+      0.04654367546496631,
+      0.2884756887475926,
+      0.12645360902098599,
+      0.046149233839953605,
+      0.00823540262094189,
+      0.711364937195293,
+      0.028986404434343242,
+      0.07384338343353529,
+      6.88397497454446,
+      0.5747720623851992,
+      0.10229555415218201,
+      0.9906013118792755,
+      0.057904449932632496,
+      0.20223002713994806,
+      0.05951550879363238,
+      0.1609332388724863,
+      0.7476448274488829,
+      0.039319693665753455,
+      0.2884756887475926,
+      0.04115481408110655,
+      0.14152795255655595,
+      0.10336315091076181,
+      0.03300751937605254,
+      0.051610610387062224,
+      0,
+      0.07433874792545599,
+      0.01618700913656663
+    ],
+    "scale": [
+      2.1935486695134463,
+      6.6508228078045875,
+      0.157735762309571,
+      0.3236165509698905,
+      0.32377860621447824,
+      0.24224920713105502,
+      0.30594715572498277,
+      0.36588498099636685,
+      0.20343133863699642,
+      0.1421839966724101,
+      0.0960538362584874,
+      0.10580700562225097,
+      0.12275551372520518,
+      0.11232193073152011,
+      0.22048825954079068,
+      0.2046992799083205,
+      0.0580738406195362,
+      0.09725057002273887,
+      109.89458782395833,
+      0.26933534374282564,
+      0.14205849323051425,
+      0.11569189154027297,
+      0.05706167714600268,
+      0.0702998143385303,
+      0.19373035928328708,
+      0.24210804484109502,
+      0.13125031087455372,
+      0.9415796913029272,
+      0.3080771753699684,
+      0.11798196022326048,
+      0.0520494521066025,
+      0.1351137486840709,
+      0.0772636888174803,
+      0.10974327558757511,
+      3.562801071294435,
+      0.18239102869872695,
+      0.15986184834402556,
+      0.07798926972681207,
+      0.08737016270744698,
+      0.29376281235424306,
+      0.12491206193027349,
+      0.18366516198570632,
+      0.15247153607655767,
+      0.055730457434987404,
+      0.9415796913029272,
+      0.13153094579787694,
+      0.28620660844881013,
+      0.25508602885715637,
+      0.11083701337683818,
+      0.16414313139758036,
+      0.000001,
+      0.16418621774059727,
+      0.07199005796992769
+    ],
+    "theta": [
+      -0.016435166913162626,
+      -1.3842836689378597,
+      0.7244294857190035,
+      0.08329273025071932,
+      -0.08309388144608267,
+      0.21711421725354593,
+      1.0651850278765715,
+      -0.25560034994276914,
+      0.4953622291808683,
+      -0.27909034336080696,
+      -0.16925989678498085,
+      -0.1526858577172876,
+      -0.03333149993072315,
+      -0.13557233634158694,
+      -1.0349343976819005,
+      0.2540633496873821,
+      -0.27915011629926306,
+      -0.08341328130993954,
+      -0.8757299704267615,
+      0.023167480401531722,
+      -0.03221793590273827,
+      -0.0439568167571802,
+      -0.07727655319330713,
+      -0.24852376151171976,
+      -0.3755914631779143,
+      0.2355193521637449,
+      0.09715358387797791,
+      -0.0581220710015971,
+      -0.308595344771333,
+      -0.6397064276743021,
+      -0.08272970456436958,
+      0.10279510161542962,
+      0.3535038738631565,
+      0.22737897252684336,
+      1.325824158203633,
+      0.046041365662269886,
+      0.24820517596465724,
+      -0.002439259696400067,
+      0.24908796248417797,
+      0.20653542216490217,
+      -0.08634662030131078,
+      -0.17458445087326227,
+      -0.27817556125335413,
+      0.14634362893453862,
+      -0.0581220710015971,
+      -0.058495378248641254,
+      0.03316317764664285,
+      0.01868750133632864,
+      -0.009073782344781142,
+      -0.014340926608562624,
+      0,
+      0.2262835850988253,
+      -0.11281249568162183,
+      1.6720109422205944,
+      0.29663578422095044,
+      0.10096465768417723,
+      -0.07819597916122302,
+      0.07815483959432161,
+      -0.25226332473861734,
+      -1.6831789677264049,
+      -1.8747468713562552,
+      0.6408664156493771,
+      1.181878657087938,
+      -0.2797977790560151,
+      0.055844011918846026,
+      0.24205615932636096,
+      -0.4198514837905545,
+      -0.9274320058690463,
+      -0.8181210224569119,
+      -0.03618261718111116,
+      -1.1128187839247414,
+      0.2912629993518205,
+      0.7812998590801511,
+      0.02126508838363655,
+      0.02847900559363647,
+      0.021933423421365412,
+      -0.14962800691762884,
+      -0.17609620823985725,
+      0.11680721271530357,
+      -0.008838900027990496,
+      0.0007421474586800525,
+      -0.11103396314472513,
+      -0.09656802389672191,
+      0.05163334136746481,
+      0.7508064783514041,
+      0.5160772787940295,
+      -0.030938479182748554,
+      -0.05007047507438384,
+      0.014905050323055625,
+      0.5648993943452253,
+      -0.3418674817466625,
+      0.3403525787810142,
+      -0.4978021106422302,
+      0.8888435212670088,
+      0.4623006423412172,
+      0.13373002773785198,
+      0.2562619716456647,
+      0.0007421474586800525,
+      0.04125047626520385,
+      0.4510296867560113,
+      0.01446591723916917,
+      -0.2330480345399729,
+      -0.18140898429709096,
+      0,
+      -0.10230532839289666,
+      0.019744185183523267,
+      -1.3777932443302432,
+      0.5759018827985656,
+      0.8866546202498233,
+      0.3791053894635187,
+      -0.3790410449361656,
+      -0.6247079534039149,
+      0.30662847802114035,
+      1.2591926825622979,
+      -2.1788733086618546,
+      0.0407432424675463,
+      0.1660135392466575,
+      0.12834441586511897,
+      -0.8779537843332577,
+      0.9170917043801436,
+      0.020066449786844208,
+      -1.1480045677249648,
+      0.4501480487365904,
+      0.8209150899122396,
+      1.2969962991525161,
+      0.3724268785525085,
+      0.011643931460333714,
+      -0.22531186803655637,
+      0.1079544627253335,
+      0.3349034322400325,
+      0.6442470358511976,
+      0.22948667646946397,
+      0.1225641355980448,
+      -0.3487150465656924,
+      -0.07907670679384297,
+      0.07994621483420403,
+      -0.07182484956482757,
+      -1.4525294268537345,
+      -1.5309737706328772,
+      0.39635553984823446,
+      -1.3958175579218637,
+      0.10630141001755278,
+      -0.009349581424586879,
+      0.5745933717118922,
+      -0.21893537260906523,
+      -0.2454667039714344,
+      -0.1478049151015902,
+      0.3403772073780239,
+      1.2036037510543547,
+      -0.4806691815964465,
+      -0.3487150465656924,
+      -0.05926838246689306,
+      0.10526176520455116,
+      -0.07717932495853884,
+      0.06928071335803235,
+      -0.14579928393662903,
+      0,
+      -0.10141376614259963,
+      0.005588238464293497,
+      0.3592420126423235,
+      0.9698541778299943,
+      -1.7446282490800071,
+      -0.4929393792938335,
+      0.49247671798408127,
+      -0.3699861299838123,
+      0.3707297036201165,
+      0.6896225258783939,
+      0.7253276006575662,
+      -1.0739542746271948,
+      0.7208441754803321,
+      0.01375696961633981,
+      0.4999562126522759,
+      -0.3465906422898033,
+      2.1586116240368405,
+      1.4039003753015655,
+      0.005091360157595908,
+      0.5924725961944577,
+      -0.39840740681020836,
+      -0.9343592520374233,
+      -0.31992273631756607,
+      -0.180690814996093,
+      0.1651137204751642,
+      -0.4597883765045141,
+      -0.4738424411999477,
+      -0.0259600286085632,
+      -0.11125469549117172,
+      -0.23510646741024638,
+      0.3187953364732402,
+      0.23943207666198793,
+      0.2464435781965406,
+      0.6157359282281714,
+      0.5826161858030482,
+      -0.791629811728528,
+      0.7776249250415663,
+      -0.07832879098396107,
+      -0.8417174998225715,
+      -0.1401681270292854,
+      -0.3402443667269217,
+      0.41049065158874914,
+      -0.7077837003059586,
+      -0.9515653018907796,
+      -0.9653454905163628,
+      0.29876592263572244,
+      -0.23510646741024638,
+      -0.042838059381215064,
+      -0.41807062449829513,
+      0.4291142282475153,
+      -0.013458978020490064,
+      -0.12524795057053198,
+      0,
+      0.42438644939094283,
+      0.16357107342423144,
+      -0.6370245436195326,
+      -0.45810817591180153,
+      0.03257948542700487,
+      0.10873723874065838,
+      -0.10849663119619839,
+      1.0298431908728636,
+      -0.05936424179144531,
+      0.18153201285825363,
+      0.31731706317403113,
+      0.13042271843253386,
+      -0.437800038885986,
+      -0.04525953968302805,
+      0.16927291228536212,
+      -0.015077241958173858,
+      -0.2163116702726916,
+      0.30816186519289335,
+      -0.13990667541380988,
+      -0.21715562087187817,
+      -0.31412192126745325,
+      -0.24253496599677526,
+      0.31923165237637324,
+      0.42148049419617256,
+      -0.2177250534285621,
+      0.5230367126938454,
+      0.38128307676658657,
+      -0.555853212739959,
+      -0.09962412395678735,
+      0.6412014375189236,
+      0.17991067823659457,
+      0.4168961600748415,
+      -0.14352236543482433,
+      -0.016808081341280916,
+      0.07877643217263483,
+      0.19883377853625495,
+      -0.6575610502489732,
+      -0.08891903501892,
+      0.037962510937295725,
+      -0.09011850323954447,
+      -0.030260801929206278,
+      0.12624274086001214,
+      0.05309171444183849,
+      0.3234719030448148,
+      -0.0938127270224725,
+      -0.22070234161950378,
+      0.6412014375189236,
+      0.11935134383155006,
+      -0.17138400510887766,
+      -0.38508832186445613,
+      0.18630008154723318,
+      0.4667971454128561,
+      0,
+      -0.44695093995422813,
+      -0.07609100139041793,
+      0.6675472046948728,
+      -0.4938103570696349,
+      -0.10967916018131851,
+      0.4553399374939525,
+      -0.5193976249377921,
+      1,
+      1
+    ],
+    "pool": {
+      "effortPower": 1,
+      "confidencePower": 1
+    },
+    "spec": {
+      "representation": "physical",
+      "weak4Only": true,
+      "noStrong": true
+    },
+    "config": {
+      "windowMs": 2000,
+      "burdenGate": 0,
+      "localL2": 0.0003,
+      "strongWeight": 0,
+      "source4Weight": 1
+    },
+    "clip": 6
+  },
+  "physicalSupport": "both",
+  "tests": 99,
+  "counterexamples": [],
+  "rows": [
+    {
+      "id": "K4-repeat-0-60",
+      "keys": 4,
+      "columns": [
+        0
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150944
+    },
+    {
+      "id": "K4-repeat-2-60",
+      "keys": 4,
+      "columns": [
+        2
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150944
+    },
+    {
+      "id": "K4-repeat-01-60",
+      "keys": 4,
+      "columns": [
+        0,
+        1
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.03773584905660378
+    },
+    {
+      "id": "K4-repeat-13-60",
+      "keys": 4,
+      "columns": [
+        1,
+        3
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.01886792452830189
+    },
+    {
+      "id": "K4-repeat-012-60",
+      "keys": 4,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K4-repeat-023-60",
+      "keys": 4,
+      "columns": [
+        0,
+        2,
+        3
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K4-repeat-0123-60",
+      "keys": 4,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K4-repeat-0-120",
+      "keys": 4,
+      "columns": [
+        0
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150943
+    },
+    {
+      "id": "K4-repeat-2-120",
+      "keys": 4,
+      "columns": [
+        2
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150943
+    },
+    {
+      "id": "K4-repeat-01-120",
+      "keys": 4,
+      "columns": [
+        0,
+        1
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.03773584905660377
+    },
+    {
+      "id": "K4-repeat-13-120",
+      "keys": 4,
+      "columns": [
+        1,
+        3
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.018867924528301886
+    },
+    {
+      "id": "K4-repeat-012-120",
+      "keys": 4,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K4-repeat-023-120",
+      "keys": 4,
+      "columns": [
+        0,
+        2,
+        3
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K4-repeat-0123-120",
+      "keys": 4,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K4-repeat-0-180",
+      "keys": 4,
+      "columns": [
+        0
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150944
+    },
+    {
+      "id": "K4-repeat-2-180",
+      "keys": 4,
+      "columns": [
+        2
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150944
+    },
+    {
+      "id": "K4-repeat-01-180",
+      "keys": 4,
+      "columns": [
+        0,
+        1
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.03773584905660377
+    },
+    {
+      "id": "K4-repeat-13-180",
+      "keys": 4,
+      "columns": [
+        1,
+        3
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.018867924528301886
+    },
+    {
+      "id": "K4-repeat-012-180",
+      "keys": 4,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K4-repeat-023-180",
+      "keys": 4,
+      "columns": [
+        0,
+        2,
+        3
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K4-repeat-0123-180",
+      "keys": 4,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K4-held-1",
+      "keys": 4,
+      "columns": [
+        0
+      ],
+      "kind": "only long holds, including headless held windows",
+      "expectedByConstruction": "ln",
+      "predicted": "ln",
+      "matches": true,
+      "composition": {
+        "jack": 0,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 1
+      },
+      "clippedFeatureFraction": 0.06792528294340378
+    },
+    {
+      "id": "K4-held-4",
+      "keys": 4,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "kind": "only long holds, including headless held windows",
+      "expectedByConstruction": "ln",
+      "predicted": "ln",
+      "matches": true,
+      "composition": {
+        "jack": 0,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 1
+      },
+      "clippedFeatureFraction": 0.07170226373589056
+    },
+    {
+      "id": "K6-repeat-0-60",
+      "keys": 6,
+      "columns": [
+        0
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150944
+    },
+    {
+      "id": "K6-repeat-3-60",
+      "keys": 6,
+      "columns": [
+        3
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150944
+    },
+    {
+      "id": "K6-repeat-01-60",
+      "keys": 6,
+      "columns": [
+        0,
+        1
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.07547169811320756
+    },
+    {
+      "id": "K6-repeat-14-60",
+      "keys": 6,
+      "columns": [
+        1,
+        4
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.05660377358490565
+    },
+    {
+      "id": "K6-repeat-012-60",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.03773584905660378
+    },
+    {
+      "id": "K6-repeat-135-60",
+      "keys": 6,
+      "columns": [
+        1,
+        3,
+        5
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.01886792452830189
+    },
+    {
+      "id": "K6-repeat-0123-60",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-0235-60",
+      "keys": 6,
+      "columns": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-01234-60",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-01345-60",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-012345-60",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-0-120",
+      "keys": 6,
+      "columns": [
+        0
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150943
+    },
+    {
+      "id": "K6-repeat-3-120",
+      "keys": 6,
+      "columns": [
+        3
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150943
+    },
+    {
+      "id": "K6-repeat-01-120",
+      "keys": 6,
+      "columns": [
+        0,
+        1
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.07547169811320754
+    },
+    {
+      "id": "K6-repeat-14-120",
+      "keys": 6,
+      "columns": [
+        1,
+        4
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.05660377358490566
+    },
+    {
+      "id": "K6-repeat-012-120",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.03773584905660377
+    },
+    {
+      "id": "K6-repeat-135-120",
+      "keys": 6,
+      "columns": [
+        1,
+        3,
+        5
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.018867924528301886
+    },
+    {
+      "id": "K6-repeat-0123-120",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-0235-120",
+      "keys": 6,
+      "columns": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-01234-120",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-01345-120",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-012345-120",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-0-180",
+      "keys": 6,
+      "columns": [
+        0
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150944
+    },
+    {
+      "id": "K6-repeat-3-180",
+      "keys": 6,
+      "columns": [
+        3
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150944
+    },
+    {
+      "id": "K6-repeat-01-180",
+      "keys": 6,
+      "columns": [
+        0,
+        1
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.07547169811320754
+    },
+    {
+      "id": "K6-repeat-14-180",
+      "keys": 6,
+      "columns": [
+        1,
+        4
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.05660377358490566
+    },
+    {
+      "id": "K6-repeat-012-180",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.03773584905660377
+    },
+    {
+      "id": "K6-repeat-135-180",
+      "keys": 6,
+      "columns": [
+        1,
+        3,
+        5
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.018867924528301886
+    },
+    {
+      "id": "K6-repeat-0123-180",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-0235-180",
+      "keys": 6,
+      "columns": [
+        0,
+        2,
+        3,
+        5
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-01234-180",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-01345-180",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        3,
+        4,
+        5
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-repeat-012345-180",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K6-held-1",
+      "keys": 6,
+      "columns": [
+        0
+      ],
+      "kind": "only long holds, including headless held windows",
+      "expectedByConstruction": "ln",
+      "predicted": "ln",
+      "matches": true,
+      "composition": {
+        "jack": 0,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 1
+      },
+      "clippedFeatureFraction": 0.06792528294340378
+    },
+    {
+      "id": "K6-held-6",
+      "keys": 6,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "kind": "only long holds, including headless held windows",
+      "expectedByConstruction": "ln",
+      "predicted": "ln",
+      "matches": true,
+      "composition": {
+        "jack": 0,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 1
+      },
+      "clippedFeatureFraction": 0.07170226373589056
+    },
+    {
+      "id": "K7-repeat-0-60",
+      "keys": 7,
+      "columns": [
+        0
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150944
+    },
+    {
+      "id": "K7-repeat-3-60",
+      "keys": 7,
+      "columns": [
+        3
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.07547169811320756
+    },
+    {
+      "id": "K7-repeat-01-60",
+      "keys": 7,
+      "columns": [
+        0,
+        1
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.07547169811320756
+    },
+    {
+      "id": "K7-repeat-15-60",
+      "keys": 7,
+      "columns": [
+        1,
+        5
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.05660377358490565
+    },
+    {
+      "id": "K7-repeat-012-60",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.03773584905660378
+    },
+    {
+      "id": "K7-repeat-135-60",
+      "keys": 7,
+      "columns": [
+        1,
+        3,
+        5
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.01886792452830189
+    },
+    {
+      "id": "K7-repeat-0123-60",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.01886792452830189
+    },
+    {
+      "id": "K7-repeat-0246-60",
+      "keys": 7,
+      "columns": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-01234-60",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-02346-60",
+      "keys": 7,
+      "columns": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-012345-60",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-012456-60",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-0123456-60",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "bpm": 60,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-0-120",
+      "keys": 7,
+      "columns": [
+        0
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150943
+    },
+    {
+      "id": "K7-repeat-3-120",
+      "keys": 7,
+      "columns": [
+        3
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.07547169811320754
+    },
+    {
+      "id": "K7-repeat-01-120",
+      "keys": 7,
+      "columns": [
+        0,
+        1
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.07547169811320754
+    },
+    {
+      "id": "K7-repeat-15-120",
+      "keys": 7,
+      "columns": [
+        1,
+        5
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.05660377358490566
+    },
+    {
+      "id": "K7-repeat-012-120",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.03773584905660377
+    },
+    {
+      "id": "K7-repeat-135-120",
+      "keys": 7,
+      "columns": [
+        1,
+        3,
+        5
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.018867924528301886
+    },
+    {
+      "id": "K7-repeat-0123-120",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.018867924528301886
+    },
+    {
+      "id": "K7-repeat-0246-120",
+      "keys": 7,
+      "columns": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-01234-120",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-02346-120",
+      "keys": 7,
+      "columns": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-012345-120",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-012456-120",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-0123456-120",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "bpm": 120,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-0-180",
+      "keys": 7,
+      "columns": [
+        0
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.09433962264150944
+    },
+    {
+      "id": "K7-repeat-3-180",
+      "keys": 7,
+      "columns": [
+        3
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.07547169811320754
+    },
+    {
+      "id": "K7-repeat-01-180",
+      "keys": 7,
+      "columns": [
+        0,
+        1
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.07547169811320754
+    },
+    {
+      "id": "K7-repeat-15-180",
+      "keys": 7,
+      "columns": [
+        1,
+        5
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.05660377358490566
+    },
+    {
+      "id": "K7-repeat-012-180",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.03773584905660377
+    },
+    {
+      "id": "K7-repeat-135-180",
+      "keys": 7,
+      "columns": [
+        1,
+        3,
+        5
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.018867924528301886
+    },
+    {
+      "id": "K7-repeat-0123-180",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0.018867924528301886
+    },
+    {
+      "id": "K7-repeat-0246-180",
+      "keys": 7,
+      "columns": [
+        0,
+        2,
+        4,
+        6
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-01234-180",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-02346-180",
+      "keys": 7,
+      "columns": [
+        0,
+        2,
+        3,
+        4,
+        6
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-012345-180",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-012456-180",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-repeat-0123456-180",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "bpm": 180,
+      "kind": "strictly periodic repeated identical RC chord",
+      "expectedByConstruction": "jack",
+      "predicted": "jack",
+      "matches": true,
+      "composition": {
+        "jack": 1,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 0
+      },
+      "clippedFeatureFraction": 0
+    },
+    {
+      "id": "K7-held-1",
+      "keys": 7,
+      "columns": [
+        0
+      ],
+      "kind": "only long holds, including headless held windows",
+      "expectedByConstruction": "ln",
+      "predicted": "ln",
+      "matches": true,
+      "composition": {
+        "jack": 0,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 1
+      },
+      "clippedFeatureFraction": 0.049057358415101886
+    },
+    {
+      "id": "K7-held-7",
+      "keys": 7,
+      "columns": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "kind": "only long holds, including headless held windows",
+      "expectedByConstruction": "ln",
+      "predicted": "ln",
+      "matches": true,
+      "composition": {
+        "jack": 0,
+        "chordstream": 0,
+        "speed": 0,
+        "tech": 0,
+        "ln": 1
+      },
+      "clippedFeatureFraction": 0.07170226373589056
+    }
+  ],
+  "fullChordCrossKey": {
+    "featureError": 1.1102230246251565e-16,
+    "probabilityError": 0,
+    "kind": "same per-finger periodic full-width Jack at each actual key count"
+  },
+  "profilePath": "research/rework/results/coarse-final-r1/4k/profile.json",
+  "source": "'use strict';\n// Definition-level synthetic counterexamples complement weak-bucket scores.\n// These are not a human-annotated accuracy dataset and do not tune parameters.\nconst fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');\nconst runtime=require('./coarse-runtime.cjs');\nfunction text(K,objects){return `[General]\\nMode:3\\n[Difficulty]\\nCircleSize:${K}\\n[TimingPoints]\\n0,500,4,2,0,100,1,0\\n[HitObjects]\\n${objects.join('\\n')}`;}\nfunction note(K,c,t,tail=null){return `${Math.floor((c+.5)*512/K)},192,${t},${tail===null?1:128},0,${tail===null?'0:0:0:0:':tail+':0:0:0:0:'}`;}\nfunction fixtures(){\n const cases=[];\n for(const K of[4,6,7]){\n  for(const bpm of[60,120,180])for(let width=1;width<=K;width++){\n   const layouts=[[...Array(width)].map((_,c)=>c),[...Array(width)].map((_,c)=>Math.floor((c+.5)*K/width))];\n   for(const columns of [...new Map(layouts.map(cs=>[cs.join(','),cs])).values()]){\n    const objects=[];for(let i=0;i<97;i++)for(const c of columns)objects.push(note(K,c,i*15000/bpm));\n    cases.push({id:`K${K}-repeat-${columns.join('')}-${bpm}`,K,bpm,columns,expected:'jack',kind:'strictly periodic repeated identical RC chord',text:text(K,objects)});\n   }\n  }\n  for(const width of[1,K]){\n   const columns=Array.from({length:width},(_,c)=>c),objects=columns.map(c=>note(K,c,0,10000));\n   cases.push({id:`K${K}-held-${width}`,K,columns,expected:'ln',kind:'only long holds, including headless held windows',text:text(K,objects)});\n  }\n }\n return cases;\n}\nfunction audit(profile,options={}){\n const rows=[],full={};\n for(const f of fixtures()){\n  const result=runtime.classifyCoarse(f.text,profile,options);assert.equal(result.modelInfo.nativeKeyCount,f.K);\n  assert.ok(Object.values(result.coarse.composition).every(Number.isFinite));\n  rows.push({id:f.id,keys:f.K,columns:f.columns,bpm:f.bpm,kind:f.kind,expectedByConstruction:f.expected,\n   predicted:result.coarse.dominant,matches:result.coarse.dominant===f.expected,composition:result.coarse.composition,\n   clippedFeatureFraction:result.modelInfo.clippedFeatureFraction});\n  if(f.expected==='jack'&&f.columns.length===f.K&&f.bpm===120)full[f.K]=result;\n }\n const reference=full[4],model=profile.model||profile;let featureError=0,probabilityError=0;\n for(const K of[6,7]){\n  assert.equal(reference.windows.length,full[K].windows.length);\n  for(let i=0;i<reference.windows.length;i++){\n   for(const key of model.keys)featureError=Math.max(featureError,Math.abs(reference.windows[i].metrics[key]-full[K].windows[i].metrics[key]));\n   reference.windows[i].probability.forEach((p,j)=>probabilityError=Math.max(probabilityError,Math.abs(p-full[K].windows[i].probability[j])));\n  }\n }\n assert.ok(featureError<1e-9&&probabilityError<1e-9,'Uniform full-chord native-key normalized features must not gain virtual columns');\n return {scope:'synthetic definition-level counterexamples and native-key equivalence; not human accuracy, no parameter selection',\n  profile:model,physicalSupport:options.physicalSupport??profile.postprocess?.physicalSupport??'none',tests:rows.length,counterexamples:rows.filter(r=>!r.matches),rows,\n  fullChordCrossKey:{featureError,probabilityError,kind:'same per-finger periodic full-width Jack at each actual key count'}};\n}\nif(require.main===module){\n const [profilePath,out,mode='none']=process.argv.slice(2);if(!profilePath||!out)throw Error('Usage: node coarse_sanity.cjs <profile.json> <new-output.json> [none|jack|ln|both]');\n const value=audit(JSON.parse(fs.readFileSync(profilePath,'utf8')),{physicalSupport:mode});\n fs.mkdirSync(path.dirname(out),{recursive:true});fs.writeFileSync(out,JSON.stringify({...value,profilePath,source:fs.readFileSync(__filename,'utf8')},null,2)+'\\n');\n console.log(profilePath,'synthetic cases',value.tests,'counterexamples',value.counterexamples.length,'native-key equivalence',value.fullChordCrossKey);\n}\nmodule.exports={fixtures,audit};\n"
+}

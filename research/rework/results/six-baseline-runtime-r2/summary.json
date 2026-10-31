@@ -1,0 +1,34 @@
+{
+  "scope": "native six-key arithmetic, coverage, held activity, mirror and feature-domain diagnostics; no human pattern truth",
+  "profile": "research/rework/results/coarse-4k-baseline-r1/weak4_only/0/outer-model.json",
+  "requested": 2344,
+  "valid": 2343,
+  "rejected": [
+    {
+      "uid": "spm_dataset_6k-0.1.0/bm6k_0778/777",
+      "source": "beatmaps/bm6k_0778.osu",
+      "error": "InvalidHoldTail"
+    }
+  ],
+  "windowTotals": {
+    "count": 180009,
+    "empty": 696,
+    "heldOnly": 1069,
+    "clippedDuration": 1596355.226415525,
+    "duration": 357568846
+  },
+  "dominantCounts": {
+    "ln": 641,
+    "tech": 745,
+    "chordstream": 506,
+    "jack": 247,
+    "speed": 204
+  },
+  "mirrorCases": 32,
+  "clipping": {
+    "durationWeighted": 0.004464469553970943,
+    "chartMedian": 0.003035542589186578,
+    "chartQ95": 0.011442832659572908
+  },
+  "note": "Dominant counts and support concentration describe model behavior, not human six-key accuracy; no six-key labels selected model parameters."
+}

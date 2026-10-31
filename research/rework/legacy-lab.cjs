@@ -27,7 +27,10 @@ function context(lab,text,rate=1){
  const windows=lab.computeAllWindows(ctx);return {map,ctx,rows,windows};
 }
 function inspect(api,text,{intervals,speedRate=1}={}){
- const lab=api.lab,{map,ctx,rows,windows}=context(lab,text,speedRate);
+ return inspectPrepared(api,context(api.lab,text,speedRate),{intervals});
+}
+function inspectPrepared(api,{map,ctx,rows,windows},{intervals}={}){
+ const lab=api.lab;
  const norm=lab.normalizeWindows(windows);
  const activeCut=windows.map(w=>w.cutDemand).filter(v=>v>0).sort((a,b)=>a-b);
  const cutDemandRef=activeCut.length?activeCut[Math.floor(activeCut.length*.8)]:1;
@@ -50,7 +53,7 @@ function inspect(api,text,{intervals,speedRate=1}={}){
  });
  const cache={...cm,windows,rawSegs:segments.map((s,i)=>({...s,family0:marks[i].family})),extras:rowsOut.map(r=>r.extra)};
  const classified=lab.classifySegments(cache,{scorer:'model'});
- return {map,ctx,cutDemandRef:cm.cutDemandRef,windows,segments:rowsOut,classified,
+ return {map,ctx,cache,cutDemandRef:cm.cutDemandRef,windows,segments:rowsOut,classified,
    smoothed:lab.smoothSegments(structuredClone(classified)),featureKeys:lab.VEC_KEYS};
 }
-module.exports={loadLab,context,inspect,replaceOnce};
+module.exports={loadLab,context,inspect,inspectPrepared,replaceOnce,EXPOSE};

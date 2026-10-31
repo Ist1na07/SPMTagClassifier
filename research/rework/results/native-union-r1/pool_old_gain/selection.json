@@ -1,0 +1,1181 @@
+{
+  "selectionUsesOuterLabels": false,
+  "selections": [
+    {
+      "outer": 0,
+      "candidate": 156,
+      "budget": 0,
+      "changes": 0,
+      "minimumRequiredChanges": 0,
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5986125154973033
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 1,
+          "trainingJoint": 0.6320682865384115
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 72943,
+          "changes": 2,
+          "trainingJoint": 0.6380401197139276
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 9697,
+          "changes": 4,
+          "trainingJoint": 0.6407644387399126
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 95497,
+          "changes": 8,
+          "trainingJoint": 0.646026445413212
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 95497,
+          "changes": 8,
+          "trainingJoint": 0.646026445413212
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5682173321324366
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 2748,
+          "changes": 1,
+          "trainingJoint": 0.5761871436402526
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 2712,
+          "changes": 2,
+          "trainingJoint": 0.5886725668803794
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 2724,
+          "changes": 3,
+          "trainingJoint": 0.5945960732769001
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 37205,
+          "changes": 6,
+          "trainingJoint": 0.6015202117412862
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 37205,
+          "changes": 6,
+          "trainingJoint": 0.6015202117412862
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5832064796089396
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 1,
+          "trainingJoint": 0.6050602956988484
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 72943,
+          "changes": 2,
+          "trainingJoint": 0.6088579191716488
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 72947,
+          "changes": 3,
+          "trainingJoint": 0.6142044041173869
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 90267,
+          "changes": 8,
+          "trainingJoint": 0.6288217419691366
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 90267,
+          "changes": 8,
+          "trainingJoint": 0.6288217419691366
+        }
+      ],
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.5127389525354655,
+          "segmentAccuracy": 0.66313618313662,
+          "joint": 0.5879375678360428
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.5055554861396913,
+          "segmentAccuracy": 0.6466850791990415,
+          "joint": 0.5761202826693663
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.5123954017172454,
+          "segmentAccuracy": 0.6601249278653972,
+          "joint": 0.5862601647913213
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.5241405081793156,
+          "segmentAccuracy": 0.6380673235796619,
+          "joint": 0.5811039158794887
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.5232479950421564,
+          "segmentAccuracy": 0.6378752602355521,
+          "joint": 0.5805616276388542
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.5232479950421564,
+          "segmentAccuracy": 0.6378752602355521,
+          "joint": 0.5805616276388542
+        }
+      ],
+      "config": {
+        "partition": 4,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.18,
+          0.68
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "source": "logical_neutral",
+        "excludeVibroFromMix": true
+      },
+      "unrestrictedCandidate": 95497,
+      "minimumCandidate": 156
+    },
+    {
+      "outer": 1,
+      "candidate": 120,
+      "budget": 1,
+      "changes": 1,
+      "minimumRequiredChanges": 0,
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.6378594205581969
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 1,
+          "trainingJoint": 0.6630952863009896
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 132,
+          "changes": 2,
+          "trainingJoint": 0.6678880975179329
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 72955,
+          "changes": 3,
+          "trainingJoint": 0.6721409694714946
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 91291,
+          "changes": 6,
+          "trainingJoint": 0.6756585575873495
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 91291,
+          "changes": 6,
+          "trainingJoint": 0.6756585575873495
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5951331319957489
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 72979,
+          "changes": 1,
+          "trainingJoint": 0.6054797370115224
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 2712,
+          "changes": 2,
+          "trainingJoint": 0.6144807933189891
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 75516,
+          "changes": 4,
+          "trainingJoint": 0.6215230793907099
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 33574,
+          "changes": 7,
+          "trainingJoint": 0.631311115614827
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 33574,
+          "changes": 7,
+          "trainingJoint": 0.631311115614827
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5829917959219526
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 1,
+          "trainingJoint": 0.6051275647735325
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 124,
+          "changes": 2,
+          "trainingJoint": 0.6158315879777474
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 88912,
+          "changes": 4,
+          "trainingJoint": 0.6330787696633502
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 27587,
+          "changes": 6,
+          "trainingJoint": 0.6354777562494058
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 91699,
+          "changes": 9,
+          "trainingJoint": 0.635754577514585
+        }
+      ],
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.5448713663493477,
+          "segmentAccuracy": 0.6729774021448846,
+          "joint": 0.6089243842471161
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.5598556222778546,
+          "segmentAccuracy": 0.6673372965188618,
+          "joint": 0.6135964593983582
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.5530890239589353,
+          "segmentAccuracy": 0.6382464592545931,
+          "joint": 0.5956677416067642
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.5515970927928331,
+          "segmentAccuracy": 0.6536353200712179,
+          "joint": 0.6026162064320255
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.5598348804539406,
+          "segmentAccuracy": 0.6603040635403283,
+          "joint": 0.6100694719971345
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.5601722890330487,
+          "segmentAccuracy": 0.6536353200712179,
+          "joint": 0.6069038045521333
+        }
+      ],
+      "config": {
+        "partition": 3,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.18,
+          0.68
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "source": "logical_neutral",
+        "excludeVibroFromMix": true
+      },
+      "unrestrictedCandidate": 27587,
+      "minimumCandidate": 156
+    },
+    {
+      "outer": 2,
+      "candidate": 156,
+      "budget": 0,
+      "changes": 0,
+      "minimumRequiredChanges": 0,
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.6263822348421453
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 72979,
+          "changes": 1,
+          "trainingJoint": 0.635932150491108
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 72943,
+          "changes": 2,
+          "trainingJoint": 0.6440306247680971
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 96817,
+          "changes": 4,
+          "trainingJoint": 0.645039598539487
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 27587,
+          "changes": 6,
+          "trainingJoint": 0.6545029963405713
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 27587,
+          "changes": 6,
+          "trainingJoint": 0.6545029963405713
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5643695167349961
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 168,
+          "changes": 1,
+          "trainingJoint": 0.5716572873757602
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 2712,
+          "changes": 2,
+          "trainingJoint": 0.5795554671889015
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 75516,
+          "changes": 4,
+          "trainingJoint": 0.5895775714884235
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 37205,
+          "changes": 6,
+          "trainingJoint": 0.592718087171177
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 37205,
+          "changes": 6,
+          "trainingJoint": 0.592718087171177
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5993381887399286
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 72979,
+          "changes": 1,
+          "trainingJoint": 0.6122935556818919
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 72943,
+          "changes": 2,
+          "trainingJoint": 0.6200638373258667
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 72947,
+          "changes": 3,
+          "trainingJoint": 0.6279295990855408
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 87604,
+          "changes": 7,
+          "trainingJoint": 0.6319700363691542
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 87604,
+          "changes": 7,
+          "trainingJoint": 0.6319700363691542
+        }
+      ],
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.5076635640178125,
+          "segmentAccuracy": 0.6946478828921245,
+          "joint": 0.6011557234549685
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.5162761615086389,
+          "segmentAccuracy": 0.6823074662254578,
+          "joint": 0.5992918138670483
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.5162862695605571,
+          "segmentAccuracy": 0.6564298670034688,
+          "joint": 0.586358068282013
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.5097836666505127,
+          "segmentAccuracy": 0.6376354924760373,
+          "joint": 0.573709579563275
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.5250205101194311,
+          "segmentAccuracy": 0.6343722627177335,
+          "joint": 0.5796963864185822
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.5250205101194311,
+          "segmentAccuracy": 0.6343722627177335,
+          "joint": 0.5796963864185822
+        }
+      ],
+      "config": {
+        "partition": 4,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.18,
+          0.68
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "source": "logical_neutral",
+        "excludeVibroFromMix": true
+      },
+      "unrestrictedCandidate": 91291,
+      "minimumCandidate": 156
+    },
+    {
+      "outer": 3,
+      "candidate": 89901,
+      "budget": null,
+      "changes": 10,
+      "minimumRequiredChanges": 0,
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5996813752506367
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 1,
+          "trainingJoint": 0.6381525240501901
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 124,
+          "changes": 2,
+          "trainingJoint": 0.6479658964983668
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 72947,
+          "changes": 3,
+          "trainingJoint": 0.6510292124230516
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 27587,
+          "changes": 6,
+          "trainingJoint": 0.6520542250730341
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 27587,
+          "changes": 6,
+          "trainingJoint": 0.6520542250730341
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5360261599663143
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 1,
+          "trainingJoint": 0.5631964871774348
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 2712,
+          "changes": 2,
+          "trainingJoint": 0.5743448965422049
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 2728,
+          "changes": 4,
+          "trainingJoint": 0.5864672528794357
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 34771,
+          "changes": 7,
+          "trainingJoint": 0.5908798137324294
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 34771,
+          "changes": 7,
+          "trainingJoint": 0.5908798137324294
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5855920500704245
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 72979,
+          "changes": 1,
+          "trainingJoint": 0.5955768348998864
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 72983,
+          "changes": 2,
+          "trainingJoint": 0.6001326092757204
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 88912,
+          "changes": 4,
+          "trainingJoint": 0.607752390668941
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 25393,
+          "changes": 8,
+          "trainingJoint": 0.6160409110781923
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 89901,
+          "changes": 10,
+          "trainingJoint": 0.6183738189614358
+        }
+      ],
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.4805905437318162,
+          "segmentAccuracy": 0.6697573475307038,
+          "joint": 0.57517394563126
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.48534031740840183,
+          "segmentAccuracy": 0.6761562011057333,
+          "joint": 0.5807482592570675
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.4759788269347617,
+          "segmentAccuracy": 0.6378915353498626,
+          "joint": 0.5569351811423122
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.4918432567567618,
+          "segmentAccuracy": 0.6718182959672957,
+          "joint": 0.5818307763620287
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.512007834043817,
+          "segmentAccuracy": 0.6678429681272,
+          "joint": 0.5899254010855085
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.5135477719084266,
+          "segmentAccuracy": 0.6678429681272,
+          "joint": 0.5906953700178132
+        }
+      ],
+      "config": {
+        "source": "logical_neutral",
+        "partition": 3,
+        "head": 0,
+        "burdenGate": 0.3,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 1.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.65,
+        "mixShare": 0.04,
+        "secondRel": 0.6,
+        "twoTagMaxShare": 0.65,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "excludeVibroFromMix": true
+      },
+      "unrestrictedCandidate": 89901,
+      "minimumCandidate": 156
+    },
+    {
+      "outer": 4,
+      "candidate": 72943,
+      "budget": 2,
+      "changes": 2,
+      "minimumRequiredChanges": 0,
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.6246970720955459
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 1,
+          "trainingJoint": 0.6624638187072478
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 72943,
+          "changes": 2,
+          "trainingJoint": 0.6685091082874255
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 72947,
+          "changes": 3,
+          "trainingJoint": 0.67232182649856
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 90267,
+          "changes": 8,
+          "trainingJoint": 0.6817332440370601
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 90267,
+          "changes": 8,
+          "trainingJoint": 0.6817332440370601
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5725864781544453
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 1,
+          "trainingJoint": 0.6013072155878478
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 1416,
+          "changes": 2,
+          "trainingJoint": 0.6118848761962371
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 74233,
+          "changes": 4,
+          "trainingJoint": 0.6204821620587657
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 83079,
+          "changes": 7,
+          "trainingJoint": 0.6265955587021206
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 83079,
+          "changes": 7,
+          "trainingJoint": 0.6265955587021206
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5789331435311584
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 72979,
+          "changes": 1,
+          "trainingJoint": 0.5925101794080567
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 72943,
+          "changes": 2,
+          "trainingJoint": 0.5987129136941393
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 19751,
+          "changes": 4,
+          "trainingJoint": 0.6032435004194685
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 27587,
+          "changes": 6,
+          "trainingJoint": 0.6079976387241399
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 27587,
+          "changes": 6,
+          "trainingJoint": 0.6079976387241399
+        }
+      ],
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.5112083575796076,
+          "segmentAccuracy": 0.6857729454870996,
+          "joint": 0.5984906515333536
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.5141537904571933,
+          "segmentAccuracy": 0.6930581529527137,
+          "joint": 0.6036059717049536
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.529714800325544,
+          "segmentAccuracy": 0.6908834381124662,
+          "joint": 0.610299119219005
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.537293781403437,
+          "segmentAccuracy": 0.6379444898759647,
+          "joint": 0.5876191356397009
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.5333761973874415,
+          "segmentAccuracy": 0.6686337704826212,
+          "joint": 0.6010049839350313
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.5333761973874415,
+          "segmentAccuracy": 0.6686337704826212,
+          "joint": 0.6010049839350313
+        }
+      ],
+      "config": {
+        "partition": 3,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 0.0,
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.18,
+          0.68
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "source": "logical_neutral",
+        "excludeVibroFromMix": true
+      },
+      "unrestrictedCandidate": 24034,
+      "minimumCandidate": 156
+    },
+    {
+      "outer": 5,
+      "candidate": 33574,
+      "budget": null,
+      "changes": 7,
+      "minimumRequiredChanges": 0,
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5451557167306091
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 1,
+          "trainingJoint": 0.578711060068791
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 124,
+          "changes": 2,
+          "trainingJoint": 0.5872247122580918
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 75509,
+          "changes": 4,
+          "trainingJoint": 0.5969553010394906
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 87604,
+          "changes": 7,
+          "trainingJoint": 0.5987890098466446
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 87604,
+          "changes": 7,
+          "trainingJoint": 0.5987890098466446
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.564838462700826
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 1,
+          "trainingJoint": 0.5951014976872677
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 1416,
+          "changes": 2,
+          "trainingJoint": 0.6139158776714684
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 1428,
+          "changes": 3,
+          "trainingJoint": 0.6155266291843378
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 72373,
+          "changes": 5,
+          "trainingJoint": 0.620254226964674
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 54070,
+          "changes": 9,
+          "trainingJoint": 0.6217393480596922
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 0,
+          "trainingJoint": 0.5838725364897155
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 72979,
+          "changes": 1,
+          "trainingJoint": 0.5987110871971413
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 72943,
+          "changes": 2,
+          "trainingJoint": 0.605931102814362
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 17352,
+          "changes": 4,
+          "trainingJoint": 0.6089799927502941
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 33574,
+          "changes": 7,
+          "trainingJoint": 0.617215554802903
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 33574,
+          "changes": 7,
+          "trainingJoint": 0.617215554802903
+        }
+      ],
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.5189619309223724,
+          "segmentAccuracy": 0.6221577495329905,
+          "joint": 0.5705598402276815
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.5317296064404563,
+          "segmentAccuracy": 0.6261797272403008,
+          "joint": 0.5789546668403786
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.5265141993964155,
+          "segmentAccuracy": 0.6152364596571341,
+          "joint": 0.5708753295267748
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.5373424851065591,
+          "segmentAccuracy": 0.5914538811434722,
+          "joint": 0.5643981831250157
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.5535246334470083,
+          "segmentAccuracy": 0.6152364596571341,
+          "joint": 0.5843805465520713
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.552507244516917,
+          "segmentAccuracy": 0.6375662479952242,
+          "joint": 0.5950367462560706
+        }
+      ],
+      "config": {
+        "source": "logical_release_40",
+        "partition": 3,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 1.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.65,
+        "mixShare": 0.04,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "excludeVibroFromMix": true
+      },
+      "unrestrictedCandidate": 33574,
+      "minimumCandidate": 156
+    }
+  ]
+}

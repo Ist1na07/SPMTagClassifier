@@ -47,4 +47,7 @@ for(const r of records7()){
 }
 fs.closeSync(fd);
 fs.writeFileSync(path.join(ROOT,'.cache/rework-schema.json'),JSON.stringify({classes:CLASSES,original:base.lab.VEC_KEYS,corrected:base.lab.VEC_KEYS,modern:modern.FEATURE_KEYS,context:CONTEXT},null,2)+'\n');
+// Later anchored/cold studies consume the complete archived experts. Generate
+// this from the real archive on a fresh checkout, not a manual cache step.
+fs.writeFileSync(path.join(ROOT,'.cache/archived-model-reference.json'),JSON.stringify(base.lab.MODEL)+'\n');
 console.log('finished',count,file);

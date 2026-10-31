@@ -1,0 +1,53 @@
+{
+  "scope": "post-selection diagnostic of already saved outer scores; analytically remove the effective training class prior; no new selection, threshold or claimed classifier improvement",
+  "variants": {
+    "legacy56": {
+      "rawPooledAP": 0.3200814697938752,
+      "priorNeutralPooledAP": 0.4015364667515487
+    },
+    "corrected56": {
+      "rawPooledAP": 0.3662863146028605,
+      "priorNeutralPooledAP": 0.3662863146028605
+    },
+    "legacy_no_tail": {
+      "rawPooledAP": 0.4010026917369202,
+      "priorNeutralPooledAP": 0.41972630436268477
+    },
+    "geometry": {
+      "rawPooledAP": 0.6046639532918838,
+      "priorNeutralPooledAP": 0.6392071878058234
+    },
+    "mechanics": {
+      "rawPooledAP": 0.5587396950176801,
+      "priorNeutralPooledAP": 0.5587396950176801
+    },
+    "legacy_plus_geometry": {
+      "rawPooledAP": 0.4478022510804076,
+      "priorNeutralPooledAP": 0.45271290065334524
+    },
+    "legacy_replaced_tail": {
+      "rawPooledAP": 0.4406394761378623,
+      "priorNeutralPooledAP": 0.4580353928967434
+    },
+    "legacy_plus_mechanics": {
+      "rawPooledAP": 0.5409717775468441,
+      "priorNeutralPooledAP": 0.5404701300534577
+    },
+    "legacy_plus_both": {
+      "rawPooledAP": 0.5841665253642125,
+      "priorNeutralPooledAP": 0.5672476096179018
+    },
+    "geometry_no_isolation": {
+      "rawPooledAP": 0.46751339405451,
+      "priorNeutralPooledAP": 0.5909410651730603
+    },
+    "geometry_no_hold": {
+      "rawPooledAP": 0.6289761146266436,
+      "priorNeutralPooledAP": 0.6996127174098327
+    },
+    "geometry_no_order": {
+      "rawPooledAP": 0.5481830476421782,
+      "priorNeutralPooledAP": 0.5808754532660879
+    }
+  }
+}

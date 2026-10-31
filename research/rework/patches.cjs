@@ -75,6 +75,24 @@ const neutralHands=patch('neutral_hands','Hand alternation excludes neutral/tied
  return r(s,'run = i + 1 < seq.length && seq[i + 1].hand !== seq[i].hand ? 2 : 1;',
   'run = i + 1 < seq.length && seq[i].hand>=0 && seq[i+1].hand>=0 && seq[i + 1].hand !== seq[i].hand ? 2 : 1;');
 });
+function releaseAt(ms){
+ if(![20,40,80].includes(ms))throw Error('Release scale must belong to the declared research grid');
+ return patch('release_isolation_'+ms,`Release isolation with ${ms} ms nearest-head tolerance`,(s,r)=>{
+  const applied=releaseIsolation.apply(s,r);
+  return ms===40?applied:r(applied,'if(Math.min(before,after)>40)indep++;',`if(Math.min(before,after)>${ms})indep++;`);
+ });
+}
+const coverage=patch('partition_coverage','Short boundary fragments remain assigned to a neighbouring native segment',(s,r)=>r(s,
+ '    for (let i = 1; i < out.length; i++) out[i].start = Math.max(out[i].start, out[i - 1].end);\n    return out;',
+ `    if(!out.length&&map.lastNote>map.firstNote){
+      out.push({start:map.firstNote,end:map.lastNote,windowRange:[0,windows.length]});
+    }
+    if(out.length){
+      out[0].start=map.firstNote;
+      for(let i=1;i<out.length;i++)out[i].start=out[i-1].end;
+      out[out.length-1].end=map.lastNote;
+    }
+    return out;`));
 module.exports={area,adjacency,heldOrder,phase,releaseIsolation,sustaining,
- transformedScale,weightedShares,neutralHands,
+ transformedScale,weightedShares,neutralHands,releaseAt,coverage,
  logical:[area,adjacency,heldOrder,phase,sustaining]};

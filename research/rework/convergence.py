@@ -78,14 +78,25 @@ def control_fit(rows,variant,config):
     base['localStage']={'bounded':local_base,'refinement':local_refinement}
     return model,data,base
 
-def refined_fit(rows,variant,config,state_path=None):
+def expanded_budget_policy(previous,current):
+    """The training stop criteria are unchanged; only the safety cap grows."""
+    return (current['maxChunks']>previous['maxChunks']and
+      {k:v for k,v in previous.items()if k not in ['id','maxChunks']}==
+      {k:v for k,v in current.items()if k not in ['id','maxChunks']})
+
+def refined_fit(rows,variant,config,state_path=None,policy=POLICY,continue_exhausted=False):
     """Keep a recoverable train-only model, not just validation predictions."""
     path=Path(state_path)if state_path else None
     identity={'variant':variant,'config':config,'trainUids':[r['uid']for r in rows]}
     if path and path.exists():
         state=torch.load(path,weights_only=True)
-        if state['identity']!=identity or state['policy']!=POLICY:
+        if state['identity']!=identity:
             raise RuntimeError('Refinement checkpoint identity/policy differs')
+        if state['policy']!=policy:
+            if not(continue_exhausted and state.get('complete')and state.get('refinement',{}).get('status')=='budget_exhausted'and expanded_budget_policy(state['policy'],policy)):
+                raise RuntimeError('Refinement checkpoint identity/policy differs')
+            state['complete']=False
+            state['base']['continuedFrom']={'policy':state['policy'],'refinement':state['refinement']}
         data=Packed(rows,variant,np.array(state['mean']),np.array(state['scale']))
         model=Model(data.x.shape[1],VARIANTS[variant][1]);model.load_state_dict(state['state'])
         if variant in ['frozen_prior','strong_only_prior','copied_prior']:
@@ -99,7 +110,7 @@ def refined_fit(rows,variant,config,state_path=None):
     def save(model,history,complete=False,result=None):
         if path is None:return
         path.parent.mkdir(parents=True,exist_ok=True)
-        value={'identity':identity,'policy':POLICY,'state':model.state_dict(),'restarts':restarts,
+        value={'identity':identity,'policy':policy,'state':model.state_dict(),'restarts':restarts,
                'mean':data.mean.tolist(),'scale':data.scale.tolist(),'base':base,
                'complete':complete,'refinement':result,'lastChunkHistory':history}
         temporary=path.with_suffix('.tmp');torch.save(value,temporary);temporary.replace(path)
@@ -107,7 +118,7 @@ def refined_fit(rows,variant,config,state_path=None):
     # Record that event; exact uninterrupted evidence remains separately intact.
     restarts=state.get('restarts',0)+(1 if state else 0)
     save(model,[])
-    result=polish(model,data,config,checkpoint=lambda m,h:save(m,h))
+    result=polish(model,data,config,policy=policy,checkpoint=lambda m,h:save(m,h))
     result['checkpointRestarts']=restarts
     save(model,result['chunks'],True,result)
     return model,data,{**base,'refinement':result,'loss':result['loss'],'gradientMax':result['gradientMax']}

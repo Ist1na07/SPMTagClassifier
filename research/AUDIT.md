@@ -1,5 +1,7 @@
 # Algorithm audit
 
+This is the v1.2.0 audit record. Temperature selection, independent whole-map heads and projected 6K fusion below describe that historical implementation. Current corrections, adoption decisions and complete joint comparisons are in [the rework conclusions](rework/CONCLUSIONS.md).
+
 ## Confirmed defects in the extracted baseline
 
 1. **LN area double counting.** `computeWindowFeatures` first collects holds overlapping a window from heads, then adds tails of holds starting before that window again. A long hold crossing the start boundary can therefore contribute twice. The new engine integrates the union of clipped intervals once per column. It also unions overlapping malformed holds so physical occupancy is bounded by one finger per key.

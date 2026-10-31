@@ -1,0 +1,12 @@
+{
+  "scope": "actual complete inner-training fold, shared full53 with manual annotations and nonzero gate; recorded baseline producing code vs runtime-only guard repair",
+  "records": 878,
+  "windows": 68786,
+  "packedInputsBitwiseEqual": true,
+  "scalarObjectiveBitwiseEqual": true,
+  "gradientBitwiseEqual": true,
+  "oldPackingSeconds": 5.610609600000316,
+  "newPackingSeconds": 0.6601602000009734,
+  "validColdFitReuse": "same scalers, tensors, loss and optimizer; no refit or retuning required for these existing coefficients",
+  "guardChange": "only active-window validation is vectorized; atomic file publication does not affect numerical fitting"
+}

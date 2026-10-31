@@ -1,0 +1,94 @@
+{
+  "legacy56": {
+    "macroF1": 0.6953125,
+    "releaseF1": 0.59375,
+    "precision": 0.5135135135135135,
+    "recall": 0.7037037037037037,
+    "averagePrecision": 0.32218955588039155
+  },
+  "corrected56": {
+    "macroF1": 0.6484375,
+    "releaseF1": 0.53125,
+    "precision": 0.4594594594594595,
+    "recall": 0.6296296296296297,
+    "averagePrecision": 0.362813719369909
+  },
+  "legacy_no_tail": {
+    "macroF1": 0.6606060606060606,
+    "releaseF1": 0.5333333333333333,
+    "precision": 0.48484848484848486,
+    "recall": 0.5925925925925926,
+    "averagePrecision": 0.40775195301026146
+  },
+  "geometry": {
+    "macroF1": 0.6974789915966386,
+    "releaseF1": 0.5714285714285714,
+    "precision": 0.5517241379310345,
+    "recall": 0.5925925925925926,
+    "averagePrecision": 0.6018817413278803
+  },
+  "mechanics": {
+    "macroF1": 0.6814863968148639,
+    "releaseF1": 0.5454545454545454,
+    "precision": 0.5357142857142857,
+    "recall": 0.5555555555555556,
+    "averagePrecision": 0.5670228536843811
+  },
+  "legacy_plus_geometry": {
+    "macroF1": 0.6426799007444168,
+    "releaseF1": 0.5161290322580645,
+    "precision": 0.45714285714285713,
+    "recall": 0.5925925925925926,
+    "averagePrecision": 0.4290032385727375
+  },
+  "legacy_replaced_tail": {
+    "macroF1": 0.657438169066076,
+    "releaseF1": 0.5396825396825397,
+    "precision": 0.4722222222222222,
+    "recall": 0.6296296296296297,
+    "averagePrecision": 0.4330164235172361
+  },
+  "legacy_plus_mechanics": {
+    "macroF1": 0.700285054974888,
+    "releaseF1": 0.5660377358490566,
+    "precision": 0.5769230769230769,
+    "recall": 0.5555555555555556,
+    "averagePrecision": 0.5354375287138285
+  },
+  "legacy_plus_both": {
+    "macroF1": 0.6756350894756601,
+    "releaseF1": 0.5573770491803278,
+    "precision": 0.5,
+    "recall": 0.6296296296296297,
+    "averagePrecision": 0.5324616873334455
+  },
+  "geometry_no_isolation": {
+    "macroF1": 0.633813215208564,
+    "releaseF1": 0.5079365079365079,
+    "precision": 0.4444444444444444,
+    "recall": 0.5925925925925926,
+    "averagePrecision": 0.4878588496449646
+  },
+  "geometry_no_hold": {
+    "macroF1": 0.6881091617933723,
+    "releaseF1": 0.5614035087719298,
+    "precision": 0.5333333333333333,
+    "recall": 0.5925925925925926,
+    "averagePrecision": 0.5822479844464725
+  },
+  "geometry_no_order": {
+    "macroF1": 0.6536796536796536,
+    "releaseF1": 0.5454545454545454,
+    "precision": 0.46153846153846156,
+    "recall": 0.6666666666666666,
+    "averagePrecision": 0.5100878095469401
+  },
+  "historical_fixed": {
+    "macroF1": 0.876694733837591,
+    "releaseF1": 0.8163265306122449,
+    "precision": 0.9090909090909091,
+    "recall": 0.7407407407407407,
+    "averagePrecision": null,
+    "scoreKind": "hard overall decision only; not a continuous ranking score"
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "selectionUsesOuterLabels": false,
+  "outerReportsWrittenAfterSelections": true,
+  "selections": [
+    {
+      "outer": 0,
+      "candidate": 15565,
+      "config": {
+        "source": "metric_none_5",
+        "partition": 3,
+        "head": 0,
+        "burdenGate": 0.3,
+        "smoothing": "coherent",
+        "mode": "soft",
+        "effortPower": 0.0,
+        "confidencePower": 0.0,
+        "dominantShare": 0.4,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.1,
+        "minimumDiversity": 0.1,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.6058249030901678,
+        "mapMacroF1": 0.5271724243724725,
+        "segmentChartAccuracy": 0.6844773818078631
+      }
+    },
+    {
+      "outer": 1,
+      "candidate": 16005,
+      "config": {
+        "source": "metric_none_20",
+        "partition": 3,
+        "head": 4,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "soft",
+        "effortPower": 0.0,
+        "confidencePower": 0.0,
+        "dominantShare": 0.65,
+        "mixShare": 0.12,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.1,
+        "minimumDiversity": 0.1,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.6259408795320949,
+        "mapMacroF1": 0.5462548529648553,
+        "segmentChartAccuracy": 0.7056269060993344
+      }
+    },
+    {
+      "outer": 2,
+      "candidate": 15565,
+      "config": {
+        "source": "metric_none_5",
+        "partition": 3,
+        "head": 0,
+        "burdenGate": 0.3,
+        "smoothing": "coherent",
+        "mode": "soft",
+        "effortPower": 0.0,
+        "confidencePower": 0.0,
+        "dominantShare": 0.4,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.1,
+        "minimumDiversity": 0.1,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.6066534382878834,
+        "mapMacroF1": 0.5281991389631656,
+        "segmentChartAccuracy": 0.6851077376126014
+      }
+    },
+    {
+      "outer": 3,
+      "candidate": 15565,
+      "config": {
+        "source": "metric_none_5",
+        "partition": 3,
+        "head": 0,
+        "burdenGate": 0.3,
+        "smoothing": "coherent",
+        "mode": "soft",
+        "effortPower": 0.0,
+        "confidencePower": 0.0,
+        "dominantShare": 0.4,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.1,
+        "minimumDiversity": 0.1,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.6040534076934806,
+        "mapMacroF1": 0.4923817256874501,
+        "segmentChartAccuracy": 0.7157250896995111
+      }
+    },
+    {
+      "outer": 4,
+      "candidate": 7197,
+      "config": {
+        "source": "full_20",
+        "partition": 3,
+        "head": 4,
+        "burdenGate": 0.15,
+        "smoothing": "coherent",
+        "mode": "soft",
+        "effortPower": 0.0,
+        "confidencePower": 0.0,
+        "dominantShare": 0.4,
+        "mixShare": 0.07,
+        "secondRel": 0.9,
+        "twoTagMaxShare": 0.45,
+        "familyThresholds": [
+          0.18,
+          0.68
+        ],
+        "minEvidence": 0.1,
+        "minimumDiversity": 0.1,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.6171906282615555,
+        "mapMacroF1": 0.5313549491212686,
+        "segmentChartAccuracy": 0.7030263074018424
+      }
+    },
+    {
+      "outer": 5,
+      "candidate": 14999,
+      "config": {
+        "source": "metric_40_5",
+        "partition": 3,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "soft",
+        "effortPower": 1.0,
+        "confidencePower": 0.0,
+        "dominantShare": 0.4,
+        "mixShare": 0.07,
+        "secondRel": 0.6,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.1,
+        "minimumDiversity": 0.1,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.5952285763837131,
+        "mapMacroF1": 0.5252106735684059,
+        "segmentChartAccuracy": 0.6652464791990201
+      }
+    }
+  ]
+}

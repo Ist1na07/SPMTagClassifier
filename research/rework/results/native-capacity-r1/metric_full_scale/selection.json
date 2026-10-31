@@ -1,0 +1,1169 @@
+{
+  "selectionUsesOuterLabels": false,
+  "selections": [
+    {
+      "outer": 0,
+      "candidate": 156,
+      "budget": 0,
+      "minimumRequiredChanges": 1,
+      "changes": 1,
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.5171522992479713,
+          "segmentAccuracy": 0.6600788009086169,
+          "joint": 0.5886155500782941
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.5112023093066638,
+          "segmentAccuracy": 0.6540991101186961,
+          "joint": 0.58265070971268
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.5239252503701812,
+          "segmentAccuracy": 0.6224841679686823,
+          "joint": 0.5732047091694318
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.5221121072500249,
+          "segmentAccuracy": 0.6224841679686823,
+          "joint": 0.5722981376093537
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.5393561186755857,
+          "segmentAccuracy": 0.6339829809750299,
+          "joint": 0.5866695498253078
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.5393561186755857,
+          "segmentAccuracy": 0.6339829809750299,
+          "joint": 0.5866695498253078
+        }
+      ],
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5961157853039147
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 2,
+          "trainJoint": 0.6146325027057065
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 132,
+          "changes": 3,
+          "trainJoint": 0.6201536126751519
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 7144,
+          "changes": 5,
+          "trainJoint": 0.6240698858421636
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 13276,
+          "changes": 8,
+          "trainJoint": 0.6325824823534443
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 13276,
+          "changes": 8,
+          "trainJoint": 0.6325824823534443
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5703724056998134
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 804,
+          "changes": 2,
+          "trainJoint": 0.5893859710387643
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 792,
+          "changes": 3,
+          "trainJoint": 0.5903234703754613
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 792,
+          "changes": 3,
+          "trainJoint": 0.5903234703754613
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 5973,
+          "changes": 8,
+          "trainJoint": 0.5975966288539772
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 5973,
+          "changes": 8,
+          "trainJoint": 0.5975966288539772
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5835627250234696
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 2,
+          "trainJoint": 0.5951316612007347
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 124,
+          "changes": 3,
+          "trainJoint": 0.6019264375343202
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 124,
+          "changes": 3,
+          "trainJoint": 0.6019264375343202
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 2649,
+          "changes": 8,
+          "trainJoint": 0.6097921474416781
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 2649,
+          "changes": 8,
+          "trainJoint": 0.6097921474416781
+        }
+      ],
+      "config": {
+        "partition": 4,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.18,
+          0.68
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "source": "logical_neutral_scale",
+        "excludeVibroFromMix": true
+      }
+    },
+    {
+      "outer": 1,
+      "candidate": 156,
+      "budget": 0,
+      "minimumRequiredChanges": 1,
+      "changes": 1,
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.5565632681077339,
+          "segmentAccuracy": 0.6549948511840992,
+          "joint": 0.6057790596459165
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.5533461573367453,
+          "segmentAccuracy": 0.6490151603941783,
+          "joint": 0.6011806588654618
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.5546546245966193,
+          "segmentAccuracy": 0.6297406349108312,
+          "joint": 0.5921976297537253
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.5458420521372427,
+          "segmentAccuracy": 0.6618390664872602,
+          "joint": 0.6038405593122514
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.5496312787946719,
+          "segmentAccuracy": 0.6597695410284422,
+          "joint": 0.604700409911557
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.5496312787946719,
+          "segmentAccuracy": 0.6597695410284422,
+          "joint": 0.604700409911557
+        }
+      ],
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.6319492423512072
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 2,
+          "trainJoint": 0.6501966418021616
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 132,
+          "changes": 3,
+          "trainJoint": 0.6564572608473118
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 132,
+          "changes": 3,
+          "trainJoint": 0.6564572608473118
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 132,
+          "changes": 3,
+          "trainJoint": 0.6564572608473118
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 132,
+          "changes": 3,
+          "trainJoint": 0.6564572608473118
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5938438576191063
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 804,
+          "changes": 2,
+          "trainJoint": 0.6101961583216586
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 8895,
+          "changes": 3,
+          "trainJoint": 0.6157354422117071
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 780,
+          "changes": 4,
+          "trainJoint": 0.6198272287282623
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 5973,
+          "changes": 8,
+          "trainJoint": 0.6199511844187957
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 5973,
+          "changes": 8,
+          "trainJoint": 0.6199511844187957
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5794966782766671
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 2,
+          "trainJoint": 0.5934562944156413
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 124,
+          "changes": 3,
+          "trainJoint": 0.6053688869009118
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 6258,
+          "changes": 5,
+          "trainJoint": 0.6091839136860413
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 10913,
+          "changes": 9,
+          "trainJoint": 0.6198345861693184
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 10913,
+          "changes": 9,
+          "trainJoint": 0.6198345861693184
+        }
+      ],
+      "config": {
+        "partition": 4,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.18,
+          0.68
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "source": "logical_neutral_scale",
+        "excludeVibroFromMix": true
+      }
+    },
+    {
+      "outer": 2,
+      "candidate": 156,
+      "budget": 0,
+      "minimumRequiredChanges": 1,
+      "changes": 1,
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.5155052594073078,
+          "segmentAccuracy": 0.6890108016158655,
+          "joint": 0.6022580305115867
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.5073871278194312,
+          "segmentAccuracy": 0.6560082520092642,
+          "joint": 0.5816976899143477
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.500646815780452,
+          "segmentAccuracy": 0.6436678353425974,
+          "joint": 0.5721573255615247
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.5156180850039372,
+          "segmentAccuracy": 0.6436678353425974,
+          "joint": 0.5796429601732673
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.5225290587285263,
+          "segmentAccuracy": 0.6218687499557911,
+          "joint": 0.5721989043421587
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.5225290587285263,
+          "segmentAccuracy": 0.6218687499557911,
+          "joint": 0.5721989043421587
+        }
+      ],
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.6257067766461646
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 2,
+          "trainJoint": 0.6290868147199757
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 13559,
+          "changes": 3,
+          "trainJoint": 0.633277823380942
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 4890,
+          "changes": 5,
+          "trainJoint": 0.6420946998000627
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 1583,
+          "changes": 7,
+          "trainJoint": 0.650591111922866
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 1583,
+          "changes": 7,
+          "trainJoint": 0.650591111922866
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5555776825718295
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 804,
+          "changes": 2,
+          "trainJoint": 0.578624722355062
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 816,
+          "changes": 3,
+          "trainJoint": 0.5839404222217508
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 780,
+          "changes": 4,
+          "trainJoint": 0.5840949125606367
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 4227,
+          "changes": 8,
+          "trainJoint": 0.5923749416223185
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 4227,
+          "changes": 8,
+          "trainJoint": 0.5923749416223185
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.6077232872845149
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 160,
+          "changes": 2,
+          "trainJoint": 0.6169447701328425
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 124,
+          "changes": 3,
+          "trainJoint": 0.6180195514053024
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 13361,
+          "changes": 5,
+          "trainJoint": 0.6241233482710467
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 13361,
+          "changes": 5,
+          "trainJoint": 0.6241233482710467
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 13361,
+          "changes": 5,
+          "trainJoint": 0.6241233482710467
+        }
+      ],
+      "config": {
+        "partition": 4,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.18,
+          0.68
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "source": "logical_neutral_scale",
+        "excludeVibroFromMix": true
+      }
+    },
+    {
+      "outer": 3,
+      "candidate": 156,
+      "budget": 0,
+      "minimumRequiredChanges": 1,
+      "changes": 1,
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.4845975514010972,
+          "segmentAccuracy": 0.6743657101728925,
+          "joint": 0.5794816307869949
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.47807639933325274,
+          "segmentAccuracy": 0.6560384680393458,
+          "joint": 0.5670574336862992
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.47948779299635774,
+          "segmentAccuracy": 0.6649942155526918,
+          "joint": 0.5722410042745247
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.48257091400070307,
+          "segmentAccuracy": 0.6556992155526918,
+          "joint": 0.5691350647766975
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.49479221927792194,
+          "segmentAccuracy": 0.6641665921427203,
+          "joint": 0.5794794057103212
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.49479221927792194,
+          "segmentAccuracy": 0.6641665921427203,
+          "joint": 0.5794794057103212
+        }
+      ],
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.6117208985050897
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 2,
+          "trainJoint": 0.6257602106328126
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 124,
+          "changes": 3,
+          "trainJoint": 0.6345904682529406
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 124,
+          "changes": 3,
+          "trainJoint": 0.6345904682529406
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 5979,
+          "changes": 8,
+          "trainJoint": 0.6397182730705431
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 5979,
+          "changes": 8,
+          "trainJoint": 0.6397182730705431
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5378633903446363
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 804,
+          "changes": 2,
+          "trainJoint": 0.5555114452748691
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 768,
+          "changes": 3,
+          "trainJoint": 0.5632834604209895
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 784,
+          "changes": 5,
+          "trainJoint": 0.5744151222226321
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 12843,
+          "changes": 9,
+          "trainJoint": 0.580930153711648
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 12843,
+          "changes": 9,
+          "trainJoint": 0.580930153711648
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5859565410985481
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 160,
+          "changes": 2,
+          "trainJoint": 0.5913701015434778
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 4802,
+          "changes": 3,
+          "trainJoint": 0.5920429196903443
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 13361,
+          "changes": 5,
+          "trainJoint": 0.6031961264183576
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 14421,
+          "changes": 7,
+          "trainJoint": 0.6083508714596517
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 14421,
+          "changes": 7,
+          "trainJoint": 0.6083508714596517
+        }
+      ],
+      "config": {
+        "partition": 4,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.18,
+          0.68
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "source": "logical_neutral_scale",
+        "excludeVibroFromMix": true
+      }
+    },
+    {
+      "outer": 4,
+      "candidate": 9461,
+      "budget": 8,
+      "minimumRequiredChanges": 1,
+      "changes": 7,
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.52072402821525,
+          "segmentAccuracy": 0.6914959227961018,
+          "joint": 0.6061099755056759
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.5182404189653984,
+          "segmentAccuracy": 0.6960951408063943,
+          "joint": 0.6071677798858963
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.526791954340708,
+          "segmentAccuracy": 0.6837547241397278,
+          "joint": 0.6052733392402179
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.5336248561478634,
+          "segmentAccuracy": 0.6652354186620715,
+          "joint": 0.5994301374049674
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.5448171182430892,
+          "segmentAccuracy": 0.6844322701336906,
+          "joint": 0.6146246941883899
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.5448171182430892,
+          "segmentAccuracy": 0.6844322701336906,
+          "joint": 0.6146246941883899
+        }
+      ],
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.6402037938469244
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 2,
+          "trainJoint": 0.6537403490754612
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 120,
+          "changes": 2,
+          "trainJoint": 0.6537403490754612
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 1683,
+          "changes": 5,
+          "trainJoint": 0.6572901082107279
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 9461,
+          "changes": 7,
+          "trainJoint": 0.6687810847334481
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 9461,
+          "changes": 7,
+          "trainJoint": 0.6687810847334481
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5791192522307027
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 2,
+          "trainJoint": 0.5987937328639639
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 132,
+          "changes": 3,
+          "trainJoint": 0.6094211552588487
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 780,
+          "changes": 4,
+          "trainJoint": 0.6126549936008026
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 5005,
+          "changes": 6,
+          "trainJoint": 0.6147746105663987
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 5005,
+          "changes": 6,
+          "trainJoint": 0.6147746105663987
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5800371761688599
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 480,
+          "changes": 2,
+          "trainJoint": 0.5926505119193143
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 492,
+          "changes": 3,
+          "trainJoint": 0.5981378983600265
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 492,
+          "changes": 3,
+          "trainJoint": 0.5981378983600265
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 1583,
+          "changes": 7,
+          "trainJoint": 0.6023065172263888
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 1583,
+          "changes": 7,
+          "trainJoint": 0.6023065172263888
+        }
+      ],
+      "config": {
+        "source": "logical_neutral_scale",
+        "partition": 3,
+        "head": 0,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.65,
+        "mixShare": 0.07,
+        "secondRel": 0.9,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "excludeVibroFromMix": true
+      }
+    },
+    {
+      "outer": 5,
+      "candidate": 156,
+      "budget": 0,
+      "minimumRequiredChanges": 1,
+      "changes": 1,
+      "innerBudgetScores": [
+        {
+          "budget": 0,
+          "mapMacroF1": 0.529830407559899,
+          "segmentAccuracy": 0.6310677525762527,
+          "joint": 0.5804490800680758
+        },
+        {
+          "budget": 1,
+          "mapMacroF1": 0.5302458116769477,
+          "segmentAccuracy": 0.6085238872658545,
+          "joint": 0.5693848494714011
+        },
+        {
+          "budget": 2,
+          "mapMacroF1": 0.5310015299923074,
+          "segmentAccuracy": 0.5857139986693776,
+          "joint": 0.5583577643308425
+        },
+        {
+          "budget": 4,
+          "mapMacroF1": 0.5260184838067845,
+          "segmentAccuracy": 0.5785394153360442,
+          "joint": 0.5522789495714144
+        },
+        {
+          "budget": 8,
+          "mapMacroF1": 0.5293682070512911,
+          "segmentAccuracy": 0.608282986756558,
+          "joint": 0.5688255969039245
+        },
+        {
+          "budget": null,
+          "mapMacroF1": 0.5114277098542398,
+          "segmentAccuracy": 0.6086106063641538,
+          "joint": 0.5600191581091968
+        }
+      ],
+      "innerPolicyChoices": [
+        {
+          "inner": 0,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5604690139134023
+        },
+        {
+          "inner": 0,
+          "budget": 1,
+          "candidate": 120,
+          "changes": 2,
+          "trainJoint": 0.5740777850741638
+        },
+        {
+          "inner": 0,
+          "budget": 2,
+          "candidate": 124,
+          "changes": 3,
+          "trainJoint": 0.5870705482545868
+        },
+        {
+          "inner": 0,
+          "budget": 4,
+          "candidate": 124,
+          "changes": 3,
+          "trainJoint": 0.5870705482545868
+        },
+        {
+          "inner": 0,
+          "budget": 8,
+          "candidate": 4795,
+          "changes": 9,
+          "trainJoint": 0.5916618097144546
+        },
+        {
+          "inner": 0,
+          "budget": null,
+          "candidate": 2817,
+          "changes": 10,
+          "trainJoint": 0.5932344447104521
+        },
+        {
+          "inner": 1,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5707985002876779
+        },
+        {
+          "inner": 1,
+          "budget": 1,
+          "candidate": 480,
+          "changes": 2,
+          "trainJoint": 0.5898742971793298
+        },
+        {
+          "inner": 1,
+          "budget": 2,
+          "candidate": 444,
+          "changes": 3,
+          "trainJoint": 0.6023101772292988
+        },
+        {
+          "inner": 1,
+          "budget": 4,
+          "candidate": 456,
+          "changes": 4,
+          "trainJoint": 0.6051556048990241
+        },
+        {
+          "inner": 1,
+          "budget": 8,
+          "candidate": 13276,
+          "changes": 8,
+          "trainJoint": 0.6122517588141959
+        },
+        {
+          "inner": 1,
+          "budget": null,
+          "candidate": 5919,
+          "changes": 10,
+          "trainJoint": 0.6134598076571391
+        },
+        {
+          "inner": 2,
+          "budget": 0,
+          "candidate": 156,
+          "changes": 1,
+          "trainJoint": 0.5892928374517319
+        },
+        {
+          "inner": 2,
+          "budget": 1,
+          "candidate": 804,
+          "changes": 2,
+          "trainJoint": 0.5965312481223932
+        },
+        {
+          "inner": 2,
+          "budget": 2,
+          "candidate": 8895,
+          "changes": 3,
+          "trainJoint": 0.6028762361209803
+        },
+        {
+          "inner": 2,
+          "budget": 4,
+          "candidate": 4890,
+          "changes": 5,
+          "trainJoint": 0.6068264476525006
+        },
+        {
+          "inner": 2,
+          "budget": 8,
+          "candidate": 10913,
+          "changes": 9,
+          "trainJoint": 0.6142391377134839
+        },
+        {
+          "inner": 2,
+          "budget": null,
+          "candidate": 10913,
+          "changes": 9,
+          "trainJoint": 0.6142391377134839
+        }
+      ],
+      "config": {
+        "partition": 4,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.18,
+          0.68
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "source": "logical_neutral_scale",
+        "excludeVibroFromMix": true
+      }
+    }
+  ]
+}

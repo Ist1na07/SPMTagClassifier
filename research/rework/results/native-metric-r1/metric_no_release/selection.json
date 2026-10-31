@@ -1,0 +1,186 @@
+{
+  "selectionUsesOuterLabels": false,
+  "outerReportsWrittenAfterSelections": true,
+  "selections": [
+    {
+      "outer": 0,
+      "candidate": 7750,
+      "config": {
+        "source": "metric_none_20",
+        "partition": 3,
+        "head": 0,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 0.0,
+        "dominantShare": 0.52,
+        "mixShare": 0.04,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.45,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.625495782120423,
+        "mapMacroF1": 0.5459162738272193,
+        "segmentChartAccuracy": 0.7050752904136268
+      }
+    },
+    {
+      "outer": 1,
+      "candidate": 6308,
+      "config": {
+        "source": "metric_none_20",
+        "partition": 3,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 1.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.65,
+        "mixShare": 0.04,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.6426017167092752,
+        "mapMacroF1": 0.5795765273192162,
+        "segmentChartAccuracy": 0.7056269060993344
+      }
+    },
+    {
+      "outer": 2,
+      "candidate": 2995,
+      "config": {
+        "source": "metric_none_20",
+        "partition": 3,
+        "head": 2,
+        "burdenGate": 0.15,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 0.0,
+        "dominantShare": 0.52,
+        "mixShare": 0.04,
+        "secondRel": 0.9,
+        "twoTagMaxShare": 0.45,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.6239353101540983,
+        "mapMacroF1": 0.5431681706234306,
+        "segmentChartAccuracy": 0.7047024496847661
+      }
+    },
+    {
+      "outer": 3,
+      "candidate": 13208,
+      "config": {
+        "source": "logical_neutral",
+        "partition": 3,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 1.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.65,
+        "mixShare": 0.04,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.6186379901037119,
+        "mapMacroF1": 0.5302384351509243,
+        "segmentChartAccuracy": 0.7070375450564995
+      }
+    },
+    {
+      "outer": 4,
+      "candidate": 9461,
+      "config": {
+        "source": "logical_neutral",
+        "partition": 3,
+        "head": 0,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 0.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.65,
+        "mixShare": 0.07,
+        "secondRel": 0.9,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.6389145980639291,
+        "mapMacroF1": 0.5540817625684884,
+        "segmentChartAccuracy": 0.7237474335593699
+      }
+    },
+    {
+      "outer": 5,
+      "candidate": 13208,
+      "config": {
+        "source": "logical_neutral",
+        "partition": 3,
+        "head": 2,
+        "burdenGate": 0.0,
+        "smoothing": "coherent",
+        "mode": "normalized",
+        "effortPower": 1.0,
+        "confidencePower": 1.0,
+        "dominantShare": 0.65,
+        "mixShare": 0.04,
+        "secondRel": 0.75,
+        "twoTagMaxShare": 0.55,
+        "familyThresholds": [
+          0.3,
+          0.8
+        ],
+        "minEvidence": 0.25,
+        "minimumDiversity": 0.0,
+        "excludeVibroFromMix": true
+      },
+      "inner": {
+        "joint": 0.6087945436031368,
+        "mapMacroF1": 0.5605280160152067,
+        "segmentChartAccuracy": 0.6570610711910669
+      }
+    }
+  ]
+}

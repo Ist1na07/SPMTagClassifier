@@ -1,0 +1,17 @@
+{
+  "scope": "none arm vs original complete raw study, every effective inner configuration and selected outer output",
+  "expertVariants": 16,
+  "innerFoldJobs": 288,
+  "innerConfigurations": 26892,
+  "outerMapOutputs": 24944,
+  "outerRawIntervals": 12656,
+  "equivalence": "exact inner hard predictions/accuracies, selected configs/models and outer labels/intervals; outer numeric scores/weights use1e-12 tolerance",
+  "maximumAbsoluteErrors": {
+    "composition": 0.0,
+    "probability": 8.881784197001252e-16,
+    "aggregationWeight": 1.5543122344752192e-15
+  },
+  "nonBitwiseNumericFields": 3039,
+  "numericToleranceReason": "actual batching-roundoff.json reproduction proves separate vs combined test GEMM batching; initial bitwise-only outer check failed and is retained in the strict-check log",
+  "newFits": 0
+}

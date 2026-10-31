@@ -1,0 +1,1407 @@
+{
+  "scope": "unchanged raw auxiliary-trained expert plus deterministic sufficient physical templates; all expert configs reselected on final supported outputs",
+  "mapLabelMeaning": "weak source bucket or determinate whole impression; not precise per-window truth",
+  "metrics": {
+    "none": {
+      "4": {
+        "macroF1": 0.9436256037517949,
+        "accuracy": 0.9444866920152091,
+        "records": 1315,
+        "macroF1_95": [
+          0.9214010336005543,
+          0.958931479820936
+        ],
+        "songBalancedMacroF1": 0.9248168651205952,
+        "groups": 609,
+        "perClass": {
+          "jack": {
+            "precision": 0.9847715736040609,
+            "recall": 0.9822784810126582,
+            "f1-score": 0.9835234474017744,
+            "support": 395.0
+          },
+          "chordstream": {
+            "precision": 0.9423728813559322,
+            "recall": 0.9391891891891891,
+            "f1-score": 0.9407783417935702,
+            "support": 296.0
+          },
+          "speed": {
+            "precision": 0.9359430604982206,
+            "recall": 0.9228070175438596,
+            "f1-score": 0.9293286219081273,
+            "support": 285.0
+          },
+          "tech": {
+            "precision": 0.8865546218487395,
+            "recall": 0.890295358649789,
+            "f1-score": 0.888421052631579,
+            "support": 237.0
+          },
+          "ln": {
+            "precision": 0.9532710280373832,
+            "recall": 1.0,
+            "f1-score": 0.9760765550239234,
+            "support": 102.0
+          },
+          "accuracy": 0.9444866920152091,
+          "macro avg": {
+            "precision": 0.9405826330688672,
+            "recall": 0.9469140092790992,
+            "f1-score": 0.9436256037517949,
+            "support": 1315.0
+          },
+          "weighted avg": {
+            "precision": 0.9445003855018381,
+            "recall": 0.9444866920152091,
+            "f1-score": 0.9444383317296869,
+            "support": 1315.0
+          }
+        },
+        "pairedDeltaVsNone95": [
+          0.0,
+          0.0
+        ]
+      },
+      "7": {
+        "macroF1": 0.8972244753546624,
+        "accuracy": 0.934156378600823,
+        "records": 244,
+        "macroF1_95": [
+          0.789392372988039,
+          0.9561439137357791
+        ],
+        "songBalancedMacroF1": 0.9123650524712339,
+        "groups": 116,
+        "perClass": {
+          "jack": {
+            "precision": 0.8,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.8615384615384616,
+            "support": 30.0
+          },
+          "chordstream": {
+            "precision": 0.8285714285714286,
+            "recall": 0.7631578947368421,
+            "f1-score": 0.7945205479452054,
+            "support": 38.0
+          },
+          "speed": {
+            "precision": 0.9473684210526315,
+            "recall": 0.9,
+            "f1-score": 0.9230769230769231,
+            "support": 20.0
+          },
+          "tech": {
+            "precision": 1.0,
+            "recall": 0.8421052631578947,
+            "f1-score": 0.9142857142857143,
+            "support": 19.0
+          },
+          "ln": {
+            "precision": 0.9855072463768116,
+            "recall": 1.0,
+            "f1-score": 0.9927007299270073,
+            "support": 136.0
+          },
+          "accuracy": 0.934156378600823,
+          "macro avg": {
+            "precision": 0.9122894192001743,
+            "recall": 0.887719298245614,
+            "f1-score": 0.8972244753546624,
+            "support": 243.0
+          },
+          "weighted avg": {
+            "precision": 0.9360578938848284,
+            "recall": 0.934156378600823,
+            "f1-score": 0.9336551480292662,
+            "support": 243.0
+          }
+        },
+        "pairedDeltaVsNone95": [
+          0.0,
+          0.0
+        ]
+      },
+      "segment": {
+        "chartMeanAccuracy": 0.6380081481170883,
+        "durationAccuracy": 0.6579962455802186,
+        "chartMeanAccuracy95": [
+          0.4912141497625514,
+          0.765348966451558
+        ],
+        "charts": [
+          {
+            "uid": "manual/AA",
+            "accuracy": 0.6952380952380952,
+            "correctMs": 109500.0,
+            "labelledMs": 157500.0,
+            "largestErrors": [
+              [
+                "break -> chordstream",
+                11300.0
+              ],
+              [
+                "break -> ln",
+                10400.0
+              ],
+              [
+                "ln -> tech",
+                9200.0
+              ],
+              [
+                "chordstream -> ln",
+                4700.0
+              ],
+              [
+                "tech -> speed",
+                3500.0
+              ],
+              [
+                "break -> speed",
+                2500.0
+              ],
+              [
+                "ln -> jack",
+                2000.0
+              ],
+              [
+                "tech -> chordstream",
+                1600.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/AH",
+            "accuracy": 0.8392875,
+            "correctMs": 201429.0,
+            "labelledMs": 240000.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                38571.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/BE",
+            "accuracy": 0.36525078781512604,
+            "correctMs": 55635.0,
+            "labelledMs": 152320.0,
+            "largestErrors": [
+              [
+                "chordstream -> speed",
+                30500.0
+              ],
+              [
+                "break -> tech",
+                18800.0
+              ],
+              [
+                "break -> chordstream",
+                17700.0
+              ],
+              [
+                "break -> speed",
+                16085.0
+              ],
+              [
+                "chordstream -> tech",
+                5200.0
+              ],
+              [
+                "break -> jack",
+                4000.0
+              ],
+              [
+                "chordstream -> jack",
+                2000.0
+              ],
+              [
+                "jack -> tech",
+                1600.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/DS",
+            "accuracy": 0.6894966017356264,
+            "correctMs": 248447.0,
+            "labelledMs": 360331.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                68101.0
+              ],
+              [
+                "break -> chordstream",
+                12528.0
+              ],
+              [
+                "jack -> chordstream",
+                5012.0
+              ],
+              [
+                "jack -> ln",
+                4108.0
+              ],
+              [
+                "speed -> ln",
+                3729.0
+              ],
+              [
+                "tech -> chordstream",
+                3722.0
+              ],
+              [
+                "ln -> chordstream",
+                3615.0
+              ],
+              [
+                "speed|tech -> jack",
+                2448.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/EE",
+            "accuracy": 0.7775760219223804,
+            "correctMs": 164011.0,
+            "labelledMs": 210926.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                38915.0
+              ],
+              [
+                "break -> chordstream",
+                4000.0
+              ],
+              [
+                "ln -> speed",
+                2000.0
+              ],
+              [
+                "break -> jack",
+                2000.0
+              ],
+              [
+                "ln -> chordstream",
+                0.0
+              ],
+              [
+                "ln -> jack",
+                0.0
+              ],
+              [
+                "break -> speed",
+                0.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/RJ",
+            "accuracy": 0.46119988199130163,
+            "correctMs": 96923.0,
+            "labelledMs": 210154.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                93385.0
+              ],
+              [
+                "break -> jack",
+                9077.0
+              ],
+              [
+                "break -> tech",
+                6000.0
+              ],
+              [
+                "chordstream -> jack",
+                2000.0
+              ],
+              [
+                "jack -> ln",
+                923.0
+              ],
+              [
+                "chordstream|jack -> ln",
+                769.0
+              ],
+              [
+                "chordstream -> ln",
+                769.0
+              ],
+              [
+                "ln -> jack",
+                308.0
+              ]
+            ]
+          }
+        ],
+        "pairedDeltaVsNone95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "jack": {
+      "4": {
+        "macroF1": 0.9436256037517949,
+        "accuracy": 0.9444866920152091,
+        "records": 1315,
+        "macroF1_95": [
+          0.9214010336005543,
+          0.958931479820936
+        ],
+        "songBalancedMacroF1": 0.9248168651205952,
+        "groups": 609,
+        "perClass": {
+          "jack": {
+            "precision": 0.9847715736040609,
+            "recall": 0.9822784810126582,
+            "f1-score": 0.9835234474017744,
+            "support": 395.0
+          },
+          "chordstream": {
+            "precision": 0.9423728813559322,
+            "recall": 0.9391891891891891,
+            "f1-score": 0.9407783417935702,
+            "support": 296.0
+          },
+          "speed": {
+            "precision": 0.9359430604982206,
+            "recall": 0.9228070175438596,
+            "f1-score": 0.9293286219081273,
+            "support": 285.0
+          },
+          "tech": {
+            "precision": 0.8865546218487395,
+            "recall": 0.890295358649789,
+            "f1-score": 0.888421052631579,
+            "support": 237.0
+          },
+          "ln": {
+            "precision": 0.9532710280373832,
+            "recall": 1.0,
+            "f1-score": 0.9760765550239234,
+            "support": 102.0
+          },
+          "accuracy": 0.9444866920152091,
+          "macro avg": {
+            "precision": 0.9405826330688672,
+            "recall": 0.9469140092790992,
+            "f1-score": 0.9436256037517949,
+            "support": 1315.0
+          },
+          "weighted avg": {
+            "precision": 0.9445003855018381,
+            "recall": 0.9444866920152091,
+            "f1-score": 0.9444383317296869,
+            "support": 1315.0
+          }
+        },
+        "pairedDeltaVsNone95": [
+          0.0,
+          0.0
+        ]
+      },
+      "7": {
+        "macroF1": 0.8972244753546624,
+        "accuracy": 0.934156378600823,
+        "records": 244,
+        "macroF1_95": [
+          0.789392372988039,
+          0.9561439137357791
+        ],
+        "songBalancedMacroF1": 0.9123650524712339,
+        "groups": 116,
+        "perClass": {
+          "jack": {
+            "precision": 0.8,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.8615384615384616,
+            "support": 30.0
+          },
+          "chordstream": {
+            "precision": 0.8285714285714286,
+            "recall": 0.7631578947368421,
+            "f1-score": 0.7945205479452054,
+            "support": 38.0
+          },
+          "speed": {
+            "precision": 0.9473684210526315,
+            "recall": 0.9,
+            "f1-score": 0.9230769230769231,
+            "support": 20.0
+          },
+          "tech": {
+            "precision": 1.0,
+            "recall": 0.8421052631578947,
+            "f1-score": 0.9142857142857143,
+            "support": 19.0
+          },
+          "ln": {
+            "precision": 0.9855072463768116,
+            "recall": 1.0,
+            "f1-score": 0.9927007299270073,
+            "support": 136.0
+          },
+          "accuracy": 0.934156378600823,
+          "macro avg": {
+            "precision": 0.9122894192001743,
+            "recall": 0.887719298245614,
+            "f1-score": 0.8972244753546624,
+            "support": 243.0
+          },
+          "weighted avg": {
+            "precision": 0.9360578938848284,
+            "recall": 0.934156378600823,
+            "f1-score": 0.9336551480292662,
+            "support": 243.0
+          }
+        },
+        "pairedDeltaVsNone95": [
+          0.0,
+          0.0
+        ]
+      },
+      "segment": {
+        "chartMeanAccuracy": 0.6380081481170883,
+        "durationAccuracy": 0.6579962455802186,
+        "chartMeanAccuracy95": [
+          0.4912141497625514,
+          0.765348966451558
+        ],
+        "charts": [
+          {
+            "uid": "manual/AA",
+            "accuracy": 0.6952380952380952,
+            "correctMs": 109500.0,
+            "labelledMs": 157500.0,
+            "largestErrors": [
+              [
+                "break -> chordstream",
+                11300.0
+              ],
+              [
+                "break -> ln",
+                10400.0
+              ],
+              [
+                "ln -> tech",
+                9200.0
+              ],
+              [
+                "chordstream -> ln",
+                4700.0
+              ],
+              [
+                "tech -> speed",
+                3500.0
+              ],
+              [
+                "break -> speed",
+                2500.0
+              ],
+              [
+                "ln -> jack",
+                2000.0
+              ],
+              [
+                "tech -> chordstream",
+                1600.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/AH",
+            "accuracy": 0.8392875,
+            "correctMs": 201429.0,
+            "labelledMs": 240000.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                38571.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/BE",
+            "accuracy": 0.36525078781512604,
+            "correctMs": 55635.0,
+            "labelledMs": 152320.0,
+            "largestErrors": [
+              [
+                "chordstream -> speed",
+                30500.0
+              ],
+              [
+                "break -> tech",
+                18800.0
+              ],
+              [
+                "break -> chordstream",
+                17700.0
+              ],
+              [
+                "break -> speed",
+                16085.0
+              ],
+              [
+                "chordstream -> tech",
+                5200.0
+              ],
+              [
+                "break -> jack",
+                4000.0
+              ],
+              [
+                "chordstream -> jack",
+                2000.0
+              ],
+              [
+                "jack -> tech",
+                1600.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/DS",
+            "accuracy": 0.6894966017356264,
+            "correctMs": 248447.0,
+            "labelledMs": 360331.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                68101.0
+              ],
+              [
+                "break -> chordstream",
+                12528.0
+              ],
+              [
+                "jack -> chordstream",
+                5012.0
+              ],
+              [
+                "jack -> ln",
+                4108.0
+              ],
+              [
+                "speed -> ln",
+                3729.0
+              ],
+              [
+                "tech -> chordstream",
+                3722.0
+              ],
+              [
+                "ln -> chordstream",
+                3615.0
+              ],
+              [
+                "speed|tech -> jack",
+                2448.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/EE",
+            "accuracy": 0.7775760219223804,
+            "correctMs": 164011.0,
+            "labelledMs": 210926.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                38915.0
+              ],
+              [
+                "break -> chordstream",
+                4000.0
+              ],
+              [
+                "ln -> speed",
+                2000.0
+              ],
+              [
+                "break -> jack",
+                2000.0
+              ],
+              [
+                "ln -> chordstream",
+                0.0
+              ],
+              [
+                "ln -> jack",
+                0.0
+              ],
+              [
+                "break -> speed",
+                0.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/RJ",
+            "accuracy": 0.46119988199130163,
+            "correctMs": 96923.0,
+            "labelledMs": 210154.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                93385.0
+              ],
+              [
+                "break -> jack",
+                9077.0
+              ],
+              [
+                "break -> tech",
+                6000.0
+              ],
+              [
+                "chordstream -> jack",
+                2000.0
+              ],
+              [
+                "jack -> ln",
+                923.0
+              ],
+              [
+                "chordstream|jack -> ln",
+                769.0
+              ],
+              [
+                "chordstream -> ln",
+                769.0
+              ],
+              [
+                "ln -> jack",
+                308.0
+              ]
+            ]
+          }
+        ],
+        "pairedDeltaVsNone95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "ln": {
+      "4": {
+        "macroF1": 0.9423369488435019,
+        "accuracy": 0.9437262357414449,
+        "records": 1315,
+        "macroF1_95": [
+          0.9205274029493661,
+          0.9576605651028647
+        ],
+        "songBalancedMacroF1": 0.9218890359015205,
+        "groups": 609,
+        "perClass": {
+          "jack": {
+            "precision": 0.9847715736040609,
+            "recall": 0.9822784810126582,
+            "f1-score": 0.9835234474017744,
+            "support": 395.0
+          },
+          "chordstream": {
+            "precision": 0.9421768707482994,
+            "recall": 0.9358108108108109,
+            "f1-score": 0.9389830508474576,
+            "support": 296.0
+          },
+          "speed": {
+            "precision": 0.9359430604982206,
+            "recall": 0.9228070175438596,
+            "f1-score": 0.9293286219081273,
+            "support": 285.0
+          },
+          "tech": {
+            "precision": 0.8865546218487395,
+            "recall": 0.890295358649789,
+            "f1-score": 0.888421052631579,
+            "support": 237.0
+          },
+          "ln": {
+            "precision": 0.9444444444444444,
+            "recall": 1.0,
+            "f1-score": 0.9714285714285714,
+            "support": 102.0
+          },
+          "accuracy": 0.9437262357414449,
+          "macro avg": {
+            "precision": 0.938778114228753,
+            "recall": 0.9462383336034236,
+            "f1-score": 0.9423369488435019,
+            "support": 1315.0
+          },
+          "weighted avg": {
+            "precision": 0.94377161693428,
+            "recall": 0.9437262357414449,
+            "f1-score": 0.943673692606664,
+            "support": 1315.0
+          }
+        },
+        "pairedDeltaVsNone95": [
+          -0.005140895962077036,
+          0.0
+        ]
+      },
+      "7": {
+        "macroF1": 0.8972244753546624,
+        "accuracy": 0.934156378600823,
+        "records": 244,
+        "macroF1_95": [
+          0.789392372988039,
+          0.9561439137357791
+        ],
+        "songBalancedMacroF1": 0.9123650524712339,
+        "groups": 116,
+        "perClass": {
+          "jack": {
+            "precision": 0.8,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.8615384615384616,
+            "support": 30.0
+          },
+          "chordstream": {
+            "precision": 0.8285714285714286,
+            "recall": 0.7631578947368421,
+            "f1-score": 0.7945205479452054,
+            "support": 38.0
+          },
+          "speed": {
+            "precision": 0.9473684210526315,
+            "recall": 0.9,
+            "f1-score": 0.9230769230769231,
+            "support": 20.0
+          },
+          "tech": {
+            "precision": 1.0,
+            "recall": 0.8421052631578947,
+            "f1-score": 0.9142857142857143,
+            "support": 19.0
+          },
+          "ln": {
+            "precision": 0.9855072463768116,
+            "recall": 1.0,
+            "f1-score": 0.9927007299270073,
+            "support": 136.0
+          },
+          "accuracy": 0.934156378600823,
+          "macro avg": {
+            "precision": 0.9122894192001743,
+            "recall": 0.887719298245614,
+            "f1-score": 0.8972244753546624,
+            "support": 243.0
+          },
+          "weighted avg": {
+            "precision": 0.9360578938848284,
+            "recall": 0.934156378600823,
+            "f1-score": 0.9336551480292662,
+            "support": 243.0
+          }
+        },
+        "pairedDeltaVsNone95": [
+          0.0,
+          0.0
+        ]
+      },
+      "segment": {
+        "chartMeanAccuracy": 0.6380081481170883,
+        "durationAccuracy": 0.6579962455802186,
+        "chartMeanAccuracy95": [
+          0.4912141497625514,
+          0.765348966451558
+        ],
+        "charts": [
+          {
+            "uid": "manual/AA",
+            "accuracy": 0.6952380952380952,
+            "correctMs": 109500.0,
+            "labelledMs": 157500.0,
+            "largestErrors": [
+              [
+                "break -> chordstream",
+                11300.0
+              ],
+              [
+                "break -> ln",
+                10400.0
+              ],
+              [
+                "ln -> tech",
+                9200.0
+              ],
+              [
+                "chordstream -> ln",
+                4700.0
+              ],
+              [
+                "tech -> speed",
+                3500.0
+              ],
+              [
+                "break -> speed",
+                2500.0
+              ],
+              [
+                "ln -> jack",
+                2000.0
+              ],
+              [
+                "tech -> chordstream",
+                1600.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/AH",
+            "accuracy": 0.8392875,
+            "correctMs": 201429.0,
+            "labelledMs": 240000.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                38571.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/BE",
+            "accuracy": 0.36525078781512604,
+            "correctMs": 55635.0,
+            "labelledMs": 152320.0,
+            "largestErrors": [
+              [
+                "chordstream -> speed",
+                30500.0
+              ],
+              [
+                "break -> tech",
+                18800.0
+              ],
+              [
+                "break -> chordstream",
+                17700.0
+              ],
+              [
+                "break -> speed",
+                16085.0
+              ],
+              [
+                "chordstream -> tech",
+                5200.0
+              ],
+              [
+                "break -> jack",
+                4000.0
+              ],
+              [
+                "chordstream -> jack",
+                2000.0
+              ],
+              [
+                "jack -> tech",
+                1600.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/DS",
+            "accuracy": 0.6894966017356264,
+            "correctMs": 248447.0,
+            "labelledMs": 360331.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                68101.0
+              ],
+              [
+                "break -> chordstream",
+                12528.0
+              ],
+              [
+                "jack -> chordstream",
+                5012.0
+              ],
+              [
+                "jack -> ln",
+                4108.0
+              ],
+              [
+                "speed -> ln",
+                3729.0
+              ],
+              [
+                "tech -> chordstream",
+                3722.0
+              ],
+              [
+                "ln -> chordstream",
+                3615.0
+              ],
+              [
+                "speed|tech -> jack",
+                2448.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/EE",
+            "accuracy": 0.7775760219223804,
+            "correctMs": 164011.0,
+            "labelledMs": 210926.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                38915.0
+              ],
+              [
+                "break -> chordstream",
+                4000.0
+              ],
+              [
+                "ln -> speed",
+                2000.0
+              ],
+              [
+                "break -> jack",
+                2000.0
+              ],
+              [
+                "ln -> chordstream",
+                0.0
+              ],
+              [
+                "ln -> jack",
+                0.0
+              ],
+              [
+                "break -> speed",
+                0.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/RJ",
+            "accuracy": 0.46119988199130163,
+            "correctMs": 96923.0,
+            "labelledMs": 210154.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                93385.0
+              ],
+              [
+                "break -> jack",
+                9077.0
+              ],
+              [
+                "break -> tech",
+                6000.0
+              ],
+              [
+                "chordstream -> jack",
+                2000.0
+              ],
+              [
+                "jack -> ln",
+                923.0
+              ],
+              [
+                "chordstream|jack -> ln",
+                769.0
+              ],
+              [
+                "chordstream -> ln",
+                769.0
+              ],
+              [
+                "ln -> jack",
+                308.0
+              ]
+            ]
+          }
+        ],
+        "pairedDeltaVsNone95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "both": {
+      "4": {
+        "macroF1": 0.9423369488435019,
+        "accuracy": 0.9437262357414449,
+        "records": 1315,
+        "macroF1_95": [
+          0.9205274029493661,
+          0.9576605651028647
+        ],
+        "songBalancedMacroF1": 0.9218890359015205,
+        "groups": 609,
+        "perClass": {
+          "jack": {
+            "precision": 0.9847715736040609,
+            "recall": 0.9822784810126582,
+            "f1-score": 0.9835234474017744,
+            "support": 395.0
+          },
+          "chordstream": {
+            "precision": 0.9421768707482994,
+            "recall": 0.9358108108108109,
+            "f1-score": 0.9389830508474576,
+            "support": 296.0
+          },
+          "speed": {
+            "precision": 0.9359430604982206,
+            "recall": 0.9228070175438596,
+            "f1-score": 0.9293286219081273,
+            "support": 285.0
+          },
+          "tech": {
+            "precision": 0.8865546218487395,
+            "recall": 0.890295358649789,
+            "f1-score": 0.888421052631579,
+            "support": 237.0
+          },
+          "ln": {
+            "precision": 0.9444444444444444,
+            "recall": 1.0,
+            "f1-score": 0.9714285714285714,
+            "support": 102.0
+          },
+          "accuracy": 0.9437262357414449,
+          "macro avg": {
+            "precision": 0.938778114228753,
+            "recall": 0.9462383336034236,
+            "f1-score": 0.9423369488435019,
+            "support": 1315.0
+          },
+          "weighted avg": {
+            "precision": 0.94377161693428,
+            "recall": 0.9437262357414449,
+            "f1-score": 0.943673692606664,
+            "support": 1315.0
+          }
+        },
+        "pairedDeltaVsNone95": [
+          -0.005140895962077036,
+          0.0
+        ]
+      },
+      "7": {
+        "macroF1": 0.8972244753546624,
+        "accuracy": 0.934156378600823,
+        "records": 244,
+        "macroF1_95": [
+          0.789392372988039,
+          0.9561439137357791
+        ],
+        "songBalancedMacroF1": 0.9123650524712339,
+        "groups": 116,
+        "perClass": {
+          "jack": {
+            "precision": 0.8,
+            "recall": 0.9333333333333333,
+            "f1-score": 0.8615384615384616,
+            "support": 30.0
+          },
+          "chordstream": {
+            "precision": 0.8285714285714286,
+            "recall": 0.7631578947368421,
+            "f1-score": 0.7945205479452054,
+            "support": 38.0
+          },
+          "speed": {
+            "precision": 0.9473684210526315,
+            "recall": 0.9,
+            "f1-score": 0.9230769230769231,
+            "support": 20.0
+          },
+          "tech": {
+            "precision": 1.0,
+            "recall": 0.8421052631578947,
+            "f1-score": 0.9142857142857143,
+            "support": 19.0
+          },
+          "ln": {
+            "precision": 0.9855072463768116,
+            "recall": 1.0,
+            "f1-score": 0.9927007299270073,
+            "support": 136.0
+          },
+          "accuracy": 0.934156378600823,
+          "macro avg": {
+            "precision": 0.9122894192001743,
+            "recall": 0.887719298245614,
+            "f1-score": 0.8972244753546624,
+            "support": 243.0
+          },
+          "weighted avg": {
+            "precision": 0.9360578938848284,
+            "recall": 0.934156378600823,
+            "f1-score": 0.9336551480292662,
+            "support": 243.0
+          }
+        },
+        "pairedDeltaVsNone95": [
+          0.0,
+          0.0
+        ]
+      },
+      "segment": {
+        "chartMeanAccuracy": 0.6380081481170883,
+        "durationAccuracy": 0.6579962455802186,
+        "chartMeanAccuracy95": [
+          0.4912141497625514,
+          0.765348966451558
+        ],
+        "charts": [
+          {
+            "uid": "manual/AA",
+            "accuracy": 0.6952380952380952,
+            "correctMs": 109500.0,
+            "labelledMs": 157500.0,
+            "largestErrors": [
+              [
+                "break -> chordstream",
+                11300.0
+              ],
+              [
+                "break -> ln",
+                10400.0
+              ],
+              [
+                "ln -> tech",
+                9200.0
+              ],
+              [
+                "chordstream -> ln",
+                4700.0
+              ],
+              [
+                "tech -> speed",
+                3500.0
+              ],
+              [
+                "break -> speed",
+                2500.0
+              ],
+              [
+                "ln -> jack",
+                2000.0
+              ],
+              [
+                "tech -> chordstream",
+                1600.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/AH",
+            "accuracy": 0.8392875,
+            "correctMs": 201429.0,
+            "labelledMs": 240000.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                38571.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/BE",
+            "accuracy": 0.36525078781512604,
+            "correctMs": 55635.0,
+            "labelledMs": 152320.0,
+            "largestErrors": [
+              [
+                "chordstream -> speed",
+                30500.0
+              ],
+              [
+                "break -> tech",
+                18800.0
+              ],
+              [
+                "break -> chordstream",
+                17700.0
+              ],
+              [
+                "break -> speed",
+                16085.0
+              ],
+              [
+                "chordstream -> tech",
+                5200.0
+              ],
+              [
+                "break -> jack",
+                4000.0
+              ],
+              [
+                "chordstream -> jack",
+                2000.0
+              ],
+              [
+                "jack -> tech",
+                1600.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/DS",
+            "accuracy": 0.6894966017356264,
+            "correctMs": 248447.0,
+            "labelledMs": 360331.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                68101.0
+              ],
+              [
+                "break -> chordstream",
+                12528.0
+              ],
+              [
+                "jack -> chordstream",
+                5012.0
+              ],
+              [
+                "jack -> ln",
+                4108.0
+              ],
+              [
+                "speed -> ln",
+                3729.0
+              ],
+              [
+                "tech -> chordstream",
+                3722.0
+              ],
+              [
+                "ln -> chordstream",
+                3615.0
+              ],
+              [
+                "speed|tech -> jack",
+                2448.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/EE",
+            "accuracy": 0.7775760219223804,
+            "correctMs": 164011.0,
+            "labelledMs": 210926.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                38915.0
+              ],
+              [
+                "break -> chordstream",
+                4000.0
+              ],
+              [
+                "ln -> speed",
+                2000.0
+              ],
+              [
+                "break -> jack",
+                2000.0
+              ],
+              [
+                "ln -> chordstream",
+                0.0
+              ],
+              [
+                "ln -> jack",
+                0.0
+              ],
+              [
+                "break -> speed",
+                0.0
+              ]
+            ]
+          },
+          {
+            "uid": "manual/RJ",
+            "accuracy": 0.46119988199130163,
+            "correctMs": 96923.0,
+            "labelledMs": 210154.0,
+            "largestErrors": [
+              [
+                "break -> ln",
+                93385.0
+              ],
+              [
+                "break -> jack",
+                9077.0
+              ],
+              [
+                "break -> tech",
+                6000.0
+              ],
+              [
+                "chordstream -> jack",
+                2000.0
+              ],
+              [
+                "jack -> ln",
+                923.0
+              ],
+              [
+                "chordstream|jack -> ln",
+                769.0
+              ],
+              [
+                "chordstream -> ln",
+                769.0
+              ],
+              [
+                "ln -> jack",
+                308.0
+              ]
+            ]
+          }
+        ],
+        "pairedDeltaVsNone95": [
+          0.0,
+          0.0
+        ]
+      }
+    }
+  },
+  "optimizerAudit": {
+    "innerFits": 0,
+    "statuses": {
+      "small_projected_gradient": 1944
+    },
+    "maxFinalProjectedGradient": 8.546591857023361e-07,
+    "budgetExhausted": [],
+    "poolBoundCounts": {
+      "effortPower:lower": 1944,
+      "confidencePower:upper": 1944
+    },
+    "outerSelections": 24,
+    "outerStatuses": {
+      "small_projected_gradient": 24
+    },
+    "outerMaxFinalProjectedGradient": 2.332439507958528e-07,
+    "outerUnaccepted": [],
+    "accepted": true,
+    "outerCountMeaning": "one trace per selected artifact; identical source/configuration fits may be reused, not independent training runs",
+    "uniqueInnerExpertFitsReused": 1944,
+    "innerConfigurationEvaluations": 7776,
+    "newOuterExpertFits": 0,
+    "innerCountMeaning": "all inner raw-expert fits reused; their actual source traces are audited, not counted as newly executed fits"
+  },
+  "sixKeyAccuracy": null
+}

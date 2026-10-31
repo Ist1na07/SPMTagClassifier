@@ -1,0 +1,38 @@
+{
+  "selectionUsesOuterLabels": false,
+  "head": 7,
+  "fitConfig": {
+    "localL2": 0.1,
+    "strongWeight": 0.25,
+    "balance": "none"
+  },
+  "policyId": 145,
+  "policy": {
+    "partition": 0,
+    "head": 0,
+    "burdenGate": 0.3,
+    "smoothing": "coherent",
+    "mode": "normalized",
+    "effortPower": 1.0,
+    "confidencePower": 0.0,
+    "dominantShare": 0.65,
+    "mixShare": 0.07,
+    "secondRel": 0.9,
+    "twoTagMaxShare": 0.45,
+    "familyThresholds": [
+      0.3,
+      0.8
+    ],
+    "minEvidence": 0.25,
+    "minimumDiversity": 0.0,
+    "lnRatio": 0.55,
+    "scorer": "model",
+    "excludeVibroFromMix": true
+  },
+  "extraGate": "ln_protected",
+  "inner": {
+    "joint": 0.6313574097042007,
+    "mapMacroF1": 0.5789772479274599,
+    "segmentAccuracy": 0.6837375714809416
+  }
+}
