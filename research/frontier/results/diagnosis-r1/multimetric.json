@@ -1,0 +1,385 @@
+{
+  "original_fixed": {
+    "macro": {
+      "precision": 0.5515344758376743,
+      "recall": 0.5135045832728844,
+      "f1": 0.519842918759082
+    },
+    "micro": {
+      "precision": 0.6602739726027397,
+      "recall": 0.5885225885225885,
+      "f1": 0.6223369916074887
+    },
+    "samples": {
+      "precision": 0.6772334293948127,
+      "recall": 0.6443323727185398,
+      "f1": 0.6516810758885687
+    },
+    "exactMatch": 0.5778097982708934,
+    "jaccard": 0.632804995196926,
+    "hammingLoss": 0.04958467536870656,
+    "meanTrueTags": 1.180115273775216,
+    "meanPredictedTags": 1.0518731988472623,
+    "perClass": {
+      "anchor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "positivePhysicalWeight": 6.0,
+        "positiveSongGroups": 1,
+        "predictedPhysicalWeight": 0.0
+      },
+      "chordjack": {
+        "precision": 0.8108108108108109,
+        "recall": 0.8571428571428571,
+        "f1": 0.8333333333333334,
+        "positivePhysicalWeight": 35.0,
+        "positiveSongGroups": 21,
+        "predictedPhysicalWeight": 37.0
+      },
+      "coordination": {
+        "precision": 0.625,
+        "recall": 0.4444444444444444,
+        "f1": 0.5194805194805194,
+        "positivePhysicalWeight": 22.5,
+        "positiveSongGroups": 18,
+        "predictedPhysicalWeight": 16.0
+      },
+      "dense chordstream": {
+        "precision": 0.7058823529411765,
+        "recall": 0.6,
+        "f1": 0.6486486486486487,
+        "positivePhysicalWeight": 40.0,
+        "positiveSongGroups": 20,
+        "predictedPhysicalWeight": 34.0
+      },
+      "density": {
+        "precision": 0.4878048780487805,
+        "recall": 0.625,
+        "f1": 0.547945205479452,
+        "positivePhysicalWeight": 32.0,
+        "positiveSongGroups": 15,
+        "predictedPhysicalWeight": 41.0
+      },
+      "fast chordstream": {
+        "precision": 0.5333333333333333,
+        "recall": 0.5333333333333333,
+        "f1": 0.5333333333333333,
+        "positivePhysicalWeight": 15.0,
+        "positiveSongGroups": 11,
+        "predictedPhysicalWeight": 15.0
+      },
+      "hybrid": {
+        "precision": 0.88,
+        "recall": 0.4583333333333333,
+        "f1": 0.6027397260273972,
+        "positivePhysicalWeight": 48.0,
+        "positiveSongGroups": 48,
+        "predictedPhysicalWeight": 25.0
+      },
+      "inverse": {
+        "precision": 0.7391304347826086,
+        "recall": 0.9444444444444444,
+        "f1": 0.8292682926829268,
+        "positivePhysicalWeight": 18.0,
+        "positiveSongGroups": 4,
+        "predictedPhysicalWeight": 23.0
+      },
+      "ln mix": {
+        "precision": 0.4634146341463415,
+        "recall": 0.48717948717948717,
+        "f1": 0.475,
+        "positivePhysicalWeight": 39.0,
+        "positiveSongGroups": 20,
+        "predictedPhysicalWeight": 41.0
+      },
+      "ln wildcard": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "positivePhysicalWeight": 3.0,
+        "positiveSongGroups": 1,
+        "predictedPhysicalWeight": 0.0
+      },
+      "minijack": {
+        "precision": 0.6666666666666666,
+        "recall": 0.5454545454545454,
+        "f1": 0.6,
+        "positivePhysicalWeight": 11.0,
+        "positiveSongGroups": 8,
+        "predictedPhysicalWeight": 9.0
+      },
+      "rc mix": {
+        "precision": 0.5517241379310345,
+        "recall": 0.64,
+        "f1": 0.5925925925925926,
+        "positivePhysicalWeight": 25.0,
+        "positiveSongGroups": 14,
+        "predictedPhysicalWeight": 29.0
+      },
+      "release": {
+        "precision": 0.8,
+        "recall": 0.7407407407407407,
+        "f1": 0.7692307692307693,
+        "positivePhysicalWeight": 27.0,
+        "positiveSongGroups": 17,
+        "predictedPhysicalWeight": 25.0
+      },
+      "speed": {
+        "precision": 0.8260869565217391,
+        "recall": 0.6129032258064516,
+        "f1": 0.7037037037037037,
+        "positivePhysicalWeight": 31.0,
+        "positiveSongGroups": 13,
+        "predictedPhysicalWeight": 23.0
+      },
+      "tech": {
+        "precision": 0.8695652173913043,
+        "recall": 0.5263157894736842,
+        "f1": 0.6557377049180327,
+        "positivePhysicalWeight": 38.0,
+        "positiveSongGroups": 16,
+        "predictedPhysicalWeight": 23.0
+      },
+      "technical": {
+        "precision": 0.4166666666666667,
+        "recall": 0.7142857142857143,
+        "f1": 0.5263157894736842,
+        "positivePhysicalWeight": 14.0,
+        "positiveSongGroups": 5,
+        "predictedPhysicalWeight": 24.0
+      },
+      "vibro": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "positivePhysicalWeight": 5.0,
+        "positiveSongGroups": 2,
+        "predictedPhysicalWeight": 0.0
+      }
+    }
+  },
+  "v1.2.1_LN_candidate_outer": {
+    "macro": {
+      "precision": 0.6083646614866571,
+      "recall": 0.5136897387625192,
+      "f1": 0.5431888070750372
+    },
+    "micro": {
+      "precision": 0.7085714285714285,
+      "recall": 0.6056166056166056,
+      "f1": 0.6530612244897959
+    },
+    "samples": {
+      "precision": 0.7118155619596542,
+      "recall": 0.6721902017291066,
+      "f1": 0.6844380403458213
+    },
+    "exactMatch": 0.6296829971181557,
+    "jaccard": 0.6702689721421711,
+    "hammingLoss": 0.0446685878962536,
+    "meanTrueTags": 1.180115273775216,
+    "meanPredictedTags": 1.0086455331412103,
+    "perClass": {
+      "anchor": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "positivePhysicalWeight": 6.0,
+        "positiveSongGroups": 1,
+        "predictedPhysicalWeight": 0.0
+      },
+      "chordjack": {
+        "precision": 0.8235294117647058,
+        "recall": 0.8,
+        "f1": 0.8115942028985508,
+        "positivePhysicalWeight": 35.0,
+        "positiveSongGroups": 21,
+        "predictedPhysicalWeight": 34.0
+      },
+      "coordination": {
+        "precision": 0.6875,
+        "recall": 0.4888888888888889,
+        "f1": 0.5714285714285714,
+        "positivePhysicalWeight": 22.5,
+        "positiveSongGroups": 18,
+        "predictedPhysicalWeight": 16.0
+      },
+      "dense chordstream": {
+        "precision": 0.75,
+        "recall": 0.6,
+        "f1": 0.6666666666666666,
+        "positivePhysicalWeight": 40.0,
+        "positiveSongGroups": 20,
+        "predictedPhysicalWeight": 32.0
+      },
+      "density": {
+        "precision": 0.53125,
+        "recall": 0.53125,
+        "f1": 0.53125,
+        "positivePhysicalWeight": 32.0,
+        "positiveSongGroups": 15,
+        "predictedPhysicalWeight": 32.0
+      },
+      "fast chordstream": {
+        "precision": 0.6666666666666666,
+        "recall": 0.5333333333333333,
+        "f1": 0.5925925925925926,
+        "positivePhysicalWeight": 15.0,
+        "positiveSongGroups": 11,
+        "predictedPhysicalWeight": 12.0
+      },
+      "hybrid": {
+        "precision": 0.9411764705882353,
+        "recall": 0.6666666666666666,
+        "f1": 0.7804878048780488,
+        "positivePhysicalWeight": 48.0,
+        "positiveSongGroups": 48,
+        "predictedPhysicalWeight": 34.0
+      },
+      "inverse": {
+        "precision": 0.7894736842105263,
+        "recall": 0.8333333333333334,
+        "f1": 0.8108108108108109,
+        "positivePhysicalWeight": 18.0,
+        "positiveSongGroups": 4,
+        "predictedPhysicalWeight": 19.0
+      },
+      "ln mix": {
+        "precision": 0.575,
+        "recall": 0.5897435897435898,
+        "f1": 0.5822784810126582,
+        "positivePhysicalWeight": 39.0,
+        "positiveSongGroups": 20,
+        "predictedPhysicalWeight": 40.0
+      },
+      "ln wildcard": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "positivePhysicalWeight": 3.0,
+        "positiveSongGroups": 1,
+        "predictedPhysicalWeight": 0.0
+      },
+      "minijack": {
+        "precision": 1.0,
+        "recall": 0.45454545454545453,
+        "f1": 0.625,
+        "positivePhysicalWeight": 11.0,
+        "positiveSongGroups": 8,
+        "predictedPhysicalWeight": 5.0
+      },
+      "rc mix": {
+        "precision": 0.4418604651162791,
+        "recall": 0.76,
+        "f1": 0.5588235294117647,
+        "positivePhysicalWeight": 25.0,
+        "positiveSongGroups": 14,
+        "predictedPhysicalWeight": 43.0
+      },
+      "release": {
+        "precision": 0.8076923076923077,
+        "recall": 0.7777777777777778,
+        "f1": 0.7924528301886793,
+        "positivePhysicalWeight": 27.0,
+        "positiveSongGroups": 17,
+        "predictedPhysicalWeight": 26.0
+      },
+      "speed": {
+        "precision": 0.8181818181818182,
+        "recall": 0.5806451612903226,
+        "f1": 0.6792452830188679,
+        "positivePhysicalWeight": 31.0,
+        "positiveSongGroups": 13,
+        "predictedPhysicalWeight": 22.0
+      },
+      "tech": {
+        "precision": 0.9473684210526315,
+        "recall": 0.47368421052631576,
+        "f1": 0.631578947368421,
+        "positivePhysicalWeight": 38.0,
+        "positiveSongGroups": 16,
+        "predictedPhysicalWeight": 19.0
+      },
+      "technical": {
+        "precision": 0.5625,
+        "recall": 0.6428571428571429,
+        "f1": 0.6,
+        "positivePhysicalWeight": 14.0,
+        "positiveSongGroups": 5,
+        "predictedPhysicalWeight": 16.0
+      },
+      "vibro": {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "positivePhysicalWeight": 5.0,
+        "positiveSongGroups": 2,
+        "predictedPhysicalWeight": 0.0
+      }
+    }
+  },
+  "pairedIntervals": {
+    "method": "paired song-group bootstrap; physical-file weights; fixed 17-class convention, zero_division=0",
+    "draws": 2000,
+    "baseline": "original_fixed",
+    "candidate": "v1.2.1_LN_candidate_outer",
+    "delta95": {
+      "macroPrecision": [
+        0.013242679341116115,
+        0.08524686137454532
+      ],
+      "macroRecall": [
+        -0.05382456250015547,
+        0.023637998393415592
+      ],
+      "macroF1": [
+        -0.01600935849615834,
+        0.046377992228608424
+      ],
+      "microPrecision": [
+        0.0152065770632374,
+        0.0840619505646809
+      ],
+      "microRecall": [
+        -0.009712324836194936,
+        0.04969029889159601
+      ],
+      "microF1": [
+        0.0017452287885847742,
+        0.06504846910067288
+      ],
+      "exactMatch": [
+        0.0212042062415197,
+        0.08648850342880193
+      ]
+    }
+  },
+  "scope": {
+    "records": 349,
+    "physicalWeight": 347.0,
+    "classes": [
+      "anchor",
+      "chordjack",
+      "coordination",
+      "dense chordstream",
+      "density",
+      "fast chordstream",
+      "hybrid",
+      "inverse",
+      "ln mix",
+      "ln wildcard",
+      "minijack",
+      "rc mix",
+      "release",
+      "speed",
+      "tech",
+      "technical",
+      "vibro"
+    ],
+    "historicalPriorExposure": "unknown",
+    "newIndependentEvaluation": false,
+    "truthConvention": "User confirmed on 2026-11-01: 7K whole-chart tags manually aim to cover primary player impressions; unlisted tags are negatives at the output threshold; weak continuous evidence should receive low continuous loss.",
+    "averagePrecision": "not computed: saved final tag vectors are hard decisions, not ranking scores"
+  }
+}

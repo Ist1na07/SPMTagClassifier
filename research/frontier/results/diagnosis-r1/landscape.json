@@ -1,0 +1,1304 @@
+{
+  "scope": "diagnosis of saved geometry3/LN-protected inner predictions; no new fit or candidate selected",
+  "source": "research\\rework\\results\\ln-extra-gate-r1",
+  "postPolicyCount": 512,
+  "postDesign": {
+    "burdenGate": {
+      "matchedContexts": 12,
+      "policiesInMatchedContexts": 36,
+      "testedValues": [
+        "0.0",
+        "0.15",
+        "0.3"
+      ]
+    },
+    "mode": {
+      "matchedContexts": 18,
+      "policiesInMatchedContexts": 36,
+      "testedValues": [
+        "\"normalized\"",
+        "\"soft\""
+      ]
+    },
+    "effortPower": {
+      "matchedContexts": 5,
+      "policiesInMatchedContexts": 10,
+      "testedValues": [
+        "0.0",
+        "1.0"
+      ]
+    },
+    "confidencePower": {
+      "matchedContexts": 1,
+      "policiesInMatchedContexts": 2,
+      "testedValues": [
+        "1.0",
+        "0.0"
+      ]
+    },
+    "dominantShare": {
+      "matchedContexts": 3,
+      "policiesInMatchedContexts": 6,
+      "testedValues": [
+        "0.52",
+        "0.4",
+        "0.65"
+      ]
+    },
+    "mixShare": {
+      "matchedContexts": 2,
+      "policiesInMatchedContexts": 4,
+      "testedValues": [
+        "0.07",
+        "0.04",
+        "0.12"
+      ]
+    },
+    "secondRel": {
+      "matchedContexts": 3,
+      "policiesInMatchedContexts": 6,
+      "testedValues": [
+        "0.75",
+        "0.9",
+        "0.6"
+      ]
+    },
+    "twoTagMaxShare": {
+      "matchedContexts": 3,
+      "policiesInMatchedContexts": 6,
+      "testedValues": [
+        "0.55",
+        "0.65",
+        "0.45"
+      ]
+    },
+    "familyThresholds": {
+      "matchedContexts": 3,
+      "policiesInMatchedContexts": 6,
+      "testedValues": [
+        "[0.18, 0.68]",
+        "[0.3, 0.8]",
+        "[0.1, 0.6]"
+      ]
+    },
+    "minEvidence": {
+      "matchedContexts": 0,
+      "policiesInMatchedContexts": 0,
+      "testedValues": [
+        "0.25",
+        "0.4",
+        "0.1"
+      ]
+    },
+    "minimumDiversity": {
+      "matchedContexts": 0,
+      "policiesInMatchedContexts": 0,
+      "testedValues": [
+        "0.0",
+        "0.1",
+        "0.2"
+      ]
+    },
+    "lnRatio": {
+      "matchedContexts": 12,
+      "policiesInMatchedContexts": 36,
+      "testedValues": [
+        "0.35",
+        "0.45",
+        "0.55"
+      ]
+    },
+    "scorer": {
+      "matchedContexts": 24,
+      "policiesInMatchedContexts": 48,
+      "testedValues": [
+        "\"model\"",
+        "\"blend\""
+      ]
+    }
+  },
+  "folds": [
+    {
+      "outer": 0,
+      "jointConfigurations": 15872,
+      "uniqueWholeTagVectorsOnInnerCorpus": 5821,
+      "nearBestCounts": {
+        "0.0": 1,
+        "0.001": 2,
+        "0.005": 54
+      },
+      "postCoordinates": {
+        "burdenGate": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 643,
+          "changedMapMacroF1": 643,
+          "changedJoint": 643,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.002715338575566273,
+          "selectedContextTestedValues": [
+            0.15
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mode": {
+          "comparisons": 558,
+          "changedWholeTagVectors": 558,
+          "changedMapMacroF1": 558,
+          "changedJoint": 558,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.07369724521350984,
+          "selectedContextTestedValues": [
+            "normalized"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "effortPower": {
+          "comparisons": 155,
+          "changedWholeTagVectors": 155,
+          "changedMapMacroF1": 155,
+          "changedJoint": 155,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.021668603578153367,
+          "selectedContextTestedValues": [
+            1.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "confidencePower": {
+          "comparisons": 31,
+          "changedWholeTagVectors": 31,
+          "changedMapMacroF1": 31,
+          "changedJoint": 31,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.009369465450341119,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "dominantShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0626420516547938,
+          "selectedContextTestedValues": [
+            0.65
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mixShare": {
+          "comparisons": 62,
+          "changedWholeTagVectors": 62,
+          "changedMapMacroF1": 62,
+          "changedJoint": 62,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0117463852904921,
+          "selectedContextTestedValues": [
+            0.07
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "secondRel": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 74,
+          "changedMapMacroF1": 74,
+          "changedJoint": 74,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.002250844945342001,
+          "selectedContextTestedValues": [
+            0.6
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "twoTagMaxShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.00617304776047034,
+          "selectedContextTestedValues": [
+            0.55
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "familyThresholds": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 62,
+          "changedMapMacroF1": 62,
+          "changedJoint": 62,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.004582267689684505,
+          "selectedContextTestedValues": [
+            [
+              0.3,
+              0.8
+            ]
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minEvidence": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.25
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minimumDiversity": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "lnRatio": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 1116,
+          "changedMapMacroF1": 1116,
+          "changedJoint": 1116,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.007330742514050637,
+          "selectedContextTestedValues": [
+            0.35
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "scorer": {
+          "comparisons": 744,
+          "changedWholeTagVectors": 744,
+          "changedMapMacroF1": 744,
+          "changedJoint": 744,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.1452165558832046,
+          "selectedContextTestedValues": [
+            "model"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        }
+      },
+      "fitCoordinates": {
+        "localL2": {
+          "comparisons": 30720,
+          "changedWholeTagVectors": 24644,
+          "changedMapMacroF1": 24601,
+          "changedJoint": 26384,
+          "sameJointButChangedWholeTagVectors": 12,
+          "maxAbsoluteJointDifference": 0.025394373289043704
+        },
+        "strongWeight": {
+          "comparisons": 15360,
+          "changedWholeTagVectors": 6750,
+          "changedMapMacroF1": 6705,
+          "changedJoint": 6968,
+          "sameJointButChangedWholeTagVectors": 24,
+          "maxAbsoluteJointDifference": 0.021798515909077
+        },
+        "balance": {
+          "comparisons": 7680,
+          "changedWholeTagVectors": 2677,
+          "changedMapMacroF1": 2670,
+          "changedJoint": 2839,
+          "sameJointButChangedWholeTagVectors": 6,
+          "maxAbsoluteJointDifference": 0.016448847144598155
+        }
+      }
+    },
+    {
+      "outer": 1,
+      "jointConfigurations": 15872,
+      "uniqueWholeTagVectorsOnInnerCorpus": 6186,
+      "nearBestCounts": {
+        "0.0": 13,
+        "0.001": 22,
+        "0.005": 155
+      },
+      "postCoordinates": {
+        "burdenGate": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 642,
+          "changedMapMacroF1": 642,
+          "changedJoint": 642,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.002111560788777833,
+          "selectedContextTestedValues": [
+            0.3
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mode": {
+          "comparisons": 558,
+          "changedWholeTagVectors": 558,
+          "changedMapMacroF1": 558,
+          "changedJoint": 558,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0656674722665711,
+          "selectedContextTestedValues": [
+            "normalized"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "effortPower": {
+          "comparisons": 155,
+          "changedWholeTagVectors": 155,
+          "changedMapMacroF1": 155,
+          "changedJoint": 155,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.01723295372014655,
+          "selectedContextTestedValues": [
+            1.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "confidencePower": {
+          "comparisons": 31,
+          "changedWholeTagVectors": 31,
+          "changedMapMacroF1": 31,
+          "changedJoint": 31,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.008688606885828731,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "dominantShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.04961164723710787,
+          "selectedContextTestedValues": [
+            0.65
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mixShare": {
+          "comparisons": 62,
+          "changedWholeTagVectors": 62,
+          "changedMapMacroF1": 62,
+          "changedJoint": 62,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.016954440432090934,
+          "selectedContextTestedValues": [
+            0.07
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "secondRel": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 64,
+          "changedMapMacroF1": 64,
+          "changedJoint": 64,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0017458722894597711,
+          "selectedContextTestedValues": [
+            0.9
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "twoTagMaxShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.00817760807905299,
+          "selectedContextTestedValues": [
+            0.45
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "familyThresholds": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.004295491781618255,
+          "selectedContextTestedValues": [
+            [
+              0.3,
+              0.8
+            ]
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minEvidence": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.25
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minimumDiversity": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "lnRatio": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 1116,
+          "changedMapMacroF1": 1116,
+          "changedJoint": 1116,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.010276130622418389,
+          "selectedContextTestedValues": [
+            0.55
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "scorer": {
+          "comparisons": 744,
+          "changedWholeTagVectors": 744,
+          "changedMapMacroF1": 744,
+          "changedJoint": 744,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.12958841443265212,
+          "selectedContextTestedValues": [
+            "model"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        }
+      },
+      "fitCoordinates": {
+        "localL2": {
+          "comparisons": 30720,
+          "changedWholeTagVectors": 24041,
+          "changedMapMacroF1": 24013,
+          "changedJoint": 24034,
+          "sameJointButChangedWholeTagVectors": 25,
+          "maxAbsoluteJointDifference": 0.02176052146105001
+        },
+        "strongWeight": {
+          "comparisons": 15360,
+          "changedWholeTagVectors": 6686,
+          "changedMapMacroF1": 6672,
+          "changedJoint": 6714,
+          "sameJointButChangedWholeTagVectors": 13,
+          "maxAbsoluteJointDifference": 0.013170651779168985
+        },
+        "balance": {
+          "comparisons": 7680,
+          "changedWholeTagVectors": 3355,
+          "changedMapMacroF1": 3344,
+          "changedJoint": 3427,
+          "sameJointButChangedWholeTagVectors": 10,
+          "maxAbsoluteJointDifference": 0.015246199764548884
+        }
+      }
+    },
+    {
+      "outer": 2,
+      "jointConfigurations": 15872,
+      "uniqueWholeTagVectorsOnInnerCorpus": 6425,
+      "nearBestCounts": {
+        "0.0": 1,
+        "0.001": 21,
+        "0.005": 86
+      },
+      "postCoordinates": {
+        "burdenGate": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 639,
+          "changedMapMacroF1": 639,
+          "changedJoint": 639,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0018740634966700753,
+          "selectedContextTestedValues": [
+            0.3
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mode": {
+          "comparisons": 558,
+          "changedWholeTagVectors": 558,
+          "changedMapMacroF1": 558,
+          "changedJoint": 558,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0688485088233462,
+          "selectedContextTestedValues": [
+            "normalized"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "effortPower": {
+          "comparisons": 155,
+          "changedWholeTagVectors": 155,
+          "changedMapMacroF1": 155,
+          "changedJoint": 155,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.014423171877219199,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "confidencePower": {
+          "comparisons": 31,
+          "changedWholeTagVectors": 31,
+          "changedMapMacroF1": 31,
+          "changedJoint": 31,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.01050246232580676,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "dominantShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.05441817859008363,
+          "selectedContextTestedValues": [
+            0.65
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mixShare": {
+          "comparisons": 62,
+          "changedWholeTagVectors": 62,
+          "changedMapMacroF1": 62,
+          "changedJoint": 62,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.016940535164440496,
+          "selectedContextTestedValues": [
+            0.07
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "secondRel": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 75,
+          "changedMapMacroF1": 75,
+          "changedJoint": 75,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.001237686700497287,
+          "selectedContextTestedValues": [
+            0.9
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "twoTagMaxShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.004943014075120322,
+          "selectedContextTestedValues": [
+            0.55
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "familyThresholds": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0035700916260857918,
+          "selectedContextTestedValues": [
+            [
+              0.3,
+              0.8
+            ]
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minEvidence": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.25
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minimumDiversity": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "lnRatio": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 1116,
+          "changedMapMacroF1": 1116,
+          "changedJoint": 1116,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.00982813364959445,
+          "selectedContextTestedValues": [
+            0.35
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "scorer": {
+          "comparisons": 744,
+          "changedWholeTagVectors": 744,
+          "changedMapMacroF1": 744,
+          "changedJoint": 744,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.12089953323577074,
+          "selectedContextTestedValues": [
+            "model"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        }
+      },
+      "fitCoordinates": {
+        "localL2": {
+          "comparisons": 30720,
+          "changedWholeTagVectors": 24956,
+          "changedMapMacroF1": 24939,
+          "changedJoint": 26701,
+          "sameJointButChangedWholeTagVectors": 7,
+          "maxAbsoluteJointDifference": 0.024835913467217474
+        },
+        "strongWeight": {
+          "comparisons": 15360,
+          "changedWholeTagVectors": 6904,
+          "changedMapMacroF1": 6875,
+          "changedJoint": 6944,
+          "sameJointButChangedWholeTagVectors": 25,
+          "maxAbsoluteJointDifference": 0.017568148602160383
+        },
+        "balance": {
+          "comparisons": 7680,
+          "changedWholeTagVectors": 3354,
+          "changedMapMacroF1": 3344,
+          "changedJoint": 3430,
+          "sameJointButChangedWholeTagVectors": 10,
+          "maxAbsoluteJointDifference": 0.014729365976145714
+        }
+      }
+    },
+    {
+      "outer": 3,
+      "jointConfigurations": 15872,
+      "uniqueWholeTagVectorsOnInnerCorpus": 6302,
+      "nearBestCounts": {
+        "0.0": 1,
+        "0.001": 1,
+        "0.005": 57
+      },
+      "postCoordinates": {
+        "burdenGate": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 620,
+          "changedMapMacroF1": 620,
+          "changedJoint": 620,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0013158552161109949,
+          "selectedContextTestedValues": [
+            0.3
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mode": {
+          "comparisons": 558,
+          "changedWholeTagVectors": 558,
+          "changedMapMacroF1": 558,
+          "changedJoint": 558,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.08012818387627763,
+          "selectedContextTestedValues": [
+            "normalized"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "effortPower": {
+          "comparisons": 155,
+          "changedWholeTagVectors": 155,
+          "changedMapMacroF1": 155,
+          "changedJoint": 155,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.013989582099341091,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "confidencePower": {
+          "comparisons": 31,
+          "changedWholeTagVectors": 31,
+          "changedMapMacroF1": 31,
+          "changedJoint": 31,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.011626365867638655,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "dominantShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.05405751775126727,
+          "selectedContextTestedValues": [
+            0.65
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mixShare": {
+          "comparisons": 62,
+          "changedWholeTagVectors": 62,
+          "changedMapMacroF1": 62,
+          "changedJoint": 62,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.012035843907939325,
+          "selectedContextTestedValues": [
+            0.07
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "secondRel": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 73,
+          "changedMapMacroF1": 73,
+          "changedJoint": 73,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.001992258756583265,
+          "selectedContextTestedValues": [
+            0.9
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "twoTagMaxShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.007762295751530424,
+          "selectedContextTestedValues": [
+            0.55
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "familyThresholds": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0019413922470676859,
+          "selectedContextTestedValues": [
+            [
+              0.3,
+              0.8
+            ]
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minEvidence": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.25
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minimumDiversity": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "lnRatio": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 1116,
+          "changedMapMacroF1": 1116,
+          "changedJoint": 1116,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.00912048078652572,
+          "selectedContextTestedValues": [
+            0.35
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "scorer": {
+          "comparisons": 744,
+          "changedWholeTagVectors": 744,
+          "changedMapMacroF1": 744,
+          "changedJoint": 744,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.14104207469708324,
+          "selectedContextTestedValues": [
+            "model"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        }
+      },
+      "fitCoordinates": {
+        "localL2": {
+          "comparisons": 30720,
+          "changedWholeTagVectors": 24655,
+          "changedMapMacroF1": 24606,
+          "changedJoint": 24942,
+          "sameJointButChangedWholeTagVectors": 42,
+          "maxAbsoluteJointDifference": 0.032226466135218956
+        },
+        "strongWeight": {
+          "comparisons": 15360,
+          "changedWholeTagVectors": 7540,
+          "changedMapMacroF1": 7511,
+          "changedJoint": 7688,
+          "sameJointButChangedWholeTagVectors": 26,
+          "maxAbsoluteJointDifference": 0.0299317703896973
+        },
+        "balance": {
+          "comparisons": 7680,
+          "changedWholeTagVectors": 3392,
+          "changedMapMacroF1": 3380,
+          "changedJoint": 3592,
+          "sameJointButChangedWholeTagVectors": 9,
+          "maxAbsoluteJointDifference": 0.018968917695365795
+        }
+      }
+    },
+    {
+      "outer": 4,
+      "jointConfigurations": 15872,
+      "uniqueWholeTagVectorsOnInnerCorpus": 5876,
+      "nearBestCounts": {
+        "0.0": 2,
+        "0.001": 3,
+        "0.005": 50
+      },
+      "postCoordinates": {
+        "burdenGate": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 628,
+          "changedMapMacroF1": 628,
+          "changedJoint": 628,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0024450731113598856,
+          "selectedContextTestedValues": [
+            0.3
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mode": {
+          "comparisons": 558,
+          "changedWholeTagVectors": 558,
+          "changedMapMacroF1": 558,
+          "changedJoint": 558,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0652843810874918,
+          "selectedContextTestedValues": [
+            "normalized"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "effortPower": {
+          "comparisons": 155,
+          "changedWholeTagVectors": 155,
+          "changedMapMacroF1": 155,
+          "changedJoint": 155,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.01585959282949423,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "confidencePower": {
+          "comparisons": 31,
+          "changedWholeTagVectors": 31,
+          "changedMapMacroF1": 31,
+          "changedJoint": 31,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.013138773085508482,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "dominantShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.05595409042402777,
+          "selectedContextTestedValues": [
+            0.65
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mixShare": {
+          "comparisons": 62,
+          "changedWholeTagVectors": 62,
+          "changedMapMacroF1": 62,
+          "changedJoint": 62,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.016641498906607044,
+          "selectedContextTestedValues": [
+            0.07
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "secondRel": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 60,
+          "changedMapMacroF1": 60,
+          "changedJoint": 60,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0018524673664250813,
+          "selectedContextTestedValues": [
+            0.9
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "twoTagMaxShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.00851620416440002,
+          "selectedContextTestedValues": [
+            0.55
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "familyThresholds": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.003458359210954387,
+          "selectedContextTestedValues": [
+            [
+              0.3,
+              0.8
+            ]
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minEvidence": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.25
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minimumDiversity": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "lnRatio": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 1116,
+          "changedMapMacroF1": 1116,
+          "changedJoint": 1116,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.009233959249819512,
+          "selectedContextTestedValues": [
+            0.35
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "scorer": {
+          "comparisons": 744,
+          "changedWholeTagVectors": 744,
+          "changedMapMacroF1": 744,
+          "changedJoint": 744,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.10210481650199787,
+          "selectedContextTestedValues": [
+            "model"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        }
+      },
+      "fitCoordinates": {
+        "localL2": {
+          "comparisons": 30720,
+          "changedWholeTagVectors": 23986,
+          "changedMapMacroF1": 23951,
+          "changedJoint": 25045,
+          "sameJointButChangedWholeTagVectors": 31,
+          "maxAbsoluteJointDifference": 0.02694836685084101
+        },
+        "strongWeight": {
+          "comparisons": 15360,
+          "changedWholeTagVectors": 6618,
+          "changedMapMacroF1": 6591,
+          "changedJoint": 6774,
+          "sameJointButChangedWholeTagVectors": 21,
+          "maxAbsoluteJointDifference": 0.012823367443963285
+        },
+        "balance": {
+          "comparisons": 7680,
+          "changedWholeTagVectors": 3165,
+          "changedMapMacroF1": 3159,
+          "changedJoint": 3989,
+          "sameJointButChangedWholeTagVectors": 3,
+          "maxAbsoluteJointDifference": 0.01139379132820395
+        }
+      }
+    },
+    {
+      "outer": 5,
+      "jointConfigurations": 15872,
+      "uniqueWholeTagVectorsOnInnerCorpus": 6463,
+      "nearBestCounts": {
+        "0.0": 1,
+        "0.001": 1,
+        "0.005": 27
+      },
+      "postCoordinates": {
+        "burdenGate": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 306,
+          "changedMapMacroF1": 306,
+          "changedJoint": 306,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0023810586787954557,
+          "selectedContextTestedValues": [
+            0.3
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mode": {
+          "comparisons": 558,
+          "changedWholeTagVectors": 558,
+          "changedMapMacroF1": 558,
+          "changedJoint": 558,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.06935331053740501,
+          "selectedContextTestedValues": [
+            "normalized"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "effortPower": {
+          "comparisons": 155,
+          "changedWholeTagVectors": 155,
+          "changedMapMacroF1": 155,
+          "changedJoint": 155,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.014274507867308439,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "confidencePower": {
+          "comparisons": 31,
+          "changedWholeTagVectors": 31,
+          "changedMapMacroF1": 31,
+          "changedJoint": 31,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.00874281154467249,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "dominantShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.05326675073570797,
+          "selectedContextTestedValues": [
+            0.65
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "mixShare": {
+          "comparisons": 62,
+          "changedWholeTagVectors": 62,
+          "changedMapMacroF1": 62,
+          "changedJoint": 62,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.016509821865386187,
+          "selectedContextTestedValues": [
+            0.07
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "secondRel": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 72,
+          "changedMapMacroF1": 72,
+          "changedJoint": 72,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.002089594272256745,
+          "selectedContextTestedValues": [
+            0.9
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "twoTagMaxShare": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.008256211901819688,
+          "selectedContextTestedValues": [
+            0.55
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "familyThresholds": {
+          "comparisons": 93,
+          "changedWholeTagVectors": 93,
+          "changedMapMacroF1": 93,
+          "changedJoint": 93,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.0035711890775462773,
+          "selectedContextTestedValues": [
+            [
+              0.3,
+              0.8
+            ]
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minEvidence": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.25
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "minimumDiversity": {
+          "comparisons": 0,
+          "changedWholeTagVectors": 0,
+          "changedMapMacroF1": 0,
+          "changedJoint": 0,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": null,
+          "selectedContextTestedValues": [
+            0.0
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "lnRatio": {
+          "comparisons": 1116,
+          "changedWholeTagVectors": 1116,
+          "changedMapMacroF1": 1116,
+          "changedJoint": 1116,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.008159285623610346,
+          "selectedContextTestedValues": [
+            0.35
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        },
+        "scorer": {
+          "comparisons": 744,
+          "changedWholeTagVectors": 744,
+          "changedMapMacroF1": 744,
+          "changedJoint": 744,
+          "sameJointButChangedWholeTagVectors": 0,
+          "maxAbsoluteJointDifference": 0.14240663651770058,
+          "selectedContextTestedValues": [
+            "model"
+          ],
+          "selectedContextIdentifiableFromDesign": false
+        }
+      },
+      "fitCoordinates": {
+        "localL2": {
+          "comparisons": 30720,
+          "changedWholeTagVectors": 25070,
+          "changedMapMacroF1": 25043,
+          "changedJoint": 26036,
+          "sameJointButChangedWholeTagVectors": 7,
+          "maxAbsoluteJointDifference": 0.02659374799869485
+        },
+        "strongWeight": {
+          "comparisons": 15360,
+          "changedWholeTagVectors": 6862,
+          "changedMapMacroF1": 6834,
+          "changedJoint": 7376,
+          "sameJointButChangedWholeTagVectors": 13,
+          "maxAbsoluteJointDifference": 0.012165360708409456
+        },
+        "balance": {
+          "comparisons": 7680,
+          "changedWholeTagVectors": 3525,
+          "changedMapMacroF1": 3516,
+          "changedJoint": 4248,
+          "sameJointButChangedWholeTagVectors": 3,
+          "maxAbsoluteJointDifference": 0.010106211062869352
+        }
+      }
+    }
+  ]
+}
