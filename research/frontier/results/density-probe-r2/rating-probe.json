@@ -1,0 +1,2994 @@
+{
+  "scope": "Concept diagnosis only, no trained gate or accuracy estimate. Relative demand uses head-row, not uniform-time, statistics.",
+  "ratingTag": "v1.2.0",
+  "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+  "models": 2,
+  "predictorCalls": 12,
+  "conditions": "7K, OD8, rate1; CTX targets literally identical; existing upstream parameters frozen",
+  "records": [
+    {
+      "id": "C16",
+      "rating": {
+        "model": "detail",
+        "model_identity": "5b0ddc61be53f5107f3b4dfa26a8397aa515e316c16b244878d1fc7039d0ba8f",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 6.437107788296984
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 1000,
+        "end": 9000,
+        "headRows": 128,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 5.67807667186344,
+            "rowP90": 5.972448607507615,
+            "rowMax": 5.972448774043224
+          },
+          "Jbar": {
+            "rowMean": 11.783605216834271,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          },
+          "Jm": {
+            "rowMean": 11.804369425497143,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          },
+          "Jc": {
+            "rowMean": 0.5020179127948803,
+            "rowP90": 0.5267093807038291,
+            "rowMax": 0.5267093807038291
+          },
+          "Ja": {
+            "rowMean": 10.474682094528415,
+            "rowP90": 10.989873425757168,
+            "rowMax": 10.989873425757173
+          },
+          "Pbar": {
+            "rowMean": 15.843228655981942,
+            "rowP90": 16.33873597074722,
+            "rowMax": 16.59258268481353
+          },
+          "Xbar": {
+            "rowMean": 20.862338893489085,
+            "rowP90": 21.780073083363924,
+            "rowMax": 21.7800776557625
+          },
+          "Abar": {
+            "rowMean": 0.9751527241010512,
+            "rowP90": 0.9908465677870473,
+            "rowMax": 0.9908465677870473
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.012383185327053,
+            "rowP90": 1.0082801580429077,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9615467772478392,
+            "rowP90": 0.9612676895439157,
+            "rowMax": 0.9805007972160367
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5509328314580775,
+            "rowP90": 3.7884947548002263,
+            "rowMax": 3.7884947548002263
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 11.804369425497143,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 8938.000000000002,
+        "headRows": 128,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 5.67807667186344,
+            "rowP90": 5.972448607507615,
+            "rowMax": 5.972448774043224
+          },
+          "Jbar": {
+            "rowMean": 11.783605216834271,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          },
+          "Jm": {
+            "rowMean": 11.804369425497143,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          },
+          "Jc": {
+            "rowMean": 0.5020179127948803,
+            "rowP90": 0.5267093807038291,
+            "rowMax": 0.5267093807038291
+          },
+          "Ja": {
+            "rowMean": 10.474682094528415,
+            "rowP90": 10.989873425757168,
+            "rowMax": 10.989873425757173
+          },
+          "Pbar": {
+            "rowMean": 15.843228655981942,
+            "rowP90": 16.33873597074722,
+            "rowMax": 16.59258268481353
+          },
+          "Xbar": {
+            "rowMean": 20.862338893489085,
+            "rowP90": 21.780073083363924,
+            "rowMax": 21.7800776557625
+          },
+          "Abar": {
+            "rowMean": 0.9751527241010512,
+            "rowP90": 0.9908465677870473,
+            "rowMax": 0.9908465677870473
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.012383185327053,
+            "rowP90": 1.0082801580429077,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9615467772478392,
+            "rowP90": 0.9612676895439157,
+            "rowMax": 0.9805007972160367
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5509328314580775,
+            "rowP90": 3.7884947548002263,
+            "rowMax": 3.7884947548002263
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 11.804369425497143,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          }
+        }
+      },
+      "centralTarget": null,
+      "illustrativeRelativeDemand": 0.9507116837683397
+    },
+    {
+      "id": "C24",
+      "rating": {
+        "model": "detail",
+        "model_identity": "5b0ddc61be53f5107f3b4dfa26a8397aa515e316c16b244878d1fc7039d0ba8f",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 9.731943317571572
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 1000,
+        "end": 9000,
+        "headRows": 192,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 9.439711046660088,
+            "rowP90": 9.87423930721034,
+            "rowMax": 9.8742925729777
+          },
+          "Jbar": {
+            "rowMean": 24.852382194442825,
+            "rowP90": 25.92616445549495,
+            "rowMax": 25.926164455495133
+          },
+          "Jm": {
+            "rowMean": 24.891311548280882,
+            "rowP90": 25.92618941178156,
+            "rowMax": 25.926189411781746
+          },
+          "Jc": {
+            "rowMean": 1.0587881049689971,
+            "rowP90": 1.1045345399157016,
+            "rowMax": 1.1045345399157043
+          },
+          "Ja": {
+            "rowMean": 22.985506551654044,
+            "rowP90": 23.97862781477315,
+            "rowMax": 23.978627814773184
+          },
+          "Pbar": {
+            "rowMean": 26.454085147532695,
+            "rowP90": 27.281801915900687,
+            "rowMax": 27.477750289306663
+          },
+          "Xbar": {
+            "rowMean": 36.14748214824992,
+            "rowP90": 37.65876484238573,
+            "rowMax": 37.65882522919232
+          },
+          "Abar": {
+            "rowMean": 0.8685437509917596,
+            "rowP90": 0.8804081894678396,
+            "rowMax": 0.9090098124095524
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.026342500001192,
+            "rowP90": 1.0246611833572388,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9491187607904011,
+            "rowP90": 0.9484682942693097,
+            "rowMax": 0.973917712775788
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5508103236436153,
+            "rowP90": 3.788494754800227,
+            "rowMax": 3.7884947548002303
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 24.891311548280882,
+            "rowP90": 25.92618941178156,
+            "rowMax": 25.926189411781746
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 8958.000000000002,
+        "headRows": 192,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 9.439711046660088,
+            "rowP90": 9.87423930721034,
+            "rowMax": 9.8742925729777
+          },
+          "Jbar": {
+            "rowMean": 24.852382194442825,
+            "rowP90": 25.92616445549495,
+            "rowMax": 25.926164455495133
+          },
+          "Jm": {
+            "rowMean": 24.891311548280882,
+            "rowP90": 25.92618941178156,
+            "rowMax": 25.926189411781746
+          },
+          "Jc": {
+            "rowMean": 1.0587881049689971,
+            "rowP90": 1.1045345399157016,
+            "rowMax": 1.1045345399157043
+          },
+          "Ja": {
+            "rowMean": 22.985506551654044,
+            "rowP90": 23.97862781477315,
+            "rowMax": 23.978627814773184
+          },
+          "Pbar": {
+            "rowMean": 26.454085147532695,
+            "rowP90": 27.281801915900687,
+            "rowMax": 27.477750289306663
+          },
+          "Xbar": {
+            "rowMean": 36.14748214824992,
+            "rowP90": 37.65876484238573,
+            "rowMax": 37.65882522919232
+          },
+          "Abar": {
+            "rowMean": 0.8685437509917596,
+            "rowP90": 0.8804081894678396,
+            "rowMax": 0.9090098124095524
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.026342500001192,
+            "rowP90": 1.0246611833572388,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9491187607904011,
+            "rowP90": 0.9484682942693097,
+            "rowMax": 0.973917712775788
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5508103236436153,
+            "rowP90": 3.788494754800227,
+            "rowMax": 3.7884947548002303
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 24.891311548280882,
+            "rowP90": 25.92618941178156,
+            "rowMax": 25.926189411781746
+          }
+        }
+      },
+      "centralTarget": null,
+      "illustrativeRelativeDemand": 0.9559937482745682
+    },
+    {
+      "id": "C32",
+      "rating": {
+        "model": "detail",
+        "model_identity": "5b0ddc61be53f5107f3b4dfa26a8397aa515e316c16b244878d1fc7039d0ba8f",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 12.439838270900037
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 1000,
+        "end": 9000,
+        "headRows": 256,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 13.688959770652477,
+            "rowP90": 14.231575034239881,
+            "rowMax": 14.281683287435888
+          },
+          "Jbar": {
+            "rowMean": 44.3957594430264,
+            "rowP90": 46.18599937055389,
+            "rowMax": 46.1859993705544
+          },
+          "Jm": {
+            "rowMean": 48.27007097882055,
+            "rowP90": 50.126772913230354,
+            "rowMax": 50.366960754126396
+          },
+          "Jc": {
+            "rowMean": 1.8913962308149395,
+            "rowP90": 1.9676659712960234,
+            "rowMax": 1.9676659712960347
+          },
+          "Ja": {
+            "rowMean": 41.91229857664375,
+            "rowP90": 43.60239401160661,
+            "rowMax": 43.60239401160689
+          },
+          "Pbar": {
+            "rowMean": 34.96662401772194,
+            "rowP90": 36.026194242545735,
+            "rowMax": 36.28436133253144
+          },
+          "Xbar": {
+            "rowMean": 48.695514935413996,
+            "rowP90": 50.65511194396952,
+            "rowMax": 50.674570111343996
+          },
+          "Abar": {
+            "rowMean": 0.6667170635088413,
+            "rowP90": 0.6709908325342562,
+            "rowMax": 0.719666588833168
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0392684983089566,
+            "rowP90": 1.0377999544143677,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9422475318358763,
+            "rowP90": 0.9414450888375302,
+            "rowMax": 0.9702999223692296
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.550725526709514,
+            "rowP90": 3.7884947548002263,
+            "rowMax": 3.7884947548002263
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 48.27007097882055,
+            "rowP90": 50.126772913230354,
+            "rowMax": 50.366960754126396
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 8969.000000000002,
+        "headRows": 256,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 13.688959770652477,
+            "rowP90": 14.231575034239881,
+            "rowMax": 14.281683287435888
+          },
+          "Jbar": {
+            "rowMean": 44.3957594430264,
+            "rowP90": 46.18599937055389,
+            "rowMax": 46.1859993705544
+          },
+          "Jm": {
+            "rowMean": 48.27007097882055,
+            "rowP90": 50.126772913230354,
+            "rowMax": 50.366960754126396
+          },
+          "Jc": {
+            "rowMean": 1.8913962308149395,
+            "rowP90": 1.9676659712960234,
+            "rowMax": 1.9676659712960347
+          },
+          "Ja": {
+            "rowMean": 41.91229857664375,
+            "rowP90": 43.60239401160661,
+            "rowMax": 43.60239401160689
+          },
+          "Pbar": {
+            "rowMean": 34.96662401772194,
+            "rowP90": 36.026194242545735,
+            "rowMax": 36.28436133253144
+          },
+          "Xbar": {
+            "rowMean": 48.695514935413996,
+            "rowP90": 50.65511194396952,
+            "rowMax": 50.674570111343996
+          },
+          "Abar": {
+            "rowMean": 0.6667170635088413,
+            "rowP90": 0.6709908325342562,
+            "rowMax": 0.719666588833168
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0392684983089566,
+            "rowP90": 1.0377999544143677,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9422475318358763,
+            "rowP90": 0.9414450888375302,
+            "rowMax": 0.9702999223692296
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.550725526709514,
+            "rowP90": 3.7884947548002263,
+            "rowMax": 3.7884947548002263
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 48.27007097882055,
+            "rowP90": 50.126772913230354,
+            "rowMax": 50.366960754126396
+          }
+        }
+      },
+      "centralTarget": null,
+      "illustrativeRelativeDemand": 0.9618724377110811
+    },
+    {
+      "id": "C48",
+      "rating": {
+        "model": "detail",
+        "model_identity": "5b0ddc61be53f5107f3b4dfa26a8397aa515e316c16b244878d1fc7039d0ba8f",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 16.051560387075018
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 1000,
+        "end": 9000,
+        "headRows": 384,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 19.476462506864564,
+            "rowP90": 20.012380879169378,
+            "rowMax": 20.094603669220426
+          },
+          "Jbar": {
+            "rowMean": 99.55644192104013,
+            "rowP90": 103.23269705173121,
+            "rowMax": 103.23694741868556
+          },
+          "Jm": {
+            "rowMean": 103.39756281126326,
+            "rowP90": 106.96730614281441,
+            "rowMax": 108.19205516094975
+          },
+          "Jc": {
+            "rowMean": 6.077597200158436,
+            "rowP90": 6.306391438869711,
+            "rowMax": 6.307091376454272
+          },
+          "Ja": {
+            "rowMean": 96.0683701552146,
+            "rowP90": 99.61601836467933,
+            "rowMax": 99.62009295299922
+          },
+          "Pbar": {
+            "rowMean": 46.30856494801217,
+            "rowP90": 47.716226786738716,
+            "rowMax": 47.891478437641744
+          },
+          "Xbar": {
+            "rowMean": 75.66853225427877,
+            "rowP90": 78.51032141790368,
+            "rowMax": 78.5265846833206
+          },
+          "Abar": {
+            "rowMean": 0.48908483838175226,
+            "rowP90": 0.49131587269768756,
+            "rowMax": 0.5743634435610114
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0647060579309862,
+            "rowP90": 1.06373131275177,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9375050245652315,
+            "rowP90": 0.9365721189919936,
+            "rowMax": 0.9677717254054694
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5507053810086284,
+            "rowP90": 3.788494754800234,
+            "rowMax": 3.788494754800241
+          },
+          "SHd": {
+            "rowMean": 0.15977843222378046,
+            "rowP90": 0.16531386788976873,
+            "rowMax": 0.16550831947507563
+          },
+          "HCd": {
+            "rowMean": 0.035839960407613634,
+            "rowP90": 0.03709669651493234,
+            "rowMax": 0.037165259737574494
+          },
+          "Jm_context": {
+            "rowMean": 103.39756281126326,
+            "rowP90": 106.96730614281441,
+            "rowMax": 108.19205516094975
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 8979.000000000002,
+        "headRows": 384,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 19.476462506864564,
+            "rowP90": 20.012380879169378,
+            "rowMax": 20.094603669220426
+          },
+          "Jbar": {
+            "rowMean": 99.55644192104013,
+            "rowP90": 103.23269705173121,
+            "rowMax": 103.23694741868556
+          },
+          "Jm": {
+            "rowMean": 103.39756281126326,
+            "rowP90": 106.96730614281441,
+            "rowMax": 108.19205516094975
+          },
+          "Jc": {
+            "rowMean": 6.077597200158436,
+            "rowP90": 6.306391438869711,
+            "rowMax": 6.307091376454272
+          },
+          "Ja": {
+            "rowMean": 96.0683701552146,
+            "rowP90": 99.61601836467933,
+            "rowMax": 99.62009295299922
+          },
+          "Pbar": {
+            "rowMean": 46.30856494801217,
+            "rowP90": 47.716226786738716,
+            "rowMax": 47.891478437641744
+          },
+          "Xbar": {
+            "rowMean": 75.66853225427877,
+            "rowP90": 78.51032141790368,
+            "rowMax": 78.5265846833206
+          },
+          "Abar": {
+            "rowMean": 0.48908483838175226,
+            "rowP90": 0.49131587269768756,
+            "rowMax": 0.5743634435610114
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0647060579309862,
+            "rowP90": 1.06373131275177,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9375050245652315,
+            "rowP90": 0.9365721189919936,
+            "rowMax": 0.9677717254054694
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5507053810086284,
+            "rowP90": 3.788494754800234,
+            "rowMax": 3.788494754800241
+          },
+          "SHd": {
+            "rowMean": 0.15977843222378046,
+            "rowP90": 0.16531386788976873,
+            "rowMax": 0.16550831947507563
+          },
+          "HCd": {
+            "rowMean": 0.035839960407613634,
+            "rowP90": 0.03709669651493234,
+            "rowMax": 0.037165259737574494
+          },
+          "Jm_context": {
+            "rowMean": 103.39756281126326,
+            "rowP90": 106.96730614281441,
+            "rowMax": 108.19205516094975
+          }
+        }
+      },
+      "centralTarget": null,
+      "illustrativeRelativeDemand": 0.9732206589740332
+    },
+    {
+      "id": "CTX-L",
+      "rating": {
+        "model": "detail",
+        "model_identity": "5b0ddc61be53f5107f3b4dfa26a8397aa515e316c16b244878d1fc7039d0ba8f",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 2.370062823356602
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 9000,
+        "end": 17000,
+        "headRows": 64,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 1.7410939919130195,
+            "rowP90": 1.743093450665645,
+            "rowMax": 1.7430934506657954
+          },
+          "Jbar": {
+            "rowMean": 3.469099004094658,
+            "rowP90": 3.4690990040946623,
+            "rowMax": 3.46909900409467
+          },
+          "Jm": {
+            "rowMean": 3.469099004094658,
+            "rowP90": 3.4690990040946623,
+            "rowMax": 3.46909900409467
+          },
+          "Jc": {
+            "rowMean": 0.1477943133079825,
+            "rowP90": 0.14779431330798293,
+            "rowMax": 0.1477943133079834
+          },
+          "Ja": {
+            "rowMean": 0.7392290735452954,
+            "rowP90": 0.7392290735453001,
+            "rowMax": 0.739229073545302
+          },
+          "Pbar": {
+            "rowMean": 8.894884756511075,
+            "rowP90": 8.894884756511102,
+            "rowMax": 8.894884756511102
+          },
+          "Xbar": {
+            "rowMean": 4.773457692903195,
+            "rowP90": 4.793375938920334,
+            "rowMax": 4.793375938920338
+          },
+          "Abar": {
+            "rowMean": 0.9908465677870444,
+            "rowP90": 0.9908465677870412,
+            "rowMax": 0.9908465677870888
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0019103288650513,
+            "rowP90": 1.0019103288650513,
+            "rowMax": 1.0019103288650513
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999134,
+            "rowP90": 0.9999999999999156,
+            "rowMax": 0.99999999999994
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.5961649182667377,
+            "rowP90": 0.5961649182667446,
+            "rowMax": 0.5961649182667446
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 3.469099004094658,
+            "rowP90": 3.4690990040946623,
+            "rowMax": 3.46909900409467
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 24875.000000000004,
+        "headRows": 192,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 1.6997623232002532,
+            "rowP90": 1.7430934506657916,
+            "rowMax": 1.7435397553526009
+          },
+          "Jbar": {
+            "rowMean": 3.3981318393355564,
+            "rowP90": 3.46909900409467,
+            "rowMax": 3.469099004094672
+          },
+          "Jm": {
+            "rowMean": 3.400480162491552,
+            "rowP90": 3.46909900409467,
+            "rowMax": 3.469099004094672
+          },
+          "Jc": {
+            "rowMean": 0.14477089328722104,
+            "rowP90": 0.1477943133079834,
+            "rowMax": 0.1477943133079834
+          },
+          "Ja": {
+            "rowMean": 0.7241067056350454,
+            "rowP90": 0.739229073545302,
+            "rowMax": 0.739229073545302
+          },
+          "Pbar": {
+            "rowMean": 8.786564260929326,
+            "rowP90": 8.894884756511102,
+            "rowMax": 8.894884756511102
+          },
+          "Xbar": {
+            "rowMean": 4.681219433914171,
+            "rowP90": 4.7933759389203345,
+            "rowMax": 4.797850755144875
+          },
+          "Abar": {
+            "rowMean": 0.9839186074964662,
+            "rowP90": 0.9908465677870888,
+            "rowMax": 0.9908465677870888
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.003410258019964,
+            "rowP90": 1.0019103288650513,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999339,
+            "rowP90": 0.9999999999999878,
+            "rowMax": 0.9999999999999989
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.6421555544724787,
+            "rowP90": 0.8155253264248409,
+            "rowMax": 0.8763419948249191
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 3.400480162491552,
+            "rowP90": 3.46909900409467,
+            "rowMax": 3.469099004094672
+          }
+        }
+      },
+      "centralTarget": {
+        "start": 10000,
+        "end": 16000,
+        "headRows": 48,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 1.7410939919130086,
+            "rowP90": 1.743093450665644,
+            "rowMax": 1.743093450665646
+          },
+          "Jbar": {
+            "rowMean": 3.469099004094655,
+            "rowP90": 3.4690990040946583,
+            "rowMax": 3.4690990040946614
+          },
+          "Jm": {
+            "rowMean": 3.469099004094655,
+            "rowP90": 3.4690990040946583,
+            "rowMax": 3.4690990040946614
+          },
+          "Jc": {
+            "rowMean": 0.14779431330798246,
+            "rowP90": 0.14779431330798262,
+            "rowMax": 0.14779431330798268
+          },
+          "Ja": {
+            "rowMean": 0.7392290735452952,
+            "rowP90": 0.7392290735452981,
+            "rowMax": 0.7392290735452981
+          },
+          "Pbar": {
+            "rowMean": 8.894884756511074,
+            "rowP90": 8.894884756511091,
+            "rowMax": 8.894884756511102
+          },
+          "Xbar": {
+            "rowMean": 4.773457692903197,
+            "rowP90": 4.7933759389203345,
+            "rowMax": 4.793375938920338
+          },
+          "Abar": {
+            "rowMean": 0.9908465677870412,
+            "rowP90": 0.9908465677870412,
+            "rowMax": 0.9908465677870412
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0019103288650513,
+            "rowP90": 1.0019103288650513,
+            "rowMax": 1.0019103288650513
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999117,
+            "rowP90": 0.9999999999999156,
+            "rowMax": 0.9999999999999156
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.5961649182667365,
+            "rowP90": 0.5961649182667446,
+            "rowMax": 0.5961649182667446
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 3.469099004094655,
+            "rowP90": 3.4690990040946583,
+            "rowMax": 3.4690990040946614
+          }
+        }
+      },
+      "illustrativeRelativeDemand": 0.998852925095893
+    },
+    {
+      "id": "CTX-H",
+      "rating": {
+        "model": "detail",
+        "model_identity": "5b0ddc61be53f5107f3b4dfa26a8397aa515e316c16b244878d1fc7039d0ba8f",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 6.257093218969884
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 9000,
+        "end": 17000,
+        "headRows": 64,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 2.6434333245952444,
+            "rowP90": 2.7486757259018737,
+            "rowMax": 4.087591085977211
+          },
+          "Jbar": {
+            "rowMean": 3.832144976077954,
+            "rowP90": 4.937204344866638,
+            "rowMax": 10.366864498480595
+          },
+          "Jm": {
+            "rowMean": 3.809603108708215,
+            "rowP90": 5.148846301990212,
+            "rowMax": 8.480815392520185
+          },
+          "Jc": {
+            "rowMean": 0.3824030331074706,
+            "rowP90": 0.6033052850897787,
+            "rowMax": 4.053654611835305
+          },
+          "Ja": {
+            "rowMean": 1.204752915068969,
+            "rowP90": 2.600447389193026,
+            "rowMax": 8.082116420527132
+          },
+          "Pbar": {
+            "rowMean": 8.984142413434355,
+            "rowP90": 9.038055936968755,
+            "rowMax": 10.435995873400312
+          },
+          "Xbar": {
+            "rowMean": 5.228877299836473,
+            "rowP90": 5.3956924043368275,
+            "rowMax": 11.765252004453927
+          },
+          "Abar": {
+            "rowMean": 0.9908465677870444,
+            "rowP90": 0.9908465677870412,
+            "rowMax": 0.9908465677870888
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0015453677624464,
+            "rowP90": 1.0019103288650513,
+            "rowMax": 1.0019103288650513
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999134,
+            "rowP90": 0.9999999999999156,
+            "rowMax": 0.99999999999994
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.02324506837848289,
+            "rowP90": 0.06527832201428743,
+            "rowMax": 0.32669574869765533
+          },
+          "SHd": {
+            "rowMean": 0.09453695508700598,
+            "rowP90": 0.18813090773747315,
+            "rowMax": 1.4964024910308313
+          },
+          "HCd": {
+            "rowMean": 0.04726847754350299,
+            "rowP90": 0.09406545386873658,
+            "rowMax": 0.7482012455154157
+          },
+          "Jm_context": {
+            "rowMean": 3.809603108708215,
+            "rowP90": 5.148846301990212,
+            "rowMax": 8.480815392520185
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 24875.000000000004,
+        "headRows": 192,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 4.631448917977308,
+            "rowP90": 5.815614050602905,
+            "rowMax": 5.816549681533478
+          },
+          "Jbar": {
+            "rowMean": 9.211921033364916,
+            "rowP90": 12.363175193617382,
+            "rowMax": 12.363175193617382
+          },
+          "Jm": {
+            "rowMean": 9.234212023116038,
+            "rowP90": 12.363175193617382,
+            "rowMax": 12.363175193617383
+          },
+          "Jc": {
+            "rowMean": 6.175704589743887,
+            "rowP90": 9.503262637563441,
+            "rowMax": 9.503262637563441
+          },
+          "Ja": {
+            "rowMean": 7.513785937246172,
+            "rowP90": 11.11653338340257,
+            "rowMax": 11.116533383402611
+          },
+          "Pbar": {
+            "rowMean": 10.862866377549798,
+            "rowP90": 12.065218750156742,
+            "rowMax": 12.065218750156742
+          },
+          "Xbar": {
+            "rowMean": 16.231544002290036,
+            "rowP90": 22.46156921664297,
+            "rowMax": 22.489564934992764
+          },
+          "Abar": {
+            "rowMean": 0.9856859085798341,
+            "rowP90": 0.9908465677870888,
+            "rowMax": 0.9908465677870888
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0265415869653225,
+            "rowP90": 1.0381760597229004,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999339,
+            "rowP90": 0.9999999999999878,
+            "rowMax": 0.9999999999999989
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.8054973663621213,
+            "rowP90": 1.490145024980352,
+            "rowMax": 1.6113370300477325
+          },
+          "SHd": {
+            "rowMean": 1.9632793483043287,
+            "rowP90": 2.999999999999999,
+            "rowMax": 3.0000000000000013
+          },
+          "HCd": {
+            "rowMean": 0.9816396741521644,
+            "rowP90": 1.4999999999999996,
+            "rowMax": 1.5000000000000007
+          },
+          "Jm_context": {
+            "rowMean": 9.234212023116038,
+            "rowP90": 12.363175193617382,
+            "rowMax": 12.363175193617383
+          }
+        }
+      },
+      "centralTarget": {
+        "start": 10000,
+        "end": 16000,
+        "headRows": 48,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 2.561889054706267,
+            "rowP90": 2.5645337063498506,
+            "rowMax": 2.565634213288929
+          },
+          "Jbar": {
+            "rowMean": 3.4145612499683833,
+            "rowP90": 3.4145612499683837,
+            "rowMax": 3.4145612499683837
+          },
+          "Jm": {
+            "rowMean": 3.4145612499683806,
+            "rowP90": 3.4145612499683806,
+            "rowMax": 3.4145612499683806
+          },
+          "Jc": {
+            "rowMean": 0.1454708371402745,
+            "rowP90": 0.1454708371402745,
+            "rowMax": 0.1454708371402745
+          },
+          "Ja": {
+            "rowMean": 0.7276076429209798,
+            "rowP90": 0.7276076429209798,
+            "rowMax": 0.7276076429209798
+          },
+          "Pbar": {
+            "rowMean": 8.894884756511088,
+            "rowP90": 8.894884756511102,
+            "rowMax": 8.894884756511102
+          },
+          "Xbar": {
+            "rowMean": 4.77374656693213,
+            "rowP90": 4.793471285923656,
+            "rowMax": 4.801732412584564
+          },
+          "Abar": {
+            "rowMean": 0.9908465677870412,
+            "rowP90": 0.9908465677870412,
+            "rowMax": 0.9908465677870412
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0019103288650513,
+            "rowP90": 1.0019103288650513,
+            "rowMax": 1.0019103288650513
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999117,
+            "rowP90": 0.9999999999999156,
+            "rowMax": 0.9999999999999156
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 3.4145612499683806,
+            "rowP90": 3.4145612499683806,
+            "rowMax": 3.4145612499683806
+          }
+        }
+      },
+      "illustrativeRelativeDemand": 0.4545407074118338
+    },
+    {
+      "id": "C16",
+      "rating": {
+        "model": "compact",
+        "model_identity": "55216a3abcf6653c4c78b2082c730d64a0ed4bc476d3e477c4789a39f309fb4e",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 6.330784600232881
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 1000,
+        "end": 9000,
+        "headRows": 128,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 5.572038478340972,
+            "rowP90": 5.860999516898663,
+            "rowMax": 5.860999679950421
+          },
+          "Jbar": {
+            "rowMean": 11.783605216834271,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          },
+          "Jm": {
+            "rowMean": 11.804369425497143,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          },
+          "Jc": {
+            "rowMean": 0.5020179127948803,
+            "rowP90": 0.5267093807038291,
+            "rowMax": 0.5267093807038291
+          },
+          "Ja": {
+            "rowMean": 10.474682094528415,
+            "rowP90": 10.989873425757168,
+            "rowMax": 10.989873425757173
+          },
+          "Pbar": {
+            "rowMean": 15.843228655981942,
+            "rowP90": 16.33873597074722,
+            "rowMax": 16.59258268481353
+          },
+          "Xbar": {
+            "rowMean": 20.862338893489085,
+            "rowP90": 21.780073083363924,
+            "rowMax": 21.7800776557625
+          },
+          "Abar": {
+            "rowMean": 0.9751527241010512,
+            "rowP90": 0.9908465677870473,
+            "rowMax": 0.9908465677870473
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.012383185327053,
+            "rowP90": 1.0082801580429077,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9615467772478392,
+            "rowP90": 0.9612676895439157,
+            "rowMax": 0.9805007972160367
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5509328314580775,
+            "rowP90": 3.7884947548002263,
+            "rowMax": 3.7884947548002263
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 11.804369425497143,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 8938.000000000002,
+        "headRows": 128,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 5.572038478340972,
+            "rowP90": 5.860999516898663,
+            "rowMax": 5.860999679950421
+          },
+          "Jbar": {
+            "rowMean": 11.783605216834271,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          },
+          "Jm": {
+            "rowMean": 11.804369425497143,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          },
+          "Jc": {
+            "rowMean": 0.5020179127948803,
+            "rowP90": 0.5267093807038291,
+            "rowMax": 0.5267093807038291
+          },
+          "Ja": {
+            "rowMean": 10.474682094528415,
+            "rowP90": 10.989873425757168,
+            "rowMax": 10.989873425757173
+          },
+          "Pbar": {
+            "rowMean": 15.843228655981942,
+            "rowP90": 16.33873597074722,
+            "rowMax": 16.59258268481353
+          },
+          "Xbar": {
+            "rowMean": 20.862338893489085,
+            "rowP90": 21.780073083363924,
+            "rowMax": 21.7800776557625
+          },
+          "Abar": {
+            "rowMean": 0.9751527241010512,
+            "rowP90": 0.9908465677870473,
+            "rowMax": 0.9908465677870473
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.012383185327053,
+            "rowP90": 1.0082801580429077,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9615467772478392,
+            "rowP90": 0.9612676895439157,
+            "rowMax": 0.9805007972160367
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5509328314580775,
+            "rowP90": 3.7884947548002263,
+            "rowMax": 3.7884947548002263
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 11.804369425497143,
+            "rowP90": 12.363175193617268,
+            "rowMax": 12.363175193617277
+          }
+        }
+      },
+      "centralTarget": null,
+      "illustrativeRelativeDemand": 0.9506976518724243
+    },
+    {
+      "id": "C24",
+      "rating": {
+        "model": "compact",
+        "model_identity": "55216a3abcf6653c4c78b2082c730d64a0ed4bc476d3e477c4789a39f309fb4e",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 9.609686174541354
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 1000,
+        "end": 9000,
+        "headRows": 192,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 9.249399323926438,
+            "rowP90": 9.675330979531203,
+            "rowMax": 9.6753830651833
+          },
+          "Jbar": {
+            "rowMean": 24.852382194442825,
+            "rowP90": 25.92616445549495,
+            "rowMax": 25.926164455495133
+          },
+          "Jm": {
+            "rowMean": 24.891311548280882,
+            "rowP90": 25.92618941178156,
+            "rowMax": 25.926189411781746
+          },
+          "Jc": {
+            "rowMean": 1.0587881049689971,
+            "rowP90": 1.1045345399157016,
+            "rowMax": 1.1045345399157043
+          },
+          "Ja": {
+            "rowMean": 22.985506551654044,
+            "rowP90": 23.97862781477315,
+            "rowMax": 23.978627814773184
+          },
+          "Pbar": {
+            "rowMean": 26.454085147532695,
+            "rowP90": 27.281801915900687,
+            "rowMax": 27.477750289306663
+          },
+          "Xbar": {
+            "rowMean": 36.14748214824992,
+            "rowP90": 37.65876484238573,
+            "rowMax": 37.65882522919232
+          },
+          "Abar": {
+            "rowMean": 0.8685437509917596,
+            "rowP90": 0.8804081894678396,
+            "rowMax": 0.9090098124095524
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.026342500001192,
+            "rowP90": 1.0246611833572388,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9491187607904011,
+            "rowP90": 0.9484682942693097,
+            "rowMax": 0.973917712775788
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5508103236436153,
+            "rowP90": 3.788494754800227,
+            "rowMax": 3.7884947548002303
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 24.891311548280882,
+            "rowP90": 25.92618941178156,
+            "rowMax": 25.926189411781746
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 8958.000000000002,
+        "headRows": 192,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 9.249399323926438,
+            "rowP90": 9.675330979531203,
+            "rowMax": 9.6753830651833
+          },
+          "Jbar": {
+            "rowMean": 24.852382194442825,
+            "rowP90": 25.92616445549495,
+            "rowMax": 25.926164455495133
+          },
+          "Jm": {
+            "rowMean": 24.891311548280882,
+            "rowP90": 25.92618941178156,
+            "rowMax": 25.926189411781746
+          },
+          "Jc": {
+            "rowMean": 1.0587881049689971,
+            "rowP90": 1.1045345399157016,
+            "rowMax": 1.1045345399157043
+          },
+          "Ja": {
+            "rowMean": 22.985506551654044,
+            "rowP90": 23.97862781477315,
+            "rowMax": 23.978627814773184
+          },
+          "Pbar": {
+            "rowMean": 26.454085147532695,
+            "rowP90": 27.281801915900687,
+            "rowMax": 27.477750289306663
+          },
+          "Xbar": {
+            "rowMean": 36.14748214824992,
+            "rowP90": 37.65876484238573,
+            "rowMax": 37.65882522919232
+          },
+          "Abar": {
+            "rowMean": 0.8685437509917596,
+            "rowP90": 0.8804081894678396,
+            "rowMax": 0.9090098124095524
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.026342500001192,
+            "rowP90": 1.0246611833572388,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9491187607904011,
+            "rowP90": 0.9484682942693097,
+            "rowMax": 0.973917712775788
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5508103236436153,
+            "rowP90": 3.788494754800227,
+            "rowMax": 3.7884947548002303
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 24.891311548280882,
+            "rowP90": 25.92618941178156,
+            "rowMax": 25.926189411781746
+          }
+        }
+      },
+      "centralTarget": null,
+      "illustrativeRelativeDemand": 0.9559775622657404
+    },
+    {
+      "id": "C32",
+      "rating": {
+        "model": "compact",
+        "model_identity": "55216a3abcf6653c4c78b2082c730d64a0ed4bc476d3e477c4789a39f309fb4e",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 12.244033493373166
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 1000,
+        "end": 9000,
+        "headRows": 256,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 13.383320230036052,
+            "rowP90": 13.913762132739333,
+            "rowMax": 13.962535299337084
+          },
+          "Jbar": {
+            "rowMean": 44.3957594430264,
+            "rowP90": 46.18599937055389,
+            "rowMax": 46.1859993705544
+          },
+          "Jm": {
+            "rowMean": 48.27007097882055,
+            "rowP90": 50.126772913230354,
+            "rowMax": 50.366960754126396
+          },
+          "Jc": {
+            "rowMean": 1.8913962308149395,
+            "rowP90": 1.9676659712960234,
+            "rowMax": 1.9676659712960347
+          },
+          "Ja": {
+            "rowMean": 41.91229857664375,
+            "rowP90": 43.60239401160661,
+            "rowMax": 43.60239401160689
+          },
+          "Pbar": {
+            "rowMean": 34.96662401772194,
+            "rowP90": 36.026194242545735,
+            "rowMax": 36.28436133253144
+          },
+          "Xbar": {
+            "rowMean": 48.695514935413996,
+            "rowP90": 50.65511194396952,
+            "rowMax": 50.674570111343996
+          },
+          "Abar": {
+            "rowMean": 0.6667170635088413,
+            "rowP90": 0.6709908325342562,
+            "rowMax": 0.719666588833168
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0392684983089566,
+            "rowP90": 1.0377999544143677,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9422475318358763,
+            "rowP90": 0.9414450888375302,
+            "rowMax": 0.9702999223692296
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.550725526709514,
+            "rowP90": 3.7884947548002263,
+            "rowMax": 3.7884947548002263
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 48.27007097882055,
+            "rowP90": 50.126772913230354,
+            "rowMax": 50.366960754126396
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 8969.000000000002,
+        "headRows": 256,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 13.383320230036052,
+            "rowP90": 13.913762132739333,
+            "rowMax": 13.962535299337084
+          },
+          "Jbar": {
+            "rowMean": 44.3957594430264,
+            "rowP90": 46.18599937055389,
+            "rowMax": 46.1859993705544
+          },
+          "Jm": {
+            "rowMean": 48.27007097882055,
+            "rowP90": 50.126772913230354,
+            "rowMax": 50.366960754126396
+          },
+          "Jc": {
+            "rowMean": 1.8913962308149395,
+            "rowP90": 1.9676659712960234,
+            "rowMax": 1.9676659712960347
+          },
+          "Ja": {
+            "rowMean": 41.91229857664375,
+            "rowP90": 43.60239401160661,
+            "rowMax": 43.60239401160689
+          },
+          "Pbar": {
+            "rowMean": 34.96662401772194,
+            "rowP90": 36.026194242545735,
+            "rowMax": 36.28436133253144
+          },
+          "Xbar": {
+            "rowMean": 48.695514935413996,
+            "rowP90": 50.65511194396952,
+            "rowMax": 50.674570111343996
+          },
+          "Abar": {
+            "rowMean": 0.6667170635088413,
+            "rowP90": 0.6709908325342562,
+            "rowMax": 0.719666588833168
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0392684983089566,
+            "rowP90": 1.0377999544143677,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9422475318358763,
+            "rowP90": 0.9414450888375302,
+            "rowMax": 0.9702999223692296
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.550725526709514,
+            "rowP90": 3.7884947548002263,
+            "rowMax": 3.7884947548002263
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 48.27007097882055,
+            "rowP90": 50.126772913230354,
+            "rowMax": 50.366960754126396
+          }
+        }
+      },
+      "centralTarget": null,
+      "illustrativeRelativeDemand": 0.9618764574496252
+    },
+    {
+      "id": "C48",
+      "rating": {
+        "model": "compact",
+        "model_identity": "55216a3abcf6653c4c78b2082c730d64a0ed4bc476d3e477c4789a39f309fb4e",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 15.76187462124059
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 1000,
+        "end": 9000,
+        "headRows": 384,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 19.02113801680899,
+            "rowP90": 19.54459627956731,
+            "rowMax": 19.6240961908201
+          },
+          "Jbar": {
+            "rowMean": 99.55644192104013,
+            "rowP90": 103.23269705173121,
+            "rowMax": 103.23694741868556
+          },
+          "Jm": {
+            "rowMean": 103.39756281126326,
+            "rowP90": 106.96730614281441,
+            "rowMax": 108.19205516094975
+          },
+          "Jc": {
+            "rowMean": 6.077597200158436,
+            "rowP90": 6.306391438869711,
+            "rowMax": 6.307091376454272
+          },
+          "Ja": {
+            "rowMean": 96.0683701552146,
+            "rowP90": 99.61601836467933,
+            "rowMax": 99.62009295299922
+          },
+          "Pbar": {
+            "rowMean": 46.30856494801217,
+            "rowP90": 47.716226786738716,
+            "rowMax": 47.891478437641744
+          },
+          "Xbar": {
+            "rowMean": 75.66853225427877,
+            "rowP90": 78.51032141790368,
+            "rowMax": 78.5265846833206
+          },
+          "Abar": {
+            "rowMean": 0.48908483838175226,
+            "rowP90": 0.49131587269768756,
+            "rowMax": 0.5743634435610114
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0647060579309862,
+            "rowP90": 1.06373131275177,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9375050245652315,
+            "rowP90": 0.9365721189919936,
+            "rowMax": 0.9677717254054694
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5507053810086284,
+            "rowP90": 3.788494754800234,
+            "rowMax": 3.788494754800241
+          },
+          "SHd": {
+            "rowMean": 0.15977843222378046,
+            "rowP90": 0.16531386788976873,
+            "rowMax": 0.16550831947507563
+          },
+          "HCd": {
+            "rowMean": 0.035839960407613634,
+            "rowP90": 0.03709669651493234,
+            "rowMax": 0.037165259737574494
+          },
+          "Jm_context": {
+            "rowMean": 103.39756281126326,
+            "rowP90": 106.96730614281441,
+            "rowMax": 108.19205516094975
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 8979.000000000002,
+        "headRows": 384,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 19.02113801680899,
+            "rowP90": 19.54459627956731,
+            "rowMax": 19.6240961908201
+          },
+          "Jbar": {
+            "rowMean": 99.55644192104013,
+            "rowP90": 103.23269705173121,
+            "rowMax": 103.23694741868556
+          },
+          "Jm": {
+            "rowMean": 103.39756281126326,
+            "rowP90": 106.96730614281441,
+            "rowMax": 108.19205516094975
+          },
+          "Jc": {
+            "rowMean": 6.077597200158436,
+            "rowP90": 6.306391438869711,
+            "rowMax": 6.307091376454272
+          },
+          "Ja": {
+            "rowMean": 96.0683701552146,
+            "rowP90": 99.61601836467933,
+            "rowMax": 99.62009295299922
+          },
+          "Pbar": {
+            "rowMean": 46.30856494801217,
+            "rowP90": 47.716226786738716,
+            "rowMax": 47.891478437641744
+          },
+          "Xbar": {
+            "rowMean": 75.66853225427877,
+            "rowP90": 78.51032141790368,
+            "rowMax": 78.5265846833206
+          },
+          "Abar": {
+            "rowMean": 0.48908483838175226,
+            "rowP90": 0.49131587269768756,
+            "rowMax": 0.5743634435610114
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0647060579309862,
+            "rowP90": 1.06373131275177,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9375050245652315,
+            "rowP90": 0.9365721189919936,
+            "rowMax": 0.9677717254054694
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 3.5507053810086284,
+            "rowP90": 3.788494754800234,
+            "rowMax": 3.788494754800241
+          },
+          "SHd": {
+            "rowMean": 0.15977843222378046,
+            "rowP90": 0.16531386788976873,
+            "rowMax": 0.16550831947507563
+          },
+          "HCd": {
+            "rowMean": 0.035839960407613634,
+            "rowP90": 0.03709669651493234,
+            "rowMax": 0.037165259737574494
+          },
+          "Jm_context": {
+            "rowMean": 103.39756281126326,
+            "rowP90": 106.96730614281441,
+            "rowMax": 108.19205516094975
+          }
+        }
+      },
+      "centralTarget": null,
+      "illustrativeRelativeDemand": 0.9732172383982389
+    },
+    {
+      "id": "CTX-L",
+      "rating": {
+        "model": "compact",
+        "model_identity": "55216a3abcf6653c4c78b2082c730d64a0ed4bc476d3e477c4789a39f309fb4e",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 2.3373326000539993
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 9000,
+        "end": 17000,
+        "headRows": 64,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 1.7071260011890441,
+            "rowP90": 1.7090943697293337,
+            "rowMax": 1.709094369729482
+          },
+          "Jbar": {
+            "rowMean": 3.469099004094658,
+            "rowP90": 3.4690990040946623,
+            "rowMax": 3.46909900409467
+          },
+          "Jm": {
+            "rowMean": 3.469099004094658,
+            "rowP90": 3.4690990040946623,
+            "rowMax": 3.46909900409467
+          },
+          "Jc": {
+            "rowMean": 0.1477943133079825,
+            "rowP90": 0.14779431330798293,
+            "rowMax": 0.1477943133079834
+          },
+          "Ja": {
+            "rowMean": 0.7392290735452954,
+            "rowP90": 0.7392290735453001,
+            "rowMax": 0.739229073545302
+          },
+          "Pbar": {
+            "rowMean": 8.894884756511075,
+            "rowP90": 8.894884756511102,
+            "rowMax": 8.894884756511102
+          },
+          "Xbar": {
+            "rowMean": 4.773457692903195,
+            "rowP90": 4.793375938920334,
+            "rowMax": 4.793375938920338
+          },
+          "Abar": {
+            "rowMean": 0.9908465677870444,
+            "rowP90": 0.9908465677870412,
+            "rowMax": 0.9908465677870888
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0019103288650513,
+            "rowP90": 1.0019103288650513,
+            "rowMax": 1.0019103288650513
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999134,
+            "rowP90": 0.9999999999999156,
+            "rowMax": 0.99999999999994
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.5961649182667377,
+            "rowP90": 0.5961649182667446,
+            "rowMax": 0.5961649182667446
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 3.469099004094658,
+            "rowP90": 3.4690990040946623,
+            "rowMax": 3.46909900409467
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 24875.000000000004,
+        "headRows": 192,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 1.6665642832856802,
+            "rowP90": 1.7090943697294778,
+            "rowMax": 1.7095337241695552
+          },
+          "Jbar": {
+            "rowMean": 3.3981318393355564,
+            "rowP90": 3.46909900409467,
+            "rowMax": 3.469099004094672
+          },
+          "Jm": {
+            "rowMean": 3.400480162491552,
+            "rowP90": 3.46909900409467,
+            "rowMax": 3.469099004094672
+          },
+          "Jc": {
+            "rowMean": 0.14477089328722104,
+            "rowP90": 0.1477943133079834,
+            "rowMax": 0.1477943133079834
+          },
+          "Ja": {
+            "rowMean": 0.7241067056350454,
+            "rowP90": 0.739229073545302,
+            "rowMax": 0.739229073545302
+          },
+          "Pbar": {
+            "rowMean": 8.786564260929326,
+            "rowP90": 8.894884756511102,
+            "rowMax": 8.894884756511102
+          },
+          "Xbar": {
+            "rowMean": 4.681219433914171,
+            "rowP90": 4.7933759389203345,
+            "rowMax": 4.797850755144875
+          },
+          "Abar": {
+            "rowMean": 0.9839186074964662,
+            "rowP90": 0.9908465677870888,
+            "rowMax": 0.9908465677870888
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.003410258019964,
+            "rowP90": 1.0019103288650513,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999339,
+            "rowP90": 0.9999999999999878,
+            "rowMax": 0.9999999999999989
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.6421555544724787,
+            "rowP90": 0.8155253264248409,
+            "rowMax": 0.8763419948249191
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 3.400480162491552,
+            "rowP90": 3.46909900409467,
+            "rowMax": 3.469099004094672
+          }
+        }
+      },
+      "centralTarget": {
+        "start": 10000,
+        "end": 16000,
+        "headRows": 48,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 1.7071260011890328,
+            "rowP90": 1.7090943697293324,
+            "rowMax": 1.7090943697293346
+          },
+          "Jbar": {
+            "rowMean": 3.469099004094655,
+            "rowP90": 3.4690990040946583,
+            "rowMax": 3.4690990040946614
+          },
+          "Jm": {
+            "rowMean": 3.469099004094655,
+            "rowP90": 3.4690990040946583,
+            "rowMax": 3.4690990040946614
+          },
+          "Jc": {
+            "rowMean": 0.14779431330798246,
+            "rowP90": 0.14779431330798262,
+            "rowMax": 0.14779431330798268
+          },
+          "Ja": {
+            "rowMean": 0.7392290735452952,
+            "rowP90": 0.7392290735452981,
+            "rowMax": 0.7392290735452981
+          },
+          "Pbar": {
+            "rowMean": 8.894884756511074,
+            "rowP90": 8.894884756511091,
+            "rowMax": 8.894884756511102
+          },
+          "Xbar": {
+            "rowMean": 4.773457692903197,
+            "rowP90": 4.7933759389203345,
+            "rowMax": 4.793375938920338
+          },
+          "Abar": {
+            "rowMean": 0.9908465677870412,
+            "rowP90": 0.9908465677870412,
+            "rowMax": 0.9908465677870412
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0019103288650513,
+            "rowP90": 1.0019103288650513,
+            "rowMax": 1.0019103288650513
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999117,
+            "rowP90": 0.9999999999999156,
+            "rowMax": 0.9999999999999156
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.5961649182667365,
+            "rowP90": 0.5961649182667446,
+            "rowMax": 0.5961649182667446
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 3.469099004094655,
+            "rowP90": 3.4690990040946583,
+            "rowMax": 3.4690990040946614
+          }
+        }
+      },
+      "illustrativeRelativeDemand": 0.9988482973349533
+    },
+    {
+      "id": "CTX-H",
+      "rating": {
+        "model": "compact",
+        "model_identity": "55216a3abcf6653c4c78b2082c730d64a0ed4bc476d3e477c4789a39f309fb4e",
+        "key_count": 7,
+        "rate": 1.0,
+        "raw_score": 6.149463518818401
+      },
+      "probe": {
+        "source": "private native-grid component observation; not a public upstream API",
+        "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+        "predictorCalls": 1,
+        "mirrorViews": 2,
+        "componentMeaning": "mean of mirror-view component fields; components do not add up to total difficulty",
+        "sourceCoordinateFrame": "SPMRating embedded seven-column frame; native key count retained"
+      },
+      "target": {
+        "start": 9000,
+        "end": 17000,
+        "headRows": 64,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 2.6223495311776377,
+            "rowP90": 2.714085522973219,
+            "rowMax": 4.011299256193462
+          },
+          "Jbar": {
+            "rowMean": 3.832144976077954,
+            "rowP90": 4.937204344866638,
+            "rowMax": 10.366864498480595
+          },
+          "Jm": {
+            "rowMean": 3.809603108708215,
+            "rowP90": 5.148846301990212,
+            "rowMax": 8.480815392520185
+          },
+          "Jc": {
+            "rowMean": 0.3824030331074706,
+            "rowP90": 0.6033052850897787,
+            "rowMax": 4.053654611835305
+          },
+          "Ja": {
+            "rowMean": 1.204752915068969,
+            "rowP90": 2.600447389193026,
+            "rowMax": 8.082116420527132
+          },
+          "Pbar": {
+            "rowMean": 8.984142413434355,
+            "rowP90": 9.038055936968755,
+            "rowMax": 10.435995873400312
+          },
+          "Xbar": {
+            "rowMean": 5.228877299836473,
+            "rowP90": 5.3956924043368275,
+            "rowMax": 11.765252004453927
+          },
+          "Abar": {
+            "rowMean": 0.9908465677870444,
+            "rowP90": 0.9908465677870412,
+            "rowMax": 0.9908465677870888
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0015453677624464,
+            "rowP90": 1.0019103288650513,
+            "rowMax": 1.0019103288650513
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999134,
+            "rowP90": 0.9999999999999156,
+            "rowMax": 0.99999999999994
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.02324506837848289,
+            "rowP90": 0.06527832201428743,
+            "rowMax": 0.32669574869765533
+          },
+          "SHd": {
+            "rowMean": 0.09453695508700598,
+            "rowP90": 0.18813090773747315,
+            "rowMax": 1.4964024910308313
+          },
+          "HCd": {
+            "rowMean": 0.04726847754350299,
+            "rowP90": 0.09406545386873658,
+            "rowMax": 0.7482012455154157
+          },
+          "Jm_context": {
+            "rowMean": 3.809603108708215,
+            "rowP90": 5.148846301990212,
+            "rowMax": 8.480815392520185
+          }
+        }
+      },
+      "whole": {
+        "start": 1000.0,
+        "end": 24875.000000000004,
+        "headRows": 192,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 4.550635668988709,
+            "rowP90": 5.701126095448712,
+            "rowMax": 5.702040720152686
+          },
+          "Jbar": {
+            "rowMean": 9.211921033364916,
+            "rowP90": 12.363175193617382,
+            "rowMax": 12.363175193617382
+          },
+          "Jm": {
+            "rowMean": 9.234212023116038,
+            "rowP90": 12.363175193617382,
+            "rowMax": 12.363175193617383
+          },
+          "Jc": {
+            "rowMean": 6.175704589743887,
+            "rowP90": 9.503262637563441,
+            "rowMax": 9.503262637563441
+          },
+          "Ja": {
+            "rowMean": 7.513785937246172,
+            "rowP90": 11.11653338340257,
+            "rowMax": 11.116533383402611
+          },
+          "Pbar": {
+            "rowMean": 10.862866377549798,
+            "rowP90": 12.065218750156742,
+            "rowMax": 12.065218750156742
+          },
+          "Xbar": {
+            "rowMean": 16.231544002290036,
+            "rowP90": 22.46156921664297,
+            "rowMax": 22.489564934992764
+          },
+          "Abar": {
+            "rowMean": 0.9856859085798341,
+            "rowP90": 0.9908465677870888,
+            "rowMax": 0.9908465677870888
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0265415869653225,
+            "rowP90": 1.0381760597229004,
+            "rowMax": 1.1496034860610962
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999339,
+            "rowP90": 0.9999999999999878,
+            "rowMax": 0.9999999999999989
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.8054973663621213,
+            "rowP90": 1.490145024980352,
+            "rowMax": 1.6113370300477325
+          },
+          "SHd": {
+            "rowMean": 1.9632793483043287,
+            "rowP90": 2.999999999999999,
+            "rowMax": 3.0000000000000013
+          },
+          "HCd": {
+            "rowMean": 0.9816396741521644,
+            "rowP90": 1.4999999999999996,
+            "rowMax": 1.5000000000000007
+          },
+          "Jm_context": {
+            "rowMean": 9.234212023116038,
+            "rowP90": 12.363175193617382,
+            "rowMax": 12.363175193617383
+          }
+        }
+      },
+      "centralTarget": {
+        "start": 10000,
+        "end": 16000,
+        "headRows": 48,
+        "sampling": "existing head-row demand samples; not uniform time or per-tail coverage",
+        "channels": {
+          "demand": {
+            "rowMean": 2.5454440267142844,
+            "rowP90": 2.5480762319688774,
+            "rowMax": 2.54917154744928
+          },
+          "Jbar": {
+            "rowMean": 3.4145612499683833,
+            "rowP90": 3.4145612499683837,
+            "rowMax": 3.4145612499683837
+          },
+          "Jm": {
+            "rowMean": 3.4145612499683806,
+            "rowP90": 3.4145612499683806,
+            "rowMax": 3.4145612499683806
+          },
+          "Jc": {
+            "rowMean": 0.1454708371402745,
+            "rowP90": 0.1454708371402745,
+            "rowMax": 0.1454708371402745
+          },
+          "Ja": {
+            "rowMean": 0.7276076429209798,
+            "rowP90": 0.7276076429209798,
+            "rowMax": 0.7276076429209798
+          },
+          "Pbar": {
+            "rowMean": 8.894884756511088,
+            "rowP90": 8.894884756511102,
+            "rowMax": 8.894884756511102
+          },
+          "Xbar": {
+            "rowMean": 4.77374656693213,
+            "rowP90": 4.793471285923656,
+            "rowMax": 4.801732412584564
+          },
+          "Abar": {
+            "rowMean": 0.9908465677870412,
+            "rowP90": 0.9908465677870412,
+            "rowMax": 0.9908465677870412
+          },
+          "Rbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Cbar": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "CbarV2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "anchor": {
+            "rowMean": 1.0019103288650513,
+            "rowP90": 1.0019103288650513,
+            "rowMax": 1.0019103288650513
+          },
+          "EyeR": {
+            "rowMean": 0.9999999999999117,
+            "rowP90": 0.9999999999999156,
+            "rowMax": 0.9999999999999156
+          },
+          "Chord2": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Recov": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "SHd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "HCd": {
+            "rowMean": 0.0,
+            "rowP90": 0.0,
+            "rowMax": 0.0
+          },
+          "Jm_context": {
+            "rowMean": 3.4145612499683806,
+            "rowP90": 3.4145612499683806,
+            "rowMax": 3.4145612499683806
+          }
+        }
+      },
+      "illustrativeRelativeDemand": 0.4599704492189877
+    }
+  ],
+  "sourceSnapshots": {
+    "rating_bridge.py": "\"\"\"Reuse an existing SPMRating result without invoking its scorer again.\n\nThe public bridge only needs numpy and an already computed include_curve result.\nThe optional component probe is research-only, pinned to upstream v1.2.0; it\nobserves the original predictor in a private namespace, never patches modules.\n\"\"\"\nimport importlib\nfrom pathlib import Path\nimport subprocess\nimport sys\nfrom types import FunctionType, MethodType, SimpleNamespace\nimport numpy as np\n\nRATING_COMMIT = 'a914a405d8e9a77f94c0518567c37511b0b7ac05'\n\n\nclass RatingEvidence:\n    def __init__(self, result, *, expected_keys, expected_rate, channels=None):\n        if result['key_count'] != expected_keys or result['rate'] != expected_rate:\n            raise ValueError('Rating/key-count or post-rate clock mismatch')\n        self.query = np.array(result['query'], dtype=float, copy=True)\n        self.channels = {'demand': np.array(result['field'], dtype=float, copy=True)}\n        self.channels.update({k: np.array(v, dtype=float, copy=True) for k, v in (channels or {}).items()})\n        if self.query.ndim != 1 or not len(self.query) or not np.all(np.isfinite(self.query)) or not np.all(np.diff(self.query) > 0):\n            raise ValueError('Expected strictly increasing finite head-row query times')\n        if any(v.shape != self.query.shape or not np.all(np.isfinite(v)) for v in self.channels.values()):\n            raise ValueError('Finite component arrays on the SAME query grid required')\n        self.metadata = {k: result[k] for k in ['model', 'model_identity', 'key_count', 'rate', 'raw_score']}\n\n    def window(self, start, end):\n        if not np.isfinite(start) or not np.isfinite(end) or not start < end:\n            raise ValueError('Finite nonempty post-rate half-open interval required')\n        take = (self.query >= start) & (self.query < end)\n        count = int(take.sum())\n        return {'start': start, 'end': end, 'headRows': count,\n            'sampling': 'existing head-row demand samples; not uniform time or per-tail coverage',\n            'channels': {k: {'rowMean': float(v[take].mean()) if count else None,\n                'rowP90': float(np.quantile(v[take], .9)) if count else None,\n                'rowMax': float(v[take].max()) if count else None} for k, v in self.channels.items()}}\n\n    def envelope(self):\n        return {**self.metadata, 'clock': 'post-rate milliseconds',\n            'sampling': 'head-row field; headless intervals are missing, NOT zero difficulty',\n            'query': self.query.tolist(), 'channels': {k: v.tolist() for k, v in self.channels.items()}}\n\n\ndef load_rating(root):\n    root = Path(root).resolve()\n    revision = subprocess.check_output(['git', '-C', str(root), 'rev-parse', 'HEAD'], text=True).strip()\n    if revision != RATING_COMMIT:\n        raise ValueError('The private research probe requires the pinned SPMRating v1.2.0 checkout')\n    sys.path.insert(0, str(root))\n    rating = importlib.import_module('spm_rating')\n    if Path(rating.__file__).resolve().parent.parent != root:\n        raise ValueError('A different SPMRating module is already loaded')\n    return rating, importlib.import_module('spm_rating.engine')\n\n\ndef capture_native(notes, model, engine_module):\n    \"\"\"Observe actual native-grid components during ONE predictor call.\n\n    Fractional-source phase extension belongs to the public API. The probe\n    refuses that path rather than silently relabeling one phase as its mean.\n    \"\"\"\n    from spm_rating import role, clock\n    if clock.plan(notes) is not None:\n        raise ValueError('Private component probe does not represent fractional-source phase averaging; use the public curve bridge')\n    if model.physical_objects:\n        notes = role.canonical(notes)\n    original = engine_module.Engine.predict\n    numerical_model = original.__globals__['model']\n    views = []\n\n    def combine(struct, curves, parameters):\n        views.append((struct.t.copy(), {k: v.copy() for k, v in curves.items()\n            if isinstance(v, np.ndarray) and v.shape == struct.t.shape}))\n        return numerical_model.combine(struct, curves, parameters)\n\n    proxy = SimpleNamespace(combine=combine, aggregate=numerical_model.aggregate,\n                            postprocess=numerical_model.postprocess)\n    function = FunctionType(original.__code__, {**original.__globals__, 'model': proxy},\n                            original.__name__, original.__defaults__)\n    function.__kwdefaults__ = original.__kwdefaults__\n    result = MethodType(function, engine_module.Engine())(notes, dict(model.parameters), model.role_price)\n    if len(views) != 2 or any(not np.array_equal(t, result['query']) for t, _ in views):\n        raise ValueError('Upstream view/query contract changed')\n    if set(views[0][1]) != set(views[1][1]):\n        raise ValueError('Upstream component inventories differ')\n    channels = {k: .5*(views[0][1][k]+views[1][1][k]) for k in views[0][1]}\n    public_shape = dict(model=model.name, model_identity=model.identity, key_count=notes.key_count,\n        rate=notes.rate, raw_score=float(result['raw_score']), query=result['query'], field=result['field'])\n    return RatingEvidence(public_shape, expected_keys=notes.key_count, expected_rate=notes.rate, channels=channels), {\n        'source': 'private native-grid component observation; not a public upstream API',\n        'ratingCommit': RATING_COMMIT, 'predictorCalls': 1, 'mirrorViews': 2,\n        'componentMeaning': 'mean of mirror-view component fields; components do not add up to total difficulty',\n        'sourceCoordinateFrame': 'SPMRating embedded seven-column frame; native key count retained'}\n",
+    "probe_density_rating.py": "\"\"\"Pinned Rating inspection of fixed-OD, no-DT human contrasts; no fitting.\"\"\"\nimport json\nfrom pathlib import Path\nimport numpy as np\nfrom rating_bridge import load_rating,capture_native,RATING_COMMIT\n\n\ndef run():\n    root=Path('research/frontier/results/density-probe-r2')\n    tag=json.loads((root/'tag-probe.json').read_text(encoding='utf8'))\n    a,b=[r for r in tag['records']if r['id'].startswith('CTX')]\n    if a['targetHeads']!=b['targetHeads']:raise ValueError('Context target is not physically matched')\n    rating,engine=load_rating('.cache/spm-rating-v1.2.0');records=[]\n    for name in ['detail','compact']:\n        model=rating.load_model(name)\n        for r in tag['records']:\n            notes=engine.parser.parse_file('artifacts/frontier-annotation-r2/'+r['id']+'.osu',rate=1.)\n            e,meta=capture_native(notes,model,engine)\n            whole=e.window(float(e.query[0]),float(np.nextafter(e.query[-1],np.inf)))\n            target=e.window(*r['targetInterval']);reference=whole['channels']['demand']['rowP90']\n            records.append({'id':r['id'],'rating':e.metadata,'probe':meta,'target':target,'whole':whole,\n                'centralTarget':e.window(10000,16000)if r['id'].startswith('CTX')else None,\n                'illustrativeRelativeDemand':target['channels']['demand']['rowMean']/reference if reference>0 else None})\n            print(name,r['id'],'raw',e.metadata['raw_score'],'target D',target['channels']['demand']['rowMean'],flush=True)\n    out={'scope':'Concept diagnosis only, no trained gate or accuracy estimate. Relative demand uses head-row, not uniform-time, statistics.',\n        'ratingTag':'v1.2.0','ratingCommit':RATING_COMMIT,'models':2,'predictorCalls':len(records),\n        'conditions':'7K, OD8, rate1; CTX targets literally identical; existing upstream parameters frozen',\n        'records':records,'sourceSnapshots':{n:Path(__file__).with_name(n).read_text(encoding='utf8')for n in ['rating_bridge.py','probe_density_rating.py']}}\n    (root/'rating-probe.json').write_text(json.dumps(out,ensure_ascii=False,indent=2,allow_nan=False)+'\\n',encoding='utf8')\n\n\nif __name__=='__main__':run()\n"
+  }
+}

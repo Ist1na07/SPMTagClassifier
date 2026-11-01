@@ -1,0 +1,1690 @@
+{
+  "scope": "inner-only boundary/shape diagnosis; no new outer predictions or generalization claims",
+  "maximumNewGradient": 9.405686416013599e-06,
+  "profiles": {
+    "retained3": [
+      {
+        "outer": 0,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 133,
+          "config": {
+            "C": 10.0,
+            "classWeight": null,
+            "effortPower": 1.0,
+            "releaseScaleMs": 30
+          },
+          "threshold": 0.417593601473649,
+          "macroF1": 0.7977150537634409,
+          "releaseF1": 0.7083333333333334,
+          "AP": 0.5564755615345695,
+          "thresholdPartitions": 87
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 10.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.6505617927696092,
+            "macroF1": 0.7630853994490359,
+            "releaseF1": 0.6666666666666666,
+            "AP": 0.5662343275929899,
+            "predictionFlipMassFromSelected": 0.08139534883720931,
+            "probabilityChangeFromSelected": 0.14672832820564718
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 10.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.417593601473649,
+            "macroF1": 0.7977150537634409,
+            "releaseF1": 0.7083333333333334,
+            "AP": 0.5564755615345695,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 100000.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.49290206782274903,
+            "macroF1": 0.7744262295081967,
+            "releaseF1": 0.68,
+            "AP": 0.538892948155546,
+            "predictionFlipMassFromSelected": 0.11627906976744186,
+            "probabilityChangeFromSelected": 0.16804868051012203
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 1000.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.32586581558145367,
+            "macroF1": 0.790957705396208,
+            "releaseF1": 0.7058823529411765,
+            "AP": 0.524517052892372,
+            "predictionFlipMassFromSelected": 0.1511627906976744,
+            "probabilityChangeFromSelected": 0.17557206105698453
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 10000.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.5371699355751762,
+            "macroF1": 0.7409227842080228,
+            "releaseF1": 0.6415094339622641,
+            "AP": 0.5358405487542293,
+            "predictionFlipMassFromSelected": 0.12790697674418605,
+            "probabilityChangeFromSelected": 0.1918580450617873
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 100.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.5659858703398647,
+            "macroF1": 0.7462295081967213,
+            "releaseF1": 0.64,
+            "AP": 0.44069140690826974,
+            "predictionFlipMassFromSelected": 0.16279069767441862,
+            "probabilityChangeFromSelected": 0.20009372094144756
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 100000.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.4441597992604832,
+            "macroF1": 0.7840552416823603,
+            "releaseF1": 0.7037037037037037,
+            "AP": 0.6670260345551584,
+            "predictionFlipMassFromSelected": 0.16279069767441862,
+            "probabilityChangeFromSelected": 0.18637862767717864
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 1000.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.49540745022618393,
+            "macroF1": 0.7033148342582871,
+            "releaseF1": 0.6101694915254238,
+            "AP": 0.44541704664487336,
+            "predictionFlipMassFromSelected": 0.22093023255813954,
+            "probabilityChangeFromSelected": 0.24038854443021587
+          }
+        ]
+      },
+      {
+        "outer": 1,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 143,
+          "config": {
+            "C": 10.0,
+            "classWeight": "balanced",
+            "effortPower": 1.0,
+            "releaseScaleMs": 120
+          },
+          "threshold": 0.6419505949662851,
+          "macroF1": 0.7804878048780488,
+          "releaseF1": 0.6666666666666666,
+          "AP": 0.5656291445240386,
+          "thresholdPartitions": 82
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 100.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.7320453903017738,
+            "macroF1": 0.7269898885143894,
+            "releaseF1": 0.5517241379310345,
+            "AP": 0.4180642660936357,
+            "predictionFlipMassFromSelected": 0.1728395061728395,
+            "probabilityChangeFromSelected": 0.18966065078827843
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 10.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.42613040362557136,
+            "macroF1": 0.7407042600344742,
+            "releaseF1": 0.5806451612903226,
+            "AP": 0.42872861725983863,
+            "predictionFlipMassFromSelected": 0.12345679012345678,
+            "probabilityChangeFromSelected": 0.16231582629846486
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 10.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.6432188739422801,
+            "macroF1": 0.7593378607809846,
+            "releaseF1": 0.631578947368421,
+            "AP": 0.49995769440152454,
+            "predictionFlipMassFromSelected": 0.08641975308641975,
+            "probabilityChangeFromSelected": 0.051428361457124504
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 10.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.6419505949662851,
+            "macroF1": 0.7804878048780488,
+            "releaseF1": 0.6666666666666666,
+            "AP": 0.5656291445240386,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 10.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.6408077695105121,
+            "macroF1": 0.7467166979362101,
+            "releaseF1": 0.6153846153846154,
+            "AP": 0.5181735007283417,
+            "predictionFlipMassFromSelected": 0.024691358024691357,
+            "probabilityChangeFromSelected": 0.05463141694779762
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 10.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.5878239467603235,
+            "macroF1": 0.7107142857142856,
+            "releaseF1": 0.5714285714285714,
+            "AP": 0.3680884381442211,
+            "predictionFlipMassFromSelected": 0.1111111111111111,
+            "probabilityChangeFromSelected": 0.15442237058337238
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 100.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.2922258008605195,
+            "macroF1": 0.7107142857142856,
+            "releaseF1": 0.5714285714285714,
+            "AP": 0.3605252599731772,
+            "predictionFlipMassFromSelected": 0.1111111111111111,
+            "probabilityChangeFromSelected": 0.2515579651607688
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 1000.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.6301265715579538,
+            "macroF1": 0.6785714285714286,
+            "releaseF1": 0.5238095238095238,
+            "AP": 0.32878210466139596,
+            "predictionFlipMassFromSelected": 0.16049382716049382,
+            "probabilityChangeFromSelected": 0.21602420253953647
+          }
+        ]
+      },
+      {
+        "outer": 2,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 172,
+          "config": {
+            "C": 1000.0,
+            "classWeight": "balanced",
+            "effortPower": 1.0,
+            "releaseScaleMs": 15
+          },
+          "threshold": 0.44526035768692407,
+          "macroF1": 0.7771428571428571,
+          "releaseF1": 0.7142857142857143,
+          "AP": 0.6446117042095013,
+          "thresholdPartitions": 79
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 1000.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.44526035768692407,
+            "macroF1": 0.7771428571428571,
+            "releaseF1": 0.7142857142857143,
+            "AP": 0.6446117042095013,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 100.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.31511461868345964,
+            "macroF1": 0.7736815156169995,
+            "releaseF1": 0.7301587301587301,
+            "AP": 0.6417769075626794,
+            "predictionFlipMassFromSelected": 0.11538461538461539,
+            "probabilityChangeFromSelected": 0.05686346877754205
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 100.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.17237822604827055,
+            "macroF1": 0.7736815156169995,
+            "releaseF1": 0.7301587301587301,
+            "AP": 0.5856958793112552,
+            "predictionFlipMassFromSelected": 0.14102564102564102,
+            "probabilityChangeFromSelected": 0.19481703471259484
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 10000.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.3471683283313114,
+            "macroF1": 0.7683033374104491,
+            "releaseF1": 0.711864406779661,
+            "AP": 0.5614427383267216,
+            "predictionFlipMassFromSelected": 0.2692307692307692,
+            "probabilityChangeFromSelected": 0.24315477809254146
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 10000.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.4676118830321059,
+            "macroF1": 0.7523809523809524,
+            "releaseF1": 0.6666666666666666,
+            "AP": 0.6448501063575994,
+            "predictionFlipMassFromSelected": 0.2948717948717949,
+            "probabilityChangeFromSelected": 0.27103987771129173
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 10.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.46741442883912,
+            "macroF1": 0.7204301075268817,
+            "releaseF1": 0.6666666666666666,
+            "AP": 0.4678840019378183,
+            "predictionFlipMassFromSelected": 0.2692307692307692,
+            "probabilityChangeFromSelected": 0.27967192194986273
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 100.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.6512208373832828,
+            "macroF1": 0.7107163771227796,
+            "releaseF1": 0.5957446808510638,
+            "AP": 0.46655266413362606,
+            "predictionFlipMassFromSelected": 0.3717948717948718,
+            "probabilityChangeFromSelected": 0.29299302123642196
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 1000.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.5239850768797532,
+            "macroF1": 0.7115384615384616,
+            "releaseF1": 0.6153846153846154,
+            "AP": 0.47062339702796574,
+            "predictionFlipMassFromSelected": 0.358974358974359,
+            "probabilityChangeFromSelected": 0.30357581029409164
+          }
+        ]
+      },
+      {
+        "outer": 3,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 167,
+          "config": {
+            "C": 1000.0,
+            "classWeight": null,
+            "effortPower": 1.0,
+            "releaseScaleMs": 120
+          },
+          "threshold": 0.2879188592060744,
+          "macroF1": 0.7984189723320159,
+          "releaseF1": 0.7272727272727273,
+          "AP": 0.6322530380029738,
+          "thresholdPartitions": 86
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 100.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.5778697009370521,
+            "macroF1": 0.6933621933621934,
+            "releaseF1": 0.5454545454545454,
+            "AP": 0.4765579837455378,
+            "predictionFlipMassFromSelected": 0.24705882352941178,
+            "probabilityChangeFromSelected": 0.17478731221006777
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 1000.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.1347061281083487,
+            "macroF1": 0.7274393037104901,
+            "releaseF1": 0.6440677966101694,
+            "AP": 0.4910055149966176,
+            "predictionFlipMassFromSelected": 0.18823529411764706,
+            "probabilityChangeFromSelected": 0.16090287136819958
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 1000.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.10643237722678076,
+            "macroF1": 0.771505376344086,
+            "releaseF1": 0.7096774193548387,
+            "AP": 0.5621388367798548,
+            "predictionFlipMassFromSelected": 0.12941176470588237,
+            "probabilityChangeFromSelected": 0.09572893428690268
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 1000.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.2879188592060744,
+            "macroF1": 0.7984189723320159,
+            "releaseF1": 0.7272727272727273,
+            "AP": 0.6322530380029738,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 100000.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.6913866468208025,
+            "macroF1": 0.7669730688598613,
+            "releaseF1": 0.6792452830188679,
+            "AP": 0.5657699420408091,
+            "predictionFlipMassFromSelected": 0.11764705882352941,
+            "probabilityChangeFromSelected": 0.14680915369030575
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 1000.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.39670298192490916,
+            "macroF1": 0.7177865612648222,
+            "releaseF1": 0.6181818181818182,
+            "AP": 0.44885401307911,
+            "predictionFlipMassFromSelected": 0.16470588235294117,
+            "probabilityChangeFromSelected": 0.1837003522800849
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 1000.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.525195659414323,
+            "macroF1": 0.7228691197019097,
+            "releaseF1": 0.631578947368421,
+            "AP": 0.4062950089998463,
+            "predictionFlipMassFromSelected": 0.23529411764705882,
+            "probabilityChangeFromSelected": 0.24080838971495871
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 1000.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.5728209222682725,
+            "macroF1": 0.6989374262101535,
+            "releaseF1": 0.5714285714285714,
+            "AP": 0.41066873567059003,
+            "predictionFlipMassFromSelected": 0.2823529411764706,
+            "probabilityChangeFromSelected": 0.22961379565282133
+          }
+        ]
+      },
+      {
+        "outer": 4,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 344,
+          "config": {
+            "C": 10.0,
+            "classWeight": "balanced",
+            "effortPower": 0.0,
+            "releaseScaleMs": 240
+          },
+          "threshold": 0.5531248943181764,
+          "macroF1": 0.8458333333333333,
+          "releaseF1": 0.7916666666666666,
+          "AP": 0.7617409405550902,
+          "thresholdPartitions": 75
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 10.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.5277680414271615,
+            "macroF1": 0.7711811997526283,
+            "releaseF1": 0.6938775510204082,
+            "AP": 0.6616817226018301,
+            "predictionFlipMassFromSelected": 0.20270270270270271,
+            "probabilityChangeFromSelected": 0.18576568691139803
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 100.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.6684633170841191,
+            "macroF1": 0.8285232778597009,
+            "releaseF1": 0.7659574468085106,
+            "AP": 0.7343941678164637,
+            "predictionFlipMassFromSelected": 0.12162162162162163,
+            "probabilityChangeFromSelected": 0.16616395220683744
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 100.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.7684890568918621,
+            "macroF1": 0.8422847399829497,
+            "releaseF1": 0.782608695652174,
+            "AP": 0.799452319147715,
+            "predictionFlipMassFromSelected": 0.10810810810810811,
+            "probabilityChangeFromSelected": 0.13217918741742418
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 100.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.730511177866591,
+            "macroF1": 0.8422847399829497,
+            "releaseF1": 0.782608695652174,
+            "AP": 0.8337749140727558,
+            "predictionFlipMassFromSelected": 0.05405405405405406,
+            "probabilityChangeFromSelected": 0.09517216819252187
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 10.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.5531248943181764,
+            "macroF1": 0.8458333333333333,
+            "releaseF1": 0.7916666666666666,
+            "AP": 0.7617409405550902,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 10.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.40831283743672625,
+            "macroF1": 0.8422847399829497,
+            "releaseF1": 0.782608695652174,
+            "AP": 0.8251163227509376,
+            "predictionFlipMassFromSelected": 0.02702702702702703,
+            "probabilityChangeFromSelected": 0.07595691678214042
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 100.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.5224317109961253,
+            "macroF1": 0.8285232778597009,
+            "releaseF1": 0.7659574468085106,
+            "AP": 0.8140118238422048,
+            "predictionFlipMassFromSelected": 0.0945945945945946,
+            "probabilityChangeFromSelected": 0.11876910536955435
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 1000.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.47638682093466234,
+            "macroF1": 0.7841666666666667,
+            "releaseF1": 0.7083333333333334,
+            "AP": 0.7049913343124132,
+            "predictionFlipMassFromSelected": 0.10810810810810811,
+            "probabilityChangeFromSelected": 0.12887269896818349
+          }
+        ]
+      },
+      {
+        "outer": 5,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 149,
+          "config": {
+            "C": 100.0,
+            "classWeight": null,
+            "effortPower": 1.0,
+            "releaseScaleMs": 30
+          },
+          "threshold": 0.44757370832821747,
+          "macroF1": 0.8081925839642787,
+          "releaseF1": 0.7450980392156863,
+          "AP": 0.5741056298895959,
+          "thresholdPartitions": 77
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 100.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.42456646591285985,
+            "macroF1": 0.7922361946418808,
+            "releaseF1": 0.7457627118644068,
+            "AP": 0.5748388041889859,
+            "predictionFlipMassFromSelected": 0.10526315789473684,
+            "probabilityChangeFromSelected": 0.1180440907567584
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 100.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.44757370832821747,
+            "macroF1": 0.8081925839642787,
+            "releaseF1": 0.7450980392156863,
+            "AP": 0.5741056298895959,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 100.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.5912871664160209,
+            "macroF1": 0.8042401426590053,
+            "releaseF1": 0.7346938775510204,
+            "AP": 0.5563561637748431,
+            "predictionFlipMassFromSelected": 0.10526315789473684,
+            "probabilityChangeFromSelected": 0.1583604329884247
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 100.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.5577580918738221,
+            "macroF1": 0.7953846153846154,
+            "releaseF1": 0.7307692307692307,
+            "AP": 0.6125549227293106,
+            "predictionFlipMassFromSelected": 0.09210526315789473,
+            "probabilityChangeFromSelected": 0.12480704060492179
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 100.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.21338044256308497,
+            "macroF1": 0.7490829053558328,
+            "releaseF1": 0.6896551724137931,
+            "AP": 0.5860148662474083,
+            "predictionFlipMassFromSelected": 0.17105263157894737,
+            "probabilityChangeFromSelected": 0.1695291553215422
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 10.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.4767364107921175,
+            "macroF1": 0.7052631578947368,
+            "releaseF1": 0.631578947368421,
+            "AP": 0.48564865894126136,
+            "predictionFlipMassFromSelected": 0.18421052631578946,
+            "probabilityChangeFromSelected": 0.23375585814634184
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 100.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.203730226201214,
+            "macroF1": 0.700358422939068,
+            "releaseF1": 0.6451612903225806,
+            "AP": 0.4199482368534014,
+            "predictionFlipMassFromSelected": 0.2236842105263158,
+            "probabilityChangeFromSelected": 0.25453532571802456
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 10000.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.5303453337785569,
+            "macroF1": 0.7369230769230769,
+            "releaseF1": 0.6538461538461539,
+            "AP": 0.6141326849191514,
+            "predictionFlipMassFromSelected": 0.19736842105263158,
+            "probabilityChangeFromSelected": 0.23593344408011152
+          }
+        ]
+      }
+    ],
+    "rating_plus_retained3": [
+      {
+        "outer": 0,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 125,
+          "config": {
+            "C": 1.0,
+            "classWeight": "balanced",
+            "effortPower": 1.0,
+            "releaseScaleMs": 30
+          },
+          "threshold": 0.5088818519644263,
+          "macroF1": 0.7507246376811594,
+          "releaseF1": 0.6666666666666666,
+          "AP": 0.46180855126171605,
+          "thresholdPartitions": 87
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.4567114338218901,
+            "macroF1": 0.7409227842080228,
+            "releaseF1": 0.6415094339622641,
+            "AP": 0.46428005028152175,
+            "predictionFlipMassFromSelected": 0.046511627906976744,
+            "probabilityChangeFromSelected": 0.0651500380634114
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 1.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.5088818519644263,
+            "macroF1": 0.7507246376811594,
+            "releaseF1": 0.6666666666666666,
+            "AP": 0.46180855126171605,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 1.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.5113469811916651,
+            "macroF1": 0.7244851258581235,
+            "releaseF1": 0.631578947368421,
+            "AP": 0.4438273046263774,
+            "predictionFlipMassFromSelected": 0.023255813953488372,
+            "probabilityChangeFromSelected": 0.013418647166642905
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.5390618137387271,
+            "macroF1": 0.7243589743589745,
+            "releaseF1": 0.6153846153846154,
+            "AP": 0.4390034743978755,
+            "predictionFlipMassFromSelected": 0.05813953488372093,
+            "probabilityChangeFromSelected": 0.05821581604852192
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 1.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.5538437415793771,
+            "macroF1": 0.7300690521029505,
+            "releaseF1": 0.6296296296296297,
+            "AP": 0.4335216311885445,
+            "predictionFlipMassFromSelected": 0.03488372093023256,
+            "probabilityChangeFromSelected": 0.03427779925966488
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 1.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.4478327853307178,
+            "macroF1": 0.7352216748768473,
+            "releaseF1": 0.6428571428571429,
+            "AP": 0.4410293438066131,
+            "predictionFlipMassFromSelected": 0.03488372093023256,
+            "probabilityChangeFromSelected": 0.04383213726424185
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.25814865240647955,
+            "macroF1": 0.7244851258581235,
+            "releaseF1": 0.631578947368421,
+            "AP": 0.4380411185045052,
+            "predictionFlipMassFromSelected": 0.046511627906976744,
+            "probabilityChangeFromSelected": 0.09039507870084885
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.30515094658096464,
+            "macroF1": 0.7352216748768473,
+            "releaseF1": 0.6428571428571429,
+            "AP": 0.4524206488480325,
+            "predictionFlipMassFromSelected": 0.05813953488372093,
+            "probabilityChangeFromSelected": 0.08921630532635685
+          }
+        ]
+      },
+      {
+        "outer": 1,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 333,
+          "config": {
+            "C": 1.0,
+            "classWeight": "balanced",
+            "effortPower": 1.0,
+            "releaseScaleMs": 480
+          },
+          "threshold": 0.5767911724921146,
+          "macroF1": 0.7805959123368629,
+          "releaseF1": 0.6451612903225806,
+          "AP": 0.5522701142586053,
+          "thresholdPartitions": 82
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 0.01,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.6477599791521877,
+            "macroF1": 0.6902137232845894,
+            "releaseF1": 0.5142857142857142,
+            "AP": 0.37840515022608445,
+            "predictionFlipMassFromSelected": 0.14814814814814814,
+            "probabilityChangeFromSelected": 0.25439821855055755
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 0.1,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.4923147797730085,
+            "macroF1": 0.6964017991004497,
+            "releaseF1": 0.5652173913043478,
+            "AP": 0.41381626950240524,
+            "predictionFlipMassFromSelected": 0.18518518518518517,
+            "probabilityChangeFromSelected": 0.16642774422660278
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.3700365450992323,
+            "macroF1": 0.7145877378435518,
+            "releaseF1": 0.5454545454545454,
+            "AP": 0.4928641637183565,
+            "predictionFlipMassFromSelected": 0.04938271604938271,
+            "probabilityChangeFromSelected": 0.09049558106985196
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 1.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.498181114400035,
+            "macroF1": 0.7526427061310783,
+            "releaseF1": 0.6060606060606061,
+            "AP": 0.5373532833235751,
+            "predictionFlipMassFromSelected": 0.024691358024691357,
+            "probabilityChangeFromSelected": 0.04898613993236974
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 1.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.5993778421758302,
+            "macroF1": 0.7805959123368629,
+            "releaseF1": 0.6451612903225806,
+            "AP": 0.5499428283468313,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.02669970898686216
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 1.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.5767911724921146,
+            "macroF1": 0.7805959123368629,
+            "releaseF1": 0.6451612903225806,
+            "AP": 0.5522701142586053,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.27948116767580267,
+            "macroF1": 0.7142857142857143,
+            "releaseF1": 0.5555555555555556,
+            "AP": 0.4943266831394897,
+            "predictionFlipMassFromSelected": 0.06172839506172839,
+            "probabilityChangeFromSelected": 0.06454200641773711
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.2873963329924001,
+            "macroF1": 0.7145877378435518,
+            "releaseF1": 0.5454545454545454,
+            "AP": 0.49587121126818046,
+            "predictionFlipMassFromSelected": 0.04938271604938271,
+            "probabilityChangeFromSelected": 0.08433553949467892
+          }
+        ]
+      },
+      {
+        "outer": 2,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 112,
+          "config": {
+            "C": 1.0,
+            "classWeight": null,
+            "effortPower": 0.0,
+            "releaseScaleMs": 15
+          },
+          "threshold": 0.5902597479570599,
+          "macroF1": 0.6802654694514934,
+          "releaseF1": 0.5531914893617021,
+          "AP": 0.43954534436758813,
+          "thresholdPartitions": 79
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.5902597479570599,
+            "macroF1": 0.6802654694514934,
+            "releaseF1": 0.5531914893617021,
+            "AP": 0.43954534436758813,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.5887798517913985,
+            "macroF1": 0.6802654694514934,
+            "releaseF1": 0.5531914893617021,
+            "AP": 0.4386664118923135,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.009199934682027015
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 0.1,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.6958636041155466,
+            "macroF1": 0.6628935995060712,
+            "releaseF1": 0.5116279069767442,
+            "AP": 0.4407675013677643,
+            "predictionFlipMassFromSelected": 0.10256410256410256,
+            "probabilityChangeFromSelected": 0.12042427040243688
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 100000.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.9999982217518721,
+            "macroF1": 0.6637931034482758,
+            "releaseF1": 0.5,
+            "AP": 0.4265511875845627,
+            "predictionFlipMassFromSelected": 0.08974358974358974,
+            "probabilityChangeFromSelected": 0.18471142219594494
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.45052085654222773,
+            "macroF1": 0.6649859943977592,
+            "releaseF1": 0.5490196078431373,
+            "AP": 0.42672708979575713,
+            "predictionFlipMassFromSelected": 0.05128205128205128,
+            "probabilityChangeFromSelected": 0.029651141292320455
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 0.1,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.6568203398818822,
+            "macroF1": 0.6720720720720721,
+            "releaseF1": 0.5333333333333333,
+            "AP": 0.4239901225600459,
+            "predictionFlipMassFromSelected": 0.10256410256410256,
+            "probabilityChangeFromSelected": 0.1194941193013853
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 10.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.8740329326158287,
+            "macroF1": 0.6741854636591479,
+            "releaseF1": 0.5238095238095238,
+            "AP": 0.42248869712988596,
+            "predictionFlipMassFromSelected": 0.0641025641025641,
+            "probabilityChangeFromSelected": 0.11760726514088418
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 1e-07,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.5000009337207842,
+            "macroF1": 0.675,
+            "releaseF1": 0.6,
+            "AP": 0.4312820121897954,
+            "predictionFlipMassFromSelected": 0.2948717948717949,
+            "probabilityChangeFromSelected": 0.32575611574205265
+          }
+        ]
+      },
+      {
+        "outer": 3,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 323,
+          "config": {
+            "C": 1.0,
+            "classWeight": null,
+            "effortPower": 0.0,
+            "releaseScaleMs": "infinity"
+          },
+          "threshold": 0.5824266124888572,
+          "macroF1": 0.7353964475370811,
+          "releaseF1": 0.6046511627906976,
+          "AP": 0.6050265817083068,
+          "thresholdPartitions": 86
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 0.1,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.4907280152083137,
+            "macroF1": 0.7096994535519126,
+            "releaseF1": 0.5833333333333334,
+            "AP": 0.47457252564267594,
+            "predictionFlipMassFromSelected": 0.17647058823529413,
+            "probabilityChangeFromSelected": 0.15050645865725518
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 0.1,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.4902476154060632,
+            "macroF1": 0.7096994535519126,
+            "releaseF1": 0.5833333333333334,
+            "AP": 0.4804108399049032,
+            "predictionFlipMassFromSelected": 0.17647058823529413,
+            "probabilityChangeFromSelected": 0.14938505372679386
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 1000.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.9998602544476531,
+            "macroF1": 0.7301587301587301,
+            "releaseF1": 0.5714285714285714,
+            "AP": 0.5854729126409652,
+            "predictionFlipMassFromSelected": 0.09411764705882353,
+            "probabilityChangeFromSelected": 0.19161499463674253
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 100.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.9956549464430386,
+            "macroF1": 0.7301587301587301,
+            "releaseF1": 0.5714285714285714,
+            "AP": 0.6077448369049893,
+            "predictionFlipMassFromSelected": 0.09411764705882353,
+            "probabilityChangeFromSelected": 0.15650249620030415
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 1.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.8990293368815283,
+            "macroF1": 0.7180762852404643,
+            "releaseF1": 0.5555555555555556,
+            "AP": 0.6450297559711419,
+            "predictionFlipMassFromSelected": 0.08235294117647059,
+            "probabilityChangeFromSelected": 0.12510347564680416
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 10.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.9634018791166177,
+            "macroF1": 0.7180762852404643,
+            "releaseF1": 0.5555555555555556,
+            "AP": 0.6384832197365512,
+            "predictionFlipMassFromSelected": 0.08235294117647059,
+            "probabilityChangeFromSelected": 0.13849265287372242
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.8757018717628919,
+            "macroF1": 0.7301587301587301,
+            "releaseF1": 0.5714285714285714,
+            "AP": 0.6203802115101105,
+            "predictionFlipMassFromSelected": 0.09411764705882353,
+            "probabilityChangeFromSelected": 0.09661903060804228
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.5824266124888572,
+            "macroF1": 0.7353964475370811,
+            "releaseF1": 0.6046511627906976,
+            "AP": 0.6050265817083068,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          }
+        ]
+      },
+      {
+        "outer": 4,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 108,
+          "config": {
+            "C": 0.1,
+            "classWeight": "balanced",
+            "effortPower": 1.0,
+            "releaseScaleMs": 15
+          },
+          "threshold": 0.40286018940323237,
+          "macroF1": 0.8354558318172629,
+          "releaseF1": 0.7843137254901961,
+          "AP": 0.7997927763593331,
+          "thresholdPartitions": 75
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 0.1,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.40286018940323237,
+            "macroF1": 0.8354558318172629,
+            "releaseF1": 0.7843137254901961,
+            "AP": 0.7997927763593331,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 1000.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.9537468703431138,
+            "macroF1": 0.8337825696316262,
+            "releaseF1": 0.7619047619047619,
+            "AP": 0.7843622795768455,
+            "predictionFlipMassFromSelected": 0.14864864864864866,
+            "probabilityChangeFromSelected": 0.2139302461041941
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 0.1,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.4245105790859377,
+            "macroF1": 0.8321995464852607,
+            "releaseF1": 0.7755102040816326,
+            "AP": 0.7927168407454961,
+            "predictionFlipMassFromSelected": 0.02702702702702703,
+            "probabilityChangeFromSelected": 0.016859278460559235
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 0.1,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.37602060674337145,
+            "macroF1": 0.8221153846153846,
+            "releaseF1": 0.7692307692307693,
+            "AP": 0.7892138674744735,
+            "predictionFlipMassFromSelected": 0.04054054054054054,
+            "probabilityChangeFromSelected": 0.02768837398219975
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.6549753554963509,
+            "macroF1": 0.8197120708748615,
+            "releaseF1": 0.7441860465116279,
+            "AP": 0.773110417936753,
+            "predictionFlipMassFromSelected": 0.13513513513513514,
+            "probabilityChangeFromSelected": 0.12511015066538647
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.7211477460542495,
+            "macroF1": 0.8287037037037037,
+            "releaseF1": 0.75,
+            "AP": 0.7764352261412921,
+            "predictionFlipMassFromSelected": 0.14864864864864866,
+            "probabilityChangeFromSelected": 0.12100440077323196
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 0.1,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.35667906527516247,
+            "macroF1": 0.8221153846153846,
+            "releaseF1": 0.7692307692307693,
+            "AP": 0.7987407286848682,
+            "predictionFlipMassFromSelected": 0.04054054054054054,
+            "probabilityChangeFromSelected": 0.03331257224530837
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 0.1,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.39761841451659685,
+            "macroF1": 0.8321995464852607,
+            "releaseF1": 0.7755102040816326,
+            "AP": 0.8218276074375233,
+            "predictionFlipMassFromSelected": 0.02702702702702703,
+            "probabilityChangeFromSelected": 0.03374225590524335
+          }
+        ]
+      },
+      {
+        "outer": 5,
+        "selection": {
+          "usesOuterLabels": false,
+          "configId": 328,
+          "config": {
+            "C": 1.0,
+            "classWeight": "balanced",
+            "effortPower": 0.0,
+            "releaseScaleMs": 240
+          },
+          "threshold": 0.5062609379302188,
+          "macroF1": 0.7868589743589745,
+          "releaseF1": 0.7083333333333334,
+          "AP": 0.5631007292450951,
+          "thresholdPartitions": 77
+        },
+        "points": [
+          {
+            "shape": 15,
+            "config": {
+              "C": 1000.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 15
+            },
+            "threshold": 0.993960332379914,
+            "macroF1": 0.7689969604863222,
+            "releaseF1": 0.6808510638297872,
+            "AP": 0.5340516691590015,
+            "predictionFlipMassFromSelected": 0.09210526315789473,
+            "probabilityChangeFromSelected": 0.14694389736877933
+          },
+          {
+            "shape": 30,
+            "config": {
+              "C": 10000.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 30
+            },
+            "threshold": 0.9969878069691382,
+            "macroF1": 0.7689969604863222,
+            "releaseF1": 0.6808510638297872,
+            "AP": 0.5352300156761615,
+            "predictionFlipMassFromSelected": 0.09210526315789473,
+            "probabilityChangeFromSelected": 0.1585386483982994
+          },
+          {
+            "shape": 60,
+            "config": {
+              "C": 100000.0,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 60
+            },
+            "threshold": 0.9985918694252046,
+            "macroF1": 0.7689969604863222,
+            "releaseF1": 0.6808510638297872,
+            "AP": 0.5335405251167158,
+            "predictionFlipMassFromSelected": 0.09210526315789473,
+            "probabilityChangeFromSelected": 0.1504376783104419
+          },
+          {
+            "shape": 120,
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 0.0,
+              "releaseScaleMs": 120
+            },
+            "threshold": 0.3807589528093857,
+            "macroF1": 0.7868589743589745,
+            "releaseF1": 0.7083333333333334,
+            "AP": 0.5588276359164915,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.03920316398037554
+          },
+          {
+            "shape": 240,
+            "config": {
+              "C": 1.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 240
+            },
+            "threshold": 0.5062609379302188,
+            "macroF1": 0.7868589743589745,
+            "releaseF1": 0.7083333333333334,
+            "AP": 0.5631007292450951,
+            "predictionFlipMassFromSelected": 0.0,
+            "probabilityChangeFromSelected": 0.0
+          },
+          {
+            "shape": 480,
+            "config": {
+              "C": 1.0,
+              "classWeight": "balanced",
+              "effortPower": 0.0,
+              "releaseScaleMs": 480
+            },
+            "threshold": 0.4773468506500206,
+            "macroF1": 0.7741232415296215,
+            "releaseF1": 0.6938775510204082,
+            "AP": 0.558287466230197,
+            "predictionFlipMassFromSelected": 0.013157894736842105,
+            "probabilityChangeFromSelected": 0.01390805614481918
+          },
+          {
+            "shape": 960,
+            "config": {
+              "C": 0.1,
+              "classWeight": "balanced",
+              "effortPower": 1.0,
+              "releaseScaleMs": 960
+            },
+            "threshold": 0.4546645190864205,
+            "macroF1": 0.7702191987906274,
+            "releaseF1": 0.7037037037037037,
+            "AP": 0.5513413376335381,
+            "predictionFlipMassFromSelected": 0.13157894736842105,
+            "probabilityChangeFromSelected": 0.18528477934284251
+          },
+          {
+            "shape": "infinity",
+            "config": {
+              "C": 1.0,
+              "classWeight": null,
+              "effortPower": 1.0,
+              "releaseScaleMs": "infinity"
+            },
+            "threshold": 0.40761617153148927,
+            "macroF1": 0.7632398753894081,
+            "releaseF1": 0.6666666666666666,
+            "AP": 0.6243460620830122,
+            "predictionFlipMassFromSelected": 0.09210526315789473,
+            "probabilityChangeFromSelected": 0.10922714345393834
+          }
+        ]
+      }
+    ]
+  }
+}

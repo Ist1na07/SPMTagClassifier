@@ -1,0 +1,2935 @@
+{
+  "scope": "diagnosis on user-annotated conceptual contrasts; not accuracy estimation",
+  "records": [
+    {
+      "id": "A01",
+      "speedRate": 1,
+      "keys": 7,
+      "heads": 64,
+      "noteRate": 8.125952260030472,
+      "outputs": {
+        "stable": {
+          "overall": {
+            "tags": [
+              "speed"
+            ],
+            "sort": "rc",
+            "weights": {
+              "speed": 7.473822139815514
+            },
+            "composition": {
+              "speed": 1
+            },
+            "scoreKind": "legacy decision scores; distribution is normalized affinity, not calibrated confidence"
+          },
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8875,
+              "tag": "speed",
+              "confidence": 0.949056779659113,
+              "geometry": {
+                "start": 1000,
+                "end": 8875,
+                "anchor": {
+                  "peakShare": 0.25396825396825395,
+                  "peakExcess": 0.12962962962962962,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.015873015873015872,
+                  "regularity": 1,
+                  "regularAnchor": 0.12962962962962962
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        },
+        "modern": {
+          "overall": {
+            "tags": [
+              "speed"
+            ],
+            "sort": "rc",
+            "weights": {
+              "speed": 7.875
+            },
+            "shares": {
+              "speed": 1
+            },
+            "diversity": 0,
+            "distribution": null,
+            "activeWeight": 7.875,
+            "scores": {
+              "speed": 1
+            },
+            "composition": {
+              "speed": 1
+            },
+            "compositionKind": "weighted primary-label composition, conditional on concrete non-Break labels",
+            "scoreKind": "retrospectively tuned decision support; not calibrated correctness; weights retain weighted seconds"
+          },
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8876,
+              "tag": "speed",
+              "confidence": 0.64749269370125,
+              "geometry": {
+                "start": 1000,
+                "end": 8875,
+                "anchor": {
+                  "peakShare": 0.25396825396825395,
+                  "peakExcess": 0.12962962962962962,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.015873015873015872,
+                  "regularity": 1,
+                  "regularAnchor": 0.12962962962962962
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        }
+      },
+      "experimentalSharedCoarse7": {
+        "scope": "shared 4K/7K morphology head, not public 7K fine classification",
+        "none": {
+          "dominant": "speed",
+          "composition": {
+            "jack": 0.0010900792769685294,
+            "chordstream": 0.0025673258241747823,
+            "speed": 0.9960470395454623,
+            "tech": 0.00007227879414400299,
+            "ln": 0.00022327655925049832
+          },
+          "familyMass": {
+            "ln": 0.00022327655925049832,
+            "rc": 0.9997767234407495
+          },
+          "evidence": {
+            "activeWeight": 7.936940271207629,
+            "normalizedEntropy": 0.018181018613040435,
+            "meanLocalEntropy": 0.01818069264207807,
+            "diversity": 3.25970962365002e-7
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        },
+        "both": {
+          "dominant": "speed",
+          "composition": {
+            "jack": 0.0010900792769685294,
+            "chordstream": 0.0025673258241747823,
+            "speed": 0.9960470395454623,
+            "tech": 0.00007227879414400299,
+            "ln": 0.00022327655925049832
+          },
+          "familyMass": {
+            "ln": 0.00022327655925049832,
+            "rc": 0.9997767234407495
+          },
+          "evidence": {
+            "activeWeight": 7.936940271207629,
+            "normalizedEntropy": 0.018181018613040435,
+            "meanLocalEntropy": 0.01818069264207807,
+            "diversity": 3.25970962365002e-7
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        }
+      },
+      "physicalMetrics": {
+        "npsPerKey": 1.160850322861496,
+        "rowRate": 8.125952260030472,
+        "chordFraction": 0.14285714285714285,
+        "multiFraction": 0,
+        "singleFraction": 1,
+        "lnHeadFraction": 0,
+        "overlap": 0,
+        "repeatFraction": 0,
+        "cutReturn": 0,
+        "chordChange": 0.28571428571428586,
+        "columnEntropy": 0.7124143742160444,
+        "handImbalance": 0,
+        "sameHand": 0.5079365079365079,
+        "crossCut": 0.08465608465608467,
+        "logIoiSd": 0,
+        "ioiChange": 0,
+        "graceFraction": 0,
+        "gridResidual": 0,
+        "rowBpm": 120,
+        "ioiCv": 0,
+        "occupancy": 0,
+        "minOccupancy": 0,
+        "occupancySd": 0,
+        "heldAtHead": 0,
+        "lockFraction": 0,
+        "releaseIndependence": 0,
+        "releaseScatter": 0,
+        "tailRate": 0,
+        "shortHoldFraction": 0,
+        "inverseGap": 0,
+        "lnHeadOverlap": 0,
+        "anchorShare": 0.25,
+        "repeatRun": 0,
+        "maskEntropy": 0.33333333333333337,
+        "trillFraction": 0,
+        "rollFraction": 0.5161290322580645,
+        "effort": 1.160850322861496,
+        "sustain": 1,
+        "burstiness": 0,
+        "activeFraction": 1,
+        "peakShare": 0.25,
+        "peakExcess": 0.125,
+        "repeatConcentration": 0,
+        "runAsymmetry": 0,
+        "runCoverage": 0.015625,
+        "regularity": 1,
+        "regularAnchor": 0.125,
+        "release:tailRatePerKey": 0,
+        "release:headIsolation": 0,
+        "release:sameFingerRecovery": 0,
+        "release:tailAsynchrony": 0,
+        "release:tailTimingVariability": 0,
+        "release:heldOtherAtTail": 0,
+        "release:sameHandOrder": 0,
+        "release:releaseChordFraction": 0,
+        "release:independentHeldRelease": 0
+      },
+      "releaseGeometry": {
+        "tailRatePerKey": 0,
+        "headIsolation": 0,
+        "sameFingerRecovery": 0,
+        "tailAsynchrony": 0,
+        "tailTimingVariability": 0,
+        "heldOtherAtTail": 0,
+        "sameHandOrder": 0,
+        "releaseChordFraction": 0,
+        "independentHeldRelease": 0
+      },
+      "releaseActions": {
+        "groups": [],
+        "continuous": [
+          {
+            "scaleMs": 15,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 30,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 60,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 120,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          }
+        ],
+        "metricScope": "exact event groups are diagnostics; continuous retained-pair fields are candidate model inputs, not calibrated difficulty",
+        "metrics": {
+          "releaseGroupsPerSecond": 0,
+          "releaseWidthMean": 0,
+          "allHeldReleasedGroupFraction": 0,
+          "retainedFingerPairsPerKeySecond": 0,
+          "sameHandRetainedPairsPerKeySecond": 0
+        }
+      }
+    },
+    {
+      "id": "A01",
+      "speedRate": 2,
+      "keys": 7,
+      "heads": 64,
+      "noteRate": 16.249841310143456,
+      "outputs": {
+        "stable": {
+          "overall": {
+            "tags": [
+              "speed"
+            ],
+            "sort": "rc",
+            "weights": {
+              "speed": 3.938
+            },
+            "composition": {
+              "speed": 1
+            },
+            "scoreKind": "legacy decision scores; distribution is normalized affinity, not calibrated confidence"
+          },
+          "segments": [
+            {
+              "start": 500,
+              "end": 4438,
+              "tag": "speed",
+              "confidence": 1,
+              "geometry": {
+                "start": 500,
+                "end": 4438,
+                "anchor": {
+                  "peakShare": 0.25,
+                  "peakExcess": 0.125,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.015625,
+                  "regularity": 1,
+                  "regularAnchor": 0.125
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        },
+        "modern": {
+          "overall": {
+            "tags": [
+              "speed"
+            ],
+            "sort": "rc",
+            "weights": {
+              "speed": 3.938
+            },
+            "shares": {
+              "speed": 1
+            },
+            "diversity": 0,
+            "distribution": null,
+            "activeWeight": 3.938,
+            "scores": {
+              "speed": 1
+            },
+            "composition": {
+              "speed": 1
+            },
+            "compositionKind": "weighted primary-label composition, conditional on concrete non-Break labels",
+            "scoreKind": "retrospectively tuned decision support; not calibrated correctness; weights retain weighted seconds"
+          },
+          "segments": [
+            {
+              "start": 500,
+              "end": 4438.5,
+              "tag": "speed",
+              "confidence": 0.8397811061241216,
+              "geometry": {
+                "start": 500,
+                "end": 4438,
+                "anchor": {
+                  "peakShare": 0.25,
+                  "peakExcess": 0.125,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.015625,
+                  "regularity": 1,
+                  "regularAnchor": 0.125
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        }
+      },
+      "experimentalSharedCoarse7": {
+        "scope": "shared 4K/7K morphology head, not public 7K fine classification",
+        "none": {
+          "dominant": "speed",
+          "composition": {
+            "jack": 0.0001891606107839761,
+            "chordstream": 0.0014987415981123934,
+            "speed": 0.9981549939240145,
+            "tech": 0.000083373376537744,
+            "ln": 0.00007373049055122918
+          },
+          "familyMass": {
+            "ln": 0.00007373049055122918,
+            "rc": 0.9999262695094486
+          },
+          "evidence": {
+            "activeWeight": 3.8627159134864533,
+            "normalizedEntropy": 0.009131188995469632,
+            "meanLocalEntropy": 0.0091310982415691,
+            "diversity": 9.075390053174537e-8
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        },
+        "both": {
+          "dominant": "speed",
+          "composition": {
+            "jack": 0.0001891606107839761,
+            "chordstream": 0.0014987415981123934,
+            "speed": 0.9981549939240145,
+            "tech": 0.000083373376537744,
+            "ln": 0.00007373049055122918
+          },
+          "familyMass": {
+            "ln": 0.00007373049055122918,
+            "rc": 0.9999262695094486
+          },
+          "evidence": {
+            "activeWeight": 3.8627159134864533,
+            "normalizedEntropy": 0.009131188995469632,
+            "meanLocalEntropy": 0.0091310982415691,
+            "diversity": 9.075390053174537e-8
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        }
+      },
+      "physicalMetrics": {
+        "npsPerKey": 2.321405901449065,
+        "rowRate": 16.249841310143456,
+        "chordFraction": 0.14285714285714285,
+        "multiFraction": 0,
+        "singleFraction": 1,
+        "lnHeadFraction": 0,
+        "overlap": 0,
+        "repeatFraction": 0,
+        "cutReturn": 0,
+        "chordChange": 0.28571428571428586,
+        "columnEntropy": 0.7124143742160444,
+        "handImbalance": 0,
+        "sameHand": 0.5079365079365079,
+        "crossCut": 0.08465608465608467,
+        "logIoiSd": 1.7763568394002505e-15,
+        "ioiChange": 0,
+        "graceFraction": 0,
+        "gridResidual": 0,
+        "rowBpm": 240,
+        "ioiCv": 0,
+        "occupancy": 0,
+        "minOccupancy": 0,
+        "occupancySd": 0,
+        "heldAtHead": 0,
+        "lockFraction": 0,
+        "releaseIndependence": 0,
+        "releaseScatter": 0,
+        "tailRate": 0,
+        "shortHoldFraction": 0,
+        "inverseGap": 0,
+        "lnHeadOverlap": 0,
+        "anchorShare": 0.25,
+        "repeatRun": 0,
+        "maskEntropy": 0.33333333333333337,
+        "trillFraction": 0,
+        "rollFraction": 0.5161290322580645,
+        "effort": 2.321405901449065,
+        "sustain": 1,
+        "burstiness": 0,
+        "activeFraction": 1,
+        "peakShare": 0.25,
+        "peakExcess": 0.125,
+        "repeatConcentration": 0,
+        "runAsymmetry": 0,
+        "runCoverage": 0.015625,
+        "regularity": 1,
+        "regularAnchor": 0.125,
+        "release:tailRatePerKey": 0,
+        "release:headIsolation": 0,
+        "release:sameFingerRecovery": 0,
+        "release:tailAsynchrony": 0,
+        "release:tailTimingVariability": 0,
+        "release:heldOtherAtTail": 0,
+        "release:sameHandOrder": 0,
+        "release:releaseChordFraction": 0,
+        "release:independentHeldRelease": 0
+      },
+      "releaseGeometry": {
+        "tailRatePerKey": 0,
+        "headIsolation": 0,
+        "sameFingerRecovery": 0,
+        "tailAsynchrony": 0,
+        "tailTimingVariability": 0,
+        "heldOtherAtTail": 0,
+        "sameHandOrder": 0,
+        "releaseChordFraction": 0,
+        "independentHeldRelease": 0
+      },
+      "releaseActions": {
+        "groups": [],
+        "continuous": [
+          {
+            "scaleMs": 15,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 30,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 60,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 120,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          }
+        ],
+        "metricScope": "exact event groups are diagnostics; continuous retained-pair fields are candidate model inputs, not calibrated difficulty",
+        "metrics": {
+          "releaseGroupsPerSecond": 0,
+          "releaseWidthMean": 0,
+          "allHeldReleasedGroupFraction": 0,
+          "retainedFingerPairsPerKeySecond": 0,
+          "sameHandRetainedPairsPerKeySecond": 0
+        }
+      }
+    },
+    {
+      "id": "A01",
+      "speedRate": 3,
+      "keys": 7,
+      "heads": 64,
+      "noteRate": 24.371667936024373,
+      "outputs": {
+        "stable": {
+          "overall": {
+            "tags": [
+              "speed"
+            ],
+            "sort": "rc",
+            "weights": {
+              "speed": 2.625
+            },
+            "composition": {
+              "speed": 1
+            },
+            "scoreKind": "legacy decision scores; distribution is normalized affinity, not calibrated confidence"
+          },
+          "segments": [
+            {
+              "start": 333,
+              "end": 2958,
+              "tag": "speed",
+              "confidence": 1,
+              "geometry": {
+                "start": 333,
+                "end": 2958,
+                "anchor": {
+                  "peakShare": 0.25396825396825395,
+                  "peakExcess": 0.12962962962962962,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.015873015873015872,
+                  "regularity": 0.9999999999999993,
+                  "regularAnchor": 0.12962962962962954
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        },
+        "modern": {
+          "overall": {
+            "tags": [
+              "speed"
+            ],
+            "sort": "rc",
+            "weights": {
+              "speed": 2.625
+            },
+            "shares": {
+              "speed": 1
+            },
+            "diversity": 0,
+            "distribution": null,
+            "activeWeight": 2.625,
+            "scores": {
+              "speed": 1
+            },
+            "composition": {
+              "speed": 1
+            },
+            "compositionKind": "weighted primary-label composition, conditional on concrete non-Break labels",
+            "scoreKind": "retrospectively tuned decision support; not calibrated correctness; weights retain weighted seconds"
+          },
+          "segments": [
+            {
+              "start": 333.3333333333333,
+              "end": 2959.3333333333335,
+              "tag": "speed",
+              "confidence": 0.8266874261301204,
+              "geometry": {
+                "start": 333,
+                "end": 2958,
+                "anchor": {
+                  "peakShare": 0.25396825396825395,
+                  "peakExcess": 0.12962962962962962,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.015873015873015872,
+                  "regularity": 0.9999999999999993,
+                  "regularAnchor": 0.12962962962962954
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        }
+      },
+      "experimentalSharedCoarse7": {
+        "scope": "shared 4K/7K morphology head, not public 7K fine classification",
+        "none": {
+          "dominant": "speed",
+          "composition": {
+            "jack": 0.00005533043077358194,
+            "chordstream": 0.0012670984390055976,
+            "speed": 0.9985416718964245,
+            "tech": 0.00010101752667044609,
+            "ln": 0.00003488170712572643
+          },
+          "familyMass": {
+            "ln": 0.00003488170712572643,
+            "rc": 0.9999651182928742
+          },
+          "evidence": {
+            "activeWeight": 2.6183503318365284,
+            "normalizedEntropy": 0.007294386953683271,
+            "meanLocalEntropy": 0.007280930339799421,
+            "diversity": 0.000013456613883850235
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        },
+        "both": {
+          "dominant": "speed",
+          "composition": {
+            "jack": 0.00005533043077358194,
+            "chordstream": 0.0012670984390055976,
+            "speed": 0.9985416718964245,
+            "tech": 0.00010101752667044609,
+            "ln": 0.00003488170712572643
+          },
+          "familyMass": {
+            "ln": 0.00003488170712572643,
+            "rc": 0.9999651182928742
+          },
+          "evidence": {
+            "activeWeight": 2.6183503318365284,
+            "normalizedEntropy": 0.007294386953683271,
+            "meanLocalEntropy": 0.007280930339799421,
+            "diversity": 0.000013456613883850235
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        }
+      },
+      "physicalMetrics": {
+        "npsPerKey": 3.481666848003482,
+        "rowRate": 24.371667936024373,
+        "chordFraction": 0.14285714285714285,
+        "multiFraction": 0,
+        "singleFraction": 1,
+        "lnHeadFraction": 0,
+        "overlap": 0,
+        "repeatFraction": 0,
+        "cutReturn": 0,
+        "chordChange": 0.28571428571428586,
+        "columnEntropy": 0.7124143742160444,
+        "handImbalance": 0,
+        "sameHand": 0.5079365079365079,
+        "crossCut": 0.08465608465608467,
+        "logIoiSd": 4.321932356190139e-15,
+        "ioiChange": 4.2457077280423325e-15,
+        "graceFraction": 0,
+        "gridResidual": 2.3869795029440866e-15,
+        "rowBpm": 359.99999999999983,
+        "ioiCv": 3.4348130144640977e-15,
+        "occupancy": 0,
+        "minOccupancy": 0,
+        "occupancySd": 0,
+        "heldAtHead": 0,
+        "lockFraction": 0,
+        "releaseIndependence": 0,
+        "releaseScatter": 0,
+        "tailRate": 0,
+        "shortHoldFraction": 0,
+        "inverseGap": 0,
+        "lnHeadOverlap": 0,
+        "anchorShare": 0.25,
+        "repeatRun": 0,
+        "maskEntropy": 0.33333333333333337,
+        "trillFraction": 0,
+        "rollFraction": 0.5161290322580645,
+        "effort": 3.481666848003482,
+        "sustain": 0.6666666666666666,
+        "burstiness": 0.1767766952966369,
+        "activeFraction": 1,
+        "peakShare": 0.25,
+        "peakExcess": 0.125,
+        "repeatConcentration": 0,
+        "runAsymmetry": 0,
+        "runCoverage": 0.015625,
+        "regularity": 0.9999999999999993,
+        "regularAnchor": 0.12499999999999992,
+        "release:tailRatePerKey": 0,
+        "release:headIsolation": 0,
+        "release:sameFingerRecovery": 0,
+        "release:tailAsynchrony": 0,
+        "release:tailTimingVariability": 0,
+        "release:heldOtherAtTail": 0,
+        "release:sameHandOrder": 0,
+        "release:releaseChordFraction": 0,
+        "release:independentHeldRelease": 0
+      },
+      "releaseGeometry": {
+        "tailRatePerKey": 0,
+        "headIsolation": 0,
+        "sameFingerRecovery": 0,
+        "tailAsynchrony": 0,
+        "tailTimingVariability": 0,
+        "heldOtherAtTail": 0,
+        "sameHandOrder": 0,
+        "releaseChordFraction": 0,
+        "independentHeldRelease": 0
+      },
+      "releaseActions": {
+        "groups": [],
+        "continuous": [
+          {
+            "scaleMs": 15,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 30,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 60,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 120,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          }
+        ],
+        "metricScope": "exact event groups are diagnostics; continuous retained-pair fields are candidate model inputs, not calibrated difficulty",
+        "metrics": {
+          "releaseGroupsPerSecond": 0,
+          "releaseWidthMean": 0,
+          "allHeldReleasedGroupFraction": 0,
+          "retainedFingerPairsPerKeySecond": 0,
+          "sameHandRetainedPairsPerKeySecond": 0
+        }
+      }
+    },
+    {
+      "id": "A01",
+      "speedRate": 4,
+      "keys": 7,
+      "heads": 64,
+      "noteRate": 32.49143292295977,
+      "outputs": {
+        "stable": {
+          "overall": {
+            "tags": [
+              "speed"
+            ],
+            "sort": "rc",
+            "weights": {
+              "speed": 1.969
+            },
+            "composition": {
+              "speed": 1
+            },
+            "scoreKind": "legacy decision scores; distribution is normalized affinity, not calibrated confidence"
+          },
+          "segments": [
+            {
+              "start": 250,
+              "end": 2219,
+              "tag": "speed",
+              "confidence": 1,
+              "geometry": {
+                "start": 250,
+                "end": 2219,
+                "anchor": {
+                  "peakShare": 0.25,
+                  "peakExcess": 0.125,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.015625,
+                  "regularity": 1,
+                  "regularAnchor": 0.125
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        },
+        "modern": {
+          "overall": {
+            "tags": [
+              "speed"
+            ],
+            "sort": "rc",
+            "weights": {
+              "speed": 1.969
+            },
+            "shares": {
+              "speed": 1
+            },
+            "diversity": 0,
+            "distribution": null,
+            "activeWeight": 1.969,
+            "scores": {
+              "speed": 1
+            },
+            "composition": {
+              "speed": 1
+            },
+            "compositionKind": "weighted primary-label composition, conditional on concrete non-Break labels",
+            "scoreKind": "retrospectively tuned decision support; not calibrated correctness; weights retain weighted seconds"
+          },
+          "segments": [
+            {
+              "start": 250,
+              "end": 2219.75,
+              "tag": "speed",
+              "confidence": 0.8297465559527405,
+              "geometry": {
+                "start": 250,
+                "end": 2219,
+                "anchor": {
+                  "peakShare": 0.25,
+                  "peakExcess": 0.125,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.015625,
+                  "regularity": 1,
+                  "regularAnchor": 0.125
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        }
+      },
+      "experimentalSharedCoarse7": {
+        "scope": "shared 4K/7K morphology head, not public 7K fine classification",
+        "none": {
+          "dominant": "speed",
+          "composition": {
+            "jack": 0.000012636804338232785,
+            "chordstream": 0.0009228305606752818,
+            "speed": 0.9989299573293096,
+            "tech": 0.00012083404988894146,
+            "ln": 0.00001374125578804467
+          },
+          "familyMass": {
+            "ln": 0.00001374125578804467,
+            "rc": 0.999986258744212
+          },
+          "evidence": {
+            "activeWeight": 1.9655385291630962,
+            "normalizedEntropy": 0.0055327943720872375,
+            "meanLocalEntropy": 0.0055327943720872375,
+            "diversity": 0
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        },
+        "both": {
+          "dominant": "speed",
+          "composition": {
+            "jack": 0.000012636804338232785,
+            "chordstream": 0.0009228305606752818,
+            "speed": 0.9989299573293096,
+            "tech": 0.00012083404988894146,
+            "ln": 0.00001374125578804467
+          },
+          "familyMass": {
+            "ln": 0.00001374125578804467,
+            "rc": 0.999986258744212
+          },
+          "evidence": {
+            "activeWeight": 1.9655385291630962,
+            "normalizedEntropy": 0.0055327943720872375,
+            "meanLocalEntropy": 0.0055327943720872375,
+            "diversity": 0
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        }
+      },
+      "physicalMetrics": {
+        "npsPerKey": 4.641633274708538,
+        "rowRate": 32.49143292295977,
+        "chordFraction": 0.14285714285714285,
+        "multiFraction": 0,
+        "singleFraction": 1,
+        "lnHeadFraction": 0,
+        "overlap": 0,
+        "repeatFraction": 0,
+        "cutReturn": 0,
+        "chordChange": 0.28571428571428586,
+        "columnEntropy": 0.7124143742160444,
+        "handImbalance": 0,
+        "sameHand": 0.5079365079365079,
+        "crossCut": 0.08465608465608467,
+        "logIoiSd": 3.1086244689504383e-15,
+        "ioiChange": 0,
+        "graceFraction": 0,
+        "gridResidual": 0,
+        "rowBpm": 480,
+        "ioiCv": 0,
+        "occupancy": 0,
+        "minOccupancy": 0,
+        "occupancySd": 0,
+        "heldAtHead": 0,
+        "lockFraction": 0,
+        "releaseIndependence": 0,
+        "releaseScatter": 0,
+        "tailRate": 0,
+        "shortHoldFraction": 0,
+        "inverseGap": 0,
+        "lnHeadOverlap": 0,
+        "anchorShare": 0.25,
+        "repeatRun": 0,
+        "maskEntropy": 0.33333333333333337,
+        "trillFraction": 0,
+        "rollFraction": 0.5161290322580645,
+        "effort": 4.641633274708538,
+        "sustain": 1,
+        "burstiness": 0,
+        "activeFraction": 1,
+        "peakShare": 0.25,
+        "peakExcess": 0.125,
+        "repeatConcentration": 0,
+        "runAsymmetry": 0,
+        "runCoverage": 0.015625,
+        "regularity": 1,
+        "regularAnchor": 0.125,
+        "release:tailRatePerKey": 0,
+        "release:headIsolation": 0,
+        "release:sameFingerRecovery": 0,
+        "release:tailAsynchrony": 0,
+        "release:tailTimingVariability": 0,
+        "release:heldOtherAtTail": 0,
+        "release:sameHandOrder": 0,
+        "release:releaseChordFraction": 0,
+        "release:independentHeldRelease": 0
+      },
+      "releaseGeometry": {
+        "tailRatePerKey": 0,
+        "headIsolation": 0,
+        "sameFingerRecovery": 0,
+        "tailAsynchrony": 0,
+        "tailTimingVariability": 0,
+        "heldOtherAtTail": 0,
+        "sameHandOrder": 0,
+        "releaseChordFraction": 0,
+        "independentHeldRelease": 0
+      },
+      "releaseActions": {
+        "groups": [],
+        "continuous": [
+          {
+            "scaleMs": 15,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 30,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 60,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 120,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          }
+        ],
+        "metricScope": "exact event groups are diagnostics; continuous retained-pair fields are candidate model inputs, not calibrated difficulty",
+        "metrics": {
+          "releaseGroupsPerSecond": 0,
+          "releaseWidthMean": 0,
+          "allHeldReleasedGroupFraction": 0,
+          "retainedFingerPairsPerKeySecond": 0,
+          "sameHandRetainedPairsPerKeySecond": 0
+        }
+      }
+    },
+    {
+      "id": "A01",
+      "speedRate": 6,
+      "keys": 7,
+      "heads": 64,
+      "noteRate": 48.72478111914732,
+      "outputs": {
+        "stable": {
+          "overall": {
+            "tags": [
+              "vibro"
+            ],
+            "sort": "rc",
+            "weights": {
+              "vibro": 1.312
+            },
+            "composition": {
+              "vibro": 1
+            },
+            "scoreKind": "legacy decision scores; distribution is normalized affinity, not calibrated confidence"
+          },
+          "segments": [
+            {
+              "start": 167,
+              "end": 1479,
+              "tag": "vibro",
+              "confidence": 1,
+              "geometry": {
+                "start": 167,
+                "end": 1479,
+                "anchor": {
+                  "peakShare": 0.25806451612903225,
+                  "peakExcess": 0.13440860215053763,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.016129032258064516,
+                  "regularity": 0.9999999999999993,
+                  "regularAnchor": 0.13440860215053754
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        },
+        "modern": {
+          "overall": {
+            "tags": [
+              "vibro"
+            ],
+            "sort": "rc",
+            "weights": {
+              "vibro": 1.312
+            },
+            "shares": {
+              "vibro": 1
+            },
+            "diversity": 0,
+            "distribution": null,
+            "activeWeight": 1.312,
+            "scores": {
+              "vibro": 1
+            },
+            "composition": {
+              "vibro": 1
+            },
+            "compositionKind": "weighted primary-label composition, conditional on concrete non-Break labels",
+            "scoreKind": "retrospectively tuned decision support; not calibrated correctness; weights retain weighted seconds"
+          },
+          "segments": [
+            {
+              "start": 166.66666666666666,
+              "end": 1480.1666666666667,
+              "tag": "vibro",
+              "confidence": 0.3937881295350978,
+              "geometry": {
+                "start": 167,
+                "end": 1479,
+                "anchor": {
+                  "peakShare": 0.25806451612903225,
+                  "peakExcess": 0.13440860215053763,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.016129032258064516,
+                  "regularity": 0.9999999999999993,
+                  "regularAnchor": 0.13440860215053754
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        }
+      },
+      "experimentalSharedCoarse7": {
+        "scope": "shared 4K/7K morphology head, not public 7K fine classification",
+        "none": {
+          "dominant": "speed",
+          "composition": {
+            "jack": 0.000010225561093565423,
+            "chordstream": 0.001808975235800468,
+            "speed": 0.9980580348060551,
+            "tech": 0.00011697205415255744,
+            "ln": 0.00000579234289823122
+          },
+          "familyMass": {
+            "ln": 0.00000579234289823122,
+            "rc": 0.9999942076571017
+          },
+          "evidence": {
+            "activeWeight": 1.3084077273839894,
+            "normalizedEntropy": 0.009077772093793656,
+            "meanLocalEntropy": 0.009077772093793656,
+            "diversity": 0
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        },
+        "both": {
+          "dominant": "speed",
+          "composition": {
+            "jack": 0.000010225561093565423,
+            "chordstream": 0.001808975235800468,
+            "speed": 0.9980580348060551,
+            "tech": 0.00011697205415255744,
+            "ln": 0.00000579234289823122
+          },
+          "familyMass": {
+            "ln": 0.00000579234289823122,
+            "rc": 0.9999942076571017
+          },
+          "evidence": {
+            "activeWeight": 1.3084077273839894,
+            "normalizedEntropy": 0.009077772093793656,
+            "meanLocalEntropy": 0.009077772093793656,
+            "diversity": 0
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        }
+      },
+      "physicalMetrics": {
+        "npsPerKey": 6.960683017021046,
+        "rowRate": 48.72478111914732,
+        "chordFraction": 0.14285714285714285,
+        "multiFraction": 0,
+        "singleFraction": 1,
+        "lnHeadFraction": 0,
+        "overlap": 0,
+        "repeatFraction": 0,
+        "cutReturn": 0,
+        "chordChange": 0.28571428571428586,
+        "columnEntropy": 0.7124143742160444,
+        "handImbalance": 0,
+        "sameHand": 0.5079365079365079,
+        "crossCut": 0.08465608465608467,
+        "logIoiSd": 4.930904586692172e-15,
+        "ioiChange": 4.2457077280423325e-15,
+        "graceFraction": 0,
+        "gridResidual": 2.3869795029440866e-15,
+        "rowBpm": 719.9999999999997,
+        "ioiCv": 3.4348130144640977e-15,
+        "occupancy": 0,
+        "minOccupancy": 0,
+        "occupancySd": 0,
+        "heldAtHead": 0,
+        "lockFraction": 0,
+        "releaseIndependence": 0,
+        "releaseScatter": 0,
+        "tailRate": 0,
+        "shortHoldFraction": 0,
+        "inverseGap": 0,
+        "lnHeadOverlap": 0,
+        "anchorShare": 0.25,
+        "repeatRun": 0,
+        "maskEntropy": 0.33333333333333337,
+        "trillFraction": 0,
+        "rollFraction": 0.5161290322580645,
+        "effort": 6.960683017021046,
+        "sustain": 0.5,
+        "burstiness": 0.5,
+        "activeFraction": 1,
+        "peakShare": 0.25,
+        "peakExcess": 0.125,
+        "repeatConcentration": 0,
+        "runAsymmetry": 0,
+        "runCoverage": 0.015625,
+        "regularity": 0.9999999999999993,
+        "regularAnchor": 0.12499999999999992,
+        "release:tailRatePerKey": 0,
+        "release:headIsolation": 0,
+        "release:sameFingerRecovery": 0,
+        "release:tailAsynchrony": 0,
+        "release:tailTimingVariability": 0,
+        "release:heldOtherAtTail": 0,
+        "release:sameHandOrder": 0,
+        "release:releaseChordFraction": 0,
+        "release:independentHeldRelease": 0
+      },
+      "releaseGeometry": {
+        "tailRatePerKey": 0,
+        "headIsolation": 0,
+        "sameFingerRecovery": 0,
+        "tailAsynchrony": 0,
+        "tailTimingVariability": 0,
+        "heldOtherAtTail": 0,
+        "sameHandOrder": 0,
+        "releaseChordFraction": 0,
+        "independentHeldRelease": 0
+      },
+      "releaseActions": {
+        "groups": [],
+        "continuous": [
+          {
+            "scaleMs": 15,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 30,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 60,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 120,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          }
+        ],
+        "metricScope": "exact event groups are diagnostics; continuous retained-pair fields are candidate model inputs, not calibrated difficulty",
+        "metrics": {
+          "releaseGroupsPerSecond": 0,
+          "releaseWidthMean": 0,
+          "allHeldReleasedGroupFraction": 0,
+          "retainedFingerPairsPerKeySecond": 0,
+          "sameHandRetainedPairsPerKeySecond": 0
+        }
+      }
+    },
+    {
+      "id": "A02",
+      "speedRate": 1,
+      "keys": 7,
+      "heads": 64,
+      "noteRate": 8.125952260030472,
+      "outputs": {
+        "stable": {
+          "overall": {
+            "tags": [
+              "chordjack"
+            ],
+            "sort": "rc",
+            "weights": {
+              "chordjack": 7.875
+            },
+            "composition": {
+              "chordjack": 1
+            },
+            "scoreKind": "legacy decision scores; distribution is normalized affinity, not calibrated confidence"
+          },
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8875,
+              "tag": "chordjack",
+              "confidence": 1,
+              "geometry": {
+                "start": 1000,
+                "end": 8875,
+                "anchor": {
+                  "peakShare": 0.25396825396825395,
+                  "peakExcess": 0.12962962962962962,
+                  "repeatConcentration": 0.13120567375886522,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.06349206349206349,
+                  "regularity": 0.41463414634146334,
+                  "regularAnchor": 0.05374887082204154
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        },
+        "modern": {
+          "overall": {
+            "tags": [
+              "chordjack"
+            ],
+            "sort": "rc",
+            "weights": {
+              "chordjack": 7.875
+            },
+            "shares": {
+              "chordjack": 1
+            },
+            "diversity": 0,
+            "distribution": null,
+            "activeWeight": 7.875,
+            "scores": {
+              "chordjack": 1
+            },
+            "composition": {
+              "chordjack": 1
+            },
+            "compositionKind": "weighted primary-label composition, conditional on concrete non-Break labels",
+            "scoreKind": "retrospectively tuned decision support; not calibrated correctness; weights retain weighted seconds"
+          },
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8876,
+              "tag": "chordjack",
+              "confidence": 0.8105151261557003,
+              "geometry": {
+                "start": 1000,
+                "end": 8875,
+                "anchor": {
+                  "peakShare": 0.25396825396825395,
+                  "peakExcess": 0.12962962962962962,
+                  "repeatConcentration": 0.13120567375886522,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0.06349206349206349,
+                  "regularity": 0.41463414634146334,
+                  "regularAnchor": 0.05374887082204154
+                },
+                "release": {
+                  "tailRatePerKey": 0,
+                  "headIsolation": 0,
+                  "sameFingerRecovery": 0,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0,
+                  "independentHeldRelease": 0
+                }
+              }
+            }
+          ]
+        }
+      },
+      "experimentalSharedCoarse7": {
+        "scope": "shared 4K/7K morphology head, not public 7K fine classification",
+        "none": {
+          "dominant": "jack",
+          "composition": {
+            "jack": 0.7595509809848462,
+            "chordstream": 0.0007866490221572532,
+            "speed": 0.14517574268681857,
+            "tech": 0.08271981643139105,
+            "ln": 0.01176681087478689
+          },
+          "familyMass": {
+            "ln": 0.01176681087478689,
+            "rc": 0.9882331891252131
+          },
+          "evidence": {
+            "activeWeight": 4.8395363578672494,
+            "normalizedEntropy": 0.46793855965778647,
+            "meanLocalEntropy": 0.46788701287775303,
+            "diversity": 0.000051546780033440154
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        },
+        "both": {
+          "dominant": "jack",
+          "composition": {
+            "jack": 0.7595509809848462,
+            "chordstream": 0.0007866490221572532,
+            "speed": 0.14517574268681857,
+            "tech": 0.08271981643139105,
+            "ln": 0.01176681087478689
+          },
+          "familyMass": {
+            "ln": 0.01176681087478689,
+            "rc": 0.9882331891252131
+          },
+          "evidence": {
+            "activeWeight": 4.8395363578672494,
+            "normalizedEntropy": 0.46793855965778647,
+            "meanLocalEntropy": 0.46788701287775303,
+            "diversity": 0.000051546780033440154
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        }
+      },
+      "physicalMetrics": {
+        "npsPerKey": 1.160850322861496,
+        "rowRate": 8.125952260030472,
+        "chordFraction": 0.14285714285714285,
+        "multiFraction": 0,
+        "singleFraction": 1,
+        "lnHeadFraction": 0,
+        "overlap": 0.7619047619047619,
+        "repeatFraction": 0.7619047619047619,
+        "cutReturn": 0,
+        "chordChange": 0.06802721088435372,
+        "columnEntropy": 0.7124143742160444,
+        "handImbalance": 0,
+        "sameHand": 0.8888888888888888,
+        "crossCut": 0.021164021164021163,
+        "logIoiSd": 0,
+        "ioiChange": 0,
+        "graceFraction": 0,
+        "gridResidual": 0,
+        "rowBpm": 120,
+        "ioiCv": 0,
+        "occupancy": 0,
+        "minOccupancy": 0,
+        "occupancySd": 0,
+        "heldAtHead": 0,
+        "lockFraction": 0,
+        "releaseIndependence": 0,
+        "releaseScatter": 0,
+        "tailRate": 0,
+        "shortHoldFraction": 0,
+        "inverseGap": 0,
+        "lnHeadOverlap": 0,
+        "anchorShare": 0.25,
+        "repeatRun": 0.047619047619047616,
+        "maskEntropy": 0.33333333333333337,
+        "trillFraction": 0,
+        "rollFraction": 0,
+        "effort": 2.04530771170835,
+        "sustain": 1,
+        "burstiness": 0,
+        "activeFraction": 1,
+        "peakShare": 0.25,
+        "peakExcess": 0.125,
+        "repeatConcentration": 0.125,
+        "runAsymmetry": 0,
+        "runCoverage": 0.0625,
+        "regularity": 0.41463414634146334,
+        "regularAnchor": 0.05182926829268292,
+        "release:tailRatePerKey": 0,
+        "release:headIsolation": 0,
+        "release:sameFingerRecovery": 0,
+        "release:tailAsynchrony": 0,
+        "release:tailTimingVariability": 0,
+        "release:heldOtherAtTail": 0,
+        "release:sameHandOrder": 0,
+        "release:releaseChordFraction": 0,
+        "release:independentHeldRelease": 0
+      },
+      "releaseGeometry": {
+        "tailRatePerKey": 0,
+        "headIsolation": 0,
+        "sameFingerRecovery": 0,
+        "tailAsynchrony": 0,
+        "tailTimingVariability": 0,
+        "heldOtherAtTail": 0,
+        "sameHandOrder": 0,
+        "releaseChordFraction": 0,
+        "independentHeldRelease": 0
+      },
+      "releaseActions": {
+        "groups": [],
+        "continuous": [
+          {
+            "scaleMs": 15,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 30,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 60,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 120,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          }
+        ],
+        "metricScope": "exact event groups are diagnostics; continuous retained-pair fields are candidate model inputs, not calibrated difficulty",
+        "metrics": {
+          "releaseGroupsPerSecond": 0,
+          "releaseWidthMean": 0,
+          "allHeldReleasedGroupFraction": 0,
+          "retainedFingerPairsPerKeySecond": 0,
+          "sameHandRetainedPairsPerKeySecond": 0
+        }
+      }
+    },
+    {
+      "id": "B01",
+      "speedRate": 1,
+      "keys": 7,
+      "heads": 25,
+      "noteRate": 1.562402349853134,
+      "outputs": {
+        "stable": {
+          "overall": {
+            "tags": [],
+            "sort": "rc",
+            "weights": {},
+            "composition": {
+              "break": 1
+            },
+            "scoreKind": "legacy decision scores; distribution is normalized affinity, not calibrated confidence"
+          },
+          "segments": [
+            {
+              "start": 1000,
+              "end": 4125,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 1000,
+                "end": 4125,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.2742857142857143,
+                  "headIsolation": 0.888888888888889,
+                  "sameFingerRecovery": 0.888888888888889,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0.8333333333333334,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.8571428571428571,
+                  "independentHeldRelease": 0.7407407407407406
+                }
+              }
+            },
+            {
+              "start": 4125,
+              "end": 8125,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 4125,
+                "end": 8125,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.21428571428571427,
+                  "headIsolation": 0.888888888888889,
+                  "sameFingerRecovery": 0.888888888888889,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0.8333333333333334,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.8571428571428571,
+                  "independentHeldRelease": 0.7407407407407406
+                }
+              }
+            },
+            {
+              "start": 8125,
+              "end": 13625,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 8125,
+                "end": 13625,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0.027777777777777773,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.15584415584415584,
+                  "headIsolation": 0.888888888888889,
+                  "sameFingerRecovery": 0.888888888888889,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0.8333333333333334,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.8571428571428571,
+                  "independentHeldRelease": 0.7407407407407406
+                }
+              }
+            },
+            {
+              "start": 13625,
+              "end": 17000,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 13625,
+                "end": 17000,
+                "anchor": {
+                  "peakShare": 0,
+                  "peakExcess": 0,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.25396825396825395,
+                  "headIsolation": 0.888888888888889,
+                  "sameFingerRecovery": 1,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0.8333333333333334,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.8571428571428571,
+                  "independentHeldRelease": 0.7407407407407406
+                }
+              }
+            }
+          ]
+        },
+        "modern": {
+          "overall": {
+            "tags": [],
+            "sort": "rc",
+            "weights": {},
+            "shares": {},
+            "diversity": 0,
+            "distribution": null,
+            "activeWeight": 0,
+            "scores": {},
+            "composition": {},
+            "compositionKind": "weighted primary-label composition, conditional on concrete non-Break labels",
+            "scoreKind": "retrospectively tuned decision support; not calibrated correctness; weights retain weighted seconds"
+          },
+          "segments": [
+            {
+              "start": 1000,
+              "end": 4125,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 1000,
+                "end": 4125,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.2742857142857143,
+                  "headIsolation": 0.888888888888889,
+                  "sameFingerRecovery": 0.888888888888889,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0.8333333333333334,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.8571428571428571,
+                  "independentHeldRelease": 0.7407407407407406
+                }
+              }
+            },
+            {
+              "start": 4125,
+              "end": 8125,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 4125,
+                "end": 8125,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.21428571428571427,
+                  "headIsolation": 0.888888888888889,
+                  "sameFingerRecovery": 0.888888888888889,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0.8333333333333334,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.8571428571428571,
+                  "independentHeldRelease": 0.7407407407407406
+                }
+              }
+            },
+            {
+              "start": 8125,
+              "end": 13625,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 8125,
+                "end": 13625,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0.027777777777777773,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.15584415584415584,
+                  "headIsolation": 0.888888888888889,
+                  "sameFingerRecovery": 0.888888888888889,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0.8333333333333334,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.8571428571428571,
+                  "independentHeldRelease": 0.7407407407407406
+                }
+              }
+            },
+            {
+              "start": 13625,
+              "end": 17001,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 13625,
+                "end": 17000,
+                "anchor": {
+                  "peakShare": 0,
+                  "peakExcess": 0,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.25396825396825395,
+                  "headIsolation": 0.888888888888889,
+                  "sameFingerRecovery": 1,
+                  "tailAsynchrony": 0,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0.8333333333333334,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.8571428571428571,
+                  "independentHeldRelease": 0.7407407407407406
+                }
+              }
+            }
+          ]
+        }
+      },
+      "experimentalSharedCoarse7": {
+        "scope": "shared 4K/7K morphology head, not public 7K fine classification",
+        "none": {
+          "dominant": "ln",
+          "composition": {
+            "jack": 0.020632128824208767,
+            "chordstream": 0.0013894540049108814,
+            "speed": 0.003149964449122115,
+            "tech": 0.000443860329600617,
+            "ln": 0.9743845923921577
+          },
+          "familyMass": {
+            "ln": 0.9743845923921577,
+            "rc": 0.025615407607842384
+          },
+          "evidence": {
+            "activeWeight": 7.599460230857621,
+            "normalizedEntropy": 0.08454404356987408,
+            "meanLocalEntropy": 0.08450263896464232,
+            "diversity": 0.00004140460523176237
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        },
+        "both": {
+          "dominant": "ln",
+          "composition": {
+            "jack": 0,
+            "chordstream": 0,
+            "speed": 0,
+            "tech": 0,
+            "ln": 1
+          },
+          "familyMass": {
+            "ln": 1,
+            "rc": 0
+          },
+          "evidence": {
+            "activeWeight": 8.0008,
+            "normalizedEntropy": 0,
+            "meanLocalEntropy": 0,
+            "diversity": 0
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        }
+      },
+      "physicalMetrics": {
+        "npsPerKey": 0.22320033569330486,
+        "rowRate": 0.31248046997062684,
+        "chordFraction": 0.7142857142857143,
+        "multiFraction": 0.8,
+        "singleFraction": 0.2,
+        "lnHeadFraction": 0.96,
+        "overlap": 0.75,
+        "repeatFraction": 0.75,
+        "cutReturn": 0,
+        "chordChange": 0.25,
+        "columnEntropy": 0.9702571514464299,
+        "handImbalance": 0,
+        "sameHand": 0.5,
+        "crossCut": 0,
+        "logIoiSd": 0,
+        "ioiChange": 0,
+        "graceFraction": 0,
+        "gridResidual": 0,
+        "rowBpm": 3.75,
+        "ioiCv": 0,
+        "occupancy": 0.6428169667967181,
+        "minOccupancy": 0,
+        "occupancySd": 0.2624289277759259,
+        "heldAtHead": 0,
+        "lockFraction": 0,
+        "releaseIndependence": 1,
+        "releaseScatter": 0,
+        "tailRate": 0.21427232226557266,
+        "shortHoldFraction": 1,
+        "inverseGap": 0.5841005873035537,
+        "lnHeadOverlap": 0.75,
+        "anchorShare": 0.16,
+        "repeatRun": 0.75,
+        "maskEntropy": 0.31091750708257115,
+        "trillFraction": 0,
+        "rollFraction": 0,
+        "effort": 0.6416852723254476,
+        "sustain": 0.23529411764705882,
+        "burstiness": 1.715808847162177,
+        "activeFraction": 0.29411764705882354,
+        "peakShare": 0.16,
+        "peakExcess": 0.02000000000000001,
+        "repeatConcentration": 0.027777777777777773,
+        "runAsymmetry": 0,
+        "runCoverage": 0.8,
+        "regularity": 1,
+        "regularAnchor": 0.02000000000000001,
+        "release:tailRatePerKey": 0.21427232226557266,
+        "release:headIsolation": 0.8888888888888892,
+        "release:sameFingerRecovery": 0.9166666666666669,
+        "release:tailAsynchrony": 0,
+        "release:tailTimingVariability": 0,
+        "release:heldOtherAtTail": 0.8333333333333334,
+        "release:sameHandOrder": 0,
+        "release:releaseChordFraction": 0.8571428571428573,
+        "release:independentHeldRelease": 0.7407407407407406
+      },
+      "releaseGeometry": {
+        "tailRatePerKey": 0.21427232226557266,
+        "headIsolation": 0.8888888888888892,
+        "sameFingerRecovery": 0.9166666666666669,
+        "tailAsynchrony": 0,
+        "tailTimingVariability": 0,
+        "heldOtherAtTail": 0.8333333333333334,
+        "sameHandOrder": 0,
+        "releaseChordFraction": 0.8571428571428573,
+        "independentHeldRelease": 0.7407407407407406
+      },
+      "releaseActions": {
+        "groups": [
+          {
+            "t": 4000,
+            "released": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "heldBefore": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [],
+            "retainedPairs": 0,
+            "sameHandPairs": 0
+          },
+          {
+            "t": 8000,
+            "released": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "heldBefore": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [],
+            "retainedPairs": 0,
+            "sameHandPairs": 0
+          },
+          {
+            "t": 12000,
+            "released": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "heldBefore": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [],
+            "retainedPairs": 0,
+            "sameHandPairs": 0
+          },
+          {
+            "t": 16000,
+            "released": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "heldBefore": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [],
+            "retainedPairs": 0,
+            "sameHandPairs": 0
+          }
+        ],
+        "continuous": [
+          {
+            "scaleMs": 15,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 30,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 60,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          },
+          {
+            "scaleMs": 120,
+            "retainedPairsPerKeySecond": 0,
+            "sameHandPairsPerKeySecond": 0
+          }
+        ],
+        "metricScope": "exact event groups are diagnostics; continuous retained-pair fields are candidate model inputs, not calibrated difficulty",
+        "metrics": {
+          "releaseGroupsPerSecond": 0.24998437597650144,
+          "releaseWidthMean": 6,
+          "allHeldReleasedGroupFraction": 1,
+          "retainedFingerPairsPerKeySecond": 0,
+          "sameHandRetainedPairsPerKeySecond": 0
+        }
+      }
+    },
+    {
+      "id": "B02",
+      "speedRate": 1,
+      "keys": 7,
+      "heads": 25,
+      "noteRate": 1.562402349853134,
+      "outputs": {
+        "stable": {
+          "overall": {
+            "tags": [],
+            "sort": "rc",
+            "weights": {},
+            "composition": {
+              "break": 1
+            },
+            "scoreKind": "legacy decision scores; distribution is normalized affinity, not calibrated confidence"
+          },
+          "segments": [
+            {
+              "start": 1000,
+              "end": 4125,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 1000,
+                "end": 4125,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.13714285714285715,
+                  "headIsolation": 0.9085858585858585,
+                  "sameFingerRecovery": 0.9085858585858585,
+                  "tailAsynchrony": 0.5,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0.6666666666666666,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.14285714285714285,
+                  "independentHeldRelease": 0.6066498316498316
+                }
+              }
+            },
+            {
+              "start": 4125,
+              "end": 8125,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 4125,
+                "end": 8125,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.21428571428571427,
+                  "headIsolation": 0.8818722943722944,
+                  "sameFingerRecovery": 0.8818722943722944,
+                  "tailAsynchrony": 0.5,
+                  "tailTimingVariability": 1.0410758741777535,
+                  "heldOtherAtTail": 0.4166666666666667,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.14285714285714282,
+                  "independentHeldRelease": 0.3757455507455507
+                }
+              }
+            },
+            {
+              "start": 8125,
+              "end": 13625,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 8125,
+                "end": 13625,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0.027777777777777773,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.2337662337662338,
+                  "headIsolation": 0.872967772967773,
+                  "sameFingerRecovery": 0.872967772967773,
+                  "tailAsynchrony": 0.5,
+                  "tailTimingVariability": 0.8520028715374954,
+                  "heldOtherAtTail": 0.3333333333333333,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.14285714285714282,
+                  "independentHeldRelease": 0.2987774571107904
+                }
+              }
+            },
+            {
+              "start": 13625,
+              "end": 17000,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 13625,
+                "end": 17000,
+                "anchor": {
+                  "peakShare": 0,
+                  "peakExcess": 0,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.25396825396825395,
+                  "headIsolation": 0.8818722943722942,
+                  "sameFingerRecovery": 1,
+                  "tailAsynchrony": 0.5,
+                  "tailTimingVariability": 0.16218604324326572,
+                  "heldOtherAtTail": 0.4166666666666667,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.14285714285714282,
+                  "independentHeldRelease": 0.3757455507455507
+                }
+              }
+            }
+          ]
+        },
+        "modern": {
+          "overall": {
+            "tags": [],
+            "sort": "rc",
+            "weights": {},
+            "shares": {},
+            "diversity": 0,
+            "distribution": null,
+            "activeWeight": 0,
+            "scores": {},
+            "composition": {},
+            "compositionKind": "weighted primary-label composition, conditional on concrete non-Break labels",
+            "scoreKind": "retrospectively tuned decision support; not calibrated correctness; weights retain weighted seconds"
+          },
+          "segments": [
+            {
+              "start": 1000,
+              "end": 4125,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 1000,
+                "end": 4125,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.13714285714285715,
+                  "headIsolation": 0.9085858585858585,
+                  "sameFingerRecovery": 0.9085858585858585,
+                  "tailAsynchrony": 0.5,
+                  "tailTimingVariability": 0,
+                  "heldOtherAtTail": 0.6666666666666666,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.14285714285714285,
+                  "independentHeldRelease": 0.6066498316498316
+                }
+              }
+            },
+            {
+              "start": 4125,
+              "end": 8125,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 4125,
+                "end": 8125,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.21428571428571427,
+                  "headIsolation": 0.8818722943722944,
+                  "sameFingerRecovery": 0.8818722943722944,
+                  "tailAsynchrony": 0.5,
+                  "tailTimingVariability": 1.0410758741777535,
+                  "heldOtherAtTail": 0.4166666666666667,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.14285714285714282,
+                  "independentHeldRelease": 0.3757455507455507
+                }
+              }
+            },
+            {
+              "start": 8125,
+              "end": 13625,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 8125,
+                "end": 13625,
+                "anchor": {
+                  "peakShare": 0.16666666666666666,
+                  "peakExcess": 0.027777777777777773,
+                  "repeatConcentration": 0.027777777777777773,
+                  "runAsymmetry": 0,
+                  "runCoverage": 1,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.2337662337662338,
+                  "headIsolation": 0.872967772967773,
+                  "sameFingerRecovery": 0.872967772967773,
+                  "tailAsynchrony": 0.5,
+                  "tailTimingVariability": 0.8520028715374954,
+                  "heldOtherAtTail": 0.3333333333333333,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.14285714285714282,
+                  "independentHeldRelease": 0.2987774571107904
+                }
+              }
+            },
+            {
+              "start": 13625,
+              "end": 17001,
+              "tag": "break",
+              "confidence": 1,
+              "geometry": {
+                "start": 13625,
+                "end": 17000,
+                "anchor": {
+                  "peakShare": 0,
+                  "peakExcess": 0,
+                  "repeatConcentration": 0,
+                  "runAsymmetry": 0,
+                  "runCoverage": 0,
+                  "regularity": 0,
+                  "regularAnchor": 0
+                },
+                "release": {
+                  "tailRatePerKey": 0.25396825396825395,
+                  "headIsolation": 0.8818722943722942,
+                  "sameFingerRecovery": 1,
+                  "tailAsynchrony": 0.5,
+                  "tailTimingVariability": 0.16218604324326572,
+                  "heldOtherAtTail": 0.4166666666666667,
+                  "sameHandOrder": 0,
+                  "releaseChordFraction": 0.14285714285714282,
+                  "independentHeldRelease": 0.3757455507455507
+                }
+              }
+            }
+          ]
+        }
+      },
+      "experimentalSharedCoarse7": {
+        "scope": "shared 4K/7K morphology head, not public 7K fine classification",
+        "none": {
+          "dominant": "ln",
+          "composition": {
+            "jack": 0.02063579849192107,
+            "chordstream": 0.0013894852174564682,
+            "speed": 0.003152438481086797,
+            "tech": 0.0004487449948751062,
+            "ln": 0.9743735328146605
+          },
+          "familyMass": {
+            "ln": 0.9743735328146605,
+            "rc": 0.02562646718533944
+          },
+          "evidence": {
+            "activeWeight": 7.599694013444592,
+            "normalizedEntropy": 0.08458510933129966,
+            "meanLocalEntropy": 0.08450949504111463,
+            "diversity": 0.00007561429018503041
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        },
+        "both": {
+          "dominant": "ln",
+          "composition": {
+            "jack": 3.7180437133829274e-7,
+            "chordstream": 7.020007053637202e-8,
+            "speed": 0.000003719184609114724,
+            "tech": 0.000008441411827403015,
+            "ln": 0.9999873973991216
+          },
+          "familyMass": {
+            "ln": 0.9999873973991216,
+            "rc": 0.000012602600878392404
+          },
+          "evidence": {
+            "activeWeight": 8.000902742044545,
+            "normalizedEntropy": 0.00010213271638066036,
+            "meanLocalEntropy": 0.000006700420302606084,
+            "diversity": 0.00009543229607805428
+          },
+          "scoreKind": "weighted local morphology support; trained from weak whole-map labels and available interval labels; structural template support is not empirical correctness"
+        }
+      },
+      "physicalMetrics": {
+        "npsPerKey": 0.22320033569330486,
+        "rowRate": 0.31248046997062684,
+        "chordFraction": 0.7142857142857143,
+        "multiFraction": 0.8,
+        "singleFraction": 0.2,
+        "lnHeadFraction": 0.96,
+        "overlap": 0.75,
+        "repeatFraction": 0.75,
+        "cutReturn": 0,
+        "chordChange": 0.25,
+        "columnEntropy": 0.9702571514464299,
+        "handImbalance": 0,
+        "sameHand": 0.5,
+        "crossCut": 0,
+        "logIoiSd": 0,
+        "ioiChange": 0,
+        "graceFraction": 0,
+        "gridResidual": 0,
+        "rowBpm": 3.75,
+        "ioiCv": 0,
+        "occupancy": 0.6428169667967181,
+        "minOccupancy": 0,
+        "occupancySd": 0.2697678703962811,
+        "heldAtHead": 0,
+        "lockFraction": 0,
+        "releaseIndependence": 1,
+        "releaseScatter": 0.05409507407015643,
+        "tailRate": 0.21427232226557266,
+        "shortHoldFraction": 1,
+        "inverseGap": 0.5854323040687414,
+        "lnHeadOverlap": 0.75,
+        "anchorShare": 0.16,
+        "repeatRun": 0.75,
+        "maskEntropy": 0.31091750708257115,
+        "trillFraction": 0,
+        "rollFraction": 0,
+        "effort": 0.6416852723254476,
+        "sustain": 0.23529411764705882,
+        "burstiness": 1.715808847162177,
+        "activeFraction": 0.29411764705882354,
+        "peakShare": 0.16,
+        "peakExcess": 0.02000000000000001,
+        "repeatConcentration": 0.027777777777777773,
+        "runAsymmetry": 0,
+        "runCoverage": 0.8,
+        "regularity": 1,
+        "regularAnchor": 0.02000000000000001,
+        "release:tailRatePerKey": 0.21427232226557266,
+        "release:headIsolation": 0.8818722943722944,
+        "release:sameFingerRecovery": 0.9114042207792208,
+        "release:tailAsynchrony": 0.5,
+        "release:tailTimingVariability": 0.8625882798104049,
+        "release:heldOtherAtTail": 0.4166666666666667,
+        "release:sameHandOrder": 0,
+        "release:releaseChordFraction": 0.14285714285714282,
+        "release:independentHeldRelease": 0.37574555074555066
+      },
+      "releaseGeometry": {
+        "tailRatePerKey": 0.21427232226557266,
+        "headIsolation": 0.8818722943722944,
+        "sameFingerRecovery": 0.9114042207792208,
+        "tailAsynchrony": 0.5,
+        "tailTimingVariability": 0.8625882798104049,
+        "heldOtherAtTail": 0.4166666666666667,
+        "sameHandOrder": 0,
+        "releaseChordFraction": 0.14285714285714282,
+        "independentHeldRelease": 0.37574555074555066
+      },
+      "releaseActions": {
+        "groups": [
+          {
+            "t": 3625,
+            "released": [
+              0
+            ],
+            "heldBefore": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 5,
+            "sameHandPairs": 2
+          },
+          {
+            "t": 3750,
+            "released": [
+              1
+            ],
+            "heldBefore": [
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              2,
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 4,
+            "sameHandPairs": 1
+          },
+          {
+            "t": 3875,
+            "released": [
+              2
+            ],
+            "heldBefore": [
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 3,
+            "sameHandPairs": 0
+          },
+          {
+            "t": 4125,
+            "released": [
+              4
+            ],
+            "heldBefore": [
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              5,
+              6
+            ],
+            "retainedPairs": 2,
+            "sameHandPairs": 2
+          },
+          {
+            "t": 4250,
+            "released": [
+              5
+            ],
+            "heldBefore": [
+              5,
+              6
+            ],
+            "retained": [
+              6
+            ],
+            "retainedPairs": 1,
+            "sameHandPairs": 1
+          },
+          {
+            "t": 4375,
+            "released": [
+              6
+            ],
+            "heldBefore": [
+              6
+            ],
+            "retained": [],
+            "retainedPairs": 0,
+            "sameHandPairs": 0
+          },
+          {
+            "t": 7625,
+            "released": [
+              0
+            ],
+            "heldBefore": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 5,
+            "sameHandPairs": 2
+          },
+          {
+            "t": 7750,
+            "released": [
+              1
+            ],
+            "heldBefore": [
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              2,
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 4,
+            "sameHandPairs": 1
+          },
+          {
+            "t": 7875,
+            "released": [
+              2
+            ],
+            "heldBefore": [
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 3,
+            "sameHandPairs": 0
+          },
+          {
+            "t": 8125,
+            "released": [
+              4
+            ],
+            "heldBefore": [
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              5,
+              6
+            ],
+            "retainedPairs": 2,
+            "sameHandPairs": 2
+          },
+          {
+            "t": 8250,
+            "released": [
+              5
+            ],
+            "heldBefore": [
+              5,
+              6
+            ],
+            "retained": [
+              6
+            ],
+            "retainedPairs": 1,
+            "sameHandPairs": 1
+          },
+          {
+            "t": 8375,
+            "released": [
+              6
+            ],
+            "heldBefore": [
+              6
+            ],
+            "retained": [],
+            "retainedPairs": 0,
+            "sameHandPairs": 0
+          },
+          {
+            "t": 11625,
+            "released": [
+              0
+            ],
+            "heldBefore": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 5,
+            "sameHandPairs": 2
+          },
+          {
+            "t": 11750,
+            "released": [
+              1
+            ],
+            "heldBefore": [
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              2,
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 4,
+            "sameHandPairs": 1
+          },
+          {
+            "t": 11875,
+            "released": [
+              2
+            ],
+            "heldBefore": [
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 3,
+            "sameHandPairs": 0
+          },
+          {
+            "t": 12125,
+            "released": [
+              4
+            ],
+            "heldBefore": [
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              5,
+              6
+            ],
+            "retainedPairs": 2,
+            "sameHandPairs": 2
+          },
+          {
+            "t": 12250,
+            "released": [
+              5
+            ],
+            "heldBefore": [
+              5,
+              6
+            ],
+            "retained": [
+              6
+            ],
+            "retainedPairs": 1,
+            "sameHandPairs": 1
+          },
+          {
+            "t": 12375,
+            "released": [
+              6
+            ],
+            "heldBefore": [
+              6
+            ],
+            "retained": [],
+            "retainedPairs": 0,
+            "sameHandPairs": 0
+          },
+          {
+            "t": 15625,
+            "released": [
+              0
+            ],
+            "heldBefore": [
+              0,
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 5,
+            "sameHandPairs": 2
+          },
+          {
+            "t": 15750,
+            "released": [
+              1
+            ],
+            "heldBefore": [
+              1,
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              2,
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 4,
+            "sameHandPairs": 1
+          },
+          {
+            "t": 15875,
+            "released": [
+              2
+            ],
+            "heldBefore": [
+              2,
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              4,
+              5,
+              6
+            ],
+            "retainedPairs": 3,
+            "sameHandPairs": 0
+          },
+          {
+            "t": 16125,
+            "released": [
+              4
+            ],
+            "heldBefore": [
+              4,
+              5,
+              6
+            ],
+            "retained": [
+              5,
+              6
+            ],
+            "retainedPairs": 2,
+            "sameHandPairs": 2
+          },
+          {
+            "t": 16250,
+            "released": [
+              5
+            ],
+            "heldBefore": [
+              5,
+              6
+            ],
+            "retained": [
+              6
+            ],
+            "retainedPairs": 1,
+            "sameHandPairs": 1
+          },
+          {
+            "t": 16375,
+            "released": [
+              6
+            ],
+            "heldBefore": [
+              6
+            ],
+            "retained": [],
+            "retainedPairs": 0,
+            "sameHandPairs": 0
+          }
+        ],
+        "continuous": [
+          {
+            "scaleMs": 15,
+            "retainedPairsPerKeySecond": 0.5356464631222719,
+            "sameHandPairsPerKeySecond": 0.21423798178825795
+          },
+          {
+            "scaleMs": 30,
+            "retainedPairsPerKeySecond": 0.5334400831637476,
+            "sameHandPairsPerKeySecond": 0.21204045628045112
+          },
+          {
+            "scaleMs": 60,
+            "retainedPairsPerKeySecond": 0.5160672083392994,
+            "sameHandPairsPerKeySecond": 0.1953783033926626
+          },
+          {
+            "scaleMs": 120,
+            "retainedPairsPerKeySecond": 0.4666756473283603,
+            "sameHandPairsPerKeySecond": 0.1549726974462066
+          }
+        ],
+        "metricScope": "exact event groups are diagnostics; continuous retained-pair fields are candidate model inputs, not calibrated difficulty",
+        "metrics": {
+          "releaseGroupsPerSecond": 1.4999062558590086,
+          "releaseWidthMean": 1,
+          "allHeldReleasedGroupFraction": 0.16666666666666666,
+          "retainedFingerPairsPerKeySecond": 0.5356808056639316,
+          "sameHandRetainedPairsPerKeySecond": 0.21427232226557266
+        }
+      }
+    }
+  ]
+}

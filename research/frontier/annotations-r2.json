@@ -1,0 +1,40 @@
+{
+  "source": "User annotations and time-scope clarification in this chat, 2026-11-01",
+  "purpose": "Actively constructed mechanism supervision, not a random accuracy sample",
+  "generator": "make_density_pack.py",
+  "keyCount": 7,
+  "overallDifficulty": 8,
+  "speedRate": 1,
+  "timing": "Integer-ms source heads; no DT. C phrases last approximately 8 seconds with nominal total-note rates in their names.",
+  "cases": {
+    "C16": {"intervalMs": [1000, 9000], "rawAnnotation": "C16 speed", "tags": ["speed"], "certainty": null},
+    "C24": {"intervalMs": [1000, 9000], "rawAnnotation": "C24 tech", "tags": ["tech"], "certainty": null},
+    "C32": {"intervalMs": [1000, 9000], "rawAnnotation": "C32 tech/minijack", "possibleTags": ["tech", "minijack"], "combinationOrAlternatives": "not further specified", "certainty": null},
+    "C48": {"intervalMs": [1000, 9000], "rawAnnotation": "C48 (vibro)minijack/anchor", "possibleTags": ["minijack", "anchor"], "qualifier": "(vibro)", "combinationOrAlternatives": "not further specified; do not turn the parenthetical qualifier into a mandatory third tag", "certainty": null},
+    "CTX-H": {
+      "intervalMs": [9000, 17000],
+      "rawAnnotation": "CTX-H的后半会变为break；CTX-H整体为dense cs(bracket)，玩家几乎不会关注这一段低密度段",
+      "clarificationQuestion": "是否指图中9–17秒的低密度目标段，而不是把17秒后恢复多押的部分也标为Break？整谱则记dense cs（bracket）。",
+      "rawClarification": "是的",
+      "targetTags": ["break"],
+      "wholeChartTags": ["dense chordstream"],
+      "wholeChartQualifier": "bracket",
+      "certainty": null,
+      "scope": "Break applies to the target only, not the dense outro starting at17 seconds"
+    },
+    "CTX-L": {
+      "intervalMs": [9000, 17000],
+      "rawAnnotation": "上一轮对话已经给出：如果真的存在密度这么低的谱面，也许算低置信度dense cs（或fast cs；尽管它严格意义上并不算切换，但并没有能归类的）",
+      "acceptableAlternatives": ["dense chordstream", "fast chordstream"],
+      "certainty": "low",
+      "modality": "perhaps; existing taxonomy lacks an exact match",
+      "scope": "Same low-density roll throughout the chart; no exhaustive millisecond annotation"
+    }
+  },
+  "implications": [
+    "Absolute speed changes the perceived type even with unchanged lane order.",
+    "Local physical heads alone cannot determine Break: CTX-L/H target heads are identical but primary impression changes with chart context.",
+    "High-speed anchor can be perceived without one column dominating the note histogram; raw column concentration is not a necessary condition for this case.",
+    "Taxonomy mismatch should remain a low-confidence combination or alternative, not a forced confident class."
+  ]
+}

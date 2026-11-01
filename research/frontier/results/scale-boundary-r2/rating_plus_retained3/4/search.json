@@ -1,0 +1,5826 @@
+[
+  {
+    "configId": 0,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.31481683111754755,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4247405508438807,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 1,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.31481687131696906,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4247405508438807,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 2,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.31481757898631935,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.422963370437668,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 3,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.31481771112149126,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4182864322668195,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 4,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.31481664156469735,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4218271338576798,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 5,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.3148168228266355,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.42414194867249466,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 6,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.31481786443162263,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.42743905412414995,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 7,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.31481811739716625,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4160489206855305,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 8,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5000038316929343,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6637866276394487,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 9,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5000043056951623,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6631212489148595,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 10,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5000037129455064,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.6576723537074007,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 11,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5000038904329169,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.654177844578807,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 12,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5000033321910688,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.747228249884647,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 13,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5000045100112044,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.7611494886700163,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 14,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5000046643965765,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.749426414770842,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 15,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5000044744937842,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7391648294900222,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 16,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.31483497572011176,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4247405508438807,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 17,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.3148353775356594,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4247405508438807,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 18,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.31484245102690045,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.422963370437668,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 19,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.3148437719100313,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4182864322668195,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 20,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.31483307987855047,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4218271338576798,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 21,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.3148348930183398,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.42414194867249466,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 22,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.3148453025881259,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.42743905412414995,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 23,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.31484783356897084,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4160489206855305,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 24,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5000241540795458,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6579115800607575,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 25,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5000288781251436,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6567310245052019,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 26,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5000230072809901,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.6515043067784843,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 27,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5000221400866185,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6519017390418319,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 28,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5000277917576041,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.7378976247931524,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 29,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5000302409181351,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.7408887761538689,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 30,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5000260947720625,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7423314119107595,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 31,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5000287102689824,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7377218280470207,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 32,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.3150162119791444,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4247405508438807,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 33,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.31502021233327526,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4247405508438807,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 34,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.31509062817508066,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.422963370437668,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 35,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.31510379055438664,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4182864322668195,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 36,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.31499732570342676,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4218271338576798,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 37,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.31501540557280916,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.42414194867249466,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 38,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.3151190886155024,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.42743905412414995,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 39,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.31514429729431925,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4160489206855305,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 40,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5002410906048533,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6579115800607575,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 41,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5002882058087419,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6567310245052019,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 42,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.500229707872139,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.6515043067784843,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 43,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5002204095417082,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6519017390418319,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 44,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5002774494732833,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.7378976247931524,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 45,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5003013362000983,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.7380478670629599,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 46,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5002604579527206,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7423314119107595,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 47,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5002865327781578,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7377218280470207,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 48,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.36345755086820847,
+    "macroF1": 0.541795665634675,
+    "releaseF1": 0.29411764705882354,
+    "AP": 0.40201784620572156,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 49,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.36358986016360884,
+    "macroF1": 0.541795665634675,
+    "releaseF1": 0.29411764705882354,
+    "AP": 0.4018011267725842,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 50,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.3175194853771608,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.40041121963670934,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 51,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.3176465713784441,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.40350254410330944,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 52,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.31662514955300913,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.42436533639588236,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 53,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.3168018258601437,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4244395677201137,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 54,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.3177966795117729,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4274655148053847,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 55,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.3180410068720272,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4148584444950543,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 56,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5027394130001837,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6569988990425096,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 57,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5020439016625078,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6592464740315211,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 58,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5022241860807282,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.6515043067784843,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 59,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5021054701251486,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6519017390418319,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 60,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5028524600009867,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.750286393431921,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 61,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5029090179667148,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.7446571549222477,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 62,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5025544928999666,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7446100097534052,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 63,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5028046909639321,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7366465033278721,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 64,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.33570885290183144,
+    "macroF1": 0.6840062111801242,
+    "releaseF1": 0.6071428571428571,
+    "AP": 0.48070838652893716,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 65,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.33572621894036736,
+    "macroF1": 0.6840062111801242,
+    "releaseF1": 0.6071428571428571,
+    "AP": 0.4786241883830952,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 66,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.3364494695968343,
+    "macroF1": 0.6840062111801242,
+    "releaseF1": 0.6071428571428571,
+    "AP": 0.47966364379221965,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 67,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.3373684046578965,
+    "macroF1": 0.6840062111801242,
+    "releaseF1": 0.6071428571428571,
+    "AP": 0.4771112760437735,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 68,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.33856076826894815,
+    "macroF1": 0.6961876832844575,
+    "releaseF1": 0.6181818181818182,
+    "AP": 0.5430395024786352,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 69,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.3399379591476006,
+    "macroF1": 0.7084318360914106,
+    "releaseF1": 0.6296296296296297,
+    "AP": 0.546407493468655,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 70,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.3405346909273703,
+    "macroF1": 0.7084318360914106,
+    "releaseF1": 0.6296296296296297,
+    "AP": 0.5316000490667203,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 71,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.3415366233978555,
+    "macroF1": 0.7084318360914106,
+    "releaseF1": 0.6296296296296297,
+    "AP": 0.5396071953037045,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 72,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5155374491355701,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.6672130718546089,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 73,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5155458401262204,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.6594146398484303,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 74,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5134233874522696,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6542386682164808,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 75,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5137404773522467,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6495319725600536,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 76,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5207168974404817,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7560045332760053,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 77,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5211648148021195,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7574981399779452,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 78,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5194577630147528,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7498047028320034,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 79,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5231244764239238,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7475061678888111,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 80,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.43467068834187256,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.6115867293568202,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 81,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.43712465713911086,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.6119622640403907,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 82,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.44279716080242393,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.6141718599999866,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 83,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.44433472023874,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.6059929162985884,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 84,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.4174400561722337,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7063000914455426,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 85,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.38885304231200857,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7057852207492028,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 86,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.3872082111038613,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7047314548689849,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 87,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.43766180053251424,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.7129925632802485,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 88,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5735996675108452,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.6701563658664386,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 89,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.575105394392856,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.6655392854160247,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 90,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5785562621155113,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.6538610807231141,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 91,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5823055123882144,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.6448709890586641,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 92,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5345767097042653,
+    "macroF1": 0.8285232778597009,
+    "releaseF1": 0.7659574468085106,
+    "AP": 0.7803800282184539,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 93,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5300222881235526,
+    "macroF1": 0.8285232778597009,
+    "releaseF1": 0.7659574468085106,
+    "AP": 0.7818182581087187,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 94,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5378150890008329,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7652851819062847,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 95,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5431412363364239,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7642536059811984,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 96,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.4248427113163694,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.6810597758607162,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 97,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.35503507206304974,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.6726433494288789,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 98,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.44767010558995357,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6605614904293233,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 99,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.44742595935256146,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6533394285381464,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 100,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.2951919076908364,
+    "macroF1": 0.8321995464852607,
+    "releaseF1": 0.7755102040816326,
+    "AP": 0.786887665002115,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 101,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.2964068458347968,
+    "macroF1": 0.8321995464852607,
+    "releaseF1": 0.7755102040816326,
+    "AP": 0.7859796746873451,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 102,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.36254287505097765,
+    "macroF1": 0.8285232778597009,
+    "releaseF1": 0.7659574468085106,
+    "AP": 0.7834175525164128,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 103,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.41131489119996356,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7804870140190414,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 104,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.4925942386435796,
+    "macroF1": 0.8187755102040817,
+    "releaseF1": 0.76,
+    "AP": 0.6903433399345626,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 105,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.4979067719015726,
+    "macroF1": 0.8187755102040817,
+    "releaseF1": 0.76,
+    "AP": 0.688660837203241,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 106,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.4975727758900575,
+    "macroF1": 0.8016903731189446,
+    "releaseF1": 0.7346938775510204,
+    "AP": 0.6832179205996257,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 107,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.545017284681319,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.6663778469326803,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 108,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.40286018940323237,
+    "macroF1": 0.8354558318172629,
+    "releaseF1": 0.7843137254901961,
+    "AP": 0.7997927763593331,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 109,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.42754206020568114,
+    "macroF1": 0.8321995464852607,
+    "releaseF1": 0.7755102040816326,
+    "AP": 0.7954458691525514,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 110,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.4245105790859377,
+    "macroF1": 0.8321995464852607,
+    "releaseF1": 0.7755102040816326,
+    "AP": 0.7927168407454961,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 111,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.37602060674337145,
+    "macroF1": 0.8221153846153846,
+    "releaseF1": 0.7692307692307693,
+    "AP": 0.7892138674744735,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 112,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.34785590719554116,
+    "macroF1": 0.7959022852639874,
+    "releaseF1": 0.7407407407407407,
+    "AP": 0.6688530904503674,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 113,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.3704057079812139,
+    "macroF1": 0.7959022852639874,
+    "releaseF1": 0.7407407407407407,
+    "AP": 0.6695823249240225,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 114,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.31780153495011115,
+    "macroF1": 0.782991202346041,
+    "releaseF1": 0.7272727272727273,
+    "AP": 0.6538922226389731,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 115,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.3539518906944066,
+    "macroF1": 0.7667454688731284,
+    "releaseF1": 0.7037037037037037,
+    "AP": 0.6362509411928096,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 116,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.22125641336960625,
+    "macroF1": 0.8321995464852607,
+    "releaseF1": 0.7755102040816326,
+    "AP": 0.7846726410968581,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 117,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.24159789288964925,
+    "macroF1": 0.8321995464852607,
+    "releaseF1": 0.7755102040816326,
+    "AP": 0.7784463317754736,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 118,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.2933689538146771,
+    "macroF1": 0.8321995464852607,
+    "releaseF1": 0.7755102040816326,
+    "AP": 0.7765498556395294,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 119,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.5042224320594575,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7638067539037946,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 120,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.45357771920057555,
+    "macroF1": 0.7959022852639874,
+    "releaseF1": 0.7407407407407407,
+    "AP": 0.6652981958294927,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 121,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.4901529454192192,
+    "macroF1": 0.7924679487179487,
+    "releaseF1": 0.7307692307692307,
+    "AP": 0.6641056529413898,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 122,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.5355338008954446,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6509595565718455,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 123,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.48187481282531053,
+    "macroF1": 0.7667454688731284,
+    "releaseF1": 0.7037037037037037,
+    "AP": 0.6321717584032027,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 124,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.4162952887118134,
+    "macroF1": 0.815,
+    "releaseF1": 0.75,
+    "AP": 0.792466182909779,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 125,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.44761050751825116,
+    "macroF1": 0.815,
+    "releaseF1": 0.75,
+    "AP": 0.7905582404499989,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 126,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.36324725910675965,
+    "macroF1": 0.8055387103294926,
+    "releaseF1": 0.7450980392156863,
+    "AP": 0.7743119495143854,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 127,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.6774891813907529,
+    "macroF1": 0.8059440559440559,
+    "releaseF1": 0.7272727272727273,
+    "AP": 0.7639993265752287,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 128,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5418788797679366,
+    "macroF1": 0.7583673469387755,
+    "releaseF1": 0.68,
+    "AP": 0.640429889916375,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 129,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5362066701516567,
+    "macroF1": 0.7583673469387755,
+    "releaseF1": 0.68,
+    "AP": 0.628608355926212,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 130,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.6925509489242174,
+    "macroF1": 0.7661681061723193,
+    "releaseF1": 0.6808510638297872,
+    "AP": 0.608498055014046,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 131,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.7245671433851326,
+    "macroF1": 0.7661681061723193,
+    "releaseF1": 0.6808510638297872,
+    "AP": 0.5938990614018204,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 132,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.7482093413341155,
+    "macroF1": 0.8197120708748615,
+    "releaseF1": 0.7441860465116279,
+    "AP": 0.798841694633046,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 133,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9508691955232804,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7885882531704278,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 134,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9678935379157132,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7698704316786568,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 135,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.8784819097983865,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.7518261983103477,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 136,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.6233744203961589,
+    "macroF1": 0.7583673469387755,
+    "releaseF1": 0.68,
+    "AP": 0.637270244683559,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 137,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5180151767821184,
+    "macroF1": 0.7501489572989076,
+    "releaseF1": 0.6792452830188679,
+    "AP": 0.6250910395202399,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 138,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.7602363474284116,
+    "macroF1": 0.7661681061723193,
+    "releaseF1": 0.6808510638297872,
+    "AP": 0.6108573854983764,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 139,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.7447806472754078,
+    "macroF1": 0.7711811997526283,
+    "releaseF1": 0.6938775510204082,
+    "AP": 0.5926730964258553,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 140,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.8089159630277184,
+    "macroF1": 0.8197120708748615,
+    "releaseF1": 0.7441860465116279,
+    "AP": 0.798841694633046,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 141,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.966772042536481,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7885152418552621,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 142,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9786304575659693,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7689467863584597,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 143,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9155307555483986,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.7525758826537821,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 144,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.4955313092535068,
+    "macroF1": 0.7628205128205128,
+    "releaseF1": 0.6923076923076923,
+    "AP": 0.6403319021712702,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 145,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.5026457344752044,
+    "macroF1": 0.7628205128205128,
+    "releaseF1": 0.6923076923076923,
+    "AP": 0.6267695391753493,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 146,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.871816966731399,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6070016487107949,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 147,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9986065541190008,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5901793632903267,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 148,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.9159673764535239,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7900753050142572,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 149,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.8458284024659894,
+    "macroF1": 0.8197120708748615,
+    "releaseF1": 0.7441860465116279,
+    "AP": 0.7844786743400871,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 150,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9385965252030872,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.7518633547684116,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 151,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9848970094440812,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.7372190777588872,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 152,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5857510984078684,
+    "macroF1": 0.7628205128205128,
+    "releaseF1": 0.6923076923076923,
+    "AP": 0.6399992945273418,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 153,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9676786079237696,
+    "macroF1": 0.7605177993527508,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.627198707707966,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 154,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9103491236418123,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6070016487107949,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 155,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.8947022724697713,
+    "macroF1": 0.7711811997526283,
+    "releaseF1": 0.6938775510204082,
+    "AP": 0.5908970830705466,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 156,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.9369209862106769,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7918835277106379,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 157,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.8816250707750243,
+    "macroF1": 0.8197120708748615,
+    "releaseF1": 0.7441860465116279,
+    "AP": 0.7881924424560292,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 158,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9599523469009112,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.7544427198477768,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 159,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9894388506706511,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.7372190777588872,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 160,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5012340846417035,
+    "macroF1": 0.7628205128205128,
+    "releaseF1": 0.6923076923076923,
+    "AP": 0.6469888847273755,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 161,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9739852437535714,
+    "macroF1": 0.7605177993527508,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6345897953702881,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 162,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9581038945231524,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6138993512706705,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 163,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9999331175653141,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5984402239885829,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 164,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.971028660587371,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7860204568946237,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 165,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9382140368010806,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7836619994648006,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 166,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9807092510066815,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.7507402875432722,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 167,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9942082819090264,
+    "macroF1": 0.7869324473975636,
+    "releaseF1": 0.6976744186046512,
+    "AP": 0.7340382743667531,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 168,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.5905076297135204,
+    "macroF1": 0.7628205128205128,
+    "releaseF1": 0.6923076923076923,
+    "AP": 0.6447737850122758,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 169,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9816867387005959,
+    "macroF1": 0.7605177993527508,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6355267442239037,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 170,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9715717120293077,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6172401921115114,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 171,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9999525400257048,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5839882720366308,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 172,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.9785606848085296,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7860204568946237,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 173,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9537468703431138,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7843622795768455,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 174,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9879405080990887,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.7507402875432722,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 175,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9964623577482965,
+    "macroF1": 0.7869324473975636,
+    "releaseF1": 0.6976744186046512,
+    "AP": 0.7343358934143721,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 176,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.6027226233974623,
+    "macroF1": 0.7628205128205128,
+    "releaseF1": 0.6923076923076923,
+    "AP": 0.6598746871965112,
+    "thresholdPartitions": 71
+  },
+  {
+    "configId": 177,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9840478703340865,
+    "macroF1": 0.7605177993527508,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6488844050393847,
+    "thresholdPartitions": 71
+  },
+  {
+    "configId": 178,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9880896077121164,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.5919906703210414,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 179,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9999960166922803,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5831868307222334,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 180,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.9916383752230459,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7840760290517461,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 181,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9779696708364822,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7806468110924109,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 182,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9936835434778797,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.750371854437133,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 183,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.999161135818766,
+    "macroF1": 0.7869324473975636,
+    "releaseF1": 0.6976744186046512,
+    "AP": 0.7318766142378064,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 184,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.6875193108856256,
+    "macroF1": 0.7628205128205128,
+    "releaseF1": 0.6923076923076923,
+    "AP": 0.6598746871965112,
+    "thresholdPartitions": 71
+  },
+  {
+    "configId": 185,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9884534290025819,
+    "macroF1": 0.7605177993527508,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6506545575448314,
+    "thresholdPartitions": 71
+  },
+  {
+    "configId": 186,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9344178010969513,
+    "macroF1": 0.7711811997526283,
+    "releaseF1": 0.6938775510204082,
+    "AP": 0.5917628908541315,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 187,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9999971558404215,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5831868307222334,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 188,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.9938499791210803,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7840760290517461,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 189,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9837372406391238,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7806468110924109,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 190,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9960822416133897,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.750371854437133,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 191,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9994824845444998,
+    "macroF1": 0.7869324473975636,
+    "releaseF1": 0.6976744186046512,
+    "AP": 0.7311710289733977,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 192,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.6905620953694582,
+    "macroF1": 0.7628205128205128,
+    "releaseF1": 0.6923076923076923,
+    "AP": 0.6740683446642628,
+    "thresholdPartitions": 69
+  },
+  {
+    "configId": 193,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9890450359381888,
+    "macroF1": 0.7605177993527508,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6381402077715865,
+    "thresholdPartitions": 68
+  },
+  {
+    "configId": 194,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9999999979406852,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6156692816091492,
+    "thresholdPartitions": 67
+  },
+  {
+    "configId": 195,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9999997658186645,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5947209216313244,
+    "thresholdPartitions": 66
+  },
+  {
+    "configId": 196,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.997643265374444,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7842955198331332,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 197,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.992572619457307,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7768675003509562,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 198,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9979050100829807,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.7287554825063571,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 199,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9999949025310767,
+    "macroF1": 0.7807157510827445,
+    "releaseF1": 0.6829268292682927,
+    "AP": 0.7040797893318994,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 200,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.7780590120364201,
+    "macroF1": 0.7628205128205128,
+    "releaseF1": 0.6923076923076923,
+    "AP": 0.6745764747455636,
+    "thresholdPartitions": 69
+  },
+  {
+    "configId": 201,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.991782083314656,
+    "macroF1": 0.7605177993527508,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6381402077715865,
+    "thresholdPartitions": 68
+  },
+  {
+    "configId": 202,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.9999999985784345,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6156692816091492,
+    "thresholdPartitions": 67
+  },
+  {
+    "configId": 203,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.9999998369845002,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5941256835360863,
+    "thresholdPartitions": 66
+  },
+  {
+    "configId": 204,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 15
+    },
+    "threshold": 0.9982335530279105,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.783853600641214,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 205,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 30
+    },
+    "threshold": 0.9944773727455057,
+    "macroF1": 0.8337825696316262,
+    "releaseF1": 0.7619047619047619,
+    "AP": 0.7794468654303213,
+    "thresholdPartitions": 71
+  },
+  {
+    "configId": 206,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 60
+    },
+    "threshold": 0.998665452549669,
+    "macroF1": 0.8005390835579516,
+    "releaseF1": 0.7142857142857143,
+    "AP": 0.7306964805763875,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 207,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 120
+    },
+    "threshold": 0.99999644013938,
+    "macroF1": 0.7807157510827445,
+    "releaseF1": 0.6829268292682927,
+    "AP": 0.7040797893318994,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 208,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.3148169310675947,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.41774879785821734,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 209,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.3148169119394086,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.43193761291912547,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 210,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.3148168923379502,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4284595550293029,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 211,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.3148165291387026,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4307381179696305,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 212,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.3148182738138485,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4246621047651325,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 213,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.31481846100822053,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.42168591428894203,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 214,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.31481850691397995,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.42932480317783095,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 215,
+    "config": {
+      "C": 1e-07,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.31481806486030584,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.43117665502968283,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 216,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.5000037308568708,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6381348597858222,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 217,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5000037534488344,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6448193973985893,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 218,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.5000039717280653,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6441020714156569,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 219,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.5000042519998114,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6493102580168585,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 220,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.5000049154343011,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7306476914037072,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 221,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5000047102476346,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7429503611463937,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 222,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.5000051084276277,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.760393248356238,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 223,
+    "config": {
+      "C": 1e-07,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.5000040041870207,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.7398540885233624,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 224,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.31483597425520693,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.41774879785821734,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 225,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.3148357820713487,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.43193761291912547,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 226,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.31483558630101494,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4284595550293029,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 227,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.31483195472926456,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4307381179696305,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 228,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.31484939607893847,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4246621047651325,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 229,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.3148512682801079,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.42168591428894203,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 230,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.31485172767001796,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.42932480317783095,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 231,
+    "config": {
+      "C": 1e-06,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.31484730795070903,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.43117665502968283,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 232,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.5000227391106575,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6346121211401328,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 233,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5000231924116145,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6412431941900333,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 234,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.5000253070392532,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6407325364671745,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 235,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.5000277044190446,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6448444460510465,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 236,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.5000333262483687,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7304053152358948,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 237,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5000313339658605,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7373541599619573,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 238,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.5000280827488884,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7493141412873479,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 239,
+    "config": {
+      "C": 1e-06,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.5000222129227037,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.7352161825696669,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 240,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.3150261007816855,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.41774879785821734,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 241,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.3150241927605911,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.43193761291912547,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 242,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.315022240684561,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4284595550293029,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 243,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.31498598235530473,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.4307381179696305,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 244,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.31515987550519975,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4246621047651325,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 245,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.3151785649622959,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.42168591428894203,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 246,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.31518316075739705,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.42932480317783095,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 247,
+    "config": {
+      "C": 1e-05,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.31513902379840586,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.43117665502968283,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 248,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.5002263877760378,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6346121211401328,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 249,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5002313381412855,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6412431941900333,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 250,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.5002521165744201,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6407325364671745,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 251,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.5002759600192201,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6448444460510465,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 252,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.5003325075933407,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7304053152358948,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 253,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5003121981290899,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7400251001328975,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 254,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.5002798030120174,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7493141412873479,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 255,
+    "config": {
+      "C": 1e-05,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.5002211350367354,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.7350205644163024,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 256,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.3176650838680183,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.40350254410330944,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 257,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.317647382306257,
+    "macroF1": 0.5515151515151515,
+    "releaseF1": 0.43636363636363634,
+    "AP": 0.41767772615639853,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 258,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.3168600793089057,
+    "macroF1": 0.5403726708074534,
+    "releaseF1": 0.42857142857142855,
+    "AP": 0.41809378415665954,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 259,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.3165030026737818,
+    "macroF1": 0.5403726708074534,
+    "releaseF1": 0.42857142857142855,
+    "AP": 0.4182980325226726,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 260,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.31819121610376944,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.4246621047651325,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 261,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.31837545773274034,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.42168591428894203,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 262,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.3184218782272269,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.42932480317783095,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 263,
+    "config": {
+      "C": 0.0001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.31798665621362676,
+    "macroF1": 0.5626477541371158,
+    "releaseF1": 0.4444444444444444,
+    "AP": 0.43514490899793673,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 264,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.502163926556797,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6357018647298763,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 265,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5023866418027465,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.6426207258921287,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 266,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.5024268156593283,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6441495158095901,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 267,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.502292363225816,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6494972238288242,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 268,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.5032470608762922,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7304053152358948,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 269,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5030080020448361,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7400251001328975,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 270,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.5026951944185708,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.7456511376243442,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 271,
+    "config": {
+      "C": 0.0001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.5029310836183616,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.7406219980068663,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 272,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.33726058886694665,
+    "macroF1": 0.6840062111801242,
+    "releaseF1": 0.6071428571428571,
+    "AP": 0.47432433379385697,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 273,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.3365158039566807,
+    "macroF1": 0.6840062111801242,
+    "releaseF1": 0.6071428571428571,
+    "AP": 0.4861092194356205,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 274,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.3317919604949039,
+    "macroF1": 0.6718719876614614,
+    "releaseF1": 0.5964912280701754,
+    "AP": 0.4943001035589644,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 275,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.33074705821746164,
+    "macroF1": 0.6718719876614614,
+    "releaseF1": 0.5964912280701754,
+    "AP": 0.4819211912361672,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 276,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.3416165424494999,
+    "macroF1": 0.7084318360914106,
+    "releaseF1": 0.6296296296296297,
+    "AP": 0.5494957924808787,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 277,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.3401308156208228,
+    "macroF1": 0.7084318360914106,
+    "releaseF1": 0.6296296296296297,
+    "AP": 0.5598375611637741,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 278,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.3382937851458851,
+    "macroF1": 0.6961876832844575,
+    "releaseF1": 0.6181818181818182,
+    "AP": 0.5635785016719077,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 279,
+    "config": {
+      "C": 0.001,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.33718955561662006,
+    "macroF1": 0.6961876832844575,
+    "releaseF1": 0.6181818181818182,
+    "AP": 0.577842626491719,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 280,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.5217473565983651,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6327939161969279,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 281,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5207357684819208,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6438848265002696,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 282,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.5172037352518375,
+    "macroF1": 0.8016903731189446,
+    "releaseF1": 0.7346938775510204,
+    "AP": 0.6538605195951577,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 283,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.5173142553452511,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.6535640273193534,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 284,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.5239803460667534,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.74443236876566,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 285,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.521702470095158,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7523468062046035,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 286,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.520113593879409,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7521741482645432,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 287,
+    "config": {
+      "C": 0.001,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.5231549373857605,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.758564226775708,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 288,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.4402455424271831,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6036053680115546,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 289,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.431983882459384,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.612479424799183,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 290,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.4250904678029857,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6087922128074544,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 291,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.4208344090220432,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.6325414308860048,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 292,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.43570740323636886,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.7124358313794862,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 293,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.4274520457330947,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.7326643726071348,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 294,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.4191971217632856,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.7294720320744306,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 295,
+    "config": {
+      "C": 0.01,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.41453481177699764,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.7260071620600101,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 296,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.5817905599145246,
+    "macroF1": 0.7924487594390507,
+    "releaseF1": 0.7111111111111111,
+    "AP": 0.6461690769373404,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 297,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5943448121035051,
+    "macroF1": 0.7736013986013985,
+    "releaseF1": 0.6818181818181818,
+    "AP": 0.64990810063602,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 298,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.5253124713925159,
+    "macroF1": 0.7756215888417223,
+    "releaseF1": 0.7058823529411765,
+    "AP": 0.6580161860418996,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 299,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.593743307102671,
+    "macroF1": 0.7869324473975636,
+    "releaseF1": 0.6976744186046512,
+    "AP": 0.6753340456208068,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 300,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.55071757855289,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.772773171084949,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 301,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5507181875580137,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7742984244624425,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 302,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.522297220202476,
+    "macroF1": 0.815,
+    "releaseF1": 0.75,
+    "AP": 0.7850192970041905,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 303,
+    "config": {
+      "C": 0.01,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.523215975641912,
+    "macroF1": 0.815,
+    "releaseF1": 0.75,
+    "AP": 0.8084422719180397,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 304,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.386889022436194,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6454166699500653,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 305,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.3719154352568457,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6543133441500483,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 306,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.36713818599921255,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.6692737397138921,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 307,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.35934203701841305,
+    "macroF1": 0.7841666666666667,
+    "releaseF1": 0.7083333333333334,
+    "AP": 0.676876994658924,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 308,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.6506608206116637,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7688841076626072,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 309,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.6551935032674809,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7803401059503174,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 310,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.27765859597637305,
+    "macroF1": 0.8187755102040817,
+    "releaseF1": 0.76,
+    "AP": 0.7898808999603539,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 311,
+    "config": {
+      "C": 0.1,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.29463579605708334,
+    "macroF1": 0.8321995464852607,
+    "releaseF1": 0.7755102040816326,
+    "AP": 0.8059089420402252,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 312,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.5409537255318462,
+    "macroF1": 0.7973456920160101,
+    "releaseF1": 0.723404255319149,
+    "AP": 0.6491219739235835,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 313,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.4818207802258828,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.6729835708459995,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 314,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.378328189674787,
+    "macroF1": 0.7959022852639874,
+    "releaseF1": 0.7407407407407407,
+    "AP": 0.6772317562467909,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 315,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.47496559858750487,
+    "macroF1": 0.8016903731189446,
+    "releaseF1": 0.7346938775510204,
+    "AP": 0.6959878962062355,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 316,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.3659147742464166,
+    "macroF1": 0.8089374379344588,
+    "releaseF1": 0.7547169811320755,
+    "AP": 0.7927749047708936,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 317,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.36015241237606055,
+    "macroF1": 0.8089374379344588,
+    "releaseF1": 0.7547169811320755,
+    "AP": 0.7979978968756454,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 318,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.35667906527516247,
+    "macroF1": 0.8221153846153846,
+    "releaseF1": 0.7692307692307693,
+    "AP": 0.7987407286848682,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 319,
+    "config": {
+      "C": 0.1,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.39761841451659685,
+    "macroF1": 0.8321995464852607,
+    "releaseF1": 0.7755102040816326,
+    "AP": 0.8218276074375233,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 320,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.33505669867366394,
+    "macroF1": 0.7667454688731284,
+    "releaseF1": 0.7037037037037037,
+    "AP": 0.6249184927255435,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 321,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.3402518767864369,
+    "macroF1": 0.7795431976166831,
+    "releaseF1": 0.7169811320754716,
+    "AP": 0.6379153931353893,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 322,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.27197559117859854,
+    "macroF1": 0.7959022852639874,
+    "releaseF1": 0.7407407407407407,
+    "AP": 0.6512443188349154,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 323,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.306615032270106,
+    "macroF1": 0.7924679487179487,
+    "releaseF1": 0.7307692307692307,
+    "AP": 0.6570931889581396,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 324,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.6549753554963509,
+    "macroF1": 0.8197120708748615,
+    "releaseF1": 0.7441860465116279,
+    "AP": 0.773110417936753,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 325,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.7211477460542495,
+    "macroF1": 0.8287037037037037,
+    "releaseF1": 0.75,
+    "AP": 0.7764352261412921,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 326,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.7579921540409977,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7780679520097055,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 327,
+    "config": {
+      "C": 1.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.27702261284047375,
+    "macroF1": 0.8321995464852607,
+    "releaseF1": 0.7755102040816326,
+    "AP": 0.8059296403617447,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 328,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.4999873716350831,
+    "macroF1": 0.7667454688731284,
+    "releaseF1": 0.7037037037037037,
+    "AP": 0.6178347074571461,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 329,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.47794748042249235,
+    "macroF1": 0.7795431976166831,
+    "releaseF1": 0.7169811320754716,
+    "AP": 0.6310281495495719,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 330,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.4709776226835048,
+    "macroF1": 0.7795431976166831,
+    "releaseF1": 0.7169811320754716,
+    "AP": 0.6398426091315753,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 331,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.3905643783805157,
+    "macroF1": 0.782991202346041,
+    "releaseF1": 0.7272727272727273,
+    "AP": 0.6430696465306925,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 332,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.8241162954374386,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7663216219770996,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 333,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.7862688276342582,
+    "macroF1": 0.8144517893777068,
+    "releaseF1": 0.7317073170731707,
+    "AP": 0.7768055126393569,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 334,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.6199374889735916,
+    "macroF1": 0.8107416879795396,
+    "releaseF1": 0.7391304347826086,
+    "AP": 0.7783846708575144,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 335,
+    "config": {
+      "C": 1.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.3651547568470681,
+    "macroF1": 0.8321995464852607,
+    "releaseF1": 0.7755102040816326,
+    "AP": 0.8193418826842164,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 336,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9344776902307417,
+    "macroF1": 0.7605177993527508,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.580605248793303,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 337,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9189940367513563,
+    "macroF1": 0.7736013986013985,
+    "releaseF1": 0.6818181818181818,
+    "AP": 0.5912367060849854,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 338,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9194481059711472,
+    "macroF1": 0.7736013986013985,
+    "releaseF1": 0.6818181818181818,
+    "AP": 0.6020444696968119,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 339,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.3796464360207695,
+    "macroF1": 0.7667454688731284,
+    "releaseF1": 0.7037037037037037,
+    "AP": 0.6102080644270974,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 340,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9827170082512693,
+    "macroF1": 0.7875598086124402,
+    "releaseF1": 0.6842105263157895,
+    "AP": 0.7420499449672074,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 341,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.4998127950734343,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.7483921562435831,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 342,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9160323004928393,
+    "macroF1": 0.7944444444444444,
+    "releaseF1": 0.7,
+    "AP": 0.754850952928756,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 343,
+    "config": {
+      "C": 10.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9417377388315117,
+    "macroF1": 0.8287037037037037,
+    "releaseF1": 0.75,
+    "AP": 0.7792870553888422,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 344,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9559491650701286,
+    "macroF1": 0.7605177993527508,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5825822557045204,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 345,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9440796888819094,
+    "macroF1": 0.7736013986013985,
+    "releaseF1": 0.6818181818181818,
+    "AP": 0.5904332511148637,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 346,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9494134778737011,
+    "macroF1": 0.7736013986013985,
+    "releaseF1": 0.6818181818181818,
+    "AP": 0.5978605497520224,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 347,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.61404035696149,
+    "macroF1": 0.7628205128205128,
+    "releaseF1": 0.6923076923076923,
+    "AP": 0.6104890563236223,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 348,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9903542248163588,
+    "macroF1": 0.7875598086124402,
+    "releaseF1": 0.6842105263157895,
+    "AP": 0.7400981324119467,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 349,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.5806742028569217,
+    "macroF1": 0.7885714285714285,
+    "releaseF1": 0.72,
+    "AP": 0.7479392576928585,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 350,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.8525967954276048,
+    "macroF1": 0.8059440559440559,
+    "releaseF1": 0.7272727272727273,
+    "AP": 0.755945422974839,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 351,
+    "config": {
+      "C": 10.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9607582371179137,
+    "macroF1": 0.8287037037037037,
+    "releaseF1": 0.75,
+    "AP": 0.7792870553888422,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 352,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9874467532887153,
+    "macroF1": 0.7736013986013985,
+    "releaseF1": 0.6818181818181818,
+    "AP": 0.5844816136219417,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 353,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9906537986659305,
+    "macroF1": 0.7869324473975636,
+    "releaseF1": 0.6976744186046512,
+    "AP": 0.5952879421522541,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 354,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9898043626459223,
+    "macroF1": 0.7869324473975636,
+    "releaseF1": 0.6976744186046512,
+    "AP": 0.601265999187694,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 355,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9743914635053854,
+    "macroF1": 0.7605177993527508,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6112406308467666,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 356,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9704291231067336,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.7300276914729855,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 357,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9825255186809084,
+    "macroF1": 0.7807157510827445,
+    "releaseF1": 0.6829268292682927,
+    "AP": 0.7308148960430769,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 358,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9955052435732186,
+    "macroF1": 0.7737003058103975,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.7383690021688885,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 359,
+    "config": {
+      "C": 100.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9880919099778814,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7685156125049825,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 360,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9919845673093747,
+    "macroF1": 0.7736013986013985,
+    "releaseF1": 0.6818181818181818,
+    "AP": 0.584923532813861,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 361,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9941435577844582,
+    "macroF1": 0.7869324473975636,
+    "releaseF1": 0.6976744186046512,
+    "AP": 0.5945699305886543,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 362,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9931479454902693,
+    "macroF1": 0.7869324473975636,
+    "releaseF1": 0.6976744186046512,
+    "AP": 0.6000582697190949,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 363,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9828646501910174,
+    "macroF1": 0.7605177993527508,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6089374591243573,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 364,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9785024940846088,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.7268711258164199,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 365,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9882675245288051,
+    "macroF1": 0.7807157510827445,
+    "releaseF1": 0.6829268292682927,
+    "AP": 0.74014181912,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 366,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.996932124336052,
+    "macroF1": 0.7737003058103975,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.7369339248166916,
+    "thresholdPartitions": 75
+  },
+  {
+    "configId": 367,
+    "config": {
+      "C": 100.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9919094799571856,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7673350569494269,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 368,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9997343066713146,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5748121923801817,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 369,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9974536853136615,
+    "macroF1": 0.7736013986013985,
+    "releaseF1": 0.6818181818181818,
+    "AP": 0.5959403169131224,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 370,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9935045695534934,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.5811898187017291,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 371,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9988959151029244,
+    "macroF1": 0.7541528239202657,
+    "releaseF1": 0.6511627906976745,
+    "AP": 0.5888524163536228,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 372,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9935877197712524,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.7144791557989297,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 373,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.997433338659607,
+    "macroF1": 0.7807157510827445,
+    "releaseF1": 0.6829268292682927,
+    "AP": 0.7204537301072571,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 374,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9997509081142608,
+    "macroF1": 0.7737003058103975,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.7347208918846432,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 375,
+    "config": {
+      "C": 1000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9983336826480864,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7648080352087424,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 376,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9998327225189476,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5664788590468484,
+    "thresholdPartitions": 71
+  },
+  {
+    "configId": 377,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9984796439143659,
+    "macroF1": 0.7736013986013985,
+    "releaseF1": 0.6818181818181818,
+    "AP": 0.5820514280242335,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 378,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9955633678114147,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.5815224263456575,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 379,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.999255680931326,
+    "macroF1": 0.7541528239202657,
+    "releaseF1": 0.6511627906976745,
+    "AP": 0.5876604077199307,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 380,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9961351378614686,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.7144791557989297,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 381,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9982102906297494,
+    "macroF1": 0.7807157510827445,
+    "releaseF1": 0.6829268292682927,
+    "AP": 0.7302447711482981,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 382,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9299136822832295,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.7351871604610101,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 383,
+    "config": {
+      "C": 1000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9988899827942136,
+    "macroF1": 0.8085156433780287,
+    "releaseF1": 0.717948717948718,
+    "AP": 0.7648080352087424,
+    "thresholdPartitions": 74
+  },
+  {
+    "configId": 384,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9999743579713385,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5662573461749746,
+    "thresholdPartitions": 69
+  },
+  {
+    "configId": 385,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9998878002492682,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5699267998846467,
+    "thresholdPartitions": 69
+  },
+  {
+    "configId": 386,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9991547713596078,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.5702605072338948,
+    "thresholdPartitions": 69
+  },
+  {
+    "configId": 387,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9999567246528318,
+    "macroF1": 0.7541528239202657,
+    "releaseF1": 0.6511627906976745,
+    "AP": 0.5713912937693651,
+    "thresholdPartitions": 69
+  },
+  {
+    "configId": 388,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.999085227565789,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.7112534037002267,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 389,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9995951195140025,
+    "macroF1": 0.7807157510827445,
+    "releaseF1": 0.6829268292682927,
+    "AP": 0.6923690503452786,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 390,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9545178536321038,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.7112838321580106,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 391,
+    "config": {
+      "C": 10000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9996771824259101,
+    "macroF1": 0.7944444444444444,
+    "releaseF1": 0.7,
+    "AP": 0.7262809803625928,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 392,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9999838273436297,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5662573461749746,
+    "thresholdPartitions": 69
+  },
+  {
+    "configId": 393,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9999282783512022,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5699267998846467,
+    "thresholdPartitions": 69
+  },
+  {
+    "configId": 394,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9994587909820499,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.5702605072338948,
+    "thresholdPartitions": 69
+  },
+  {
+    "configId": 395,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9999854850587202,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5820255182193791,
+    "thresholdPartitions": 68
+  },
+  {
+    "configId": 396,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.999452190729687,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.71049735531313,
+    "thresholdPartitions": 73
+  },
+  {
+    "configId": 397,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9997102833808911,
+    "macroF1": 0.7807157510827445,
+    "releaseF1": 0.6829268292682927,
+    "AP": 0.6923690503452786,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 398,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9659193589532336,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.7135407766024551,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 399,
+    "config": {
+      "C": 10000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9997823726170562,
+    "macroF1": 0.7944444444444444,
+    "releaseF1": 0.7,
+    "AP": 0.7262809803625928,
+    "thresholdPartitions": 72
+  },
+  {
+    "configId": 400,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9999979548954672,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5836257911749985,
+    "thresholdPartitions": 67
+  },
+  {
+    "configId": 401,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9999889830394204,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.587182692140539,
+    "thresholdPartitions": 67
+  },
+  {
+    "configId": 402,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9999091380384749,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.5895330839262203,
+    "thresholdPartitions": 66
+  },
+  {
+    "configId": 403,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9999989534272699,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6005440367378976,
+    "thresholdPartitions": 66
+  },
+  {
+    "configId": 404,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9998865707249686,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6812305885463632,
+    "thresholdPartitions": 71
+  },
+  {
+    "configId": 405,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9999358443725879,
+    "macroF1": 0.7807157510827445,
+    "releaseF1": 0.6829268292682927,
+    "AP": 0.7021685390510174,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 406,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9995717771785523,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.7135540053379591,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 407,
+    "config": {
+      "C": 100000.0,
+      "classWeight": null,
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9999545792565527,
+    "macroF1": 0.7944444444444444,
+    "releaseF1": 0.7,
+    "AP": 0.7251688429789037,
+    "thresholdPartitions": 71
+  },
+  {
+    "configId": 408,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9999988551043741,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.5836257911749985,
+    "thresholdPartitions": 67
+  },
+  {
+    "configId": 409,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9999935745383599,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.587182692140539,
+    "thresholdPartitions": 67
+  },
+  {
+    "configId": 410,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9999409684667462,
+    "macroF1": 0.7791986359761296,
+    "releaseF1": 0.6956521739130435,
+    "AP": 0.5895330839262203,
+    "thresholdPartitions": 66
+  },
+  {
+    "configId": 411,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 0.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9999993394554556,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6005440367378976,
+    "thresholdPartitions": 66
+  },
+  {
+    "configId": 412,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 240
+    },
+    "threshold": 0.9999327780627352,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.6867861441019188,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 413,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 480
+    },
+    "threshold": 0.9999527091208521,
+    "macroF1": 0.7807157510827445,
+    "releaseF1": 0.6829268292682927,
+    "AP": 0.7009333611854047,
+    "thresholdPartitions": 70
+  },
+  {
+    "configId": 414,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": 960
+    },
+    "threshold": 0.9996966376233951,
+    "macroF1": 0.7672955974842768,
+    "releaseF1": 0.6666666666666666,
+    "AP": 0.7188615450204989,
+    "thresholdPartitions": 69
+  },
+  {
+    "configId": 415,
+    "config": {
+      "C": 100000.0,
+      "classWeight": "balanced",
+      "effortPower": 1.0,
+      "releaseScaleMs": "infinity"
+    },
+    "threshold": 0.9999694446745052,
+    "macroF1": 0.7944444444444444,
+    "releaseF1": 0.7,
+    "AP": 0.7314188429789037,
+    "thresholdPartitions": 70
+  }
+]

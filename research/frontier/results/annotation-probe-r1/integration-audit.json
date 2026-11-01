@@ -1,0 +1,162 @@
+{
+  "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05",
+  "probeAnnotationCasesExact": 16,
+  "additionalChecks": [
+    {
+      "keys": 4,
+      "model": "detail",
+      "rate": 1.0,
+      "rawAndCurveExact": true,
+      "embeddedColumns": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "keys": 4,
+      "model": "detail",
+      "rate": 1.5,
+      "rawAndCurveExact": true,
+      "embeddedColumns": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "keys": 4,
+      "model": "compact",
+      "rate": 1.0,
+      "rawAndCurveExact": true,
+      "embeddedColumns": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "keys": 4,
+      "model": "compact",
+      "rate": 1.5,
+      "rawAndCurveExact": true,
+      "embeddedColumns": [
+        1,
+        2,
+        4,
+        5
+      ]
+    },
+    {
+      "keys": 6,
+      "model": "detail",
+      "rate": 1.0,
+      "rawAndCurveExact": true,
+      "embeddedColumns": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "keys": 6,
+      "model": "detail",
+      "rate": 1.5,
+      "rawAndCurveExact": true,
+      "embeddedColumns": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "keys": 6,
+      "model": "compact",
+      "rate": 1.0,
+      "rawAndCurveExact": true,
+      "embeddedColumns": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "keys": 6,
+      "model": "compact",
+      "rate": 1.5,
+      "rawAndCurveExact": true,
+      "embeddedColumns": [
+        0,
+        1,
+        2,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "case": "fractional-source",
+      "privateProbe": "explicitly rejected",
+      "publicCurveBridge": "accepted"
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0295/294",
+      "headRows": 58,
+      "rawAndCurveExact": true
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0174/173",
+      "headRows": 835,
+      "rawAndCurveExact": true
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0241/240",
+      "headRows": 1152,
+      "rawAndCurveExact": true
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0261/260",
+      "headRows": 1558,
+      "rawAndCurveExact": true
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0350/349",
+      "headRows": 2392,
+      "rawAndCurveExact": true
+    },
+    {
+      "uid": "spm_dataset-1.1.1/bm_0219/218",
+      "headRows": 7764,
+      "rawAndCurveExact": true
+    }
+  ],
+  "extraction": {
+    "records": 399,
+    "models": [
+      "detail",
+      "compact"
+    ],
+    "recordModelOutputs": 798,
+    "uniquePhysicalSources": 397,
+    "newPredictorCalls": 794,
+    "windowsPerModel": 8453,
+    "headlessWindowsPerModel": {
+      "detail": 37,
+      "compact": 37
+    },
+    "scope": "same original7K records and raw automatic intervals; frozen external difficulty prior; no tag fitting",
+    "ratingCommit": "a914a405d8e9a77f94c0518567c37511b0b7ac05"
+  }
+}

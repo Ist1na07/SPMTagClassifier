@@ -1,0 +1,36 @@
+{
+  "source": "User annotations in this chat, 2026-11-01",
+  "generatorCommit": "aa9e300",
+  "purpose": "Concept and mechanism supervision; actively constructed cases, not a random accuracy test",
+  "keyCount": 7,
+  "temporalScope": "Labels describe the constructed patterns; no exhaustive per-millisecond annotations were provided. In particular B02 is not a claim that every static-held millisecond is Release.",
+  "cases": {
+    "A01": {
+      "rawAnnotation": "Break/tech/minijack/speed/dense cs 在正常密度谱面中，如果出现这种密度的段落，一定是休息段；如果真的存在密度这么低的谱面，也许算低置信度dense cs；如果将密度提高，需要滚动手指打，可以视为speed；如果密度再高，滚动手指已经比较难打，但速度很快、将每一侧的roll视为双押来拍，则是tech或minijack（但此时速度已经很快）。",
+      "labelKind": "conditional, not simultaneous five-label truth",
+      "conditions": [
+        {"context": "This density inside a normally dense chart", "tags": ["break"], "certainty": null},
+        {"context": "A genuinely low-density whole chart", "possibleTags": ["dense chordstream"], "certainty": "low", "modality": "perhaps"},
+        {"context": "Higher density requiring finger rolling", "possibleTags": ["speed"], "numericBoundary": null},
+        {"context": "Still higher density; rolling is difficult and each hand's roll is played as a dyad", "acceptableAlternatives": ["tech", "minijack"], "numericBoundary": null}
+      ]
+    },
+    "A02": {
+      "rawAnnotation": "minijack #无需解释",
+      "tags": ["minijack"],
+      "certainty": null
+    },
+    "B01": {
+      "rawAnnotation": "Break #作为玩家并不会在正常的压力段见到这种键型；它不是7k键型中的任何一类，谱师也不会这么写。",
+      "tags": ["break"],
+      "certainty": null,
+      "implication": "Physical hold occupancy is not sufficient for a perceived active slot type"
+    },
+    "B02": {
+      "rawAnnotation": "Release #歪的放手给出更高的放手压力",
+      "tags": ["release"],
+      "certainty": null,
+      "implication": "Tail timing changes pressure while head events and total hold area remain controlled"
+    }
+  }
+}

@@ -9,6 +9,16 @@
 
 v1.2.1 的交付已完成；它没有确定模型的性能上限。本目录记录新的研究，不修改已发布 tag 或原实验结果。
 
+## 当前结论：已定位具体机制，完整新分类器尚未完成
+
+两批真人构造谱原话已保存为 `annotations-r1.json`、`annotations-r2.json`。固定OD的同一roll随16/24/32/48 notes/s跨越Speed、Tech、Minijack/Anchor；相同低密度目标在高密度背景中为Break，低密度整谱则是低置信CS。旧版和modern在C16–C48却始终输出Speed。modern在CTX-H已识别大部分Break，但边界仍提前，不能说完全没有上下文机制。具体输出、反例及下一候选见 [建模判断](MECHANISM_FINDINGS.md)。
+
+已复用 [SPMRating v1.2.0的实际实现](SPM_REUSE.md)，覆盖399条记录、8,453个原始区间；同一物理源/模型只评分一次。公共结果桥接不再次调用评分器，私有组件观察仍是研究接口。无头区间保留缺失，不补成零困难。
+
+已完成 [释放几何/难度复用的完整消融](results/release-feature-r1/REPORT.md)：8种表示，18,720项内层拟合、48项外层拟合，均完整联调正则、类别权重、聚合指数、有效释放尺度及阈值分区。新保留指几何单独提高硬指标，但AP改善很小，拼接难度组件反而下降，主要成对区间均覆盖零。这是97条明确LN的整谱Release机制诊断，不能代替17类整谱tag和局部表现。
+
+随后针对尺度触及上界的问题，补充 [条件边界/极限形状与选择稳定性实验](results/scale-boundary-r2/REPORT.md)，新增7,488项内层拟合、复用7,488项；不重算外层成绩。每次按内层歌曲组重采样后重新选择完整配置和全部阈值，观察到约5%～26%的中位预测翻转质量（不同表示/折）；这是选参对验证组构成的敏感性，尚不是训练重拟合的不确定性。下一步优先解决压力路由与动作原型，而非继续盲目扩大旧策略池。
+
 ## 已经找到的搜索缺口
 
 `landscape_audit.py` 检查了已保存的六折 geometry3/LN-protected **内层预测**。原实验确实把全部 31 个头选择与同一 512 策略池交叉，但 512 策略只是有限设计，不是全部后处理坐标的笛卡尔积。
@@ -76,8 +86,28 @@ python -X utf8 -m unittest discover -s research/frontier -p 'test_*.py'
 python -X utf8 research/frontier/landscape_audit.py
 python -X utf8 research/frontier/local_slices.py --outer 0
 python -X utf8 research/frontier/make_annotation_pack.py
+python -X utf8 research/frontier/make_density_pack.py
+node --test research/frontier/release-actions.test.cjs
 ```
 
 第一批四张 7K 对照在 `artifacts/frontier-annotation-r1/`，含图、`.osu`、自制节拍音轨与 `.osz`。A 对保持物量和列直方图，只改变列顺序；B 对保持头、总持键面积和谱面终点，只改变尾时间。生成器不写预期标签，也不展示模型预测。
 
-下一步将匹配切片扩展为有条件交互的内层搜索，并根据用户对标准/组合段的判断建立首个原型与困难聚合候选。六折旧内层切片已经完成；不能把它们的最优分数当作新外层成绩。既有外层资料已经被研究多次查看，后续按回顾性验证报告；新的随机真实标注中预留独立盲测歌曲组。主动挑选的难例用于建模，不冒充随机泛化样本。
+两批对照已收到用户标注，包含CTX-H时间范围确认；CTX-L保留“也许、低置信Dense/Fast CS、无精确可归类类型”的原意。详见两份annotation JSON，不将Slash或括号擅自变成数值概率。
+
+下一步建立包含尾动作的软压力门控和速度条件动作原型，分别消融局部表示、困难聚合与置信调制，并完成17类/4K/6K的对应评价。旧后处理的条件交互搜索仍需与新表示一起检验；释放尺度实验没有替代这项工作。既有外层资料已经被研究多次查看，后续按回顾性验证报告；新的随机真实标注中预留独立盲测歌曲组。主动挑选的难例用于建模，不冒充随机泛化样本。
+
+### 复现实验的顺序
+
+复用旧研究的完整 `.cache/rework*` 输入和相同歌曲组计划；先按 `SPM_REUSE.md` 准备固定tag的可选评分器，Python研究依赖见本目录 `requirements.txt`。下面是各生产源快照在空输出目录中的执行顺序；现有完成结果直接读取，不需要重训。旧全量缓存与新程序各自保存源快照，不覆盖旧结果目录。
+
+```powershell
+python -X utf8 research/frontier/extract_rating.py
+node research/frontier/extract_release_actions.cjs
+python -X utf8 research/frontier/release_feature_study.py
+python -X utf8 research/frontier/release_feature_report.py
+node research/frontier/extract_release_actions.cjs .cache/frontier-release-actions-r2.jsonl 240,480,960
+python -X utf8 research/frontier/release_scale_study.py
+python -X utf8 research/frontier/release_scale_report.py
+```
+
+提取器拒绝覆盖完成的事件缓存；评分缓存会核对完整协议。当前桥接额外增加了保留字段校验，事件提取器增加了解析极限描述，因此重现历史结果时按 `protocol.json`/`input-provenance.json` 中的生产源快照恢复对应版本，或使用全新目录并记录为新复现，不把新源混入旧协议。
