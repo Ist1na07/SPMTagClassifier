@@ -1,0 +1,90 @@
+{
+  "selections": {
+    "original": {
+      "configId": 0,
+      "config": {
+        "ratio": 1,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5311077336338339,
+      "macroRecall": 0.5049140548177161,
+      "localAccuracy": 0.6958552679007846,
+      "queryTrainPrimaryAccuracy": 0.7932666666666667
+    },
+    "macro": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5341195591337421,
+      "macroRecall": 0.5061398515779462,
+      "localAccuracy": 0.6941175811316515,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "strict": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5341195591337421,
+      "macroRecall": 0.5061398515779462,
+      "localAccuracy": 0.6941175811316515,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "no_action_rate": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5341195591337421,
+      "macroRecall": 0.5061398515779462,
+      "localAccuracy": 0.6941175811316515,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "experience": {
+      "configId": 53,
+      "config": {
+        "ratio": 0.95,
+        "rowRateMax": 16
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5311077336338339,
+      "macroRecall": 0.5049140548177161,
+      "localAccuracy": 0.6958552679007846,
+      "queryTrainPrimaryAccuracy": 1.0
+    }
+  },
+  "usesOuterTruth": false
+}

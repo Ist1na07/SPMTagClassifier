@@ -1,0 +1,13 @@
+{
+  "checked": "2026-11-09T16:36:00+08:00",
+  "renderer": "actual .upstream/index.html; offline fixture transport and simulated cursor only",
+  "liveGameOrTosuVerified": false,
+  "deployedPluginModified": false,
+  "checks": [
+    { "fixture": "F02", "sourceTimeSec": 15, "speedRate": 1, "engine": "archived", "currentTag": "Break" },
+    { "fixture": "F02", "sourceTimeSec": 15, "speedRate": 1, "engine": "working", "currentTag": "Speed", "equivBpm": 200 },
+    { "fixture": "F02", "sourceTimeSec": 15, "speedRate": 1.5, "engine": "working", "currentTag": "Dense Chordstream", "equivBpm": 450, "humanModdedClassificationVerified": false },
+    { "fixture": "F02", "sourceTimeSec": 0, "speedRate": 1.5, "engine": "working", "currentSegment": "—", "currentBpmVisible": false, "wholeMapTagRetained": true }
+  ],
+  "screenshots": ["artifacts/overlay-quality/rest-break-archived.png", "artifacts/overlay-quality/rest-speed-working.png"]
+}

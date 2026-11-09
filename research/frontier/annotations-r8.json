@@ -1,0 +1,21 @@
+{
+  "source": "User definition answers in this chat, 2026-11-02",
+  "purpose": "Player semantics for action attributes and base slots; no new randomly sampled chart labels",
+  "rawAnswers": [
+    "你可以尝试。chordjack/minijack是要求手指运动变化的7k键型，anchor是某一轨道在网格连续出现按键的jack分支，vibro则是不需要手指运动变化、只需抖动发力的快速打击。",
+    "anchor的定义就是锚键，某一轨道连续叠。可能某些只标有大叠或大切的谱面也会有anchor"
+  ],
+  "definitions": {
+    "chordjack/minijack": "要求手指运动变化的7K键型",
+    "anchor": "某一轨道在网格连续出现按键的jack分支；锚键，某一轨道连续叠",
+    "vibro": "不需要手指运动变化、只需抖动发力的快速打击"
+  },
+  "modellingDecision": {
+    "attributeExperimentAuthorized": true,
+    "candidate": "Model Anchor/Vibro as coexisting action attributes, distinguish base-slot grip changes from fixed-grip rapid firing",
+    "anchorRepresentation": "Per-lane continuing stacks, not merely maximum column share; can coexist with chordjack or chordstream",
+    "wholeTruth": "Keep existing complete major-impression chart targets; a structural occurrence is not automatically a new positive chart tag",
+    "primarySets": "Keep C32/C48 original allowed-primary statements and qualitative qualifiers; do not invent numerical mixture confidences",
+    "soleTagThreshold": "Fit or investigate independently; these answers do not define a numeric threshold or require a base slot on every prediction"
+  }
+}

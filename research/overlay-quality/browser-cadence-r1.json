@@ -1,0 +1,53 @@
+{
+  "checked": "2026-11-07T20:10:11.727Z",
+  "renderer": ".upstream/index.html",
+  "testTransport": "research/overlay-quality/preview-server.cjs",
+  "liveTosuOrGameVerified": false,
+  "checks": [
+    {
+      "fixture": "uniform50",
+      "rate": 1,
+      "engine": "archived",
+      "displayedBpm": 200
+    },
+    {
+      "fixture": "uniform50",
+      "rate": 1,
+      "engine": "working",
+      "displayedBpm": 300
+    },
+    {
+      "fixture": "uniform50",
+      "rate": 1.5,
+      "engine": "working",
+      "displayedBpm": 450
+    },
+    {
+      "fixture": "uniform50",
+      "rate": 0.75,
+      "engine": "working",
+      "displayedBpm": null,
+      "tag": "vibro",
+      "meaning": "Existing category policy does not display Vibro BPM; not claimed as a225-BPM UI pass."
+    },
+    {
+      "fixture": "H02",
+      "rate": 0.75,
+      "engine": "working",
+      "displayedBpm": 113
+    },
+    {
+      "fixture": "H02",
+      "rate": 0.75,
+      "sourceTime": 0,
+      "engine": "working",
+      "displayedTag": "—",
+      "displayedBpm": null
+    }
+  ],
+  "screenshots": [
+    "artifacts/overlay-quality/cadence-200-archived.png",
+    "artifacts/overlay-quality/cadence-300-working.png"
+  ],
+  "scope": "Actual browser UI controls and plugin renderer, transport and clock simulated locally; no deployed-plugin edits or live-websocket test."
+}

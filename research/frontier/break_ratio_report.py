@@ -1,0 +1,105 @@
+"""One rest-density coordinate jointly tuned with the complete declared post grid."""
+from pathlib import Path
+import numpy as np
+from pressure_data import mil, read
+from whole_reference import write
+from rc_action_runtime import sufficient, policy_predictions, macro_scores, POST
+from landscape_audit import multilabel_metrics
+
+ROOT=Path('research/overlay-quality/break-regularity-r2')
+RATIOS=[0.,.25,.4,.55,.7,.85,.95,1.]
+
+
+def choose(candidates,selection,reference):
+    if selection=='original':candidates=[r for r in candidates if r['ratio']==1]
+    elif selection=='overlay_guarded':candidates=[r for r in candidates if r['macroF1']>=reference-1e-12]
+    elif selection!='macro':raise ValueError('Unknown selection')
+    key=(lambda r:(r['localAccuracy'],r['macroF1'],r['macroRecall'],r['ratio']==1,r['ratio'],-r['policyId']))if selection=='overlay_guarded'else(
+        lambda r:(r['macroF1'],r['macroRecall'],r['localAccuracy'],r['ratio']==1,r['ratio'],-r['policyId']))
+    return max(candidates,key=key)
+
+
+def declare():
+    value=dict(ratios=RATIOS,post=POST,
+        scope='Retrospective original349whole +6manual with original6outer x3INNER song/duplicate groups. F01/F02 are queried regressions, never selection labels here.',
+        selection='Joint ratio and245post from pooled3INNER; original ratio1 separately receives same245post tuning. overlay_guarded requires innerF1>=best original then prioritizes equal-chart manual INNER accuracy, F1,recall,original,larger ratio,lower policyId. macro control prioritizes F1,recall,manual and same ties.',
+        final='Apply the SAME overlay_guarded rule to mean six INNER score tables. No outer metrics used for final ratio/policy.',
+        profiles='Each ratio fixes that coordinate and fully reselects all245post; report unconstrained best plus feasibility under original macro guard and actual changed tag-set mass.',
+        limits='This tests one declared legacy gate coordinate and three aggregation coordinates, not all original model parameters. Other rules unchanged. No new fitted local model or probability calibration.',
+        source=Path(__file__).read_text(encoding='utf8'))
+    file=ROOT/'post-protocol.json'
+    if file.exists()and read(file)!=value:raise ValueError('Frozen ratio protocol changed')
+    if not file.exists():write(file,value)
+
+
+def metrics(y,p,w,uids,groups):
+    value=multilabel_metrics(y,p,w,mil.MAP_CLASSES,groups)
+    value['perClassErrors']={c:{k:[uids[i]for i in np.flatnonzero(mask)]for k,mask in
+        [('FP',(y[:,j]==0)&p[:,j].astype(bool)),('FN',(y[:,j]==1)&~p[:,j].astype(bool))]}for j,c in enumerate(mil.MAP_CLASSES)}
+    return value
+
+
+def run():
+    declare();receipt=read(ROOT/'complete.json')
+    if receipt['ratios']!=RATIOS:raise ValueError('Ratio inventory mismatch')
+    main,manual,_=mil.load();uids=[r['uid']for r in main];groups=[r['group']for r in main]
+    rows={r['uid']:r for r in read(ROOT/'frames.json')};local={r['uid']:r for r in read(ROOT/'local.json')}
+    if set(local)!={r['uid']for r in manual}:raise ValueError('Manual inventory mismatch')
+    y=mil.encode(main);w=np.array([r['recordWeight']for r in main])
+    p=np.array([policy_predictions([sufficient(rows[u]['frames'][ri])for u in uids])for ri in range(len(RATIOS))])
+    plans=read('research/rework/results/mil-stage1-r4/protocol.json')['plans']
+    local_acc=np.array([[local[r['uid']]['scores'][ri]['accuracy']for r in manual]for ri in range(len(RATIOS))])
+    selections=[];tables=[];profiles=[];outputs={s:np.zeros_like(y)for s in ['original','macro','overlay_guarded']};held_local={s:[]for s in outputs}
+    for outer,plan in enumerate(plans):
+        ids=[i for scope in plan['inner']for i in scope['validation']]
+        mids=[i for scope in plan['inner']for i in scope['strongValidation']]
+        if len(ids)!=len(set(ids))or set(ids)!=set(plan['train']):raise ValueError('INNER main scope changed')
+        if len(mids)!=len(set(mids))or set(mids)!=set(plan['strongTrain']):raise ValueError('INNER manual scope changed')
+        candidates=[]
+        for ri,ratio in enumerate(RATIOS):
+            f,r=macro_scores(y[ids],p[ri][:,ids],w[ids])
+            candidates.extend(dict(ratio=ratio,ratioId=ri,policyId=pid,policy=POST[pid],macroF1=float(f[pid]),macroRecall=float(r[pid]),
+                localAccuracy=float(local_acc[ri,mids].mean()))for pid in range(len(POST)))
+        tables.append(candidates);reference=max(r['macroF1']for r in candidates if r['ratio']==1)
+        selected={s:choose(candidates,s,reference)for s in outputs}
+        selections.extend(dict(outer=outer,selection=s,choice=c,usesOuterTruth=False)for s,c in selected.items())
+        write(ROOT/'selection.json',selections)
+        for s,c in selected.items():
+            outputs[s][plan['test']]=p[c['ratioId'],c['policyId'],plan['test']]
+            held_local[s].extend(dict(uid=manual[i]['uid'],ratio=c['ratio'],**local[manual[i]['uid']]['scores'][c['ratioId']])for i in plan['strongTest'])
+        target=selected['overlay_guarded'];q=p[target['ratioId'],target['policyId'],ids]
+        curve=[]
+        for ratio in RATIOS:
+            subset=[r for r in candidates if r['ratio']==ratio];best=choose(subset,'macro',reference)
+            feasible=[r for r in subset if r['macroF1']>=reference-1e-12]
+            guarded=choose(feasible,'overlay_guarded',reference)if feasible else None
+            z=p[best['ratioId'],best['policyId'],ids]
+            curve.append(dict(ratio=ratio,bestPost=best,guardedPost=guarded,
+                changedTagSetMass=float(w[ids]@np.any(q!=z,axis=1)/w[ids].sum())))
+        profiles.append(dict(outer=outer,reference=reference,profiles=curve))
+    # One common deployment choice: mean INNER table, not best OUTER model.
+    pooled=[]
+    for i,c in enumerate(tables[0]):
+        if any((t[i]['ratio'],t[i]['policyId'])!=(c['ratio'],c['policyId'])for t in tables):raise ValueError('Table ordering changed')
+        pooled.append({**c,**{k:float(np.mean([t[i][k]for t in tables]))for k in ['macroF1','macroRecall','localAccuracy']}})
+    reference=max(r['macroF1']for r in pooled if r['ratio']==1)
+    final={s:choose(pooled,s,reference)for s in outputs};write(ROOT/'final-inner-selection.json',dict(selections=final,usesOuterTruth=False))
+    result={s:metrics(y,v,w,uids,groups)for s,v in outputs.items()}
+    local_result={s:dict(equalChartAccuracy=float(np.mean([r['accuracy']for r in rows])),
+        byChart={r['uid']:r['accuracy']for r in rows},
+        falseBreakMs=sum(sum(d['end']-d['start']for d in r['details']if d['predicted']=='break'and'break'not in d['truth'])for r in rows),
+        missedBreakMs=sum(sum(d['end']-d['start']for d in r['details']if d['predicted']!='break'and d['truth']==['break'])for r in rows))for s,rows in held_local.items()}
+    write(ROOT/'analysis.json',dict(metrics=result,local=local_result,selections=selections,profiles=profiles,final=final,
+        uids=uids,predictions={s:v.astype(int).tolist()for s,v in outputs.items()},adopted=False))
+    lines=['# 规则节奏Break门控：相对密度×聚合完整联调','',
+        '| 选择 | macro P | macro R | macro F1 | micro F1 | 集合全对 | 局部准确率 |','|---|---:|---:|---:|---:|---:|---:|']
+    for s,m in result.items():lines.append('| '+s+' | '+' | '.join(f'{100*v:.2f}%'for v in
+        [m['macro']['precision'],m['macro']['recall'],m['macro']['f1'],m['micro']['f1'],m['exactMatch'],local_result[s]['equalChartAccuracy']])+' |')
+    lines+=['',str(local_result),'','共同部署选择（仅INNER）：'+str(final),'',
+        '全部8相对密度上限×245聚合策略完整联调；0与1分别复现删除／原规则。未改变其它Break条件或类型模型。旧资料上的回顾性评价，不是新盲测。']
+    (ROOT/'REPORT.md').write_text('\n'.join(lines)+'\n',encoding='utf8');print('\n'.join(lines),flush=True)
+
+
+if __name__=='__main__':
+    import sys
+    declare()if'--declare-only'in sys.argv else run()

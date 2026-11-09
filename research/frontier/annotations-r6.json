@@ -1,0 +1,38 @@
+{
+  "source": "User answer in this chat, 2026-11-02",
+  "purpose": "Actively selected real LN local supervision; not a random accuracy sample",
+  "pack": "artifacts/frontier-annotation-r6/frontier-guided-release-r6.osz",
+  "rawAnswer": "g01指定段落为release，有的放手有引导、有的没有，但整体感知仍然比较强；g02应当是inverse和release的组合，，绝大部分放手后面都顶了一个按键（inverse），inverse占主要。",
+  "conditions": {"keyCount": 7, "targetMs": [9000, 16500], "DT": false, "contextEachSideMs": 8000, "redTempoPreserved": true, "originalMusicAndSVPreserved": false},
+  "cases": {
+    "G01": {
+      "sourceUid": "spm_dataset-1.1.1/bm_0168/167",
+      "sourceTargetMs": [51710, 59210],
+      "sourceOD": 9,
+      "localCategory": "release",
+      "primaryCategory": "release",
+      "confidenceQualitative": null,
+      "perceivedReleaseStrengthQualitative": "relatively strong",
+      "guidanceQualitative": "some releases are guided, some are not",
+      "numericConfidence": null
+    },
+    "G02": {
+      "sourceUid": "spm_dataset-1.1.1/bm_0376/375",
+      "sourceTargetMs": [37730, 45230],
+      "sourceOD": 6,
+      "localCategory": "inverse",
+      "primaryCategory": "inverse",
+      "additionalLocalComponent": "release",
+      "confidenceQualitative": null,
+      "guidanceQualitative": "most releases are immediately followed by a press; Inverse dominates",
+      "numericConfidence": null
+    }
+  },
+  "trainingScope": "Resolve original source song groups. Use local labels only in matching inner/outer TRAIN groups; keep all349 whole-chart evaluation records. These answers were not fitted or selected in guided-release-r2 or the already running release-two-axis-r1.",
+  "implications": [
+    "Guidance does not veto Release: G01 contains both guided and unguided actions yet has strong Release perception.",
+    "G02 has a genuine local Release component despite Inverse being primary. Do not turn the full-chart missing Release tag into a local Release-negative.",
+    "Separate primary category, component support and whole-chart salience; no numeric mixing weight is supplied.",
+    "The query does not isolate one variable: source OD and guided burden differ; the recorded standardized nearest distance is large."
+  ]
+}

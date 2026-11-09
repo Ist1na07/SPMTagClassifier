@@ -1,0 +1,38 @@
+{
+  "source": "User answers in this chat, 2026-11-02",
+  "purpose": "Actively selected real RC local supervision; not a random accuracy sample",
+  "pack": "artifacts/frontier-annotation-r5/frontier-real-rc-r5.osz",
+  "conditions": {"keyCount": 7, "targetMs": [9000, 16500], "DT": false, "contextEachSideMs": 8000, "redTempoPreserved": true, "originalMusicAndSVPreserved": false},
+  "rawAnswer": "f01是高置信度speed；f02会将部分同手相邻合为拍击，但仍然也是speed",
+  "rawFollowUp": "对了，F02实际上也算有一定tech成分，F01是比较纯粹的speed",
+  "cases": {
+    "F01": {
+      "sourceUid": "spm_dataset-1.1.1/bm_0362/361",
+      "sourceTargetMs": [109942, 117442],
+      "sourceOD": 7.7,
+      "localCategory": "speed",
+      "compositionQualitative": "relatively pure Speed",
+      "confidenceQualitative": "high",
+      "sameHandBundlingExplicitlyReported": null,
+      "numericConfidence": null
+    },
+    "F02": {
+      "sourceUid": "spm_dataset-1.1.1/bm_0088/87",
+      "sourceTargetMs": [79946, 87446],
+      "sourceOD": 8.5,
+      "localCategory": "speed",
+      "primaryCategory": "speed",
+      "additionalLocalComponent": "tech",
+      "additionalComponentStrengthQualitative": "some",
+      "confidenceQualitative": null,
+      "sameHandBundlingExplicitlyReported": "some adjacent same-hand hits are combined into contacts",
+      "numericConfidence": null
+    }
+  },
+  "trainingScope": "Resolve original source song groups. A local answer may be used only in its corresponding inner/outer TRAIN scope; do not share all-fold, relabel every source window, or remove these charts from the full349 whole-chart evaluation inventory.",
+  "implications": [
+    "Same-hand contact/bundling alone does not justify replacing Speed as primary: F02 is primarily Speed with some Tech component. Do not treat it as an exhaustive Tech-negative local example.",
+    "F01 confirms one specific high-confidence Speed target, not the complete 23.763-second original automatic window.",
+    "The completed coherence study did not fit or select with these local answers; the real-annotation audit reads its original held-out models. Any later fitting must be separately recorded and group-restricted."
+  ]
+}

@@ -35,7 +35,7 @@ jobs:
         run: |
           package=$(npm pack --ignore-scripts --silent)
           research="spm-tag-classifier-research-${GITHUB_REF_NAME}.zip"
-          git archive --format=zip --output="$research" HEAD research/rework
+          git archive --format=zip --output="$research" HEAD research/rework research/overlay-quality research/frontier docs/releases
           gh release create "$GITHUB_REF_NAME" "$package" dist/tag-engine.js "$research" \
             --verify-tag --title "SPMTagClassifier $GITHUB_REF_NAME" \
             --notes-file "docs/releases/${GITHUB_REF_NAME}.md"

@@ -1,0 +1,35 @@
+{
+  "source": "User answers in this chat, 2026-11-02",
+  "purpose": "Actively selected real LN local supervision; not a random accuracy sample",
+  "pack": "artifacts/frontier-annotation-r4/frontier-real-release-r4.osz",
+  "conditions": {"keyCount": 7, "targetMs": [9000, 16500], "sourceOD": 5, "DT": false, "contextEachSideMs": 8000, "redTempoPreserved": true, "originalMusicAndSVPreserved": false},
+  "rawAnswer": "E01的指定段落应当是break，release压力不大（spm rating中的放手引导机制）；E02我会给一个置信度不是很高的technical，同样因为引导存在，release不需要独立控制",
+  "cases": {
+    "E01": {
+      "sourceUid": "spm_dataset-1.1.1/bm_0041/40",
+      "sourceTargetMs": [29115, 36615],
+      "localCategory": "break",
+      "confidenceQualitative": null,
+      "releasePressure": "not large",
+      "releaseGuidancePresent": true,
+      "independentReleaseControlRequired": false,
+      "numericConfidence": null
+    },
+    "E02": {
+      "sourceUid": "spm_dataset-1.1.1/bm_0001/0",
+      "sourceTargetMs": [75792, 83292],
+      "localCategory": "technical",
+      "confidenceQualitative": "not very high",
+      "releaseGuidancePresent": true,
+      "independentReleaseControlRequired": false,
+      "numericConfidence": null
+    }
+  },
+  "trainingScope": "Resolve each original source song group in the existing inventory. Use a local answer only when that original group belongs to the corresponding inner/outer TRAIN scope. Do not add these real excerpts to every fold, drop their original charts, or change the full349 whole-chart truth inventory.",
+  "implications": [
+    "A whole-chart Release label does not make the selected maximum-scalar-release window locally Release: E01 is Break.",
+    "The whole-chart Inverse label likewise does not make E02 locally Inverse: its target is low-confidence Technical.",
+    "Both require a model of guided versus independently controlled releases; existing retained burden or head isolation alone is insufficient.",
+    "Do not reinterpret the separate LN-H answer: its target remains locally Release while the whole tag is absent."
+  ]
+}

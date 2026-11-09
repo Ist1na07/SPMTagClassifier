@@ -4,6 +4,8 @@ const {parseOsu,prepare}=require('./parser.cjs');
 const {features,windows,FEATURE_KEYS}=require('./features.cjs');
 const {coarseResult}=require('./coarse-result.cjs'),{lnResult}=require('./ln-result.cjs');
 const geometry=require('./generated/native-geometry.cjs'),{version}=require('../package.json');
+const {correctCadenceDisplay}=require('./cadence.cjs');
+const overlay7=require('./generated/overlay-engine.cjs'),overlayProfile=require('./models/overlay7k.json');
 const profile4=require('./models/4k.json'),profile7=require('./models/7k.json');
 const native4=require('./models/native4k.json'),native6=require('./models/native6k.json'),native7=require('./models/native7k.json');
 function profile(key){return key===4?profile4:profile7;}
@@ -23,7 +25,7 @@ function describe(w) {
     repetition:1-m.maskEntropy,occupancy:m.occupancy,releaseIndependence:m.releaseIndependence};
 }
 function stable7(osuText,opts,e) {
-  const r=legacy.analyzeMap(osuText,opts),geometryContext=geometry.prepare(e.ctx);
+  const r=overlay7.analyzeMap(osuText,opts),geometryContext=geometry.prepare(e.ctx);
   // The inherited segmenter can omit a short leading pickup when snapping.
   // Extend only the envelope; keep the learned tags and overall decision.
   if(r.segments.length){r.segments[0].start=r.map.firstNote;r.segments.at(-1).end=r.map.lastNote;}
@@ -42,7 +44,9 @@ function stable7(osuText,opts,e) {
   r.overall.composition=total>0?Object.fromEntries(Object.entries(r.overall.weights).map(([k,v])=>[k,v/total])):{break:1};
   r.overall.scoreKind='legacy decision scores; distribution is normalized affinity, not calibrated confidence';
   r.modelInfo={version,keyCount:7,variant:'legacy-stable',researchVariant:'anchored-ln-release',
-    segmentEvidence:'original decisions; corrected interval-union diagnostics',temporalResolutionMs:250};
+    segmentEvidence:'archived affinities with corrected fast-regular rest gate; interval-union diagnostics',temporalResolutionMs:250,
+    overlayPolicy:{regularityRestRelativeNps:overlayProfile.gate.ratio,regularityRestRowRateMax:overlayProfile.gate.rowRateMax,
+      rowRateUnit:'rows per converted second',aggregation:'unchanged legacy policy'}};
   r.descriptors=e.getWindows(4000).map(w=>({start:w.start,end:w.end,...describe(w)}));
   return r;
 }
@@ -52,7 +56,10 @@ function analyzeMap(osuText,opts={}) {
   const e=evidenceMap(osuText,opts),{map}=e;
   // Retain mature 7K predictions by default. The anchored candidate is opt-in;
   // its fully retuned outer evaluation did not justify a default replacement.
-  if(map.keys===7)return opts.algorithm==='modern'?lnResult(osuText,native7,opts,e):stable7(osuText,opts,e);
+  if(map.keys===7){
+    const r=opts.algorithm==='modern'?lnResult(osuText,native7,opts,e):stable7(osuText,opts,e);
+    return correctCadenceDisplay(r,e.ctx,opts.speedRate??1);
+  }
   return coarseResult(osuText,map.keys===4?native4:native6,opts);
 }
 

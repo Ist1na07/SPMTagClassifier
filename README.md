@@ -2,19 +2,27 @@
 
 独立的 osu!mania **4K / 6K / 7K** 键型分析库。Node 与浏览器均可用，推理零第三方依赖。
 
-- **7K 默认**：保留成熟键型决定，增加区间占用、分数分布，以及新的 anchor / release 几何证据。
+- **7K 默认**：沿用原专家，修正高速规则段的 Break 门控和均匀节奏 BPM 显示，附带区间占用、分数分布及 anchor / release 几何证据。
 - **4K**：原生五类模型，同一局部分布参与分段、证据加权及整谱组成。
 - **6K**：在真实六列上运行 4K/7K 共同粗分类器，不再使用虚拟中键或投影专家输出混合。
 - **7K `modern`**：完整联合选择后的 LN 小幅更新候选，显式启用；没有充分证据替换默认。
 
 **[回炉研究结论与证据](research/rework/CONCLUSIONS.md)** · [完整研究记录](research/rework/README.md) · [上游来源](UPSTREAM.md)
 
-已发布的 [v1.1.0](https://github.com/Ist1na07/SPMTagClassifier/releases/tag/v1.1.0) 是从插件 **tag v1.2.0** 提取的原版算法；v1.2.0 的分阶段调参完整性与部分归因结论已修正，历史 tag 不改写。本说明对应回炉升级 v1.2.1。
+已发布的 [v1.1.0](https://github.com/Ist1na07/SPMTagClassifier/releases/tag/v1.1.0) 是从插件 **tag v1.2.0** 提取的原版算法；v1.2.0 的分阶段调参完整性与部分归因结论已修正，历史 tag 不改写。本说明对应 overlay 修补版 v1.2.2。
+
+### v1.2.2：先修正可确定的 overlay 错误
+
+7K 默认及 `modern` 对近似均匀到源毫秒精度的打击行直接测量等效 BPM，避免旧网格把 300 BPM 显示成 200；原测值保存在 `segment.evidence.cadence.legacyEquivBpm`。Jack 保留多押行／同列重复的动作时钟，不把交错单键速度当 Jack 速度。不规则段保留原估计，`legacy` 路径不变。
+
+默认 7K 另收紧“小押数＋规则节奏”的休息判据：高速段不再只因物量略低于整谱中位数就判 Break。57 种门控与 245 种聚合策略分别完整对照后，采用相对物量 0.85、实际行速率 16 rows/s，并保留原聚合参数。F01/F02 两条源歌曲留出的 Speed 回归主类覆盖由79.33%到100%；它们是主动选取的错例，不是总体准确率。
+
+整谱17类 macro P/R/F1 从55.15%／51.35%／51.98%到55.07%／51.47%／52.02%，基本持平；原六张人工谱局部准确率69.59%到69.41%，留出 DS 有4.25秒休息误报。**Tech→Dense CS 尚未解决**，没有采用未改善该错例的新分类头。完整取舍、逐类错误和参数范围见 [本轮结论](research/overlay-quality/CONCLUSIONS.md)。实际插件渲染器离线检查已通过；实时游戏／tosu 链路尚未验收。
 
 ## 运行一张谱面
 
 ```sh
-npm install https://github.com/Ist1na07/SPMTagClassifier/releases/download/v1.2.1/spm-tag-classifier-1.2.1.tgz
+npm install https://github.com/Ist1na07/SPMTagClassifier/releases/download/v1.2.2/spm-tag-classifier-1.2.2.tgz
 ```
 
 ```js
@@ -42,11 +50,17 @@ node bin/classify.cjs map.osu 1.5 modern
 
 浏览器引入 `dist/tag-engine.js`，通过 `TagClassifier.analyzeMap(osuText, options)` 调用；不需要 Node 全局、运行时 `eval` 或动态编译。
 
+### 替换现有 overlay 的分类引擎
+
+插件 v1.2.0 自带一份 `tag_engine.js`；安装本库不会自动更新那份文件。先备份插件目录中的原文件，再将本库 `dist/tag-engine.js` 复制到同一位置并命名为 **`tag_engine.js`**，最后重新加载 overlay。无需替换难度引擎、设置或谱面文件；需要回退时恢复备份并重新加载。
+
+当前已用原插件渲染器离线检查调用及显示，实时游戏／tosu 链路尚未验收。原插件只为7K调用分类器；替换引擎本身不会为插件界面增加4K/6K支持。
+
 ## 默认与研究候选
 
 | 选项 | 7K | 4K / 6K |
 |---|---|---|
-| 默认或 `algorithm: 'stable'` | 成熟标签与原 confidence / scores，附加新证据 | 新原生粗分类 |
+| 默认或 `algorithm: 'stable'` | 原专家及 confidence / scores；修正 Break 门控、BPM 显示，附加新证据 | 原生粗分类 |
 | `algorithm: 'modern'` | 保留原 RC/LN 专家先验，仅适配 Release 相对证据；LN 保护门控与聚合联调 | 同一新原生粗分类 |
 | `algorithm: 'legacy'` | 未经包装的 v1.1.0 行为 | 原实现未验证这些键数 |
 
@@ -64,7 +78,7 @@ node bin/classify.cjs map.osu 1.5 modern
 - `evidence` 包括熵、margin、负荷、占用、结构规则窗口数及特征截断比例。`contextNoteObservations` 是上下文观测次数，重叠上下文可能重复看到同一物件，不是去重物量。
 - 新 `evidence.geometry.anchor` 描述单指持续 run、集中度及规律性；`geometry.release` 描述头部隔离、其他指持键、同手顺序等。它们是连续物理量，不是新增硬类别概率。旧 `descriptors.anchor` 等字段保留旧含义。
 
-所有时间、LN 尾时间和窗口长度均为 **speedRate 换算后的毫秒**。`equivBpm` 使用相邻行间隔对应的十六分音符速度；不稳定或不适用的段落可以不提供。7K 候选的 `sourceStart/sourceEnd` 保留模型实际评分区间，显示首尾覆盖修复不改变原聚合。
+所有时间、LN 尾时间和窗口长度均为 **speedRate 换算后的毫秒**。`equivBpm` 为对应动作间隔的十六分音符等效速度：Speed／Tech／CS等使用行节奏，Jack优先使用多押行间隔、否则使用同列重复。不能用交错单键的全行速度替代Jack动作速度；不稳定或不适用的段落可以不提供。7K 候选的 `sourceStart/sourceEnd` 保留模型实际评分区间，显示首尾覆盖修复不改变原聚合。
 
 ## 当前证据支持什么
 

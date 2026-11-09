@@ -1,0 +1,1718 @@
+{
+  "optimizer": {
+    "targetInnerFitReceipts": 139968,
+    "trainingStarts": 524880,
+    "reusedTargetFitReceipts": 3888,
+    "maximumProjectedGradient": 2.864757633943421e-07,
+    "maximumStartLossSpread": 5.077854801506584,
+    "nestedParentComparisons": 138024,
+    "worstChildMinusParentTrainObjective": -1.369218708346942e-05
+  },
+  "profileScopeCorrection": "analysis.json training-coordinate and partition curves condition on active correction heads. Frozen training coordinates are inactive; the full post-retuned frozen partition curves are supplied here. No fits or selections changed.",
+  "frozenPartitionProfiles": [
+    {
+      "variant": "original",
+      "outer": 0,
+      "referencePartition": 4,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 9,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4962656588486592,
+          "macroRecall": 0.48317735851482957,
+          "segmentAccuracy": 0.6173600488364019,
+          "changedTagSetMass": 0.15916955017301038
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.48606880821872545,
+          "macroRecall": 0.46457667968332605,
+          "segmentAccuracy": 0.6117466982226529,
+          "changedTagSetMass": 0.18339100346020762
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 106,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.44894855881377344,
+          "macroRecall": 0.47240902334378787,
+          "segmentAccuracy": 0.3846489947663255,
+          "changedTagSetMass": 0.27335640138408307
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 43,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5051698258953533,
+          "macroRecall": 0.5008784858051197,
+          "segmentAccuracy": 0.6990970494090374,
+          "changedTagSetMass": 0.06228373702422145
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5066229313339373,
+          "macroRecall": 0.5044998883494701,
+          "segmentAccuracy": 0.7012246685883796,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 77,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.47166520397549355,
+          "macroRecall": 0.4849983254334636,
+          "segmentAccuracy": 0.5495322787584873,
+          "changedTagSetMass": 0.20069204152249134
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.4731074247745299,
+          "macroRecall": 0.47478104674595384,
+          "segmentAccuracy": 0.6490304683140506,
+          "changedTagSetMass": 0.17647058823529413
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 43,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.4741390577910463,
+          "macroRecall": 0.4837773445657811,
+          "segmentAccuracy": 0.6606749524412294,
+          "changedTagSetMass": 0.1695501730103806
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 107,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.45341465088629823,
+          "macroRecall": 0.46171064016787905,
+          "segmentAccuracy": 0.43823094391908174,
+          "changedTagSetMass": 0.2491349480968858
+        }
+      ]
+    },
+    {
+      "variant": "original",
+      "outer": 1,
+      "referencePartition": 4,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 4,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5473487510759294,
+          "macroRecall": 0.5208131115267195,
+          "segmentAccuracy": 0.5879769496628482,
+          "changedTagSetMass": 0.12542372881355932
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5380964491173448,
+          "macroRecall": 0.5368408748720346,
+          "segmentAccuracy": 0.5714858063493746,
+          "changedTagSetMass": 0.21016949152542372
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 141,
+          "policy": {
+            "dominantShare": 0.75,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.49843333783340216,
+          "macroRecall": 0.5153853636192558,
+          "segmentAccuracy": 0.35876946997293707,
+          "changedTagSetMass": 0.29152542372881357
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 43,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5618595538471687,
+          "macroRecall": 0.5466909593718444,
+          "segmentAccuracy": 0.6810249523015994,
+          "changedTagSetMass": 0.09152542372881356
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5749114614857513,
+          "macroRecall": 0.5497635563600362,
+          "segmentAccuracy": 0.6837375714809416,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 71,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.5179965113814862,
+          "macroRecall": 0.5168967971678593,
+          "segmentAccuracy": 0.5724881844058702,
+          "changedTagSetMass": 0.19661016949152543
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5175057471427056,
+          "macroRecall": 0.5006322288564279,
+          "segmentAccuracy": 0.629303698341599,
+          "changedTagSetMass": 0.15254237288135594
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5233346298116563,
+          "macroRecall": 0.5086052731466078,
+          "segmentAccuracy": 0.6409481824687778,
+          "changedTagSetMass": 0.15593220338983052
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 107,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5215719468931652,
+          "macroRecall": 0.5242947852829443,
+          "segmentAccuracy": 0.4581787572799632,
+          "changedTagSetMass": 0.21016949152542372
+        }
+      ]
+    },
+    {
+      "variant": "original",
+      "outer": 2,
+      "referencePartition": 4,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 7,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5260369877499802,
+          "macroRecall": 0.5019459659485235,
+          "segmentAccuracy": 0.6196890710356295,
+          "changedTagSetMass": 0.16040955631399317
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 36,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.5205702295185075,
+          "macroRecall": 0.49699752303276457,
+          "segmentAccuracy": 0.6218412866894514,
+          "changedTagSetMass": 0.19112627986348124
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 106,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.4800883097911709,
+          "macroRecall": 0.4742526164925368,
+          "segmentAccuracy": 0.46652739837803503,
+          "changedTagSetMass": 0.2832764505119454
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5326631584973716,
+          "macroRecall": 0.4950004536697782,
+          "segmentAccuracy": 0.6972415927105646,
+          "changedTagSetMass": 0.04436860068259386
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5404541961576269,
+          "macroRecall": 0.506082210787341,
+          "segmentAccuracy": 0.7048165370869045,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 71,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.5014253059780287,
+          "macroRecall": 0.483688553344037,
+          "segmentAccuracy": 0.5987411167180033,
+          "changedTagSetMass": 0.21160409556313994
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 1,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.5106417042597253,
+          "macroRecall": 0.49270583082359065,
+          "segmentAccuracy": 0.6480239760962753,
+          "changedTagSetMass": 0.18430034129692832
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 0,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.4
+          },
+          "macroF1": 0.5063992663028968,
+          "macroRecall": 0.5024167858331767,
+          "segmentAccuracy": 0.659668460223454,
+          "changedTagSetMass": 0.22184300341296928
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 106,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.5021982329757153,
+          "macroRecall": 0.49219834817284797,
+          "segmentAccuracy": 0.46568152802623286,
+          "changedTagSetMass": 0.22184300341296928
+        }
+      ]
+    },
+    {
+      "variant": "original",
+      "outer": 3,
+      "referencePartition": 4,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 6,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.07,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.4779878085685709,
+          "macroRecall": 0.46651678190421736,
+          "segmentAccuracy": 0.6052702601268255,
+          "changedTagSetMass": 0.19285714285714287
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 1,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.4716551819336358,
+          "macroRecall": 0.45492955817605274,
+          "segmentAccuracy": 0.6027660162965225,
+          "changedTagSetMass": 0.22142857142857142
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 106,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.4408132558229762,
+          "macroRecall": 0.4298287298443181,
+          "segmentAccuracy": 0.41931600266540514,
+          "changedTagSetMass": 0.275
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4909819270560624,
+          "macroRecall": 0.4652095451861436,
+          "segmentAccuracy": 0.7088611040009798,
+          "changedTagSetMass": 0.05
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4931085497830128,
+          "macroRecall": 0.4707255237427171,
+          "segmentAccuracy": 0.707048849063985,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 77,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.4646084655842315,
+          "macroRecall": 0.45173687543997115,
+          "segmentAccuracy": 0.5807301510948584,
+          "changedTagSetMass": 0.2
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 0,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.4
+          },
+          "macroF1": 0.45717607828345663,
+          "macroRecall": 0.4571239444576216,
+          "segmentAccuracy": 0.6566717853816976,
+          "changedTagSetMass": 0.2392857142857143
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 35,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.4
+          },
+          "macroF1": 0.4717952296149819,
+          "macroRecall": 0.46126195916976526,
+          "segmentAccuracy": 0.6566717853816976,
+          "changedTagSetMass": 0.21785714285714286
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 106,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.4472692159810903,
+          "macroRecall": 0.4437513456853477,
+          "segmentAccuracy": 0.47108357972357473,
+          "changedTagSetMass": 0.2392857142857143
+        }
+      ]
+    },
+    {
+      "variant": "original",
+      "outer": 4,
+      "referencePartition": 4,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 4,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5026044036393138,
+          "macroRecall": 0.4734258619353156,
+          "segmentAccuracy": 0.642072729525612,
+          "changedTagSetMass": 0.14028776978417265
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 71,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.517106269456197,
+          "macroRecall": 0.49872154604436814,
+          "segmentAccuracy": 0.6305978906388094,
+          "changedTagSetMass": 0.19784172661870503
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 106,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.47090802874322185,
+          "macroRecall": 0.47202129176888585,
+          "segmentAccuracy": 0.4568517738852096,
+          "changedTagSetMass": 0.2805755395683453
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5215714500559706,
+          "macroRecall": 0.4977262990519395,
+          "segmentAccuracy": 0.7133179014520123,
+          "changedTagSetMass": 0.05755395683453238
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5318857111521327,
+          "macroRecall": 0.5098512939774459,
+          "segmentAccuracy": 0.7128090509690085,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 74,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4933187298526028,
+          "macroRecall": 0.47319106299965363,
+          "segmentAccuracy": 0.5836688761927211,
+          "changedTagSetMass": 0.17985611510791366
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 36,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.490877898576721,
+          "macroRecall": 0.47938556375937164,
+          "segmentAccuracy": 0.6577783030291828,
+          "changedTagSetMass": 0.17266187050359713
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.4955131297034342,
+          "macroRecall": 0.4766277238305063,
+          "segmentAccuracy": 0.6694227871563616,
+          "changedTagSetMass": 0.15827338129496402
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 108,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.488963671109344,
+          "macroRecall": 0.47322999557199924,
+          "segmentAccuracy": 0.5228039495472354,
+          "changedTagSetMass": 0.2014388489208633
+        }
+      ]
+    },
+    {
+      "variant": "original",
+      "outer": 5,
+      "referencePartition": 4,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5203138177375701,
+          "macroRecall": 0.48632464428013883,
+          "segmentAccuracy": 0.574624022460257,
+          "changedTagSetMass": 0.18666666666666668
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5126521157018857,
+          "macroRecall": 0.48054624351903913,
+          "segmentAccuracy": 0.5760809168833958,
+          "changedTagSetMass": 0.18
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 106,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.47029042119249026,
+          "macroRecall": 0.4740879144321455,
+          "segmentAccuracy": 0.406346210196773,
+          "changedTagSetMass": 0.29333333333333333
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5378186591335269,
+          "macroRecall": 0.5086317446358014,
+          "segmentAccuracy": 0.6649509116338035,
+          "changedTagSetMass": 0.056666666666666664
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 74,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5436643507850939,
+          "macroRecall": 0.5141957884351394,
+          "segmentAccuracy": 0.6654949302154887,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 74,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4981001283166498,
+          "macroRecall": 0.475960287707096,
+          "segmentAccuracy": 0.512707398192744,
+          "changedTagSetMass": 0.18666666666666668
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 36,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.5112322314551623,
+          "macroRecall": 0.4984920381293129,
+          "segmentAccuracy": 0.5969060938785227,
+          "changedTagSetMass": 0.19
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.512997948410015,
+          "macroRecall": 0.49406687818273554,
+          "segmentAccuracy": 0.6085505780057014,
+          "changedTagSetMass": 0.17333333333333334
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 107,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49780944973824137,
+          "macroRecall": 0.49391844020169995,
+          "segmentAccuracy": 0.4277379445703947,
+          "changedTagSetMass": 0.23666666666666666
+        }
+      ]
+    },
+    {
+      "variant": "physical",
+      "outer": 0,
+      "referencePartition": 3,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 3,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.4962683980632869,
+          "macroRecall": 0.47565555514208063,
+          "segmentAccuracy": 0.6075417447419728,
+          "changedTagSetMass": 0.17301038062283736
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 4,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.49627816400776026,
+          "macroRecall": 0.4842775666231512,
+          "segmentAccuracy": 0.5997844755072866,
+          "changedTagSetMass": 0.17301038062283736
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 71,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.45864656209773447,
+          "macroRecall": 0.48296811224697767,
+          "segmentAccuracy": 0.4512998337922385,
+          "changedTagSetMass": 0.2837370242214533
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5014120050400921,
+          "macroRecall": 0.4984168799926935,
+          "segmentAccuracy": 0.6957095459296856,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.490728927340758,
+          "macroRecall": 0.4891892539891996,
+          "segmentAccuracy": 0.6999655117271779,
+          "changedTagSetMass": 0.06920415224913495
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.4769839790877931,
+          "macroRecall": 0.47101005224223136,
+          "segmentAccuracy": 0.5459368092949947,
+          "changedTagSetMass": 0.22491349480968859
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.46701036128295226,
+          "macroRecall": 0.46701096215926025,
+          "segmentAccuracy": 0.6335056755616539,
+          "changedTagSetMass": 0.1695501730103806
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 43,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.4768341795599484,
+          "macroRecall": 0.4870050668097305,
+          "segmentAccuracy": 0.6335056755616539,
+          "changedTagSetMass": 0.1695501730103806
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 109,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4556366382970384,
+          "macroRecall": 0.44734365736618487,
+          "segmentAccuracy": 0.5037152690898733,
+          "changedTagSetMass": 0.2629757785467128
+        }
+      ]
+    },
+    {
+      "variant": "physical",
+      "outer": 1,
+      "referencePartition": 3,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 3,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5524771154685952,
+          "macroRecall": 0.5308898588914994,
+          "segmentAccuracy": 0.5728860388191078,
+          "changedTagSetMass": 0.17288135593220338
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 9,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5516479787825941,
+          "macroRecall": 0.5372285254563278,
+          "segmentAccuracy": 0.5560297991987466,
+          "changedTagSetMass": 0.14576271186440679
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 73,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5062133480298749,
+          "macroRecall": 0.5072547612119126,
+          "segmentAccuracy": 0.40990091161592995,
+          "changedTagSetMass": 0.2271186440677966
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5585942242769439,
+          "macroRecall": 0.5400812871984014,
+          "segmentAccuracy": 0.6811140810536526,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5498433810415766,
+          "macroRecall": 0.5323768147721374,
+          "segmentAccuracy": 0.6813521301844782,
+          "changedTagSetMass": 0.05423728813559322
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5364858623201442,
+          "macroRecall": 0.5247413557027502,
+          "segmentAccuracy": 0.5686272638404491,
+          "changedTagSetMass": 0.20677966101694914
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5228815482768031,
+          "macroRecall": 0.5040618934051743,
+          "segmentAccuracy": 0.6012100763881002,
+          "changedTagSetMass": 0.17966101694915254
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 43,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5342447358775473,
+          "macroRecall": 0.5229800650831793,
+          "segmentAccuracy": 0.6012100763881002,
+          "changedTagSetMass": 0.1694915254237288
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 109,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5176793288255753,
+          "macroRecall": 0.5052838444463219,
+          "segmentAccuracy": 0.5115855101367053,
+          "changedTagSetMass": 0.22372881355932203
+        }
+      ]
+    },
+    {
+      "variant": "physical",
+      "outer": 2,
+      "referencePartition": 1,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 3,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5326702774709883,
+          "macroRecall": 0.5006555496645011,
+          "segmentAccuracy": 0.6113469733974946,
+          "changedTagSetMass": 0.08873720136518772
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 4,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5372172605416754,
+          "macroRecall": 0.5018963999622567,
+          "segmentAccuracy": 0.61200290221626,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 71,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.49396800528163604,
+          "macroRecall": 0.4911937215391782,
+          "segmentAccuracy": 0.4876402758087764,
+          "changedTagSetMass": 0.24573378839590443
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5308732359477529,
+          "macroRecall": 0.499807353805398,
+          "segmentAccuracy": 0.6910919678501264,
+          "changedTagSetMass": 0.13993174061433447
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 8,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.07,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5209798509777802,
+          "macroRecall": 0.49471387578804454,
+          "segmentAccuracy": 0.7034565474904778,
+          "changedTagSetMass": 0.13993174061433447
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 73,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5189533878374791,
+          "macroRecall": 0.4891065706066835,
+          "segmentAccuracy": 0.6028831412340496,
+          "changedTagSetMass": 0.18771331058020477
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 36,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.503197215755385,
+          "macroRecall": 0.4790159848024298,
+          "segmentAccuracy": 0.6165388996861576,
+          "changedTagSetMass": 0.16723549488054607
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 36,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.5118817176637033,
+          "macroRecall": 0.490250252265071,
+          "segmentAccuracy": 0.6165388996861576,
+          "changedTagSetMass": 0.16723549488054607
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 74,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5082168427226307,
+          "macroRecall": 0.481547519009908,
+          "segmentAccuracy": 0.5329304993771984,
+          "changedTagSetMass": 0.23890784982935154
+        }
+      ]
+    },
+    {
+      "variant": "physical",
+      "outer": 3,
+      "referencePartition": 3,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 8,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.07,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.4844088913697881,
+          "macroRecall": 0.45637344860770734,
+          "segmentAccuracy": 0.5927614406946894,
+          "changedTagSetMass": 0.16071428571428573
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 4,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.47857268983574613,
+          "macroRecall": 0.4453089180492947,
+          "segmentAccuracy": 0.592068874404342,
+          "changedTagSetMass": 0.175
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 72,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.4467059609651571,
+          "macroRecall": 0.4316230157876585,
+          "segmentAccuracy": 0.44513476748788444,
+          "changedTagSetMass": 0.26071428571428573
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4887175783365915,
+          "macroRecall": 0.4619320482291065,
+          "segmentAccuracy": 0.7049021829318505,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4795815099677467,
+          "macroRecall": 0.44790721330956346,
+          "segmentAccuracy": 0.7112276741881608,
+          "changedTagSetMass": 0.10357142857142858
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.47433627074999823,
+          "macroRecall": 0.4482890257118446,
+          "segmentAccuracy": 0.569770648300734,
+          "changedTagSetMass": 0.225
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 35,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.4
+          },
+          "macroF1": 0.4568908895641397,
+          "macroRecall": 0.4460749113344654,
+          "segmentAccuracy": 0.6247310522522216,
+          "changedTagSetMass": 0.21428571428571427
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4695417191633458,
+          "macroRecall": 0.4488062964695016,
+          "segmentAccuracy": 0.6247310522522216,
+          "changedTagSetMass": 0.16785714285714284
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 74,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.45571503375888917,
+          "macroRecall": 0.4351465097448716,
+          "segmentAccuracy": 0.5507475200195049,
+          "changedTagSetMass": 0.22857142857142856
+        }
+      ]
+    },
+    {
+      "variant": "physical",
+      "outer": 4,
+      "referencePartition": 0,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 3,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5149889723789872,
+          "macroRecall": 0.4890138832726078,
+          "segmentAccuracy": 0.6298443352161065,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 4,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5136143234819128,
+          "macroRecall": 0.4843944466396688,
+          "segmentAccuracy": 0.6289933696531558,
+          "changedTagSetMass": 0.07913669064748201
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 108,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.48177717354819194,
+          "macroRecall": 0.47361326189026776,
+          "segmentAccuracy": 0.4981352783330092,
+          "changedTagSetMass": 0.2841726618705036
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5149195000648489,
+          "macroRecall": 0.4926616429747299,
+          "segmentAccuracy": 0.7094345302040654,
+          "changedTagSetMass": 0.18345323741007194
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5135389841321936,
+          "macroRecall": 0.48886110101881713,
+          "segmentAccuracy": 0.7072185579758996,
+          "changedTagSetMass": 0.14388489208633093
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 38,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5139595514202608,
+          "macroRecall": 0.4940441358833418,
+          "segmentAccuracy": 0.5957979195680504,
+          "changedTagSetMass": 0.22661870503597123
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4805829924461567,
+          "macroRecall": 0.45961617355282697,
+          "segmentAccuracy": 0.6368461214386549,
+          "changedTagSetMass": 0.20863309352517986
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.49561912648460715,
+          "macroRecall": 0.4782931335841513,
+          "segmentAccuracy": 0.6368461214386549,
+          "changedTagSetMass": 0.24820143884892087
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 109,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4974140771642833,
+          "macroRecall": 0.4778509195904565,
+          "segmentAccuracy": 0.5374203275845305,
+          "changedTagSetMass": 0.3129496402877698
+        }
+      ]
+    },
+    {
+      "variant": "physical",
+      "outer": 5,
+      "referencePartition": 3,
+      "points": [
+        {
+          "partition": 0,
+          "headId": 0,
+          "config": null,
+          "policyId": 3,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5271999767678328,
+          "macroRecall": 0.49601851700646593,
+          "segmentAccuracy": 0.5725017445595014,
+          "changedTagSetMass": 0.18666666666666668
+        },
+        {
+          "partition": 1,
+          "headId": 0,
+          "config": null,
+          "policyId": 4,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5294002094490412,
+          "macroRecall": 0.49832519725432267,
+          "segmentAccuracy": 0.5633487416806092,
+          "changedTagSetMass": 0.17333333333333334
+        },
+        {
+          "partition": 2,
+          "headId": 0,
+          "config": null,
+          "policyId": 73,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.48891863203688657,
+          "macroRecall": 0.4830275380269415,
+          "segmentAccuracy": 0.4269914077084779,
+          "changedTagSetMass": 0.23666666666666666
+        },
+        {
+          "partition": 3,
+          "headId": 0,
+          "config": null,
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5326819898309828,
+          "macroRecall": 0.5070935818877592,
+          "segmentAccuracy": 0.6628243472988823,
+          "changedTagSetMass": 0.0
+        },
+        {
+          "partition": 4,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5213161356844485,
+          "macroRecall": 0.49159950239475353,
+          "segmentAccuracy": 0.6631360626895301,
+          "changedTagSetMass": 0.1
+        },
+        {
+          "partition": 5,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5142523541445884,
+          "macroRecall": 0.4894575078503011,
+          "segmentAccuracy": 0.49439553696396815,
+          "changedTagSetMass": 0.21333333333333335
+        },
+        {
+          "partition": 6,
+          "headId": 0,
+          "config": null,
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5011739122499059,
+          "macroRecall": 0.4757985978544384,
+          "segmentAccuracy": 0.5648893899470459,
+          "changedTagSetMass": 0.17666666666666667
+        },
+        {
+          "partition": 7,
+          "headId": 0,
+          "config": null,
+          "policyId": 43,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5145359497251925,
+          "macroRecall": 0.49996350015440827,
+          "segmentAccuracy": 0.5648893899470459,
+          "changedTagSetMass": 0.17333333333333334
+        },
+        {
+          "partition": 8,
+          "headId": 0,
+          "config": null,
+          "policyId": 109,
+          "policy": {
+            "dominantShare": 0.65,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5046581881735717,
+          "macroRecall": 0.48621369780837626,
+          "segmentAccuracy": 0.4828659244757138,
+          "changedTagSetMass": 0.24
+        }
+      ]
+    }
+  ]
+}

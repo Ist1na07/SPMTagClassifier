@@ -1,0 +1,37 @@
+{
+  "source": "User answers in this chat, 2026-11-01",
+  "generator": "make_release_pack.py",
+  "purpose": "Actively constructed pressure/tolerance and context supervision; not a random accuracy test",
+  "conditions": {"keyCount": 7, "OD": 8, "speedRate": 1, "DT": false},
+  "rawAnswers": [
+    "D008几乎没有放手感，几乎等同D000；D024有一点放手感，但在这个密度下仍然不能算作release，可能在比较高密度的同样间隔的歪面尾就release；D072已经有明显放手压力。",
+    "LN-H的release不占主要感知"
+  ],
+  "cases": {
+    "D000": {"sameEventsAs": "B01", "annotationSource": "annotations-r1.json; not asked again"},
+    "D008": {"releaseSensation": "almost none", "approximatelyEquivalentTo": "D000", "numericConfidence": null},
+    "D024": {
+      "releaseSensation": "slight",
+      "primaryReleaseAtCurrentDensity": false,
+      "conditionalExtension": "At higher density, staggered LN tails with the same timing intervals might count as Release",
+      "higherDensityBoundary": null,
+      "modality": "might, not a universal rule"
+    },
+    "D072": {"releasePressure": "obvious", "exactTagExplicitlyProvided": false, "numericConfidence": null},
+    "D125": {"sameEventsAs": "B02", "annotationSource": "annotations-r1.json; not asked again"},
+    "D216": {"status": "not answered; do not invent a label"},
+    "LN-H": {
+      "questionTargetMs": [9000, 17000],
+      "primaryRelease": false,
+      "localCategory": "Release",
+      "scopeClarification": "User explicitly chose: 局部仍是 Release，但整谱不应给 Release tag",
+      "interpretation": "Retain the local Release type; lower its whole-chart salience. Do not relabel it Break."
+    },
+    "LN-L": {"status": "not explicitly answered; do not invent a label"}
+  },
+  "supportedImplications": [
+    "A nonzero release offset is not sufficient for a primary Release tag.",
+    "Offset salience interacts with event density; one universal offset cutoff is not supported.",
+    "Retained-finger fraction and absolute retained-action rate have different meanings; normalizing away rate cannot by itself represent accumulated release burden."
+  ]
+}

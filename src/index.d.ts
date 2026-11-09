@@ -19,7 +19,10 @@ export interface Segment {
   evidence?: { normalizedEntropy: number; margin: number; effort: number; occupancy: number;
     featureWindows: number; contextNoteObservations: number; legacyConfidence?: number;
     concentration?: number; structuralWindows?: number; clippedFeatureFraction?: number;
-    sourceStart?: number; sourceEnd?: number; geometry?: GeometryEvidence };
+    sourceStart?: number; sourceEnd?: number; geometry?: GeometryEvidence;
+    /** Direct display-only cadence measurement; archived model features are unchanged. */
+    cadence?: { source: 'uniform-rows-within-source-ms'; rowCount: number; spacingMs: number;
+      maxResidualMs: number; resolutionMs: number; legacyEquivBpm?: number } };
 }
 export interface GeometryEvidence {
   start: number; end: number;
@@ -50,8 +53,10 @@ export interface Result {
     taxonomy?: string; classes?: string[]; featureKeys?: string[]; featureCount?: number;
     physicalSupport?: 'none' | 'jack' | 'ln' | 'both'; defaultReplacementAccepted?: boolean;
     effortPower?: number; concentrationPower?: number; extraGate?: string;
-    localScoreKind?: string; confidenceMeaning?: string; coverage?: string;
+    localScoreKind?: string; confidenceMeaning?: string; coverage?: string; cadencePolicy?: string;
     sortMeaning?: string; overallDecision?: string; supervision?: string;
+    overlayPolicy?: { regularityRestRelativeNps: number; regularityRestRowRateMax: number;
+      rowRateUnit: 'rows per converted second'; aggregation: 'unchanged legacy policy' };
     aggregationPolicy?: { mode: 'legacy' | 'normalized' | 'soft'; effortPower: number;
       confidencePower: number; burdenGate: number; lnRatio: number; scorer: string;
       [parameter: string]: unknown } };

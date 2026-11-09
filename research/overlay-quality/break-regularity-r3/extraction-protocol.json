@@ -1,0 +1,239 @@
+{
+  "configs": [
+    {
+      "ratio": 1,
+      "rowRateMax": 0
+    },
+    {
+      "ratio": 0,
+      "rowRateMax": 0
+    },
+    {
+      "ratio": 0,
+      "rowRateMax": 4
+    },
+    {
+      "ratio": 0,
+      "rowRateMax": 8
+    },
+    {
+      "ratio": 0,
+      "rowRateMax": 12
+    },
+    {
+      "ratio": 0,
+      "rowRateMax": 16
+    },
+    {
+      "ratio": 0,
+      "rowRateMax": 24
+    },
+    {
+      "ratio": 0,
+      "rowRateMax": 32
+    },
+    {
+      "ratio": 0,
+      "rowRateMax": 48
+    },
+    {
+      "ratio": 0.25,
+      "rowRateMax": 0
+    },
+    {
+      "ratio": 0.25,
+      "rowRateMax": 4
+    },
+    {
+      "ratio": 0.25,
+      "rowRateMax": 8
+    },
+    {
+      "ratio": 0.25,
+      "rowRateMax": 12
+    },
+    {
+      "ratio": 0.25,
+      "rowRateMax": 16
+    },
+    {
+      "ratio": 0.25,
+      "rowRateMax": 24
+    },
+    {
+      "ratio": 0.25,
+      "rowRateMax": 32
+    },
+    {
+      "ratio": 0.25,
+      "rowRateMax": 48
+    },
+    {
+      "ratio": 0.4,
+      "rowRateMax": 0
+    },
+    {
+      "ratio": 0.4,
+      "rowRateMax": 4
+    },
+    {
+      "ratio": 0.4,
+      "rowRateMax": 8
+    },
+    {
+      "ratio": 0.4,
+      "rowRateMax": 12
+    },
+    {
+      "ratio": 0.4,
+      "rowRateMax": 16
+    },
+    {
+      "ratio": 0.4,
+      "rowRateMax": 24
+    },
+    {
+      "ratio": 0.4,
+      "rowRateMax": 32
+    },
+    {
+      "ratio": 0.4,
+      "rowRateMax": 48
+    },
+    {
+      "ratio": 0.55,
+      "rowRateMax": 0
+    },
+    {
+      "ratio": 0.55,
+      "rowRateMax": 4
+    },
+    {
+      "ratio": 0.55,
+      "rowRateMax": 8
+    },
+    {
+      "ratio": 0.55,
+      "rowRateMax": 12
+    },
+    {
+      "ratio": 0.55,
+      "rowRateMax": 16
+    },
+    {
+      "ratio": 0.55,
+      "rowRateMax": 24
+    },
+    {
+      "ratio": 0.55,
+      "rowRateMax": 32
+    },
+    {
+      "ratio": 0.55,
+      "rowRateMax": 48
+    },
+    {
+      "ratio": 0.7,
+      "rowRateMax": 0
+    },
+    {
+      "ratio": 0.7,
+      "rowRateMax": 4
+    },
+    {
+      "ratio": 0.7,
+      "rowRateMax": 8
+    },
+    {
+      "ratio": 0.7,
+      "rowRateMax": 12
+    },
+    {
+      "ratio": 0.7,
+      "rowRateMax": 16
+    },
+    {
+      "ratio": 0.7,
+      "rowRateMax": 24
+    },
+    {
+      "ratio": 0.7,
+      "rowRateMax": 32
+    },
+    {
+      "ratio": 0.7,
+      "rowRateMax": 48
+    },
+    {
+      "ratio": 0.85,
+      "rowRateMax": 0
+    },
+    {
+      "ratio": 0.85,
+      "rowRateMax": 4
+    },
+    {
+      "ratio": 0.85,
+      "rowRateMax": 8
+    },
+    {
+      "ratio": 0.85,
+      "rowRateMax": 12
+    },
+    {
+      "ratio": 0.85,
+      "rowRateMax": 16
+    },
+    {
+      "ratio": 0.85,
+      "rowRateMax": 24
+    },
+    {
+      "ratio": 0.85,
+      "rowRateMax": 32
+    },
+    {
+      "ratio": 0.85,
+      "rowRateMax": 48
+    },
+    {
+      "ratio": 0.95,
+      "rowRateMax": 0
+    },
+    {
+      "ratio": 0.95,
+      "rowRateMax": 4
+    },
+    {
+      "ratio": 0.95,
+      "rowRateMax": 8
+    },
+    {
+      "ratio": 0.95,
+      "rowRateMax": 12
+    },
+    {
+      "ratio": 0.95,
+      "rowRateMax": 16
+    },
+    {
+      "ratio": 0.95,
+      "rowRateMax": 24
+    },
+    {
+      "ratio": 0.95,
+      "rowRateMax": 32
+    },
+    {
+      "ratio": 0.95,
+      "rowRateMax": 48
+    }
+  ],
+  "hypothesis": "NPS confounds more chord notes with faster successive actions. Preserve a regular low-action-rate rest even when its NPS is near the map median, while avoiding high-action-rate Speed->Break.",
+  "measurementsBeforeStudy": "DS rest:25NPS,14.116rows/s; F01 Speed:22NPS,16.801rows/s; F02 Speed:31NPS,21.212rows/s. These actively studied examples motivate representation, not held-out performance.",
+  "stop": "One complete two-coordinate grid, matched cap0 and original endpoints. No finer threshold expansion or new gate model in this product iteration if not worthwhile.",
+  "sourceSnapshots": {
+    "extract-break-actions.cjs": "'use strict';\nconst fs = require('node:fs'), assert = require('node:assert/strict');\nconst { loadLab, context, inspectPrepared } = require('../rework/legacy-lab.cjs');\nconst { records7, scoreIntervals } = require('../rework/data.cjs');\nconst { actionRatePatch } = require('./break-regularity.cjs');\nconst root = 'research/overlay-quality/break-regularity-r3';\nconst ratios = [0, .25, .4, .55, .7, .85, .95], rowCaps = [0, 4, 8, 12, 16, 24, 32, 48];\n// ratio1 is the original irrespective of row cap; retain it ONCE, not eight\n// duplicate flat parameters. cap0 is the complete previous ratio ablation.\nconst configs = [{ ratio: 1, rowRateMax: 0 }, ...ratios.flatMap(ratio => rowCaps.map(rowRateMax => ({ ratio, rowRateMax })))];\nfs.mkdirSync(root, { recursive: true });\nconst protocol = { configs, hypothesis: 'NPS confounds more chord notes with faster successive actions. Preserve a regular low-action-rate rest even when its NPS is near the map median, while avoiding high-action-rate Speed->Break.',\n  measurementsBeforeStudy: 'DS rest:25NPS,14.116rows/s; F01 Speed:22NPS,16.801rows/s; F02 Speed:31NPS,21.212rows/s. These actively studied examples motivate representation, not held-out performance.',\n  stop: 'One complete two-coordinate grid, matched cap0 and original endpoints. No finer threshold expansion or new gate model in this product iteration if not worthwhile.',\n  sourceSnapshots: Object.fromEntries(['extract-break-actions.cjs', 'break-regularity.cjs'].map(f => [f, fs.readFileSync(__dirname + '/' + f, 'utf8')])) };\nif (fs.existsSync(root + '/extraction-protocol.json')) assert.deepEqual(JSON.parse(fs.readFileSync(root + '/extraction-protocol.json', 'utf8')), protocol);\nelse fs.writeFileSync(root + '/extraction-protocol.json', JSON.stringify(protocol, null, 2) + '\\n');\nif (fs.existsSync(root + '/complete.json')) throw Error('Preserve completed evidence');\nconst prior = new Map(JSON.parse(fs.readFileSync('research/overlay-quality/break-regularity-r2/frames.json', 'utf8')).map(r => [r.uid, r]));\nconst oldRatios = JSON.parse(fs.readFileSync('research/overlay-quality/break-regularity-r2/complete.json', 'utf8')).ratios;\nconst apis = configs.map(c => loadLab({ patches: [actionRatePatch(c)] }));\nconst rows = [], local = [], player = [];\nconst frames = value => value.map(s => ({ ...s, secondary: s.secondary ?? null, scores: s.scores ?? { [s.tag]: 1 } }));\nlet replayed = 0;\nfor (const record of records7()) {\n  const text = fs.readFileSync(record.path, 'utf8'), ctx = context(apis[0].lab, text);\n  const original = inspectPrepared(apis[0], ctx);\n  const values = apis.map((a, i) => frames(i === 0 ? original.classified : a.lab.classifySegments(original.cache, { scorer: 'model' })));\n  for (let i = 0; i < configs.length; i++) if (configs[i].rowRateMax === 0) {\n    assert.deepEqual(JSON.parse(JSON.stringify(values[i])), prior.get(record.uid).frames[oldRatios.indexOf(configs[i].ratio)]);\n    replayed++;\n  }\n  rows.push({ uid: record.uid, frames: values });\n  if (record.dataset === 'manual') local.push({ uid: record.uid, scores: values.map(f => scoreIntervals(record.annotations, f)) });\n}\nfor (const name of ['F01', 'F02']) {\n  const ctx = context(apis[0].lab, fs.readFileSync(`artifacts/frontier-annotation-r5/${name}.osu`, 'utf8'));\n  const original = inspectPrepared(apis[0], ctx);\n  player.push({ uid: name, targetMs: [9000, 16500], truth: name === 'F01' ? ['speed'] : ['speed', 'tech'],\n    frames: apis.map(a => frames(a.lab.classifySegments(original.cache, { scorer: 'model' }))) });\n}\nfor (const [file, value] of Object.entries({ frames: rows, local, player })) fs.writeFileSync(`${root}/${file}.json`, JSON.stringify(value) + '\\n');\nfs.writeFileSync(root + '/complete.json', JSON.stringify({ records: rows.length, configs, replayedOldCases: replayed,\n  ratingPredictorCalls: 0, newModelFits: 0 }, null, 2) + '\\n');\nconsole.log('Break action-rate banks complete', rows.length, configs.length, 'old cases replayed', replayed);\n",
+    "break-regularity.cjs": "'use strict';\n// A parameter-free deletion: rhythmic regularity and small chord size alone\n// do not imply rest, even when the segment is below the map median NPS.\nconst ID = 'remove-unbounded-regularity-break';\nconst CLAUSE = ' || f.chordMean < 1.9 && ex.vibroFraction > 0.3 && ex.segRhythmChangeRate < 0.1';\nconst patch = { id: ID, apply(source, replace) { return replace(source, CLAUSE, ''); } };\nfunction ratioPatch(ratio) {\n  if (!Number.isFinite(ratio) || ratio < 0 || ratio > 1) throw Error('Invalid relative rest density');\n  return { id: 'regularity-break-ratio-' + ratio, apply(source, replace) {\n    return replace(source, CLAUSE, ` || f.nps < mapNps * ${ratio} && f.chordMean < 1.9 && ex.vibroFraction > 0.3 && ex.segRhythmChangeRate < 0.1`);\n  } };\n}\nfunction actionRatePatch({ ratio, rowRateMax }) {\n  if (!Number.isFinite(ratio) || ratio < 0 || ratio > 1 || !Number.isFinite(rowRateMax) || rowRateMax < 0)\n    throw Error('Invalid rest activity parameters');\n  return { id: 'regularity-break-action-rate', apply(source, replace) {\n    return replace(source, CLAUSE, ` || (f.nps < mapNps * ${ratio} || ex.rowCount * 1000 / (s.end - s.start) < ${rowRateMax}) && f.chordMean < 1.9 && ex.vibroFraction > 0.3 && ex.segRhythmChangeRate < 0.1`);\n  } };\n}\nmodule.exports = { ID, CLAUSE, patch, ratioPatch, actionRatePatch };\n"
+  }
+}

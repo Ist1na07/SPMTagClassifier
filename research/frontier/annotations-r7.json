@@ -1,0 +1,20 @@
+{
+  "source": "User answer in this chat, 2026-11-02",
+  "purpose": "Correction of the researcher's hand-mechanics interpretation; not a random accuracy sample",
+  "pack": "artifacts/frontier-annotation-r7/frontier-cut-geometry-r7.osz",
+  "rawAnswer": "你需要理解7K的玩法、每个手指按哪个键，我认为这个问题是不应该需要我来回答的。H01和H03完全就是交互对拍，不存在切；H02和H04则是典型的切换。",
+  "conditions": {"keyCount": 7, "targetMs": [9000, 17000], "OD": 8, "DT": false},
+  "cases": {
+    "H01": {"playerDescription": "交互对拍", "withinHandSwitch": false, "notesPerSecond": 25},
+    "H02": {"playerDescription": "典型的切换", "withinHandSwitch": true, "notesPerSecond": 25},
+    "H03": {"playerDescription": "交互对拍", "withinHandSwitch": false, "notesPerSecond": 31.25},
+    "H04": {"playerDescription": "典型的切换", "withinHandSwitch": true, "notesPerSecond": 31.25}
+  },
+  "taxonomy": "No Dense CS / Fast CS / Tech / Chordjack primary or numerical confidence was supplied. These are mechanical constraints, not invented exhaustive class labels.",
+  "implications": [
+    "Global A-B-A return on disjoint masks does not establish a within-hand switch.",
+    "Project exact simultaneous sets onto fixed fingers and hands before interpreting transitions; repeated fixed grips on alternating hands are not cuts.",
+    "Existing src/features.cjs crossCut already distinguishes these pairs. Audit existing information before claiming a missing feature or improvement.",
+    "Basic hand assignment and these unambiguous constructions should be checked by the researcher before asking the player."
+  ]
+}

@@ -1,0 +1,3485 @@
+[
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 0,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5066229313339373,
+      "macroRecall": 0.5044998883494701,
+      "segmentAccuracy": 0.7012246685883796,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 0,
+    "selection": "macro",
+    "choice": {
+      "headId": 95,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 1.0,
+        "conceptWeight": 4.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5106990491805548,
+      "macroRecall": 0.5090311126038778,
+      "segmentAccuracy": 0.6837599618499135,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 0,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 91,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 1.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5087565625599579,
+      "macroRecall": 0.4899156087305884,
+      "segmentAccuracy": 0.7012246685883796,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 1,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "segmentAccuracy": 0.6837375714809416,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 1,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "segmentAccuracy": 0.6837375714809416,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 1,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "segmentAccuracy": 0.6837375714809416,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 2,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404541961576269,
+      "macroRecall": 0.506082210787341,
+      "segmentAccuracy": 0.7048165370869045,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 2,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404541961576269,
+      "macroRecall": 0.506082210787341,
+      "segmentAccuracy": 0.7048165370869045,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 2,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404541961576269,
+      "macroRecall": 0.506082210787341,
+      "segmentAccuracy": 0.7048165370869045,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 3,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4931085497830128,
+      "macroRecall": 0.4707255237427171,
+      "segmentAccuracy": 0.707048849063985,
+      "partition": 4
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 3,
+    "selection": "macro",
+    "choice": {
+      "headId": 101,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4989365422869259,
+      "macroRecall": 0.4721423182953873,
+      "segmentAccuracy": 0.6859585123546562,
+      "partition": 3
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 3,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4931085497830128,
+      "macroRecall": 0.4707255237427171,
+      "segmentAccuracy": 0.707048849063985,
+      "partition": 4
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 4,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "segmentAccuracy": 0.7128090509690085,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 4,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "segmentAccuracy": 0.7128090509690085,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 4,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "segmentAccuracy": 0.7128090509690085,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 5,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "segmentAccuracy": 0.6654949302154887,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 5,
+    "selection": "macro",
+    "choice": {
+      "headId": 93,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 1.0,
+        "conceptWeight": 4.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.54747441630565,
+      "macroRecall": 0.514288256520687,
+      "segmentAccuracy": 0.6480302234770227,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bias",
+    "outer": 5,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "segmentAccuracy": 0.6654949302154887,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 0,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5066229313339373,
+      "macroRecall": 0.5044998883494701,
+      "segmentAccuracy": 0.7012246685883796,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 0,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5066229313339373,
+      "macroRecall": 0.5044998883494701,
+      "segmentAccuracy": 0.7012246685883796,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 0,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5066229313339373,
+      "macroRecall": 0.5044998883494701,
+      "segmentAccuracy": 0.7012246685883796,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 1,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "segmentAccuracy": 0.6837375714809416,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 1,
+    "selection": "macro",
+    "choice": {
+      "headId": 35,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 4.0,
+        "conceptWeight": 4.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5827804784283439,
+      "macroRecall": 0.5570197547720798,
+      "segmentAccuracy": 0.6683329373232096,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 1,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "segmentAccuracy": 0.6837375714809416,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 2,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404541961576269,
+      "macroRecall": 0.506082210787341,
+      "segmentAccuracy": 0.7048165370869045,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 2,
+    "selection": "macro",
+    "choice": {
+      "headId": 29,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 38,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5431080023401286,
+      "macroRecall": 0.5050669630592904,
+      "segmentAccuracy": 0.6970215251509329,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 2,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 102,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 38,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5423809218931988,
+      "macroRecall": 0.5047327628830561,
+      "segmentAccuracy": 0.7051206987046518,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 3,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4931085497830128,
+      "macroRecall": 0.4707255237427171,
+      "segmentAccuracy": 0.707048849063985,
+      "partition": 4
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 3,
+    "selection": "macro",
+    "choice": {
+      "headId": 56,
+      "config": {
+        "localL2": 0.003,
+        "strongWeight": 1.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5054893751059347,
+      "macroRecall": 0.481026418294086,
+      "segmentAccuracy": 0.6814849687718,
+      "partition": 4
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 3,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4931085497830128,
+      "macroRecall": 0.4707255237427171,
+      "segmentAccuracy": 0.707048849063985,
+      "partition": 4
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 4,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "segmentAccuracy": 0.7128090509690085,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 4,
+    "selection": "macro",
+    "choice": {
+      "headId": 8,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 0.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404591445699892,
+      "macroRecall": 0.5114662824045786,
+      "segmentAccuracy": 0.6974044168112765,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 4,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "segmentAccuracy": 0.7128090509690085,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 5,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "segmentAccuracy": 0.6654949302154887,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 5,
+    "selection": "macro",
+    "choice": {
+      "headId": 31,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5475085136938662,
+      "macroRecall": 0.5156315210992456,
+      "segmentAccuracy": 0.6500902960577567,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "hand",
+    "outer": 5,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "segmentAccuracy": 0.6654949302154887,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 0,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5066229313339373,
+      "macroRecall": 0.5044998883494701,
+      "segmentAccuracy": 0.7012246685883796,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 0,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5066229313339373,
+      "macroRecall": 0.5044998883494701,
+      "segmentAccuracy": 0.7012246685883796,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 0,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5066229313339373,
+      "macroRecall": 0.5044998883494701,
+      "segmentAccuracy": 0.7012246685883796,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 1,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "segmentAccuracy": 0.6837375714809416,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 1,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "segmentAccuracy": 0.6837375714809416,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 1,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "segmentAccuracy": 0.6837375714809416,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 2,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404541961576269,
+      "macroRecall": 0.506082210787341,
+      "segmentAccuracy": 0.7048165370869045,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 2,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404541961576269,
+      "macroRecall": 0.506082210787341,
+      "segmentAccuracy": 0.7048165370869045,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 2,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404541961576269,
+      "macroRecall": 0.506082210787341,
+      "segmentAccuracy": 0.7048165370869045,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 3,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4931085497830128,
+      "macroRecall": 0.4707255237427171,
+      "segmentAccuracy": 0.707048849063985,
+      "partition": 4
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 3,
+    "selection": "macro",
+    "choice": {
+      "headId": 106,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 4.0,
+        "conceptWeight": 4.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5025732905500061,
+      "macroRecall": 0.4732073144295876,
+      "segmentAccuracy": 0.6729535432297629,
+      "partition": 3
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 3,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4931085497830128,
+      "macroRecall": 0.4707255237427171,
+      "segmentAccuracy": 0.707048849063985,
+      "partition": 4
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 4,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "segmentAccuracy": 0.7128090509690085,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 4,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "segmentAccuracy": 0.7128090509690085,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 4,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "segmentAccuracy": 0.7128090509690085,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 5,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "segmentAccuracy": 0.6654949302154887,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 5,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "segmentAccuracy": 0.6654949302154887,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "bilateral",
+    "outer": 5,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "segmentAccuracy": 0.6654949302154887,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 0,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5066229313339373,
+      "macroRecall": 0.5044998883494701,
+      "segmentAccuracy": 0.7012246685883796,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 0,
+    "selection": "macro",
+    "choice": {
+      "headId": 101,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 79,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5080751412900476,
+      "macroRecall": 0.5014881414320764,
+      "segmentAccuracy": 0.6837599618499135,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 0,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5066229313339373,
+      "macroRecall": 0.5044998883494701,
+      "segmentAccuracy": 0.7012246685883796,
+      "partition": 4
+    },
+    "reference": 0.5066229313339373,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 1,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "segmentAccuracy": 0.6837375714809416,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 1,
+    "selection": "macro",
+    "choice": {
+      "headId": 103,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5768901211183192,
+      "macroRecall": 0.5512989180502943,
+      "segmentAccuracy": 0.6680287757054624,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 1,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "segmentAccuracy": 0.6837375714809416,
+      "partition": 4
+    },
+    "reference": 0.5749114614857513,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 2,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404541961576269,
+      "macroRecall": 0.506082210787341,
+      "segmentAccuracy": 0.7048165370869045,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 2,
+    "selection": "macro",
+    "choice": {
+      "headId": 10,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 0.0,
+        "conceptWeight": 4.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 78,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.07,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.547559046320471,
+      "macroRecall": 0.5198421420993634,
+      "segmentAccuracy": 0.7051206987046518,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 2,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 10,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 0.0,
+        "conceptWeight": 4.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 78,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.07,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.547559046320471,
+      "macroRecall": 0.5198421420993634,
+      "segmentAccuracy": 0.7051206987046518,
+      "partition": 4
+    },
+    "reference": 0.5404541961576269,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 3,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4931085497830128,
+      "macroRecall": 0.4707255237427171,
+      "segmentAccuracy": 0.707048849063985,
+      "partition": 4
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 3,
+    "selection": "macro",
+    "choice": {
+      "headId": 92,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 1.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5046430514102453,
+      "macroRecall": 0.4769437576426119,
+      "segmentAccuracy": 0.6913400532885058,
+      "partition": 4
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 3,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4931085497830128,
+      "macroRecall": 0.4707255237427171,
+      "segmentAccuracy": 0.707048849063985,
+      "partition": 4
+    },
+    "reference": 0.4931085497830128,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 4,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "segmentAccuracy": 0.7128090509690085,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 4,
+    "selection": "macro",
+    "choice": {
+      "headId": 89,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 1.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5344645509400456,
+      "macroRecall": 0.5070291583263358,
+      "segmentAccuracy": 0.6971002551935293,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 4,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "segmentAccuracy": 0.7128090509690085,
+      "partition": 4
+    },
+    "reference": 0.5318857111521327,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 5,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "segmentAccuracy": 0.6654949302154887,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 5,
+    "selection": "macro",
+    "choice": {
+      "headId": 65,
+      "config": {
+        "localL2": 0.003,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 73,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5515013577694778,
+      "macroRecall": 0.5233967662347331,
+      "segmentAccuracy": 0.6399310499233035,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "original",
+    "kind": "both",
+    "outer": 5,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "segmentAccuracy": 0.6654949302154887,
+      "partition": 4
+    },
+    "reference": 0.5436643507850939,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 0,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5014120050400921,
+      "macroRecall": 0.4984168799926935,
+      "segmentAccuracy": 0.6957095459296856,
+      "partition": 3
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 0,
+    "selection": "macro",
+    "choice": {
+      "headId": 80,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 0.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5070547299065303,
+      "macroRecall": 0.4905234198791195,
+      "segmentAccuracy": 0.6136647591008579,
+      "partition": 1
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 0,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5014120050400921,
+      "macroRecall": 0.4984168799926935,
+      "segmentAccuracy": 0.6957095459296856,
+      "partition": 3
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 1,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5585942242769439,
+      "macroRecall": 0.5400812871984014,
+      "segmentAccuracy": 0.6811140810536526,
+      "partition": 3
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 1,
+    "selection": "macro",
+    "choice": {
+      "headId": 69,
+      "config": {
+        "localL2": 0.003,
+        "strongWeight": 4.0,
+        "conceptWeight": 4.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5629252034063047,
+      "macroRecall": 0.5458601204708408,
+      "segmentAccuracy": 0.6636493743151866,
+      "partition": 3
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 1,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5585942242769439,
+      "macroRecall": 0.5400812871984014,
+      "segmentAccuracy": 0.6811140810536526,
+      "partition": 3
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 2,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5372172605416754,
+      "macroRecall": 0.5018963999622567,
+      "segmentAccuracy": 0.61200290221626,
+      "partition": 1
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 2,
+    "selection": "macro",
+    "choice": {
+      "headId": 77,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 0.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5387386196975119,
+      "macroRecall": 0.5036265037684851,
+      "segmentAccuracy": 0.61200290221626,
+      "partition": 1
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 2,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 77,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 0.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5387386196975119,
+      "macroRecall": 0.5036265037684851,
+      "segmentAccuracy": 0.61200290221626,
+      "partition": 1
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 3,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4887175783365915,
+      "macroRecall": 0.4619320482291065,
+      "segmentAccuracy": 0.7049021829318505,
+      "partition": 3
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 3,
+    "selection": "macro",
+    "choice": {
+      "headId": 12,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 0.0,
+        "conceptWeight": 4.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.490209588742466,
+      "macroRecall": 0.4559962699131171,
+      "segmentAccuracy": 0.592068874404342,
+      "partition": 1
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 3,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4887175783365915,
+      "macroRecall": 0.4619320482291065,
+      "segmentAccuracy": 0.7049021829318505,
+      "partition": 3
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 4,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 3,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5149889723789872,
+      "macroRecall": 0.4890138832726078,
+      "segmentAccuracy": 0.6298443352161065,
+      "partition": 0
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 4,
+    "selection": "macro",
+    "choice": {
+      "headId": 53,
+      "config": {
+        "localL2": 0.003,
+        "strongWeight": 1.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 38,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5227391435246611,
+      "macroRecall": 0.5047651985019377,
+      "segmentAccuracy": 0.5876987460143314,
+      "partition": 5
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 4,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 19,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 1.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5226001592990805,
+      "macroRecall": 0.4993978858589803,
+      "segmentAccuracy": 0.6919698234655994,
+      "partition": 3
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 5,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5326819898309828,
+      "macroRecall": 0.5070935818877592,
+      "segmentAccuracy": 0.6628243472988823,
+      "partition": 3
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 5,
+    "selection": "macro",
+    "choice": {
+      "headId": 24,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 1.0,
+        "conceptWeight": 4.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.540036748385558,
+      "macroRecall": 0.5088136707185748,
+      "segmentAccuracy": 0.5633487416806092,
+      "partition": 1
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bias",
+    "outer": 5,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5326819898309828,
+      "macroRecall": 0.5070935818877592,
+      "segmentAccuracy": 0.6628243472988823,
+      "partition": 3
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 0,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5014120050400921,
+      "macroRecall": 0.4984168799926935,
+      "segmentAccuracy": 0.6957095459296856,
+      "partition": 3
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 0,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5014120050400921,
+      "macroRecall": 0.4984168799926935,
+      "segmentAccuracy": 0.6957095459296856,
+      "partition": 3
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 0,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5014120050400921,
+      "macroRecall": 0.4984168799926935,
+      "segmentAccuracy": 0.6957095459296856,
+      "partition": 3
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 1,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5585942242769439,
+      "macroRecall": 0.5400812871984014,
+      "segmentAccuracy": 0.6811140810536526,
+      "partition": 3
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 1,
+    "selection": "macro",
+    "choice": {
+      "headId": 66,
+      "config": {
+        "localL2": 0.003,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 43,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5613833602056921,
+      "macroRecall": 0.5503554669965479,
+      "segmentAccuracy": 0.6657094468959206,
+      "partition": 3
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 1,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5585942242769439,
+      "macroRecall": 0.5400812871984014,
+      "segmentAccuracy": 0.6811140810536526,
+      "partition": 3
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 2,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5372172605416754,
+      "macroRecall": 0.5018963999622567,
+      "segmentAccuracy": 0.61200290221626,
+      "partition": 1
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 2,
+    "selection": "macro",
+    "choice": {
+      "headId": 54,
+      "config": {
+        "localL2": 0.003,
+        "strongWeight": 1.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 3,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.546074834173369,
+      "macroRecall": 0.5153931108638119,
+      "segmentAccuracy": 0.6131572446139366,
+      "partition": 1
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 2,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 30,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 3,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5395563272259295,
+      "macroRecall": 0.5095779421509073,
+      "segmentAccuracy": 0.6139492722706248,
+      "partition": 0
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 3,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4887175783365915,
+      "macroRecall": 0.4619320482291065,
+      "segmentAccuracy": 0.7049021829318505,
+      "partition": 3
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 3,
+    "selection": "macro",
+    "choice": {
+      "headId": 65,
+      "config": {
+        "localL2": 0.003,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.49677685036183433,
+      "macroRecall": 0.470502838974247,
+      "segmentAccuracy": 0.6891933871563714,
+      "partition": 3
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 3,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4887175783365915,
+      "macroRecall": 0.4619320482291065,
+      "segmentAccuracy": 0.7049021829318505,
+      "partition": 3
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 4,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 3,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5149889723789872,
+      "macroRecall": 0.4890138832726078,
+      "segmentAccuracy": 0.6298443352161065,
+      "partition": 0
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 4,
+    "selection": "macro",
+    "choice": {
+      "headId": 32,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 2,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 0.75
+      },
+      "macroF1": 0.5256363387217491,
+      "macroRecall": 0.5087178355977827,
+      "segmentAccuracy": 0.6819588393014617,
+      "partition": 4
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 4,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 48,
+      "config": {
+        "localL2": 0.003,
+        "strongWeight": 0.0,
+        "conceptWeight": 4.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 9,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5240799057675107,
+      "macroRecall": 0.5001183605666467,
+      "segmentAccuracy": 0.7021290696000526,
+      "partition": 3
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 5,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5326819898309828,
+      "macroRecall": 0.5070935818877592,
+      "segmentAccuracy": 0.6628243472988823,
+      "partition": 3
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 5,
+    "selection": "macro",
+    "choice": {
+      "headId": 29,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5428280177375306,
+      "macroRecall": 0.5121098555026488,
+      "segmentAccuracy": 0.5711546451088914,
+      "partition": 1
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "hand",
+    "outer": 5,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5326819898309828,
+      "macroRecall": 0.5070935818877592,
+      "segmentAccuracy": 0.6628243472988823,
+      "partition": 3
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 0,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5014120050400921,
+      "macroRecall": 0.4984168799926935,
+      "segmentAccuracy": 0.6957095459296856,
+      "partition": 3
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 0,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5014120050400921,
+      "macroRecall": 0.4984168799926935,
+      "segmentAccuracy": 0.6957095459296856,
+      "partition": 3
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 0,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5014120050400921,
+      "macroRecall": 0.4984168799926935,
+      "segmentAccuracy": 0.6957095459296856,
+      "partition": 3
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 1,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5585942242769439,
+      "macroRecall": 0.5400812871984014,
+      "segmentAccuracy": 0.6811140810536526,
+      "partition": 3
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 1,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5585942242769439,
+      "macroRecall": 0.5400812871984014,
+      "segmentAccuracy": 0.6811140810536526,
+      "partition": 3
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 1,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5585942242769439,
+      "macroRecall": 0.5400812871984014,
+      "segmentAccuracy": 0.6811140810536526,
+      "partition": 3
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 2,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5372172605416754,
+      "macroRecall": 0.5018963999622567,
+      "segmentAccuracy": 0.61200290221626,
+      "partition": 1
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 2,
+    "selection": "macro",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5372172605416754,
+      "macroRecall": 0.5018963999622567,
+      "segmentAccuracy": 0.61200290221626,
+      "partition": 1
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 2,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5372172605416754,
+      "macroRecall": 0.5018963999622567,
+      "segmentAccuracy": 0.61200290221626,
+      "partition": 1
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 3,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4887175783365915,
+      "macroRecall": 0.4619320482291065,
+      "segmentAccuracy": 0.7049021829318505,
+      "partition": 3
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 3,
+    "selection": "macro",
+    "choice": {
+      "headId": 68,
+      "config": {
+        "localL2": 0.003,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 78,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.07,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.4945818608318155,
+      "macroRecall": 0.4727309379207296,
+      "segmentAccuracy": 0.6473737310447636,
+      "partition": 3
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 3,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4887175783365915,
+      "macroRecall": 0.4619320482291065,
+      "segmentAccuracy": 0.7049021829318505,
+      "partition": 3
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 4,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 3,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5149889723789872,
+      "macroRecall": 0.4890138832726078,
+      "segmentAccuracy": 0.6298443352161065,
+      "partition": 0
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 4,
+    "selection": "macro",
+    "choice": {
+      "headId": 8,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 0.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5230130517710809,
+      "macroRecall": 0.4982974063785199,
+      "segmentAccuracy": 0.6900580128551808,
+      "partition": 4
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 4,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 8,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 0.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.517700458121589,
+      "macroRecall": 0.4863942005474203,
+      "segmentAccuracy": 0.7021290696000526,
+      "partition": 3
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 5,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5326819898309828,
+      "macroRecall": 0.5070935818877592,
+      "segmentAccuracy": 0.6628243472988823,
+      "partition": 3
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 5,
+    "selection": "macro",
+    "choice": {
+      "headId": 105,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 4.0,
+        "conceptWeight": 4.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5353600935547053,
+      "macroRecall": 0.5029807493147189,
+      "segmentAccuracy": 0.5270040047964512,
+      "partition": 1
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "bilateral",
+    "outer": 5,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5326819898309828,
+      "macroRecall": 0.5070935818877592,
+      "segmentAccuracy": 0.6628243472988823,
+      "partition": 3
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 0,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5014120050400921,
+      "macroRecall": 0.4984168799926935,
+      "segmentAccuracy": 0.6957095459296856,
+      "partition": 3
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 0,
+    "selection": "macro",
+    "choice": {
+      "headId": 54,
+      "config": {
+        "localL2": 0.003,
+        "strongWeight": 1.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5057563586175766,
+      "macroRecall": 0.49066303637379793,
+      "segmentAccuracy": 0.5997844755072866,
+      "partition": 1
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 0,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5014120050400921,
+      "macroRecall": 0.4984168799926935,
+      "segmentAccuracy": 0.6957095459296856,
+      "partition": 3
+    },
+    "reference": 0.5014120050400921,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 1,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5585942242769439,
+      "macroRecall": 0.5400812871984014,
+      "segmentAccuracy": 0.6811140810536526,
+      "partition": 3
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 1,
+    "selection": "macro",
+    "choice": {
+      "headId": 103,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5622022696536955,
+      "macroRecall": 0.5376609392206203,
+      "segmentAccuracy": 0.6656433344089989,
+      "partition": 4
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 1,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5585942242769439,
+      "macroRecall": 0.5400812871984014,
+      "segmentAccuracy": 0.6811140810536526,
+      "partition": 3
+    },
+    "reference": 0.5585942242769439,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 2,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5372172605416754,
+      "macroRecall": 0.5018963999622567,
+      "segmentAccuracy": 0.61200290221626,
+      "partition": 1
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 2,
+    "selection": "macro",
+    "choice": {
+      "headId": 32,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 4.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5428189928680679,
+      "macroRecall": 0.5054060391120343,
+      "segmentAccuracy": 0.6090812409424278,
+      "partition": 1
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 2,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 78,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 0.0,
+        "conceptWeight": 1.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 3,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5416717009869654,
+      "macroRecall": 0.5095107579226354,
+      "segmentAccuracy": 0.61200290221626,
+      "partition": 1
+    },
+    "reference": 0.5372172605416754,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 3,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4887175783365915,
+      "macroRecall": 0.4619320482291065,
+      "segmentAccuracy": 0.7049021829318505,
+      "partition": 3
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 3,
+    "selection": "macro",
+    "choice": {
+      "headId": 82,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 0.0,
+        "conceptWeight": 4.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.49745165229319305,
+      "macroRecall": 0.47004781533583234,
+      "segmentAccuracy": 0.6793383026396655,
+      "partition": 3
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 3,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4887175783365915,
+      "macroRecall": 0.4619320482291065,
+      "segmentAccuracy": 0.7049021829318505,
+      "partition": 3
+    },
+    "reference": 0.4887175783365915,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 4,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 3,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5149889723789872,
+      "macroRecall": 0.4890138832726078,
+      "segmentAccuracy": 0.6298443352161065,
+      "partition": 0
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 4,
+    "selection": "macro",
+    "choice": {
+      "headId": 8,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 0.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 38,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.5324471420808814,
+      "macroRecall": 0.5072177845572101,
+      "segmentAccuracy": 0.6922739850833468,
+      "partition": 3
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 4,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 20,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 1.0,
+        "conceptWeight": 1.0,
+        "effortPower": 1.0,
+        "weakBalance": true,
+        "primaryPower": 4.0
+      },
+      "policyId": 43,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.9
+      },
+      "macroF1": 0.524063810755681,
+      "macroRecall": 0.5044324412713924,
+      "segmentAccuracy": 0.7021290696000526,
+      "partition": 3
+    },
+    "reference": 0.5149889723789872,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 5,
+    "selection": "frozen",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5326819898309828,
+      "macroRecall": 0.5070935818877592,
+      "segmentAccuracy": 0.6628243472988823,
+      "partition": 3
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 5,
+    "selection": "macro",
+    "choice": {
+      "headId": 57,
+      "config": {
+        "localL2": 0.003,
+        "strongWeight": 1.0,
+        "conceptWeight": 4.0,
+        "effortPower": 0.0,
+        "weakBalance": true,
+        "primaryPower": 1.0
+      },
+      "policyId": 4,
+      "policy": {
+        "dominantShare": 0.45,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5486988519829779,
+      "macroRecall": 0.5178281856154425,
+      "segmentAccuracy": 0.55727436151532,
+      "partition": 1
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  },
+  {
+    "variant": "physical",
+    "kind": "both",
+    "outer": 5,
+    "selection": "overlay_guarded",
+    "choice": {
+      "headId": 0,
+      "config": null,
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5326819898309828,
+      "macroRecall": 0.5070935818877592,
+      "segmentAccuracy": 0.6628243472988823,
+      "partition": 3
+    },
+    "reference": 0.5326819898309828,
+    "usesOuterTruth": false
+  }
+]

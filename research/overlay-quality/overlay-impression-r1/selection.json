@@ -1,0 +1,662 @@
+[
+  {
+    "name": "original",
+    "outer": 0,
+    "choice": {
+      "configId": 0,
+      "config": {
+        "ratio": 1,
+        "rowRateMax": 0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5066229313339373,
+      "macroRecall": 0.5044998883494701,
+      "localAccuracy": 0.7012246685883796,
+      "queryTrainPrimaryAccuracy": 0.7932666666666667
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "macro",
+    "outer": 0,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5115037106900671,
+      "macroRecall": 0.5074410648200584,
+      "localAccuracy": 0.6991394444654199,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "strict",
+    "outer": 0,
+    "choice": {
+      "configId": 45,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 16
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5084548927453307,
+      "macroRecall": 0.5059704765847642,
+      "localAccuracy": 0.7012246685883796,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "no_action_rate",
+    "outer": 0,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5115037106900671,
+      "macroRecall": 0.5074410648200584,
+      "localAccuracy": 0.6991394444654199,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "experience",
+    "outer": 0,
+    "choice": {
+      "configId": 45,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 16
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5084548927453307,
+      "macroRecall": 0.5059704765847642,
+      "localAccuracy": 0.7012246685883796,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "original",
+    "outer": 1,
+    "choice": {
+      "configId": 0,
+      "config": {
+        "ratio": 1,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "localAccuracy": 0.6837375714809416,
+      "queryTrainPrimaryAccuracy": 0.7932666666666666
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "macro",
+    "outer": 1,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5764504047568643,
+      "macroRecall": 0.5511982765895913,
+      "localAccuracy": 0.6816523473579819,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "strict",
+    "outer": 1,
+    "choice": {
+      "configId": 53,
+      "config": {
+        "ratio": 0.95,
+        "rowRateMax": 16
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "localAccuracy": 0.6837375714809416,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "no_action_rate",
+    "outer": 1,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5764504047568643,
+      "macroRecall": 0.5511982765895913,
+      "localAccuracy": 0.6816523473579819,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "experience",
+    "outer": 1,
+    "choice": {
+      "configId": 53,
+      "config": {
+        "ratio": 0.95,
+        "rowRateMax": 16
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5749114614857513,
+      "macroRecall": 0.5497635563600362,
+      "localAccuracy": 0.6837375714809416,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "original",
+    "outer": 2,
+    "choice": {
+      "configId": 0,
+      "config": {
+        "ratio": 1,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404541961576269,
+      "macroRecall": 0.506082210787341,
+      "localAccuracy": 0.7048165370869045,
+      "queryTrainPrimaryAccuracy": 0.6410666666666667
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "macro",
+    "outer": 2,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5441626169218955,
+      "macroRecall": 0.5075905064132836,
+      "localAccuracy": 0.7027313129639448,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "strict",
+    "outer": 2,
+    "choice": {
+      "configId": 53,
+      "config": {
+        "ratio": 0.95,
+        "rowRateMax": 16
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404541961576269,
+      "macroRecall": 0.506082210787341,
+      "localAccuracy": 0.7048165370869045,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "no_action_rate",
+    "outer": 2,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5441626169218955,
+      "macroRecall": 0.5075905064132836,
+      "localAccuracy": 0.7027313129639448,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "experience",
+    "outer": 2,
+    "choice": {
+      "configId": 53,
+      "config": {
+        "ratio": 0.95,
+        "rowRateMax": 16
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5404541961576269,
+      "macroRecall": 0.506082210787341,
+      "localAccuracy": 0.7048165370869045,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "original",
+    "outer": 3,
+    "choice": {
+      "configId": 0,
+      "config": {
+        "ratio": 1,
+        "rowRateMax": 0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4931085497830128,
+      "macroRecall": 0.4707255237427171,
+      "localAccuracy": 0.707048849063985,
+      "queryTrainPrimaryAccuracy": 0.9454666666666667
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "macro",
+    "outer": 3,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4962916279996974,
+      "macroRecall": 0.47219611197801115,
+      "localAccuracy": 0.707048849063985,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "strict",
+    "outer": 3,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4962916279996974,
+      "macroRecall": 0.47219611197801115,
+      "localAccuracy": 0.707048849063985,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "no_action_rate",
+    "outer": 3,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4962916279996974,
+      "macroRecall": 0.47219611197801115,
+      "localAccuracy": 0.707048849063985,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "experience",
+    "outer": 3,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.4962916279996974,
+      "macroRecall": 0.47219611197801115,
+      "localAccuracy": 0.707048849063985,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "original",
+    "outer": 4,
+    "choice": {
+      "configId": 0,
+      "config": {
+        "ratio": 1,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "localAccuracy": 0.7128090509690085,
+      "queryTrainPrimaryAccuracy": 0.7932666666666667
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "macro",
+    "outer": 4,
+    "choice": {
+      "configId": 49,
+      "config": {
+        "ratio": 0.95,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.53404092617932,
+      "macroRecall": 0.5098512939774459,
+      "localAccuracy": 0.7107238268460487,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "strict",
+    "outer": 4,
+    "choice": {
+      "configId": 53,
+      "config": {
+        "ratio": 0.95,
+        "rowRateMax": 16
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "localAccuracy": 0.7128090509690085,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "no_action_rate",
+    "outer": 4,
+    "choice": {
+      "configId": 49,
+      "config": {
+        "ratio": 0.95,
+        "rowRateMax": 0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.53404092617932,
+      "macroRecall": 0.5098512939774459,
+      "localAccuracy": 0.7107238268460487,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "experience",
+    "outer": 4,
+    "choice": {
+      "configId": 53,
+      "config": {
+        "ratio": 0.95,
+        "rowRateMax": 16
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "localAccuracy": 0.7128090509690085,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "original",
+    "outer": 5,
+    "choice": {
+      "configId": 0,
+      "config": {
+        "ratio": 1,
+        "rowRateMax": 0
+      },
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "localAccuracy": 0.6654949302154887,
+      "queryTrainPrimaryAccuracy": 0.7932666666666667
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "macro",
+    "outer": 5,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5475397710304831,
+      "macroRecall": 0.5156663766704335,
+      "localAccuracy": 0.6634097060925289,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "strict",
+    "outer": 5,
+    "choice": {
+      "configId": 53,
+      "config": {
+        "ratio": 0.95,
+        "rowRateMax": 16
+      },
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "localAccuracy": 0.6654949302154887,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "no_action_rate",
+    "outer": 5,
+    "choice": {
+      "configId": 41,
+      "config": {
+        "ratio": 0.85,
+        "rowRateMax": 0
+      },
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5475397710304831,
+      "macroRecall": 0.5156663766704335,
+      "localAccuracy": 0.6634097060925289,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  },
+  {
+    "name": "experience",
+    "outer": 5,
+    "choice": {
+      "configId": 53,
+      "config": {
+        "ratio": 0.95,
+        "rowRateMax": 16
+      },
+      "policyId": 74,
+      "policy": {
+        "dominantShare": 0.55,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5436643507850939,
+      "macroRecall": 0.5141957884351394,
+      "localAccuracy": 0.6654949302154887,
+      "queryTrainPrimaryAccuracy": 1.0
+    },
+    "usesOuterTruth": false
+  }
+]

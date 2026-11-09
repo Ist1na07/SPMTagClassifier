@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "gate": {
+    "ratio": 0.85,
+    "rowRateMax": 16
+  },
+  "aggregation": {
+    "dominantShare": 0.52,
+    "mixShare": 0.07,
+    "secondRel": 0.75
+  },
+  "selectionSource": "research/overlay-quality/overlay-impression-fixed-post-r1/final-inner-selection.json",
+  "selectionMeaning": "Mean original6x3 INNER tables, source-TRAIN Speed queries only; never an OUTER model winner.",
+  "coefficients": "Original archived expert coefficients unchanged; only the regular-small-chord rest disjunct changes.",
+  "exposure": "Historical expert training exposure unknown; repeatedly studied data, not new blind validation."
+}

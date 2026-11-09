@@ -1,0 +1,5611 @@
+{
+  "created": "2026-11-07T19:37:16.427Z",
+  "scope": "Constructed cadence checks and actively selected player examples, not population accuracy.",
+  "noTrainingOrSelection": true,
+  "defaultAndBrowserAndUpstreamDecisionParity": true,
+  "syntheticCases": 72,
+  "numericErrorSegments": 21,
+  "numericErrors": [
+    {
+      "id": "uniform-50-phase-0-rate-1",
+      "expected": 300,
+      "actual": 200,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-50-phase-0-rate-1.5",
+      "expected": 450,
+      "actual": 303,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-50-phase-13-rate-0.75",
+      "expected": 225,
+      "actual": 224,
+      "tag": "chordjack"
+    },
+    {
+      "id": "uniform-50-phase-13-rate-1",
+      "expected": 300,
+      "actual": 200,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-50-phase-13-rate-1.5",
+      "expected": 450,
+      "actual": 303,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-50-phase-27-rate-1",
+      "expected": 300,
+      "actual": 200,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-50-phase-27-rate-1.5",
+      "expected": 450,
+      "actual": 303,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-62.5-phase-0-rate-0.75",
+      "expected": 180,
+      "actual": 179,
+      "tag": "chordjack"
+    },
+    {
+      "id": "uniform-62.5-phase-0-rate-1.5",
+      "expected": 360,
+      "actual": 238,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-62.5-phase-13-rate-0.75",
+      "expected": 180,
+      "actual": 179,
+      "tag": "chordjack"
+    },
+    {
+      "id": "uniform-62.5-phase-13-rate-1.5",
+      "expected": 360,
+      "actual": 238,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-62.5-phase-27-rate-0.75",
+      "expected": 180,
+      "actual": 179,
+      "tag": "chordjack"
+    },
+    {
+      "id": "uniform-62.5-phase-27-rate-1",
+      "expected": 240,
+      "actual": 238,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-62.5-phase-27-rate-1.5",
+      "expected": 360,
+      "actual": 238,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-75-phase-0-rate-1.5",
+      "expected": 300,
+      "actual": 200,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-75-phase-13-rate-1.5",
+      "expected": 300,
+      "actual": 200,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-75-phase-27-rate-1.5",
+      "expected": 300,
+      "actual": 200,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-100-phase-0-rate-1.5",
+      "expected": 225,
+      "actual": 224,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-100-phase-13-rate-1.5",
+      "expected": 225,
+      "actual": 224,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-100-phase-27-rate-1.5",
+      "expected": 225,
+      "actual": 224,
+      "tag": "dense chordstream"
+    },
+    {
+      "id": "uniform-125-phase-27-rate-1.5",
+      "expected": 180,
+      "actual": 181,
+      "tag": "dense chordstream"
+    }
+  ],
+  "synthetic": [
+    {
+      "id": "uniform-50-phase-0-rate-0.75",
+      "spacing": 50,
+      "phase": 0,
+      "rate": 0.75,
+      "expectedBpm": 225,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 14600,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 14600,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 14600,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-50-phase-0-rate-1",
+      "spacing": 50,
+      "phase": 0,
+      "rate": 1,
+      "expectedBpm": 300,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 10950,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 10950,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 10950,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-50-phase-0-rate-1.5",
+      "spacing": 50,
+      "phase": 0,
+      "rate": 1.5,
+      "expectedBpm": 450,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 7300,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 303,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            303.030303030303
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 7300,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 303,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            303.030303030303
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 7300,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 303,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            303.030303030303
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-50-phase-13-rate-0.75",
+      "spacing": 50,
+      "phase": 13,
+      "rate": 0.75,
+      "expectedBpm": 225,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 14617,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 14617,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 14617,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-50-phase-13-rate-1",
+      "spacing": 50,
+      "phase": 13,
+      "rate": 1,
+      "expectedBpm": 300,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 10963,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 10963,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 10963,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-50-phase-13-rate-1.5",
+      "spacing": 50,
+      "phase": 13,
+      "rate": 1.5,
+      "expectedBpm": 450,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 7309,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 303,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            303.030303030303
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 7309,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 303,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            303.030303030303
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 7309,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 303,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            303.030303030303
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-50-phase-27-rate-0.75",
+      "spacing": 50,
+      "phase": 27,
+      "rate": 0.75,
+      "expectedBpm": 225,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 14636,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 14636,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 14636,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-50-phase-27-rate-1",
+      "spacing": 50,
+      "phase": 27,
+      "rate": 1,
+      "expectedBpm": 300,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 10977,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 10977,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 10977,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-50-phase-27-rate-1.5",
+      "spacing": 50,
+      "phase": 27,
+      "rate": 1.5,
+      "expectedBpm": 450,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 7318,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 303,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            303.030303030303,
+            227.27272727272728
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 7318,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 303,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            303.030303030303,
+            227.27272727272728
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 7318,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 303,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            303.030303030303,
+            227.27272727272728
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-62.5-phase-0-rate-0.75",
+      "spacing": 62.5,
+      "phase": 0,
+      "rate": 0.75,
+      "expectedBpm": 180,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 17917,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 179,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            178.57142857142858,
+            180.72289156626505
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 17917,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 179,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            178.57142857142858,
+            180.72289156626505
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 17917,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 179,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            178.57142857142858,
+            180.72289156626505
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-62.5-phase-0-rate-1",
+      "spacing": 62.5,
+      "phase": 0,
+      "rate": 1,
+      "expectedBpm": 240,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 13438,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 13438,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 13438,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-62.5-phase-0-rate-1.5",
+      "spacing": 62.5,
+      "phase": 0,
+      "rate": 1.5,
+      "expectedBpm": 360,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 8959,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 8959,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 8959,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-62.5-phase-13-rate-0.75",
+      "spacing": 62.5,
+      "phase": 13,
+      "rate": 0.75,
+      "expectedBpm": 180,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 17935,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 179,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            178.57142857142858,
+            180.72289156626505
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 17935,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 179,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            178.57142857142858,
+            180.72289156626505
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 17935,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 179,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            178.57142857142858,
+            180.72289156626505
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-62.5-phase-13-rate-1",
+      "spacing": 62.5,
+      "phase": 13,
+      "rate": 1,
+      "expectedBpm": 240,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 13451,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 13451,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 13451,
+              "tag": "vibro",
+              "secondary": "chordjack",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-62.5-phase-13-rate-1.5",
+      "spacing": 62.5,
+      "phase": 13,
+      "rate": 1.5,
+      "expectedBpm": 360,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 8967,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 8967,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 8967,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-62.5-phase-27-rate-0.75",
+      "spacing": 62.5,
+      "phase": 27,
+      "rate": 0.75,
+      "expectedBpm": 180,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 17953,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 179,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            178.57142857142858,
+            180.72289156626505
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 17953,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 179,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            178.57142857142858,
+            180.72289156626505
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 17953,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 179,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            178.57142857142858,
+            180.72289156626505
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-62.5-phase-27-rate-1",
+      "spacing": 62.5,
+      "phase": 27,
+      "rate": 1,
+      "expectedBpm": 240,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 13465,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 13465,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 13465,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-62.5-phase-27-rate-1.5",
+      "spacing": 62.5,
+      "phase": 27,
+      "rate": 1.5,
+      "expectedBpm": 360,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 8977,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 8977,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 8977,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-75-phase-0-rate-0.75",
+      "spacing": 75,
+      "phase": 0,
+      "rate": 0.75,
+      "expectedBpm": 150,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 21233,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 21233,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 21233,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-75-phase-0-rate-1",
+      "spacing": 75,
+      "phase": 0,
+      "rate": 1,
+      "expectedBpm": 200,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 15925,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 15925,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 15925,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-75-phase-0-rate-1.5",
+      "spacing": 75,
+      "phase": 0,
+      "rate": 1.5,
+      "expectedBpm": 300,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 10617,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 10617,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 10617,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-75-phase-13-rate-0.75",
+      "spacing": 75,
+      "phase": 13,
+      "rate": 0.75,
+      "expectedBpm": 150,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 21251,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 21251,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 21251,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-75-phase-13-rate-1",
+      "spacing": 75,
+      "phase": 13,
+      "rate": 1,
+      "expectedBpm": 200,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 15938,
+              "tag": "vibro",
+              "secondary": null,
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 15938,
+              "tag": "vibro",
+              "secondary": null,
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 15938,
+              "tag": "vibro",
+              "secondary": null,
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-75-phase-13-rate-1.5",
+      "spacing": 75,
+      "phase": 13,
+      "rate": 1.5,
+      "expectedBpm": 300,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 10625,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 10625,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 10625,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-75-phase-27-rate-0.75",
+      "spacing": 75,
+      "phase": 27,
+      "rate": 0.75,
+      "expectedBpm": 150,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 21269,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 21269,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 21269,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-75-phase-27-rate-1",
+      "spacing": 75,
+      "phase": 27,
+      "rate": 1,
+      "expectedBpm": 200,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 15952,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 15952,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 15952,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-75-phase-27-rate-1.5",
+      "spacing": 75,
+      "phase": 27,
+      "rate": 1.5,
+      "expectedBpm": 300,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 10635,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 10635,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 10635,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            200
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-100-phase-0-rate-0.75",
+      "spacing": 100,
+      "phase": 0,
+      "rate": 0.75,
+      "expectedBpm": 113,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 27867,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 27867,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 27867,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-100-phase-0-rate-1",
+      "spacing": 100,
+      "phase": 0,
+      "rate": 1,
+      "expectedBpm": 150,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 20900,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 20900,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 20900,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-100-phase-0-rate-1.5",
+      "spacing": 100,
+      "phase": 0,
+      "rate": 1.5,
+      "expectedBpm": 225,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 13933,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 13933,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 13933,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-100-phase-13-rate-0.75",
+      "spacing": 100,
+      "phase": 13,
+      "rate": 0.75,
+      "expectedBpm": 113,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 27884,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805,
+            111.94029850746269
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 27884,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805,
+            111.94029850746269
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 27884,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805,
+            111.94029850746269
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-100-phase-13-rate-1",
+      "spacing": 100,
+      "phase": 13,
+      "rate": 1,
+      "expectedBpm": 150,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 20913,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 20913,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 20913,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-100-phase-13-rate-1.5",
+      "spacing": 100,
+      "phase": 13,
+      "rate": 1.5,
+      "expectedBpm": 225,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 13942,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 13942,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 13942,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-100-phase-27-rate-0.75",
+      "spacing": 100,
+      "phase": 27,
+      "rate": 0.75,
+      "expectedBpm": 113,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 27903,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 27903,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 27903,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-100-phase-27-rate-1",
+      "spacing": 100,
+      "phase": 27,
+      "rate": 1,
+      "expectedBpm": 150,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 20927,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 20927,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 20927,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-100-phase-27-rate-1.5",
+      "spacing": 100,
+      "phase": 27,
+      "rate": 1.5,
+      "expectedBpm": 225,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 13951,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 13951,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 13951,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 224,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            223.88059701492537
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-125-phase-0-rate-0.75",
+      "spacing": 125,
+      "phase": 0,
+      "rate": 0.75,
+      "expectedBpm": 90,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 34500,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 34500,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 34500,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-125-phase-0-rate-1",
+      "spacing": 125,
+      "phase": 0,
+      "rate": 1,
+      "expectedBpm": 120,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 25875,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 120,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            120
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 25875,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 120,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            120
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 25875,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 120,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            120
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-125-phase-0-rate-1.5",
+      "spacing": 125,
+      "phase": 0,
+      "rate": 1.5,
+      "expectedBpm": 180,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 17250,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            180.72289156626505
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 17250,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            180.72289156626505
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 17250,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            180.72289156626505
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-125-phase-13-rate-0.75",
+      "spacing": 125,
+      "phase": 13,
+      "rate": 0.75,
+      "expectedBpm": 90,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 34517,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 34517,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 34517,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-125-phase-13-rate-1",
+      "spacing": 125,
+      "phase": 13,
+      "rate": 1,
+      "expectedBpm": 120,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 25888,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 120,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            120
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 25888,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 120,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            120
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 25888,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 120,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            120
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-125-phase-13-rate-1.5",
+      "spacing": 125,
+      "phase": 13,
+      "rate": 1.5,
+      "expectedBpm": 180,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 17259,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            180.72289156626505
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 17259,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            180.72289156626505
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 17259,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            180.72289156626505
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-125-phase-27-rate-0.75",
+      "spacing": 125,
+      "phase": 27,
+      "rate": 0.75,
+      "expectedBpm": 90,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 34536,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 34536,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 34536,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-125-phase-27-rate-1",
+      "spacing": 125,
+      "phase": 27,
+      "rate": 1,
+      "expectedBpm": 120,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 25902,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 120,
+              "confidence": 0.9340424765339841
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            120
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 25902,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 120,
+              "confidence": 0.9340424765339841
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            120
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 25902,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 120,
+              "confidence": 0.9340424765339841
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            120
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-125-phase-27-rate-1.5",
+      "spacing": 125,
+      "phase": 27,
+      "rate": 1.5,
+      "expectedBpm": 180,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 17268,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 181,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            180.72289156626505
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 17268,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 181,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            180.72289156626505
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 17268,
+              "tag": "dense chordstream",
+              "secondary": "vibro",
+              "equivBpm": 181,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            180.72289156626505
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-150-phase-0-rate-0.75",
+      "spacing": 150,
+      "phase": 0,
+      "rate": 0.75,
+      "expectedBpm": 75,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 41133,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 41133,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 41133,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-150-phase-0-rate-1",
+      "spacing": 150,
+      "phase": 0,
+      "rate": 1,
+      "expectedBpm": 100,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 30850,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 100,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            100
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 30850,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 100,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            100
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 30850,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 100,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            100
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-150-phase-0-rate-1.5",
+      "spacing": 150,
+      "phase": 0,
+      "rate": 1.5,
+      "expectedBpm": 150,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 20567,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 20567,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 20567,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-150-phase-13-rate-0.75",
+      "spacing": 150,
+      "phase": 13,
+      "rate": 0.75,
+      "expectedBpm": 75,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 41151,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 41151,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 41151,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-150-phase-13-rate-1",
+      "spacing": 150,
+      "phase": 13,
+      "rate": 1,
+      "expectedBpm": 100,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 30863,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 100,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            100
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 30863,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 100,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            100
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 30863,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 100,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            100
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-150-phase-13-rate-1.5",
+      "spacing": 150,
+      "phase": 13,
+      "rate": 1.5,
+      "expectedBpm": 150,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 20575,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 20575,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 20575,
+              "tag": "chordjack",
+              "secondary": "vibro",
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-150-phase-27-rate-0.75",
+      "spacing": 150,
+      "phase": 27,
+      "rate": 0.75,
+      "expectedBpm": 75,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 41169,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 41169,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 41169,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-150-phase-27-rate-1",
+      "spacing": 150,
+      "phase": 27,
+      "rate": 1,
+      "expectedBpm": 100,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 30877,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 100,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            100
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 30877,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 100,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            100
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 30877,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 100,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            100
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-150-phase-27-rate-1.5",
+      "spacing": 150,
+      "phase": 27,
+      "rate": 1.5,
+      "expectedBpm": 150,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 20585,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 20585,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 20585,
+              "tag": "vibro",
+              "secondary": "dense chordstream",
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "vibro"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-200-phase-0-rate-0.75",
+      "spacing": 200,
+      "phase": 0,
+      "rate": 0.75,
+      "expectedBpm": 56,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 54400,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 56,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            56.17977528089887
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 54400,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 56,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            56.17977528089887
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 54400,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 56,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            56.17977528089887
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-200-phase-0-rate-1",
+      "spacing": 200,
+      "phase": 0,
+      "rate": 1,
+      "expectedBpm": 75,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 40800,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 40800,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 40800,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-200-phase-0-rate-1.5",
+      "spacing": 200,
+      "phase": 0,
+      "rate": 1.5,
+      "expectedBpm": 113,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 27200,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 0.944679590806056
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805,
+            111.94029850746269
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 27200,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 0.944679590806056
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805,
+            111.94029850746269
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 27200,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 0.944679590806056
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805,
+            111.94029850746269
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-200-phase-13-rate-0.75",
+      "spacing": 200,
+      "phase": 13,
+      "rate": 0.75,
+      "expectedBpm": 56,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 54417,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 56,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            56.17977528089887
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 54417,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 56,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            56.17977528089887
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 54417,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 56,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            56.17977528089887
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-200-phase-13-rate-1",
+      "spacing": 200,
+      "phase": 13,
+      "rate": 1,
+      "expectedBpm": 75,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 40813,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 40813,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 40813,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-200-phase-13-rate-1.5",
+      "spacing": 200,
+      "phase": 13,
+      "rate": 1.5,
+      "expectedBpm": 113,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 27209,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 27209,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 27209,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-200-phase-27-rate-0.75",
+      "spacing": 200,
+      "phase": 27,
+      "rate": 0.75,
+      "expectedBpm": 56,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 54436,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 56,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            56.17977528089887
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 54436,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 56,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            56.17977528089887
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 54436,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 56,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            56.17977528089887
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-200-phase-27-rate-1",
+      "spacing": 200,
+      "phase": 27,
+      "rate": 1,
+      "expectedBpm": 75,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 40827,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 40827,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 40827,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 75,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            75
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-200-phase-27-rate-1.5",
+      "spacing": 200,
+      "phase": 27,
+      "rate": 1.5,
+      "expectedBpm": 113,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 27218,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 0.9449551491543543
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805,
+            111.94029850746269
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 27218,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 0.9449551491543543
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805,
+            111.94029850746269
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 27218,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 113,
+              "confidence": 0.9449551491543543
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            112.78195488721805,
+            111.94029850746269
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-250-phase-0-rate-0.75",
+      "spacing": 250,
+      "phase": 0,
+      "rate": 0.75,
+      "expectedBpm": 45,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 67667,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 45,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": []
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 67667,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 45,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": []
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1333,
+              "end": 67667,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 45,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": []
+        }
+      }
+    },
+    {
+      "id": "uniform-250-phase-0-rate-1",
+      "spacing": 250,
+      "phase": 0,
+      "rate": 1,
+      "expectedBpm": 60,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 50750,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 60,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            60
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 50750,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 60,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            60
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 50750,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 60,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            60
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-250-phase-0-rate-1.5",
+      "spacing": 250,
+      "phase": 0,
+      "rate": 1.5,
+      "expectedBpm": 90,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 33833,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 33833,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 667,
+              "end": 33833,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-250-phase-13-rate-0.75",
+      "spacing": 250,
+      "phase": 13,
+      "rate": 0.75,
+      "expectedBpm": 45,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 67684,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 45,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": []
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 67684,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 45,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": []
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1351,
+              "end": 67684,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 45,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": []
+        }
+      }
+    },
+    {
+      "id": "uniform-250-phase-13-rate-1",
+      "spacing": 250,
+      "phase": 13,
+      "rate": 1,
+      "expectedBpm": 60,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 50763,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 60,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            60
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 50763,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 60,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            60
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1013,
+              "end": 50763,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 60,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            60
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-250-phase-13-rate-1.5",
+      "spacing": 250,
+      "phase": 13,
+      "rate": 1.5,
+      "expectedBpm": 90,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 33842,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 33842,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 675,
+              "end": 33842,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-250-phase-27-rate-0.75",
+      "spacing": 250,
+      "phase": 27,
+      "rate": 0.75,
+      "expectedBpm": 45,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 67703,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 45,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": []
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 67703,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 45,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": []
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1369,
+              "end": 67703,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 45,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": []
+        }
+      }
+    },
+    {
+      "id": "uniform-250-phase-27-rate-1",
+      "spacing": 250,
+      "phase": 27,
+      "rate": 1,
+      "expectedBpm": 60,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 50777,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 60,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            60
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 50777,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 60,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            60
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1027,
+              "end": 50777,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 60,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            60
+          ]
+        }
+      }
+    },
+    {
+      "id": "uniform-250-phase-27-rate-1.5",
+      "spacing": 250,
+      "phase": 27,
+      "rate": 1.5,
+      "expectedBpm": 90,
+      "truthScope": "Uniform adjacent-row cadence only; no synthetic primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 33851,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 33851,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 685,
+              "end": 33851,
+              "tag": "chordjack",
+              "secondary": null,
+              "equivBpm": 90,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "chordjack"
+          ],
+          "positiveWindowBpms": [
+            89.82035928143712
+          ]
+        }
+      }
+    }
+  ],
+  "local": [
+    {
+      "id": "C16",
+      "input": "artifacts/frontier-annotation-r2/C16.osu",
+      "targetMs": [
+        1000,
+        9000
+      ],
+      "annotation": {
+        "intervalMs": [
+          1000,
+          9000
+        ],
+        "rawAnnotation": "C16 speed",
+        "tags": [
+          "speed"
+        ],
+        "certainty": null
+      },
+      "annotationScope": "Original speed ladder answer; C48 Anchor overlap clarified by annotations-r10.json; parenthesized Vibro not mandatory.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8938,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8938,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8938,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        }
+      }
+    },
+    {
+      "id": "C24",
+      "input": "artifacts/frontier-annotation-r2/C24.osu",
+      "targetMs": [
+        1000,
+        9000
+      ],
+      "annotation": {
+        "intervalMs": [
+          1000,
+          9000
+        ],
+        "rawAnnotation": "C24 tech",
+        "tags": [
+          "tech"
+        ],
+        "certainty": null
+      },
+      "annotationScope": "Original speed ladder answer; C48 Anchor overlap clarified by annotations-r10.json; parenthesized Vibro not mandatory.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8958,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8958,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8958,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        }
+      }
+    },
+    {
+      "id": "C32",
+      "input": "artifacts/frontier-annotation-r2/C32.osu",
+      "targetMs": [
+        1000,
+        9000
+      ],
+      "annotation": {
+        "intervalMs": [
+          1000,
+          9000
+        ],
+        "rawAnnotation": "C32 tech/minijack",
+        "possibleTags": [
+          "tech",
+          "minijack"
+        ],
+        "combinationOrAlternatives": "not further specified",
+        "certainty": null
+      },
+      "annotationScope": "Original speed ladder answer; C48 Anchor overlap clarified by annotations-r10.json; parenthesized Vibro not mandatory.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8969,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 323,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            322.5806451612903,
+            241.93548387096774
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8969,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 323,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            322.5806451612903,
+            241.93548387096774
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8969,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 323,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            322.5806451612903,
+            241.93548387096774
+          ]
+        }
+      }
+    },
+    {
+      "id": "C48",
+      "input": "artifacts/frontier-annotation-r2/C48.osu",
+      "targetMs": [
+        1000,
+        9000
+      ],
+      "annotation": {
+        "intervalMs": [
+          1000,
+          9000
+        ],
+        "rawAnnotation": "C48 (vibro)minijack/anchor",
+        "possibleTags": [
+          "minijack",
+          "anchor"
+        ],
+        "qualifier": "(vibro)",
+        "combinationOrAlternatives": "not further specified; do not turn the parenthetical qualifier into a mandatory third tag",
+        "certainty": null
+      },
+      "annotationScope": "Original speed ladder answer; C48 Anchor overlap clarified by annotations-r10.json; parenthesized Vibro not mandatory.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8979,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8979,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 8979,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 238,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            238.0952380952381
+          ]
+        }
+      }
+    },
+    {
+      "id": "H01",
+      "input": "artifacts/frontier-annotation-r7/H01.osu",
+      "targetMs": [
+        9000,
+        17000
+      ],
+      "annotation": {
+        "playerDescription": "交互对拍",
+        "withinHandSwitch": false,
+        "notesPerSecond": 25
+      },
+      "annotationScope": "Within-hand switch constraint; NOT an exhaustive primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24900,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24900,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24900,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        }
+      }
+    },
+    {
+      "id": "H02",
+      "input": "artifacts/frontier-annotation-r7/H02.osu",
+      "targetMs": [
+        9000,
+        17000
+      ],
+      "annotation": {
+        "playerDescription": "典型的切换",
+        "withinHandSwitch": true,
+        "notesPerSecond": 25
+      },
+      "annotationScope": "Within-hand switch constraint; NOT an exhaustive primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24900,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24900,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24900,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 150,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            150
+          ]
+        }
+      }
+    },
+    {
+      "id": "H03",
+      "input": "artifacts/frontier-annotation-r7/H03.osu",
+      "targetMs": [
+        9000,
+        17000
+      ],
+      "annotation": {
+        "playerDescription": "交互对拍",
+        "withinHandSwitch": false,
+        "notesPerSecond": 31.25
+      },
+      "annotationScope": "Within-hand switch constraint; NOT an exhaustive primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24920,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 188,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            187.5
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24920,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 188,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            187.5
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24920,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 188,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            187.5
+          ]
+        }
+      }
+    },
+    {
+      "id": "H04",
+      "input": "artifacts/frontier-annotation-r7/H04.osu",
+      "targetMs": [
+        9000,
+        17000
+      ],
+      "annotation": {
+        "playerDescription": "典型的切换",
+        "withinHandSwitch": true,
+        "notesPerSecond": 31.25
+      },
+      "annotationScope": "Within-hand switch constraint; NOT an exhaustive primary class label.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24920,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 188,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            187.5
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24920,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 188,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            187.5
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1000,
+              "end": 24920,
+              "tag": "dense chordstream",
+              "secondary": null,
+              "equivBpm": 188,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "dense chordstream"
+          ],
+          "positiveWindowBpms": [
+            187.5
+          ]
+        }
+      }
+    },
+    {
+      "id": "F01",
+      "input": "artifacts/frontier-annotation-r5/F01.osu",
+      "targetMs": [
+        9000,
+        16500
+      ],
+      "annotation": {
+        "sourceUid": "spm_dataset-1.1.1/bm_0362/361",
+        "sourceTargetMs": [
+          109942,
+          117442
+        ],
+        "sourceOD": 7.7,
+        "localCategory": "speed",
+        "compositionQualitative": "relatively pure Speed",
+        "confidenceQualitative": "high",
+        "sameHandBundlingExplicitlyReported": null,
+        "numericConfidence": null
+      },
+      "annotationScope": "Player local primary and non-exhaustive components.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1076,
+              "end": 9409,
+              "tag": "break",
+              "secondary": null,
+              "equivBpm": null,
+              "confidence": 1
+            },
+            {
+              "start": 9409,
+              "end": 15159,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 268,
+              "confidence": 0.7057044085675286
+            },
+            {
+              "start": 15159,
+              "end": 24465,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 270,
+              "confidence": 0.6210899101303587
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            267.85714285714283,
+            270.27027027027026,
+            135.13513513513513,
+            272.72727272727275,
+            222.22222222222223,
+            333.3333333333333,
+            178.57142857142858,
+            326.0869565217391,
+            263.1578947368421,
+            227.27272727272728
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1076,
+              "end": 9409,
+              "tag": "break",
+              "secondary": null,
+              "equivBpm": null,
+              "confidence": 1
+            },
+            {
+              "start": 9409,
+              "end": 15159,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 268,
+              "confidence": 0.7057044085675286
+            },
+            {
+              "start": 15159,
+              "end": 24465,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 270,
+              "confidence": 0.6210899101303587
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            267.85714285714283,
+            270.27027027027026,
+            135.13513513513513,
+            272.72727272727275,
+            222.22222222222223,
+            333.3333333333333,
+            178.57142857142858,
+            326.0869565217391,
+            263.1578947368421,
+            227.27272727272728
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1076,
+              "end": 9409,
+              "tag": "break",
+              "secondary": null,
+              "equivBpm": null,
+              "confidence": 1
+            },
+            {
+              "start": 9409,
+              "end": 15159,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 268,
+              "confidence": 0.7057044085675286
+            },
+            {
+              "start": 15159,
+              "end": 24465,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 270,
+              "confidence": 0.6210899101303587
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            267.85714285714283,
+            270.27027027027026,
+            135.13513513513513,
+            272.72727272727275,
+            222.22222222222223,
+            333.3333333333333,
+            178.57142857142858,
+            326.0869565217391,
+            263.1578947368421,
+            227.27272727272728
+          ]
+        }
+      }
+    },
+    {
+      "id": "F02",
+      "input": "artifacts/frontier-annotation-r5/F02.osu",
+      "targetMs": [
+        9000,
+        16500
+      ],
+      "annotation": {
+        "sourceUid": "spm_dataset-1.1.1/bm_0088/87",
+        "sourceTargetMs": [
+          79946,
+          87446
+        ],
+        "sourceOD": 8.5,
+        "localCategory": "speed",
+        "primaryCategory": "speed",
+        "additionalLocalComponent": "tech",
+        "additionalComponentStrengthQualitative": "some",
+        "confidenceQualitative": null,
+        "sameHandBundlingExplicitlyReported": "some adjacent same-hand hits are combined into contacts",
+        "numericConfidence": null
+      },
+      "annotationScope": "Player local primary and non-exhaustive components.",
+      "outputs": {
+        "libraryDefault": {
+          "segments": [
+            {
+              "start": 1033,
+              "end": 13808,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 0.7900629405647714
+            },
+            {
+              "start": 13808,
+              "end": 20408,
+              "tag": "break",
+              "secondary": null,
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            200,
+            288.46153846153845
+          ]
+        },
+        "browserBundle": {
+          "segments": [
+            {
+              "start": 1033,
+              "end": 13808,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 0.7900629405647714
+            },
+            {
+              "start": 13808,
+              "end": 20408,
+              "tag": "break",
+              "secondary": null,
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            200,
+            288.46153846153845
+          ]
+        },
+        "upstreamOverlaySnapshot": {
+          "segments": [
+            {
+              "start": 1033,
+              "end": 13808,
+              "tag": "speed",
+              "secondary": null,
+              "equivBpm": 200,
+              "confidence": 0.7900629405647714
+            },
+            {
+              "start": 13808,
+              "end": 20408,
+              "tag": "break",
+              "secondary": null,
+              "equivBpm": null,
+              "confidence": 1
+            }
+          ],
+          "wholeTags": [
+            "speed"
+          ],
+          "positiveWindowBpms": [
+            200,
+            288.46153846153845
+          ]
+        }
+      }
+    }
+  ],
+  "integration": {
+    "snapshot": ".upstream/index.html",
+    "script": "tag_engine.js",
+    "invocation": "TagClassifier.analyzeMap(content, { speedRate })",
+    "display": "seg.tag, seg.secondary, seg.equivBpm and seg.confidence",
+    "dependency": "The plugin snapshot loads its own embedded engine; changing the standalone library alone does not update this overlay.",
+    "liveTosuSessionVerified": false
+  }
+}

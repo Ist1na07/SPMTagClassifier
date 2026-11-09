@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.2.2 — 2026-11-09
+
+- Correct 7K displayed equivalent BPM for rows uniform to source-millisecond resolution; avoid coarse-grid aliases such as 300 → 200 BPM. Keep archived model features and raw `legacy` results unchanged.
+- Expose the direct measurement and original display value in `segment.evidence.cadence`.
+- Preserve Jack's chord-row/repetition clock when single rows interleave; do not substitute the all-row cadence.
+- Restrict the default 7K regular-small-chord Break disjunct using jointly selected relative NPS and actual row rate. Preserve expert coefficients and the original whole-map aggregation policy; expose `modelInfo.overlayPolicy`.
+- Complete matched 57-gate × 245-aggregation comparisons and original-aggregation controls with source-grouped player supervision. Fix the two curated Speed→Break regressions; whole-map macro-F1 is essentially unchanged, and original six-chart OOF accuracy decreases by 0.17 percentage points. Tech→Dense CS remains unresolved.
+- Add focused overlay cadence/hand-mechanics regressions and a test-only driver using the actual upstream renderer, without connecting to or modifying the user's live tosu/plugin.
+
 ## 1.2.1 — 2026-11-01
 
 - Replace 4K/6K inference with native-key coarse models: the same local support drives display, jointly fitted evidence weights and whole-map composition.
