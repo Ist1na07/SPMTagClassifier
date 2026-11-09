@@ -1,0 +1,84 @@
+{
+  "config": {
+    "localL2": 0.003,
+    "strongWeight": 4.0,
+    "conceptWeight": 0.0,
+    "effortPower": 1.0,
+    "weakBalance": true,
+    "primaryPower": 4.0,
+    "errorBoost": 3.0
+  },
+  "checks": [
+    {
+      "context": "native",
+      "kind": "bias",
+      "dimension": 1,
+      "seconds": 0.04427650000434369,
+      "maximumProjectedGradient": 9.458650321314543e-10
+    },
+    {
+      "context": "native",
+      "kind": "sequence",
+      "dimension": 5,
+      "seconds": 0.09278020006604493,
+      "maximumProjectedGradient": 2.40440491232341e-08
+    },
+    {
+      "context": "native",
+      "kind": "time",
+      "dimension": 5,
+      "seconds": 0.08886360004544258,
+      "maximumProjectedGradient": 4.227662372957575e-09
+    },
+    {
+      "context": "native",
+      "kind": "global",
+      "dimension": 5,
+      "seconds": 0.09005329990759492,
+      "maximumProjectedGradient": 8.525301888051562e-09
+    },
+    {
+      "context": "native",
+      "kind": "both",
+      "dimension": 9,
+      "seconds": 0.11727569997310638,
+      "maximumProjectedGradient": 3.765236274849704e-08
+    },
+    {
+      "context": "local2s",
+      "kind": "bias",
+      "dimension": 1,
+      "seconds": 0.17049239994958043,
+      "maximumProjectedGradient": 9.458646782478652e-10
+    },
+    {
+      "context": "local2s",
+      "kind": "sequence",
+      "dimension": 5,
+      "seconds": 0.4996343000093475,
+      "maximumProjectedGradient": 5.528100310847606e-08
+    },
+    {
+      "context": "local2s",
+      "kind": "time",
+      "dimension": 5,
+      "seconds": 0.45127409999258816,
+      "maximumProjectedGradient": 8.155306603641055e-09
+    },
+    {
+      "context": "local2s",
+      "kind": "global",
+      "dimension": 5,
+      "seconds": 0.48957570001948625,
+      "maximumProjectedGradient": 3.4335178866751193e-09
+    },
+    {
+      "context": "local2s",
+      "kind": "both",
+      "dimension": 9,
+      "seconds": 0.8041606999468058,
+      "maximumProjectedGradient": 1.0373172562236355e-08
+    }
+  ],
+  "totalSeconds": 4.929988899966702
+}

@@ -1,0 +1,109 @@
+{
+  "usesOuterTruth": false,
+  "selections": {
+    "shipped_fixed": {
+      "headId": 0,
+      "config": null,
+      "policyId": 42,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75
+      },
+      "macroF1": 0.5141122080522745,
+      "macroRecall": 0.5123678650377979,
+      "manualAccuracy": 0.6958552679007846,
+      "pressureConfusion": 0.0018182356090744114,
+      "context": "native",
+      "kind": "bias"
+    },
+    "frozen": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5311077336338339,
+      "macroRecall": 0.5049140548177161,
+      "manualAccuracy": 0.6958552679007846,
+      "pressureConfusion": 0.0018182356090744114,
+      "context": "native",
+      "kind": "bias"
+    },
+    "macro": {
+      "headId": 49,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 1.0,
+        "errorBoost": 3.0,
+        "effortPower": 0.0,
+        "primaryPower": 1.0,
+        "weakBalance": true,
+        "conceptWeight": 0.0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5311867152373957,
+      "macroRecall": 0.5027847871454191,
+      "manualAccuracy": 0.6958552679007846,
+      "pressureConfusion": 0.002363416133229915,
+      "context": "native",
+      "kind": "time"
+    },
+    "experience": {
+      "headId": 0,
+      "config": null,
+      "policyId": 36,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 0.6
+      },
+      "macroF1": 0.5245051594861414,
+      "macroRecall": 0.5124958751781717,
+      "manualAccuracy": 0.6958552679007846,
+      "pressureConfusion": 0.0018182356090743923,
+      "context": "local2s",
+      "kind": "bias"
+    },
+    "experience_fixed": {
+      "headId": 0,
+      "config": null,
+      "policyId": 42,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75
+      },
+      "macroF1": 0.5141122080522745,
+      "macroRecall": 0.5123678650377979,
+      "manualAccuracy": 0.6958552679007846,
+      "pressureConfusion": 0.0018182356090743923,
+      "context": "local2s",
+      "kind": "bias"
+    },
+    "experience_no_error": {
+      "headId": 0,
+      "config": null,
+      "policyId": 36,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 0.6
+      },
+      "macroF1": 0.5245051594861414,
+      "macroRecall": 0.5124958751781717,
+      "manualAccuracy": 0.6958552679007846,
+      "pressureConfusion": 0.0018182356090743923,
+      "context": "local2s",
+      "kind": "bias"
+    }
+  }
+}

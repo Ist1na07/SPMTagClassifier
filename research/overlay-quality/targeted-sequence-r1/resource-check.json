@@ -1,0 +1,160 @@
+{
+  "config": {
+    "localL2": 0.003,
+    "strongWeight": 4.0,
+    "conceptWeight": 0.0,
+    "effortPower": 1.0,
+    "weakBalance": true,
+    "primaryPower": 4.0,
+    "errorBoost": 3.0
+  },
+  "dimension": 7,
+  "fit": {
+    "seconds": 0.7947758999653161,
+    "starts": [
+      {
+        "start": 0,
+        "theta": [
+          -0.4214923864828866,
+          0.6046210358920155,
+          -0.2539000983486576,
+          1.4984783337166512,
+          -1.3098592900375436,
+          -0.06972630901909328,
+          -0.17047907097821446
+        ],
+        "loss": 5.656002924240159,
+        "gradientMax": 8.224853383434483e-09,
+        "projectedGradientMax": 8.224853383434483e-09,
+        "checks": [
+          {
+            "loss": 5.656002924240159,
+            "gradientMax": 8.224853383434483e-09,
+            "projectedGradientMax": 8.224853383434483e-09,
+            "iterations": 27,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          }
+        ]
+      },
+      {
+        "start": 1,
+        "theta": [
+          -0.4214924677429778,
+          0.6046206045683982,
+          -0.253900554567516,
+          1.4984783450860137,
+          -1.3098594314860312,
+          -0.06972649678113417,
+          -0.17047926376786324
+        ],
+        "loss": 5.656002924240159,
+        "gradientMax": 1.1426473052467134e-08,
+        "projectedGradientMax": 1.1426473052467134e-08,
+        "checks": [
+          {
+            "loss": 5.656002924240159,
+            "gradientMax": 1.1426473052467134e-08,
+            "projectedGradientMax": 1.1426473052467134e-08,
+            "iterations": 27,
+            "message": "CONVERGENCE: RELATIVE REDUCTION OF F <= FACTR*EPSMCH"
+          }
+        ]
+      },
+      {
+        "start": 2,
+        "theta": [
+          -0.4214925154323071,
+          0.6046208416980999,
+          -0.25390033562821646,
+          1.4984783952133203,
+          -1.3098593715133158,
+          -0.06972657741376607,
+          -0.17047958898507093
+        ],
+        "loss": 5.6560029242401555,
+        "gradientMax": 3.1390455443314202e-09,
+        "projectedGradientMax": 3.1390455443314202e-09,
+        "checks": [
+          {
+            "loss": 5.6560029242401555,
+            "gradientMax": 3.1390455443314202e-09,
+            "projectedGradientMax": 3.1390455443314202e-09,
+            "iterations": 28,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL"
+          }
+        ]
+      }
+    ],
+    "selectedStart": 2,
+    "maximumGradient": 1.1426473052467134e-08,
+    "maximumProjectedGradient": 1.1426473052467134e-08,
+    "localTrainUids": []
+  },
+  "model": {
+    "kind": "both",
+    "theta": [
+      -0.4214925154323071,
+      0.6046208416980999,
+      -0.25390033562821646,
+      1.4984783952133203,
+      -1.3098593715133158,
+      -0.06972657741376607,
+      -0.17047958898507093
+    ],
+    "scaler": {
+      "rawImputation": [
+        0.32959941101342854,
+        0.37936726297653145,
+        0.4231151016676918,
+        0.47713692096016636
+      ],
+      "mean": [
+        0.32959941101343027,
+        0.3793672629765338,
+        0.4231151016676942,
+        0.4771369209601675,
+        0.01671541083868514,
+        0.01671541083868514,
+        0.060372963067156074,
+        0.060372963067156074
+      ],
+      "scale": [
+        0.31446454662524653,
+        0.2734036143065961,
+        0.1535507953395563,
+        0.18732963045733297,
+        0.1282029870134821,
+        1.0,
+        0.2381765487986608,
+        1.0
+      ],
+      "keep": [
+        true,
+        true,
+        true,
+        true,
+        true,
+        false,
+        true,
+        false
+      ],
+      "expandedKeys": [
+        "adjacentChordShare",
+        "chordSingleSwitchShare",
+        "handLogIoiSd",
+        "handIoiChange",
+        "adjacentChordShare:missing",
+        "chordSingleSwitchShare:missing",
+        "handLogIoiSd:missing",
+        "handIoiChange:missing"
+      ]
+    },
+    "types": [
+      "dense chordstream",
+      "fast chordstream",
+      "tech"
+    ],
+    "residual": "Tech versus combined CS odds; Dense/Fast conditional ratio unchanged"
+  },
+  "scope": "Fixed first INNER TRAIN only; no outer score used"
+}

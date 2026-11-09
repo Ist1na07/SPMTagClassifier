@@ -1,0 +1,10 @@
+{
+  "targetMultistartReceipts": 41040,
+  "nestedComparisons": 10800,
+  "worstChildMinusEmbeddedParentLoss": -2.8160490612716416e-06,
+  "conditionalPointsOnSameLocalCostPlateau": 52,
+  "plateauPointsChangingWholeTagVectors": 26,
+  "maxPlateauChangedInnerTagSetMass": 0.13309352517985612,
+  "errorBoostProfilePointsWhoseStrongTaskIsInactive": 3,
+  "interpretation": "Hard local-error cost can be flat while whole predictions change. Final head0 has no identifiable representation/training parameters; do not call local2s/bias a winning learned model. Multistart stationarity does not prove global optimality."
+}

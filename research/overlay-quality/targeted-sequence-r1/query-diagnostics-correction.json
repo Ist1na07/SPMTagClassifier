@@ -1,0 +1,1338 @@
+{
+  "correction": "Producer regressions.json used9-16.5s on historical local/Fxx original-song coordinates109942/79946ms; those zero coverages are invalid diagnostics. No query enters fitting or selection, so no fit or INNER/OUTER whole/manual result changes. This file supersedes that diagnostic only.",
+  "effectiveScope": "Full standalone excerpt natural segmentation; evaluate9-16.5s only with the model whose source-song group is held out. No label input or forced target boundary in extraction.",
+  "cases": [
+    {
+      "query": "F01",
+      "uid": "natural/F01",
+      "source": "artifacts/frontier-annotation-r5/F01.osu",
+      "name": "shipped_fixed",
+      "outer": 2,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0362/361",
+      "choice": {
+        "headId": 0,
+        "config": null,
+        "policyId": 42,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        },
+        "macroF1": 0.5268172133089875,
+        "macroRecall": 0.5156732401297619,
+        "manualAccuracy": 0.7048165370869045,
+        "pressureConfusion": 0.002181882730889294,
+        "context": "native",
+        "kind": "bias",
+        "outer": 2
+      },
+      "profile": {
+        "context": "native",
+        "model": null,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1076,
+          "end": 9409,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00222480293540337,
+            "dense chordstream": 0.01713196979586708,
+            "fast chordstream": 0.04996748228733815,
+            "minijack": 0.012154796957506049,
+            "speed": 1.0063054077492892,
+            "tech": 0.1469683928170881,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 9409,
+          "end": 15159,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 0.7057044085675286,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.007267407879866012,
+            "dense chordstream": 0.01693633654159552,
+            "fast chordstream": 0.0521404238158815,
+            "minijack": 0.028665234512743092,
+            "speed": 0.7057044085675286,
+            "tech": 0.33375012000863635,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 15159,
+          "end": 24465,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 270,
+          "confidence": 0.6210899101303587,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021724440335725895,
+            "dense chordstream": 0.007080912171508086,
+            "fast chordstream": 0.008462267273530454,
+            "minijack": 0.003919875353716462,
+            "speed": 0.6210899101303587,
+            "tech": 0.2014822706821985,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        }
+      ]
+    },
+    {
+      "query": "F01",
+      "uid": "natural/F01",
+      "source": "artifacts/frontier-annotation-r5/F01.osu",
+      "name": "frozen",
+      "outer": 2,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0362/361",
+      "choice": {
+        "headId": 0,
+        "config": null,
+        "policyId": 39,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.05,
+          "secondRel": 1.0
+        },
+        "macroF1": 0.5404541961576269,
+        "macroRecall": 0.506082210787341,
+        "manualAccuracy": 0.7048165370869045,
+        "pressureConfusion": 0.002181882730889294,
+        "context": "native",
+        "kind": "bias",
+        "outer": 2
+      },
+      "profile": {
+        "context": "native",
+        "model": null,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.05,
+          "secondRel": 1.0
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1076,
+          "end": 9409,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00222480293540337,
+            "dense chordstream": 0.01713196979586708,
+            "fast chordstream": 0.04996748228733815,
+            "minijack": 0.012154796957506049,
+            "speed": 1.0063054077492892,
+            "tech": 0.1469683928170881,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 9409,
+          "end": 15159,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 0.7057044085675286,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.007267407879866012,
+            "dense chordstream": 0.01693633654159552,
+            "fast chordstream": 0.0521404238158815,
+            "minijack": 0.028665234512743092,
+            "speed": 0.7057044085675286,
+            "tech": 0.33375012000863635,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 15159,
+          "end": 24465,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 270,
+          "confidence": 0.6210899101303587,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021724440335725895,
+            "dense chordstream": 0.007080912171508086,
+            "fast chordstream": 0.008462267273530454,
+            "minijack": 0.003919875353716462,
+            "speed": 0.6210899101303587,
+            "tech": 0.2014822706821985,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        }
+      ]
+    },
+    {
+      "query": "F01",
+      "uid": "natural/F01",
+      "source": "artifacts/frontier-annotation-r5/F01.osu",
+      "name": "macro",
+      "outer": 2,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0362/361",
+      "choice": {
+        "headId": 51,
+        "config": {
+          "localL2": 0.03,
+          "strongWeight": 1.0,
+          "errorBoost": 3.0,
+          "effortPower": 1.0,
+          "primaryPower": 1.0,
+          "weakBalance": true,
+          "conceptWeight": 0.0
+        },
+        "policyId": 38,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.05,
+          "secondRel": 0.9
+        },
+        "macroF1": 0.5415371212789043,
+        "macroRecall": 0.5038558903949305,
+        "manualAccuracy": 0.7048165370869045,
+        "pressureConfusion": 0.002181882730889294,
+        "context": "native",
+        "kind": "global",
+        "outer": 2
+      },
+      "profile": {
+        "context": "native",
+        "model": {
+          "kind": "global",
+          "theta": [
+            0.32699985390528047,
+            0.4078458467695706,
+            0.2803826928792344,
+            -0.04077757517726172
+          ],
+          "scaler": {
+            "rawImputation": [
+              0.3508116588195256,
+              0.218823565571938
+            ],
+            "mean": [
+              0.3508116588195261,
+              0.21882356557193788,
+              0.015312500000000001,
+              0.015312500000000001
+            ],
+            "scale": [
+              0.18737063263416995,
+              0.17166373047036285,
+              0.12279261925600482,
+              1.0
+            ],
+            "keep": [
+              true,
+              true,
+              true,
+              false
+            ],
+            "expandedKeys": [
+              "globalLogIoiSd",
+              "globalIoiChange",
+              "globalLogIoiSd:missing",
+              "globalIoiChange:missing"
+            ]
+          },
+          "types": [
+            "dense chordstream",
+            "fast chordstream",
+            "tech"
+          ],
+          "residual": "Tech versus combined CS odds; Dense/Fast conditional ratio unchanged"
+        },
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.05,
+          "secondRel": 0.9
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1076,
+          "end": 9409,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00222480293540337,
+            "dense chordstream": 0.01713196979586708,
+            "fast chordstream": 0.04996748228733815,
+            "minijack": 0.012154796957506049,
+            "speed": 1.0063054077492892,
+            "tech": 0.1469683928170881,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 9409,
+          "end": 15159,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 0.7057044085675286,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.007267407879866012,
+            "dense chordstream": 0.01693633654159552,
+            "fast chordstream": 0.0521404238158815,
+            "minijack": 0.028665234512743092,
+            "speed": 0.7057044085675286,
+            "tech": 0.33375012000863635,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 15159,
+          "end": 24465,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 270,
+          "confidence": 0.6210899101303587,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021724440335725895,
+            "dense chordstream": 0.007080912171508086,
+            "fast chordstream": 0.008462267273530454,
+            "minijack": 0.003919875353716462,
+            "speed": 0.6210899101303587,
+            "tech": 0.2014822706821985,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        }
+      ]
+    },
+    {
+      "query": "F01",
+      "uid": "natural/F01",
+      "source": "artifacts/frontier-annotation-r5/F01.osu",
+      "name": "experience",
+      "outer": 2,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0362/361",
+      "choice": {
+        "headId": 0,
+        "config": null,
+        "policyId": 42,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        },
+        "macroF1": 0.5268172133089875,
+        "macroRecall": 0.5156732401297619,
+        "manualAccuracy": 0.7048165370869045,
+        "pressureConfusion": 0.002181882730889271,
+        "context": "local2s",
+        "kind": "bias",
+        "outer": 2
+      },
+      "profile": {
+        "context": "local2s",
+        "model": null,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1076,
+          "end": 9409,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00222480293540337,
+            "dense chordstream": 0.01713196979586708,
+            "fast chordstream": 0.04996748228733815,
+            "minijack": 0.012154796957506049,
+            "speed": 1.0063054077492892,
+            "tech": 0.1469683928170881,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 9409,
+          "end": 15159,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 0.7057044085675286,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.007267407879866012,
+            "dense chordstream": 0.01693633654159552,
+            "fast chordstream": 0.0521404238158815,
+            "minijack": 0.028665234512743092,
+            "speed": 0.7057044085675286,
+            "tech": 0.33375012000863635,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 15159,
+          "end": 24465,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 270,
+          "confidence": 0.6210899101303587,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021724440335725895,
+            "dense chordstream": 0.007080912171508086,
+            "fast chordstream": 0.008462267273530454,
+            "minijack": 0.003919875353716462,
+            "speed": 0.6210899101303587,
+            "tech": 0.2014822706821985,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        }
+      ]
+    },
+    {
+      "query": "F01",
+      "uid": "natural/F01",
+      "source": "artifacts/frontier-annotation-r5/F01.osu",
+      "name": "experience_fixed",
+      "outer": 2,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0362/361",
+      "choice": {
+        "headId": 0,
+        "config": null,
+        "policyId": 42,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        },
+        "macroF1": 0.5268172133089875,
+        "macroRecall": 0.5156732401297619,
+        "manualAccuracy": 0.7048165370869045,
+        "pressureConfusion": 0.002181882730889271,
+        "context": "local2s",
+        "kind": "bias",
+        "outer": 2
+      },
+      "profile": {
+        "context": "local2s",
+        "model": null,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1076,
+          "end": 9409,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00222480293540337,
+            "dense chordstream": 0.01713196979586708,
+            "fast chordstream": 0.04996748228733815,
+            "minijack": 0.012154796957506049,
+            "speed": 1.0063054077492892,
+            "tech": 0.1469683928170881,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 9409,
+          "end": 15159,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 0.7057044085675286,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.007267407879866012,
+            "dense chordstream": 0.01693633654159552,
+            "fast chordstream": 0.0521404238158815,
+            "minijack": 0.028665234512743092,
+            "speed": 0.7057044085675286,
+            "tech": 0.33375012000863635,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 15159,
+          "end": 24465,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 270,
+          "confidence": 0.6210899101303587,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021724440335725895,
+            "dense chordstream": 0.007080912171508086,
+            "fast chordstream": 0.008462267273530454,
+            "minijack": 0.003919875353716462,
+            "speed": 0.6210899101303587,
+            "tech": 0.2014822706821985,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        }
+      ]
+    },
+    {
+      "query": "F01",
+      "uid": "natural/F01",
+      "source": "artifacts/frontier-annotation-r5/F01.osu",
+      "name": "experience_no_error",
+      "outer": 2,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0362/361",
+      "choice": {
+        "headId": 0,
+        "config": null,
+        "policyId": 42,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        },
+        "macroF1": 0.5268172133089875,
+        "macroRecall": 0.5156732401297619,
+        "manualAccuracy": 0.7048165370869045,
+        "pressureConfusion": 0.002181882730889271,
+        "context": "local2s",
+        "kind": "bias",
+        "outer": 2
+      },
+      "profile": {
+        "context": "local2s",
+        "model": null,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1076,
+          "end": 9409,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00222480293540337,
+            "dense chordstream": 0.01713196979586708,
+            "fast chordstream": 0.04996748228733815,
+            "minijack": 0.012154796957506049,
+            "speed": 1.0063054077492892,
+            "tech": 0.1469683928170881,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 9409,
+          "end": 15159,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 268,
+          "confidence": 0.7057044085675286,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.007267407879866012,
+            "dense chordstream": 0.01693633654159552,
+            "fast chordstream": 0.0521404238158815,
+            "minijack": 0.028665234512743092,
+            "speed": 0.7057044085675286,
+            "tech": 0.33375012000863635,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 15159,
+          "end": 24465,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 270,
+          "confidence": 0.6210899101303587,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021724440335725895,
+            "dense chordstream": 0.007080912171508086,
+            "fast chordstream": 0.008462267273530454,
+            "minijack": 0.003919875353716462,
+            "speed": 0.6210899101303587,
+            "tech": 0.2014822706821985,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        }
+      ]
+    },
+    {
+      "query": "F02",
+      "uid": "natural/F02",
+      "source": "artifacts/frontier-annotation-r5/F02.osu",
+      "name": "shipped_fixed",
+      "outer": 3,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0090/89",
+      "choice": {
+        "headId": 0,
+        "config": null,
+        "policyId": 42,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        },
+        "macroF1": 0.480175628905014,
+        "macroRecall": 0.4744840251148683,
+        "manualAccuracy": 0.707048849063985,
+        "pressureConfusion": 0.0007522934905221601,
+        "context": "native",
+        "kind": "bias",
+        "outer": 3
+      },
+      "profile": {
+        "context": "native",
+        "model": null,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1033,
+          "end": 13808,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.7900629405647714,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0035003273645936714,
+            "dense chordstream": 0.5151649149855678,
+            "fast chordstream": 0.01133828019968991,
+            "minijack": 0.0040992260280750875,
+            "speed": 0.7900629405647714,
+            "tech": 0.04483598909977019,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 13808,
+          "end": 20408,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021346398724771186,
+            "dense chordstream": 0.2545595858519035,
+            "fast chordstream": 0.006873150122361729,
+            "minijack": 0.002345205450536138,
+            "speed": 1.0092121225738113,
+            "tech": 0.06161973965525195,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 20408,
+          "end": 24483,
+          "tag": "dense chordstream",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.8062329405049257,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00821020267834002,
+            "dense chordstream": 0.8062329405049257,
+            "fast chordstream": 0.013712093255230397,
+            "minijack": 0.007701235989650359,
+            "speed": 0.5156374064701825,
+            "tech": 0.02387765739638128,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        }
+      ]
+    },
+    {
+      "query": "F02",
+      "uid": "natural/F02",
+      "source": "artifacts/frontier-annotation-r5/F02.osu",
+      "name": "frozen",
+      "outer": 3,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0090/89",
+      "choice": {
+        "headId": 0,
+        "config": null,
+        "policyId": 44,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 1.0
+        },
+        "macroF1": 0.4931085497830128,
+        "macroRecall": 0.4707255237427171,
+        "manualAccuracy": 0.707048849063985,
+        "pressureConfusion": 0.0007522934905221601,
+        "context": "native",
+        "kind": "bias",
+        "outer": 3
+      },
+      "profile": {
+        "context": "native",
+        "model": null,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 1.0
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1033,
+          "end": 13808,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.7900629405647714,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0035003273645936714,
+            "dense chordstream": 0.5151649149855678,
+            "fast chordstream": 0.01133828019968991,
+            "minijack": 0.0040992260280750875,
+            "speed": 0.7900629405647714,
+            "tech": 0.04483598909977019,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 13808,
+          "end": 20408,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021346398724771186,
+            "dense chordstream": 0.2545595858519035,
+            "fast chordstream": 0.006873150122361729,
+            "minijack": 0.002345205450536138,
+            "speed": 1.0092121225738113,
+            "tech": 0.06161973965525195,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 20408,
+          "end": 24483,
+          "tag": "dense chordstream",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.8062329405049257,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00821020267834002,
+            "dense chordstream": 0.8062329405049257,
+            "fast chordstream": 0.013712093255230397,
+            "minijack": 0.007701235989650359,
+            "speed": 0.5156374064701825,
+            "tech": 0.02387765739638128,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        }
+      ]
+    },
+    {
+      "query": "F02",
+      "uid": "natural/F02",
+      "source": "artifacts/frontier-annotation-r5/F02.osu",
+      "name": "macro",
+      "outer": 3,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0090/89",
+      "choice": {
+        "headId": 56,
+        "config": {
+          "localL2": 0.03,
+          "strongWeight": 4.0,
+          "errorBoost": 0.0,
+          "effortPower": 1.0,
+          "primaryPower": 4.0,
+          "weakBalance": true,
+          "conceptWeight": 0.0
+        },
+        "policyId": 79,
+        "policy": {
+          "dominantShare": 0.55,
+          "mixShare": 0.07,
+          "secondRel": 1.0
+        },
+        "macroF1": 0.5055204000353591,
+        "macroRecall": 0.4816811433130604,
+        "manualAccuracy": 0.707048849063985,
+        "pressureConfusion": 0.01038466792922401,
+        "context": "native",
+        "kind": "both",
+        "outer": 3
+      },
+      "profile": {
+        "context": "native",
+        "model": {
+          "kind": "both",
+          "theta": [
+            0.22462406362034035,
+            -0.12213925828925812,
+            -0.04183484618751156,
+            0.5812158309977861,
+            -0.2053798749076898,
+            -0.02585132477866695,
+            -0.03705172435920548
+          ],
+          "scaler": {
+            "rawImputation": [
+              0.3198651773960298,
+              0.3833666244899026,
+              0.4708864804832465,
+              0.47659217230251355
+            ],
+            "mean": [
+              0.3198651773960302,
+              0.38336662448990244,
+              0.4708864804832465,
+              0.4765921723025131,
+              0.013071895424836602,
+              0.013071895424836602,
+              0.026487788097695218,
+              0.026487788097695218
+            ],
+            "scale": [
+              0.26825862889915086,
+              0.22836219666244817,
+              0.1397669115286406,
+              0.15331003146117508,
+              0.11358266141818794,
+              1.0,
+              0.16058077462569081,
+              1.0
+            ],
+            "keep": [
+              true,
+              true,
+              true,
+              true,
+              true,
+              false,
+              true,
+              false
+            ],
+            "expandedKeys": [
+              "adjacentChordShare",
+              "chordSingleSwitchShare",
+              "handLogIoiSd",
+              "handIoiChange",
+              "adjacentChordShare:missing",
+              "chordSingleSwitchShare:missing",
+              "handLogIoiSd:missing",
+              "handIoiChange:missing"
+            ]
+          },
+          "types": [
+            "dense chordstream",
+            "fast chordstream",
+            "tech"
+          ],
+          "residual": "Tech versus combined CS odds; Dense/Fast conditional ratio unchanged"
+        },
+        "policy": {
+          "dominantShare": 0.55,
+          "mixShare": 0.07,
+          "secondRel": 1.0
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1033,
+          "end": 13808,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.7900629405647714,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0035003273645936714,
+            "dense chordstream": 0.5151649149855678,
+            "fast chordstream": 0.01133828019968991,
+            "minijack": 0.0040992260280750875,
+            "speed": 0.7900629405647714,
+            "tech": 0.04483598909977019,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 13808,
+          "end": 20408,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021346398724771186,
+            "dense chordstream": 0.2545595858519035,
+            "fast chordstream": 0.006873150122361729,
+            "minijack": 0.002345205450536138,
+            "speed": 1.0092121225738113,
+            "tech": 0.06161973965525195,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 20408,
+          "end": 24483,
+          "tag": "dense chordstream",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.8120141468348481,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00821020267834002,
+            "dense chordstream": 0.8120141468348481,
+            "fast chordstream": 0.013810417742287428,
+            "minijack": 0.007701235989650359,
+            "speed": 0.5156374064701825,
+            "tech": 0.017998126579401873,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        }
+      ]
+    },
+    {
+      "query": "F02",
+      "uid": "natural/F02",
+      "source": "artifacts/frontier-annotation-r5/F02.osu",
+      "name": "experience",
+      "outer": 3,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0090/89",
+      "choice": {
+        "headId": 49,
+        "config": {
+          "localL2": 0.03,
+          "strongWeight": 1.0,
+          "errorBoost": 3.0,
+          "effortPower": 0.0,
+          "primaryPower": 1.0,
+          "weakBalance": true,
+          "conceptWeight": 0.0
+        },
+        "policyId": 44,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 1.0
+        },
+        "macroF1": 0.49835788809221004,
+        "macroRecall": 0.47464709237016806,
+        "manualAccuracy": 0.707048849063985,
+        "pressureConfusion": 0.0007522934905221441,
+        "context": "local2s",
+        "kind": "bias",
+        "outer": 3
+      },
+      "profile": {
+        "context": "local2s",
+        "model": {
+          "kind": "bias",
+          "theta": [
+            -0.13117045434243804
+          ],
+          "scaler": {
+            "rawImputation": [],
+            "mean": [],
+            "scale": [],
+            "keep": [],
+            "expandedKeys": []
+          },
+          "types": [
+            "dense chordstream",
+            "fast chordstream",
+            "tech"
+          ],
+          "residual": "Tech versus combined CS odds; Dense/Fast conditional ratio unchanged"
+        },
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 1.0
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1033,
+          "end": 13808,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.7900629405647714,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0035003273645936714,
+            "dense chordstream": 0.5151649149855678,
+            "fast chordstream": 0.01133828019968991,
+            "minijack": 0.0040992260280750875,
+            "speed": 0.7900629405647714,
+            "tech": 0.04483598909977019,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 13808,
+          "end": 20408,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021346398724771186,
+            "dense chordstream": 0.2545595858519035,
+            "fast chordstream": 0.006873150122361729,
+            "minijack": 0.002345205450536138,
+            "speed": 1.0092121225738113,
+            "tech": 0.06161973965525195,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 20408,
+          "end": 24483,
+          "tag": "dense chordstream",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.8090472927244708,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00821020267834002,
+            "dense chordstream": 0.8090472927244708,
+            "fast chordstream": 0.013759958652622008,
+            "minijack": 0.007701235989650357,
+            "speed": 0.5156374064701825,
+            "tech": 0.021015439779444468,
+            "wildcard": 0.18,
+            "vibro": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "query": "F02",
+      "uid": "natural/F02",
+      "source": "artifacts/frontier-annotation-r5/F02.osu",
+      "name": "experience_fixed",
+      "outer": 3,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0090/89",
+      "choice": {
+        "headId": 1,
+        "config": {
+          "localL2": 0.0003,
+          "strongWeight": 0.0,
+          "errorBoost": 0.0,
+          "effortPower": 0.0,
+          "primaryPower": 1.0,
+          "weakBalance": true,
+          "conceptWeight": 0.0
+        },
+        "policyId": 42,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        },
+        "macroF1": 0.484585379950819,
+        "macroRecall": 0.47901524936927586,
+        "manualAccuracy": 0.707048849063985,
+        "pressureConfusion": 0.0007522934905221441,
+        "context": "local2s",
+        "kind": "bias",
+        "outer": 3
+      },
+      "profile": {
+        "context": "local2s",
+        "model": {
+          "kind": "bias",
+          "theta": [
+            0.11173382513528944
+          ],
+          "scaler": {
+            "rawImputation": [],
+            "mean": [],
+            "scale": [],
+            "keep": [],
+            "expandedKeys": []
+          },
+          "types": [
+            "dense chordstream",
+            "fast chordstream",
+            "tech"
+          ],
+          "residual": "Tech versus combined CS odds; Dense/Fast conditional ratio unchanged"
+        },
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 0.75
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1033,
+          "end": 13808,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.7900629405647714,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0035003273645936714,
+            "dense chordstream": 0.5151649149855678,
+            "fast chordstream": 0.01133828019968991,
+            "minijack": 0.0040992260280750875,
+            "speed": 0.7900629405647714,
+            "tech": 0.04483598909977019,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 13808,
+          "end": 20408,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021346398724771186,
+            "dense chordstream": 0.2545595858519035,
+            "fast chordstream": 0.006873150122361729,
+            "minijack": 0.002345205450536138,
+            "speed": 1.0092121225738113,
+            "tech": 0.06161973965525195,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 20408,
+          "end": 24483,
+          "tag": "dense chordstream",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.8035449733712773,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00821020267834002,
+            "dense chordstream": 0.8035449733712773,
+            "fast chordstream": 0.013666377365750004,
+            "minijack": 0.007701235989650357,
+            "speed": 0.5156374064701825,
+            "tech": 0.026611340419510104,
+            "wildcard": 0.18,
+            "vibro": 0.0
+          }
+        }
+      ]
+    },
+    {
+      "query": "F02",
+      "uid": "natural/F02",
+      "source": "artifacts/frontier-annotation-r5/F02.osu",
+      "name": "experience_no_error",
+      "outer": 3,
+      "sourceGroup": "spm_dataset-1.1.1/bm_0090/89",
+      "choice": {
+        "headId": 1,
+        "config": {
+          "localL2": 0.0003,
+          "strongWeight": 0.0,
+          "errorBoost": 0.0,
+          "effortPower": 0.0,
+          "primaryPower": 1.0,
+          "weakBalance": true,
+          "conceptWeight": 0.0
+        },
+        "policyId": 44,
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 1.0
+        },
+        "macroF1": 0.4979903505365694,
+        "macroRecall": 0.47525674799712464,
+        "manualAccuracy": 0.707048849063985,
+        "pressureConfusion": 0.0007522934905221441,
+        "context": "local2s",
+        "kind": "bias",
+        "outer": 3
+      },
+      "profile": {
+        "context": "local2s",
+        "model": {
+          "kind": "bias",
+          "theta": [
+            0.11173382513528944
+          ],
+          "scaler": {
+            "rawImputation": [],
+            "mean": [],
+            "scale": [],
+            "keep": [],
+            "expandedKeys": []
+          },
+          "types": [
+            "dense chordstream",
+            "fast chordstream",
+            "tech"
+          ],
+          "residual": "Tech versus combined CS odds; Dense/Fast conditional ratio unchanged"
+        },
+        "policy": {
+          "dominantShare": 0.52,
+          "mixShare": 0.07,
+          "secondRel": 1.0
+        }
+      },
+      "speedPrimaryCoverage": 1.0,
+      "expected": [
+        {
+          "start": 1033,
+          "end": 13808,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.7900629405647714,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0035003273645936714,
+            "dense chordstream": 0.5151649149855678,
+            "fast chordstream": 0.01133828019968991,
+            "minijack": 0.0040992260280750875,
+            "speed": 0.7900629405647714,
+            "tech": 0.04483598909977019,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 13808,
+          "end": 20408,
+          "tag": "speed",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 1,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.0021346398724771186,
+            "dense chordstream": 0.2545595858519035,
+            "fast chordstream": 0.006873150122361729,
+            "minijack": 0.002345205450536138,
+            "speed": 1.0092121225738113,
+            "tech": 0.06161973965525195,
+            "wildcard": 0.18,
+            "vibro": 0
+          }
+        },
+        {
+          "start": 20408,
+          "end": 24483,
+          "tag": "dense chordstream",
+          "secondary": null,
+          "equivBpm": 200,
+          "confidence": 0.8035449733712773,
+          "family": "rc",
+          "scores": {
+            "chordjack": 0.00821020267834002,
+            "dense chordstream": 0.8035449733712773,
+            "fast chordstream": 0.013666377365750004,
+            "minijack": 0.007701235989650357,
+            "speed": 0.5156374064701825,
+            "tech": 0.026611340419510104,
+            "wildcard": 0.18,
+            "vibro": 0.0
+          }
+        }
+      ]
+    }
+  ],
+  "sourceSnapshot": "\"\"\"Correct the legacy source-coordinate/standalone-clock diagnostic mismatch.\n\nThis does not fit, select, change a metric or modify any training input.\n\"\"\"\nfrom targeted_sequence_model import World,frames\nfrom targeted_sequence_study import ROOT,PLANS\nfrom pressure_data import read\nfrom rc_action_runtime import smooth\nfrom whole_reference import write\n\ndef run():\n    choices=read(ROOT/'joint-inner-selection.json')['choices'];ann=read('research/frontier/annotations-r5.json')\n    source=read('.cache/targeted-natural-queries-r1.json');reference=World('native');groups={r['uid']:r['group']for r in reference.main}\n    worlds={};retained=[];out=[]\n    for q in source['rows']:\n        group=groups[ann['cases'][q['name']]['sourceUid']]\n        folds=[o for o,p in enumerate(PLANS)if group in {reference.main[i]['group']for i in p['test']}]\n        if len(folds)!=1:raise ValueError('Source group not held out exactly once')\n        o=folds[0]\n        if group in {reference.main[i]['group']for i in PLANS[o]['train']}:raise ValueError('Source query group leaked into TRAIN')\n        for name,cs in choices.items():\n            c=cs[o];context=c['context'];uid=q['uid']\n            if context not in worlds:worlds[context]=World(context)\n            w=worlds[context];row=q['local']if context=='local2s'else dict(frames=q['parents'],values=q['originalValues'],parentIds=list(range(len(q['parents']))))\n            w.inputs[uid]={**row,'intervals':[[s['start'],s['end']]for s in row['frames']],'parents':q['parents']}\n            m=read(ROOT/context/c['kind']/str(o)/'outer-models.json')[str(c['headId'])]['model'];retained.append(m)\n            fs=smooth(frames(w,uid,m));a,b=9000,16500\n            accuracy=sum(max(0,min(b,s['end'])-max(a,s['start']))for s in fs if s['tag']=='speed')/(b-a)\n            profile=dict(context=context,model=m,policy=c['policy'])\n            out.append(dict(query=q['name'],uid=uid,source=q['source'],name=name,outer=o,sourceGroup=group,choice=c,profile=profile,speedPrimaryCoverage=accuracy,expected=fs))\n    write(ROOT/'query-diagnostics-correction.json',dict(\n        correction='Producer regressions.json used9-16.5s on historical local/Fxx original-song coordinates109942/79946ms; those zero coverages are invalid diagnostics. No query enters fitting or selection, so no fit or INNER/OUTER whole/manual result changes. This file supersedes that diagnostic only.',\n        effectiveScope='Full standalone excerpt natural segmentation; evaluate9-16.5s only with the model whose source-song group is held out. No label input or forced target boundary in extraction.',\n        cases=out,sourceSnapshot=__import__('pathlib').Path(__file__).read_text(encoding='utf8')))\n    # Repair the effective handoff, rather than leaving known-invalid zeros\n    # in its query fields. Frozen producer per-scope diagnostics remain intact.\n    analysis=read(ROOT/'analysis.json')\n    for name,result in analysis['joint'].items():result['regressions']=[r for r in out if r['name']==name]\n    analysis['queryDiagnosticSource']='query-diagnostics-correction.json; natural excerpt clock, source-held-out models. Whole/manual metrics and selections unchanged.'\n    write(ROOT/'analysis.json',analysis)\n    report=ROOT/'REPORT.md';text=report.read_text(encoding='utf8');marker='\\n## 正确的摘录回归口径\\n'\n    text=text.split(marker)[0]+marker+'\\nF01/F02按完整摘录的自然分段，在9–16.5秒计算主Speed覆盖；只使用来源歌曲组留出的模型。所有策略的两条覆盖均为100%，没有新改善或退步。历史local/Fxx缓存使用原谱坐标，不能套用摘录时钟；修复依据、来源组和实际输出见query-diagnostics-correction.json。\\n'\n    report.write_text(text,encoding='utf8')\n    print('Corrected source-held-out natural-excerpt queries',[(r['name'],r['query'],r['speedPrimaryCoverage'])for r in out],flush=True)\n\nif __name__=='__main__':run()\n"
+}

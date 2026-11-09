@@ -19,6 +19,8 @@
 
 整谱17类 macro P/R/F1 从55.15%／51.35%／51.98%到55.07%／51.47%／52.02%，基本持平；原六张人工谱局部准确率69.59%到69.41%，留出 DS 有4.25秒休息误报。**Tech→Dense CS 尚未解决**，没有采用未改善该错例的新分类头。完整取舍、逐类错误和参数范围见 [本轮结论](research/overlay-quality/CONCLUSIONS.md)。实际插件渲染器离线检查已通过；实时游戏／tosu 链路尚未验收。
 
+11月10日的[限时定点跟进](research/overlay-quality/targeted-sequence-r1/DECISION.md)参考GitHub上的连续行识别及逐手时序方法，完成原段／局部上下文的联合对照，但没有减少真实Tech→Dense错误；新头未采用，产品仍为v1.2.2。
+
 ## 运行一张谱面
 
 ```sh

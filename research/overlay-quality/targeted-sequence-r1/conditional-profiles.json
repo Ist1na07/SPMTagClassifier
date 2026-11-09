@@ -1,0 +1,2078 @@
+[
+  {
+    "outer": 0,
+    "reference": {
+      "headId": 41,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 0.0,
+        "errorBoost": 0.0,
+        "effortPower": 0.0,
+        "primaryPower": 1.0,
+        "weakBalance": true,
+        "conceptWeight": 0.0
+      },
+      "policyId": 42,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75
+      },
+      "macroF1": 0.49503487139706753,
+      "macroRecall": 0.5115085133004648,
+      "manualAccuracy": 0.7012246685883796,
+      "pressureConfusion": 0.001429589240367127,
+      "context": "local2s",
+      "kind": "sequence",
+      "outer": 0
+    },
+    "activeTrainingParameterProfiles": [
+      {
+        "axis": "localL2",
+        "value": 0.0003,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 10,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 4.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49322011538794897,
+          "macroRecall": 0.5097784094942363,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367127,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.010380622837370242
+      },
+      {
+        "axis": "localL2",
+        "value": 0.003,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 30,
+          "config": {
+            "localL2": 0.003,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 4.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49322011538794897,
+          "macroRecall": 0.5097784094942363,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367127,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.010380622837370242
+      },
+      {
+        "axis": "localL2",
+        "value": 0.03,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49503487139706753,
+          "macroRecall": 0.5115085133004648,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367127,
+          "context": "local2s",
+          "kind": "sequence",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "strongWeight",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49503487139706753,
+          "macroRecall": 0.5115085133004648,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367127,
+          "context": "local2s",
+          "kind": "sequence",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "strongWeight",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 45,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49457524566010586,
+          "macroRecall": 0.5125300984050948,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367127,
+          "context": "local2s",
+          "kind": "sequence",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.01730103806228374
+      },
+      {
+        "axis": "strongWeight",
+        "value": 4.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 53,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 4.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 43,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.9
+          },
+          "macroF1": 0.5108710493795215,
+          "macroRecall": 0.5105511323764926,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367134,
+          "context": "native",
+          "kind": "global",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.04844290657439446
+      },
+      {
+        "axis": "errorBoost",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49503487139706753,
+          "macroRecall": 0.5115085133004648,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367127,
+          "context": "local2s",
+          "kind": "sequence",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "errorBoost",
+        "value": 3.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 49,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49457524566010586,
+          "macroRecall": 0.5125300984050948,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367127,
+          "context": "local2s",
+          "kind": "time",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.01730103806228374
+      },
+      {
+        "axis": "effortPower",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49503487139706753,
+          "macroRecall": 0.5115085133004648,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367127,
+          "context": "local2s",
+          "kind": "sequence",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "effortPower",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 47,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 1.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49457524566010586,
+          "macroRecall": 0.5125300984050948,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367127,
+          "context": "local2s",
+          "kind": "sequence",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.01730103806228374
+      },
+      {
+        "axis": "primaryPower",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49503487139706753,
+          "macroRecall": 0.5115085133004648,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367127,
+          "context": "local2s",
+          "kind": "sequence",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "primaryPower",
+        "value": 4.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 10,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 4.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.49322011538794897,
+          "macroRecall": 0.5097784094942363,
+          "manualAccuracy": 0.7012246685883796,
+          "pressureConfusion": 0.001429589240367127,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 0
+        },
+        "changedWholeTagSetMass": 0.010380622837370242
+      }
+    ]
+  },
+  {
+    "outer": 1,
+    "reference": {
+      "headId": 0,
+      "config": null,
+      "policyId": 37,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 0.75
+      },
+      "macroF1": 0.5669025617031326,
+      "macroRecall": 0.5517919539259591,
+      "manualAccuracy": 0.6837375714809416,
+      "pressureConfusion": 0.002181882730889271,
+      "context": "local2s",
+      "kind": "bias",
+      "outer": 1
+    },
+    "activeTrainingParameterProfiles": [
+      {
+        "axis": "localL2",
+        "value": 0.0003,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 5,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 37,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5669025617031326,
+          "macroRecall": 0.5517919539259591,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "localL2",
+        "value": 0.003,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 25,
+          "config": {
+            "localL2": 0.003,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 37,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5669025617031326,
+          "macroRecall": 0.5517919539259591,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "localL2",
+        "value": 0.03,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 45,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 37,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5669025617031326,
+          "macroRecall": 0.5517919539259591,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "strongWeight",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 36,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.5593518743405856,
+          "macroRecall": 0.5510916738139142,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.002181882730889294,
+          "context": "native",
+          "kind": "time",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.02711864406779661
+      },
+      {
+        "axis": "strongWeight",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 5,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 37,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5669025617031326,
+          "macroRecall": 0.5517919539259591,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "strongWeight",
+        "value": 4.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 53,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 4.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 36,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.6
+          },
+          "macroF1": 0.5615167603074802,
+          "macroRecall": 0.5506715057466874,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.020338983050847456
+      },
+      {
+        "axis": "errorBoost",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 5,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 37,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5669025617031326,
+          "macroRecall": 0.5517919539259591,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "errorBoost",
+        "value": 3.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 49,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 37,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5669025617031326,
+          "macroRecall": 0.5517919539259591,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "effortPower",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 5,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 37,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5669025617031326,
+          "macroRecall": 0.5517919539259591,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "effortPower",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 47,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 1.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 37,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5669025617031326,
+          "macroRecall": 0.5517919539259591,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "primaryPower",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 5,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 37,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5669025617031326,
+          "macroRecall": 0.5517919539259591,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "primaryPower",
+        "value": 4.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 58,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 4.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 4.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5761360154784714,
+          "macroRecall": 0.5518643966961706,
+          "manualAccuracy": 0.6837375714809416,
+          "pressureConfusion": 0.005452965875822302,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 1
+        },
+        "changedWholeTagSetMass": 0.03728813559322034
+      }
+    ]
+  },
+  {
+    "outer": 2,
+    "reference": {
+      "headId": 0,
+      "config": null,
+      "policyId": 42,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 0.75
+      },
+      "macroF1": 0.5268172133089875,
+      "macroRecall": 0.5156732401297619,
+      "manualAccuracy": 0.7048165370869045,
+      "pressureConfusion": 0.002181882730889271,
+      "context": "local2s",
+      "kind": "bias",
+      "outer": 2
+    },
+    "activeTrainingParameterProfiles": [
+      {
+        "axis": "localL2",
+        "value": 0.0003,
+        "eligibleActiveModel": false
+      },
+      {
+        "axis": "localL2",
+        "value": 0.003,
+        "eligibleActiveModel": false
+      },
+      {
+        "axis": "localL2",
+        "value": 0.03,
+        "eligibleActiveModel": false
+      },
+      {
+        "axis": "strongWeight",
+        "value": 0.0,
+        "eligibleActiveModel": false
+      },
+      {
+        "axis": "strongWeight",
+        "value": 1.0,
+        "eligibleActiveModel": false
+      },
+      {
+        "axis": "strongWeight",
+        "value": 4.0,
+        "eligibleActiveModel": false
+      },
+      {
+        "axis": "errorBoost",
+        "value": 0.0,
+        "eligibleActiveModel": false
+      },
+      {
+        "axis": "errorBoost",
+        "value": 3.0,
+        "eligibleActiveModel": false
+      },
+      {
+        "axis": "effortPower",
+        "value": 0.0,
+        "eligibleActiveModel": false
+      },
+      {
+        "axis": "effortPower",
+        "value": 1.0,
+        "eligibleActiveModel": false
+      },
+      {
+        "axis": "primaryPower",
+        "value": 1.0,
+        "eligibleActiveModel": false
+      },
+      {
+        "axis": "primaryPower",
+        "value": 4.0,
+        "eligibleActiveModel": false
+      }
+    ]
+  },
+  {
+    "outer": 3,
+    "reference": {
+      "headId": 49,
+      "config": {
+        "localL2": 0.03,
+        "strongWeight": 1.0,
+        "errorBoost": 3.0,
+        "effortPower": 0.0,
+        "primaryPower": 1.0,
+        "weakBalance": true,
+        "conceptWeight": 0.0
+      },
+      "policyId": 44,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.07,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.49835788809221004,
+      "macroRecall": 0.47464709237016806,
+      "manualAccuracy": 0.707048849063985,
+      "pressureConfusion": 0.0007522934905221441,
+      "context": "local2s",
+      "kind": "bias",
+      "outer": 3
+    },
+    "activeTrainingParameterProfiles": [
+      {
+        "axis": "localL2",
+        "value": 0.0003,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 1,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4979903505365694,
+          "macroRecall": 0.47525674799712464,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0007522934905221441,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.02142857142857143
+      },
+      {
+        "axis": "localL2",
+        "value": 0.003,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 21,
+          "config": {
+            "localL2": 0.003,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4979903505365694,
+          "macroRecall": 0.47525674799712464,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0007522934905221441,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.02142857142857143
+      },
+      {
+        "axis": "localL2",
+        "value": 0.03,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 49,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.49835788809221004,
+          "macroRecall": 0.47464709237016806,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0007522934905221441,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "strongWeight",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 1,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4979903505365694,
+          "macroRecall": 0.47525674799712464,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0007522934905221441,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.02142857142857143
+      },
+      {
+        "axis": "strongWeight",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 49,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.49835788809221004,
+          "macroRecall": 0.47464709237016806,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0007522934905221441,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "strongWeight",
+        "value": 4.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 55,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 4.0,
+            "errorBoost": 0.0,
+            "effortPower": 1.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4990867566121473,
+          "macroRecall": 0.4771542812039558,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0007522934905221601,
+          "context": "native",
+          "kind": "time",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.017857142857142856
+      },
+      {
+        "axis": "errorBoost",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 1,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.4979903505365694,
+          "macroRecall": 0.47525674799712464,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0007522934905221441,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.02142857142857143
+      },
+      {
+        "axis": "errorBoost",
+        "value": 3.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 49,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.49835788809221004,
+          "macroRecall": 0.47464709237016806,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0007522934905221441,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "effortPower",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 49,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.49835788809221004,
+          "macroRecall": 0.47464709237016806,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0007522934905221441,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "effortPower",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 51,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 1.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.49835788809221004,
+          "macroRecall": 0.47464709237016806,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0007522934905221441,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "primaryPower",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 49,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.49835788809221004,
+          "macroRecall": 0.47464709237016806,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0007522934905221441,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "primaryPower",
+        "value": 4.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 42,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 4.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.48320921415737694,
+          "macroRecall": 0.4762204662976763,
+          "manualAccuracy": 0.707048849063985,
+          "pressureConfusion": 0.0034781961112996702,
+          "context": "local2s",
+          "kind": "time",
+          "outer": 3
+        },
+        "changedWholeTagSetMass": 0.09285714285714286
+      }
+    ]
+  },
+  {
+    "outer": 4,
+    "reference": {
+      "headId": 0,
+      "config": null,
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.5318857111521327,
+      "macroRecall": 0.5098512939774459,
+      "manualAccuracy": 0.7128090509690085,
+      "pressureConfusion": 0.002181882730889271,
+      "context": "local2s",
+      "kind": "bias",
+      "outer": 4
+    },
+    "activeTrainingParameterProfiles": [
+      {
+        "axis": "localL2",
+        "value": 0.0003,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 5,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5301006253573031,
+          "macroRecall": 0.509276024581019,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.005452965875822302,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.07194244604316546
+      },
+      {
+        "axis": "localL2",
+        "value": 0.003,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 29,
+          "config": {
+            "localL2": 0.003,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5303192958155764,
+          "macroRecall": 0.5091655089107311,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.005452965875822302,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.07194244604316546
+      },
+      {
+        "axis": "localL2",
+        "value": 0.03,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 0,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.4
+          },
+          "macroF1": 0.5120941123998094,
+          "macroRecall": 0.5072234271889828,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.002181882730889294,
+          "context": "native",
+          "kind": "time",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.13309352517985612
+      },
+      {
+        "axis": "strongWeight",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 0,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.4
+          },
+          "macroF1": 0.5120941123998094,
+          "macroRecall": 0.5072234271889828,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.002181882730889294,
+          "context": "native",
+          "kind": "time",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.13309352517985612
+      },
+      {
+        "axis": "strongWeight",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 45,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5266545675917679,
+          "macroRecall": 0.5079050047090504,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.003817424303355787,
+          "context": "local2s",
+          "kind": "time",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.0539568345323741
+      },
+      {
+        "axis": "strongWeight",
+        "value": 4.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 55,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 4.0,
+            "errorBoost": 0.0,
+            "effortPower": 1.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5277232434160183,
+          "macroRecall": 0.5072679757038999,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.005452965875822302,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.0683453237410072
+      },
+      {
+        "axis": "errorBoost",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 0,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.4
+          },
+          "macroF1": 0.5120941123998094,
+          "macroRecall": 0.5072234271889828,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.002181882730889294,
+          "context": "native",
+          "kind": "time",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.13309352517985612
+      },
+      {
+        "axis": "errorBoost",
+        "value": 3.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 49,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 44,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5259823959099518,
+          "macroRecall": 0.5070646685745966,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.003817424303355787,
+          "context": "local2s",
+          "kind": "time",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.06115107913669065
+      },
+      {
+        "axis": "effortPower",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 0,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.4
+          },
+          "macroF1": 0.5120941123998094,
+          "macroRecall": 0.5072234271889828,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.002181882730889294,
+          "context": "native",
+          "kind": "time",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.13309352517985612
+      },
+      {
+        "axis": "effortPower",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 43,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 1.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 0,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.4
+          },
+          "macroF1": 0.5120941123998094,
+          "macroRecall": 0.5072234271889828,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.002181882730889294,
+          "context": "native",
+          "kind": "time",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.13309352517985612
+      },
+      {
+        "axis": "primaryPower",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 0,
+          "policy": {
+            "dominantShare": 0.45,
+            "mixShare": 0.05,
+            "secondRel": 0.4
+          },
+          "macroF1": 0.5120941123998094,
+          "macroRecall": 0.5072234271889828,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.002181882730889294,
+          "context": "native",
+          "kind": "time",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.13309352517985612
+      },
+      {
+        "axis": "primaryPower",
+        "value": 4.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 54,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 4.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 4.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 42,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.07,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5146609894836757,
+          "macroRecall": 0.508232381317262,
+          "manualAccuracy": 0.7128090509690085,
+          "pressureConfusion": 0.005452965875822313,
+          "context": "native",
+          "kind": "time",
+          "outer": 4
+        },
+        "changedWholeTagSetMass": 0.1079136690647482
+      }
+    ]
+  },
+  {
+    "outer": 5,
+    "reference": {
+      "headId": 9,
+      "config": {
+        "localL2": 0.0003,
+        "strongWeight": 1.0,
+        "errorBoost": 3.0,
+        "effortPower": 0.0,
+        "primaryPower": 1.0,
+        "weakBalance": true,
+        "conceptWeight": 0.0
+      },
+      "policyId": 39,
+      "policy": {
+        "dominantShare": 0.52,
+        "mixShare": 0.05,
+        "secondRel": 1.0
+      },
+      "macroF1": 0.546044334144782,
+      "macroRecall": 0.517598671595808,
+      "manualAccuracy": 0.6654949302154887,
+      "pressureConfusion": 0.002181882730889271,
+      "context": "local2s",
+      "kind": "bias",
+      "outer": 5
+    },
+    "activeTrainingParameterProfiles": [
+      {
+        "axis": "localL2",
+        "value": 0.0003,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 9,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.546044334144782,
+          "macroRecall": 0.517598671595808,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "localL2",
+        "value": 0.003,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 29,
+          "config": {
+            "localL2": 0.003,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.546044334144782,
+          "macroRecall": 0.517598671595808,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "localL2",
+        "value": 0.03,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 53,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 4.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 72,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5408394628197433,
+          "macroRecall": 0.5186197143481477,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.056666666666666664
+      },
+      {
+        "axis": "strongWeight",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 41,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 0.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 79,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5387069749002145,
+          "macroRecall": 0.5190180664766036,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.07333333333333333
+      },
+      {
+        "axis": "strongWeight",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 9,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.546044334144782,
+          "macroRecall": 0.517598671595808,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "strongWeight",
+        "value": 4.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 53,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 4.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 72,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5408394628197433,
+          "macroRecall": 0.5186197143481477,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.056666666666666664
+      },
+      {
+        "axis": "errorBoost",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 53,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 4.0,
+            "errorBoost": 0.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 72,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5408394628197433,
+          "macroRecall": 0.5186197143481477,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.056666666666666664
+      },
+      {
+        "axis": "errorBoost",
+        "value": 3.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 9,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.546044334144782,
+          "macroRecall": 0.517598671595808,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "effortPower",
+        "value": 0.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 9,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.546044334144782,
+          "macroRecall": 0.517598671595808,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "effortPower",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 55,
+          "config": {
+            "localL2": 0.03,
+            "strongWeight": 4.0,
+            "errorBoost": 0.0,
+            "effortPower": 1.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 72,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.05,
+            "secondRel": 0.75
+          },
+          "macroF1": 0.5408394628197433,
+          "macroRecall": 0.5186197143481477,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.056666666666666664
+      },
+      {
+        "axis": "primaryPower",
+        "value": 1.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 9,
+          "config": {
+            "localL2": 0.0003,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 1.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 39,
+          "policy": {
+            "dominantShare": 0.52,
+            "mixShare": 0.05,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.546044334144782,
+          "macroRecall": 0.517598671595808,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889271,
+          "context": "local2s",
+          "kind": "bias",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.0
+      },
+      {
+        "axis": "primaryPower",
+        "value": 4.0,
+        "eligibleActiveModel": true,
+        "choice": {
+          "headId": 30,
+          "config": {
+            "localL2": 0.003,
+            "strongWeight": 1.0,
+            "errorBoost": 3.0,
+            "effortPower": 0.0,
+            "primaryPower": 4.0,
+            "weakBalance": true,
+            "conceptWeight": 0.0
+          },
+          "policyId": 79,
+          "policy": {
+            "dominantShare": 0.55,
+            "mixShare": 0.07,
+            "secondRel": 1.0
+          },
+          "macroF1": 0.5359800223806902,
+          "macroRecall": 0.5172164079275403,
+          "manualAccuracy": 0.6654949302154887,
+          "pressureConfusion": 0.002181882730889294,
+          "context": "native",
+          "kind": "time",
+          "outer": 5
+        },
+        "changedWholeTagSetMass": 0.07
+      }
+    ]
+  }
+]
