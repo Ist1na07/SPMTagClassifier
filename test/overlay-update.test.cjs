@@ -13,6 +13,10 @@ test('upstream update is dry-run first, backed up, idempotent and preserves diff
  assert.equal(fs.readFileSync(path.join(directory,'index.html'),'utf8'),before);assert.equal(p.changed.length,3);
  const receipt=patch.apply(p);assert.equal(fs.readFileSync(path.join(receipt.backup,'index.html'),'utf8'),before);
  assert.equal(patch.plan(directory).changed.length,0);
+ // The misnumbered v1.3.0 integration upgrades in place without double-patching.
+ const oldMarker='SPMTagClassifier perception integration v1.3.0',marker='SPMTagClassifier perception integration schema 1';
+ assert.equal(patch.patchHtml(p.updated['index.html'].replace(marker,oldMarker)),p.updated['index.html']);
+ assert.equal(patch.patchRating(p.updated['spm_algorithm.js'].replace(marker,oldMarker)),p.updated['spm_algorithm.js']);
  assert.throws(()=>patch.patchRating(p.originals['spm_algorithm.js'].replace('w_jm:934.2448253030639','w_jm:1')),/parameters/);
  const text='[General]\nMode:3\n[Difficulty]\nCircleSize:7\n[TimingPoints]\n0,500,4,2,1,100,1,0\n[HitObjects]\n'+Array.from({length:100},(_,i)=>`${(i%7+.5)*512/7},192,${1001+i*83},1,0,0:0:0:0:`).join('\n');
  const old={},updated={};vm.runInNewContext(p.originals['spm_algorithm.js'],old);vm.runInNewContext(p.updated['spm_algorithm.js'],updated);

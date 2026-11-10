@@ -35,7 +35,14 @@ jobs:
         run: |
           package=$(npm pack --ignore-scripts --silent)
           research="spm-tag-classifier-research-${GITHUB_REF_NAME}.zip"
-          git archive --format=zip --output="$research" HEAD research/rework research/overlay-quality research/frontier research/perception docs/releases
+          git archive --format=zip --output="$research" HEAD research/perception docs README.md CHANGELOG.md UPSTREAM.md
           gh release create "$GITHUB_REF_NAME" "$package" dist/tag-engine.js "$research" \
             --verify-tag --title "SPMTagClassifier $GITHUB_REF_NAME" \
-            --notes-file "docs/releases/${GITHUB_REF_NAME}.md"
+            --notes-file "docs/releases/${GITHUB_REF_NAME}.md" --latest
+      - name: Correct the misnumbered snapshot (same v1.2 iteration)
+        if: github.ref_name == 'v1.2.3'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release edit v1.3.0 --title '误编号归档：本轮归入 v1.2 系列，请使用 v1.2.3' \
+            --notes-file docs/releases/v1.3.0.md --latest=false

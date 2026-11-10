@@ -42,6 +42,13 @@ async function main(){
    if(fixture==='hybrid')assert(now.tags.tags.includes('hybrid'));
    if(fixture==='B02')assert((await evaluate("document.getElementById('container').innerText")).includes('主要键型未定'));
   }
+  await evaluate("document.getElementById('qa-fixture').value='hybrid';document.getElementById('qa-load').click()");
+  for(let i=0;i<100;i++){if(await evaluate("!document.getElementById('qa-status').textContent.includes('Calculating')"))break;await sleep(100);}
+  await evaluate("perceptionQA.model('SPM Rating v1.2.0-Detailed')");
+  const restored=await evaluate('perceptionQA.state()');
+  assert.equal(restored.profile.recipe.alpha,2);assert.equal(restored.profile.recipe.beta,1);
+  await capture('overlay-hybrid-detailed');
+  await evaluate("perceptionQA.model('SPM Rating v1.2.0-Compact')");
   // Recompute a real source with noninteger native clock (DT); display smoothing is downstream.
   await evaluate("document.getElementById('qa-fixture').value='real0088';document.getElementById('qa-rate').value='1.5';document.getElementById('qa-rate').dispatchEvent(new Event('change'))");
   for(let i=0;i<100;i++){if(await evaluate("!document.getElementById('qa-status').textContent.includes('Calculating')"))break;await sleep(100);}

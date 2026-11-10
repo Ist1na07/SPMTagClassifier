@@ -1,4 +1,4 @@
-/* SPMTagClassifier v1.3.0 | MIT | Ist1na */
+/* SPMTagClassifier v1.2.3 | MIT | Ist1na */
 var TagClassifier=(()=>{
 const modules=[function(module,exports,load){
 'use strict';
@@ -2985,7 +2985,7 @@ return load(0);})();
 function(module,exports,load){
 module.exports={
   "name": "spm-tag-classifier",
-  "version": "1.3.0",
+  "version": "1.2.3",
   "description": "Standalone osu!mania pattern classification extracted from SPM Map Analyser",
   "main": "src/index.cjs",
   "bin": {
@@ -3014,6 +3014,7 @@ module.exports={
     "bin/",
     "integration/",
     "docs/perception.md",
+    "docs/ITERATION_1_2.md",
     "README.md",
     "LICENSE",
     "CHANGELOG.md",
@@ -13176,8 +13177,10 @@ module.exports={
         "study": "linear-support-r3",
         "model": "detail",
         "arm": "actions",
-        "selection": "pooled INNER; first-degree affinity restriction; retrospective source-song groups",
-        "baseline": "v1.2.2"
+        "parameterSelection": "pooled INNER; retrospective source-song groups",
+        "familySelection": "first-degree affinity restriction",
+        "researchBaseline": "v1.1.0",
+        "frozenIntermediatePrior": "v1.2.2"
       }
     },
     "detail": {
@@ -13202,28 +13205,30 @@ module.exports={
       "components": false,
       "supportPower": 1,
       "recipe": {
-        "alpha": 4,
-        "beta": 1.5,
+        "alpha": 2,
+        "beta": 1,
         "width": 1000,
         "hold": 1
       },
       "family": {
         "enabled": true,
-        "minRc": 0.07,
-        "minLn": 0.05
+        "minRc": 0.1,
+        "minLn": 0.1
       },
       "policy": {
         "keepFloor": 0.25,
-        "addFloor": 1.01,
-        "mixOverride": 0.5
+        "addFloor": 0.5,
+        "mixOverride": 0.65
       },
       "modelIdentity": "5b0ddc61be53f5107f3b4dfa26a8397aa515e316c16b244878d1fc7039d0ba8f",
       "provenance": {
-        "study": "linear-support-r3",
+        "study": "anchored-r1",
         "model": "detail",
         "arm": "combined",
-        "selection": "pooled INNER; first-degree affinity restriction; retrospective source-song groups",
-        "baseline": "v1.2.2"
+        "parameterSelection": "pooled INNER; retrospective source-song groups",
+        "familySelection": "R1 restored after retrospective R1/R3 review",
+        "researchBaseline": "v1.1.0",
+        "frozenIntermediatePrior": "v1.2.2"
       }
     },
     "compact": {
@@ -13268,8 +13273,10 @@ module.exports={
         "study": "linear-support-r3",
         "model": "compact",
         "arm": "combined",
-        "selection": "pooled INNER; first-degree affinity restriction; retrospective source-song groups",
-        "baseline": "v1.2.2"
+        "parameterSelection": "pooled INNER; retrospective source-song groups",
+        "familySelection": "first-degree affinity restriction",
+        "researchBaseline": "v1.1.0",
+        "frozenIntermediatePrior": "v1.2.2"
       }
     }
   }

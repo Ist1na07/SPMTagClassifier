@@ -2,7 +2,10 @@
 // Text-only, version-checked patches. Never execute the target's source.
 const fs=require('node:fs'),path=require('node:path');
 const {EXPECTED_RATING,COMPACT_RATING}=require('../src/perception.cjs');
-const MARK='SPMTagClassifier perception integration v1.3.0';
+const {version}=require('../package.json');
+const MARK='SPMTagClassifier perception integration schema 1';
+const OLD_MARK='SPMTagClassifier perception integration v1.3.0';
+function normalizeMarker(s){return s.replace(OLD_MARK,MARK);}
 function once(s,a,b){const i=s.indexOf(a);if(i<0||s.indexOf(a,i+a.length)>=0)throw Error('Unsupported overlay layout: '+a.slice(0,90));return s.slice(0,i)+b+s.slice(i+a.length);}
 function numericObject(body){
  const result={};
@@ -26,7 +29,7 @@ function verifyParams(source){
  }
 }
 function patchRating(text){
- let s=text.replace(/\r\n/g,'\n');verifyParams(s);
+ let s=normalizeMarker(text.replace(/\r\n/g,'\n'));verifyParams(s);
  if(s.includes(MARK)){
   if(!s.includes('query: Array.from(res.b.t), demand: Array.from(res.D)')||!s.includes('options.includeTagEvidence'))throw Error('Partial rating integration: restore the three backed-up files first');
   return s;
@@ -42,7 +45,7 @@ function patchRating(text){
  return s;
 }
 function patchHtml(text){
- let s=text.replace(/\r\n/g,'\n');
+ let s=normalizeMarker(text.replace(/\r\n/g,'\n'));
  if(s.includes(MARK)){
   for(const token of ['function renderOverallTagsClassic','includeTagEvidence: cachedKeyCount === 7','ratingEvidence: result.tagEvidence','主要键型未定'])if(!s.includes(token))throw Error('Partial overlay integration: restore the three backed-up files first');
   return s;
@@ -91,7 +94,7 @@ function apply(p){
  const backup=path.join(p.target,'.spm-tag-backups',new Date().toISOString().replace(/[:.]/g,'-'));
  fs.mkdirSync(backup,{recursive:true});
  for(const f of Object.keys(p.originals))fs.writeFileSync(path.join(backup,f),p.originals[f]);
- fs.writeFileSync(path.join(backup,'manifest.json'),JSON.stringify({target:p.target,version:'1.3.0',files:Object.keys(p.originals)},null,2)+'\n');
+ fs.writeFileSync(path.join(backup,'manifest.json'),JSON.stringify({target:p.target,version,files:Object.keys(p.originals)},null,2)+'\n');
  try{for(const f of p.changed)fs.writeFileSync(path.join(p.target,f),p.updated[f]);}
  catch(e){for(const f of p.changed)fs.writeFileSync(path.join(p.target,f),p.originals[f]);throw e;}
  return {target:p.target,changed:p.changed,backup};

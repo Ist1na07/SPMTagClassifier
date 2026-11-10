@@ -1,5 +1,6 @@
 # compact：扩大活跃边界后的保守百分数聚合
 
+> 同一 v1.2 迭代的过程报告。`shipped_v122` 是中间对照，研究总基线为 v1.1.0；最终选型与统一比较见 [复核结论](../selection-review-r4/REPORT.md)。
 同一原349条／源歌曲组。每外折全新规则参数联合选择；局部专家未改变。
 
 | 方案 | macro P | macro R | macro F1 | micro F1 | sample F1 | exact |

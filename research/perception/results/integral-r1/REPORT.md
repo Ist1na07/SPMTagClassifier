@@ -1,5 +1,6 @@
 # 连续感知负担聚合：冻结局部的配对结果
 
+> 同一 v1.2 迭代的过程报告。`shipped_v122` 是中间对照，研究总基线为 v1.1.0；最终选型与统一比较见 [复核结论](../selection-review-r4/REPORT.md)。
 同一349标注、源分组嵌套选择；回顾性结果。百分数不是正确概率。
 
 | 方案 | macro P | macro R | macro F1 | micro F1 | sample F1 | exact |

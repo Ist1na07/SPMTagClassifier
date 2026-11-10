@@ -1,5 +1,6 @@
 # 保留成熟判断，用感知百分数修正
 
+> 同一 v1.2 迭代的过程报告。`shipped_v122` 是中间对照，研究总基线为 v1.1.0；最终选型与统一比较见 [复核结论](../selection-review-r4/REPORT.md)。
 原349条、原歌曲／物理源分组；新全局权重和门控完整联合选择。
 
 | 方案 | macro P | macro R | macro F1 | micro F1 | sample F1 | exact |

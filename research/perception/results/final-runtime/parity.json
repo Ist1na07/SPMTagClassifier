@@ -1,14 +1,162 @@
 {
+  "version": "1.2.3",
+  "researchBaseline": "v1.1.0",
+  "modelProfiles": {
+    "actions": {
+      "schemaVersion": 1,
+      "kind": "anchored",
+      "classes": [
+        "anchor",
+        "chordjack",
+        "coordination",
+        "dense chordstream",
+        "density",
+        "fast chordstream",
+        "inverse",
+        "ln wildcard",
+        "minijack",
+        "release",
+        "speed",
+        "tech",
+        "technical",
+        "vibro"
+      ],
+      "components": false,
+      "supportPower": 1,
+      "recipe": {
+        "alpha": 0,
+        "beta": 2,
+        "width": 1000,
+        "hold": 1
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.05
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 1.01
+      },
+      "modelIdentity": null,
+      "provenance": {
+        "study": "linear-support-r3",
+        "model": "detail",
+        "arm": "actions",
+        "parameterSelection": "pooled INNER; retrospective source-song groups",
+        "familySelection": "first-degree affinity restriction",
+        "researchBaseline": "v1.1.0",
+        "frozenIntermediatePrior": "v1.2.2"
+      }
+    },
+    "detail": {
+      "schemaVersion": 1,
+      "kind": "anchored",
+      "classes": [
+        "anchor",
+        "chordjack",
+        "coordination",
+        "dense chordstream",
+        "density",
+        "fast chordstream",
+        "inverse",
+        "ln wildcard",
+        "minijack",
+        "release",
+        "speed",
+        "tech",
+        "technical",
+        "vibro"
+      ],
+      "components": false,
+      "supportPower": 1,
+      "recipe": {
+        "alpha": 2,
+        "beta": 1,
+        "width": 1000,
+        "hold": 1
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "modelIdentity": "5b0ddc61be53f5107f3b4dfa26a8397aa515e316c16b244878d1fc7039d0ba8f",
+      "provenance": {
+        "study": "anchored-r1",
+        "model": "detail",
+        "arm": "combined",
+        "parameterSelection": "pooled INNER; retrospective source-song groups",
+        "familySelection": "R1 restored after retrospective R1/R3 review",
+        "researchBaseline": "v1.1.0",
+        "frozenIntermediatePrior": "v1.2.2"
+      }
+    },
+    "compact": {
+      "schemaVersion": 1,
+      "kind": "anchored",
+      "classes": [
+        "anchor",
+        "chordjack",
+        "coordination",
+        "dense chordstream",
+        "density",
+        "fast chordstream",
+        "inverse",
+        "ln wildcard",
+        "minijack",
+        "release",
+        "speed",
+        "tech",
+        "technical",
+        "vibro"
+      ],
+      "components": false,
+      "supportPower": 1,
+      "recipe": {
+        "alpha": 4,
+        "beta": 1.5,
+        "width": 1000,
+        "hold": 1
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.07,
+        "minLn": 0.05
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 1.01,
+        "mixOverride": 1.01
+      },
+      "modelIdentity": "55216a3abcf6653c4c78b2082c730d64a0ed4bc476d3e477c4789a39f309fb4e",
+      "provenance": {
+        "study": "linear-support-r3",
+        "model": "compact",
+        "arm": "combined",
+        "parameterSelection": "pooled INNER; retrospective source-song groups",
+        "familySelection": "first-degree affinity restriction",
+        "researchBaseline": "v1.1.0",
+        "frozenIntermediatePrior": "v1.2.2"
+      }
+    }
+  },
   "cases": 411,
   "profiles": 3,
   "comparedPercentages": 17262,
   "maxPercentagePointError": 2.4300561562995426e-12,
   "rawFrames": 8483,
-  "localTimeline": "unchanged vs v1.2.2 classic",
-  "seconds": 118.33752899999999,
+  "localTimeline": "unchanged vs v1.2.2 intermediate classic",
+  "seconds": 114.57960819999998,
   "analysisMs": {
-    "median": 38.683500000001004,
-    "p95": 157.75339999999414,
-    "max": 312.60699999999997
+    "median": 37.52049999999872,
+    "p95": 150.70400000001246,
+    "max": 295.30159999999887
   }
 }

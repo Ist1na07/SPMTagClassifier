@@ -26,7 +26,7 @@ async function main(){
   cases++;if(cases%100===0)console.log('final runtime parity',cases);
  }
  timings.sort((a,b)=>a-b);
- const receipt={cases,profiles:3,comparedPercentages:values,maxPercentagePointError:maxError,rawFrames,localTimeline:'unchanged vs v1.2.2 classic',seconds:(performance.now()-elapsed)/1000,analysisMs:{median:timings[Math.floor(timings.length*.5)],p95:timings[Math.floor(timings.length*.95)],max:timings.at(-1)}};
+ const receipt={version:require('../../package.json').version,researchBaseline:'v1.1.0',modelProfiles:require('../../src/models/perception7k.json').profiles,cases,profiles:3,comparedPercentages:values,maxPercentagePointError:maxError,rawFrames,localTimeline:'unchanged vs v1.2.2 intermediate classic',seconds:(performance.now()-elapsed)/1000,analysisMs:{median:timings[Math.floor(timings.length*.5)],p95:timings[Math.floor(timings.length*.95)],max:timings.at(-1)}};
  fs.writeFileSync('research/perception/results/final-runtime/parity.json',JSON.stringify(receipt,null,2)+'\n');console.log(receipt);
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

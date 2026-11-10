@@ -11,10 +11,16 @@ for(const [name,model,arm,identity]of [
  ['compact','compact','combined',COMPACT_RATING]]){
  const study='linear-support-r3',root='research/perception/results/'+study+'/'+model,selection=read(root+'/selection.json');
  if(selection.usesOuterTruth!==false)throw Error('INNER-only selection required');
- const c=selection.common[arm];
+ let c=selection.common[arm],recipe=weights[c.representation.weightId],selectedStudy=study;
+ if(name==='detail'){
+  const review=read('research/perception/results/selection-review-r4/selected-detail.json');
+  c=review.profile;recipe=review.recipe;selectedStudy='anchored-r1';
+ }
  profiles[name]={schemaVersion:1,kind:'anchored',classes,components:false,supportPower:c.representation.power,
-  recipe:weights[c.representation.weightId],family:c.family,policy:c.policy,modelIdentity:identity,
-  provenance:{study,model,arm,selection:'pooled INNER; first-degree affinity restriction; retrospective source-song groups',baseline:'v1.2.2'}};
+  recipe,family:c.family,policy:c.policy,modelIdentity:identity,
+  provenance:{study:selectedStudy,model,arm,parameterSelection:'pooled INNER; retrospective source-song groups',
+    familySelection:name==='detail'?'R1 restored after retrospective R1/R3 review':'first-degree affinity restriction',
+    researchBaseline:'v1.1.0',frozenIntermediatePrior:'v1.2.2'}};
 }
 fs.writeFileSync('src/models/perception7k.json',JSON.stringify({schemaVersion:1,profiles},null,2)+'\n');
 console.log('Exported action-only, Detailed and Compact perception profiles');

@@ -9,17 +9,17 @@
 
 **[回炉研究结论与证据](research/rework/CONCLUSIONS.md)** · [完整研究记录](research/rework/README.md) · [上游来源](UPSTREAM.md)
 
-已发布的 [v1.1.0](https://github.com/Ist1na07/SPMTagClassifier/releases/tag/v1.1.0) 是从插件 **tag v1.2.0** 提取的原版算法；v1.2.0 的分阶段调参完整性与部分归因结论已修正，历史 tag 不改写。本说明对应整谱聚合版 v1.3.0。
+已发布的 [v1.1.0](https://github.com/Ist1na07/SPMTagClassifier/releases/tag/v1.1.0) 是从插件 **tag v1.2.0** 提取的原版算法；v1.2.0 的分阶段调参完整性与部分归因结论已修正，历史 tag 不改写。**本轮唯一研究基线是 v1.1.0，全部升级均属于 v1.2 系列**。v1.2.1／v1.2.2 是同轮检查点；曾误发的 v1.3.0 归档，不代表新迭代。当前统一交付为 v1.2.3，见[版本与研究口径](docs/ITERATION_1_2.md)。
 
-### v1.3.0：整谱 tag 表达主要游玩负担
+### v1.2.3：整谱 tag 表达主要游玩负担
 
 整谱百分数改为连续时间的 `分支贴合度 × 难度负担 × 动作物量` 积分份额，参与 tag 门控；不是正确率，也不是简单时间占比。难度输入复用 SPMRating v1.2.0 Detailed／Compact 的原始逐行曲线，不再次评分。缺少评分输入时使用单独联调的动作版。
 
-原349条、原歌曲／重复物理源分组的回顾性对照中，17类 macro F1 从 **52.02%** 提高至动作版 **53.79%**、Detailed **54.43%**、Compact **53.67%**；整谱完全匹配率从 **58.07%** 至 **62.68%**。总体 P/R/micro/sample F1 同时提高，逐类并非全部提高。最终采用一阶原型支持，舍弃会压掉部分主类的平方支持；这属于消费验收后的明确约束，不是新盲测。
+原349条、原歌曲／重复物理源分组的回顾性对照中，以 v1.1.0 为基线，17类 macro F1 从 **51.98%** 提高至动作版 **53.79%**、Detailed **55.34%**、Compact **53.67%**。Detailed 的 P/R 为 **59.03%／53.99%**，整谱完全匹配率从 **57.78%** 至 **63.83%**；逐类并非全部提高。默认 Detailed 恢复较早的 R1 配置：扩大搜索域后的候选并未取得更好的外折结果，不能仅凭较高内层分数取代它。全部属于同批数据的回顾性分组评价。
 
 **[研究结论、消融与失败方案](research/perception/CONCLUSIONS.md)** · **[评分复用与插件更新](docs/perception.md)**。新研究不改变局部主类，不能据此宣称修复了 Tech→Dense CS。`aggregation:'classic'` 恢复 v1.2.2 整谱策略；raw legacy、modern、4K／6K 路径保持可用。
 
-### v1.2.2：先修正可确定的 overlay 错误
+### 同轮过程检查点 v1.2.2：修正可确定的 overlay 错误
 
 7K 默认及 `modern` 对近似均匀到源毫秒精度的打击行直接测量等效 BPM，避免旧网格把 300 BPM 显示成 200；原测值保存在 `segment.evidence.cadence.legacyEquivBpm`。Jack 保留多押行／同列重复的动作时钟，不把交错单键速度当 Jack 速度。不规则段保留原估计，`legacy` 路径不变。
 
@@ -32,7 +32,7 @@
 ## 运行一张谱面
 
 ```sh
-npm install https://github.com/Ist1na07/SPMTagClassifier/releases/download/v1.3.0/spm-tag-classifier-1.3.0.tgz
+npm install https://github.com/Ist1na07/SPMTagClassifier/releases/download/v1.2.3/spm-tag-classifier-1.2.3.tgz
 ```
 
 ```js
@@ -95,7 +95,7 @@ node path/to/package/bin/update-overlay.cjs 'E:/path/to/plugin' --apply
 
 所有时间、LN 尾时间和窗口长度均为 **speedRate 换算后的毫秒**。`equivBpm` 为对应动作间隔的十六分音符等效速度：Speed／Tech／CS等使用行节奏，Jack优先使用多押行间隔、否则使用同列重复。不能用交错单键的全行速度替代Jack动作速度；不稳定或不适用的段落可以不提供。7K 候选的 `sourceStart/sourceEnd` 保留模型实际评分区间，显示首尾覆盖修复不改变原聚合。
 
-## 当前证据支持什么
+## 当前证据支持什么（均属于同一 v1.2 迭代）
 
 - **4K**：歌曲分组嵌套评价的五类 macro-F1 为 **95.56%**；桶名不是逐窗口真值。
 - **共同粗层**：7K 可确定粗类整谱 macro-F1 为 **92.31%**；与 7K 细类指标不是同一口径。
