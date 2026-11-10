@@ -1,0 +1,859 @@
+{
+  "lossless": true,
+  "scope": "All large JSON evidence and complete anchored/threshold parameter metric tables; redundant per-representation and optimizer vectors remain local",
+  "files": [
+    {
+      "path": "anchored-compact-r2/analysis.json.gz",
+      "originalBytes": 2772992,
+      "archiveBytes": 60342
+    },
+    {
+      "path": "anchored-r1/analysis.json.gz",
+      "originalBytes": 2763987,
+      "archiveBytes": 57619
+    },
+    {
+      "path": "anchored-r2/analysis.json.gz",
+      "originalBytes": 2772970,
+      "archiveBytes": 60306
+    },
+    {
+      "path": "hierarchy-r1/protocol.json.gz",
+      "originalBytes": 691515,
+      "archiveBytes": 23516
+    },
+    {
+      "path": "hierarchy-r2/analysis.json.gz",
+      "originalBytes": 3736580,
+      "archiveBytes": 82623
+    },
+    {
+      "path": "hierarchy-r2/protocol.json.gz",
+      "originalBytes": 692938,
+      "archiveBytes": 23964
+    },
+    {
+      "path": "hierarchy-r2/semantic-outer-models.json.gz",
+      "originalBytes": 469840,
+      "archiveBytes": 55178
+    },
+    {
+      "path": "integral-r1/analysis.json.gz",
+      "originalBytes": 2381747,
+      "archiveBytes": 52145
+    },
+    {
+      "path": "integral-r1/protocol.json.gz",
+      "originalBytes": 449776,
+      "archiveBytes": 24347
+    },
+    {
+      "path": "joint-r1/protocol.json.gz",
+      "originalBytes": 285238,
+      "archiveBytes": 24899
+    },
+    {
+      "path": "threshold-r1/analysis.json.gz",
+      "originalBytes": 1987614,
+      "archiveBytes": 43741
+    },
+    {
+      "path": "threshold-r1/0/outer-predictions.json.gz",
+      "originalBytes": 516659,
+      "archiveBytes": 74417
+    },
+    {
+      "path": "threshold-r1/1/outer-predictions.json.gz",
+      "originalBytes": 451674,
+      "archiveBytes": 49675
+    },
+    {
+      "path": "threshold-r1/2/outer-predictions.json.gz",
+      "originalBytes": 459977,
+      "archiveBytes": 51605
+    },
+    {
+      "path": "threshold-r1/3/outer-predictions.json.gz",
+      "originalBytes": 586390,
+      "archiveBytes": 87446
+    },
+    {
+      "path": "threshold-r1/4/outer-predictions.json.gz",
+      "originalBytes": 588686,
+      "archiveBytes": 77202
+    },
+    {
+      "path": "threshold-r1/5/outer-predictions.json.gz",
+      "originalBytes": 403578,
+      "archiveBytes": 25789
+    },
+    {
+      "path": "linear-support-r3/compact/oof.json.gz",
+      "originalBytes": 345154,
+      "archiveBytes": 15069
+    },
+    {
+      "path": "linear-support-r3/detail/oof.json.gz",
+      "originalBytes": 345320,
+      "archiveBytes": 15104
+    },
+    {
+      "path": "joint-r1/0/inner-grid.json.gz",
+      "originalBytes": 3514204,
+      "archiveBytes": 146114
+    },
+    {
+      "path": "joint-r1/0/outer-models.json.gz",
+      "originalBytes": 467844,
+      "archiveBytes": 81138
+    },
+    {
+      "path": "joint-r1/0/outer-predictions.json.gz",
+      "originalBytes": 897342,
+      "archiveBytes": 136191
+    },
+    {
+      "path": "joint-r1/2/inner-grid.json.gz",
+      "originalBytes": 3535733,
+      "archiveBytes": 144127
+    },
+    {
+      "path": "joint-r1/2/outer-models.json.gz",
+      "originalBytes": 281315,
+      "archiveBytes": 51645
+    },
+    {
+      "path": "joint-r1/2/outer-predictions.json.gz",
+      "originalBytes": 827313,
+      "archiveBytes": 133428
+    },
+    {
+      "path": "joint-r1/3/inner-grid.json.gz",
+      "originalBytes": 3525624,
+      "archiveBytes": 148046
+    },
+    {
+      "path": "joint-r1/3/outer-models.json.gz",
+      "originalBytes": 379766,
+      "archiveBytes": 67990
+    },
+    {
+      "path": "joint-r1/3/outer-predictions.json.gz",
+      "originalBytes": 1017227,
+      "archiveBytes": 160669
+    },
+    {
+      "path": "joint-r1/5/inner-grid.json.gz",
+      "originalBytes": 3534467,
+      "archiveBytes": 149794
+    },
+    {
+      "path": "joint-r1/5/outer-models.json.gz",
+      "originalBytes": 429241,
+      "archiveBytes": 76492
+    },
+    {
+      "path": "joint-r1/5/outer-predictions.json.gz",
+      "originalBytes": 721983,
+      "archiveBytes": 66685
+    },
+    {
+      "path": "integral-r1/0/fit-receipts.json.gz",
+      "originalBytes": 2426486,
+      "archiveBytes": 665847
+    },
+    {
+      "path": "integral-r1/0/inner-grid.json.gz",
+      "originalBytes": 4975890,
+      "archiveBytes": 354825
+    },
+    {
+      "path": "integral-r1/0/outer-predictions.json.gz",
+      "originalBytes": 941929,
+      "archiveBytes": 152008
+    },
+    {
+      "path": "integral-r1/1/fit-receipts.json.gz",
+      "originalBytes": 2429104,
+      "archiveBytes": 665771
+    },
+    {
+      "path": "integral-r1/1/inner-grid.json.gz",
+      "originalBytes": 4997848,
+      "archiveBytes": 359319
+    },
+    {
+      "path": "integral-r1/1/outer-predictions.json.gz",
+      "originalBytes": 868113,
+      "archiveBytes": 148713
+    },
+    {
+      "path": "integral-r1/2/fit-receipts.json.gz",
+      "originalBytes": 2432200,
+      "archiveBytes": 653847
+    },
+    {
+      "path": "integral-r1/2/inner-grid.json.gz",
+      "originalBytes": 5001295,
+      "archiveBytes": 365682
+    },
+    {
+      "path": "integral-r1/2/outer-predictions.json.gz",
+      "originalBytes": 874097,
+      "archiveBytes": 146916
+    },
+    {
+      "path": "integral-r1/3/fit-receipts.json.gz",
+      "originalBytes": 2425155,
+      "archiveBytes": 665422
+    },
+    {
+      "path": "integral-r1/3/inner-grid.json.gz",
+      "originalBytes": 4962781,
+      "archiveBytes": 351009
+    },
+    {
+      "path": "integral-r1/3/outer-predictions.json.gz",
+      "originalBytes": 1102048,
+      "archiveBytes": 196063
+    },
+    {
+      "path": "integral-r1/4/fit-receipts.json.gz",
+      "originalBytes": 2426863,
+      "archiveBytes": 664398
+    },
+    {
+      "path": "integral-r1/4/inner-grid.json.gz",
+      "originalBytes": 4940920,
+      "archiveBytes": 355192
+    },
+    {
+      "path": "integral-r1/4/outer-predictions.json.gz",
+      "originalBytes": 1111438,
+      "archiveBytes": 184894
+    },
+    {
+      "path": "integral-r1/5/fit-receipts.json.gz",
+      "originalBytes": 2428352,
+      "archiveBytes": 665240
+    },
+    {
+      "path": "integral-r1/5/inner-grid.json.gz",
+      "originalBytes": 5020518,
+      "archiveBytes": 355872
+    },
+    {
+      "path": "integral-r1/5/outer-predictions.json.gz",
+      "originalBytes": 762634,
+      "archiveBytes": 128437
+    },
+    {
+      "path": "hierarchy-r2/0/fit-receipts.json.gz",
+      "originalBytes": 5197078,
+      "archiveBytes": 388872
+    },
+    {
+      "path": "hierarchy-r2/0/inner-grid.json.gz",
+      "originalBytes": 20214571,
+      "archiveBytes": 1164113
+    },
+    {
+      "path": "hierarchy-r2/0/outer-predictions.json.gz",
+      "originalBytes": 1646709,
+      "archiveBytes": 297658
+    },
+    {
+      "path": "hierarchy-r2/0/queries.json.gz",
+      "originalBytes": 313976,
+      "archiveBytes": 20414
+    },
+    {
+      "path": "hierarchy-r2/1/fit-receipts.json.gz",
+      "originalBytes": 5195292,
+      "archiveBytes": 386518
+    },
+    {
+      "path": "hierarchy-r2/1/inner-grid.json.gz",
+      "originalBytes": 20359860,
+      "archiveBytes": 1158713
+    },
+    {
+      "path": "hierarchy-r2/1/outer-predictions.json.gz",
+      "originalBytes": 1496259,
+      "archiveBytes": 275298
+    },
+    {
+      "path": "hierarchy-r2/1/queries.json.gz",
+      "originalBytes": 312055,
+      "archiveBytes": 19881
+    },
+    {
+      "path": "hierarchy-r2/2/fit-receipts.json.gz",
+      "originalBytes": 5195858,
+      "archiveBytes": 386523
+    },
+    {
+      "path": "hierarchy-r2/2/inner-grid.json.gz",
+      "originalBytes": 20360201,
+      "archiveBytes": 1188963
+    },
+    {
+      "path": "hierarchy-r2/2/outer-predictions.json.gz",
+      "originalBytes": 1435839,
+      "archiveBytes": 225359
+    },
+    {
+      "path": "hierarchy-r2/2/queries.json.gz",
+      "originalBytes": 291735,
+      "archiveBytes": 12080
+    },
+    {
+      "path": "hierarchy-r2/3/fit-receipts.json.gz",
+      "originalBytes": 5196606,
+      "archiveBytes": 384221
+    },
+    {
+      "path": "hierarchy-r2/3/inner-grid.json.gz",
+      "originalBytes": 20295519,
+      "archiveBytes": 1148725
+    },
+    {
+      "path": "hierarchy-r2/3/outer-models.json.gz",
+      "originalBytes": 314458,
+      "archiveBytes": 37765
+    },
+    {
+      "path": "hierarchy-r2/3/outer-predictions.json.gz",
+      "originalBytes": 1871715,
+      "archiveBytes": 341391
+    },
+    {
+      "path": "hierarchy-r2/3/queries.json.gz",
+      "originalBytes": 311565,
+      "archiveBytes": 25656
+    },
+    {
+      "path": "hierarchy-r2/4/fit-receipts.json.gz",
+      "originalBytes": 5196996,
+      "archiveBytes": 386567
+    },
+    {
+      "path": "hierarchy-r2/4/inner-grid.json.gz",
+      "originalBytes": 20121001,
+      "archiveBytes": 1163995
+    },
+    {
+      "path": "hierarchy-r2/4/outer-predictions.json.gz",
+      "originalBytes": 1855365,
+      "archiveBytes": 302775
+    },
+    {
+      "path": "hierarchy-r2/4/queries.json.gz",
+      "originalBytes": 295434,
+      "archiveBytes": 15504
+    },
+    {
+      "path": "hierarchy-r2/5/fit-receipts.json.gz",
+      "originalBytes": 5196657,
+      "archiveBytes": 387900
+    },
+    {
+      "path": "hierarchy-r2/5/inner-grid.json.gz",
+      "originalBytes": 20438048,
+      "archiveBytes": 1164783
+    },
+    {
+      "path": "hierarchy-r2/5/outer-predictions.json.gz",
+      "originalBytes": 1250680,
+      "archiveBytes": 197997
+    },
+    {
+      "path": "hierarchy-r2/5/queries.json.gz",
+      "originalBytes": 292043,
+      "archiveBytes": 15840
+    },
+    {
+      "path": "hierarchy-r1/0/fit-receipts.json.gz",
+      "originalBytes": 3039862,
+      "archiveBytes": 305949
+    },
+    {
+      "path": "hierarchy-r1/0/inner-grid.json.gz",
+      "originalBytes": 20214731,
+      "archiveBytes": 1164189
+    },
+    {
+      "path": "hierarchy-r1/0/outer-predictions.json.gz",
+      "originalBytes": 1646716,
+      "archiveBytes": 297765
+    },
+    {
+      "path": "hierarchy-r1/0/queries.json.gz",
+      "originalBytes": 314005,
+      "archiveBytes": 20414
+    },
+    {
+      "path": "hierarchy-r1/1/fit-receipts.json.gz",
+      "originalBytes": 3037476,
+      "archiveBytes": 305899
+    },
+    {
+      "path": "hierarchy-r1/1/inner-grid.json.gz",
+      "originalBytes": 20359603,
+      "archiveBytes": 1158677
+    },
+    {
+      "path": "hierarchy-r1/1/outer-predictions.json.gz",
+      "originalBytes": 1496173,
+      "archiveBytes": 275421
+    },
+    {
+      "path": "hierarchy-r1/1/queries.json.gz",
+      "originalBytes": 312057,
+      "archiveBytes": 19876
+    },
+    {
+      "path": "hierarchy-r1/2/fit-receipts.json.gz",
+      "originalBytes": 3039860,
+      "archiveBytes": 306421
+    },
+    {
+      "path": "hierarchy-r1/2/inner-grid.json.gz",
+      "originalBytes": 20360097,
+      "archiveBytes": 1188946
+    },
+    {
+      "path": "hierarchy-r1/2/outer-predictions.json.gz",
+      "originalBytes": 1435837,
+      "archiveBytes": 225302
+    },
+    {
+      "path": "hierarchy-r1/2/queries.json.gz",
+      "originalBytes": 291735,
+      "archiveBytes": 12077
+    },
+    {
+      "path": "hierarchy-r1/3/fit-receipts.json.gz",
+      "originalBytes": 3040334,
+      "archiveBytes": 304903
+    },
+    {
+      "path": "hierarchy-r1/3/inner-grid.json.gz",
+      "originalBytes": 20295464,
+      "archiveBytes": 1148691
+    },
+    {
+      "path": "hierarchy-r1/3/outer-models.json.gz",
+      "originalBytes": 310591,
+      "archiveBytes": 37521
+    },
+    {
+      "path": "hierarchy-r1/3/outer-predictions.json.gz",
+      "originalBytes": 1871756,
+      "archiveBytes": 341304
+    },
+    {
+      "path": "hierarchy-r1/3/queries.json.gz",
+      "originalBytes": 311543,
+      "archiveBytes": 25671
+    },
+    {
+      "path": "hierarchy-r1/5/fit-receipts.json.gz",
+      "originalBytes": 3040303,
+      "archiveBytes": 307347
+    },
+    {
+      "path": "hierarchy-r1/5/inner-grid.json.gz",
+      "originalBytes": 20438048,
+      "archiveBytes": 1164783
+    },
+    {
+      "path": "hierarchy-r1/5/outer-predictions.json.gz",
+      "originalBytes": 1250770,
+      "archiveBytes": 197674
+    },
+    {
+      "path": "hierarchy-r1/5/queries.json.gz",
+      "originalBytes": 292001,
+      "archiveBytes": 15848
+    },
+    {
+      "path": "anchored-r2/0/outer-predictions.json.gz",
+      "originalBytes": 733610,
+      "archiveBytes": 105470
+    },
+    {
+      "path": "anchored-r2/1/outer-predictions.json.gz",
+      "originalBytes": 664971,
+      "archiveBytes": 93160
+    },
+    {
+      "path": "anchored-r2/2/outer-predictions.json.gz",
+      "originalBytes": 677835,
+      "archiveBytes": 97689
+    },
+    {
+      "path": "anchored-r2/3/outer-predictions.json.gz",
+      "originalBytes": 835303,
+      "archiveBytes": 123676
+    },
+    {
+      "path": "anchored-r2/4/outer-predictions.json.gz",
+      "originalBytes": 863897,
+      "archiveBytes": 128525
+    },
+    {
+      "path": "anchored-r2/5/outer-predictions.json.gz",
+      "originalBytes": 589764,
+      "archiveBytes": 46384
+    },
+    {
+      "path": "anchored-r1/0/outer-predictions.json.gz",
+      "originalBytes": 732890,
+      "archiveBytes": 104994
+    },
+    {
+      "path": "anchored-r1/1/outer-predictions.json.gz",
+      "originalBytes": 665936,
+      "archiveBytes": 93383
+    },
+    {
+      "path": "anchored-r1/2/outer-predictions.json.gz",
+      "originalBytes": 678543,
+      "archiveBytes": 97656
+    },
+    {
+      "path": "anchored-r1/3/outer-predictions.json.gz",
+      "originalBytes": 833644,
+      "archiveBytes": 123677
+    },
+    {
+      "path": "anchored-r1/4/outer-predictions.json.gz",
+      "originalBytes": 862285,
+      "archiveBytes": 128228
+    },
+    {
+      "path": "anchored-r1/5/outer-predictions.json.gz",
+      "originalBytes": 588626,
+      "archiveBytes": 42200
+    },
+    {
+      "path": "anchored-compact-r2/0/outer-predictions.json.gz",
+      "originalBytes": 733431,
+      "archiveBytes": 105343
+    },
+    {
+      "path": "anchored-compact-r2/1/outer-predictions.json.gz",
+      "originalBytes": 665411,
+      "archiveBytes": 92961
+    },
+    {
+      "path": "anchored-compact-r2/2/outer-predictions.json.gz",
+      "originalBytes": 677768,
+      "archiveBytes": 97731
+    },
+    {
+      "path": "anchored-compact-r2/3/outer-predictions.json.gz",
+      "originalBytes": 835089,
+      "archiveBytes": 123832
+    },
+    {
+      "path": "anchored-compact-r2/4/outer-predictions.json.gz",
+      "originalBytes": 863807,
+      "archiveBytes": 128494
+    },
+    {
+      "path": "anchored-compact-r2/5/outer-predictions.json.gz",
+      "originalBytes": 589605,
+      "archiveBytes": 46335
+    },
+    {
+      "path": "anchored-r1/0/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        37,
+        100,
+        6
+      ],
+      "uniqueScoreVectors": 1286,
+      "originalBytes": 231649,
+      "archiveBytes": 35403
+    },
+    {
+      "path": "anchored-r1/1/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        37,
+        100,
+        6
+      ],
+      "uniqueScoreVectors": 1577,
+      "originalBytes": 255743,
+      "archiveBytes": 42829
+    },
+    {
+      "path": "anchored-r1/2/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        37,
+        100,
+        6
+      ],
+      "uniqueScoreVectors": 1293,
+      "originalBytes": 261479,
+      "archiveBytes": 36914
+    },
+    {
+      "path": "anchored-r1/3/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        37,
+        100,
+        6
+      ],
+      "uniqueScoreVectors": 1375,
+      "originalBytes": 215575,
+      "archiveBytes": 36960
+    },
+    {
+      "path": "anchored-r1/4/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        37,
+        100,
+        6
+      ],
+      "uniqueScoreVectors": 1893,
+      "originalBytes": 266195,
+      "archiveBytes": 48590
+    },
+    {
+      "path": "anchored-r1/5/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        37,
+        100,
+        6
+      ],
+      "uniqueScoreVectors": 1079,
+      "originalBytes": 213891,
+      "archiveBytes": 33031
+    },
+    {
+      "path": "anchored-r2/0/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 242534,
+      "originalBytes": 24075924,
+      "archiveBytes": 8639615
+    },
+    {
+      "path": "anchored-r2/1/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 252157,
+      "originalBytes": 25414708,
+      "archiveBytes": 8794983
+    },
+    {
+      "path": "anchored-r2/2/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 258789,
+      "originalBytes": 24178465,
+      "archiveBytes": 9008097
+    },
+    {
+      "path": "anchored-r2/3/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 212546,
+      "originalBytes": 18239365,
+      "archiveBytes": 7335859
+    },
+    {
+      "path": "anchored-r2/4/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 268665,
+      "originalBytes": 25676993,
+      "archiveBytes": 9499670
+    },
+    {
+      "path": "anchored-r2/5/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 224420,
+      "originalBytes": 22938572,
+      "archiveBytes": 7930823
+    },
+    {
+      "path": "anchored-compact-r2/0/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 243047,
+      "originalBytes": 24086179,
+      "archiveBytes": 8673919
+    },
+    {
+      "path": "anchored-compact-r2/1/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 251308,
+      "originalBytes": 25395894,
+      "archiveBytes": 8776758
+    },
+    {
+      "path": "anchored-compact-r2/2/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 258169,
+      "originalBytes": 24150102,
+      "archiveBytes": 9000106
+    },
+    {
+      "path": "anchored-compact-r2/3/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 214002,
+      "originalBytes": 18162061,
+      "archiveBytes": 7381313
+    },
+    {
+      "path": "anchored-compact-r2/4/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 264740,
+      "originalBytes": 25631920,
+      "archiveBytes": 9397017
+    },
+    {
+      "path": "anchored-compact-r2/5/inner-scores.compact.npz",
+      "originalShape": [
+        251,
+        82,
+        336,
+        6
+      ],
+      "uniqueScoreVectors": 223389,
+      "originalBytes": 22896870,
+      "archiveBytes": 7899591
+    },
+    {
+      "path": "threshold-r1/0/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        740,
+        12,
+        6
+      ],
+      "uniqueScoreVectors": 89431,
+      "originalBytes": 4068243,
+      "archiveBytes": 3051157
+    },
+    {
+      "path": "threshold-r1/1/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        740,
+        12,
+        6
+      ],
+      "uniqueScoreVectors": 106891,
+      "originalBytes": 4576960,
+      "archiveBytes": 3721499
+    },
+    {
+      "path": "threshold-r1/2/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        740,
+        12,
+        6
+      ],
+      "uniqueScoreVectors": 99268,
+      "originalBytes": 4331568,
+      "archiveBytes": 3347005
+    },
+    {
+      "path": "threshold-r1/3/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        740,
+        12,
+        6
+      ],
+      "uniqueScoreVectors": 105122,
+      "originalBytes": 4663897,
+      "archiveBytes": 3623677
+    },
+    {
+      "path": "threshold-r1/4/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        740,
+        12,
+        6
+      ],
+      "uniqueScoreVectors": 101866,
+      "originalBytes": 4691319,
+      "archiveBytes": 3625844
+    },
+    {
+      "path": "threshold-r1/5/inner-scores.compact.npz",
+      "originalShape": [
+        55,
+        740,
+        12,
+        6
+      ],
+      "uniqueScoreVectors": 106306,
+      "originalBytes": 4649165,
+      "archiveBytes": 3755469
+    }
+  ]
+}

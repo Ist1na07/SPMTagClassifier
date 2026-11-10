@@ -1,0 +1,626 @@
+{
+  "usesOuterTruth": false,
+  "choices": {
+    "hard_time/balanced": {
+      "configId": 15,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5172505452169862,
+        "macroRecall": 0.49636596206077926,
+        "macroPrecision": 0.5667650134512474,
+        "microF1": 0.6435574372605949,
+        "sampleF1": 0.6729440396829961,
+        "exactMatch": 0.6047373138130626
+      }
+    },
+    "hard_time/macro": {
+      "configId": 15,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5172505452169862,
+        "macroRecall": 0.49636596206077926,
+        "macroPrecision": 0.5667650134512474,
+        "microF1": 0.6435574372605949,
+        "sampleF1": 0.6729440396829961,
+        "exactMatch": 0.6047373138130626
+      }
+    },
+    "branch_time/balanced": {
+      "configId": 63,
+      "fitId": 31,
+      "config": {
+        "arm": "branch_time",
+        "weightId": 0,
+        "power": 2.0,
+        "hard": false,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5019198588102404,
+        "macroRecall": 0.4849031359376852,
+        "macroPrecision": 0.5541080014030421,
+        "microF1": 0.6336144025394835,
+        "sampleF1": 0.6612504825217987,
+        "exactMatch": 0.5806715360023893
+      }
+    },
+    "branch_time/macro": {
+      "configId": 63,
+      "fitId": 31,
+      "config": {
+        "arm": "branch_time",
+        "weightId": 0,
+        "power": 2.0,
+        "hard": false,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5019198588102404,
+        "macroRecall": 0.4849031359376852,
+        "macroPrecision": 0.5541080014030421,
+        "microF1": 0.6336144025394835,
+        "sampleF1": 0.6612504825217987,
+        "exactMatch": 0.5806715360023893
+      }
+    },
+    "difficulty/balanced": {
+      "configId": 159,
+      "fitId": 79,
+      "config": {
+        "arm": "difficulty",
+        "weightId": 18,
+        "power": 2.0,
+        "hard": false,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5045798010239563,
+        "macroRecall": 0.48720436045482174,
+        "macroPrecision": 0.5542054631431798,
+        "microF1": 0.6382176558677564,
+        "sampleF1": 0.6653457661562389,
+        "exactMatch": 0.5854248027941855
+      }
+    },
+    "difficulty/macro": {
+      "configId": 159,
+      "fitId": 79,
+      "config": {
+        "arm": "difficulty",
+        "weightId": 18,
+        "power": 2.0,
+        "hard": false,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5045798010239563,
+        "macroRecall": 0.48720436045482174,
+        "macroPrecision": 0.5542054631431798,
+        "microF1": 0.6382176558677564,
+        "sampleF1": 0.6653457661562389,
+        "exactMatch": 0.5854248027941855
+      }
+    },
+    "actions/balanced": {
+      "configId": 495,
+      "fitId": 247,
+      "config": {
+        "arm": "actions",
+        "weightId": 7,
+        "power": 2.0,
+        "hard": false,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.500515877887452,
+        "macroRecall": 0.4847975591658796,
+        "macroPrecision": 0.5504885495103801,
+        "microF1": 0.634439724367728,
+        "sampleF1": 0.6605472905552019,
+        "exactMatch": 0.5789053972574288
+      }
+    },
+    "actions/macro": {
+      "configId": 495,
+      "fitId": 247,
+      "config": {
+        "arm": "actions",
+        "weightId": 7,
+        "power": 2.0,
+        "hard": false,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.500515877887452,
+        "macroRecall": 0.4847975591658796,
+        "macroPrecision": 0.5504885495103801,
+        "microF1": 0.634439724367728,
+        "sampleF1": 0.6605472905552019,
+        "exactMatch": 0.5789053972574288
+      }
+    },
+    "combined/balanced": {
+      "configId": 1311,
+      "fitId": 655,
+      "config": {
+        "arm": "combined",
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.509758895699502,
+        "macroRecall": 0.4922973531485977,
+        "macroPrecision": 0.5586719487685609,
+        "microF1": 0.6431649749855427,
+        "sampleF1": 0.6704240835236656,
+        "exactMatch": 0.5919988420722023
+      }
+    },
+    "combined/macro": {
+      "configId": 1311,
+      "fitId": 655,
+      "config": {
+        "arm": "combined",
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.509758895699502,
+        "macroRecall": 0.4922973531485977,
+        "macroPrecision": 0.5586719487685609,
+        "microF1": 0.6431649749855427,
+        "sampleF1": 0.6704240835236656,
+        "exactMatch": 0.5919988420722023
+      }
+    },
+    "components/balanced": {
+      "configId": 2271,
+      "fitId": 1135,
+      "config": {
+        "arm": "components",
+        "weightId": 19,
+        "power": 2.0,
+        "hard": false,
+        "components": true,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.497792929975098,
+        "macroRecall": 0.49086357869947833,
+        "macroPrecision": 0.5288464239881766,
+        "microF1": 0.6381865549271093,
+        "sampleF1": 0.6650674394810855,
+        "exactMatch": 0.5714336296553758
+      }
+    },
+    "components/macro": {
+      "configId": 2373,
+      "fitId": 1186,
+      "config": {
+        "arm": "components",
+        "weightId": 21,
+        "power": 2.0,
+        "hard": false,
+        "components": true,
+        "ridge": 0.3,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5033089122072457,
+        "macroRecall": 0.4902066993664766,
+        "macroPrecision": 0.5387273501777493,
+        "microF1": 0.6292166864097374,
+        "sampleF1": 0.6508594640275471,
+        "exactMatch": 0.5811849601707845
+      }
+    },
+    "all/balanced": {
+      "configId": 15,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5172505452169862,
+        "macroRecall": 0.49636596206077926,
+        "macroPrecision": 0.5667650134512474,
+        "microF1": 0.6435574372605949,
+        "sampleF1": 0.6729440396829961,
+        "exactMatch": 0.6047373138130626
+      }
+    },
+    "all/macro": {
+      "configId": 15,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5172505452169862,
+        "macroRecall": 0.49636596206077926,
+        "macroPrecision": 0.5667650134512474,
+        "microF1": 0.6435574372605949,
+        "sampleF1": 0.6729440396829961,
+        "exactMatch": 0.6047373138130626
+      }
+    },
+    "no_rating/balanced": {
+      "configId": 15,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5172505452169862,
+        "macroRecall": 0.49636596206077926,
+        "macroPrecision": 0.5667650134512474,
+        "microF1": 0.6435574372605949,
+        "sampleF1": 0.6729440396829961,
+        "exactMatch": 0.6047373138130626
+      }
+    },
+    "no_rating/macro": {
+      "configId": 15,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5172505452169862,
+        "macroRecall": 0.49636596206077926,
+        "macroPrecision": 0.5667650134512474,
+        "microF1": 0.6435574372605949,
+        "sampleF1": 0.6729440396829961,
+        "exactMatch": 0.6047373138130626
+      }
+    },
+    "nonconditional/balanced": {
+      "configId": 15,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5172505452169862,
+        "macroRecall": 0.49636596206077926,
+        "macroPrecision": 0.5667650134512474,
+        "microF1": 0.6435574372605949,
+        "sampleF1": 0.6729440396829961,
+        "exactMatch": 0.6047373138130626
+      }
+    },
+    "nonconditional/macro": {
+      "configId": 15,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5172505452169862,
+        "macroRecall": 0.49636596206077926,
+        "macroPrecision": 0.5667650134512474,
+        "microF1": 0.6435574372605949,
+        "sampleF1": 0.6729440396829961,
+        "exactMatch": 0.6047373138130626
+      }
+    },
+    "conditional/balanced": {
+      "configId": 2631,
+      "fitId": 1315,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": true,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5076798397165337,
+        "macroRecall": 0.512191554409393,
+        "macroPrecision": 0.5229986269995622,
+        "microF1": 0.6329726768601566,
+        "sampleF1": 0.6622619670538115,
+        "exactMatch": 0.5544706947792236
+      }
+    },
+    "conditional/macro": {
+      "configId": 2636,
+      "fitId": 1318,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.3,
+        "balance": 0.5,
+        "conditional": true,
+        "fallback": false
+      },
+      "metrics": {
+        "macroF1": 0.5078188846840618,
+        "macroRecall": 0.47667542693344306,
+        "macroPrecision": 0.5693160616192776,
+        "microF1": 0.6311746075389565,
+        "sampleF1": 0.6417221611091105,
+        "exactMatch": 0.5711726149767786
+      }
+    },
+    "no_fallback/balanced": {
+      "configId": 14,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": false
+      },
+      "metrics": {
+        "macroF1": 0.513998224461495,
+        "macroRecall": 0.4882611377998254,
+        "macroPrecision": 0.5744091312827228,
+        "microF1": 0.641309787385528,
+        "sampleF1": 0.6653116173901666,
+        "exactMatch": 0.5994770857745152
+      }
+    },
+    "no_fallback/macro": {
+      "configId": 14,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": false
+      },
+      "metrics": {
+        "macroF1": 0.513998224461495,
+        "macroRecall": 0.4882611377998254,
+        "macroPrecision": 0.5744091312827228,
+        "microF1": 0.641309787385528,
+        "sampleF1": 0.6653116173901666,
+        "exactMatch": 0.5994770857745152
+      }
+    },
+    "with_fallback/balanced": {
+      "configId": 15,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5172505452169862,
+        "macroRecall": 0.49636596206077926,
+        "macroPrecision": 0.5667650134512474,
+        "microF1": 0.6435574372605949,
+        "sampleF1": 0.6729440396829961,
+        "exactMatch": 0.6047373138130626
+      }
+    },
+    "with_fallback/macro": {
+      "configId": 15,
+      "fitId": 7,
+      "config": {
+        "arm": "hard_time",
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.5172505452169862,
+        "macroRecall": 0.49636596206077926,
+        "macroPrecision": 0.5667650134512474,
+        "microF1": 0.6435574372605949,
+        "sampleF1": 0.6729440396829961,
+        "exactMatch": 0.6047373138130626
+      }
+    },
+    "public_rating": {
+      "configId": 1311,
+      "fitId": 655,
+      "config": {
+        "arm": "combined",
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.509758895699502,
+        "macroRecall": 0.4922973531485977,
+        "macroPrecision": 0.5586719487685609,
+        "microF1": 0.6431649749855427,
+        "sampleF1": 0.6704240835236656,
+        "exactMatch": 0.5919988420722023
+      }
+    },
+    "component_rating": {
+      "configId": 2271,
+      "fitId": 1135,
+      "config": {
+        "arm": "components",
+        "weightId": 19,
+        "power": 2.0,
+        "hard": false,
+        "components": true,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.497792929975098,
+        "macroRecall": 0.49086357869947833,
+        "macroPrecision": 0.5288464239881766,
+        "microF1": 0.6381865549271093,
+        "sampleF1": 0.6650674394810855,
+        "exactMatch": 0.5714336296553758
+      }
+    },
+    "physical_only": {
+      "configId": 495,
+      "fitId": 247,
+      "config": {
+        "arm": "actions",
+        "weightId": 7,
+        "power": 2.0,
+        "hard": false,
+        "components": false,
+        "ridge": 0.03,
+        "balance": 0.5,
+        "conditional": false,
+        "fallback": true
+      },
+      "metrics": {
+        "macroF1": 0.500515877887452,
+        "macroRecall": 0.4847975591658796,
+        "macroPrecision": 0.5504885495103801,
+        "microF1": 0.634439724367728,
+        "sampleF1": 0.6605472905552019,
+        "exactMatch": 0.5789053972574288
+      }
+    }
+  }
+}

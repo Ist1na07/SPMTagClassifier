@@ -1,0 +1,9 @@
+# Expanded JSON and duplicate/raw numerical intermediates stay local. The
+# lossless archives, protocols, held-out predictions and reports are published.
+results/**/*.npz
+!results/**/inner-scores.compact.npz
+results/**/inner-grid.json
+results/**/fit-receipts.json
+results/**/analysis.json
+results/**/outer-predictions.json
+# Large exceptions are packaged as .json.gz by archive_evidence.py.

@@ -2,8 +2,8 @@ const test=require('node:test'),assert=require('node:assert/strict'),fs=require(
 const api=require('..');
 function chart(k){return `[General]\nMode:3\n[Difficulty]\nCircleSize:${k}\n[TimingPoints]\n0,500,4,2,1,100,1,0\n[HitObjects]\n`+
  Array.from({length:160},(_,i)=>`${(i%k+.5)*512/k},192,${1000+i*125},1,0,0:0:0:0:`).join('\n');}
-test('7K default preserves mature decisions and exposes corrected diagnostics',()=>{
- const text=chart(7),a=api.analyzeMap(text),b=api.legacy.analyzeMap(text);
+test('7K classic preserves mature decisions and exposes corrected diagnostics',()=>{
+ const text=chart(7),a=api.analyzeMap(text,{aggregation:'classic'}),b=api.legacy.analyzeMap(text);
  assert.equal(a.modelInfo.variant,'legacy-stable');assert.deepEqual(a.overall.tags,b.overall.tags);
  assert.deepEqual(a.segments.map(s=>[s.start,s.end,s.tag,s.confidence]),b.segments.map(s=>[s.start,s.end,s.tag,s.confidence]));
  for(const s of a.segments){assert.ok(s.evidence.occupancy>=0&&s.evidence.occupancy<=1);assert.ok(Math.abs(Object.values(s.distribution).reduce((a,b)=>a+b)-1)<1e-10);}

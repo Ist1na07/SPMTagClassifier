@@ -2,14 +2,22 @@
 
 独立的 osu!mania **4K / 6K / 7K** 键型分析库。Node 与浏览器均可用，推理零第三方依赖。
 
-- **7K 默认**：沿用原专家，修正高速规则段的 Break 门控和均匀节奏 BPM 显示，附带区间占用、分数分布及 anchor / release 几何证据。
+- **7K 默认**：保留成熟局部专家及 Break／BPM 修补，用连续负担积分聚合整谱 tag；输出多分支与负担百分数，可复用同次 SPM Rating 难度曲线。
 - **4K**：原生五类模型，同一局部分布参与分段、证据加权及整谱组成。
 - **6K**：在真实六列上运行 4K/7K 共同粗分类器，不再使用虚拟中键或投影专家输出混合。
 - **7K `modern`**：完整联合选择后的 LN 小幅更新候选，显式启用；没有充分证据替换默认。
 
 **[回炉研究结论与证据](research/rework/CONCLUSIONS.md)** · [完整研究记录](research/rework/README.md) · [上游来源](UPSTREAM.md)
 
-已发布的 [v1.1.0](https://github.com/Ist1na07/SPMTagClassifier/releases/tag/v1.1.0) 是从插件 **tag v1.2.0** 提取的原版算法；v1.2.0 的分阶段调参完整性与部分归因结论已修正，历史 tag 不改写。本说明对应 overlay 修补版 v1.2.2。
+已发布的 [v1.1.0](https://github.com/Ist1na07/SPMTagClassifier/releases/tag/v1.1.0) 是从插件 **tag v1.2.0** 提取的原版算法；v1.2.0 的分阶段调参完整性与部分归因结论已修正，历史 tag 不改写。本说明对应整谱聚合版 v1.3.0。
+
+### v1.3.0：整谱 tag 表达主要游玩负担
+
+整谱百分数改为连续时间的 `分支贴合度 × 难度负担 × 动作物量` 积分份额，参与 tag 门控；不是正确率，也不是简单时间占比。难度输入复用 SPMRating v1.2.0 Detailed／Compact 的原始逐行曲线，不再次评分。缺少评分输入时使用单独联调的动作版。
+
+原349条、原歌曲／重复物理源分组的回顾性对照中，17类 macro F1 从 **52.02%** 提高至动作版 **53.79%**、Detailed **54.43%**、Compact **53.67%**；整谱完全匹配率从 **58.07%** 至 **62.68%**。总体 P/R/micro/sample F1 同时提高，逐类并非全部提高。最终采用一阶原型支持，舍弃会压掉部分主类的平方支持；这属于消费验收后的明确约束，不是新盲测。
+
+**[研究结论、消融与失败方案](research/perception/CONCLUSIONS.md)** · **[评分复用与插件更新](docs/perception.md)**。新研究不改变局部主类，不能据此宣称修复了 Tech→Dense CS。`aggregation:'classic'` 恢复 v1.2.2 整谱策略；raw legacy、modern、4K／6K 路径保持可用。
 
 ### v1.2.2：先修正可确定的 overlay 错误
 
@@ -19,12 +27,12 @@
 
 整谱17类 macro P/R/F1 从55.15%／51.35%／51.98%到55.07%／51.47%／52.02%，基本持平；原六张人工谱局部准确率69.59%到69.41%，留出 DS 有4.25秒休息误报。**Tech→Dense CS 尚未解决**，没有采用未改善该错例的新分类头。完整取舍、逐类错误和参数范围见 [本轮结论](research/overlay-quality/CONCLUSIONS.md)。实际插件渲染器离线检查已通过；实时游戏／tosu 链路尚未验收。
 
-11月10日的[限时定点跟进](research/overlay-quality/targeted-sequence-r1/DECISION.md)参考GitHub上的连续行识别及逐手时序方法，完成原段／局部上下文的联合对照，但没有减少真实Tech→Dense错误；新头未采用，产品仍为v1.2.2。
+11月10日的[限时定点跟进](research/overlay-quality/targeted-sequence-r1/DECISION.md)参考GitHub上的连续行识别及逐手时序方法，完成原段／局部上下文的联合对照，但没有减少真实Tech→Dense错误；新局部头未采用；该次跟进未发布新版本。
 
 ## 运行一张谱面
 
 ```sh
-npm install https://github.com/Ist1na07/SPMTagClassifier/releases/download/v1.2.2/spm-tag-classifier-1.2.2.tgz
+npm install https://github.com/Ist1na07/SPMTagClassifier/releases/download/v1.3.0/spm-tag-classifier-1.3.0.tgz
 ```
 
 ```js
@@ -36,7 +44,7 @@ console.log(r.segments.map(s => ({
   start: s.start,
   end: s.end,
   tag: s.tag,
-  support: s.distribution,
+  support: s.branches ?? s.distribution,
   weight: s.aggregationWeight,
   occupancy: s.evidence.occupancy,
   geometry: s.evidence.geometry,
@@ -54,15 +62,20 @@ node bin/classify.cjs map.osu 1.5 modern
 
 ### 替换现有 overlay 的分类引擎
 
-插件 v1.2.0 自带一份 `tag_engine.js`；安装本库不会自动更新那份文件。先备份插件目录中的原文件，再将本库 `dist/tag-engine.js` 复制到同一位置并命名为 **`tag_engine.js`**，最后重新加载 overlay。无需替换难度引擎、设置或谱面文件；需要回退时恢复备份并重新加载。
+插件自带的脚本不会随 npm 包自动更新。要同时接通 SPM 原始难度和新百分数显示，请使用先 dry-run、应用前备份三份文件的更新器：
 
-当前已用原插件渲染器离线检查调用及显示，实时游戏／tosu 链路尚未验收。原插件只为7K调用分类器；替换引擎本身不会为插件界面增加4K/6K支持。
+```powershell
+node path/to/package/bin/update-overlay.cjs 'E:/path/to/plugin'
+node path/to/package/bin/update-overlay.cjs 'E:/path/to/plugin' --apply
+```
+
+关闭 overlay 页面后更新，再重新加载。回退方法、支持布局及不重复评分的 API 见 [使用说明](docs/perception.md)。只复制 `dist/tag-engine.js` 可获得动作版聚合，但旧 UI 的时间占比显示不会自动更新。实际渲染器的离线模型切换、平滑不变性与 DT 时钟已检查；实时游戏／tosu 尚未验收。
 
 ## 默认与研究候选
 
 | 选项 | 7K | 4K / 6K |
 |---|---|---|
-| 默认或 `algorithm: 'stable'` | 原专家及 confidence / scores；修正 Break 门控、BPM 显示，附加新证据 | 原生粗分类 |
+| 默认或 `algorithm: 'stable'` | 原局部专家及 confidence / scores；负担百分数整谱聚合；保留 Break／BPM 修补 | 原生粗分类 |
 | `algorithm: 'modern'` | 保留原 RC/LN 专家先验，仅适配 Release 相对证据；LN 保护门控与聚合联调 | 同一新原生粗分类 |
 | `algorithm: 'legacy'` | 未经包装的 v1.1.0 行为 | 原实现未验证这些键数 |
 
@@ -73,10 +86,10 @@ node bin/classify.cjs map.osu 1.5 modern
 ## 分数、权重和时间怎么读
 
 - `distribution` 是归一化类型支持，**不是识别正确率**。4K / 6K 的 `scores` 与它相同；结构充分条件可能输出单位支持，其来源不是经验概率校准。
-- 稳定 7K 的 `confidence`、`scores` 保持原含义。新 7K 候选的 `confidence` 是显示标签的归一支持，旧 affinity 保存在 `evidence.legacyConfidence`。
+- 稳定 7K 的 `confidence`、`scores` 保持原含义；新 `branches` 是可重叠的原型支持，`overall.percentages` 是负担份额。新 7K 候选的 `confidence` 是显示标签的归一支持，旧 affinity 保存在 `evidence.legacyConfidence`。
 - 4K / 6K 使用同一局部支持计算 `时长 × 相对物理负荷^a × 集中度^b`，集中度为 `Σp²`。a、b 与局部头一起拟合；最终两个模型均选到 a=1、b=1。`aggregationWeight` 给出实际加权贡献。
 - 7K 候选保留其联调选中的原生后处理。当前 effort / confidence 指数均为 0；没有为了“使用置信度”而强制非零加权。具体参数在 `modelInfo.aggregationPolicy`。
-- 4K / 6K 的 `overall.weights`、`scores`、`composition` 均是同一归一组成。7K 的 `weights` 保留加权秒数，`composition` 才是归一组成；候选的 normalized 模式以已知具体标签为条件，unknown 不被伪装成某个细类。
+- 4K / 6K 的 `overall.weights`、`scores`、`composition` 均是同一归一组成。稳定 7K 默认的 `weights` 是负担积分，**不是秒数**；`percentages` 是以全谱负担为分母的重叠份额，`composition` 仍归一到一。`classic` 保留旧加权秒数；`modern` 的 normalized 模式仍以已知具体标签为条件。
 - `evidence` 包括熵、margin、负荷、占用、结构规则窗口数及特征截断比例。`contextNoteObservations` 是上下文观测次数，重叠上下文可能重复看到同一物件，不是去重物量。
 - 新 `evidence.geometry.anchor` 描述单指持续 run、集中度及规律性；`geometry.release` 描述头部隔离、其他指持键、同手顺序等。它们是连续物理量，不是新增硬类别概率。旧 `descriptors.anchor` 等字段保留旧含义。
 

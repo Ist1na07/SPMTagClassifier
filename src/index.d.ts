@@ -1,4 +1,14 @@
-export interface Options { speedRate?: number; algorithm?: 'modern' | 'stable' | 'legacy' }
+export interface RatingEvidence {
+  schemaVersion: 1; keyCount: number; speedRate: number; clock: 'post-rate-ms'; modelIdentity: string;
+  /** Exact native physical head-row clock; not 400 ms display buckets. */
+  query: ArrayLike<number>; demand: ArrayLike<number>;
+  components?: { Rbar: ArrayLike<number>; Pbar: ArrayLike<number>; Cbar: ArrayLike<number>; Jm: ArrayLike<number> };
+}
+export interface Options {
+  speedRate?: number; algorithm?: 'modern' | 'stable' | 'legacy';
+  /** Stable 7K defaults to perceptual; classic restores v1.2.2 whole aggregation. */
+  aggregation?: 'perceptual' | 'classic'; ratingEvidence?: RatingEvidence;
+}
 export interface Note { t: number; col: number; lnEnd: number | null }
 export interface Beatmap {
   keys: number; notes: Note[]; firstNote: number; lastNote: number;
@@ -13,6 +23,8 @@ export interface Segment {
   confidence: number; scores?: Record<string, number>;
   /** Stable 7K: normalized legacy affinities, not calibrated probabilities. */
   distribution?: Record<string, number>;
+  /** Independent prototype degrees, burden-averaged over this visible segment; may overlap. */
+  branches?: Record<string, number>;
   probability?: number[];
   /** Effective contribution to the current aggregation; not empirical correctness. */
   aggregationWeight?: number;
@@ -36,6 +48,10 @@ export interface Overall {
   tags: string[]; sort: string; weights: Record<string, number>;
   scores?: Record<string, number>; scoreKind?: string; compositionKind?: string;
   composition?: Record<string, number>;
+  /** 0..100 support-weighted burden fractions, NOT correctness or time shares; may sum above 100. */
+  percentages?: Record<string, number>; labelPercentages?: Record<string, number>; percentageKind?: string;
+  perception?: { difficultyAvailable: boolean; componentsAvailable: boolean; burdenIntegral: number;
+    coveredBurdenShare: number; ratingEndpointExtensionMs: number | null };
   familyMass?: { ln: number; rc: number };
   taxonomy?: string;
   evidence?: { activeWeight: number; normalizedEntropy: number; meanLocalEntropy: number; diversity: number };
@@ -56,7 +72,10 @@ export interface Result {
     localScoreKind?: string; confidenceMeaning?: string; coverage?: string; cadencePolicy?: string;
     sortMeaning?: string; overallDecision?: string; supervision?: string;
     overlayPolicy?: { regularityRestRelativeNps: number; regularityRestRowRateMax: number;
-      rowRateUnit: 'rows per converted second'; aggregation: 'unchanged legacy policy' };
+      rowRateUnit: 'rows per converted second'; aggregation: 'unchanged legacy policy' | 'support-weighted perceptual burden' };
+    perception?: { profile: 'actions' | 'detail' | 'compact'; recipe: {alpha: number; beta: number; width: number; hold: number};
+      supportPower: number; family: {enabled: boolean; minRc: number; minLn: number};
+      policy: {keepFloor: number; addFloor: number; mixOverride: number}; ratingModelIdentity: string | null };
     aggregationPolicy?: { mode: 'legacy' | 'normalized' | 'soft'; effortPower: number;
       confidencePower: number; burdenGate: number; lnRatio: number; scorer: string;
       [parameter: string]: unknown } };
@@ -69,6 +88,9 @@ export interface Result {
     releaseHeldInteraction?: number; geometry?: GeometryEvidence }[];
 }
 export function analyzeMap(text: string, options?: Options): Result;
+/** Adapt an existing SPMRating whole-map include_curve=True result; never calls the scorer. */
+export function ratingEvidenceFromSPM(result: {scope: 'whole'; key_count: number; rate: number; model_identity: string;
+  query: ArrayLike<number>; field: ArrayLike<number>}, components?: RatingEvidence['components']): RatingEvidence;
 export function extractIntermediate(text: string, options?: Options): {
   map: Beatmap; windows: Result['debug']['windows']; segments: Segment[]; overall: Overall;
 };

@@ -1,0 +1,711 @@
+{
+  "usesOuterTruth": false,
+  "baseline": {
+    "macroPrecision": 0.5691521739894783,
+    "macroRecall": 0.5506661423938581,
+    "macroF1": 0.552057953076919,
+    "microF1": 0.6547711404189294,
+    "exactMatch": 0.6152542372881356,
+    "sampleF1": 0.680225988700565,
+    "perClass": [
+      {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0.0,
+        "fp": 0.0,
+        "fn": 6.0
+      },
+      {
+        "precision": 0.8125,
+        "recall": 0.8387096774193549,
+        "f1": 0.8253968253968254,
+        "tp": 26.0,
+        "fp": 6.0,
+        "fn": 5.0
+      },
+      {
+        "precision": 0.6428571428571429,
+        "recall": 0.4864864864864865,
+        "f1": 0.5538461538461539,
+        "tp": 9.0,
+        "fp": 5.0,
+        "fn": 9.5
+      },
+      {
+        "precision": 0.7586206896551724,
+        "recall": 0.6285714285714286,
+        "f1": 0.6875,
+        "tp": 22.0,
+        "fp": 7.0,
+        "fn": 13.0
+      },
+      {
+        "precision": 0.5294117647058824,
+        "recall": 0.6206896551724138,
+        "f1": 0.5714285714285714,
+        "tp": 18.0,
+        "fp": 16.0,
+        "fn": 11.0
+      },
+      {
+        "precision": 0.5,
+        "recall": 0.7,
+        "f1": 0.5833333333333334,
+        "tp": 7.0,
+        "fp": 7.0,
+        "fn": 3.0
+      },
+      {
+        "precision": 0.875,
+        "recall": 0.5121951219512195,
+        "f1": 0.6461538461538462,
+        "tp": 21.0,
+        "fp": 3.0,
+        "fn": 20.0
+      },
+      {
+        "precision": 0.7619047619047619,
+        "recall": 0.9411764705882353,
+        "f1": 0.8421052631578947,
+        "tp": 16.0,
+        "fp": 5.0,
+        "fn": 1.0
+      },
+      {
+        "precision": 0.4722222222222222,
+        "recall": 0.53125,
+        "f1": 0.5,
+        "tp": 17.0,
+        "fp": 19.0,
+        "fn": 15.0
+      },
+      {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0.0,
+        "fp": 0.0,
+        "fn": 3.0
+      },
+      {
+        "precision": 0.75,
+        "recall": 0.6666666666666666,
+        "f1": 0.7058823529411765,
+        "tp": 6.0,
+        "fp": 2.0,
+        "fn": 3.0
+      },
+      {
+        "precision": 0.5909090909090909,
+        "recall": 0.6190476190476191,
+        "f1": 0.6046511627906976,
+        "tp": 13.0,
+        "fp": 9.0,
+        "fn": 8.0
+      },
+      {
+        "precision": 0.7058823529411765,
+        "recall": 0.75,
+        "f1": 0.7272727272727273,
+        "tp": 12.0,
+        "fp": 5.0,
+        "fn": 4.0
+      },
+      {
+        "precision": 0.9047619047619048,
+        "recall": 0.6785714285714286,
+        "f1": 0.7755102040816326,
+        "tp": 19.0,
+        "fp": 2.0,
+        "fn": 9.0
+      },
+      {
+        "precision": 0.8421052631578947,
+        "recall": 0.6956521739130435,
+        "f1": 0.7619047619047619,
+        "tp": 16.0,
+        "fp": 3.0,
+        "fn": 7.0
+      },
+      {
+        "precision": 0.5294117647058824,
+        "recall": 0.6923076923076923,
+        "f1": 0.6,
+        "tp": 9.0,
+        "fp": 8.0,
+        "fn": 4.0
+      },
+      {
+        "precision": 0.0,
+        "recall": 0.0,
+        "f1": 0.0,
+        "tp": 0.0,
+        "fp": 0.0,
+        "fn": 4.0
+      }
+    ]
+  },
+  "choices": {
+    "all/protected": {
+      "representationId": 49,
+      "familyId": 1,
+      "policyId": 80,
+      "representation": {
+        "weightId": 24,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "metrics": {
+        "macroPrecision": 0.6013416323129922,
+        "macroRecall": 0.5750563862962972,
+        "macroF1": 0.5830593244880187,
+        "microF1": 0.7075252133436772,
+        "sampleF1": 0.7361581920903955,
+        "exactMatch": 0.6661016949152543
+      }
+    },
+    "all/balanced": {
+      "representationId": 49,
+      "familyId": 1,
+      "policyId": 80,
+      "representation": {
+        "weightId": 24,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "metrics": {
+        "macroPrecision": 0.6013416323129922,
+        "macroRecall": 0.5750563862962972,
+        "macroF1": 0.5830593244880187,
+        "microF1": 0.7075252133436772,
+        "sampleF1": 0.7361581920903955,
+        "exactMatch": 0.6661016949152543
+      }
+    },
+    "all/macro": {
+      "representationId": 50,
+      "familyId": 1,
+      "policyId": 79,
+      "representation": {
+        "weightId": 24,
+        "power": 2.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.15,
+        "addFloor": 1.01,
+        "mixOverride": 1.01
+      },
+      "metrics": {
+        "macroPrecision": 0.608899475508472,
+        "macroRecall": 0.5709271483942397,
+        "macroF1": 0.5839922723119981,
+        "microF1": 0.7090196078431372,
+        "sampleF1": 0.731638418079096,
+        "exactMatch": 0.6661016949152543
+      }
+    },
+    "hard_time/protected": {
+      "representationId": 0,
+      "familyId": 7,
+      "policyId": 99,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.18,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 1.01,
+        "mixOverride": 1.01
+      },
+      "metrics": {
+        "macroPrecision": 0.5949033126152504,
+        "macroRecall": 0.5604274023664544,
+        "macroF1": 0.5722177997508635,
+        "microF1": 0.6849100860046912,
+        "sampleF1": 0.7090395480225988,
+        "exactMatch": 0.6457627118644068
+      }
+    },
+    "hard_time/balanced": {
+      "representationId": 0,
+      "familyId": 7,
+      "policyId": 99,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.18,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 1.01,
+        "mixOverride": 1.01
+      },
+      "metrics": {
+        "macroPrecision": 0.5949033126152504,
+        "macroRecall": 0.5604274023664544,
+        "macroF1": 0.5722177997508635,
+        "microF1": 0.6849100860046912,
+        "sampleF1": 0.7090395480225988,
+        "exactMatch": 0.6457627118644068
+      }
+    },
+    "hard_time/macro": {
+      "representationId": 0,
+      "familyId": 7,
+      "policyId": 99,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.18,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 1.01,
+        "mixOverride": 1.01
+      },
+      "metrics": {
+        "macroPrecision": 0.5949033126152504,
+        "macroRecall": 0.5604274023664544,
+        "macroF1": 0.5722177997508635,
+        "microF1": 0.6849100860046912,
+        "sampleF1": 0.7090395480225988,
+        "exactMatch": 0.6457627118644068
+      }
+    },
+    "branch_time/protected": {
+      "representationId": 1,
+      "familyId": 7,
+      "policyId": 79,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.18,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.15,
+        "addFloor": 1.01,
+        "mixOverride": 1.01
+      },
+      "metrics": {
+        "macroPrecision": 0.5938255675426296,
+        "macroRecall": 0.5629849471234877,
+        "macroF1": 0.5733521965990337,
+        "microF1": 0.6858924395946999,
+        "sampleF1": 0.7112994350282486,
+        "exactMatch": 0.6457627118644068
+      }
+    },
+    "branch_time/balanced": {
+      "representationId": 1,
+      "familyId": 7,
+      "policyId": 79,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.18,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.15,
+        "addFloor": 1.01,
+        "mixOverride": 1.01
+      },
+      "metrics": {
+        "macroPrecision": 0.5938255675426296,
+        "macroRecall": 0.5629849471234877,
+        "macroF1": 0.5733521965990337,
+        "microF1": 0.6858924395946999,
+        "sampleF1": 0.7112994350282486,
+        "exactMatch": 0.6457627118644068
+      }
+    },
+    "branch_time/macro": {
+      "representationId": 2,
+      "familyId": 7,
+      "policyId": 79,
+      "representation": {
+        "weightId": 0,
+        "power": 2.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.18,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.15,
+        "addFloor": 1.01,
+        "mixOverride": 1.01
+      },
+      "metrics": {
+        "macroPrecision": 0.6041109812060517,
+        "macroRecall": 0.5583265620303199,
+        "macroF1": 0.5755353968484275,
+        "microF1": 0.6871552403467297,
+        "sampleF1": 0.7056497175141243,
+        "exactMatch": 0.6423728813559322
+      }
+    },
+    "difficulty/protected": {
+      "representationId": 37,
+      "familyId": 1,
+      "policyId": 80,
+      "representation": {
+        "weightId": 18,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "metrics": {
+        "macroPrecision": 0.598588255184736,
+        "macroRecall": 0.5680101031977829,
+        "macroF1": 0.5775858448077184,
+        "microF1": 0.7003891050583657,
+        "sampleF1": 0.7282485875706214,
+        "exactMatch": 0.6627118644067796
+      }
+    },
+    "difficulty/balanced": {
+      "representationId": 37,
+      "familyId": 1,
+      "policyId": 80,
+      "representation": {
+        "weightId": 18,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "metrics": {
+        "macroPrecision": 0.598588255184736,
+        "macroRecall": 0.5680101031977829,
+        "macroF1": 0.5775858448077184,
+        "microF1": 0.7003891050583657,
+        "sampleF1": 0.7282485875706214,
+        "exactMatch": 0.6627118644067796
+      }
+    },
+    "difficulty/macro": {
+      "representationId": 38,
+      "familyId": 1,
+      "policyId": 79,
+      "representation": {
+        "weightId": 18,
+        "power": 2.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.15,
+        "addFloor": 1.01,
+        "mixOverride": 1.01
+      },
+      "metrics": {
+        "macroPrecision": 0.6049493863136691,
+        "macroRecall": 0.5638808652957255,
+        "macroF1": 0.5779236022692393,
+        "microF1": 0.7007069913589945,
+        "sampleF1": 0.7225988700564971,
+        "exactMatch": 0.6593220338983051
+      }
+    },
+    "actions/protected": {
+      "representationId": 13,
+      "familyId": 1,
+      "policyId": 80,
+      "representation": {
+        "weightId": 6,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "metrics": {
+        "macroPrecision": 0.5940082788293877,
+        "macroRecall": 0.5643336326095475,
+        "macroF1": 0.5726976838810713,
+        "microF1": 0.6941634241245136,
+        "sampleF1": 0.7214689265536722,
+        "exactMatch": 0.6559322033898305
+      }
+    },
+    "actions/balanced": {
+      "representationId": 13,
+      "familyId": 1,
+      "policyId": 80,
+      "representation": {
+        "weightId": 6,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "metrics": {
+        "macroPrecision": 0.5940082788293877,
+        "macroRecall": 0.5643336326095475,
+        "macroF1": 0.5726976838810713,
+        "microF1": 0.6941634241245136,
+        "sampleF1": 0.7214689265536722,
+        "exactMatch": 0.6559322033898305
+      }
+    },
+    "actions/macro": {
+      "representationId": 13,
+      "familyId": 13,
+      "policyId": 80,
+      "representation": {
+        "weightId": 6,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.2,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "metrics": {
+        "macroPrecision": 0.5971011931225317,
+        "macroRecall": 0.5670417422553333,
+        "macroF1": 0.5764947045587699,
+        "microF1": 0.6910505836575875,
+        "sampleF1": 0.7169491525423729,
+        "exactMatch": 0.6491525423728813
+      }
+    },
+    "combined/protected": {
+      "representationId": 49,
+      "familyId": 1,
+      "policyId": 80,
+      "representation": {
+        "weightId": 24,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "metrics": {
+        "macroPrecision": 0.6013416323129922,
+        "macroRecall": 0.5750563862962972,
+        "macroF1": 0.5830593244880187,
+        "microF1": 0.7075252133436772,
+        "sampleF1": 0.7361581920903955,
+        "exactMatch": 0.6661016949152543
+      }
+    },
+    "combined/balanced": {
+      "representationId": 49,
+      "familyId": 1,
+      "policyId": 80,
+      "representation": {
+        "weightId": 24,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "metrics": {
+        "macroPrecision": 0.6013416323129922,
+        "macroRecall": 0.5750563862962972,
+        "macroF1": 0.5830593244880187,
+        "microF1": 0.7075252133436772,
+        "sampleF1": 0.7361581920903955,
+        "exactMatch": 0.6661016949152543
+      }
+    },
+    "combined/macro": {
+      "representationId": 50,
+      "familyId": 1,
+      "policyId": 79,
+      "representation": {
+        "weightId": 24,
+        "power": 2.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.15,
+        "addFloor": 1.01,
+        "mixOverride": 1.01
+      },
+      "metrics": {
+        "macroPrecision": 0.608899475508472,
+        "macroRecall": 0.5709271483942397,
+        "macroF1": 0.5839922723119981,
+        "microF1": 0.7090196078431372,
+        "sampleF1": 0.731638418079096,
+        "exactMatch": 0.6661016949152543
+      }
+    },
+    "hybrid_False": {
+      "representationId": 19,
+      "familyId": 0,
+      "policyId": 80,
+      "representation": {
+        "weightId": 9,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": false,
+        "minRc": 0.0,
+        "minLn": 0.0
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "metrics": {
+        "macroPrecision": 0.5820162777278719,
+        "macroRecall": 0.5526945399597811,
+        "macroF1": 0.5591156486362322,
+        "microF1": 0.6609508963367108,
+        "sampleF1": 0.6830508474576271,
+        "exactMatch": 0.6152542372881356
+      }
+    },
+    "hybrid_True": {
+      "representationId": 49,
+      "familyId": 1,
+      "policyId": 80,
+      "representation": {
+        "weightId": 24,
+        "power": 1.0,
+        "hard": false
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.1
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 0.65
+      },
+      "metrics": {
+        "macroPrecision": 0.6013416323129922,
+        "macroRecall": 0.5750563862962972,
+        "macroF1": 0.5830593244880187,
+        "microF1": 0.7075252133436772,
+        "sampleF1": 0.7361581920903955,
+        "exactMatch": 0.6661016949152543
+      }
+    }
+  }
+}

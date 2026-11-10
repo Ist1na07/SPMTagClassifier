@@ -1,0 +1,457 @@
+[
+  {
+    "axis": "alpha",
+    "value": 1.0,
+    "choice": {
+      "representationId": 32,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 15,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5766244435548294,
+        "macroRecall": 0.5022062200679978,
+        "macroF1": 0.526474156076332,
+        "microF1": 0.6570696112343322,
+        "sampleF1": 0.667209532642162,
+        "exactMatch": 0.567399706714097
+      }
+    },
+    "meanChangedPhysicalMass": 0.060198405250037244,
+    "maxPercentagePointChange": 8.24650808111368
+  },
+  {
+    "axis": "alpha",
+    "value": 2.0,
+    "choice": {
+      "representationId": 54,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.577258015147568,
+        "macroRecall": 0.5071649145794533,
+        "macroF1": 0.5299965998248265,
+        "microF1": 0.6576134912222575,
+        "sampleF1": 0.6702101520394614,
+        "exactMatch": 0.5661149543617904
+      }
+    },
+    "meanChangedPhysicalMass": 0.0,
+    "maxPercentagePointChange": 0.0
+  },
+  {
+    "axis": "beta",
+    "value": 0.5,
+    "choice": {
+      "representationId": 42,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 20,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.572039363636737,
+        "macroRecall": 0.5045733939223297,
+        "macroF1": 0.5267232503230028,
+        "microF1": 0.6561194759041911,
+        "sampleF1": 0.6671987278442023,
+        "exactMatch": 0.5627455756829994
+      }
+    },
+    "meanChangedPhysicalMass": 0.04218050399675432,
+    "maxPercentagePointChange": 4.40549186585732
+  },
+  {
+    "axis": "beta",
+    "value": 1.0,
+    "choice": {
+      "representationId": 54,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.577258015147568,
+        "macroRecall": 0.5071649145794533,
+        "macroF1": 0.5299965998248265,
+        "microF1": 0.6576134912222575,
+        "sampleF1": 0.6702101520394614,
+        "exactMatch": 0.5661149543617904
+      }
+    },
+    "meanChangedPhysicalMass": 0.0,
+    "maxPercentagePointChange": 0.0
+  },
+  {
+    "axis": "power",
+    "value": 1.0,
+    "choice": {
+      "representationId": 51,
+      "policyId": 25,
+      "shrinkId": 11,
+      "representation": {
+        "weightId": 25,
+        "power": 1.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.1,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.4,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5647989574394624,
+        "macroRecall": 0.5012863332807825,
+        "macroF1": 0.5194430072928915,
+        "microF1": 0.6499816446910619,
+        "sampleF1": 0.6715331673423363,
+        "exactMatch": 0.5755643016263953
+      }
+    },
+    "meanChangedPhysicalMass": 0.19153375401364328,
+    "maxPercentagePointChange": 24.11462213637304
+  },
+  {
+    "axis": "power",
+    "value": 2.0,
+    "choice": {
+      "representationId": 54,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.577258015147568,
+        "macroRecall": 0.5071649145794533,
+        "macroF1": 0.5299965998248265,
+        "microF1": 0.6576134912222575,
+        "sampleF1": 0.6702101520394614,
+        "exactMatch": 0.5661149543617904
+      }
+    },
+    "meanChangedPhysicalMass": 0.0,
+    "maxPercentagePointChange": 0.0
+  },
+  {
+    "axis": "strength",
+    "value": 0.0,
+    "choice": {
+      "representationId": 54,
+      "policyId": 20,
+      "shrinkId": 4,
+      "representation": {
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.5671249771120533,
+        "macroRecall": 0.5076948562858655,
+        "macroF1": 0.5249589765635281,
+        "microF1": 0.6498762071508768,
+        "sampleF1": 0.6665709480118173,
+        "exactMatch": 0.5569570071944145
+      }
+    },
+    "meanChangedPhysicalMass": 0.0287384134623067,
+    "maxPercentagePointChange": 0.0
+  },
+  {
+    "axis": "strength",
+    "value": 0.001,
+    "choice": {
+      "representationId": 54,
+      "policyId": 20,
+      "shrinkId": 5,
+      "representation": {
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.001
+      },
+      "metrics": {
+        "macroPrecision": 0.5690857614257788,
+        "macroRecall": 0.5071649145794533,
+        "macroF1": 0.525195153778588,
+        "microF1": 0.6502412212368527,
+        "sampleF1": 0.6668553621187571,
+        "exactMatch": 0.5586634918360528
+      }
+    },
+    "meanChangedPhysicalMass": 0.025894272392909663,
+    "maxPercentagePointChange": 0.0
+  },
+  {
+    "axis": "strength",
+    "value": 0.01,
+    "choice": {
+      "representationId": 54,
+      "policyId": 20,
+      "shrinkId": 6,
+      "representation": {
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.01
+      },
+      "metrics": {
+        "macroPrecision": 0.5703073797913599,
+        "macroRecall": 0.5071649145794533,
+        "macroF1": 0.5262322086408602,
+        "microF1": 0.6521672920645801,
+        "sampleF1": 0.6676505830848413,
+        "exactMatch": 0.5598582503149839
+      }
+    },
+    "meanChangedPhysicalMass": 0.018893016254962876,
+    "maxPercentagePointChange": 0.0
+  },
+  {
+    "axis": "strength",
+    "value": 0.1,
+    "choice": {
+      "representationId": 54,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.577258015147568,
+        "macroRecall": 0.5071649145794533,
+        "macroF1": 0.5299965998248265,
+        "microF1": 0.6576134912222575,
+        "sampleF1": 0.6702101520394614,
+        "exactMatch": 0.5661149543617904
+      }
+    },
+    "meanChangedPhysicalMass": 0.0,
+    "maxPercentagePointChange": 0.0
+  },
+  {
+    "axis": "reference",
+    "value": 0.1,
+    "choice": {
+      "representationId": 48,
+      "policyId": 20,
+      "shrinkId": 3,
+      "representation": {
+        "weightId": 23,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5445107996803124,
+        "macroRecall": 0.5231425649160978,
+        "macroF1": 0.5267189479644904,
+        "microF1": 0.6544100718856921,
+        "sampleF1": 0.6749557134784493,
+        "exactMatch": 0.5522873091366622
+      }
+    },
+    "meanChangedPhysicalMass": 0.07333436725550546,
+    "maxPercentagePointChange": 7.323763858273624
+  },
+  {
+    "axis": "reference",
+    "value": 0.25,
+    "choice": {
+      "representationId": 54,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.577258015147568,
+        "macroRecall": 0.5071649145794533,
+        "macroF1": 0.5299965998248265,
+        "microF1": 0.6576134912222575,
+        "sampleF1": 0.6702101520394614,
+        "exactMatch": 0.5661149543617904
+      }
+    },
+    "meanChangedPhysicalMass": 0.0,
+    "maxPercentagePointChange": 0.0
+  },
+  {
+    "axis": "reference",
+    "value": 0.4,
+    "choice": {
+      "representationId": 51,
+      "policyId": 25,
+      "shrinkId": 11,
+      "representation": {
+        "weightId": 25,
+        "power": 1.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.1,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.4,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5647989574394624,
+        "macroRecall": 0.5012863332807825,
+        "macroF1": 0.5194430072928915,
+        "microF1": 0.6499816446910619,
+        "sampleF1": 0.6715331673423363,
+        "exactMatch": 0.5755643016263953
+      }
+    },
+    "meanChangedPhysicalMass": 0.19153375401364328,
+    "maxPercentagePointChange": 24.11462213637304
+  }
+]

@@ -8,6 +8,7 @@ const {correctCadenceDisplay}=require('./cadence.cjs');
 const overlay7=require('./generated/overlay-engine.cjs'),overlayProfile=require('./models/overlay7k.json');
 const profile4=require('./models/4k.json'),profile7=require('./models/7k.json');
 const native4=require('./models/native4k.json'),native6=require('./models/native6k.json'),native7=require('./models/native7k.json');
+const perception=require('./perception.cjs'),perceptionProfiles=require('./models/perception7k.json').profiles;
 function profile(key){return key===4?profile4:profile7;}
 function evidenceMap(osuText,opts={}) {
   const map=parseOsu(osuText,opts),ctx=prepare(map,10);
@@ -25,7 +26,9 @@ function describe(w) {
     repetition:1-m.maskEntropy,occupancy:m.occupancy,releaseIndependence:m.releaseIndependence};
 }
 function stable7(osuText,opts,e) {
-  const r=overlay7.analyzeMap(osuText,opts),geometryContext=geometry.prepare(e.ctx);
+  const perceptual=opts.aggregation!=='classic';
+  const r=overlay7.analyzeMap(osuText,{...opts,_rawEvidence:perceptual}),geometryContext=geometry.prepare(e.ctx);
+  const raw=r.debug.rawSegments;delete r.debug.rawSegments;
   // The inherited segmenter can omit a short leading pickup when snapping.
   // Extend only the envelope; keep the learned tags and overall decision.
   if(r.segments.length){r.segments[0].start=r.map.firstNote;r.segments.at(-1).end=r.map.lastNote;}
@@ -47,15 +50,28 @@ function stable7(osuText,opts,e) {
     segmentEvidence:'archived affinities with corrected fast-regular rest gate; interval-union diagnostics',temporalResolutionMs:250,
     overlayPolicy:{regularityRestRelativeNps:overlayProfile.gate.ratio,regularityRestRowRateMax:overlayProfile.gate.rowRateMax,
       rowRateUnit:'rows per converted second',aggregation:'unchanged legacy policy'}};
+  if(perceptual){
+    const rating=opts.ratingEvidence;
+    const name=rating?(rating.modelIdentity===perception.COMPACT_RATING?'compact':'detail'):'actions';
+    const p=perceptionProfiles[name],a=perception.infer(e.map,raw,rating,p,{speedRate:opts.speedRate??1,context:e.ctx,baseline:r.overall});
+    r.overall=a.overall;perception.decorateSegments(r.segments,a,p.classes);
+    r.modelInfo.overlayPolicy.aggregation='support-weighted perceptual burden';
+    r.modelInfo.perception={profile:name,recipe:{...p.recipe},supportPower:p.supportPower,
+      family:{...p.family},policy:{...p.policy},ratingModelIdentity:p.modelIdentity};
+  }
   r.descriptors=e.getWindows(4000).map(w=>({start:w.start,end:w.end,...describe(w)}));
   return r;
 }
 function analyzeMap(osuText,opts={}) {
+  if(opts.aggregation!==undefined&&!['classic','perceptual'].includes(opts.aggregation))throw Error('UnknownAggregation: expected classic or perceptual');
+  if((opts.aggregation==='perceptual'||opts.ratingEvidence)&&opts.algorithm&&opts.algorithm!=='stable')throw Error('PerceptionUnsupportedAlgorithm: requires stable 7K');
+  if(opts.ratingEvidence&&opts.aggregation==='classic')throw Error('PerceptionUnusedRating: classic aggregation does not consume a difficulty curve');
   if(opts.algorithm==='legacy')return legacy.analyzeMap(osuText,opts);
   if(opts.algorithm && !['modern','stable'].includes(opts.algorithm))throw new Error('UnknownAlgorithm: expected modern, stable or legacy');
   const e=evidenceMap(osuText,opts),{map}=e;
-  // Retain mature 7K predictions by default. The anchored candidate is opt-in;
-  // its fully retuned outer evaluation did not justify a default replacement.
+  if(map.keys!==7&&(opts.aggregation==='perceptual'||opts.ratingEvidence))throw Error('PerceptionUnsupportedKeys: fitted profiles currently require native 7K');
+  // Keep the mature LOCAL expert. The modern local adaptation remains opt-in;
+  // stable 7K now applies the independently selected perceptual whole readout.
   if(map.keys===7){
     const r=opts.algorithm==='modern'?lnResult(osuText,native7,opts,e):stable7(osuText,opts,e);
     return correctCadenceDisplay(r,e.ctx,opts.speedRate??1);
@@ -72,4 +88,4 @@ function buildEvidenceMap(text,opts={}) {
   return {map:e.map,windows:ws,global:features(e.ctx,e.map.firstNote,Math.max(e.map.firstNote+1,e.map.lastNote+1)),featureKeys:FEATURE_KEYS};
 }
 // Preserve the original cache schema and entry point for existing callers.
-module.exports={analyzeMap,extractIntermediate,buildCachedMap:legacy.buildCachedMap,buildEvidenceMap,legacy};
+module.exports={analyzeMap,extractIntermediate,buildCachedMap:legacy.buildCachedMap,buildEvidenceMap,ratingEvidenceFromSPM:perception.ratingEvidenceFromSPM,legacy};

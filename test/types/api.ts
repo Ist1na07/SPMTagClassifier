@@ -1,4 +1,4 @@
-import { analyzeMap, extractIntermediate, buildCachedMap, buildEvidenceMap, legacy, type GeometryEvidence } from '../..';
+import { analyzeMap, extractIntermediate, buildCachedMap, buildEvidenceMap, legacy, ratingEvidenceFromSPM, type GeometryEvidence } from '../..';
 declare const text: string;
 const result = analyzeMap(text, { algorithm: 'modern', speedRate: 1.5 });
 const composition: Record<string, number> | undefined = result.overall.composition;
@@ -14,3 +14,8 @@ extractIntermediate(text, { algorithm: 'stable' }).segments;
 buildCachedMap(text).rawSegs;
 buildEvidenceMap(text).featureKeys;
 legacy.analyzeMap(text, { algorithm: 'legacy' }).overall.tags;
+const evidence = ratingEvidenceFromSPM({scope:'whole', key_count:7, rate:1, model_identity:'matching-model', query:[0,100], field:[1,2]});
+const perceptual = analyzeMap(text, {aggregation:'perceptual', ratingEvidence:evidence});
+const percent: number | undefined = perceptual.overall.percentages?.speed;
+const branch: number | undefined = perceptual.segments[0]?.branches?.speed;
+analyzeMap(text, {aggregation:'classic'});

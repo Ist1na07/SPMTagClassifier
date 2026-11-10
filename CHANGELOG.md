@@ -1,5 +1,15 @@
 # Changelog
 
+## 1.3.0 — 2026-11-10
+
+- Aggregate stable 7K tags with overlapping branch support and exact continuous-time action/difficulty burden; expose percentages, visible-segment branches and actual aggregation weights. Preserve local classes and cadence.
+- Reuse matching SPMRating v1.2.0 Detailed/Compact raw fields with explicit model/native-clock checks; use a separately tuned action-only profile when no rating is supplied. Never invoke a scorer.
+- Preserve mature decisions as an anchored prior; correct significant RC/LN Hybrid detection and gate tags by their new burden shares. Keep `aggregation: classic` as the v1.2.2 escape hatch.
+- Add a dry-run-first, parameter-checked, backed-up overlay updater: one scoring pass, model-aware tags and correctly labelled burden percentages. Keep 4K/6K and modern/legacy algorithms unchanged.
+- Retune complete declared Cartesian domains for time/support/difficulty/action/mixture controls; retain negative component results, parameter profiles, per-class errors and incomplete local-feedback status. Adopt first-degree affinities after Compact consumer replay exposed excessive suppression with squared support.
+- Retrospective grouped macro F1: 52.02% baseline, 53.79% actions, 54.43% Detailed, 53.67% Compact; exact match 58.07% to 62.68%. These are not fresh blind-test results, and some classes regress.
+- Verify all 411 inputs against Python and the actual offline renderer. No live game/tosu acceptance; existing Tech-to-Dense local errors remain.
+
 ## 1.2.2 — 2026-11-09
 
 - Correct 7K displayed equivalent BPM for rows uniform to source-millisecond resolution; avoid coarse-grid aliases such as 300 → 200 BPM. Keep archived model features and raw `legacy` results unchanged.

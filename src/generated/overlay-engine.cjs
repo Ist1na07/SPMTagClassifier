@@ -2069,9 +2069,12 @@ var TagClassifier = (() => {
     const rate = opts.speedRate ?? 1;
     if (rate !== 1) map = rescale(map, rate);
     const cm = buildCachedMap(osuText, opts);
-    const segments = smoothSegments(classifySegments(cm, { scorer: "model" }));
+    const rawEvidence = opts._rawEvidence ? classifySegments(cm, { scorer: "model" }) : null;
+    const segments = smoothSegments(rawEvidence ? rawEvidence.map(s => ({...s, ...(s.scores ? {scores:{...s.scores}} : {})})) : classifySegments(cm, { scorer: "model" }));
     const overall = aggregateOverall(segments, {"dominantShare":0.52,"mixShare":0.07,"secondRel":0.75});
-    return { map, segments, overall, debug: { windows: cm.windows, norm: void 0, ctx: void 0 } };
+    const result = { map, segments, overall, debug: { windows: cm.windows, norm: void 0, ctx: void 0 } };
+    if (rawEvidence) result.debug.rawSegments = rawEvidence;
+    return result;
   }
   function extractIntermediate(osuText, opts = {}) {
     const res = analyzeMap(osuText, opts);

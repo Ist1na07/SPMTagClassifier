@@ -50,7 +50,7 @@ test('7K display fixes the 300-to-200 alias without changing classification or a
     assert.equal(r.segments[0].equivBpm, 300);
     assert.equal(r.segments[0].evidence.cadence.legacyEquivBpm, 200);
   }
-  const r = api.analyzeMap(text);
+  const r = api.analyzeMap(text, {aggregation:'classic'});
   assert.deepEqual(r.overall, { ...old.overall, composition: r.overall.composition, scoreKind: r.overall.scoreKind });
   assert.deepEqual(r.segments.map(s => [s.tag, s.secondary, s.scores, s.confidence]),
     old.segments.map(s => [s.tag, s.secondary, s.scores, s.confidence]));

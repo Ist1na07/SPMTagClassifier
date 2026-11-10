@@ -1,0 +1,411 @@
+{
+  "usesOuterTruth": false,
+  "choices": {
+    "all/balanced": {
+      "representationId": 0,
+      "policyId": 21,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6414731659303106,
+        "macroRecall": 0.5573260374492852,
+        "macroF1": 0.582117096243005,
+        "microF1": 0.6733590733590734,
+        "sampleF1": 0.6977401129943502,
+        "exactMatch": 0.6338983050847458
+      }
+    },
+    "all/macro": {
+      "representationId": 0,
+      "policyId": 141,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.18,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6513008525790807,
+        "macroRecall": 0.5561675142350306,
+        "macroF1": 0.5860180335981883,
+        "microF1": 0.6713505074160812,
+        "sampleF1": 0.6903954802259886,
+        "exactMatch": 0.6305084745762712
+      }
+    },
+    "hard_time/balanced": {
+      "representationId": 0,
+      "policyId": 21,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6414731659303106,
+        "macroRecall": 0.5573260374492852,
+        "macroF1": 0.582117096243005,
+        "microF1": 0.6733590733590734,
+        "sampleF1": 0.6977401129943502,
+        "exactMatch": 0.6338983050847458
+      }
+    },
+    "hard_time/macro": {
+      "representationId": 0,
+      "policyId": 141,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.18,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6513008525790807,
+        "macroRecall": 0.5561675142350306,
+        "macroF1": 0.5860180335981883,
+        "microF1": 0.6713505074160812,
+        "sampleF1": 0.6903954802259886,
+        "exactMatch": 0.6305084745762712
+      }
+    },
+    "branch_time/balanced": {
+      "representationId": 2,
+      "policyId": 20,
+      "shrinkId": 5,
+      "representation": {
+        "weightId": 0,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.001
+      },
+      "metrics": {
+        "macroPrecision": 0.5824039602080944,
+        "macroRecall": 0.49980580998320306,
+        "macroF1": 0.5267784737264355,
+        "microF1": 0.6619160728424386,
+        "sampleF1": 0.6621468926553672,
+        "exactMatch": 0.5864406779661017
+      }
+    },
+    "branch_time/macro": {
+      "representationId": 1,
+      "policyId": 25,
+      "shrinkId": 3,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.1,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5579962952146026,
+        "macroRecall": 0.538649620183331,
+        "macroF1": 0.5346588383196366,
+        "microF1": 0.6325167037861915,
+        "sampleF1": 0.6505084745762711,
+        "exactMatch": 0.5440677966101695
+      }
+    },
+    "difficulty/balanced": {
+      "representationId": 38,
+      "policyId": 21,
+      "shrinkId": 4,
+      "representation": {
+        "weightId": 18,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6223864923886798,
+        "macroRecall": 0.5347430486785342,
+        "macroF1": 0.5616803277103678,
+        "microF1": 0.6819258089976322,
+        "sampleF1": 0.6920903954802261,
+        "exactMatch": 0.6254237288135593
+      }
+    },
+    "difficulty/macro": {
+      "representationId": 38,
+      "policyId": 261,
+      "shrinkId": 4,
+      "representation": {
+        "weightId": 18,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.2,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6217226893811025,
+        "macroRecall": 0.5369543379745586,
+        "macroF1": 0.5657040846338345,
+        "microF1": 0.6766798418972332,
+        "sampleF1": 0.684180790960452,
+        "exactMatch": 0.6152542372881356
+      }
+    },
+    "actions/balanced": {
+      "representationId": 15,
+      "policyId": 25,
+      "shrinkId": 9,
+      "representation": {
+        "weightId": 7,
+        "power": 1.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.1,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.4,
+        "strength": 0.001
+      },
+      "metrics": {
+        "macroPrecision": 0.597112712850671,
+        "macroRecall": 0.5178187876556785,
+        "macroF1": 0.544497722671665,
+        "microF1": 0.6640806826997673,
+        "sampleF1": 0.6796610169491526,
+        "exactMatch": 0.6067796610169491
+      }
+    },
+    "actions/macro": {
+      "representationId": 15,
+      "policyId": 265,
+      "shrinkId": 3,
+      "representation": {
+        "weightId": 7,
+        "power": 1.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.2,
+        "minLn": 0.1,
+        "mixFloor": 0.1,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5780709322730159,
+        "macroRecall": 0.5566653919972612,
+        "macroF1": 0.5531064167900009,
+        "microF1": 0.6453531598513012,
+        "sampleF1": 0.661129943502825,
+        "exactMatch": 0.5474576271186441
+      }
+    },
+    "combined/balanced": {
+      "representationId": 42,
+      "policyId": 22,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 20,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.65
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.6216103371321178,
+        "macroRecall": 0.535342946020318,
+        "macroF1": 0.5576986785464854,
+        "microF1": 0.6786551993745114,
+        "sampleF1": 0.6954802259887006,
+        "exactMatch": 0.6288135593220339
+      }
+    },
+    "combined/macro": {
+      "representationId": 54,
+      "policyId": 20,
+      "shrinkId": 4,
+      "representation": {
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.604294188764676,
+        "macroRecall": 0.5341372600220567,
+        "macroF1": 0.5609576710326669,
+        "microF1": 0.6787687450670876,
+        "sampleF1": 0.6836158192090395,
+        "exactMatch": 0.6
+      }
+    },
+    "hybrid_False": {
+      "representationId": 0,
+      "policyId": 1,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": false,
+        "minRc": 0.0,
+        "minLn": 0.0,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.5852331641928868,
+        "macroRecall": 0.5143021452951922,
+        "macroF1": 0.5308009685243765,
+        "microF1": 0.5934242181234964,
+        "sampleF1": 0.5932203389830508,
+        "exactMatch": 0.535593220338983
+      }
+    },
+    "hybrid_True": {
+      "representationId": 0,
+      "policyId": 21,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6414731659303106,
+        "macroRecall": 0.5573260374492852,
+        "macroF1": 0.582117096243005,
+        "microF1": 0.6733590733590734,
+        "sampleF1": 0.6977401129943502,
+        "exactMatch": 0.6338983050847458
+      }
+    }
+  }
+}

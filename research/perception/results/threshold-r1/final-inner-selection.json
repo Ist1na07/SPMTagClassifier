@@ -1,0 +1,411 @@
+{
+  "usesOuterTruth": false,
+  "choices": {
+    "all/balanced": {
+      "representationId": 0,
+      "policyId": 21,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6103325175416396,
+        "macroRecall": 0.5261211149673688,
+        "macroF1": 0.5475622019142181,
+        "microF1": 0.6588197277582254,
+        "sampleF1": 0.6840341219446423,
+        "exactMatch": 0.6010972436226772
+      }
+    },
+    "all/macro": {
+      "representationId": 0,
+      "policyId": 141,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.18,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6149693624377779,
+        "macroRecall": 0.5238990883976843,
+        "macroF1": 0.5485820771961768,
+        "microF1": 0.6535926822961771,
+        "sampleF1": 0.6758356856529377,
+        "exactMatch": 0.5894954629885159
+      }
+    },
+    "hard_time/balanced": {
+      "representationId": 0,
+      "policyId": 21,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6103325175416396,
+        "macroRecall": 0.5261211149673688,
+        "macroF1": 0.5475622019142181,
+        "microF1": 0.6588197277582254,
+        "sampleF1": 0.6840341219446423,
+        "exactMatch": 0.6010972436226772
+      }
+    },
+    "hard_time/macro": {
+      "representationId": 0,
+      "policyId": 141,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.18,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6149693624377779,
+        "macroRecall": 0.5238990883976843,
+        "macroF1": 0.5485820771961768,
+        "microF1": 0.6535926822961771,
+        "sampleF1": 0.6758356856529377,
+        "exactMatch": 0.5894954629885159
+      }
+    },
+    "branch_time/balanced": {
+      "representationId": 2,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 0,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5629797766965432,
+        "macroRecall": 0.49203703189285775,
+        "macroF1": 0.5122036801288395,
+        "microF1": 0.6473888897505645,
+        "sampleF1": 0.6580443418279733,
+        "exactMatch": 0.5506780050757359
+      }
+    },
+    "branch_time/macro": {
+      "representationId": 2,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 0,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5629797766965432,
+        "macroRecall": 0.49203703189285775,
+        "macroF1": 0.5122036801288395,
+        "microF1": 0.6473888897505645,
+        "sampleF1": 0.6580443418279733,
+        "exactMatch": 0.5506780050757359
+      }
+    },
+    "difficulty/balanced": {
+      "representationId": 38,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 18,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5842684231896879,
+        "macroRecall": 0.5058092012433898,
+        "macroF1": 0.5318526160908573,
+        "microF1": 0.6644280651595679,
+        "sampleF1": 0.6759572205967896,
+        "exactMatch": 0.5763302059224108
+      }
+    },
+    "difficulty/macro": {
+      "representationId": 38,
+      "policyId": 260,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 18,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.2,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5881870306568594,
+        "macroRecall": 0.5028575479036981,
+        "macroF1": 0.5329460238298549,
+        "microF1": 0.6576053161988559,
+        "sampleF1": 0.6651909515509886,
+        "exactMatch": 0.5699247089227802
+      }
+    },
+    "actions/balanced": {
+      "representationId": 14,
+      "policyId": 20,
+      "shrinkId": 3,
+      "representation": {
+        "weightId": 6,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5377070044072417,
+        "macroRecall": 0.5164186724596069,
+        "macroF1": 0.5189483828328825,
+        "microF1": 0.6520089855827108,
+        "sampleF1": 0.6715312361715284,
+        "exactMatch": 0.5407666456420624
+      }
+    },
+    "actions/macro": {
+      "representationId": 14,
+      "policyId": 20,
+      "shrinkId": 3,
+      "representation": {
+        "weightId": 6,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.5377070044072417,
+        "macroRecall": 0.5164186724596069,
+        "macroF1": 0.5189483828328825,
+        "microF1": 0.6520089855827108,
+        "sampleF1": 0.6715312361715284,
+        "exactMatch": 0.5407666456420624
+      }
+    },
+    "combined/balanced": {
+      "representationId": 54,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.577258015147568,
+        "macroRecall": 0.5071649145794533,
+        "macroF1": 0.5299965998248265,
+        "microF1": 0.6576134912222575,
+        "sampleF1": 0.6702101520394614,
+        "exactMatch": 0.5661149543617904
+      }
+    },
+    "combined/macro": {
+      "representationId": 54,
+      "policyId": 20,
+      "shrinkId": 7,
+      "representation": {
+        "weightId": 26,
+        "power": 2.0,
+        "hard": false
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.35
+      },
+      "shrink": {
+        "reference": 0.25,
+        "strength": 0.1
+      },
+      "metrics": {
+        "macroPrecision": 0.577258015147568,
+        "macroRecall": 0.5071649145794533,
+        "macroF1": 0.5299965998248265,
+        "microF1": 0.6576134912222575,
+        "sampleF1": 0.6702101520394614,
+        "exactMatch": 0.5661149543617904
+      }
+    },
+    "hybrid_False": {
+      "representationId": 0,
+      "policyId": 1,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": false,
+        "minRc": 0.0,
+        "minLn": 0.0,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.5468484243165385,
+        "macroRecall": 0.47228850425677993,
+        "macroF1": 0.48741472861659424,
+        "microF1": 0.5690451988814039,
+        "sampleF1": 0.5715368017589697,
+        "exactMatch": 0.49962304581120515
+      }
+    },
+    "hybrid_True": {
+      "representationId": 0,
+      "policyId": 21,
+      "shrinkId": 0,
+      "representation": {
+        "weightId": 0,
+        "power": 1.0,
+        "hard": true
+      },
+      "policy": {
+        "hybrid": true,
+        "minRc": 0.1,
+        "minLn": 0.1,
+        "mixFloor": 0.05,
+        "dominant": 0.5
+      },
+      "shrink": {
+        "reference": 0.1,
+        "strength": 0.0
+      },
+      "metrics": {
+        "macroPrecision": 0.6103325175416396,
+        "macroRecall": 0.5261211149673688,
+        "macroF1": 0.5475622019142181,
+        "microF1": 0.6588197277582254,
+        "sampleF1": 0.6840341219446423,
+        "exactMatch": 0.6010972436226772
+      }
+    }
+  }
+}

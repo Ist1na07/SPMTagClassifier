@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "profiles": {
+    "actions": {
+      "schemaVersion": 1,
+      "kind": "anchored",
+      "classes": [
+        "anchor",
+        "chordjack",
+        "coordination",
+        "dense chordstream",
+        "density",
+        "fast chordstream",
+        "inverse",
+        "ln wildcard",
+        "minijack",
+        "release",
+        "speed",
+        "tech",
+        "technical",
+        "vibro"
+      ],
+      "components": false,
+      "supportPower": 1,
+      "recipe": {
+        "alpha": 0,
+        "beta": 2,
+        "width": 1000,
+        "hold": 1
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.1,
+        "minLn": 0.05
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 0.5,
+        "mixOverride": 1.01
+      },
+      "modelIdentity": null,
+      "provenance": {
+        "study": "linear-support-r3",
+        "model": "detail",
+        "arm": "actions",
+        "selection": "pooled INNER; first-degree affinity restriction; retrospective source-song groups",
+        "baseline": "v1.2.2"
+      }
+    },
+    "detail": {
+      "schemaVersion": 1,
+      "kind": "anchored",
+      "classes": [
+        "anchor",
+        "chordjack",
+        "coordination",
+        "dense chordstream",
+        "density",
+        "fast chordstream",
+        "inverse",
+        "ln wildcard",
+        "minijack",
+        "release",
+        "speed",
+        "tech",
+        "technical",
+        "vibro"
+      ],
+      "components": false,
+      "supportPower": 1,
+      "recipe": {
+        "alpha": 4,
+        "beta": 1.5,
+        "width": 1000,
+        "hold": 1
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.07,
+        "minLn": 0.05
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 1.01,
+        "mixOverride": 0.5
+      },
+      "modelIdentity": "5b0ddc61be53f5107f3b4dfa26a8397aa515e316c16b244878d1fc7039d0ba8f",
+      "provenance": {
+        "study": "linear-support-r3",
+        "model": "detail",
+        "arm": "combined",
+        "selection": "pooled INNER; first-degree affinity restriction; retrospective source-song groups",
+        "baseline": "v1.2.2"
+      }
+    },
+    "compact": {
+      "schemaVersion": 1,
+      "kind": "anchored",
+      "classes": [
+        "anchor",
+        "chordjack",
+        "coordination",
+        "dense chordstream",
+        "density",
+        "fast chordstream",
+        "inverse",
+        "ln wildcard",
+        "minijack",
+        "release",
+        "speed",
+        "tech",
+        "technical",
+        "vibro"
+      ],
+      "components": false,
+      "supportPower": 1,
+      "recipe": {
+        "alpha": 4,
+        "beta": 1.5,
+        "width": 1000,
+        "hold": 1
+      },
+      "family": {
+        "enabled": true,
+        "minRc": 0.07,
+        "minLn": 0.05
+      },
+      "policy": {
+        "keepFloor": 0.25,
+        "addFloor": 1.01,
+        "mixOverride": 1.01
+      },
+      "modelIdentity": "55216a3abcf6653c4c78b2082c730d64a0ed4bc476d3e477c4789a39f309fb4e",
+      "provenance": {
+        "study": "linear-support-r3",
+        "model": "compact",
+        "arm": "combined",
+        "selection": "pooled INNER; first-degree affinity restriction; retrospective source-song groups",
+        "baseline": "v1.2.2"
+      }
+    }
+  }
+}

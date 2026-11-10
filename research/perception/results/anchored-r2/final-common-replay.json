@@ -1,0 +1,821 @@
+{
+  "scope": "Full-study deterministic common-profile replay, NOT a fresh or OOF estimate",
+  "metrics": {
+    "actions/protected": {
+      "macroPrecision": 0.5910067057125881,
+      "macroRecall": 0.538674266530803,
+      "macroF1": 0.5523307632825029,
+      "microF1": 0.6783171521035599,
+      "exactMatch": 0.6354466858789626,
+      "sampleF1": 0.7117195004803074,
+      "perClass": [
+        {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0.0,
+          "fp": 0.0,
+          "fn": 6.0
+        },
+        {
+          "precision": 0.8571428571428571,
+          "recall": 0.8571428571428571,
+          "f1": 0.8571428571428571,
+          "tp": 30.0,
+          "fp": 5.0,
+          "fn": 5.0
+        },
+        {
+          "precision": 0.6666666666666666,
+          "recall": 0.4444444444444444,
+          "f1": 0.5333333333333333,
+          "tp": 10.0,
+          "fp": 5.0,
+          "fn": 12.5
+        },
+        {
+          "precision": 0.7272727272727273,
+          "recall": 0.6,
+          "f1": 0.6575342465753424,
+          "tp": 24.0,
+          "fp": 9.0,
+          "fn": 16.0
+        },
+        {
+          "precision": 0.6060606060606061,
+          "recall": 0.625,
+          "f1": 0.6153846153846154,
+          "tp": 20.0,
+          "fp": 13.0,
+          "fn": 12.0
+        },
+        {
+          "precision": 0.6666666666666666,
+          "recall": 0.5333333333333333,
+          "f1": 0.5925925925925926,
+          "tp": 8.0,
+          "fp": 4.0,
+          "fn": 7.0
+        },
+        {
+          "precision": 0.8181818181818182,
+          "recall": 0.9375,
+          "f1": 0.8737864077669902,
+          "tp": 45.0,
+          "fp": 10.0,
+          "fn": 3.0
+        },
+        {
+          "precision": 0.7083333333333334,
+          "recall": 0.9444444444444444,
+          "f1": 0.8095238095238095,
+          "tp": 17.0,
+          "fp": 7.0,
+          "fn": 1.0
+        },
+        {
+          "precision": 0.6296296296296297,
+          "recall": 0.4358974358974359,
+          "f1": 0.5151515151515151,
+          "tp": 17.0,
+          "fp": 10.0,
+          "fn": 22.0
+        },
+        {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0.0,
+          "fp": 0.0,
+          "fn": 3.0
+        },
+        {
+          "precision": 0.8571428571428571,
+          "recall": 0.5454545454545454,
+          "f1": 0.6666666666666666,
+          "tp": 6.0,
+          "fp": 1.0,
+          "fn": 5.0
+        },
+        {
+          "precision": 0.5925925925925926,
+          "recall": 0.64,
+          "f1": 0.6153846153846154,
+          "tp": 16.0,
+          "fp": 11.0,
+          "fn": 9.0
+        },
+        {
+          "precision": 0.8,
+          "recall": 0.7407407407407407,
+          "f1": 0.7692307692307693,
+          "tp": 20.0,
+          "fp": 5.0,
+          "fn": 7.0
+        },
+        {
+          "precision": 0.7916666666666666,
+          "recall": 0.6129032258064516,
+          "f1": 0.6909090909090909,
+          "tp": 19.0,
+          "fp": 5.0,
+          "fn": 12.0
+        },
+        {
+          "precision": 0.9090909090909091,
+          "recall": 0.5263157894736842,
+          "f1": 0.6666666666666666,
+          "tp": 20.0,
+          "fp": 2.0,
+          "fn": 18.0
+        },
+        {
+          "precision": 0.4166666666666667,
+          "recall": 0.7142857142857143,
+          "f1": 0.5263157894736842,
+          "tp": 10.0,
+          "fp": 14.0,
+          "fn": 4.0
+        },
+        {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0.0,
+          "fp": 0.0,
+          "fn": 5.0
+        }
+      ]
+    },
+    "combined/protected": {
+      "macroPrecision": 0.6031962829456555,
+      "macroRecall": 0.5466061657862317,
+      "macroF1": 0.5597917574082177,
+      "microF1": 0.6921581335061568,
+      "exactMatch": 0.6440922190201729,
+      "sampleF1": 0.7237271853986552,
+      "perClass": [
+        {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0.0,
+          "fp": 0.0,
+          "fn": 6.0
+        },
+        {
+          "precision": 0.8648648648648649,
+          "recall": 0.9142857142857143,
+          "f1": 0.8888888888888888,
+          "tp": 32.0,
+          "fp": 5.0,
+          "fn": 3.0
+        },
+        {
+          "precision": 0.6875,
+          "recall": 0.4888888888888889,
+          "f1": 0.5714285714285714,
+          "tp": 11.0,
+          "fp": 5.0,
+          "fn": 11.5
+        },
+        {
+          "precision": 0.6944444444444444,
+          "recall": 0.625,
+          "f1": 0.6578947368421053,
+          "tp": 25.0,
+          "fp": 11.0,
+          "fn": 15.0
+        },
+        {
+          "precision": 0.5882352941176471,
+          "recall": 0.625,
+          "f1": 0.6060606060606061,
+          "tp": 20.0,
+          "fp": 14.0,
+          "fn": 12.0
+        },
+        {
+          "precision": 0.6666666666666666,
+          "recall": 0.5333333333333333,
+          "f1": 0.5925925925925926,
+          "tp": 8.0,
+          "fp": 4.0,
+          "fn": 7.0
+        },
+        {
+          "precision": 0.8421052631578947,
+          "recall": 1.0,
+          "f1": 0.9142857142857143,
+          "tp": 48.0,
+          "fp": 9.0,
+          "fn": 0.0
+        },
+        {
+          "precision": 0.7083333333333334,
+          "recall": 0.9444444444444444,
+          "f1": 0.8095238095238095,
+          "tp": 17.0,
+          "fp": 7.0,
+          "fn": 1.0
+        },
+        {
+          "precision": 0.75,
+          "recall": 0.38461538461538464,
+          "f1": 0.5084745762711864,
+          "tp": 15.0,
+          "fp": 5.0,
+          "fn": 24.0
+        },
+        {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0.0,
+          "fp": 0.0,
+          "fn": 3.0
+        },
+        {
+          "precision": 0.8571428571428571,
+          "recall": 0.5454545454545454,
+          "f1": 0.6666666666666666,
+          "tp": 6.0,
+          "fp": 1.0,
+          "fn": 5.0
+        },
+        {
+          "precision": 0.6521739130434783,
+          "recall": 0.6,
+          "f1": 0.625,
+          "tp": 15.0,
+          "fp": 8.0,
+          "fn": 10.0
+        },
+        {
+          "precision": 0.8076923076923077,
+          "recall": 0.7777777777777778,
+          "f1": 0.7924528301886793,
+          "tp": 21.0,
+          "fp": 5.0,
+          "fn": 6.0
+        },
+        {
+          "precision": 0.8260869565217391,
+          "recall": 0.6129032258064516,
+          "f1": 0.7037037037037037,
+          "tp": 19.0,
+          "fp": 4.0,
+          "fn": 12.0
+        },
+        {
+          "precision": 0.9090909090909091,
+          "recall": 0.5263157894736842,
+          "f1": 0.6666666666666666,
+          "tp": 20.0,
+          "fp": 2.0,
+          "fn": 18.0
+        },
+        {
+          "precision": 0.4,
+          "recall": 0.7142857142857143,
+          "f1": 0.5128205128205128,
+          "tp": 10.0,
+          "fp": 15.0,
+          "fn": 4.0
+        },
+        {
+          "precision": 0.0,
+          "recall": 0.0,
+          "f1": 0.0,
+          "tp": 0.0,
+          "fp": 0.0,
+          "fn": 5.0
+        }
+      ]
+    }
+  },
+  "queries": {
+    "actions/protected": [
+      {
+        "uid": "query/CTX-H",
+        "predicted": [
+          "dense chordstream"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.6499597731131956,
+          "coordination": 0.0,
+          "dense chordstream": 87.62316737654865,
+          "density": 0.0,
+          "fast chordstream": 12.97476962139547,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 6.995564210286746,
+          "release": 0.0,
+          "speed": 12.777511008065481,
+          "tech": 0.3930281591262858,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/CTX-L",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 11.656387318740515,
+          "coordination": 0.0,
+          "dense chordstream": 4.3862534913640125,
+          "density": 0.0,
+          "fast chordstream": 7.155158195877523,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 3.5801474487216955,
+          "release": 0.0,
+          "speed": 94.90567796591138,
+          "tech": 6.89050512423529,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/LN-H",
+        "predicted": [
+          "fast chordstream"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 6.627396416625439,
+          "coordination": 0.0,
+          "dense chordstream": 47.04951005908211,
+          "density": 0.0,
+          "fast chordstream": 60.860384253405655,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 6.4130588964980655,
+          "release": 0.0,
+          "speed": 0.2764691616212012,
+          "tech": 0.015968152341720256,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/LN-L",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 17.07732586120639,
+          "coordination": 0.0,
+          "dense chordstream": 1.7893107081641917,
+          "density": 0.0,
+          "fast chordstream": 3.36077744877322,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 8.005228759787522,
+          "release": 0.0,
+          "speed": 44.31008112452429,
+          "tech": 9.021719482183716,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/B01",
+        "predicted": [],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.0,
+          "coordination": 0.0,
+          "dense chordstream": 0.0,
+          "density": 0.0,
+          "fast chordstream": 0.0,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 0.0,
+          "release": 0.0,
+          "speed": 0.0,
+          "tech": 0.0,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/B02",
+        "predicted": [],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.0,
+          "coordination": 0.0,
+          "dense chordstream": 0.0,
+          "density": 0.0,
+          "fast chordstream": 0.0,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 0.0,
+          "release": 0.0,
+          "speed": 0.0,
+          "tech": 0.0,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/C16",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.020812682821687585,
+          "coordination": 0.0,
+          "dense chordstream": 0.018604235917243413,
+          "density": 0.0,
+          "fast chordstream": 0.006155541720556548,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 0.0005565342282490196,
+          "release": 0.0,
+          "speed": 99.89999999999995,
+          "tech": 0.13754627786781026,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/C24",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.02804803451702633,
+          "coordination": 0.0,
+          "dense chordstream": 0.028733014341954775,
+          "density": 0.0,
+          "fast chordstream": 0.0018007576439640946,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 0.0004908507769746585,
+          "release": 0.0,
+          "speed": 99.89999999999961,
+          "tech": 0.14763406463932566,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/F01",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.3449202039330432,
+          "coordination": 0.0,
+          "dense chordstream": 1.2734335060065514,
+          "density": 0.0,
+          "fast chordstream": 3.2589436082684236,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 1.2692579982900303,
+          "release": 0.0,
+          "speed": 76.3996395957053,
+          "tech": 21.642333075455113,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/F02",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.3999394339133597,
+          "coordination": 0.0,
+          "dense chordstream": 49.62679427941292,
+          "density": 0.0,
+          "fast chordstream": 1.051559284157075,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 0.42800451919395976,
+          "release": 0.0,
+          "speed": 79.69518138872571,
+          "tech": 4.543627082341618,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "derived/r10/I01-target-only",
+        "predicted": [
+          "inverse"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.0,
+          "coordination": 33.74363720035854,
+          "dense chordstream": 0.0,
+          "density": 44.48508802056329,
+          "fast chordstream": 0.0,
+          "inverse": 49.26099284702651,
+          "ln wildcard": 15.6,
+          "minijack": 0.0,
+          "release": 7.701591269090638,
+          "speed": 0.0,
+          "tech": 0.0,
+          "technical": 3.683521646240183,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "derived/r10/I02-target-only",
+        "predicted": [
+          "density"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.0,
+          "coordination": 2.3754838888394656,
+          "dense chordstream": 0.0,
+          "density": 26.692755267689527,
+          "fast chordstream": 0.0,
+          "inverse": 25.28600996301954,
+          "ln wildcard": 8.065772535026582,
+          "minijack": 0.0,
+          "release": 6.181468678199028,
+          "speed": 0.0,
+          "tech": 0.0,
+          "technical": 2.4861251788460237,
+          "vibro": 0.0
+        }
+      }
+    ],
+    "combined/protected": [
+      {
+        "uid": "query/CTX-H",
+        "predicted": [
+          "dense chordstream"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.6664484419198369,
+          "coordination": 0.0,
+          "dense chordstream": 93.9858531526178,
+          "density": 0.0,
+          "fast chordstream": 13.950041269930292,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 7.5075746602755125,
+          "release": 0.0,
+          "speed": 6.39866695428638,
+          "tech": 0.2036165077046662,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/CTX-L",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 11.656387318740533,
+          "coordination": 0.0,
+          "dense chordstream": 4.386253491364019,
+          "density": 0.0,
+          "fast chordstream": 7.155158195877533,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 3.5801474487217004,
+          "release": 0.0,
+          "speed": 94.90567796591152,
+          "tech": 6.8905051242352995,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/LN-H",
+        "predicted": [
+          "fast chordstream"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 6.312230294757007,
+          "coordination": 0.0,
+          "dense chordstream": 48.38461978821651,
+          "density": 0.0,
+          "fast chordstream": 61.199823678872,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 6.58941000806699,
+          "release": 0.0,
+          "speed": 0.28405480619423035,
+          "tech": 0.01640133814387438,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/LN-L",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 18.14360842281346,
+          "coordination": 0.0,
+          "dense chordstream": 1.858311870973468,
+          "density": 0.0,
+          "fast chordstream": 3.5350214556559596,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 8.541341092773887,
+          "release": 0.0,
+          "speed": 41.337517916388194,
+          "tech": 9.380732225260187,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/B01",
+        "predicted": [],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.0,
+          "coordination": 0.0,
+          "dense chordstream": 0.0,
+          "density": 0.0,
+          "fast chordstream": 0.0,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 0.0,
+          "release": 0.0,
+          "speed": 0.0,
+          "tech": 0.0,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/B02",
+        "predicted": [],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.0,
+          "coordination": 0.0,
+          "dense chordstream": 0.0,
+          "density": 0.0,
+          "fast chordstream": 0.0,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 0.0,
+          "release": 0.0,
+          "speed": 0.0,
+          "tech": 0.0,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/C16",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.020812682821687595,
+          "coordination": 0.0,
+          "dense chordstream": 0.018604235917243424,
+          "density": 0.0,
+          "fast chordstream": 0.006155541720556552,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 0.00055653422824902,
+          "release": 0.0,
+          "speed": 99.9,
+          "tech": 0.13754627786781035,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/C24",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.028048034517026428,
+          "coordination": 0.0,
+          "dense chordstream": 0.02873301434195488,
+          "density": 0.0,
+          "fast chordstream": 0.001800757643964101,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 0.0004908507769746602,
+          "release": 0.0,
+          "speed": 99.89999999999995,
+          "tech": 0.14763406463932616,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/F01",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.3333019789571088,
+          "coordination": 0.0,
+          "dense chordstream": 1.2130609397843108,
+          "density": 0.0,
+          "fast chordstream": 3.002428016459361,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 1.1822168223282346,
+          "release": 0.0,
+          "speed": 74.75794957621802,
+          "tech": 21.55741981750255,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "query/F02",
+        "predicted": [
+          "speed"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.417710598681084,
+          "coordination": 0.0,
+          "dense chordstream": 50.95209116010522,
+          "density": 0.0,
+          "fast chordstream": 1.0654196589404126,
+          "inverse": 0.0,
+          "ln wildcard": 0.0,
+          "minijack": 0.44251238191923975,
+          "release": 0.0,
+          "speed": 78.49554352329903,
+          "tech": 4.451670199665238,
+          "technical": 0.0,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "derived/r10/I01-target-only",
+        "predicted": [
+          "inverse"
+        ],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.0,
+          "coordination": 33.74363720035854,
+          "dense chordstream": 0.0,
+          "density": 44.48508802056329,
+          "fast chordstream": 0.0,
+          "inverse": 49.26099284702651,
+          "ln wildcard": 15.6,
+          "minijack": 0.0,
+          "release": 7.701591269090638,
+          "speed": 0.0,
+          "tech": 0.0,
+          "technical": 3.683521646240183,
+          "vibro": 0.0
+        }
+      },
+      {
+        "uid": "derived/r10/I02-target-only",
+        "predicted": [],
+        "percentages": {
+          "anchor": 0.0,
+          "chordjack": 0.0,
+          "coordination": 1.8215165950514933,
+          "dense chordstream": 0.0,
+          "density": 20.467954725425816,
+          "fast chordstream": 0.0,
+          "inverse": 19.389265061603677,
+          "ln wildcard": 6.184819267134312,
+          "minijack": 0.0,
+          "release": 4.739938600312465,
+          "speed": 0.0,
+          "tech": 0.0,
+          "technical": 1.9063561289214992,
+          "vibro": 0.0
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,104 @@
+{
+  "source": "User answers in this chat, 2026-11-07, Asia/Taipei",
+  "purpose": "Revised original local primary labels, newly annotated derived whole charts, and Anchor ontology clarification; no random local accuracy sample",
+  "rawAnswers": {
+    "targetOnlyAndOriginalCorrection": "我注意到之前的标注忘记了wildcard这个分类：这个分类就是给“四不像”键型的，上一轮的两个谱面应该都是ln wildcard。对于本轮的I01，应该是density主要、release次要；I02则是density主要、inverse次要。",
+    "anchor": "anchor不是独立于jack的键型，而是可重合的属性",
+    "originalComponentClarification": "主类改为 LN Wildcard，原成分等级仍保留"
+  },
+  "questions": {
+    "targetOnly": "Treat the cropped I01/I02 target-only playables as independent whole charts and give whole-chart tags, rather than repeating the prior local confidence labels.",
+    "anchor": "Does C48 minijack/anchor mean coexisting positives or alternative primary classes? Parenthesized Vibro remains possible rather than a hard positive.",
+    "clarification": "After changing the original I01/I02 local primary to LN Wildcard, should the previous Inverse/Density/Technical qualitative component grades remain or be replaced?"
+  },
+  "originalLocalRevision": {
+    "reference": "annotations-r9.json, exact original source targets, with the original contextual excerpts",
+    "cases": {
+      "I01": {
+        "uid": "local/I01",
+        "sourceUid": "spm_dataset-1.1.1/bm_0291/290",
+        "sourceGroup": "spm_dataset-1.1.1/bm_0291/290",
+        "sourceTargetMs": [125196, 132696],
+        "previousPrimaryCategory": "inverse",
+        "primaryCategory": "ln wildcard",
+        "components": [
+          {"category": "inverse", "confidenceQualitative": "high", "presence": "affirmed"},
+          {"category": "density", "confidenceQualitative": "low", "presence": "affirmed"}
+        ]
+      },
+      "I02": {
+        "uid": "local/I02",
+        "sourceUid": "spm_dataset-1.1.1/bm_0023/22",
+        "sourceGroup": "spm_dataset-1.1.1/bm_0026/25",
+        "sourceTargetMs": [88550, 96050],
+        "previousPrimaryCategory": "inverse",
+        "primaryCategory": "ln wildcard",
+        "components": [
+          {"category": "inverse", "confidenceQualitative": "medium", "presence": "affirmed"},
+          {"category": "technical", "confidenceQualitative": "low", "presence": "affirmed"},
+          {"category": "coordination", "confidenceQualitative": "possible small component", "presence": "possible"}
+        ]
+      }
+    },
+    "componentGradesRetainedByExplicitUserClarification": true,
+    "primaryMeaning": "Wildcard is the perceived overall local slot for an atypical composite; retained component grades need not equal this slot choice.",
+    "numericConfidence": null,
+    "omittedComponents": "unknown, not new negatives"
+  },
+  "derivedWholeCharts": {
+    "reference": "artifacts/frontier-annotation-r9/target-only/inputs.json and actual written target-only .osu files",
+    "conditions": {
+      "keyCount": 7,
+      "playableTargetMs": [1000, 8500],
+      "DT": false,
+      "emptyLeadInMs": 1000,
+      "originalODAndRedBeatPhasePreserved": true,
+      "originalAudioAndSVPreserved": false,
+      "context": "cropped playable itself, not the original full source chart"
+    },
+    "cases": {
+      "I01-target-only": {
+        "uid": "derived/r10/I01-target-only",
+        "source": "artifacts/frontier-annotation-r9/target-only/I01-target-only.osu",
+        "originSourceUid": "spm_dataset-1.1.1/bm_0291/290",
+        "sourceGroup": "spm_dataset-1.1.1/bm_0291/290",
+        "originSourceTargetMs": [125196, 132696],
+        "tags": ["density", "release"],
+        "primaryCategory": "density",
+        "secondaryCategory": "release",
+        "sourceOD": 7,
+        "boundaryActions": {"insertedHeldLNHeads": 7, "clippedLNTails": 2}
+      },
+      "I02-target-only": {
+        "uid": "derived/r10/I02-target-only",
+        "source": "artifacts/frontier-annotation-r9/target-only/I02-target-only.osu",
+        "originSourceUid": "spm_dataset-1.1.1/bm_0023/22",
+        "sourceGroup": "spm_dataset-1.1.1/bm_0026/25",
+        "originSourceTargetMs": [88550, 96050],
+        "tags": ["density", "inverse"],
+        "primaryCategory": "density",
+        "secondaryCategory": "inverse",
+        "sourceOD": 5,
+        "boundaryActions": {"insertedHeldLNHeads": 6, "clippedLNTails": 5}
+      }
+    },
+    "supervisionScope": "Whole-chart major-impression targets for these edited playables only. Do not copy to original intervals or all source windows. Preserve originating song group across every train/validation/test split.",
+    "referenceContextRule": "Use each derived UID's own physical source and reference context. originSourceUid records provenance only; do not alias World.reference to the original full chart through sourceUid.",
+    "qualitativeOrdering": "primary > secondary in whole-chart perception; no numeric confidence or local ordinal grade supplied",
+    "boundaryCaveat": "Original interior events match, but inserted heads and clipped tails are real events in the newly labelled derived playable. The answer did not separately attribute its different judgement to cropping, context, or boundary events."
+  },
+  "anchorOntology": {
+    "kind": "coexisting Jack-related attribute, not a mutually exclusive independent base slot",
+    "priorDefinitionReference": "annotations-r8.json",
+    "productWholeTag": "Keep existing Anchor whole-chart truth as the player's main perceived attribute; structural occurrence alone does not add an unannotated whole-chart positive.",
+    "modelImplication": "Separate attribute presence from base-slot competition and aggregation. Compare a matched independently tuned attribute treatment rather than relabelling the old trained softmax in place.",
+    "C48": "Do not continue treating Anchor as an independent base-slot alternative that must compete with Minijack. This reply supplies no numeric Anchor confidence or Vibro certainty.",
+    "vibro": "No new hard positive from this answer"
+  },
+  "frozenResearchBoundary": {
+    "activeStudy": "results/prototype-null-three-inner-r3",
+    "action": "Preserve the nearly completed 432-head study, original r9 annotations, runtime sources, fit states and prospective selections. Interpret it as the prior-primary-label control. Apply revised primary labels and derived whole-chart observations in a new versioned input and matched re-tuned comparison.",
+    "oldGradeInformation": "Retained, not withdrawn; current ordinal observations remain valid under the user's explicit clarification.",
+    "acceptance": "Fitting revised primary or derived whole labels is training compliance, not fresh random generalization. Original whole 349 labels and all source-song split boundaries remain unchanged."
+  }
+}
