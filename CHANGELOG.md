@@ -2,7 +2,15 @@
 
 ## v1.2 series — one iteration from the v1.1.0 baseline
 
-All research and implementation below belongs to one iteration. Patch releases are checkpoints, not separate research generations. The former v1.3.0 was misnumbered; its tag/assets remain historical and v1.2.3 is the canonical current release.
+All research and implementation below belongs to one iteration. Patch releases are checkpoints, not separate research generations. The former v1.3.0 was misnumbered; its tag/assets remain historical. Current release: v1.2.4.
+
+### 1.2.4 — 2026-11-11: static-hand cuts and stable tempo readout
+
+- Exclude Dense/Fast CS when both 7K thumb assignments certify no within-hand finger-set change in pure Rice. Remove only the impossible supports, never inflate alternatives; Anchor/Vibro remain attributes. H01/H03 now use low-fit Wildcard instead of false CS; H02/H04 retain real cuts.
+- Retain reliable same-type cadence plateaus (150→200, DT225→300), original long expert boundaries and scores. Avoid subsecond tempo fragmentation; retain measured ranges and legacy BPM, and preserve fallback in long irregular regions.
+- Fix missing RC Wildcard branches appearing as fake 0% in overlay; migrate previously installed schema1 pages idempotently.
+- Complete 102-configuration, 1,836-INNER-fit joint route/type/integral study and independently selected ablations. No held-out local feedback benefit; reject the fitted head. Original manual accuracy and all three whole-map metrics remain unchanged. Ordinary Tech→Dense errors remain unresolved.
+- Verify411 maps/151,679 refined intervals/all three actual consumers with no new rating calls; inspect actual offline plugin rendering. Raw legacy/cache, 4K/6K and modern paths stay available.
 
 ### 1.2.3 — 2026-11-10: numbering, baseline and selection correction
 

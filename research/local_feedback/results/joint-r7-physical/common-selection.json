@@ -1,0 +1,5876 @@
+{
+  "usesOuterTruth": false,
+  "choices": {
+    "all": {
+      "configId": -1,
+      "config": {},
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    "joint": {
+      "configId": -1,
+      "config": {},
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    "local_only": {
+      "configId": -1,
+      "config": {},
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    "whole_only": {
+      "configId": -1,
+      "config": {},
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    "no_extra": {
+      "configId": -1,
+      "config": {},
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    "route_only": {
+      "configId": 40,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.5047168343641247,
+        "manualAccuracy": 0.6886392801829576,
+        "realAccuracy": 0.36677499999999996,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5854284413244057,
+          "macroRecall": 0.5365227645742588,
+          "macroF1": 0.546827553720723,
+          "microF1": 0.6788996467746448,
+          "sampleF1": 0.7122848190359007,
+          "exactMatch": 0.6362885577677871
+        },
+        "actions": {
+          "macroPrecision": 0.5830805670491025,
+          "macroRecall": 0.5314432771164751,
+          "macroF1": 0.5416866914673109,
+          "microF1": 0.6735570558913588,
+          "sampleF1": 0.7063601200242817,
+          "exactMatch": 0.6300061301541201
+        },
+        "compact": {
+          "macroPrecision": 0.5929692077998436,
+          "macroRecall": 0.5370728740853442,
+          "macroF1": 0.5487749228119935,
+          "microF1": 0.6856582681039174,
+          "sampleF1": 0.7187764930059259,
+          "exactMatch": 0.6454640897511017
+        }
+      },
+      "mechanismPass": true
+    },
+    "type_only": {
+      "configId": -1,
+      "config": {},
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    "no_guidance": {
+      "configId": -1,
+      "config": {},
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    "no_context": {
+      "configId": -1,
+      "config": {},
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    "product": {
+      "configId": -1,
+      "config": {},
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    }
+  },
+  "baseline": {
+    "configId": -1,
+    "config": {},
+    "local": {
+      "accuracy": 0.46899987671938387,
+      "manualAccuracy": 0.6958552679007846,
+      "realAccuracy": 0.29885833333333334,
+      "observations": 70,
+      "manualObservations": 30,
+      "realObservations": 40,
+      "techToDenseMs": 2510.0,
+      "techCsConfusionMs": 3214.1666666666665
+    },
+    "consumers": {
+      "detail": {
+        "macroPrecision": 0.5869407415565937,
+        "macroRecall": 0.5391398340239358,
+        "macroF1": 0.5487322767997934,
+        "microF1": 0.6825065882072473,
+        "sampleF1": 0.716317971963749,
+        "exactMatch": 0.6380271422849435
+      },
+      "actions": {
+        "macroPrecision": 0.5866074893740922,
+        "macroRecall": 0.5361318126335616,
+        "macroF1": 0.5461620963875752,
+        "microF1": 0.6782248269906545,
+        "sampleF1": 0.7115331099286006,
+        "exactMatch": 0.6351791200584391
+      },
+      "compact": {
+        "macroPrecision": 0.5941490946676716,
+        "macroRecall": 0.5395838746590046,
+        "macroF1": 0.5508584110859268,
+        "microF1": 0.6877216980659465,
+        "sampleF1": 0.7210750418331501,
+        "exactMatch": 0.6466285818862071
+      }
+    },
+    "mechanismPass": false
+  },
+  "innerMeans": [
+    {
+      "configId": 0,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 0.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46883288755231944,
+        "manualAccuracy": 0.6954656265109675,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 4105.833333333333
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869091523794444,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487619501462977,
+          "microF1": 0.6824942645075085,
+          "sampleF1": 0.7163103655920988,
+          "exactMatch": 0.6380043231699933
+        },
+        "actions": {
+          "macroPrecision": 0.5855877993209776,
+          "macroRecall": 0.5350813924654944,
+          "macroF1": 0.5450866740625497,
+          "microF1": 0.6766519409364151,
+          "sampleF1": 0.7092147559771615,
+          "exactMatch": 0.6316876126201041
+        },
+        "compact": {
+          "macroPrecision": 0.5943267019424655,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5509978694297194,
+          "microF1": 0.6878969949170705,
+          "sampleF1": 0.7212602270183351,
+          "exactMatch": 0.6471841374417626
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 1,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 0.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4102722671835392,
+        "manualAccuracy": 0.6787308456504805,
+        "realAccuracy": 0.20892833333333333,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3760.0,
+        "techCsConfusionMs": 9289.166666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5905678119334741,
+          "macroRecall": 0.5407058353529574,
+          "macroF1": 0.5514343314029587,
+          "microF1": 0.686478624391103,
+          "sampleF1": 0.7179987316567672,
+          "exactMatch": 0.6364205824799402
+        },
+        "actions": {
+          "macroPrecision": 0.5887664516395489,
+          "macroRecall": 0.536616077558824,
+          "macroF1": 0.547276178644609,
+          "microF1": 0.6789269065728186,
+          "sampleF1": 0.7099449278880904,
+          "exactMatch": 0.6300641893903685
+        },
+        "compact": {
+          "macroPrecision": 0.5943003375604171,
+          "macroRecall": 0.5373649001126642,
+          "macroF1": 0.5502291476760482,
+          "microF1": 0.6865667222034585,
+          "sampleF1": 0.7189860666665325,
+          "exactMatch": 0.6472462132704075
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 2,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 0.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.4103076517143727,
+        "manualAccuracy": 0.6268845206668697,
+        "realAccuracy": 0.24787499999999998,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 5794.75,
+        "techCsConfusionMs": 15611.0
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6100305435485655,
+          "macroRecall": 0.5347657601807142,
+          "macroF1": 0.5534214090159898,
+          "microF1": 0.6901836417182422,
+          "sampleF1": 0.7122208244746129,
+          "exactMatch": 0.6190033626226824
+        },
+        "actions": {
+          "macroPrecision": 0.6008257703060442,
+          "macroRecall": 0.5203517164283532,
+          "macroF1": 0.5385194433406525,
+          "microF1": 0.6741832195654713,
+          "sampleF1": 0.6963536025076561,
+          "exactMatch": 0.6065827173034649
+        },
+        "compact": {
+          "macroPrecision": 0.6135712193563748,
+          "macroRecall": 0.5138554315060017,
+          "macroF1": 0.5422786795924662,
+          "microF1": 0.6783041208097781,
+          "sampleF1": 0.698457162736001,
+          "exactMatch": 0.6348132009086354
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 3,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46803093673269597,
+        "manualAccuracy": 0.6935944079318461,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 5189.166666666667
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869052201016349,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487716951275797,
+          "microF1": 0.682499403377547,
+          "sampleF1": 0.7163033170210364,
+          "exactMatch": 0.637983177456806
+        },
+        "actions": {
+          "macroPrecision": 0.5855877993209776,
+          "macroRecall": 0.5350813924654944,
+          "macroF1": 0.5450866740625497,
+          "microF1": 0.6766519409364151,
+          "sampleF1": 0.7092147559771615,
+          "exactMatch": 0.6316876126201041
+        },
+        "compact": {
+          "macroPrecision": 0.5944523932446274,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5511260252672178,
+          "microF1": 0.688074477671628,
+          "sampleF1": 0.7214586397167478,
+          "exactMatch": 0.6477793755370008
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 4,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.41463161427353373,
+        "manualAccuracy": 0.6800137666382454,
+        "realAccuracy": 0.21559499999999998,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3676.6666666666665,
+        "techCsConfusionMs": 9530.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5899299540066136,
+          "macroRecall": 0.5415101818593618,
+          "macroF1": 0.5518146700185914,
+          "microF1": 0.6867972862297841,
+          "sampleF1": 0.7186676132762021,
+          "exactMatch": 0.6364205824799402
+        },
+        "actions": {
+          "macroPrecision": 0.5876116760038043,
+          "macroRecall": 0.5358619297458527,
+          "macroF1": 0.5463210208618098,
+          "microF1": 0.6782175830317039,
+          "sampleF1": 0.7093569237151577,
+          "exactMatch": 0.6294992176389561
+        },
+        "compact": {
+          "macroPrecision": 0.5945843246730488,
+          "macroRecall": 0.5370029091624381,
+          "macroF1": 0.5502284964177824,
+          "microF1": 0.6869055044803719,
+          "sampleF1": 0.7193553214357277,
+          "exactMatch": 0.6483996158078931
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 5,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.43642730854997797,
+        "manualAccuracy": 0.6267970532832818,
+        "realAccuracy": 0.29365,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 5089.916666666667,
+        "techCsConfusionMs": 16792.666666666668
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6109975942381906,
+          "macroRecall": 0.54307276659085,
+          "macroF1": 0.5609468668529154,
+          "microF1": 0.6981192563017994,
+          "sampleF1": 0.7235347223370879,
+          "exactMatch": 0.6284786697324233
+        },
+        "actions": {
+          "macroPrecision": 0.6080998946129791,
+          "macroRecall": 0.5305139700800877,
+          "macroF1": 0.5493851245883886,
+          "microF1": 0.6838142181742399,
+          "sampleF1": 0.7094248660932893,
+          "exactMatch": 0.6198314317713297
+        },
+        "compact": {
+          "macroPrecision": 0.6181259025520663,
+          "macroRecall": 0.525213824237173,
+          "macroF1": 0.552786563040172,
+          "microF1": 0.6907871042144013,
+          "sampleF1": 0.7130745253998912,
+          "exactMatch": 0.6467082913200644
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 6,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46674275212698524,
+        "manualAccuracy": 0.6905886438518544,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 7080.833333333333
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.586675817995965,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5486792970572405,
+          "microF1": 0.6823315901170212,
+          "sampleF1": 0.7161110832647889,
+          "exactMatch": 0.6374064761880631
+        },
+        "actions": {
+          "macroPrecision": 0.5850899469475926,
+          "macroRecall": 0.5350813924654944,
+          "macroF1": 0.544883871202373,
+          "microF1": 0.6763059511164679,
+          "sampleF1": 0.7088226820930162,
+          "exactMatch": 0.6305113909676682
+        },
+        "compact": {
+          "macroPrecision": 0.5944523932446274,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5511260252672178,
+          "microF1": 0.688074477671628,
+          "sampleF1": 0.7214586397167478,
+          "exactMatch": 0.6477793755370008
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 7,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4250945707009231,
+        "manualAccuracy": 0.6777606649688205,
+        "realAccuracy": 0.235595,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3176.6666666666665,
+        "techCsConfusionMs": 10339.166666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5895550970895945,
+          "macroRecall": 0.5413430966403734,
+          "macroF1": 0.551791973852497,
+          "microF1": 0.6869767138089055,
+          "sampleF1": 0.7186654803332829,
+          "exactMatch": 0.6358041986715147
+        },
+        "actions": {
+          "macroPrecision": 0.5864312045262033,
+          "macroRecall": 0.5360684014748158,
+          "macroF1": 0.546244567223479,
+          "microF1": 0.678734345683281,
+          "sampleF1": 0.7103186502969834,
+          "exactMatch": 0.6300319540795614
+        },
+        "compact": {
+          "macroPrecision": 0.5943894356269862,
+          "macroRecall": 0.5348818684384562,
+          "macroF1": 0.5490052545677944,
+          "microF1": 0.6864085552594817,
+          "sampleF1": 0.7181973806921323,
+          "exactMatch": 0.6483996158078931
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 8,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.4543254695261072,
+        "manualAccuracy": 0.6205305400053612,
+        "realAccuracy": 0.3296716666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3849.4166666666665,
+        "techCsConfusionMs": 16966.75
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.609485800097415,
+          "macroRecall": 0.5443665195447172,
+          "macroF1": 0.561325999283014,
+          "microF1": 0.6980395675499994,
+          "sampleF1": 0.7244303018542234,
+          "exactMatch": 0.6279600276999289
+        },
+        "actions": {
+          "macroPrecision": 0.6086101219322525,
+          "macroRecall": 0.5362564426090047,
+          "macroF1": 0.5546402158109722,
+          "microF1": 0.6900996799435765,
+          "sampleF1": 0.7176503408406881,
+          "exactMatch": 0.6267294431437822
+        },
+        "compact": {
+          "macroPrecision": 0.6203113311981607,
+          "macroRecall": 0.5263518505175142,
+          "macroF1": 0.55487055920019,
+          "microF1": 0.692571431765341,
+          "sampleF1": 0.7144257007050694,
+          "exactMatch": 0.6472743803864821
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 9,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 0.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46241944181518996,
+        "manualAccuracy": 0.6805009197909988,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10755.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869204673226522,
+          "macroRecall": 0.5394194467602961,
+          "macroF1": 0.5489061627924924,
+          "microF1": 0.6824756566938094,
+          "sampleF1": 0.7165168420491584,
+          "exactMatch": 0.6380482879981308
+        },
+        "actions": {
+          "macroPrecision": 0.5858269188460039,
+          "macroRecall": 0.5360700232119106,
+          "macroF1": 0.5458411618333546,
+          "microF1": 0.6773352810965744,
+          "sampleF1": 0.7106621190782132,
+          "exactMatch": 0.632850561614216
+        },
+        "compact": {
+          "macroPrecision": 0.594827010269613,
+          "macroRecall": 0.5391753779269784,
+          "macroF1": 0.5510874273540081,
+          "microF1": 0.6879078872601637,
+          "sampleF1": 0.7212748819610476,
+          "exactMatch": 0.6484185784603764
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 10,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 0.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.43146085976495907,
+        "manualAccuracy": 0.6593442283404601,
+        "realAccuracy": 0.2605483333333333,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 8230.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.587975913896443,
+          "macroRecall": 0.5388608430718419,
+          "macroF1": 0.5502443249984413,
+          "microF1": 0.683071743475486,
+          "sampleF1": 0.7117713024626777,
+          "exactMatch": 0.6254816239337446
+        },
+        "actions": {
+          "macroPrecision": 0.5833569212838374,
+          "macroRecall": 0.5298096160676127,
+          "macroF1": 0.5420449256312685,
+          "microF1": 0.6730216135723516,
+          "sampleF1": 0.7017422496050735,
+          "exactMatch": 0.619671104507813
+        },
+        "compact": {
+          "macroPrecision": 0.6005142431933402,
+          "macroRecall": 0.5356606425260538,
+          "macroF1": 0.551774355703511,
+          "microF1": 0.6888919558790972,
+          "sampleF1": 0.7187284863640787,
+          "exactMatch": 0.6489077758988321
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 11,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 0.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.4260105858950044,
+        "manualAccuracy": 0.6171291448661215,
+        "realAccuracy": 0.28267166666666665,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3341.0833333333335,
+        "techCsConfusionMs": 10696.083333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6094373660976814,
+          "macroRecall": 0.5155035560086498,
+          "macroF1": 0.5410109114437783,
+          "microF1": 0.6763581077162969,
+          "sampleF1": 0.6947945341143816,
+          "exactMatch": 0.6046105046282092
+        },
+        "actions": {
+          "macroPrecision": 0.6024949453844073,
+          "macroRecall": 0.5011986564544536,
+          "macroF1": 0.5262746381923123,
+          "microF1": 0.6607035950181567,
+          "sampleF1": 0.6799203288895647,
+          "exactMatch": 0.5937311484592556
+        },
+        "compact": {
+          "macroPrecision": 0.6238423935485501,
+          "macroRecall": 0.49690069487983707,
+          "macroF1": 0.5341526902794645,
+          "microF1": 0.6682039611575327,
+          "sampleF1": 0.6823562867915385,
+          "exactMatch": 0.6218084369609597
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 12,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46237150663498294,
+        "manualAccuracy": 0.6803890710371822,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10922.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869204673226522,
+          "macroRecall": 0.5394194467602961,
+          "macroF1": 0.5489061627924924,
+          "microF1": 0.6824756566938094,
+          "sampleF1": 0.7165168420491584,
+          "exactMatch": 0.6380482879981308
+        },
+        "actions": {
+          "macroPrecision": 0.5858269188460039,
+          "macroRecall": 0.5360700232119106,
+          "macroF1": 0.5458411618333546,
+          "microF1": 0.6773352810965744,
+          "sampleF1": 0.7106621190782132,
+          "exactMatch": 0.632850561614216
+        },
+        "compact": {
+          "macroPrecision": 0.594827010269613,
+          "macroRecall": 0.5391753779269784,
+          "macroF1": 0.5510874273540081,
+          "microF1": 0.6879078872601637,
+          "sampleF1": 0.7212748819610476,
+          "exactMatch": 0.6484185784603764
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 13,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4345442248159263,
+        "manualAccuracy": 0.6598720801260503,
+        "realAccuracy": 0.2655483333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9045.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.588373783868554,
+          "macroRecall": 0.539533111979405,
+          "macroF1": 0.5508335210363494,
+          "microF1": 0.6839576439180507,
+          "sampleF1": 0.7129357945977833,
+          "exactMatch": 0.62664611606885
+        },
+        "actions": {
+          "macroPrecision": 0.5843324954765569,
+          "macroRecall": 0.5304360329629713,
+          "macroF1": 0.542814546813001,
+          "microF1": 0.6740589130545751,
+          "sampleF1": 0.7028812982736077,
+          "exactMatch": 0.6208049044731049
+        },
+        "compact": {
+          "macroPrecision": 0.6000114779846927,
+          "macroRecall": 0.5356606425260538,
+          "macroF1": 0.5516162279362751,
+          "microF1": 0.6887194230978687,
+          "sampleF1": 0.7187284863640787,
+          "exactMatch": 0.6489077758988321
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 14,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.43986050912725094,
+        "manualAccuracy": 0.6180522990746965,
+        "realAccuracy": 0.3062166666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3257.75,
+        "techCsConfusionMs": 12415.916666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6162763252234552,
+          "macroRecall": 0.5316807114306404,
+          "macroF1": 0.554676943420227,
+          "microF1": 0.6916172227524037,
+          "sampleF1": 0.7125070440605928,
+          "exactMatch": 0.6196065798893767
+        },
+        "actions": {
+          "macroPrecision": 0.6108074764675043,
+          "macroRecall": 0.5196209212577099,
+          "macroF1": 0.5426525644569312,
+          "microF1": 0.6792882085541133,
+          "sampleF1": 0.7002622697856288,
+          "exactMatch": 0.6113232812445174
+        },
+        "compact": {
+          "macroPrecision": 0.6330450874261885,
+          "macroRecall": 0.5156064567936364,
+          "macroF1": 0.5512669269351984,
+          "microF1": 0.6870866270638262,
+          "sampleF1": 0.7031130746624711,
+          "exactMatch": 0.6391300383811851
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 15,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4621873021336778,
+        "manualAccuracy": 0.679959260534137,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 11339.166666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5865469845962283,
+          "macroRecall": 0.5394194467602961,
+          "macroF1": 0.548740345937209,
+          "microF1": 0.682297270911388,
+          "sampleF1": 0.7163272326445321,
+          "exactMatch": 0.6374794597842514
+        },
+        "actions": {
+          "macroPrecision": 0.5858269188460039,
+          "macroRecall": 0.5360700232119106,
+          "macroF1": 0.5458411618333546,
+          "microF1": 0.6773352810965744,
+          "sampleF1": 0.7106621190782132,
+          "exactMatch": 0.632850561614216
+        },
+        "compact": {
+          "macroPrecision": 0.5948011493478592,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5512892728049007,
+          "microF1": 0.6882525243110292,
+          "sampleF1": 0.7216570524151606,
+          "exactMatch": 0.6483746136322388
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 16,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4422826055789562,
+        "manualAccuracy": 0.659563857462009,
+        "realAccuracy": 0.2793216666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10212.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5888852197417856,
+          "macroRecall": 0.5397938486851545,
+          "macroF1": 0.5512649359737113,
+          "microF1": 0.684486727862026,
+          "sampleF1": 0.7137066434772626,
+          "exactMatch": 0.6277493541250978
+        },
+        "actions": {
+          "macroPrecision": 0.5846714025890534,
+          "macroRecall": 0.5317969106473782,
+          "macroF1": 0.5437602783203643,
+          "microF1": 0.6754847235402072,
+          "sampleF1": 0.7048694236732073,
+          "exactMatch": 0.6219902467561792
+        },
+        "compact": {
+          "macroPrecision": 0.5995864569617114,
+          "macroRecall": 0.5356606425260538,
+          "macroF1": 0.5516774237806399,
+          "microF1": 0.688736915369422,
+          "sampleF1": 0.7189526444009858,
+          "exactMatch": 0.6495111527449923
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 17,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.4600342173895479,
+        "manualAccuracy": 0.6198420627978339,
+        "realAccuracy": 0.34017833333333336,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2863.3333333333335,
+        "techCsConfusionMs": 12909.0
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6151263581344643,
+          "macroRecall": 0.5399027420342692,
+          "macroF1": 0.5605728965346072,
+          "microF1": 0.6986975001437742,
+          "sampleF1": 0.7239856211928318,
+          "exactMatch": 0.6300869029061608
+        },
+        "actions": {
+          "macroPrecision": 0.611172677310384,
+          "macroRecall": 0.5307374300100546,
+          "macroF1": 0.552171830706555,
+          "microF1": 0.6876654156370844,
+          "sampleF1": 0.7131034449370129,
+          "exactMatch": 0.6223489218712129
+        },
+        "compact": {
+          "macroPrecision": 0.630719412993782,
+          "macroRecall": 0.5213767399165055,
+          "macroF1": 0.5553874669691597,
+          "microF1": 0.6917327901552749,
+          "sampleF1": 0.7097292629717371,
+          "exactMatch": 0.6449533207734707
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 18,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 0.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.40703382727968823,
+        "manualAccuracy": 0.6718855969859391,
+        "realAccuracy": 0.20839500000000002,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9064.166666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5862822733158626,
+          "macroRecall": 0.5371044246176877,
+          "macroF1": 0.5475657241143196,
+          "microF1": 0.6807636253340075,
+          "sampleF1": 0.7134395812549883,
+          "exactMatch": 0.6357901042634039
+        },
+        "actions": {
+          "macroPrecision": 0.5859568733061075,
+          "macroRecall": 0.5350783621796816,
+          "macroF1": 0.5457984547141551,
+          "microF1": 0.6771457981117104,
+          "sampleF1": 0.7094962980463718,
+          "exactMatch": 0.6317340508996445
+        },
+        "compact": {
+          "macroPrecision": 0.596884426289996,
+          "macroRecall": 0.5375983268166793,
+          "macroF1": 0.5515247014994381,
+          "microF1": 0.6878196243148086,
+          "sampleF1": 0.7203375800415177,
+          "exactMatch": 0.6501464992059008
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 19,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 0.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.42004798145481703,
+        "manualAccuracy": 0.6361652900612397,
+        "realAccuracy": 0.25796,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9252.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5893712636394256,
+          "macroRecall": 0.5361992959268906,
+          "macroF1": 0.5501482326271486,
+          "microF1": 0.6819518682479707,
+          "sampleF1": 0.7075802433608182,
+          "exactMatch": 0.6214218443682876
+        },
+        "actions": {
+          "macroPrecision": 0.5851251882885218,
+          "macroRecall": 0.5272821124171186,
+          "macroF1": 0.5418351379179761,
+          "microF1": 0.6725662447491841,
+          "sampleF1": 0.6979299203534515,
+          "exactMatch": 0.61449593154279
+        },
+        "compact": {
+          "macroPrecision": 0.606162124639621,
+          "macroRecall": 0.5307940310060649,
+          "macroF1": 0.5515110182497888,
+          "microF1": 0.6873161625660553,
+          "sampleF1": 0.7130906838800343,
+          "exactMatch": 0.6443307156117979
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 20,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 0.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.41736202132856226,
+        "manualAccuracy": 0.6097247164333118,
+        "realAccuracy": 0.27309,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2982.6666666666665,
+        "techCsConfusionMs": 11736.333333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6002582777814626,
+          "macroRecall": 0.504955273849813,
+          "macroF1": 0.5303380747921691,
+          "microF1": 0.6615074890611031,
+          "sampleF1": 0.6770747067869948,
+          "exactMatch": 0.5814628763122865
+        },
+        "actions": {
+          "macroPrecision": 0.5955250809708377,
+          "macroRecall": 0.49142093112590474,
+          "macroF1": 0.5165431244566744,
+          "microF1": 0.6491564690255717,
+          "sampleF1": 0.6663136525236273,
+          "exactMatch": 0.5763352331406415
+        },
+        "compact": {
+          "macroPrecision": 0.6269983384016509,
+          "macroRecall": 0.4871233381878007,
+          "macroF1": 0.526584425362768,
+          "microF1": 0.6612508315505986,
+          "sampleF1": 0.671631682117147,
+          "exactMatch": 0.6120434923118555
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 21,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4140260586905768,
+        "manualAccuracy": 0.6720585813891236,
+        "realAccuracy": 0.22050166666666668,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9147.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5863069999390547,
+          "macroRecall": 0.5371044246176877,
+          "macroF1": 0.5475931326651047,
+          "microF1": 0.6807732038586055,
+          "sampleF1": 0.7136291906596147,
+          "exactMatch": 0.6363589324772834
+        },
+        "actions": {
+          "macroPrecision": 0.5859815999292995,
+          "macroRecall": 0.5350783621796816,
+          "macroF1": 0.5458258632649402,
+          "microF1": 0.6771553897900433,
+          "sampleF1": 0.7096859074509982,
+          "exactMatch": 0.6323028791135238
+        },
+        "compact": {
+          "macroPrecision": 0.596884426289996,
+          "macroRecall": 0.5375983268166793,
+          "macroF1": 0.5515247014994381,
+          "microF1": 0.6878196243148086,
+          "sampleF1": 0.7203375800415177,
+          "exactMatch": 0.6501464992059008
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 22,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4210563411144426,
+        "manualAccuracy": 0.6362959070448106,
+        "realAccuracy": 0.2596266666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10002.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5901785891820598,
+          "macroRecall": 0.5379904526747948,
+          "macroF1": 0.5515115528513816,
+          "microF1": 0.6840318929962573,
+          "sampleF1": 0.7100963257330156,
+          "exactMatch": 0.6231678761143193
+        },
+        "actions": {
+          "macroPrecision": 0.5846117895257185,
+          "macroRecall": 0.5271745458795318,
+          "macroF1": 0.5415279948813138,
+          "microF1": 0.6722211192986604,
+          "sampleF1": 0.6977510126321708,
+          "exactMatch": 0.6139403759872345
+        },
+        "compact": {
+          "macroPrecision": 0.6053220317551192,
+          "macroRecall": 0.5320917481605595,
+          "macroF1": 0.5520087519902575,
+          "microF1": 0.6881780187560281,
+          "sampleF1": 0.7145199432029514,
+          "exactMatch": 0.6454550993812327
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 23,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.42654489960751996,
+        "manualAccuracy": 0.6100092101953244,
+        "realAccuracy": 0.28894666666666663,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2748.6666666666665,
+        "techCsConfusionMs": 12510.666666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6071822417868801,
+          "macroRecall": 0.5277136061505886,
+          "macroF1": 0.548838352713916,
+          "microF1": 0.6830283950011942,
+          "sampleF1": 0.7029591153703058,
+          "exactMatch": 0.6028286197158356
+        },
+        "actions": {
+          "macroPrecision": 0.6018789640623968,
+          "macroRecall": 0.5139077910435407,
+          "macroF1": 0.5353353838148933,
+          "microF1": 0.6693616677314257,
+          "sampleF1": 0.689303173517995,
+          "exactMatch": 0.5933366500140107
+        },
+        "compact": {
+          "macroPrecision": 0.6332254304816112,
+          "macroRecall": 0.5076200578804492,
+          "macroF1": 0.54495763099111,
+          "microF1": 0.6810278965817451,
+          "sampleF1": 0.6934646707555993,
+          "exactMatch": 0.6298875921940134
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 24,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.41393878260606726,
+        "manualAccuracy": 0.6718549371919347,
+        "realAccuracy": 0.22050166666666668,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9397.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5863069999390547,
+          "macroRecall": 0.5371044246176877,
+          "macroF1": 0.5475931326651047,
+          "microF1": 0.6807732038586055,
+          "sampleF1": 0.7136291906596147,
+          "exactMatch": 0.6363589324772834
+        },
+        "actions": {
+          "macroPrecision": 0.5864794128738303,
+          "macroRecall": 0.5354164284406687,
+          "macroF1": 0.5462115304317038,
+          "microF1": 0.6776904573750469,
+          "sampleF1": 0.7102710567649613,
+          "exactMatch": 0.6328678508649362
+        },
+        "compact": {
+          "macroPrecision": 0.596884426289996,
+          "macroRecall": 0.5375983268166793,
+          "macroF1": 0.5515247014994381,
+          "microF1": 0.6878196243148086,
+          "sampleF1": 0.7203375800415177,
+          "exactMatch": 0.6501464992059008
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 25,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.42324421202930884,
+        "manualAccuracy": 0.636956494735054,
+        "realAccuracy": 0.26295999999999997,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10718.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5893966448868279,
+          "macroRecall": 0.5394273257812181,
+          "macroF1": 0.5525088228315418,
+          "microF1": 0.6847083488026117,
+          "sampleF1": 0.7112654595099058,
+          "exactMatch": 0.6225726380190814
+        },
+        "actions": {
+          "macroPrecision": 0.5843637582889357,
+          "macroRecall": 0.5296927581555296,
+          "macroF1": 0.543389168532297,
+          "microF1": 0.6744712026675633,
+          "sampleF1": 0.7010287468461837,
+          "exactMatch": 0.6150514870983456
+        },
+        "compact": {
+          "macroPrecision": 0.6052281951534629,
+          "macroRecall": 0.533772737298296,
+          "macroF1": 0.5534846859563446,
+          "microF1": 0.6893937543667151,
+          "sampleF1": 0.7162914029506253,
+          "exactMatch": 0.6472265591289067
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 26,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.438811853327302,
+        "manualAccuracy": 0.6120521022081491,
+        "realAccuracy": 0.30888166666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2629.3333333333335,
+        "techCsConfusionMs": 12123.0
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.605026619743792,
+          "macroRecall": 0.5341993159171411,
+          "macroF1": 0.5530068685485675,
+          "microF1": 0.6902448129946898,
+          "sampleF1": 0.7133198711819243,
+          "exactMatch": 0.6111399093222472
+        },
+        "actions": {
+          "macroPrecision": 0.6005968638714835,
+          "macroRecall": 0.5231128590175168,
+          "macroF1": 0.5415348066431971,
+          "microF1": 0.678835744440118,
+          "sampleF1": 0.7023898419139757,
+          "exactMatch": 0.6053761345746335
+        },
+        "compact": {
+          "macroPrecision": 0.6330659823249822,
+          "macroRecall": 0.5143050384660433,
+          "macroF1": 0.5508757625521624,
+          "microF1": 0.6869556410358033,
+          "sampleF1": 0.7011136487083669,
+          "exactMatch": 0.6374352045654149
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 27,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 0.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 28,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 0.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.46523991873062576,
+        "manualAccuracy": 0.6870820325936824,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9139.166666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5871680502219954,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5488342624153874,
+          "microF1": 0.6826852880763497,
+          "sampleF1": 0.7165075813683756,
+          "exactMatch": 0.638595970498823
+        },
+        "actions": {
+          "macroPrecision": 0.5863708429914012,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5460631144871226,
+          "microF1": 0.6780506784680869,
+          "sampleF1": 0.711334697230188,
+          "exactMatch": 0.6345838819632009
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 29,
+      "config": {
+        "mode": "both",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 0.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.462070779283807,
+        "manualAccuracy": 0.6796873738844388,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 11522.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5848411133911883,
+          "macroRecall": 0.5391724955029127,
+          "macroF1": 0.5490400795179058,
+          "microF1": 0.6843875207013536,
+          "sampleF1": 0.7167259858680052,
+          "exactMatch": 0.6362859488810951
+        },
+        "actions": {
+          "macroPrecision": 0.5856453079097457,
+          "macroRecall": 0.5349565133673424,
+          "macroF1": 0.5459469206899421,
+          "microF1": 0.6800952888254761,
+          "sampleF1": 0.7119892516579833,
+          "exactMatch": 0.6333939618264534
+        },
+        "compact": {
+          "macroPrecision": 0.5940647952471065,
+          "macroRecall": 0.5352003904961087,
+          "macroF1": 0.5492151290332464,
+          "microF1": 0.687440348920087,
+          "sampleF1": 0.7195332726986078,
+          "exactMatch": 0.648924905019623
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 30,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 31,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4688799322717015,
+        "manualAccuracy": 0.6933531753006367,
+        "realAccuracy": 0.30052500000000004,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 32,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.49908834250905526,
+        "manualAccuracy": 0.6680994658544622,
+        "realAccuracy": 0.37233,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2593.3333333333335,
+        "techCsConfusionMs": 3610.0
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5849794922186337,
+          "macroRecall": 0.5365576723646952,
+          "macroF1": 0.5461336274831711,
+          "microF1": 0.6800891443500571,
+          "sampleF1": 0.7136381322676962,
+          "exactMatch": 0.6345836162671424
+        },
+        "actions": {
+          "macroPrecision": 0.5834554388929404,
+          "macroRecall": 0.5313667168060926,
+          "macroF1": 0.541571033115387,
+          "microF1": 0.6759236404625252,
+          "sampleF1": 0.7089768767686406,
+          "exactMatch": 0.6310857273456304
+        },
+        "compact": {
+          "macroPrecision": 0.5907572584991998,
+          "macroRecall": 0.5353709826040499,
+          "macroF1": 0.5468667792645888,
+          "microF1": 0.6852518240232252,
+          "sampleF1": 0.7193147366124496,
+          "exactMatch": 0.6460183977308822
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 33,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46899987671938387,
+        "manualAccuracy": 0.6958552679007846,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 34,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4698613301105709,
+        "manualAccuracy": 0.69342088136911,
+        "realAccuracy": 0.3021916666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 35,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.5069786630639062,
+        "manualAccuracy": 0.6584813249268923,
+        "realAccuracy": 0.39335166666666666,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3564.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5834497367971275,
+          "macroRecall": 0.5351077827333134,
+          "macroF1": 0.5446160909015031,
+          "microF1": 0.6788772218876877,
+          "sampleF1": 0.7121151746854165,
+          "exactMatch": 0.6322934629176671
+        },
+        "actions": {
+          "macroPrecision": 0.5843467426615193,
+          "macroRecall": 0.5336480496559334,
+          "macroF1": 0.5438598418139239,
+          "microF1": 0.67765302539308,
+          "sampleF1": 0.7107555071055901,
+          "exactMatch": 0.6317150882471612
+        },
+        "compact": {
+          "macroPrecision": 0.5905341593289022,
+          "macroRecall": 0.5360862970646205,
+          "macroF1": 0.5475186407744984,
+          "microF1": 0.6861305899954538,
+          "sampleF1": 0.7199301522702383,
+          "exactMatch": 0.6454836923232955
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 36,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46877083288833976,
+        "manualAccuracy": 0.6953208322950152,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 37,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.5047770734644501,
+        "manualAccuracy": 0.6887798380837171,
+        "realAccuracy": 0.36677499999999996,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5857522247683938,
+          "macroRecall": 0.5367678626134745,
+          "macroF1": 0.5470526528111957,
+          "microF1": 0.6794368479564873,
+          "sampleF1": 0.7128843394195936,
+          "exactMatch": 0.6368880781514802
+        },
+        "actions": {
+          "macroPrecision": 0.5829490482411132,
+          "macroRecall": 0.5311584334492786,
+          "macroF1": 0.5413327067301574,
+          "microF1": 0.6735570558913588,
+          "sampleF1": 0.7063601200242817,
+          "exactMatch": 0.6300061301541201
+        },
+        "compact": {
+          "macroPrecision": 0.5925011925394409,
+          "macroRecall": 0.536542932378932,
+          "macroF1": 0.5481995490447199,
+          "microF1": 0.6851193298123518,
+          "sampleF1": 0.718176972622233,
+          "exactMatch": 0.6448645693674088
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 38,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.5287591713294498,
+        "manualAccuracy": 0.679129177546494,
+        "realAccuracy": 0.4159816666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2676.6666666666665,
+        "techCsConfusionMs": 3693.3333333333335
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5861879852732047,
+          "macroRecall": 0.530812548446011,
+          "macroF1": 0.5430379356414292,
+          "microF1": 0.6794284169710747,
+          "sampleF1": 0.7106850061190294,
+          "exactMatch": 0.6350591152212863
+        },
+        "actions": {
+          "macroPrecision": 0.584111035105373,
+          "macroRecall": 0.5237825186662347,
+          "macroF1": 0.5364019148302402,
+          "microF1": 0.674037450008404,
+          "sampleF1": 0.7051138790999086,
+          "exactMatch": 0.629887668457961
+        },
+        "compact": {
+          "macroPrecision": 0.5894772292869046,
+          "macroRecall": 0.5266560085222538,
+          "macroF1": 0.5411701410173055,
+          "microF1": 0.6785564331320564,
+          "sampleF1": 0.710311297914365,
+          "exactMatch": 0.6397092945397979
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 39,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46877083288833976,
+        "manualAccuracy": 0.6953208322950152,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869407415565937,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487322767997934,
+          "microF1": 0.6825065882072473,
+          "sampleF1": 0.716317971963749,
+          "exactMatch": 0.6380271422849435
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 40,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.5047168343641247,
+        "manualAccuracy": 0.6886392801829576,
+        "realAccuracy": 0.36677499999999996,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5854284413244057,
+          "macroRecall": 0.5365227645742588,
+          "macroF1": 0.546827553720723,
+          "microF1": 0.6788996467746448,
+          "sampleF1": 0.7122848190359007,
+          "exactMatch": 0.6362885577677871
+        },
+        "actions": {
+          "macroPrecision": 0.5830805670491025,
+          "macroRecall": 0.5314432771164751,
+          "macroF1": 0.5416866914673109,
+          "microF1": 0.6735570558913588,
+          "sampleF1": 0.7063601200242817,
+          "exactMatch": 0.6300061301541201
+        },
+        "compact": {
+          "macroPrecision": 0.5929692077998436,
+          "macroRecall": 0.5370728740853442,
+          "macroF1": 0.5487749228119935,
+          "microF1": 0.6856582681039174,
+          "sampleF1": 0.7187764930059259,
+          "exactMatch": 0.6454640897511017
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 41,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.5288827416760992,
+        "manualAccuracy": 0.6752775083553426,
+        "realAccuracy": 0.41908666666666666,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2593.3333333333335,
+        "techCsConfusionMs": 3647.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5863991301420354,
+          "macroRecall": 0.5354006088652735,
+          "macroF1": 0.5461833231540248,
+          "microF1": 0.6818643172591171,
+          "sampleF1": 0.7144043164750081,
+          "exactMatch": 0.636863075975826
+        },
+        "actions": {
+          "macroPrecision": 0.5869418121652282,
+          "macroRecall": 0.5320296399616297,
+          "macroF1": 0.543645679284257,
+          "microF1": 0.67990951475055,
+          "sampleF1": 0.7122439512442988,
+          "exactMatch": 0.6351164881430367
+        },
+        "compact": {
+          "macroPrecision": 0.5904975505480946,
+          "macroRecall": 0.5325791145315099,
+          "macroF1": 0.5451835743475376,
+          "microF1": 0.6832473198226952,
+          "sampleF1": 0.71646808862778,
+          "exactMatch": 0.6443173126927045
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 42,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.468370786860242,
+        "manualAccuracy": 0.6938318360072313,
+        "realAccuracy": 0.299275,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5871680502219954,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5488342624153874,
+          "microF1": 0.6826852880763497,
+          "sampleF1": 0.7165075813683756,
+          "exactMatch": 0.638595970498823
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 43,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.5154057778527613,
+        "manualAccuracy": 0.6813579261008874,
+        "realAccuracy": 0.39094166666666663,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5854996202016151,
+          "macroRecall": 0.535295853519982,
+          "macroF1": 0.5461825996494846,
+          "microF1": 0.6780629633786139,
+          "sampleF1": 0.7113491750421947,
+          "exactMatch": 0.6368837958630252
+        },
+        "actions": {
+          "macroPrecision": 0.5820970145320056,
+          "macroRecall": 0.5280841222717396,
+          "macroF1": 0.5389088562741,
+          "microF1": 0.6711584198145158,
+          "sampleF1": 0.7036747903630891,
+          "exactMatch": 0.6288393246975411
+        },
+        "compact": {
+          "macroPrecision": 0.5933845466602886,
+          "macroRecall": 0.5360409165222447,
+          "macroF1": 0.54856955150708,
+          "microF1": 0.6851199077427594,
+          "sampleF1": 0.7181377610536347,
+          "exactMatch": 0.6459893789628316
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 44,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.5305662786289114,
+        "manualAccuracy": 0.6769835390230157,
+        "realAccuracy": 0.4207533333333333,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2676.6666666666665,
+        "techCsConfusionMs": 3693.3333333333335
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5868382901128356,
+          "macroRecall": 0.5292623557193475,
+          "macroF1": 0.5424733704604257,
+          "microF1": 0.6790737788898847,
+          "sampleF1": 0.7097166330846436,
+          "exactMatch": 0.634490422442696
+        },
+        "actions": {
+          "macroPrecision": 0.5837479024362534,
+          "macroRecall": 0.5200725979733919,
+          "macroF1": 0.5337651836393946,
+          "microF1": 0.6728399928161745,
+          "sampleF1": 0.7028193124140564,
+          "exactMatch": 0.6287691101179744
+        },
+        "compact": {
+          "macroPrecision": 0.5892422707492596,
+          "macroRecall": 0.5226012317598646,
+          "macroF1": 0.5386576321394921,
+          "microF1": 0.6764372294816322,
+          "sampleF1": 0.7073534571665677,
+          "exactMatch": 0.6378981522524414
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 45,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4684058285212728,
+        "manualAccuracy": 0.69391359988297,
+        "realAccuracy": 0.299275,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5871680502219954,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5488342624153874,
+          "microF1": 0.6826852880763497,
+          "sampleF1": 0.7165075813683756,
+          "exactMatch": 0.638595970498823
+        },
+        "actions": {
+          "macroPrecision": 0.5866074893740922,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5461620963875752,
+          "microF1": 0.6782248269906545,
+          "sampleF1": 0.7115331099286006,
+          "exactMatch": 0.6351791200584391
+        },
+        "compact": {
+          "macroPrecision": 0.5941490946676716,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5508584110859268,
+          "microF1": 0.6877216980659465,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6466285818862071
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 46,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.5162512464939167,
+        "manualAccuracy": 0.68157735293025,
+        "realAccuracy": 0.39225666666666664,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 3214.1666666666665
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5854996202016151,
+          "macroRecall": 0.535295853519982,
+          "macroF1": 0.5461825996494846,
+          "microF1": 0.6780629633786139,
+          "sampleF1": 0.7113491750421947,
+          "exactMatch": 0.6368837958630252
+        },
+        "actions": {
+          "macroPrecision": 0.583045006816315,
+          "macroRecall": 0.5291353586170936,
+          "macroF1": 0.5400574718368943,
+          "microF1": 0.6721774412891183,
+          "sampleF1": 0.7048070471873874,
+          "exactMatch": 0.6299715815218394
+        },
+        "compact": {
+          "macroPrecision": 0.5937847067243142,
+          "macroRecall": 0.5370261145230136,
+          "macroF1": 0.5492524564939502,
+          "microF1": 0.6860017425133785,
+          "sampleF1": 0.7191298245456982,
+          "exactMatch": 0.6465846170580697
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 47,
+      "config": {
+        "mode": "route_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": false,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.530692794711943,
+        "manualAccuracy": 0.6731387432167557,
+        "realAccuracy": 0.42385833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2593.3333333333335,
+        "techCsConfusionMs": 3610.0
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5862778370546547,
+          "macroRecall": 0.5332932590176079,
+          "macroF1": 0.5449200872212981,
+          "microF1": 0.6801182226863496,
+          "sampleF1": 0.7116757956268475,
+          "exactMatch": 0.6344985611936179
+        },
+        "actions": {
+          "macroPrecision": 0.5863200968920558,
+          "macroRecall": 0.5286035810914251,
+          "macroF1": 0.5407320691391365,
+          "microF1": 0.6767971468011805,
+          "sampleF1": 0.7080028094812442,
+          "exactMatch": 0.6316513905860605
+        },
+        "compact": {
+          "macroPrecision": 0.5908397304572927,
+          "macroRecall": 0.529726756679152,
+          "macroF1": 0.5436879463628538,
+          "microF1": 0.6814708945123972,
+          "sampleF1": 0.713346811342659,
+          "exactMatch": 0.6419713347369916
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 48,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46803093673269597,
+        "manualAccuracy": 0.6935944079318461,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 5189.166666666667
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5869052201016349,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5487716951275797,
+          "microF1": 0.682499403377547,
+          "sampleF1": 0.7163033170210364,
+          "exactMatch": 0.637983177456806
+        },
+        "actions": {
+          "macroPrecision": 0.5855877993209776,
+          "macroRecall": 0.5350813924654944,
+          "macroF1": 0.5450866740625497,
+          "microF1": 0.6766519409364151,
+          "sampleF1": 0.7092147559771615,
+          "exactMatch": 0.6316876126201041
+        },
+        "compact": {
+          "macroPrecision": 0.5944523932446274,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5511260252672178,
+          "microF1": 0.688074477671628,
+          "sampleF1": 0.7214586397167478,
+          "exactMatch": 0.6477793755370008
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 49,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4158581426892957,
+        "manualAccuracy": 0.6828756662750235,
+        "realAccuracy": 0.21559499999999998,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3676.6666666666665,
+        "techCsConfusionMs": 9618.333333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.591168793769098,
+          "macroRecall": 0.540467683412019,
+          "macroF1": 0.5514597159166691,
+          "microF1": 0.6868265028227994,
+          "sampleF1": 0.7178986782512116,
+          "exactMatch": 0.6364205824799402
+        },
+        "actions": {
+          "macroPrecision": 0.5878947589339462,
+          "macroRecall": 0.5351077819328814,
+          "macroF1": 0.5459425550610982,
+          "microF1": 0.6782184671111766,
+          "sampleF1": 0.7089600983183323,
+          "exactMatch": 0.6294992176389561
+        },
+        "compact": {
+          "macroPrecision": 0.5949864918094957,
+          "macroRecall": 0.5362487613494668,
+          "macroF1": 0.5497438957054137,
+          "microF1": 0.6869148269727013,
+          "sampleF1": 0.7189584960389025,
+          "exactMatch": 0.6483996158078931
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 50,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.4035048614679185,
+        "manualAccuracy": 0.6501624545362542,
+        "realAccuracy": 0.21851166666666666,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 5044.083333333333,
+        "techCsConfusionMs": 17255.166666666668
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.614307893398978,
+          "macroRecall": 0.5475617135125553,
+          "macroF1": 0.5652182441181948,
+          "microF1": 0.7021362886498775,
+          "sampleF1": 0.7269412254500337,
+          "exactMatch": 0.6319388990450272
+        },
+        "actions": {
+          "macroPrecision": 0.6074231247994325,
+          "macroRecall": 0.5366203606257697,
+          "macroF1": 0.5543364830784094,
+          "microF1": 0.6860455146398731,
+          "sampleF1": 0.7114643022409383,
+          "exactMatch": 0.6197747256769854
+        },
+        "compact": {
+          "macroPrecision": 0.6220158686571893,
+          "macroRecall": 0.5277788346658723,
+          "macroF1": 0.5561690307388774,
+          "microF1": 0.6919026263393006,
+          "sampleF1": 0.7123938202847554,
+          "exactMatch": 0.6455485588687088
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 51,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46674275212698524,
+        "manualAccuracy": 0.6905886438518544,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 7080.833333333333
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.586675817995965,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5486792970572405,
+          "microF1": 0.6823315901170212,
+          "sampleF1": 0.7161110832647889,
+          "exactMatch": 0.6374064761880631
+        },
+        "actions": {
+          "macroPrecision": 0.5850899469475926,
+          "macroRecall": 0.5350813924654944,
+          "macroF1": 0.544883871202373,
+          "microF1": 0.6763059511164679,
+          "sampleF1": 0.7088226820930162,
+          "exactMatch": 0.6305113909676682
+        },
+        "compact": {
+          "macroPrecision": 0.5944523932446274,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5511260252672178,
+          "microF1": 0.688074477671628,
+          "sampleF1": 0.7214586397167478,
+          "exactMatch": 0.6477793755370008
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 52,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4245653926841797,
+        "manualAccuracy": 0.6804148051519748,
+        "realAccuracy": 0.23267833333333338,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3176.6666666666665,
+        "techCsConfusionMs": 10339.166666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5920896045313414,
+          "macroRecall": 0.5421006835844474,
+          "macroF1": 0.5528836871690443,
+          "microF1": 0.6880426090522556,
+          "sampleF1": 0.7190653952011908,
+          "exactMatch": 0.6363994367667529
+        },
+        "actions": {
+          "macroPrecision": 0.5875157233010335,
+          "macroRecall": 0.5350259030274731,
+          "macroF1": 0.5457731982691708,
+          "microF1": 0.6785665441749433,
+          "sampleF1": 0.7095497152719928,
+          "exactMatch": 0.6300319540795614
+        },
+        "compact": {
+          "macroPrecision": 0.5948063011561594,
+          "macroRecall": 0.5354946135364954,
+          "macroF1": 0.5494941651669991,
+          "microF1": 0.6869220195243981,
+          "sampleF1": 0.7185740285264073,
+          "exactMatch": 0.6483996158078931
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 53,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.41216970977178985,
+        "manualAccuracy": 0.6503804339119541,
+        "realAccuracy": 0.23351166666666665,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 4115.5,
+        "techCsConfusionMs": 17722.416666666668
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6122071978767368,
+          "macroRecall": 0.5467935105638251,
+          "macroF1": 0.5646579998863894,
+          "microF1": 0.701448872084875,
+          "sampleF1": 0.7262602924670666,
+          "exactMatch": 0.6313562936884024
+        },
+        "actions": {
+          "macroPrecision": 0.6071839724737399,
+          "macroRecall": 0.5361614821611486,
+          "macroF1": 0.5548143399872407,
+          "microF1": 0.6877864677108642,
+          "sampleF1": 0.7132829361655718,
+          "exactMatch": 0.6232820307943543
+        },
+        "compact": {
+          "macroPrecision": 0.6217389614653435,
+          "macroRecall": 0.5288024406894783,
+          "macroF1": 0.5574108253057102,
+          "microF1": 0.6931319931996706,
+          "sampleF1": 0.7140233419338573,
+          "exactMatch": 0.6472590601027434
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 54,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4627918829396144,
+        "manualAccuracy": 0.6813699490813224,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10922.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5865469845962283,
+          "macroRecall": 0.5394194467602961,
+          "macroF1": 0.548740345937209,
+          "microF1": 0.682297270911388,
+          "sampleF1": 0.7163272326445321,
+          "exactMatch": 0.6374794597842514
+        },
+        "actions": {
+          "macroPrecision": 0.5858269188460039,
+          "macroRecall": 0.5360700232119106,
+          "macroF1": 0.5458411618333546,
+          "microF1": 0.6773352810965744,
+          "sampleF1": 0.7106621190782132,
+          "exactMatch": 0.632850561614216
+        },
+        "compact": {
+          "macroPrecision": 0.5945386596352417,
+          "macroRecall": 0.5391753779269784,
+          "macroF1": 0.5508845875974157,
+          "microF1": 0.6877254773768646,
+          "sampleF1": 0.7210750418331501,
+          "exactMatch": 0.6478190580766833
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 55,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.3993872530184976,
+        "manualAccuracy": 0.6683947014876055,
+        "realAccuracy": 0.19763166666666668,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9045.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5901323537664294,
+          "macroRecall": 0.5424611726322223,
+          "macroF1": 0.5531798441548171,
+          "microF1": 0.6875190482038822,
+          "sampleF1": 0.7173240083558022,
+          "exactMatch": 0.6306223785272563
+        },
+        "actions": {
+          "macroPrecision": 0.5872482193921386,
+          "macroRecall": 0.5362265275927734,
+          "macroF1": 0.5475782508129518,
+          "microF1": 0.6790562608553582,
+          "sampleF1": 0.7090290903745973,
+          "exactMatch": 0.6265930007409142
+        },
+        "compact": {
+          "macroPrecision": 0.6008256866730725,
+          "macroRecall": 0.5362301239515606,
+          "macroF1": 0.5524021252625994,
+          "microF1": 0.6891274481216856,
+          "sampleF1": 0.7189812265995094,
+          "exactMatch": 0.6495512611106626
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 56,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.38103952339133623,
+        "manualAccuracy": 0.6338855545797846,
+        "realAccuracy": 0.191405,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2924.4166666666665,
+        "techCsConfusionMs": 12270.083333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6123847995012487,
+          "macroRecall": 0.5428102172172332,
+          "macroF1": 0.5622178023513159,
+          "microF1": 0.6958052668857929,
+          "sampleF1": 0.7200628325422996,
+          "exactMatch": 0.6232784945917461
+        },
+        "actions": {
+          "macroPrecision": 0.6067226185447715,
+          "macroRecall": 0.5341329199528578,
+          "macroF1": 0.553730627439364,
+          "microF1": 0.6821899874114302,
+          "sampleF1": 0.7073975821696638,
+          "exactMatch": 0.6163819964911273
+        },
+        "compact": {
+          "macroPrecision": 0.6298316467928684,
+          "macroRecall": 0.5257627598030244,
+          "macroF1": 0.5573655749766917,
+          "microF1": 0.6923787852375747,
+          "sampleF1": 0.7116446911931521,
+          "exactMatch": 0.6461244085185047
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 57,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46247194348564014,
+        "manualAccuracy": 0.6806234236887158,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 11339.166666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5863005897419904,
+          "macroRecall": 0.5394194467602961,
+          "macroF1": 0.5486449672839555,
+          "microF1": 0.6821289428862594,
+          "sampleF1": 0.7161349988882845,
+          "exactMatch": 0.6369027585155086
+        },
+        "actions": {
+          "macroPrecision": 0.5858269188460039,
+          "macroRecall": 0.5360700232119106,
+          "macroF1": 0.5458411618333546,
+          "microF1": 0.6773352810965744,
+          "sampleF1": 0.7106621190782132,
+          "exactMatch": 0.632850561614216
+        },
+        "compact": {
+          "macroPrecision": 0.5946235420730653,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.551149814461108,
+          "microF1": 0.6880772274599053,
+          "sampleF1": 0.7214718672299755,
+          "exactMatch": 0.6478190580766833
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 58,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.40714026690006133,
+        "manualAccuracy": 0.6681206227668096,
+        "realAccuracy": 0.211405,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10212.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5907093983097369,
+          "macroRecall": 0.5430213967218581,
+          "macroF1": 0.5537032906088908,
+          "microF1": 0.6883920900968444,
+          "sampleF1": 0.7183072685540796,
+          "exactMatch": 0.6311912067411357
+        },
+        "actions": {
+          "macroPrecision": 0.5873850930890739,
+          "macroRecall": 0.5371789085451545,
+          "macroF1": 0.5480954551696874,
+          "microF1": 0.6799189143870835,
+          "sampleF1": 0.7100024037335952,
+          "exactMatch": 0.6259934803572212
+        },
+        "compact": {
+          "macroPrecision": 0.6010841503303883,
+          "macroRecall": 0.5369447320454375,
+          "macroF1": 0.5531084132607854,
+          "microF1": 0.6899893181454658,
+          "sampleF1": 0.719931951350906,
+          "exactMatch": 0.6501200893245421
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 59,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.3934751251983709,
+        "manualAccuracy": 0.6356486254628654,
+        "realAccuracy": 0.211845,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2816.0,
+        "techCsConfusionMs": 14136.0
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6092265329871985,
+          "macroRecall": 0.5411077782037778,
+          "macroF1": 0.5611298993426425,
+          "microF1": 0.6973988313962071,
+          "sampleF1": 0.7216342889732905,
+          "exactMatch": 0.6262234368443944
+        },
+        "actions": {
+          "macroPrecision": 0.608257865949771,
+          "macroRecall": 0.531172207044048,
+          "macroF1": 0.5523496970912272,
+          "microF1": 0.6849800992509122,
+          "sampleF1": 0.7099860238988231,
+          "exactMatch": 0.6204660028772389
+        },
+        "compact": {
+          "macroPrecision": 0.6271913280702509,
+          "macroRecall": 0.5220105575646631,
+          "macroF1": 0.5551759252633791,
+          "microF1": 0.6915004794191635,
+          "sampleF1": 0.7100449306547597,
+          "exactMatch": 0.6460565588297184
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 60,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4159280280317053,
+        "manualAccuracy": 0.6770520654073124,
+        "realAccuracy": 0.220085,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9147.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5849177506408446,
+          "macroRecall": 0.5374424908786749,
+          "macroF1": 0.5470264178820108,
+          "microF1": 0.680235074712769,
+          "sampleF1": 0.7130537142683354,
+          "exactMatch": 0.6334791007659597
+        },
+        "actions": {
+          "macroPrecision": 0.5859117154391252,
+          "macroRecall": 0.5354164284406687,
+          "macroF1": 0.5457164860111656,
+          "microF1": 0.6771641602231533,
+          "sampleF1": 0.7095024769885371,
+          "exactMatch": 0.6305621115356635
+        },
+        "compact": {
+          "macroPrecision": 0.5969876254644028,
+          "macroRecall": 0.5380245842761848,
+          "macroF1": 0.5518178420114569,
+          "microF1": 0.6881501318673767,
+          "sampleF1": 0.7207167988507707,
+          "exactMatch": 0.6501464992059008
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 61,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.3796848587509639,
+        "manualAccuracy": 0.6518980037522492,
+        "realAccuracy": 0.175525,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10086.166666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5879936616819353,
+          "macroRecall": 0.5417116125436322,
+          "macroF1": 0.5524138899470118,
+          "microF1": 0.6864875073923823,
+          "sampleF1": 0.7143601414991577,
+          "exactMatch": 0.6242752661982526
+        },
+        "actions": {
+          "macroPrecision": 0.5833139490201247,
+          "macroRecall": 0.5356765849855846,
+          "macroF1": 0.5461760349070673,
+          "microF1": 0.676993682782593,
+          "sampleF1": 0.7056274432091995,
+          "exactMatch": 0.6191406813886812
+        },
+        "compact": {
+          "macroPrecision": 0.6022489330460092,
+          "macroRecall": 0.5344650956896164,
+          "macroF1": 0.5519306958966075,
+          "microF1": 0.6881514829556031,
+          "sampleF1": 0.7165021735333683,
+          "exactMatch": 0.6478217972241448
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 62,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.37256224232524476,
+        "manualAccuracy": 0.6280252320922378,
+        "realAccuracy": 0.180965,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2623.0833333333335,
+        "techCsConfusionMs": 12854.25
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6068320590663477,
+          "macroRecall": 0.5414709589704721,
+          "macroF1": 0.5596310948234909,
+          "microF1": 0.6898484625159808,
+          "sampleF1": 0.7132595193976717,
+          "exactMatch": 0.6089131608486874
+        },
+        "actions": {
+          "macroPrecision": 0.6002894757613552,
+          "macroRecall": 0.5305075919456025,
+          "macroF1": 0.5485220113346919,
+          "microF1": 0.6756369557357488,
+          "sampleF1": 0.6997127664542057,
+          "exactMatch": 0.6007937790695393
+        },
+        "compact": {
+          "macroPrecision": 0.6331649453857819,
+          "macroRecall": 0.524859526172924,
+          "macroF1": 0.5575163256950911,
+          "microF1": 0.6915802944980444,
+          "sampleF1": 0.7083857925599486,
+          "exactMatch": 0.6420813621170106
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 63,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4157743374915919,
+        "manualAccuracy": 0.6766934541470478,
+        "realAccuracy": 0.220085,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9397.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5850254860426977,
+          "macroRecall": 0.5374424908786749,
+          "macroF1": 0.5471410836313514,
+          "microF1": 0.680409492650277,
+          "sampleF1": 0.713252126966748,
+          "exactMatch": 0.6340743388611979
+        },
+        "actions": {
+          "macroPrecision": 0.5859117154391252,
+          "macroRecall": 0.5354164284406687,
+          "macroF1": 0.5457164860111656,
+          "microF1": 0.6771641602231533,
+          "sampleF1": 0.7095024769885371,
+          "exactMatch": 0.6305621115356635
+        },
+        "compact": {
+          "macroPrecision": 0.5970651268206765,
+          "macroRecall": 0.5384167411389299,
+          "macroF1": 0.5520698931865368,
+          "microF1": 0.6884935974349536,
+          "sampleF1": 0.7211012663632658,
+          "exactMatch": 0.6501464992059008
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 64,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.3814122966539717,
+        "manualAccuracy": 0.6514842477481563,
+        "realAccuracy": 0.17885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10868.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5883199457020051,
+          "macroRecall": 0.5433841835328121,
+          "macroF1": 0.5535948230031321,
+          "microF1": 0.688058914256645,
+          "sampleF1": 0.7168144196096206,
+          "exactMatch": 0.6260239068309762
+        },
+        "actions": {
+          "macroPrecision": 0.5829871082978393,
+          "macroRecall": 0.5369453277768187,
+          "macroF1": 0.5469740621530964,
+          "microF1": 0.6780424089863221,
+          "sampleF1": 0.7075522958470085,
+          "exactMatch": 0.6202612086956493
+        },
+        "compact": {
+          "macroPrecision": 0.6024327103969692,
+          "macroRecall": 0.5342024906475996,
+          "macroF1": 0.5520840109483403,
+          "microF1": 0.6883606078844714,
+          "sampleF1": 0.7167250460827863,
+          "exactMatch": 0.6484213176078377
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 65,
+      "config": {
+        "mode": "type_only",
+        "widthId": 1,
+        "context": true,
+        "obligations": true,
+        "trainRoute": false,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.3840568032090477,
+        "manualAccuracy": 0.6304014297100002,
+        "realAccuracy": 0.19929833333333333,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2546.0,
+        "techCsConfusionMs": 15170.166666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6022090354675662,
+          "macroRecall": 0.5380830458785154,
+          "macroF1": 0.5567162636963159,
+          "microF1": 0.6908217847799739,
+          "sampleF1": 0.7146531347155004,
+          "exactMatch": 0.6147574071240837
+        },
+        "actions": {
+          "macroPrecision": 0.6020898060379867,
+          "macroRecall": 0.5310526051341647,
+          "macroF1": 0.5502512627628544,
+          "microF1": 0.6804627148944175,
+          "sampleF1": 0.7051052218251809,
+          "exactMatch": 0.608954600623086
+        },
+        "compact": {
+          "macroPrecision": 0.6284438571395888,
+          "macroRecall": 0.5185930863578181,
+          "macroF1": 0.5531514451485825,
+          "microF1": 0.6890581736930089,
+          "sampleF1": 0.7055204048124333,
+          "exactMatch": 0.6426168892743842
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 66,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46792354215454574,
+        "manualAccuracy": 0.693343820582829,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 5439.166666666667
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5871516149558729,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5488670737808331,
+          "microF1": 0.6826677314026757,
+          "sampleF1": 0.716495550777284,
+          "exactMatch": 0.6385598787255488
+        },
+        "actions": {
+          "macroPrecision": 0.5855877993209776,
+          "macroRecall": 0.5350813924654944,
+          "macroF1": 0.5450866740625497,
+          "microF1": 0.6766519409364151,
+          "sampleF1": 0.7092147559771615,
+          "exactMatch": 0.6316876126201041
+        },
+        "compact": {
+          "macroPrecision": 0.5946300005194215,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5512732312967767,
+          "microF1": 0.6882558373021078,
+          "sampleF1": 0.7216482491213743,
+          "exactMatch": 0.6483482037508802
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 67,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4136763031882209,
+        "manualAccuracy": 0.6844513741058489,
+        "realAccuracy": 0.210595,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3676.6666666666665,
+        "techCsConfusionMs": 9697.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5891980625063304,
+          "macroRecall": 0.5401758936465452,
+          "macroF1": 0.5505765564005983,
+          "microF1": 0.685617327442812,
+          "sampleF1": 0.7180067068500612,
+          "exactMatch": 0.6375622555000954
+        },
+        "actions": {
+          "macroPrecision": 0.5879961435162996,
+          "macroRecall": 0.5358619297458527,
+          "macroF1": 0.5465307304140797,
+          "microF1": 0.6783986620019654,
+          "sampleF1": 0.709545247632295,
+          "exactMatch": 0.6300641893903685
+        },
+        "compact": {
+          "macroPrecision": 0.5941672935654806,
+          "macroRecall": 0.5366107522996929,
+          "macroF1": 0.549764754628535,
+          "microF1": 0.6863785443387173,
+          "sampleF1": 0.7187786201669848,
+          "exactMatch": 0.6478229145391503
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 68,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.4366459646842475,
+        "manualAccuracy": 0.637220584263244,
+        "realAccuracy": 0.286215,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 5098.25,
+        "techCsConfusionMs": 16730.166666666668
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6102862617791608,
+          "macroRecall": 0.5435694406973405,
+          "macroF1": 0.5614469396842034,
+          "microF1": 0.6968840159324006,
+          "sampleF1": 0.7227586225606828,
+          "exactMatch": 0.6291107697814156
+        },
+        "actions": {
+          "macroPrecision": 0.6062336608691267,
+          "macroRecall": 0.5321923689852095,
+          "macroF1": 0.5506992032856152,
+          "microF1": 0.6832156559861614,
+          "sampleF1": 0.7088957958581918,
+          "exactMatch": 0.6187053447309718
+        },
+        "compact": {
+          "macroPrecision": 0.6171390460250843,
+          "macroRecall": 0.527899322729123,
+          "macroF1": 0.5551238632099872,
+          "microF1": 0.6913414033940571,
+          "sampleF1": 0.7136688659219144,
+          "exactMatch": 0.6473052028170653
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 69,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4667270913200372,
+        "manualAccuracy": 0.6905521019689755,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 7164.166666666667
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.586675817995965,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5486792970572405,
+          "microF1": 0.6823315901170212,
+          "sampleF1": 0.7161110832647889,
+          "exactMatch": 0.6374064761880631
+        },
+        "actions": {
+          "macroPrecision": 0.5853224510164138,
+          "macroRecall": 0.5350813924654944,
+          "macroF1": 0.5449881682403372,
+          "microF1": 0.6764854517535,
+          "sampleF1": 0.709022522220914,
+          "exactMatch": 0.6311109113513612
+        },
+        "compact": {
+          "macroPrecision": 0.5946300005194215,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5512732312967767,
+          "microF1": 0.6882558373021078,
+          "sampleF1": 0.7216482491213743,
+          "exactMatch": 0.6483482037508802
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 70,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.42549203549411263,
+        "manualAccuracy": 0.6831325272640406,
+        "realAccuracy": 0.23226166666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3264.1666666666665,
+        "techCsConfusionMs": 10418.333333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5882140133209744,
+          "macroRecall": 0.5395430112489569,
+          "macroF1": 0.5500009132429184,
+          "microF1": 0.6856243900721749,
+          "sampleF1": 0.7179207312316925,
+          "exactMatch": 0.6369644085181654
+        },
+        "actions": {
+          "macroPrecision": 0.5866219186480142,
+          "macroRecall": 0.5360684014748158,
+          "macroF1": 0.5463070707461901,
+          "microF1": 0.6787429326812132,
+          "sampleF1": 0.7105069742141209,
+          "exactMatch": 0.6305969258309738
+        },
+        "compact": {
+          "macroPrecision": 0.5940183707007097,
+          "macroRecall": 0.5354946135364954,
+          "macroF1": 0.5490264368314842,
+          "microF1": 0.68638043294037,
+          "sampleF1": 0.7185740285264073,
+          "exactMatch": 0.6483996158078931
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 71,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.44983126927537853,
+        "manualAccuracy": 0.6287596283092166,
+        "realAccuracy": 0.315635,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 4128.583333333333,
+        "techCsConfusionMs": 17245.916666666668
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6090469817022925,
+          "macroRecall": 0.5458078199848323,
+          "macroF1": 0.5634511055404217,
+          "microF1": 0.6985575587697267,
+          "sampleF1": 0.7245893610310322,
+          "exactMatch": 0.6284985895699826
+        },
+        "actions": {
+          "macroPrecision": 0.604767160990847,
+          "macroRecall": 0.5354431712613001,
+          "macroF1": 0.5534343896513754,
+          "microF1": 0.6867934814816533,
+          "sampleF1": 0.7138512313849481,
+          "exactMatch": 0.6223953733045975
+        },
+        "compact": {
+          "macroPrecision": 0.6169843218700554,
+          "macroRecall": 0.5281653964487072,
+          "macroF1": 0.5560902401227182,
+          "microF1": 0.6927508668877015,
+          "sampleF1": 0.7148356116841358,
+          "exactMatch": 0.6473050725562959
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 72,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4629893733466442,
+        "manualAccuracy": 0.6818307600310586,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 11422.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5865469845962283,
+          "macroRecall": 0.5394194467602961,
+          "macroF1": 0.548740345937209,
+          "microF1": 0.682297270911388,
+          "sampleF1": 0.7163272326445321,
+          "exactMatch": 0.6374794597842514
+        },
+        "actions": {
+          "macroPrecision": 0.5858269188460039,
+          "macroRecall": 0.5360700232119106,
+          "macroF1": 0.5458411618333546,
+          "microF1": 0.6773352810965744,
+          "sampleF1": 0.7106621190782132,
+          "exactMatch": 0.632850561614216
+        },
+        "compact": {
+          "macroPrecision": 0.5942747859698335,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5509865669234251,
+          "microF1": 0.6878991808205038,
+          "sampleF1": 0.7212734545315627,
+          "exactMatch": 0.6472238199814453
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 73,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.44186403970757354,
+        "manualAccuracy": 0.6642605370954494,
+        "realAccuracy": 0.2750666666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9712.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5868600998622369,
+          "macroRecall": 0.5390542254049632,
+          "macroF1": 0.549691815404976,
+          "microF1": 0.6827154727353149,
+          "sampleF1": 0.7115889721364627,
+          "exactMatch": 0.6237355921877128
+        },
+        "actions": {
+          "macroPrecision": 0.579808399180885,
+          "macroRecall": 0.524825159958589,
+          "macroF1": 0.5360283012203414,
+          "microF1": 0.6701067281701317,
+          "sampleF1": 0.6985132086904864,
+          "exactMatch": 0.6133712573826561
+        },
+        "compact": {
+          "macroPrecision": 0.5988052318602927,
+          "macroRecall": 0.5329415316475502,
+          "macroF1": 0.5489271189941317,
+          "microF1": 0.6869673725244203,
+          "sampleF1": 0.7168258950406322,
+          "exactMatch": 0.6466549917675658
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 74,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.42861209007923634,
+        "manualAccuracy": 0.6178948768515514,
+        "realAccuracy": 0.28665,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2857.0833333333335,
+        "techCsConfusionMs": 12652.083333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6107914435963243,
+          "macroRecall": 0.5279107770745679,
+          "macroF1": 0.5501587592101254,
+          "microF1": 0.6868888801386271,
+          "sampleF1": 0.7081413545422093,
+          "exactMatch": 0.6159526430890252
+        },
+        "actions": {
+          "macroPrecision": 0.6069799566106794,
+          "macroRecall": 0.5156377713569541,
+          "macroF1": 0.5379758442769388,
+          "microF1": 0.6753092729885549,
+          "sampleF1": 0.6959890021055993,
+          "exactMatch": 0.606274868823476
+        },
+        "compact": {
+          "macroPrecision": 0.6278778521564737,
+          "macroRecall": 0.5118895967788224,
+          "macroF1": 0.5463827588775083,
+          "microF1": 0.6824901864449227,
+          "sampleF1": 0.6983100078346854,
+          "exactMatch": 0.6337642689050421
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 75,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46260931766076985,
+        "manualAccuracy": 0.6809439634306853,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 11922.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5865469845962283,
+          "macroRecall": 0.5394194467602961,
+          "macroF1": 0.548740345937209,
+          "microF1": 0.682297270911388,
+          "sampleF1": 0.7163272326445321,
+          "exactMatch": 0.6374794597842514
+        },
+        "actions": {
+          "macroPrecision": 0.5858269188460039,
+          "macroRecall": 0.5360700232119106,
+          "macroF1": 0.5458411618333546,
+          "microF1": 0.6775150684591219,
+          "sampleF1": 0.7106621190782132,
+          "exactMatch": 0.632850561614216
+        },
+        "compact": {
+          "macroPrecision": 0.5942747859698335,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5509865669234251,
+          "microF1": 0.6878991808205038,
+          "sampleF1": 0.7212734545315627,
+          "exactMatch": 0.6472238199814453
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 76,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4499172926023639,
+        "manualAccuracy": 0.6624647938499602,
+        "realAccuracy": 0.2905066666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10462.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.586971943119268,
+          "macroRecall": 0.5400809004427944,
+          "macroF1": 0.5503532020280257,
+          "microF1": 0.6837543718976423,
+          "sampleF1": 0.7131402442963651,
+          "exactMatch": 0.624878512783643
+        },
+        "actions": {
+          "macroPrecision": 0.5818858548080588,
+          "macroRecall": 0.5272049317906935,
+          "macroF1": 0.5383562206165905,
+          "microF1": 0.6725058593135157,
+          "sampleF1": 0.7013810098217284,
+          "exactMatch": 0.6162141457017587
+        },
+        "compact": {
+          "macroPrecision": 0.5981460537674607,
+          "macroRecall": 0.5354364364194948,
+          "macroF1": 0.5507574203226984,
+          "microF1": 0.6880126457935445,
+          "sampleF1": 0.7183777963767063,
+          "exactMatch": 0.6478100677068145
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 77,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.4444537620726446,
+        "manualAccuracy": 0.6206565559472818,
+        "realAccuracy": 0.31230166666666664,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2816.0,
+        "techCsConfusionMs": 13494.333333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6097075675507008,
+          "macroRecall": 0.5336204139063198,
+          "macroF1": 0.554771756936248,
+          "microF1": 0.6936748227366659,
+          "sampleF1": 0.7166387716705412,
+          "exactMatch": 0.620273149879187
+        },
+        "actions": {
+          "macroPrecision": 0.6050185582010367,
+          "macroRecall": 0.5202011530287648,
+          "macroF1": 0.5418944515986449,
+          "microF1": 0.680072945818481,
+          "sampleF1": 0.703038440035218,
+          "exactMatch": 0.6108603335574909
+        },
+        "compact": {
+          "macroPrecision": 0.6242385449779725,
+          "macroRecall": 0.514149325422634,
+          "macroF1": 0.5483562284899305,
+          "microF1": 0.6869680809151865,
+          "sampleF1": 0.7029246849195405,
+          "exactMatch": 0.6372419475982957
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 78,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.41091309464213643,
+        "manualAccuracy": 0.6698261097205407,
+        "realAccuracy": 0.21672833333333333,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9397.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5833969161701248,
+          "macroRecall": 0.5371044246176877,
+          "macroF1": 0.5463926488227869,
+          "microF1": 0.6793634656290694,
+          "sampleF1": 0.7122709939295296,
+          "exactMatch": 0.6322843422870286
+        },
+        "actions": {
+          "macroPrecision": 0.582809132060755,
+          "macroRecall": 0.5328159187407676,
+          "macroF1": 0.5427404996983961,
+          "microF1": 0.6747325570448554,
+          "sampleF1": 0.7069950108230333,
+          "exactMatch": 0.6276779975358852
+        },
+        "compact": {
+          "macroPrecision": 0.5957100745063469,
+          "macroRecall": 0.5380068235487054,
+          "macroF1": 0.551056035581879,
+          "microF1": 0.687433659198485,
+          "sampleF1": 0.7199291399121925,
+          "exactMatch": 0.6478100677068145
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 79,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4341915807493386,
+        "manualAccuracy": 0.6368581328595678,
+        "realAccuracy": 0.2821916666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10201.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5951753755470949,
+          "macroRecall": 0.5325470021451942,
+          "macroF1": 0.5492311824464424,
+          "microF1": 0.6817892153199958,
+          "sampleF1": 0.7052920400527056,
+          "exactMatch": 0.6179727586170968
+        },
+        "actions": {
+          "macroPrecision": 0.5852200891404756,
+          "macroRecall": 0.5154160880680193,
+          "macroF1": 0.5320354742538632,
+          "microF1": 0.6665215528930507,
+          "sampleF1": 0.6889732091384487,
+          "exactMatch": 0.6036667099859143
+        },
+        "compact": {
+          "macroPrecision": 0.6077054216001057,
+          "macroRecall": 0.5208377305158041,
+          "macroF1": 0.5445688562231654,
+          "microF1": 0.683301651913682,
+          "sampleF1": 0.7062017414974265,
+          "exactMatch": 0.6374593798167626
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 80,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.414047207242821,
+        "manualAccuracy": 0.5993790391221379,
+        "realAccuracy": 0.27504833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2582.0,
+        "techCsConfusionMs": 12579.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5971408643017776,
+          "macroRecall": 0.5144014701805609,
+          "macroF1": 0.5380363148825406,
+          "microF1": 0.6710058348241826,
+          "sampleF1": 0.6878893877389491,
+          "exactMatch": 0.5895029567524378
+        },
+        "actions": {
+          "macroPrecision": 0.5922770833082902,
+          "macroRecall": 0.4995484138910846,
+          "macroF1": 0.5228616609388361,
+          "microF1": 0.6561371057132461,
+          "sampleF1": 0.6727846778561729,
+          "exactMatch": 0.5788773225206101
+        },
+        "compact": {
+          "macroPrecision": 0.6234664735106697,
+          "macroRecall": 0.49535383605575894,
+          "macroF1": 0.5328576707528238,
+          "microF1": 0.6697199146982163,
+          "sampleF1": 0.6808178629787616,
+          "exactMatch": 0.6180119785888344
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 81,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4123585830114292,
+        "manualAccuracy": 0.6703900270266682,
+        "realAccuracy": 0.21883499999999997,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9814.166666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5842674916730534,
+          "macroRecall": 0.5371044246176877,
+          "macroF1": 0.546722240436392,
+          "microF1": 0.6797180198156618,
+          "sampleF1": 0.7124708340574274,
+          "exactMatch": 0.6328838626707217
+        },
+        "actions": {
+          "macroPrecision": 0.5831772635030553,
+          "macroRecall": 0.5328159187407676,
+          "macroF1": 0.5428865973531444,
+          "microF1": 0.6749136360151171,
+          "sampleF1": 0.7071833347401708,
+          "exactMatch": 0.6282429692872976
+        },
+        "compact": {
+          "macroPrecision": 0.5958876817811408,
+          "macroRecall": 0.5380068235487054,
+          "macroF1": 0.551203241611438,
+          "microF1": 0.6876045969230892,
+          "sampleF1": 0.7201213736684401,
+          "exactMatch": 0.6483867689755572
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 82,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.43599378278834877,
+        "manualAccuracy": 0.6366188265061471,
+        "realAccuracy": 0.285525,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 10734.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5948585207023763,
+          "macroRecall": 0.5348146248449878,
+          "macroF1": 0.5507120374570363,
+          "microF1": 0.6838418730729687,
+          "sampleF1": 0.7080812661565875,
+          "exactMatch": 0.6185187677160259
+        },
+        "actions": {
+          "macroPrecision": 0.5843588329189094,
+          "macroRecall": 0.5183137467934432,
+          "macroF1": 0.5335644820567077,
+          "microF1": 0.6689690191871219,
+          "sampleF1": 0.6922335320725188,
+          "exactMatch": 0.6036042083312815
+        },
+        "compact": {
+          "macroPrecision": 0.6076134210561771,
+          "macroRecall": 0.5230302500356894,
+          "macroF1": 0.5461673346799572,
+          "microF1": 0.6847108950201322,
+          "sampleF1": 0.7083253259063499,
+          "exactMatch": 0.6391832839698904
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 83,
+      "config": {
+        "mode": "no_guidance",
+        "widthId": 1,
+        "context": true,
+        "obligations": false,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.42834279953454496,
+        "manualAccuracy": 0.5997931989139381,
+        "realAccuracy": 0.299755,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2582.0,
+        "techCsConfusionMs": 12700.666666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6004542630877109,
+          "macroRecall": 0.5228701766146409,
+          "macroF1": 0.5443927001050657,
+          "microF1": 0.6787312394565027,
+          "sampleF1": 0.6970546703557678,
+          "exactMatch": 0.5946515218576879
+        },
+        "actions": {
+          "macroPrecision": 0.59754764197874,
+          "macroRecall": 0.5088669355356852,
+          "macroF1": 0.5301004816825285,
+          "microF1": 0.6665174622406469,
+          "sampleF1": 0.6854545043332895,
+          "exactMatch": 0.5888985818782237
+        },
+        "compact": {
+          "macroPrecision": 0.6268658674980582,
+          "macroRecall": 0.4995125172378366,
+          "macroF1": 0.537470877763925,
+          "microF1": 0.6752028435688576,
+          "sampleF1": 0.6864370346184159,
+          "exactMatch": 0.6233857094311049
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 84,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4681908083440118,
+        "manualAccuracy": 0.693967441691583,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 5105.833333333333
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5873647436856256,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5489671137968394,
+          "microF1": 0.682848383127543,
+          "sampleF1": 0.7166953909051818,
+          "exactMatch": 0.6391593991092419
+        },
+        "actions": {
+          "macroPrecision": 0.5858682804198732,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5458505874710505,
+          "microF1": 0.6776886689139549,
+          "sampleF1": 0.7109465331851528,
+          "exactMatch": 0.6334193898280955
+        },
+        "compact": {
+          "macroPrecision": 0.5943267019424655,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5509978694297194,
+          "microF1": 0.6878969949170705,
+          "sampleF1": 0.7212602270183351,
+          "exactMatch": 0.6471841374417626
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 85,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.442783696776444,
+        "manualAccuracy": 0.6751464035894804,
+        "realAccuracy": 0.2685116666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 5439.75,
+        "techCsConfusionMs": 11477.25
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5892503932676513,
+          "macroRecall": 0.5395597049840458,
+          "macroF1": 0.550320490733143,
+          "microF1": 0.6857987118583709,
+          "sampleF1": 0.7176182639047322,
+          "exactMatch": 0.6375739850174257
+        },
+        "actions": {
+          "macroPrecision": 0.5874308785308292,
+          "macroRecall": 0.535683633361853,
+          "macroF1": 0.5464570301253865,
+          "microF1": 0.6782378640815813,
+          "sampleF1": 0.7094534261468604,
+          "exactMatch": 0.631196446214667
+        },
+        "compact": {
+          "macroPrecision": 0.5950033791034102,
+          "macroRecall": 0.5366107522996929,
+          "macroF1": 0.5501215755305231,
+          "microF1": 0.6867390221913059,
+          "sampleF1": 0.7191768729932954,
+          "exactMatch": 0.6490176730180816
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 86,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.4630440258695236,
+        "manualAccuracy": 0.6341205048066662,
+        "realAccuracy": 0.3347366666666666,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 7431.083333333333,
+        "techCsConfusionMs": 17338.166666666668
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6121942530182601,
+          "macroRecall": 0.5301162087553295,
+          "macroF1": 0.551408168823698,
+          "microF1": 0.692894762058982,
+          "sampleF1": 0.7124202893438462,
+          "exactMatch": 0.6220483898253806
+        },
+        "actions": {
+          "macroPrecision": 0.6035363877213805,
+          "macroRecall": 0.5159594028596591,
+          "macroF1": 0.5368580876548398,
+          "microF1": 0.6784415187173484,
+          "sampleF1": 0.6982178466609481,
+          "exactMatch": 0.6111012379644627
+        },
+        "compact": {
+          "macroPrecision": 0.6162861073669975,
+          "macroRecall": 0.5091633224684164,
+          "macroF1": 0.5413232183866555,
+          "microF1": 0.6818051281688714,
+          "sampleF1": 0.6976019134786857,
+          "exactMatch": 0.632777236024993
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 87,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4666654242432036,
+        "manualAccuracy": 0.6904082121230307,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 7330.833333333333
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5871183488313877,
+          "macroRecall": 0.5391398340239358,
+          "macroF1": 0.5488717351435861,
+          "microF1": 0.6826800551024145,
+          "sampleF1": 0.7165031571489342,
+          "exactMatch": 0.638582697840499
+        },
+        "actions": {
+          "macroPrecision": 0.5858682804198732,
+          "macroRecall": 0.5361318126335616,
+          "macroF1": 0.5458505874710505,
+          "microF1": 0.6776886689139549,
+          "sampleF1": 0.7109465331851528,
+          "exactMatch": 0.6334193898280955
+        },
+        "compact": {
+          "macroPrecision": 0.5944523932446274,
+          "macroRecall": 0.5395838746590046,
+          "macroF1": 0.5511260252672178,
+          "microF1": 0.688074477671628,
+          "sampleF1": 0.7214586397167478,
+          "exactMatch": 0.6477793755370008
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 88,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4459975816655719,
+        "manualAccuracy": 0.6743121349974456,
+        "realAccuracy": 0.2747616666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 4925.5,
+        "techCsConfusionMs": 12625.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5887958113039927,
+          "macroRecall": 0.5396001578897739,
+          "macroF1": 0.550172628964786,
+          "microF1": 0.6870041599058639,
+          "sampleF1": 0.7189952379250478,
+          "exactMatch": 0.6381295405729812
+        },
+        "actions": {
+          "macroPrecision": 0.5861907317092665,
+          "macroRecall": 0.5351359572778447,
+          "macroF1": 0.5458185854711938,
+          "microF1": 0.6783900517869045,
+          "sampleF1": 0.7098369236168672,
+          "exactMatch": 0.6311736270997166
+        },
+        "compact": {
+          "macroPrecision": 0.5950213267859156,
+          "macroRecall": 0.5366750188089723,
+          "macroF1": 0.5502101085128813,
+          "microF1": 0.6872371165122853,
+          "sampleF1": 0.7199255770790923,
+          "exactMatch": 0.6501632025007037
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 89,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 0.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.48418078129224285,
+        "manualAccuracy": 0.6355751563485666,
+        "realAccuracy": 0.370635,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 5440.25,
+        "techCsConfusionMs": 16942.333333333332
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6125205279374292,
+          "macroRecall": 0.5355615099480122,
+          "macroF1": 0.556372852462204,
+          "microF1": 0.6962890303050472,
+          "sampleF1": 0.7184714424539163,
+          "exactMatch": 0.6255143091321439
+        },
+        "actions": {
+          "macroPrecision": 0.6063016089863211,
+          "macroRecall": 0.5219686219188749,
+          "macroF1": 0.5429682046118934,
+          "microF1": 0.6825555802295398,
+          "sampleF1": 0.7046916543329479,
+          "exactMatch": 0.6150657709055386
+        },
+        "compact": {
+          "macroPrecision": 0.6184454917401515,
+          "macroRecall": 0.5147290392087048,
+          "macroF1": 0.5468229494050498,
+          "microF1": 0.6870799830625551,
+          "sampleF1": 0.7048581336429723,
+          "exactMatch": 0.6396525884124247
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 90,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.46383824345211766,
+        "manualAccuracy": 0.6838114569438299,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 7080.833333333333
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5866446117593994,
+          "macroRecall": 0.539081380499309,
+          "macroF1": 0.5486027620407876,
+          "microF1": 0.6824811919693429,
+          "sampleF1": 0.716120016652333,
+          "exactMatch": 0.6380482879981308
+        },
+        "actions": {
+          "macroPrecision": 0.5859393880761202,
+          "macroRecall": 0.5367085139023043,
+          "macroF1": 0.5463287811234949,
+          "microF1": 0.6783525206735869,
+          "sampleF1": 0.7115087250698703,
+          "exactMatch": 0.6334193898280955
+        },
+        "compact": {
+          "macroPrecision": 0.5947301335742708,
+          "macroRecall": 0.5387668811949523,
+          "macroF1": 0.5508244174321855,
+          "microF1": 0.6875754410292875,
+          "sampleF1": 0.7209045115906773,
+          "exactMatch": 0.6484185784603764
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 91,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.46251568565133366,
+        "manualAccuracy": 0.6641765998531118,
+        "realAccuracy": 0.31127000000000005,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2676.6666666666665,
+        "techCsConfusionMs": 7689.166666666667
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5908507837485333,
+          "macroRecall": 0.5397370758195418,
+          "macroF1": 0.5517204719744996,
+          "microF1": 0.6862294682284262,
+          "sampleF1": 0.7148031939928741,
+          "exactMatch": 0.6301013716039815
+        },
+        "actions": {
+          "macroPrecision": 0.584959719967825,
+          "macroRecall": 0.530206222708044,
+          "macroF1": 0.5425066723931696,
+          "microF1": 0.6747676497867303,
+          "sampleF1": 0.7031873259729721,
+          "exactMatch": 0.6219771095331442
+        },
+        "compact": {
+          "macroPrecision": 0.6021717561157393,
+          "macroRecall": 0.5359937748877329,
+          "macroF1": 0.552303305067682,
+          "microF1": 0.6897512019448975,
+          "sampleF1": 0.7200640510773152,
+          "exactMatch": 0.6506225594213217
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 92,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.45099470520190726,
+        "manualAccuracy": 0.6198920899155614,
+        "realAccuracy": 0.3243216666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 4558.5,
+        "techCsConfusionMs": 10617.25
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6215199351140638,
+          "macroRecall": 0.5232977262616372,
+          "macroF1": 0.54918030016734,
+          "microF1": 0.6943694691705904,
+          "sampleF1": 0.7087843092611145,
+          "exactMatch": 0.6162076803525998
+        },
+        "actions": {
+          "macroPrecision": 0.6154315507279896,
+          "macroRecall": 0.5121141473933278,
+          "macroF1": 0.5363202742689608,
+          "microF1": 0.6816066375049655,
+          "sampleF1": 0.6964560275850072,
+          "exactMatch": 0.6065097337403058
+        },
+        "compact": {
+          "macroPrecision": 0.6307996857178639,
+          "macroRecall": 0.5033343068083659,
+          "macroF1": 0.5404719074615647,
+          "microF1": 0.6822935634176958,
+          "sampleF1": 0.6931845580187349,
+          "exactMatch": 0.6299062592812782
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 93,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4635892363693229,
+        "manualAccuracy": 0.6832304404173091,
+        "realAccuracy": 0.29885833333333334,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 7330.833333333333
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5866912971002024,
+          "macroRecall": 0.5393697311336804,
+          "macroF1": 0.5488404328666938,
+          "microF1": 0.68282332846693,
+          "sampleF1": 0.7164083672867045,
+          "exactMatch": 0.6380482879981308
+        },
+        "actions": {
+          "macroPrecision": 0.5859393880761202,
+          "macroRecall": 0.5367085139023043,
+          "macroF1": 0.5463287811234949,
+          "microF1": 0.6783525206735869,
+          "sampleF1": 0.7115087250698703,
+          "exactMatch": 0.6334193898280955
+        },
+        "compact": {
+          "macroPrecision": 0.5944417829398995,
+          "macroRecall": 0.5387668811949523,
+          "macroF1": 0.5506215776755932,
+          "microF1": 0.6873930311459883,
+          "sampleF1": 0.7207046714627796,
+          "exactMatch": 0.6478190580766833
+        }
+      },
+      "mechanismPass": false
+    },
+    {
+      "configId": 94,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4618937110411689,
+        "manualAccuracy": 0.6627253257627274,
+        "realAccuracy": 0.31127000000000005,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2676.6666666666665,
+        "techCsConfusionMs": 9730.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5914230496250137,
+          "macroRecall": 0.5412310067252374,
+          "macroF1": 0.5527685534994718,
+          "microF1": 0.6872423127389746,
+          "sampleF1": 0.7159313335121054,
+          "exactMatch": 0.6294679941100543
+        },
+        "actions": {
+          "macroPrecision": 0.5854861378732372,
+          "macroRecall": 0.5313781620720248,
+          "macroF1": 0.5433443905227093,
+          "microF1": 0.675840566519012,
+          "sampleF1": 0.7045753790289041,
+          "exactMatch": 0.6231505920381186
+        },
+        "compact": {
+          "macroPrecision": 0.6011944014186614,
+          "macroRecall": 0.5366473696589747,
+          "macroF1": 0.5523478963894853,
+          "microF1": 0.689384072381845,
+          "sampleF1": 0.7206592891725534,
+          "exactMatch": 0.65121779751656
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 95,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 1.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.46107984119730566,
+        "manualAccuracy": 0.6179307405714911,
+        "realAccuracy": 0.3434416666666667,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3199.0,
+        "techCsConfusionMs": 11758.666666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6239890557067341,
+          "macroRecall": 0.5303139629117738,
+          "macroF1": 0.5565010821469234,
+          "microF1": 0.6981279730514957,
+          "sampleF1": 0.7146200075245622,
+          "exactMatch": 0.6197598559138752
+        },
+        "actions": {
+          "macroPrecision": 0.6183137828317272,
+          "macroRecall": 0.5186805188892941,
+          "macroF1": 0.543244696693952,
+          "microF1": 0.6865549991407334,
+          "sampleF1": 0.7040041906859207,
+          "exactMatch": 0.6128222974370291
+        },
+        "compact": {
+          "macroPrecision": 0.6332866835580464,
+          "macroRecall": 0.5073837266154583,
+          "macroF1": 0.5457954284320118,
+          "microF1": 0.6853873611652896,
+          "sampleF1": 0.6977807928197959,
+          "exactMatch": 0.6344435067678605
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 96,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.4339676872414748,
+        "manualAccuracy": 0.6735890480078855,
+        "realAccuracy": 0.25425166666666665,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 7130.833333333333
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5849809461464973,
+          "macroRecall": 0.5381310712604747,
+          "macroF1": 0.5477580211815114,
+          "microF1": 0.6813085273605086,
+          "sampleF1": 0.7143517661552803,
+          "exactMatch": 0.6357901042634039
+        },
+        "actions": {
+          "macroPrecision": 0.584268047911488,
+          "macroRecall": 0.5360203075852948,
+          "macroF1": 0.5454568963217108,
+          "microF1": 0.6771331946547416,
+          "sampleF1": 0.7099737740100514,
+          "exactMatch": 0.6311426692668733
+        },
+        "compact": {
+          "macroPrecision": 0.5957615023590385,
+          "macroRecall": 0.5375983268166793,
+          "macroF1": 0.5506348324723142,
+          "microF1": 0.687279310528392,
+          "sampleF1": 0.7201492561243802,
+          "exactMatch": 0.6495815274544884
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 97,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.4230047018171505,
+        "manualAccuracy": 0.6363976375733511,
+        "realAccuracy": 0.26295999999999997,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 7723.333333333333
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5917377185733105,
+          "macroRecall": 0.5377898118759403,
+          "macroF1": 0.5515341232409979,
+          "microF1": 0.6856034916717674,
+          "sampleF1": 0.7108485384073449,
+          "exactMatch": 0.6231678761143193
+        },
+        "actions": {
+          "macroPrecision": 0.588518666338396,
+          "macroRecall": 0.5274557685316648,
+          "macroF1": 0.5425086656229774,
+          "microF1": 0.6748286354687781,
+          "sampleF1": 0.6999592379111043,
+          "exactMatch": 0.6162102892392917
+        },
+        "compact": {
+          "macroPrecision": 0.6066728717351552,
+          "macroRecall": 0.5306680607290867,
+          "macroF1": 0.5512585276860119,
+          "microF1": 0.6880688815548601,
+          "sampleF1": 0.715015631411882,
+          "exactMatch": 0.6471205184721244
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 98,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 1.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.4254229272814503,
+        "manualAccuracy": 0.6063112747678285,
+        "realAccuracy": 0.28975666666666666,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 3357.5833333333335,
+        "techCsConfusionMs": 10026.666666666666
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.617106418034145,
+          "macroRecall": 0.5132087260875945,
+          "macroF1": 0.5424435223691674,
+          "microF1": 0.6832748569711155,
+          "sampleF1": 0.6954396919786099,
+          "exactMatch": 0.6041644719682511
+        },
+        "actions": {
+          "macroPrecision": 0.6095122023726828,
+          "macroRecall": 0.4959608753741371,
+          "macroF1": 0.5241515308246445,
+          "microF1": 0.668026519317689,
+          "sampleF1": 0.6792399257281776,
+          "exactMatch": 0.5932899593490293
+        },
+        "compact": {
+          "macroPrecision": 0.6286549532399514,
+          "macroRecall": 0.4940041791670852,
+          "macroF1": 0.5341660076085147,
+          "microF1": 0.6736589379736441,
+          "sampleF1": 0.6831832082596906,
+          "exactMatch": 0.6212811001238149
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 99,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 3.0
+      },
+      "local": {
+        "accuracy": 0.43378413616940253,
+        "manualAccuracy": 0.6731607621730505,
+        "realAccuracy": 0.25425166666666665,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 7547.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5851066374486592,
+          "macroRecall": 0.5381310712604747,
+          "macroF1": 0.5478861770190099,
+          "microF1": 0.6814840584512453,
+          "sampleF1": 0.7145501788536929,
+          "exactMatch": 0.6363853423586421
+        },
+        "actions": {
+          "macroPrecision": 0.5845974286756513,
+          "macroRecall": 0.5360203075852948,
+          "macroF1": 0.5455876152759591,
+          "microF1": 0.6773048504985072,
+          "sampleF1": 0.7101589591952364,
+          "exactMatch": 0.6316982248224289
+        },
+        "compact": {
+          "macroPrecision": 0.5957615023590385,
+          "macroRecall": 0.5375983268166793,
+          "macroF1": 0.5506348324723142,
+          "microF1": 0.687279310528392,
+          "sampleF1": 0.7201492561243802,
+          "exactMatch": 0.6495815274544884
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 100,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.3
+      },
+      "local": {
+        "accuracy": 0.42477154325410077,
+        "manualAccuracy": 0.636662489815124,
+        "realAccuracy": 0.26585333333333333,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2510.0,
+        "techCsConfusionMs": 9227.5
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.5916411148067795,
+          "macroRecall": 0.5387392765424436,
+          "macroF1": 0.5520209104985755,
+          "microF1": 0.6864016231411184,
+          "sampleF1": 0.7119293931200074,
+          "exactMatch": 0.6230936449423562
+        },
+        "actions": {
+          "macroPrecision": 0.5894649718641974,
+          "macroRecall": 0.5290553058409205,
+          "macroF1": 0.5437033002474281,
+          "microF1": 0.6767229436142336,
+          "sampleF1": 0.702450986909363,
+          "exactMatch": 0.617947200354685
+        },
+        "compact": {
+          "macroPrecision": 0.608080300192937,
+          "macroRecall": 0.5339270352250853,
+          "macroF1": 0.5537728405415713,
+          "microF1": 0.6909187480027011,
+          "sampleF1": 0.7183352517446714,
+          "exactMatch": 0.6500404585491185
+        }
+      },
+      "mechanismPass": true
+    },
+    {
+      "configId": 101,
+      "config": {
+        "mode": "no_context",
+        "widthId": 1,
+        "context": false,
+        "obligations": true,
+        "trainRoute": true,
+        "trainType": true,
+        "physicalEligibility": true,
+        "strongWeight": 1.0,
+        "extraWeight": 4.0,
+        "wholeWeight": 3.0,
+        "ridge": 0.03
+      },
+      "local": {
+        "accuracy": 0.43527307351697025,
+        "manualAccuracy": 0.6081527270951528,
+        "realAccuracy": 0.30561333333333335,
+        "observations": 70,
+        "manualObservations": 30,
+        "realObservations": 40,
+        "techToDenseMs": 2981.4166666666665,
+        "techCsConfusionMs": 11068.833333333334
+      },
+      "consumers": {
+        "detail": {
+          "macroPrecision": 0.6191974924246865,
+          "macroRecall": 0.5210447718125583,
+          "macroF1": 0.5487321981682727,
+          "microF1": 0.6924669291242718,
+          "sampleF1": 0.7055875811671065,
+          "exactMatch": 0.6105175399874728
+        },
+        "actions": {
+          "macroPrecision": 0.6141505359530189,
+          "macroRecall": 0.5098421600791955,
+          "macroF1": 0.5365657766319635,
+          "microF1": 0.6805945826365769,
+          "sampleF1": 0.6951128209664162,
+          "exactMatch": 0.6043148270152113
+        },
+        "compact": {
+          "macroPrecision": 0.6319705070777072,
+          "macroRecall": 0.4989475721235644,
+          "macroF1": 0.539190386285883,
+          "microF1": 0.679294192697761,
+          "sampleF1": 0.6892983496123817,
+          "exactMatch": 0.6270491164241353
+        }
+      },
+      "mechanismPass": true
+    }
+  ]
+}

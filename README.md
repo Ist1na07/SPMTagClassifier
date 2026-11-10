@@ -2,14 +2,14 @@
 
 独立的 osu!mania **4K / 6K / 7K** 键型分析库。Node 与浏览器均可用，推理零第三方依赖。
 
-- **7K 默认**：保留成熟局部专家及 Break／BPM 修补，用连续负担积分聚合整谱 tag；输出多分支与负担百分数，可复用同次 SPM Rating 难度曲线。
+- **7K 默认**：成熟局部专家＋逐手动作排除明显假切换，保留同类型内的稳定变速；用连续负担积分聚合整谱 tag，可复用同次 SPM Rating 难度曲线。
 - **4K**：原生五类模型，同一局部分布参与分段、证据加权及整谱组成。
 - **6K**：在真实六列上运行 4K/7K 共同粗分类器，不再使用虚拟中键或投影专家输出混合。
 - **7K `modern`**：完整联合选择后的 LN 小幅更新候选，显式启用；没有充分证据替换默认。
 
 **[回炉研究结论与证据](research/rework/CONCLUSIONS.md)** · [完整研究记录](research/rework/README.md) · [上游来源](UPSTREAM.md)
 
-已发布的 [v1.1.0](https://github.com/Ist1na07/SPMTagClassifier/releases/tag/v1.1.0) 是从插件 **tag v1.2.0** 提取的原版算法；v1.2.0 的分阶段调参完整性与部分归因结论已修正，历史 tag 不改写。**本轮唯一研究基线是 v1.1.0，全部升级均属于 v1.2 系列**。v1.2.1／v1.2.2 是同轮检查点；曾误发的 v1.3.0 归档，不代表新迭代。当前统一交付为 v1.2.3，见[版本与研究口径](docs/ITERATION_1_2.md)。
+已发布的 [v1.1.0](https://github.com/Ist1na07/SPMTagClassifier/releases/tag/v1.1.0) 是从插件 **tag v1.2.0** 提取的原版算法；v1.2.0 的分阶段调参完整性与部分归因结论已修正，历史 tag 不改写。**本轮唯一研究基线是 v1.1.0，全部升级均属于 v1.2 系列**。此前补丁是同轮检查点；曾误发的 v1.3.0 归档，不代表新迭代。当前统一交付为 v1.2.4，见[版本与研究口径](docs/ITERATION_1_2.md)。
 
 ### v1.2.3：整谱 tag 表达主要游玩负担
 
@@ -17,7 +17,7 @@
 
 原349条、原歌曲／重复物理源分组的回顾性对照中，以 v1.1.0 为基线，17类 macro F1 从 **51.98%** 提高至动作版 **53.79%**、Detailed **55.34%**、Compact **53.67%**。Detailed 的 P/R 为 **59.03%／53.99%**，整谱完全匹配率从 **57.78%** 至 **63.83%**；逐类并非全部提高。默认 Detailed 恢复较早的 R1 配置：扩大搜索域后的候选并未取得更好的外折结果，不能仅凭较高内层分数取代它。全部属于同批数据的回顾性分组评价。
 
-**[研究结论、消融与失败方案](research/perception/CONCLUSIONS.md)** · **[评分复用与插件更新](docs/perception.md)**。新研究不改变局部主类，不能据此宣称修复了 Tech→Dense CS。`aggregation:'classic'` 恢复 v1.2.2 整谱策略；raw legacy、modern、4K／6K 路径保持可用。
+**[研究结论、消融与失败方案](research/perception/CONCLUSIONS.md)** · **[评分复用与插件更新](docs/perception.md)**。此处 v1.2.3 聚合研究没有改变局部主类，不能据此宣称修复了 Tech→Dense CS。`aggregation:'classic'` 使用旧整谱策略消费当前分段；raw legacy、modern、4K／6K 路径保持可用。
 
 ### 同轮过程检查点 v1.2.2：修正可确定的 overlay 错误
 
@@ -29,10 +29,16 @@
 
 11月10日的[限时定点跟进](research/overlay-quality/targeted-sequence-r1/DECISION.md)参考GitHub上的连续行识别及逐手时序方法，完成原段／局部上下文的联合对照，但没有减少真实Tech→Dense错误；新局部头未采用；该次跟进未发布新版本。
 
+### v1.2.4：分段续研与实际显示修正
+
+H01/H03 的左右手固定对拍不再报 Dense CS，H02/H04 的真实切换保持；同类 150→200 变速及 DT225→300 能分开显示，保留旧专家长边界和分数。Wildcard 缺失整谱分支时不再显示伪造的 0%。这些修正已进入默认路径。
+
+同时完成路由＋具体类型＋整谱积分的 1,836 次 INNER 联调；来源留出没有验证局部反传收益，故未采用该权重。六图准确率仍为69.59%，三路径整谱分数不变，**常见 Tech→Dense 问题仍未解决**。[采用范围、完整对照与失败原因](research/local_feedback/CONCLUSIONS.md)。本补丁仍属于同一个 v1.2 迭代。
+
 ## 运行一张谱面
 
 ```sh
-npm install https://github.com/Ist1na07/SPMTagClassifier/releases/download/v1.2.3/spm-tag-classifier-1.2.3.tgz
+npm install https://github.com/Ist1na07/SPMTagClassifier/releases/download/v1.2.4/spm-tag-classifier-1.2.4.tgz
 ```
 
 ```js

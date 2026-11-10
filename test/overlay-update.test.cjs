@@ -17,6 +17,12 @@ test('upstream update is dry-run first, backed up, idempotent and preserves diff
  const oldMarker='SPMTagClassifier perception integration v1.3.0',marker='SPMTagClassifier perception integration schema 1';
  assert.equal(patch.patchHtml(p.updated['index.html'].replace(marker,oldMarker)),p.updated['index.html']);
  assert.equal(patch.patchRating(p.updated['spm_algorithm.js'].replace(marker,oldMarker)),p.updated['spm_algorithm.js']);
+ // Already installed schema1 pages also receive the missing-branch fix.
+ const oldBranch=`                    const branch = seg.branches ? seg.branches[seg.tag] || 0 : seg.confidence;
+                    elSegConf.textContent = Math.round(branch * 100) + '%';
+                    elSegConf.title = seg.branches ? '分支贴合度（不是识别正确率）' : '原分类支持';`;
+ const currentBranch=p.updated['index.html'].match(/                    const hasBranch =[^\n]+\n[^\n]+\n[^\n]+\n[^\n]+/)[0];
+ assert.equal(patch.patchHtml(p.updated['index.html'].replace(currentBranch,oldBranch)),p.updated['index.html']);
  assert.throws(()=>patch.patchRating(p.originals['spm_algorithm.js'].replace('w_jm:934.2448253030639','w_jm:1')),/parameters/);
  const text='[General]\nMode:3\n[Difficulty]\nCircleSize:7\n[TimingPoints]\n0,500,4,2,1,100,1,0\n[HitObjects]\n'+Array.from({length:100},(_,i)=>`${(i%7+.5)*512/7},192,${1001+i*83},1,0,0:0:0:0:`).join('\n');
  const old={},updated={};vm.runInNewContext(p.originals['spm_algorithm.js'],old);vm.runInNewContext(p.updated['spm_algorithm.js'],updated);

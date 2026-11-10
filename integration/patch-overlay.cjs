@@ -5,6 +5,13 @@ const {EXPECTED_RATING,COMPACT_RATING}=require('../src/perception.cjs');
 const {version}=require('../package.json');
 const MARK='SPMTagClassifier perception integration schema 1';
 const OLD_MARK='SPMTagClassifier perception integration v1.3.0';
+const OLD_BRANCH=`                    const branch = seg.branches ? seg.branches[seg.tag] || 0 : seg.confidence;
+                    elSegConf.textContent = Math.round(branch * 100) + '%';
+                    elSegConf.title = seg.branches ? '分支贴合度（不是识别正确率）' : '原分类支持';`;
+const BRANCH=`                    const hasBranch = seg.branches && Object.prototype.hasOwnProperty.call(seg.branches, seg.tag);
+                    const branch = hasBranch ? seg.branches[seg.tag] : seg.confidence;
+                    elSegConf.textContent = Math.round(branch * 100) + '%';
+                    elSegConf.title = hasBranch ? '分支贴合度（不是识别正确率）' : '原分类支持（不是识别正确率）';`;
 function normalizeMarker(s){return s.replace(OLD_MARK,MARK);}
 function once(s,a,b){const i=s.indexOf(a);if(i<0||s.indexOf(a,i+a.length)>=0)throw Error('Unsupported overlay layout: '+a.slice(0,90));return s.slice(0,i)+b+s.slice(i+a.length);}
 function numericObject(body){
@@ -48,7 +55,7 @@ function patchHtml(text){
  let s=normalizeMarker(text.replace(/\r\n/g,'\n'));
  if(s.includes(MARK)){
   for(const token of ['function renderOverallTagsClassic','includeTagEvidence: cachedKeyCount === 7','ratingEvidence: result.tagEvidence','主要键型未定'])if(!s.includes(token))throw Error('Partial overlay integration: restore the three backed-up files first');
-  return s;
+  return s.includes(OLD_BRANCH)?once(s,OLD_BRANCH,BRANCH):s;
  }
  const start=s.indexOf('            // v0.5.0: segment-based sort/tag classification (7K only)');
  const end=s.indexOf('            renderRating(speedRate);',start);
@@ -75,9 +82,7 @@ function patchHtml(text){
   "            if (result.classified && cachedTagResult.overall.tags.length) result.mapType = String(cachedTagResult.overall.sort || '').toUpperCase() || result.mapType;");
  s=once(s,'    /** Solid tag chips for the timeline legend. */',fs.readFileSync(path.join(__dirname,'render-perception.js'),'utf8')+'\n    /** Solid tag chips for the timeline legend. */');
  s=once(s,"                    elSegConf.textContent = Math.round(seg.confidence * 100) + '%';",
- `                    const branch = seg.branches ? seg.branches[seg.tag] || 0 : seg.confidence;
-                    elSegConf.textContent = Math.round(branch * 100) + '%';
-                    elSegConf.title = seg.branches ? '分支贴合度（不是识别正确率）' : '原分类支持';`);
+ BRANCH);
  return s;
 }
 function plan(directory){

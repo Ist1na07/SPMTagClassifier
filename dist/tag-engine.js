@@ -1,4 +1,4 @@
-/* SPMTagClassifier v1.2.3 | MIT | Ist1na */
+/* SPMTagClassifier v1.2.4 | MIT | Ist1na */
 var TagClassifier=(()=>{
 const modules=[function(module,exports,load){
 'use strict';
@@ -8,10 +8,11 @@ const {features,windows,FEATURE_KEYS}=load(3);
 const {coarseResult}=load(4),{lnResult}=load(7);
 const geometry=load(9),{version}=load(6);
 const {correctCadenceDisplay}=load(10);
-const overlay7=load(11),overlayProfile=load(12);
-const profile4=load(13),profile7=load(14);
-const native4=load(15),native6=load(16),native7=load(17);
-const perception=load(18),perceptionProfiles=load(19).profiles;
+const {refine:refineSegments}=load(11);
+const overlay7=load(12),overlayProfile=load(13);
+const profile4=load(14),profile7=load(15);
+const native4=load(16),native6=load(17),native7=load(18);
+const perception=load(19),perceptionProfiles=load(20).profiles;
 function profile(key){return key===4?profile4:profile7;}
 function evidenceMap(osuText,opts={}) {
   const map=parseOsu(osuText,opts),ctx=prepare(map,10);
@@ -30,7 +31,10 @@ function describe(w) {
 }
 function stable7(osuText,opts,e) {
   const perceptual=opts.aggregation!=='classic';
-  const r=overlay7.analyzeMap(osuText,{...opts,_rawEvidence:perceptual}),geometryContext=geometry.prepare(e.ctx);
+  const name=opts.ratingEvidence?(opts.ratingEvidence.modelIdentity===perception.COMPACT_RATING?'compact':'detail'):'actions',p=perceptionProfiles[name];
+  const r=overlay7.analyzeMap(osuText,{...opts,_rawEvidence:true,_segmentReadout:(raw,resolveBpm)=>refineSegments(e.ctx,raw,p.classes,{resolveBpm,speedRate:opts.speedRate??1,supportPower:p.supportPower??1})}),geometryContext=geometry.prepare(e.ctx);
+  const classicPrior=r.debug.classicPrior,branchSupport=r.debug.readoutSupport,cutExclusions=r.debug.cutExclusions;
+  delete r.debug.classicPrior;delete r.debug.readoutSupport;delete r.debug.cutExclusions;
   const raw=r.debug.rawSegments;delete r.debug.rawSegments;
   // The inherited segmenter can omit a short leading pickup when snapping.
   // Extend only the envelope; keep the learned tags and overall decision.
@@ -41,7 +45,9 @@ function stable7(osuText,opts,e) {
     const distribution=Object.fromEntries(Object.entries(raw).map(([k,v])=>[k,sum>0?v/sum:Number(k===s.tag)]));
     const ranked=Object.values(distribution).sort((a,b)=>b-a);
     s.distribution=distribution;
-    s.evidence={normalizedEntropy:ranked.length>1?-ranked.reduce((a,v)=>v>0?a+v*Math.log(v):a,0)/Math.log(ranked.length):0,
+    const archivedEquivBpm=s._archivedEquivBpm;delete s._archivedEquivBpm;
+    const cadence=s.evidence?.cadence;
+    s.evidence={...(cadence?{cadence}:{}),...(archivedEquivBpm===undefined?{}:{archivedEquivBpm}),normalizedEntropy:ranked.length>1?-ranked.reduce((a,v)=>v>0?a+v*Math.log(v):a,0)/Math.log(ranked.length):0,
       margin:(ranked[0]||0)-(ranked[1]||0),effort:w.metrics.effort,occupancy:w.metrics.occupancy,
       featureWindows:1,contextNoteObservations:w.notes,legacyConfidence:s.confidence,
       geometry:geometry.describeInterval(geometryContext,s.start,Math.max(s.start+1,s.end))};
@@ -50,13 +56,13 @@ function stable7(osuText,opts,e) {
   r.overall.composition=total>0?Object.fromEntries(Object.entries(r.overall.weights).map(([k,v])=>[k,v/total])):{break:1};
   r.overall.scoreKind='legacy decision scores; distribution is normalized affinity, not calibrated confidence';
   r.modelInfo={version,keyCount:7,variant:'legacy-stable',researchVariant:'anchored-ln-release',
-    segmentEvidence:'archived affinities with corrected fast-regular rest gate; interval-union diagnostics',temporalResolutionMs:250,
+    segmentEvidence:'archived affinities, regular-rest gate and two-thumb static-hand cut exclusion; stable cadence plateaus',temporalResolutionMs:250,
+    segmentReadout:{stepMs:500,cutContextMs:4000,minCadencePlateauMs:1800,cutExcludedFrames:cutExclusions},
     overlayPolicy:{regularityRestRelativeNps:overlayProfile.gate.ratio,regularityRestRowRateMax:overlayProfile.gate.rowRateMax,
       rowRateUnit:'rows per converted second',aggregation:'unchanged legacy policy'}};
   if(perceptual){
     const rating=opts.ratingEvidence;
-    const name=rating?(rating.modelIdentity===perception.COMPACT_RATING?'compact':'detail'):'actions';
-    const p=perceptionProfiles[name],a=perception.infer(e.map,raw,rating,p,{speedRate:opts.speedRate??1,context:e.ctx,baseline:r.overall});
+    const a=perception.infer(e.map,raw,rating,p,{speedRate:opts.speedRate??1,context:e.ctx,baseline:classicPrior??r.overall,_branchSupport:branchSupport});
     r.overall=a.overall;perception.decorateSegments(r.segments,a,p.classes);
     r.modelInfo.overlayPolicy.aggregation='support-weighted perceptual burden';
     r.modelInfo.perception={profile:name,recipe:{...p.recipe},supportPower:p.supportPower,
@@ -2985,7 +2991,7 @@ return load(0);})();
 function(module,exports,load){
 module.exports={
   "name": "spm-tag-classifier",
-  "version": "1.2.3",
+  "version": "1.2.4",
   "description": "Standalone osu!mania pattern classification extracted from SPM Map Analyser",
   "main": "src/index.cjs",
   "bin": {
@@ -5994,13 +6000,135 @@ function correctCadenceDisplay(result, ctx, speedRate = 1) {
     const measured = regularRowCadence(ctx, start, end, speedRate);
     if (!measured) continue;
     const { equivBpm, ...evidence } = measured;
-    segment.evidence.cadence = { ...evidence, legacyEquivBpm: segment.equivBpm };
+    segment.evidence.cadence = { ...evidence, measuredStart:start,measuredEnd:end,legacyEquivBpm: segment.evidence.archivedEquivBpm??segment.equivBpm };
     segment.equivBpm = equivBpm;
   }
   result.modelInfo.cadencePolicy = 'uniform rows measured directly; other archived cadence unchanged';
   return result;
 }
 module.exports = { regularRowCadence, correctCadenceDisplay };
+
+},
+function(module,exports,load){
+'use strict';
+const {lowerBound:lb}=load(2);
+const {correctCadenceDisplay}=load(10);
+const CS=new Set(['dense chordstream','fast chordstream']);
+const STEP_MS=500,CONTEXT_MS=4000,MIN_DISPLAY_MS=1800;
+
+// Exact hand events, not globally adjacent rows. The flexible centre thumb is
+// assigned to either hand; exclusion must hold under BOTH assignments.
+function prepareHands(ctx){
+  return [0,1].map(thumb=>[0,1].map(side=>{
+    const rows=[];
+    for(const n of ctx.map.notes){
+      if((n.col===3?thumb:n.col<3?0:1)!==side)continue;
+      const last=rows.at(-1);if(last&&last.t===n.t)last.mask|=1<<n.col;else rows.push({t:n.t,mask:1<<n.col});
+    }
+    return rows;
+  }));
+}
+function noCut(ctx,hands,start,end){
+  const a=lb(ctx.rows,start,r=>r.t),b=lb(ctx.rows,end,r=>r.t);
+  if(b-a<4)return false;
+  const t=lb(ctx.tails,start,r=>r.t);if(t<ctx.tails.length&&ctx.tails[t].t<end)return false;
+  for(let j=a;j<b;j++)if(ctx.rows[j].lnMask)return false;
+  for(const hs of ctx.holds){const j=lb(hs,end,h=>h[0])-1;if(j>=0&&hs[j][1]>start)return false;}
+  for(const view of hands){
+    let pairs=0;
+    for(const rows of view){
+      const lo=lb(rows,start,r=>r.t),hi=lb(rows,end,r=>r.t);
+      for(let i=Math.max(1,lo);i<hi;i++){pairs++;if(rows[i-1].mask!==rows[i].mask)return false;}
+    }
+    if(!pairs)return false;
+  }
+  return true;
+}
+function excludeCut(s){
+  const scores={...s.scores,'dense chordstream':0,'fast chordstream':0};
+  if(!CS.has(s.tag))return {...s,scores,secondary:CS.has(s.secondary)?undefined:s.secondary};
+  // Anchor/Vibro remain overlapping attributes, not replacement base types.
+  const ranked=Object.entries(scores).filter(([c])=>!CS.has(c)&&c!=='anchor'&&c!=='vibro').sort((a,b)=>b[1]-a[1]);
+  let [tag,value]=ranked[0]??['wildcard',0];
+  if(tag==='wildcard')for(const [c,v]of ranked.slice(1))if(c!=='wildcard'&&v>.3){tag=c;value=v;break;}
+  const other=Object.entries(scores).filter(([c])=>c!==tag&&!CS.has(c)).sort((a,b)=>b[1]-a[1])[0];
+  const secondary=other&&other[1]>=.75*value&&other[1]>.3?other[0]:undefined;
+  return {...s,scores,tag,confidence:Math.min(1,value),secondary};
+}
+
+function smoothCadenceFrames(frames,ctx,speedRate=1){
+  const same=(a,b)=>a.tag===b.tag&&a.secondary===b.secondary&&a.family===b.family;
+  const measured=(s,anchor=s.equivBpm)=>{
+    const copy={...s,evidence:{sourceStart:s.start,sourceEnd:s.end}};
+    correctCadenceDisplay({segments:[copy],modelInfo:{}},ctx,speedRate);
+    const c=copy.evidence.cadence;
+    if(c&&Number.isFinite(anchor)){
+      const e=c.resolutionMs/(c.rowCount-1),lo=15000/(c.spacingMs+e),hi=c.spacingMs>e?15000/(c.spacingMs-e):Infinity;
+      if(lo<=anchor+.5&&hi>=anchor-.5)copy.equivBpm=anchor;
+    }
+    return c?copy:null;
+  };
+  const groups=[];
+  for(const s of frames){
+    const g=groups.at(-1);
+    // Keep long original expert boundaries and their distinct scores. Splits
+    // introduced only for this readout must not merge those old observations.
+    if(g&&same(g,s)&&(g.parent===s.parent||s.parentDuration<MIN_DISPLAY_MS)){
+      g.end=s.end;g.children.push(s);
+    }else groups.push({...s,children:[s]});
+  }
+  const labelGroups=[];
+  for(let i=0;i<groups.length;i++){
+    const g=groups[i],p=labelGroups.at(-1),n=groups[i+1];
+    if(g.family==='break'&&g.end-g.start<MIN_DISPLAY_MS&&p&&n&&p.tag===n.tag){p.end=g.end;continue;}
+    labelGroups.push(g);
+  }
+  const out=[];
+  for(const g of labelGroups){
+    let pending=null;const plateaus=[];
+    const finish=()=>{if(pending&&pending.end-pending.start>=MIN_DISPLAY_MS)plateaus.push(pending);pending=null;};
+    for(const s of g.children){
+      if(pending){const joined=measured({...pending,end:s.end},g.equivBpm);if(joined){pending=joined;continue;}finish();}
+      pending=measured(s,g.equivBpm);
+    }
+    finish();
+    const {children,parent,parentDuration,...plain}=g,base={...plain,_archivedEquivBpm:g.equivBpm};
+    if(!plateaus.length){out.push(base);continue;}
+    const groupStart=out.length;
+    const emit=(start,end,bpm,measurement)=>{
+      if(end<=start)return;
+      const s={...base,start,end,equivBpm:bpm,...(measurement?{evidence:{cadence:{...measurement.evidence.cadence,legacyEquivBpm:g.equivBpm,measuredStart:measurement.start,measuredEnd:measurement.end}}}:{})},previous=out.at(-1);
+      if(out.length>groupStart&&previous.end===s.start&&same(previous,s)&&previous.equivBpm===s.equivBpm)previous.end=s.end;else out.push(s);
+    };
+    let cursor=g.start;
+    for(let i=0;i<plateaus.length;i++){
+      const p=plateaus[i],gap=p.start-cursor;let start=p.start;
+      if(gap>=MIN_DISPLAY_MS)emit(cursor,p.start,g.equivBpm);
+      else if(i===0)start=cursor;
+      else if(gap>0)out.at(-1).end=p.start;
+      emit(start,p.end,p.equivBpm,p);cursor=p.end;
+    }
+    if(g.end-cursor>=MIN_DISPLAY_MS)emit(cursor,g.end,g.equivBpm);
+    else if(g.end>cursor)out.at(-1).end=g.end;
+  }
+  return out;
+}
+function refine(ctx,source,classes,{speedRate=1,supportPower=1,resolveBpm}={}){
+  const map=ctx.map,hands=prepareHands(ctx),frames=[],support=[];let exclusions=0;
+  source.forEach((old,parent)=>{
+    const scores=old.scores??{[old.tag]:1},div=Math.max(1,...Object.values(scores));
+    const q=classes.map(c=>old.family==='break'?0:Math.min(.999,Math.max(0,scores[c]??0)/div)**supportPower);
+    for(let start=old.start;start<old.end;start+=STEP_MS){
+      const end=Math.min(old.end,start+STEP_MS),mid=(start+end)/2,a=Math.max(map.firstNote,mid-CONTEXT_MS/2),b=Math.max(a+1,Math.min(map.lastNote,mid+CONTEXT_MS/2));
+      const excluded=old.family==='rc'&&noCut(ctx,hands,a,b);let s={...old,start,end,parent,parentDuration:old.end-old.start};
+      if(excluded){s=excludeCut(s);exclusions++;}
+      if(s.tag!==old.tag&&resolveBpm){const bpm=resolveBpm(s.tag,parent);if(bpm===undefined)delete s.equivBpm;else s.equivBpm=bpm;}
+      frames.push(s);support.push(q.map((v,j)=>excluded&&CS.has(classes[j])?0:v));
+    }
+  });
+  return {frames,support,segments:smoothCadenceFrames(frames,ctx,speedRate),exclusions};
+}
+module.exports={refine,prepareHands,noCut,smoothCadenceFrames};
 
 },
 function(module,exports,load){
@@ -8076,10 +8204,22 @@ var TagClassifier = (() => {
     if (rate !== 1) map = rescale(map, rate);
     const cm = buildCachedMap(osuText, opts);
     const rawEvidence = opts._rawEvidence ? classifySegments(cm, { scorer: "model" }) : null;
-    const segments = smoothSegments(rawEvidence ? rawEvidence.map(s => ({...s, ...(s.scores ? {scores:{...s.scores}} : {})})) : classifySegments(cm, { scorer: "model" }));
+
+    const originalSegments = smoothSegments(rawEvidence ? rawEvidence.map(s=>({...s})) : classifySegments(cm,{scorer:"model"}));
+    const classicPrior = aggregateOverall(originalSegments, {"dominantShare":0.52,"mixShare":0.07,"secondRel":0.75});
+    let readout = null;
+    if (opts._segmentReadout) {
+      const mapMedians=computeMapMedians(cm.windows),medians=new Map();
+      readout=opts._segmentReadout(rawEvidence,(tag,parent)=>{
+        if(!medians.has(parent)){const s=cm.rawSegs[parent];medians.set(parent,medianWindowFeatures(cm.windows,s.windowRange[0],s.windowRange[1],mapMedians));}
+        return equivBpmFor(tag,medians.get(parent),cm.extras[parent]);
+      });
+    }
+    const segments = readout ? readout.segments : originalSegments;
     const overall = aggregateOverall(segments, {"dominantShare":0.52,"mixShare":0.07,"secondRel":0.75});
     const result = { map, segments, overall, debug: { windows: cm.windows, norm: void 0, ctx: void 0 } };
-    if (rawEvidence) result.debug.rawSegments = rawEvidence;
+    if (rawEvidence) result.debug.rawSegments = readout ? readout.frames : rawEvidence;
+    if(readout){result.debug.classicPrior=classicPrior;result.debug.readoutSupport=readout.support;result.debug.cutExclusions=readout.exclusions;}
     return result;
   }
   function extractIntermediate(osuText, opts = {}) {
@@ -13055,7 +13195,11 @@ function infer(map,segments,rating,profile,options={}){
   if(profile.schemaVersion!==1||profile.classes.length!==14)throw Error('PerceptionProfileSchema');
   const classes=profile.classes,needComponents=!!profile.components;
   const integral=integrate(map,segments,rating,profile.recipe,{...options,modelIdentity:profile.modelIdentity??EXPECTED_RATING,components:needComponents,includeGeometry:!!profile.localCoef});
-  const base=baseSupport(segments,classes,profile.supportPower??1,profile.hard),support=base.map(a=>[...a]);
+  // A negative physical exclusion must not renormalize and inflate the other
+  // branches when it removes the old maximum-scoring class.
+  const base=options._branchSupport??baseSupport(segments,classes,profile.supportPower??1,profile.hard);
+  if(base.length!==segments.length||base.some(row=>row.length!==classes.length||row.some(v=>!Number.isFinite(v)||v<0||v>1)))throw Error('PerceptionBranchSupport');
+  const support=base.map(a=>[...a]);
   if(profile.localCoef){const s=profile.localScaler;
     for(let i=0;i<support.length;i++)for(let j=0;j<classes.length;j++){
       if(base[i][j]<=0)continue;let residual=0;

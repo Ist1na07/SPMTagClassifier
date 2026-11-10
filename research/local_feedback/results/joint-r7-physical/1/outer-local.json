@@ -1,0 +1,2162 @@
+{
+  "all": {
+    "manual": [
+      {
+        "uid": "manual/AH",
+        "accuracy": 0.75644375,
+        "correctMs": 181546.5,
+        "totalMs": 240000.0,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "perClass": {
+          "break": {
+            "tp": 32082.5,
+            "fp": 12743.0,
+            "fn": 6488.5
+          },
+          "inverse": {
+            "tp": 0.0,
+            "fp": 3654.5,
+            "fn": 15919.0
+          },
+          "density": {
+            "tp": 50318.5,
+            "fp": 26013.0,
+            "fn": 24145.5
+          },
+          "coordination": {
+            "tp": 0.0,
+            "fp": 4820.5,
+            "fn": 7347.0
+          },
+          "ln wildcard": {
+            "tp": 25905.5,
+            "fp": 1492.5,
+            "fn": 84222.5
+          },
+          "technical": {
+            "tp": 73240.0,
+            "fp": 9730.0,
+            "fn": 7270.0
+          }
+        },
+        "transitions": {
+          "break -> break": 32082.5,
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 9260.5,
+          "density|inverse -> density": 535.5,
+          "coordination -> density": 7347.0,
+          "density -> density": 21045.5,
+          "density|ln wildcard -> density": 19439.0,
+          "density|ln wildcard -> ln wildcard": 3826.0,
+          "ln wildcard -> ln wildcard": 22079.5,
+          "ln wildcard -> technical": 3099.5,
+          "density -> technical": 4860.5,
+          "technical|ln wildcard -> technical": 44043.5,
+          "technical|ln wildcard -> break": 38.5,
+          "break -> technical": 1770.0,
+          "technical -> technical": 29196.5,
+          "technical -> break": 2219.0,
+          "inverse -> break": 1225.0,
+          "break -> density": 1064.0,
+          "ln wildcard -> density": 17602.0,
+          "inverse|density -> density": 4400.5,
+          "inverse|density -> ln wildcard": 497.5,
+          "density|technical -> density": 4898.0,
+          "density -> ln wildcard": 880.5,
+          "technical -> ln wildcard": 114.5,
+          "density -> coordination": 4820.5
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "E01",
+        "uid": "spm_dataset-1.1.1/bm_0041/40",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "density": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "density",
+        "group": "spm_dataset-1.1.1/bm_0045/44"
+      },
+      {
+        "id": "I01",
+        "uid": "spm_dataset-1.1.1/bm_0291/290",
+        "allowedPrimary": [
+          "ln wildcard"
+        ],
+        "coverage": {
+          "coordination": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "coordination",
+        "group": "spm_dataset-1.1.1/bm_0291/290"
+      }
+    ],
+    "display": {
+      "segments": 713,
+      "tagSwitches": 610,
+      "subsecondSegments": 2,
+      "medianSegmentMs": 9281.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "joint": {
+    "manual": [
+      {
+        "uid": "manual/AH",
+        "accuracy": 0.75644375,
+        "correctMs": 181546.5,
+        "totalMs": 240000.0,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "perClass": {
+          "break": {
+            "tp": 32082.5,
+            "fp": 12743.0,
+            "fn": 6488.5
+          },
+          "inverse": {
+            "tp": 0.0,
+            "fp": 3654.5,
+            "fn": 15919.0
+          },
+          "density": {
+            "tp": 50318.5,
+            "fp": 26013.0,
+            "fn": 24145.5
+          },
+          "coordination": {
+            "tp": 0.0,
+            "fp": 4820.5,
+            "fn": 7347.0
+          },
+          "ln wildcard": {
+            "tp": 25905.5,
+            "fp": 1492.5,
+            "fn": 84222.5
+          },
+          "technical": {
+            "tp": 73240.0,
+            "fp": 9730.0,
+            "fn": 7270.0
+          }
+        },
+        "transitions": {
+          "break -> break": 32082.5,
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 9260.5,
+          "density|inverse -> density": 535.5,
+          "coordination -> density": 7347.0,
+          "density -> density": 21045.5,
+          "density|ln wildcard -> density": 19439.0,
+          "density|ln wildcard -> ln wildcard": 3826.0,
+          "ln wildcard -> ln wildcard": 22079.5,
+          "ln wildcard -> technical": 3099.5,
+          "density -> technical": 4860.5,
+          "technical|ln wildcard -> technical": 44043.5,
+          "technical|ln wildcard -> break": 38.5,
+          "break -> technical": 1770.0,
+          "technical -> technical": 29196.5,
+          "technical -> break": 2219.0,
+          "inverse -> break": 1225.0,
+          "break -> density": 1064.0,
+          "ln wildcard -> density": 17602.0,
+          "inverse|density -> density": 4400.5,
+          "inverse|density -> ln wildcard": 497.5,
+          "density|technical -> density": 4898.0,
+          "density -> ln wildcard": 880.5,
+          "technical -> ln wildcard": 114.5,
+          "density -> coordination": 4820.5
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "E01",
+        "uid": "spm_dataset-1.1.1/bm_0041/40",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "density": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "density",
+        "group": "spm_dataset-1.1.1/bm_0045/44"
+      },
+      {
+        "id": "I01",
+        "uid": "spm_dataset-1.1.1/bm_0291/290",
+        "allowedPrimary": [
+          "ln wildcard"
+        ],
+        "coverage": {
+          "coordination": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "coordination",
+        "group": "spm_dataset-1.1.1/bm_0291/290"
+      }
+    ],
+    "display": {
+      "segments": 713,
+      "tagSwitches": 610,
+      "subsecondSegments": 2,
+      "medianSegmentMs": 9281.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "local_only": {
+    "manual": [
+      {
+        "uid": "manual/AH",
+        "accuracy": 0.75644375,
+        "correctMs": 181546.5,
+        "totalMs": 240000.0,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "perClass": {
+          "break": {
+            "tp": 32082.5,
+            "fp": 12743.0,
+            "fn": 6488.5
+          },
+          "inverse": {
+            "tp": 0.0,
+            "fp": 3654.5,
+            "fn": 15919.0
+          },
+          "density": {
+            "tp": 50318.5,
+            "fp": 26013.0,
+            "fn": 24145.5
+          },
+          "coordination": {
+            "tp": 0.0,
+            "fp": 4820.5,
+            "fn": 7347.0
+          },
+          "ln wildcard": {
+            "tp": 25905.5,
+            "fp": 1492.5,
+            "fn": 84222.5
+          },
+          "technical": {
+            "tp": 73240.0,
+            "fp": 9730.0,
+            "fn": 7270.0
+          }
+        },
+        "transitions": {
+          "break -> break": 32082.5,
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 9260.5,
+          "density|inverse -> density": 535.5,
+          "coordination -> density": 7347.0,
+          "density -> density": 21045.5,
+          "density|ln wildcard -> density": 19439.0,
+          "density|ln wildcard -> ln wildcard": 3826.0,
+          "ln wildcard -> ln wildcard": 22079.5,
+          "ln wildcard -> technical": 3099.5,
+          "density -> technical": 4860.5,
+          "technical|ln wildcard -> technical": 44043.5,
+          "technical|ln wildcard -> break": 38.5,
+          "break -> technical": 1770.0,
+          "technical -> technical": 29196.5,
+          "technical -> break": 2219.0,
+          "inverse -> break": 1225.0,
+          "break -> density": 1064.0,
+          "ln wildcard -> density": 17602.0,
+          "inverse|density -> density": 4400.5,
+          "inverse|density -> ln wildcard": 497.5,
+          "density|technical -> density": 4898.0,
+          "density -> ln wildcard": 880.5,
+          "technical -> ln wildcard": 114.5,
+          "density -> coordination": 4820.5
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "E01",
+        "uid": "spm_dataset-1.1.1/bm_0041/40",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "density": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "density",
+        "group": "spm_dataset-1.1.1/bm_0045/44"
+      },
+      {
+        "id": "I01",
+        "uid": "spm_dataset-1.1.1/bm_0291/290",
+        "allowedPrimary": [
+          "ln wildcard"
+        ],
+        "coverage": {
+          "coordination": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "coordination",
+        "group": "spm_dataset-1.1.1/bm_0291/290"
+      }
+    ],
+    "display": {
+      "segments": 713,
+      "tagSwitches": 610,
+      "subsecondSegments": 2,
+      "medianSegmentMs": 9281.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "whole_only": {
+    "manual": [
+      {
+        "uid": "manual/AH",
+        "accuracy": 0.75644375,
+        "correctMs": 181546.5,
+        "totalMs": 240000.0,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "perClass": {
+          "break": {
+            "tp": 32082.5,
+            "fp": 12743.0,
+            "fn": 6488.5
+          },
+          "inverse": {
+            "tp": 0.0,
+            "fp": 3654.5,
+            "fn": 15919.0
+          },
+          "density": {
+            "tp": 50318.5,
+            "fp": 26013.0,
+            "fn": 24145.5
+          },
+          "coordination": {
+            "tp": 0.0,
+            "fp": 4820.5,
+            "fn": 7347.0
+          },
+          "ln wildcard": {
+            "tp": 25905.5,
+            "fp": 1492.5,
+            "fn": 84222.5
+          },
+          "technical": {
+            "tp": 73240.0,
+            "fp": 9730.0,
+            "fn": 7270.0
+          }
+        },
+        "transitions": {
+          "break -> break": 32082.5,
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 9260.5,
+          "density|inverse -> density": 535.5,
+          "coordination -> density": 7347.0,
+          "density -> density": 21045.5,
+          "density|ln wildcard -> density": 19439.0,
+          "density|ln wildcard -> ln wildcard": 3826.0,
+          "ln wildcard -> ln wildcard": 22079.5,
+          "ln wildcard -> technical": 3099.5,
+          "density -> technical": 4860.5,
+          "technical|ln wildcard -> technical": 44043.5,
+          "technical|ln wildcard -> break": 38.5,
+          "break -> technical": 1770.0,
+          "technical -> technical": 29196.5,
+          "technical -> break": 2219.0,
+          "inverse -> break": 1225.0,
+          "break -> density": 1064.0,
+          "ln wildcard -> density": 17602.0,
+          "inverse|density -> density": 4400.5,
+          "inverse|density -> ln wildcard": 497.5,
+          "density|technical -> density": 4898.0,
+          "density -> ln wildcard": 880.5,
+          "technical -> ln wildcard": 114.5,
+          "density -> coordination": 4820.5
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "E01",
+        "uid": "spm_dataset-1.1.1/bm_0041/40",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "density": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "density",
+        "group": "spm_dataset-1.1.1/bm_0045/44"
+      },
+      {
+        "id": "I01",
+        "uid": "spm_dataset-1.1.1/bm_0291/290",
+        "allowedPrimary": [
+          "ln wildcard"
+        ],
+        "coverage": {
+          "coordination": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "coordination",
+        "group": "spm_dataset-1.1.1/bm_0291/290"
+      }
+    ],
+    "display": {
+      "segments": 713,
+      "tagSwitches": 610,
+      "subsecondSegments": 2,
+      "medianSegmentMs": 9281.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "no_extra": {
+    "manual": [
+      {
+        "uid": "manual/AH",
+        "accuracy": 0.75644375,
+        "correctMs": 181546.5,
+        "totalMs": 240000.0,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "perClass": {
+          "break": {
+            "tp": 32082.5,
+            "fp": 12743.0,
+            "fn": 6488.5
+          },
+          "inverse": {
+            "tp": 0.0,
+            "fp": 3654.5,
+            "fn": 15919.0
+          },
+          "density": {
+            "tp": 50318.5,
+            "fp": 26013.0,
+            "fn": 24145.5
+          },
+          "coordination": {
+            "tp": 0.0,
+            "fp": 4820.5,
+            "fn": 7347.0
+          },
+          "ln wildcard": {
+            "tp": 25905.5,
+            "fp": 1492.5,
+            "fn": 84222.5
+          },
+          "technical": {
+            "tp": 73240.0,
+            "fp": 9730.0,
+            "fn": 7270.0
+          }
+        },
+        "transitions": {
+          "break -> break": 32082.5,
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 9260.5,
+          "density|inverse -> density": 535.5,
+          "coordination -> density": 7347.0,
+          "density -> density": 21045.5,
+          "density|ln wildcard -> density": 19439.0,
+          "density|ln wildcard -> ln wildcard": 3826.0,
+          "ln wildcard -> ln wildcard": 22079.5,
+          "ln wildcard -> technical": 3099.5,
+          "density -> technical": 4860.5,
+          "technical|ln wildcard -> technical": 44043.5,
+          "technical|ln wildcard -> break": 38.5,
+          "break -> technical": 1770.0,
+          "technical -> technical": 29196.5,
+          "technical -> break": 2219.0,
+          "inverse -> break": 1225.0,
+          "break -> density": 1064.0,
+          "ln wildcard -> density": 17602.0,
+          "inverse|density -> density": 4400.5,
+          "inverse|density -> ln wildcard": 497.5,
+          "density|technical -> density": 4898.0,
+          "density -> ln wildcard": 880.5,
+          "technical -> ln wildcard": 114.5,
+          "density -> coordination": 4820.5
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "E01",
+        "uid": "spm_dataset-1.1.1/bm_0041/40",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "density": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "density",
+        "group": "spm_dataset-1.1.1/bm_0045/44"
+      },
+      {
+        "id": "I01",
+        "uid": "spm_dataset-1.1.1/bm_0291/290",
+        "allowedPrimary": [
+          "ln wildcard"
+        ],
+        "coverage": {
+          "coordination": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "coordination",
+        "group": "spm_dataset-1.1.1/bm_0291/290"
+      }
+    ],
+    "display": {
+      "segments": 713,
+      "tagSwitches": 610,
+      "subsecondSegments": 2,
+      "medianSegmentMs": 9281.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "route_only": {
+    "manual": [
+      {
+        "uid": "manual/AH",
+        "accuracy": 0.75644375,
+        "correctMs": 181546.5,
+        "totalMs": 240000.0,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "perClass": {
+          "break": {
+            "tp": 32082.5,
+            "fp": 12743.0,
+            "fn": 6488.5
+          },
+          "inverse": {
+            "tp": 0.0,
+            "fp": 3654.5,
+            "fn": 15919.0
+          },
+          "density": {
+            "tp": 50318.5,
+            "fp": 26013.0,
+            "fn": 24145.5
+          },
+          "coordination": {
+            "tp": 0.0,
+            "fp": 4820.5,
+            "fn": 7347.0
+          },
+          "ln wildcard": {
+            "tp": 25905.5,
+            "fp": 1492.5,
+            "fn": 84222.5
+          },
+          "technical": {
+            "tp": 73240.0,
+            "fp": 9730.0,
+            "fn": 7270.0
+          }
+        },
+        "transitions": {
+          "break -> break": 32082.5,
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 9260.5,
+          "density|inverse -> density": 535.5,
+          "coordination -> density": 7347.0,
+          "density -> density": 21045.5,
+          "density|ln wildcard -> density": 19439.0,
+          "density|ln wildcard -> ln wildcard": 3826.0,
+          "ln wildcard -> ln wildcard": 22079.5,
+          "ln wildcard -> technical": 3099.5,
+          "density -> technical": 4860.5,
+          "technical|ln wildcard -> technical": 44043.5,
+          "technical|ln wildcard -> break": 38.5,
+          "break -> technical": 1770.0,
+          "technical -> technical": 29196.5,
+          "technical -> break": 2219.0,
+          "inverse -> break": 1225.0,
+          "break -> density": 1064.0,
+          "ln wildcard -> density": 17602.0,
+          "inverse|density -> density": 4400.5,
+          "inverse|density -> ln wildcard": 497.5,
+          "density|technical -> density": 4898.0,
+          "density -> ln wildcard": 880.5,
+          "technical -> ln wildcard": 114.5,
+          "density -> coordination": 4820.5
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "E01",
+        "uid": "spm_dataset-1.1.1/bm_0041/40",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "density": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "density",
+        "group": "spm_dataset-1.1.1/bm_0045/44"
+      },
+      {
+        "id": "I01",
+        "uid": "spm_dataset-1.1.1/bm_0291/290",
+        "allowedPrimary": [
+          "ln wildcard"
+        ],
+        "coverage": {
+          "coordination": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "coordination",
+        "group": "spm_dataset-1.1.1/bm_0291/290"
+      }
+    ],
+    "display": {
+      "segments": 713,
+      "tagSwitches": 610,
+      "subsecondSegments": 2,
+      "medianSegmentMs": 9281.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "type_only": {
+    "manual": [
+      {
+        "uid": "manual/AH",
+        "accuracy": 0.75644375,
+        "correctMs": 181546.5,
+        "totalMs": 240000.0,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "perClass": {
+          "break": {
+            "tp": 32082.5,
+            "fp": 12743.0,
+            "fn": 6488.5
+          },
+          "inverse": {
+            "tp": 0.0,
+            "fp": 3654.5,
+            "fn": 15919.0
+          },
+          "density": {
+            "tp": 50318.5,
+            "fp": 26013.0,
+            "fn": 24145.5
+          },
+          "coordination": {
+            "tp": 0.0,
+            "fp": 4820.5,
+            "fn": 7347.0
+          },
+          "ln wildcard": {
+            "tp": 25905.5,
+            "fp": 1492.5,
+            "fn": 84222.5
+          },
+          "technical": {
+            "tp": 73240.0,
+            "fp": 9730.0,
+            "fn": 7270.0
+          }
+        },
+        "transitions": {
+          "break -> break": 32082.5,
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 9260.5,
+          "density|inverse -> density": 535.5,
+          "coordination -> density": 7347.0,
+          "density -> density": 21045.5,
+          "density|ln wildcard -> density": 19439.0,
+          "density|ln wildcard -> ln wildcard": 3826.0,
+          "ln wildcard -> ln wildcard": 22079.5,
+          "ln wildcard -> technical": 3099.5,
+          "density -> technical": 4860.5,
+          "technical|ln wildcard -> technical": 44043.5,
+          "technical|ln wildcard -> break": 38.5,
+          "break -> technical": 1770.0,
+          "technical -> technical": 29196.5,
+          "technical -> break": 2219.0,
+          "inverse -> break": 1225.0,
+          "break -> density": 1064.0,
+          "ln wildcard -> density": 17602.0,
+          "inverse|density -> density": 4400.5,
+          "inverse|density -> ln wildcard": 497.5,
+          "density|technical -> density": 4898.0,
+          "density -> ln wildcard": 880.5,
+          "technical -> ln wildcard": 114.5,
+          "density -> coordination": 4820.5
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "E01",
+        "uid": "spm_dataset-1.1.1/bm_0041/40",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "density": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "density",
+        "group": "spm_dataset-1.1.1/bm_0045/44"
+      },
+      {
+        "id": "I01",
+        "uid": "spm_dataset-1.1.1/bm_0291/290",
+        "allowedPrimary": [
+          "ln wildcard"
+        ],
+        "coverage": {
+          "coordination": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "coordination",
+        "group": "spm_dataset-1.1.1/bm_0291/290"
+      }
+    ],
+    "display": {
+      "segments": 713,
+      "tagSwitches": 610,
+      "subsecondSegments": 2,
+      "medianSegmentMs": 9281.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "no_guidance": {
+    "manual": [
+      {
+        "uid": "manual/AH",
+        "accuracy": 0.75644375,
+        "correctMs": 181546.5,
+        "totalMs": 240000.0,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "perClass": {
+          "break": {
+            "tp": 32082.5,
+            "fp": 12743.0,
+            "fn": 6488.5
+          },
+          "inverse": {
+            "tp": 0.0,
+            "fp": 3654.5,
+            "fn": 15919.0
+          },
+          "density": {
+            "tp": 50318.5,
+            "fp": 26013.0,
+            "fn": 24145.5
+          },
+          "coordination": {
+            "tp": 0.0,
+            "fp": 4820.5,
+            "fn": 7347.0
+          },
+          "ln wildcard": {
+            "tp": 25905.5,
+            "fp": 1492.5,
+            "fn": 84222.5
+          },
+          "technical": {
+            "tp": 73240.0,
+            "fp": 9730.0,
+            "fn": 7270.0
+          }
+        },
+        "transitions": {
+          "break -> break": 32082.5,
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 9260.5,
+          "density|inverse -> density": 535.5,
+          "coordination -> density": 7347.0,
+          "density -> density": 21045.5,
+          "density|ln wildcard -> density": 19439.0,
+          "density|ln wildcard -> ln wildcard": 3826.0,
+          "ln wildcard -> ln wildcard": 22079.5,
+          "ln wildcard -> technical": 3099.5,
+          "density -> technical": 4860.5,
+          "technical|ln wildcard -> technical": 44043.5,
+          "technical|ln wildcard -> break": 38.5,
+          "break -> technical": 1770.0,
+          "technical -> technical": 29196.5,
+          "technical -> break": 2219.0,
+          "inverse -> break": 1225.0,
+          "break -> density": 1064.0,
+          "ln wildcard -> density": 17602.0,
+          "inverse|density -> density": 4400.5,
+          "inverse|density -> ln wildcard": 497.5,
+          "density|technical -> density": 4898.0,
+          "density -> ln wildcard": 880.5,
+          "technical -> ln wildcard": 114.5,
+          "density -> coordination": 4820.5
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "E01",
+        "uid": "spm_dataset-1.1.1/bm_0041/40",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "density": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "density",
+        "group": "spm_dataset-1.1.1/bm_0045/44"
+      },
+      {
+        "id": "I01",
+        "uid": "spm_dataset-1.1.1/bm_0291/290",
+        "allowedPrimary": [
+          "ln wildcard"
+        ],
+        "coverage": {
+          "coordination": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "coordination",
+        "group": "spm_dataset-1.1.1/bm_0291/290"
+      }
+    ],
+    "display": {
+      "segments": 713,
+      "tagSwitches": 610,
+      "subsecondSegments": 2,
+      "medianSegmentMs": 9281.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "no_context": {
+    "manual": [
+      {
+        "uid": "manual/AH",
+        "accuracy": 0.75644375,
+        "correctMs": 181546.5,
+        "totalMs": 240000.0,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "perClass": {
+          "break": {
+            "tp": 32082.5,
+            "fp": 12743.0,
+            "fn": 6488.5
+          },
+          "inverse": {
+            "tp": 0.0,
+            "fp": 3654.5,
+            "fn": 15919.0
+          },
+          "density": {
+            "tp": 50318.5,
+            "fp": 26013.0,
+            "fn": 24145.5
+          },
+          "coordination": {
+            "tp": 0.0,
+            "fp": 4820.5,
+            "fn": 7347.0
+          },
+          "ln wildcard": {
+            "tp": 25905.5,
+            "fp": 1492.5,
+            "fn": 84222.5
+          },
+          "technical": {
+            "tp": 73240.0,
+            "fp": 9730.0,
+            "fn": 7270.0
+          }
+        },
+        "transitions": {
+          "break -> break": 32082.5,
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 9260.5,
+          "density|inverse -> density": 535.5,
+          "coordination -> density": 7347.0,
+          "density -> density": 21045.5,
+          "density|ln wildcard -> density": 19439.0,
+          "density|ln wildcard -> ln wildcard": 3826.0,
+          "ln wildcard -> ln wildcard": 22079.5,
+          "ln wildcard -> technical": 3099.5,
+          "density -> technical": 4860.5,
+          "technical|ln wildcard -> technical": 44043.5,
+          "technical|ln wildcard -> break": 38.5,
+          "break -> technical": 1770.0,
+          "technical -> technical": 29196.5,
+          "technical -> break": 2219.0,
+          "inverse -> break": 1225.0,
+          "break -> density": 1064.0,
+          "ln wildcard -> density": 17602.0,
+          "inverse|density -> density": 4400.5,
+          "inverse|density -> ln wildcard": 497.5,
+          "density|technical -> density": 4898.0,
+          "density -> ln wildcard": 880.5,
+          "technical -> ln wildcard": 114.5,
+          "density -> coordination": 4820.5
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "E01",
+        "uid": "spm_dataset-1.1.1/bm_0041/40",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "density": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "density",
+        "group": "spm_dataset-1.1.1/bm_0045/44"
+      },
+      {
+        "id": "I01",
+        "uid": "spm_dataset-1.1.1/bm_0291/290",
+        "allowedPrimary": [
+          "ln wildcard"
+        ],
+        "coverage": {
+          "coordination": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "coordination",
+        "group": "spm_dataset-1.1.1/bm_0291/290"
+      }
+    ],
+    "display": {
+      "segments": 713,
+      "tagSwitches": 610,
+      "subsecondSegments": 2,
+      "medianSegmentMs": 9281.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "product": {
+    "manual": [
+      {
+        "uid": "manual/AH",
+        "accuracy": 0.75644375,
+        "correctMs": 181546.5,
+        "totalMs": 240000.0,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "perClass": {
+          "break": {
+            "tp": 32082.5,
+            "fp": 12743.0,
+            "fn": 6488.5
+          },
+          "inverse": {
+            "tp": 0.0,
+            "fp": 3654.5,
+            "fn": 15919.0
+          },
+          "density": {
+            "tp": 50318.5,
+            "fp": 26013.0,
+            "fn": 24145.5
+          },
+          "coordination": {
+            "tp": 0.0,
+            "fp": 4820.5,
+            "fn": 7347.0
+          },
+          "ln wildcard": {
+            "tp": 25905.5,
+            "fp": 1492.5,
+            "fn": 84222.5
+          },
+          "technical": {
+            "tp": 73240.0,
+            "fp": 9730.0,
+            "fn": 7270.0
+          }
+        },
+        "transitions": {
+          "break -> break": 32082.5,
+          "break -> inverse": 3654.5,
+          "density|inverse -> break": 9260.5,
+          "density|inverse -> density": 535.5,
+          "coordination -> density": 7347.0,
+          "density -> density": 21045.5,
+          "density|ln wildcard -> density": 19439.0,
+          "density|ln wildcard -> ln wildcard": 3826.0,
+          "ln wildcard -> ln wildcard": 22079.5,
+          "ln wildcard -> technical": 3099.5,
+          "density -> technical": 4860.5,
+          "technical|ln wildcard -> technical": 44043.5,
+          "technical|ln wildcard -> break": 38.5,
+          "break -> technical": 1770.0,
+          "technical -> technical": 29196.5,
+          "technical -> break": 2219.0,
+          "inverse -> break": 1225.0,
+          "break -> density": 1064.0,
+          "ln wildcard -> density": 17602.0,
+          "inverse|density -> density": 4400.5,
+          "inverse|density -> ln wildcard": 497.5,
+          "density|technical -> density": 4898.0,
+          "density -> ln wildcard": 880.5,
+          "technical -> ln wildcard": 114.5,
+          "density -> coordination": 4820.5
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "E01",
+        "uid": "spm_dataset-1.1.1/bm_0041/40",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "density": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "density",
+        "group": "spm_dataset-1.1.1/bm_0045/44"
+      },
+      {
+        "id": "I01",
+        "uid": "spm_dataset-1.1.1/bm_0291/290",
+        "allowedPrimary": [
+          "ln wildcard"
+        ],
+        "coverage": {
+          "coordination": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "coordination",
+        "group": "spm_dataset-1.1.1/bm_0291/290"
+      }
+    ],
+    "display": {
+      "segments": 713,
+      "tagSwitches": 610,
+      "subsecondSegments": 2,
+      "medianSegmentMs": 9281.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  }
+}

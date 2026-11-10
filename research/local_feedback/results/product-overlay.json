@@ -1,0 +1,49 @@
+{
+  "scope": "Actual upstream renderer offline, rebuilt static1.2.4 library, simulated transport, no live game/tosu connection",
+  "cases": [
+    {
+      "case": "H01",
+      "local": "Wildcard",
+      "bpm": 150,
+      "support": "18%",
+      "whole": "主要键型未定; no false CS"
+    },
+    {
+      "case": "H02",
+      "local": "Dense Chordstream",
+      "bpm": 150,
+      "support": "100%"
+    },
+    {
+      "case": "uniform50",
+      "local": "Wildcard + Vibro",
+      "bpm": 300,
+      "support": "18%, original local support; not false0%"
+    },
+    {
+      "case": "tempoChange",
+      "rate": 1,
+      "sourceTime": 10,
+      "bpm": 150
+    },
+    {
+      "case": "tempoChange",
+      "rate": 1,
+      "sourceTime": 30,
+      "bpm": 200
+    },
+    {
+      "case": "tempoChange",
+      "rate": 1.5,
+      "sourceTime": 10,
+      "bpm": 225
+    },
+    {
+      "case": "tempoChange",
+      "rate": 1.5,
+      "sourceTime": 30,
+      "bpm": 300
+    }
+  ],
+  "screenshot": "artifacts/local-feedback/tempo-overlay.png"
+}

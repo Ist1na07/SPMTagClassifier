@@ -42,7 +42,7 @@ test('Jack cadence keeps its repetition/chord clock when single rows interleave'
   correctCadenceDisplay(result, { rows: rows.map(r => ({ ...r, mask: 3 })) });
   assert.equal(result.segments[0].equivBpm, 300);
 });
-test('7K display fixes the 300-to-200 alias without changing classification or aggregation', () => {
+test('7K display fixes the 300-to-200 alias and excludes CS from a fixed-grip fixture', () => {
   const text = chart(50), old = api.legacy.analyzeMap(text);
   assert.equal(old.segments[0].equivBpm, 200);
   for (const algorithm of ['stable', 'modern']) {
@@ -51,8 +51,9 @@ test('7K display fixes the 300-to-200 alias without changing classification or a
     assert.equal(r.segments[0].evidence.cadence.legacyEquivBpm, 200);
   }
   const r = api.analyzeMap(text, {aggregation:'classic'});
-  assert.deepEqual(r.overall, { ...old.overall, composition: r.overall.composition, scoreKind: r.overall.scoreKind });
-  assert.deepEqual(r.segments.map(s => [s.tag, s.secondary, s.scores, s.confidence]),
-    old.segments.map(s => [s.tag, s.secondary, s.scores, s.confidence]));
+  assert(r.segments.every(s=>s.tag==='wildcard'&&s.secondary==='vibro'));
+  assert(r.segments.every(s=>s.scores['dense chordstream']===0&&s.scores['fast chordstream']===0));
+  assert(r.segments.every(s=>s.scores.vibro===old.segments[0].scores.vibro));
+  assert(!r.overall.tags.includes('dense chordstream'));
   assert.deepEqual(r.debug.windows, old.debug.windows);
 });

@@ -2070,10 +2070,22 @@ var TagClassifier = (() => {
     if (rate !== 1) map = rescale(map, rate);
     const cm = buildCachedMap(osuText, opts);
     const rawEvidence = opts._rawEvidence ? classifySegments(cm, { scorer: "model" }) : null;
-    const segments = smoothSegments(rawEvidence ? rawEvidence.map(s => ({...s, ...(s.scores ? {scores:{...s.scores}} : {})})) : classifySegments(cm, { scorer: "model" }));
+
+    const originalSegments = smoothSegments(rawEvidence ? rawEvidence.map(s=>({...s})) : classifySegments(cm,{scorer:"model"}));
+    const classicPrior = aggregateOverall(originalSegments, {"dominantShare":0.52,"mixShare":0.07,"secondRel":0.75});
+    let readout = null;
+    if (opts._segmentReadout) {
+      const mapMedians=computeMapMedians(cm.windows),medians=new Map();
+      readout=opts._segmentReadout(rawEvidence,(tag,parent)=>{
+        if(!medians.has(parent)){const s=cm.rawSegs[parent];medians.set(parent,medianWindowFeatures(cm.windows,s.windowRange[0],s.windowRange[1],mapMedians));}
+        return equivBpmFor(tag,medians.get(parent),cm.extras[parent]);
+      });
+    }
+    const segments = readout ? readout.segments : originalSegments;
     const overall = aggregateOverall(segments, {"dominantShare":0.52,"mixShare":0.07,"secondRel":0.75});
     const result = { map, segments, overall, debug: { windows: cm.windows, norm: void 0, ctx: void 0 } };
-    if (rawEvidence) result.debug.rawSegments = rawEvidence;
+    if (rawEvidence) result.debug.rawSegments = readout ? readout.frames : rawEvidence;
+    if(readout){result.debug.classicPrior=classicPrior;result.debug.readoutSupport=readout.support;result.debug.cutExclusions=readout.exclusions;}
     return result;
   }
   function extractIntermediate(osuText, opts = {}) {

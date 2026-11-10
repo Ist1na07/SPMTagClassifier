@@ -1,0 +1,2872 @@
+{
+  "all": {
+    "manual": [
+      {
+        "uid": "manual/DS",
+        "accuracy": 0.6398873620847826,
+        "correctMs": 260868.0,
+        "totalMs": 407678.0,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "perClass": {
+          "release": {
+            "tp": 39289.0,
+            "fp": 0.0,
+            "fn": 20521.0
+          },
+          "coordination": {
+            "tp": 7809.5,
+            "fp": 6266.0,
+            "fn": 13245.5
+          },
+          "break": {
+            "tp": 38778.0,
+            "fp": 156.5,
+            "fn": 43339.0
+          },
+          "density": {
+            "tp": 50097.5,
+            "fp": 35866.5,
+            "fn": 27673.5
+          },
+          "chordjack": {
+            "tp": 34666.5,
+            "fp": 12914.5,
+            "fn": 12366.5
+          },
+          "tech": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 8553.0
+          },
+          "fast chordstream": {
+            "tp": 17473.5,
+            "fp": 16067.0,
+            "fn": 14751.5
+          },
+          "wildcard": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 47347.0
+          },
+          "dense chordstream": {
+            "tp": 37780.5,
+            "fp": 21828.0,
+            "fn": 5314.5
+          },
+          "technical": {
+            "tp": 11770.5,
+            "fp": 22213.5,
+            "fn": 19287.5
+          },
+          "speed": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 7904.0
+          },
+          "ln wildcard": {
+            "tp": 5713.0,
+            "fp": 6403.5,
+            "fn": 9454.0
+          },
+          "inverse": {
+            "tp": 17490.0,
+            "fp": 20978.5,
+            "fn": 0.0
+          },
+          "minijack": {
+            "tp": 0.0,
+            "fp": 4116.0,
+            "fn": 0.0
+          }
+        },
+        "transitions": {
+          "release -> release": 39289.0,
+          "release -> coordination": 6250.0,
+          "release -> break": 156.5,
+          "break -> break": 38778.0,
+          "break -> density": 7673.5,
+          "release -> density": 8256.0,
+          "coordination|chordjack -> density": 4542.0,
+          "chordjack -> density": 1513.0,
+          "coordination -> density": 8658.0,
+          "tech -> density": 2202.0,
+          "density -> density": 33297.0,
+          "density -> fast chordstream": 1500.5,
+          "chordjack -> fast chordstream": 1696.0,
+          "fast chordstream|wildcard -> fast chordstream": 12391.0,
+          "fast chordstream|wildcard -> dense chordstream": 14087.0,
+          "dense chordstream -> fast chordstream": 325.5,
+          "dense chordstream -> dense chordstream": 21900.5,
+          "break -> dense chordstream": 202.5,
+          "break -> fast chordstream": 7501.5,
+          "tech -> fast chordstream": 620.0,
+          "tech -> technical": 757.0,
+          "density|technical -> technical": 11770.5,
+          "density|technical -> density": 16800.5,
+          "fast chordstream -> density": 509.0,
+          "fast chordstream -> fast chordstream": 5082.5,
+          "fast chordstream -> chordjack": 155.5,
+          "chordjack -> chordjack": 34666.5,
+          "speed|tech -> chordjack": 2487.0,
+          "chordjack -> dense chordstream": 3964.0,
+          "tech -> dense chordstream": 2487.0,
+          "speed -> dense chordstream": 1087.5,
+          "speed -> density": 155.5,
+          "technical -> density": 2357.5,
+          "technical -> fast chordstream": 129.5,
+          "ln wildcard -> fast chordstream": 4236.0,
+          "ln wildcard -> ln wildcard": 5713.0,
+          "release -> ln wildcard": 77.5,
+          "release -> inverse": 5781.0,
+          "inverse -> inverse": 17490.0,
+          "break -> inverse": 4447.5,
+          "break -> technical": 21411.0,
+          "coordination -> technical": 45.5,
+          "coordination -> coordination": 7809.5,
+          "break -> coordination": 16.0,
+          "dense chordstream|wildcard -> dense chordstream": 15880.0,
+          "dense chordstream|wildcard -> ln wildcard": 815.0,
+          "density -> ln wildcard": 5511.0,
+          "density -> inverse": 8011.5,
+          "density -> chordjack": 880.0,
+          "break -> chordjack": 2087.0,
+          "speed -> chordjack": 4174.0,
+          "ln wildcard -> chordjack": 3131.0,
+          "chordjack -> inverse": 651.5,
+          "ln wildcard -> inverse": 2087.0,
+          "dense chordstream|wildcard -> fast chordstream": 58.0,
+          "dense chordstream|wildcard -> minijack": 4116.0
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "F02",
+        "uid": "spm_dataset-1.1.1/bm_0088/87",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": "spm_dataset-1.1.1/bm_0090/89"
+      },
+      {
+        "id": "G02",
+        "uid": "spm_dataset-1.1.1/bm_0376/375",
+        "allowedPrimary": [
+          "inverse"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": "spm_dataset-1.1.1/bm_0376/375"
+      }
+    ],
+    "display": {
+      "segments": 717,
+      "tagSwitches": 596,
+      "subsecondSegments": 5,
+      "medianSegmentMs": 8869.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "joint": {
+    "manual": [
+      {
+        "uid": "manual/DS",
+        "accuracy": 0.6398873620847826,
+        "correctMs": 260868.0,
+        "totalMs": 407678.0,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "perClass": {
+          "release": {
+            "tp": 39289.0,
+            "fp": 0.0,
+            "fn": 20521.0
+          },
+          "coordination": {
+            "tp": 7809.5,
+            "fp": 6266.0,
+            "fn": 13245.5
+          },
+          "break": {
+            "tp": 38778.0,
+            "fp": 156.5,
+            "fn": 43339.0
+          },
+          "density": {
+            "tp": 50097.5,
+            "fp": 35866.5,
+            "fn": 27673.5
+          },
+          "chordjack": {
+            "tp": 34666.5,
+            "fp": 12914.5,
+            "fn": 12366.5
+          },
+          "tech": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 8553.0
+          },
+          "fast chordstream": {
+            "tp": 17473.5,
+            "fp": 16067.0,
+            "fn": 14751.5
+          },
+          "wildcard": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 47347.0
+          },
+          "dense chordstream": {
+            "tp": 37780.5,
+            "fp": 21828.0,
+            "fn": 5314.5
+          },
+          "technical": {
+            "tp": 11770.5,
+            "fp": 22213.5,
+            "fn": 19287.5
+          },
+          "speed": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 7904.0
+          },
+          "ln wildcard": {
+            "tp": 5713.0,
+            "fp": 6403.5,
+            "fn": 9454.0
+          },
+          "inverse": {
+            "tp": 17490.0,
+            "fp": 20978.5,
+            "fn": 0.0
+          },
+          "minijack": {
+            "tp": 0.0,
+            "fp": 4116.0,
+            "fn": 0.0
+          }
+        },
+        "transitions": {
+          "release -> release": 39289.0,
+          "release -> coordination": 6250.0,
+          "release -> break": 156.5,
+          "break -> break": 38778.0,
+          "break -> density": 7673.5,
+          "release -> density": 8256.0,
+          "coordination|chordjack -> density": 4542.0,
+          "chordjack -> density": 1513.0,
+          "coordination -> density": 8658.0,
+          "tech -> density": 2202.0,
+          "density -> density": 33297.0,
+          "density -> fast chordstream": 1500.5,
+          "chordjack -> fast chordstream": 1696.0,
+          "fast chordstream|wildcard -> fast chordstream": 12391.0,
+          "fast chordstream|wildcard -> dense chordstream": 14087.0,
+          "dense chordstream -> fast chordstream": 325.5,
+          "dense chordstream -> dense chordstream": 21900.5,
+          "break -> dense chordstream": 202.5,
+          "break -> fast chordstream": 7501.5,
+          "tech -> fast chordstream": 620.0,
+          "tech -> technical": 757.0,
+          "density|technical -> technical": 11770.5,
+          "density|technical -> density": 16800.5,
+          "fast chordstream -> density": 509.0,
+          "fast chordstream -> fast chordstream": 5082.5,
+          "fast chordstream -> chordjack": 155.5,
+          "chordjack -> chordjack": 34666.5,
+          "speed|tech -> chordjack": 2487.0,
+          "chordjack -> dense chordstream": 3964.0,
+          "tech -> dense chordstream": 2487.0,
+          "speed -> dense chordstream": 1087.5,
+          "speed -> density": 155.5,
+          "technical -> density": 2357.5,
+          "technical -> fast chordstream": 129.5,
+          "ln wildcard -> fast chordstream": 4236.0,
+          "ln wildcard -> ln wildcard": 5713.0,
+          "release -> ln wildcard": 77.5,
+          "release -> inverse": 5781.0,
+          "inverse -> inverse": 17490.0,
+          "break -> inverse": 4447.5,
+          "break -> technical": 21411.0,
+          "coordination -> technical": 45.5,
+          "coordination -> coordination": 7809.5,
+          "break -> coordination": 16.0,
+          "dense chordstream|wildcard -> dense chordstream": 15880.0,
+          "dense chordstream|wildcard -> ln wildcard": 815.0,
+          "density -> ln wildcard": 5511.0,
+          "density -> inverse": 8011.5,
+          "density -> chordjack": 880.0,
+          "break -> chordjack": 2087.0,
+          "speed -> chordjack": 4174.0,
+          "ln wildcard -> chordjack": 3131.0,
+          "chordjack -> inverse": 651.5,
+          "ln wildcard -> inverse": 2087.0,
+          "dense chordstream|wildcard -> fast chordstream": 58.0,
+          "dense chordstream|wildcard -> minijack": 4116.0
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "F02",
+        "uid": "spm_dataset-1.1.1/bm_0088/87",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": "spm_dataset-1.1.1/bm_0090/89"
+      },
+      {
+        "id": "G02",
+        "uid": "spm_dataset-1.1.1/bm_0376/375",
+        "allowedPrimary": [
+          "inverse"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": "spm_dataset-1.1.1/bm_0376/375"
+      }
+    ],
+    "display": {
+      "segments": 717,
+      "tagSwitches": 596,
+      "subsecondSegments": 5,
+      "medianSegmentMs": 8869.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "local_only": {
+    "manual": [
+      {
+        "uid": "manual/DS",
+        "accuracy": 0.6398873620847826,
+        "correctMs": 260868.0,
+        "totalMs": 407678.0,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "perClass": {
+          "release": {
+            "tp": 39289.0,
+            "fp": 0.0,
+            "fn": 20521.0
+          },
+          "coordination": {
+            "tp": 7809.5,
+            "fp": 6266.0,
+            "fn": 13245.5
+          },
+          "break": {
+            "tp": 38778.0,
+            "fp": 156.5,
+            "fn": 43339.0
+          },
+          "density": {
+            "tp": 50097.5,
+            "fp": 35866.5,
+            "fn": 27673.5
+          },
+          "chordjack": {
+            "tp": 34666.5,
+            "fp": 12914.5,
+            "fn": 12366.5
+          },
+          "tech": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 8553.0
+          },
+          "fast chordstream": {
+            "tp": 17473.5,
+            "fp": 16067.0,
+            "fn": 14751.5
+          },
+          "wildcard": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 47347.0
+          },
+          "dense chordstream": {
+            "tp": 37780.5,
+            "fp": 21828.0,
+            "fn": 5314.5
+          },
+          "technical": {
+            "tp": 11770.5,
+            "fp": 22213.5,
+            "fn": 19287.5
+          },
+          "speed": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 7904.0
+          },
+          "ln wildcard": {
+            "tp": 5713.0,
+            "fp": 6403.5,
+            "fn": 9454.0
+          },
+          "inverse": {
+            "tp": 17490.0,
+            "fp": 20978.5,
+            "fn": 0.0
+          },
+          "minijack": {
+            "tp": 0.0,
+            "fp": 4116.0,
+            "fn": 0.0
+          }
+        },
+        "transitions": {
+          "release -> release": 39289.0,
+          "release -> coordination": 6250.0,
+          "release -> break": 156.5,
+          "break -> break": 38778.0,
+          "break -> density": 7673.5,
+          "release -> density": 8256.0,
+          "coordination|chordjack -> density": 4542.0,
+          "chordjack -> density": 1513.0,
+          "coordination -> density": 8658.0,
+          "tech -> density": 2202.0,
+          "density -> density": 33297.0,
+          "density -> fast chordstream": 1500.5,
+          "chordjack -> fast chordstream": 1696.0,
+          "fast chordstream|wildcard -> fast chordstream": 12391.0,
+          "fast chordstream|wildcard -> dense chordstream": 14087.0,
+          "dense chordstream -> fast chordstream": 325.5,
+          "dense chordstream -> dense chordstream": 21900.5,
+          "break -> dense chordstream": 202.5,
+          "break -> fast chordstream": 7501.5,
+          "tech -> fast chordstream": 620.0,
+          "tech -> technical": 757.0,
+          "density|technical -> technical": 11770.5,
+          "density|technical -> density": 16800.5,
+          "fast chordstream -> density": 509.0,
+          "fast chordstream -> fast chordstream": 5082.5,
+          "fast chordstream -> chordjack": 155.5,
+          "chordjack -> chordjack": 34666.5,
+          "speed|tech -> chordjack": 2487.0,
+          "chordjack -> dense chordstream": 3964.0,
+          "tech -> dense chordstream": 2487.0,
+          "speed -> dense chordstream": 1087.5,
+          "speed -> density": 155.5,
+          "technical -> density": 2357.5,
+          "technical -> fast chordstream": 129.5,
+          "ln wildcard -> fast chordstream": 4236.0,
+          "ln wildcard -> ln wildcard": 5713.0,
+          "release -> ln wildcard": 77.5,
+          "release -> inverse": 5781.0,
+          "inverse -> inverse": 17490.0,
+          "break -> inverse": 4447.5,
+          "break -> technical": 21411.0,
+          "coordination -> technical": 45.5,
+          "coordination -> coordination": 7809.5,
+          "break -> coordination": 16.0,
+          "dense chordstream|wildcard -> dense chordstream": 15880.0,
+          "dense chordstream|wildcard -> ln wildcard": 815.0,
+          "density -> ln wildcard": 5511.0,
+          "density -> inverse": 8011.5,
+          "density -> chordjack": 880.0,
+          "break -> chordjack": 2087.0,
+          "speed -> chordjack": 4174.0,
+          "ln wildcard -> chordjack": 3131.0,
+          "chordjack -> inverse": 651.5,
+          "ln wildcard -> inverse": 2087.0,
+          "dense chordstream|wildcard -> fast chordstream": 58.0,
+          "dense chordstream|wildcard -> minijack": 4116.0
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "F02",
+        "uid": "spm_dataset-1.1.1/bm_0088/87",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": "spm_dataset-1.1.1/bm_0090/89"
+      },
+      {
+        "id": "G02",
+        "uid": "spm_dataset-1.1.1/bm_0376/375",
+        "allowedPrimary": [
+          "inverse"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": "spm_dataset-1.1.1/bm_0376/375"
+      }
+    ],
+    "display": {
+      "segments": 717,
+      "tagSwitches": 596,
+      "subsecondSegments": 5,
+      "medianSegmentMs": 8869.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "whole_only": {
+    "manual": [
+      {
+        "uid": "manual/DS",
+        "accuracy": 0.6398873620847826,
+        "correctMs": 260868.0,
+        "totalMs": 407678.0,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "perClass": {
+          "release": {
+            "tp": 39289.0,
+            "fp": 0.0,
+            "fn": 20521.0
+          },
+          "coordination": {
+            "tp": 7809.5,
+            "fp": 6266.0,
+            "fn": 13245.5
+          },
+          "break": {
+            "tp": 38778.0,
+            "fp": 156.5,
+            "fn": 43339.0
+          },
+          "density": {
+            "tp": 50097.5,
+            "fp": 35866.5,
+            "fn": 27673.5
+          },
+          "chordjack": {
+            "tp": 34666.5,
+            "fp": 12914.5,
+            "fn": 12366.5
+          },
+          "tech": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 8553.0
+          },
+          "fast chordstream": {
+            "tp": 17473.5,
+            "fp": 16067.0,
+            "fn": 14751.5
+          },
+          "wildcard": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 47347.0
+          },
+          "dense chordstream": {
+            "tp": 37780.5,
+            "fp": 21828.0,
+            "fn": 5314.5
+          },
+          "technical": {
+            "tp": 11770.5,
+            "fp": 22213.5,
+            "fn": 19287.5
+          },
+          "speed": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 7904.0
+          },
+          "ln wildcard": {
+            "tp": 5713.0,
+            "fp": 6403.5,
+            "fn": 9454.0
+          },
+          "inverse": {
+            "tp": 17490.0,
+            "fp": 20978.5,
+            "fn": 0.0
+          },
+          "minijack": {
+            "tp": 0.0,
+            "fp": 4116.0,
+            "fn": 0.0
+          }
+        },
+        "transitions": {
+          "release -> release": 39289.0,
+          "release -> coordination": 6250.0,
+          "release -> break": 156.5,
+          "break -> break": 38778.0,
+          "break -> density": 7673.5,
+          "release -> density": 8256.0,
+          "coordination|chordjack -> density": 4542.0,
+          "chordjack -> density": 1513.0,
+          "coordination -> density": 8658.0,
+          "tech -> density": 2202.0,
+          "density -> density": 33297.0,
+          "density -> fast chordstream": 1500.5,
+          "chordjack -> fast chordstream": 1696.0,
+          "fast chordstream|wildcard -> fast chordstream": 12391.0,
+          "fast chordstream|wildcard -> dense chordstream": 14087.0,
+          "dense chordstream -> fast chordstream": 325.5,
+          "dense chordstream -> dense chordstream": 21900.5,
+          "break -> dense chordstream": 202.5,
+          "break -> fast chordstream": 7501.5,
+          "tech -> fast chordstream": 620.0,
+          "tech -> technical": 757.0,
+          "density|technical -> technical": 11770.5,
+          "density|technical -> density": 16800.5,
+          "fast chordstream -> density": 509.0,
+          "fast chordstream -> fast chordstream": 5082.5,
+          "fast chordstream -> chordjack": 155.5,
+          "chordjack -> chordjack": 34666.5,
+          "speed|tech -> chordjack": 2487.0,
+          "chordjack -> dense chordstream": 3964.0,
+          "tech -> dense chordstream": 2487.0,
+          "speed -> dense chordstream": 1087.5,
+          "speed -> density": 155.5,
+          "technical -> density": 2357.5,
+          "technical -> fast chordstream": 129.5,
+          "ln wildcard -> fast chordstream": 4236.0,
+          "ln wildcard -> ln wildcard": 5713.0,
+          "release -> ln wildcard": 77.5,
+          "release -> inverse": 5781.0,
+          "inverse -> inverse": 17490.0,
+          "break -> inverse": 4447.5,
+          "break -> technical": 21411.0,
+          "coordination -> technical": 45.5,
+          "coordination -> coordination": 7809.5,
+          "break -> coordination": 16.0,
+          "dense chordstream|wildcard -> dense chordstream": 15880.0,
+          "dense chordstream|wildcard -> ln wildcard": 815.0,
+          "density -> ln wildcard": 5511.0,
+          "density -> inverse": 8011.5,
+          "density -> chordjack": 880.0,
+          "break -> chordjack": 2087.0,
+          "speed -> chordjack": 4174.0,
+          "ln wildcard -> chordjack": 3131.0,
+          "chordjack -> inverse": 651.5,
+          "ln wildcard -> inverse": 2087.0,
+          "dense chordstream|wildcard -> fast chordstream": 58.0,
+          "dense chordstream|wildcard -> minijack": 4116.0
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "F02",
+        "uid": "spm_dataset-1.1.1/bm_0088/87",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": "spm_dataset-1.1.1/bm_0090/89"
+      },
+      {
+        "id": "G02",
+        "uid": "spm_dataset-1.1.1/bm_0376/375",
+        "allowedPrimary": [
+          "inverse"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": "spm_dataset-1.1.1/bm_0376/375"
+      }
+    ],
+    "display": {
+      "segments": 717,
+      "tagSwitches": 596,
+      "subsecondSegments": 5,
+      "medianSegmentMs": 8869.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "no_extra": {
+    "manual": [
+      {
+        "uid": "manual/DS",
+        "accuracy": 0.6398873620847826,
+        "correctMs": 260868.0,
+        "totalMs": 407678.0,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "perClass": {
+          "release": {
+            "tp": 39289.0,
+            "fp": 0.0,
+            "fn": 20521.0
+          },
+          "coordination": {
+            "tp": 7809.5,
+            "fp": 6266.0,
+            "fn": 13245.5
+          },
+          "break": {
+            "tp": 38778.0,
+            "fp": 156.5,
+            "fn": 43339.0
+          },
+          "density": {
+            "tp": 50097.5,
+            "fp": 35866.5,
+            "fn": 27673.5
+          },
+          "chordjack": {
+            "tp": 34666.5,
+            "fp": 12914.5,
+            "fn": 12366.5
+          },
+          "tech": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 8553.0
+          },
+          "fast chordstream": {
+            "tp": 17473.5,
+            "fp": 16067.0,
+            "fn": 14751.5
+          },
+          "wildcard": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 47347.0
+          },
+          "dense chordstream": {
+            "tp": 37780.5,
+            "fp": 21828.0,
+            "fn": 5314.5
+          },
+          "technical": {
+            "tp": 11770.5,
+            "fp": 22213.5,
+            "fn": 19287.5
+          },
+          "speed": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 7904.0
+          },
+          "ln wildcard": {
+            "tp": 5713.0,
+            "fp": 6403.5,
+            "fn": 9454.0
+          },
+          "inverse": {
+            "tp": 17490.0,
+            "fp": 20978.5,
+            "fn": 0.0
+          },
+          "minijack": {
+            "tp": 0.0,
+            "fp": 4116.0,
+            "fn": 0.0
+          }
+        },
+        "transitions": {
+          "release -> release": 39289.0,
+          "release -> coordination": 6250.0,
+          "release -> break": 156.5,
+          "break -> break": 38778.0,
+          "break -> density": 7673.5,
+          "release -> density": 8256.0,
+          "coordination|chordjack -> density": 4542.0,
+          "chordjack -> density": 1513.0,
+          "coordination -> density": 8658.0,
+          "tech -> density": 2202.0,
+          "density -> density": 33297.0,
+          "density -> fast chordstream": 1500.5,
+          "chordjack -> fast chordstream": 1696.0,
+          "fast chordstream|wildcard -> fast chordstream": 12391.0,
+          "fast chordstream|wildcard -> dense chordstream": 14087.0,
+          "dense chordstream -> fast chordstream": 325.5,
+          "dense chordstream -> dense chordstream": 21900.5,
+          "break -> dense chordstream": 202.5,
+          "break -> fast chordstream": 7501.5,
+          "tech -> fast chordstream": 620.0,
+          "tech -> technical": 757.0,
+          "density|technical -> technical": 11770.5,
+          "density|technical -> density": 16800.5,
+          "fast chordstream -> density": 509.0,
+          "fast chordstream -> fast chordstream": 5082.5,
+          "fast chordstream -> chordjack": 155.5,
+          "chordjack -> chordjack": 34666.5,
+          "speed|tech -> chordjack": 2487.0,
+          "chordjack -> dense chordstream": 3964.0,
+          "tech -> dense chordstream": 2487.0,
+          "speed -> dense chordstream": 1087.5,
+          "speed -> density": 155.5,
+          "technical -> density": 2357.5,
+          "technical -> fast chordstream": 129.5,
+          "ln wildcard -> fast chordstream": 4236.0,
+          "ln wildcard -> ln wildcard": 5713.0,
+          "release -> ln wildcard": 77.5,
+          "release -> inverse": 5781.0,
+          "inverse -> inverse": 17490.0,
+          "break -> inverse": 4447.5,
+          "break -> technical": 21411.0,
+          "coordination -> technical": 45.5,
+          "coordination -> coordination": 7809.5,
+          "break -> coordination": 16.0,
+          "dense chordstream|wildcard -> dense chordstream": 15880.0,
+          "dense chordstream|wildcard -> ln wildcard": 815.0,
+          "density -> ln wildcard": 5511.0,
+          "density -> inverse": 8011.5,
+          "density -> chordjack": 880.0,
+          "break -> chordjack": 2087.0,
+          "speed -> chordjack": 4174.0,
+          "ln wildcard -> chordjack": 3131.0,
+          "chordjack -> inverse": 651.5,
+          "ln wildcard -> inverse": 2087.0,
+          "dense chordstream|wildcard -> fast chordstream": 58.0,
+          "dense chordstream|wildcard -> minijack": 4116.0
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "F02",
+        "uid": "spm_dataset-1.1.1/bm_0088/87",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": "spm_dataset-1.1.1/bm_0090/89"
+      },
+      {
+        "id": "G02",
+        "uid": "spm_dataset-1.1.1/bm_0376/375",
+        "allowedPrimary": [
+          "inverse"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": "spm_dataset-1.1.1/bm_0376/375"
+      }
+    ],
+    "display": {
+      "segments": 717,
+      "tagSwitches": 596,
+      "subsecondSegments": 5,
+      "medianSegmentMs": 8869.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "route_only": {
+    "manual": [
+      {
+        "uid": "manual/DS",
+        "accuracy": 0.6398873620847826,
+        "correctMs": 260868.0,
+        "totalMs": 407678.0,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "perClass": {
+          "release": {
+            "tp": 39289.0,
+            "fp": 0.0,
+            "fn": 20521.0
+          },
+          "coordination": {
+            "tp": 7809.5,
+            "fp": 6266.0,
+            "fn": 13245.5
+          },
+          "break": {
+            "tp": 38778.0,
+            "fp": 156.5,
+            "fn": 43339.0
+          },
+          "density": {
+            "tp": 50097.5,
+            "fp": 35866.5,
+            "fn": 27673.5
+          },
+          "chordjack": {
+            "tp": 34666.5,
+            "fp": 12914.5,
+            "fn": 12366.5
+          },
+          "tech": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 8553.0
+          },
+          "fast chordstream": {
+            "tp": 17473.5,
+            "fp": 16067.0,
+            "fn": 14751.5
+          },
+          "wildcard": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 47347.0
+          },
+          "dense chordstream": {
+            "tp": 37780.5,
+            "fp": 21828.0,
+            "fn": 5314.5
+          },
+          "technical": {
+            "tp": 11770.5,
+            "fp": 22213.5,
+            "fn": 19287.5
+          },
+          "speed": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 7904.0
+          },
+          "ln wildcard": {
+            "tp": 5713.0,
+            "fp": 6403.5,
+            "fn": 9454.0
+          },
+          "inverse": {
+            "tp": 17490.0,
+            "fp": 20978.5,
+            "fn": 0.0
+          },
+          "minijack": {
+            "tp": 0.0,
+            "fp": 4116.0,
+            "fn": 0.0
+          }
+        },
+        "transitions": {
+          "release -> release": 39289.0,
+          "release -> coordination": 6250.0,
+          "release -> break": 156.5,
+          "break -> break": 38778.0,
+          "break -> density": 7673.5,
+          "release -> density": 8256.0,
+          "coordination|chordjack -> density": 4542.0,
+          "chordjack -> density": 1513.0,
+          "coordination -> density": 8658.0,
+          "tech -> density": 2202.0,
+          "density -> density": 33297.0,
+          "density -> fast chordstream": 1500.5,
+          "chordjack -> fast chordstream": 1696.0,
+          "fast chordstream|wildcard -> fast chordstream": 12391.0,
+          "fast chordstream|wildcard -> dense chordstream": 14087.0,
+          "dense chordstream -> fast chordstream": 325.5,
+          "dense chordstream -> dense chordstream": 21900.5,
+          "break -> dense chordstream": 202.5,
+          "break -> fast chordstream": 7501.5,
+          "tech -> fast chordstream": 620.0,
+          "tech -> technical": 757.0,
+          "density|technical -> technical": 11770.5,
+          "density|technical -> density": 16800.5,
+          "fast chordstream -> density": 509.0,
+          "fast chordstream -> fast chordstream": 5082.5,
+          "fast chordstream -> chordjack": 155.5,
+          "chordjack -> chordjack": 34666.5,
+          "speed|tech -> chordjack": 2487.0,
+          "chordjack -> dense chordstream": 3964.0,
+          "tech -> dense chordstream": 2487.0,
+          "speed -> dense chordstream": 1087.5,
+          "speed -> density": 155.5,
+          "technical -> density": 2357.5,
+          "technical -> fast chordstream": 129.5,
+          "ln wildcard -> fast chordstream": 4236.0,
+          "ln wildcard -> ln wildcard": 5713.0,
+          "release -> ln wildcard": 77.5,
+          "release -> inverse": 5781.0,
+          "inverse -> inverse": 17490.0,
+          "break -> inverse": 4447.5,
+          "break -> technical": 21411.0,
+          "coordination -> technical": 45.5,
+          "coordination -> coordination": 7809.5,
+          "break -> coordination": 16.0,
+          "dense chordstream|wildcard -> dense chordstream": 15880.0,
+          "dense chordstream|wildcard -> ln wildcard": 815.0,
+          "density -> ln wildcard": 5511.0,
+          "density -> inverse": 8011.5,
+          "density -> chordjack": 880.0,
+          "break -> chordjack": 2087.0,
+          "speed -> chordjack": 4174.0,
+          "ln wildcard -> chordjack": 3131.0,
+          "chordjack -> inverse": 651.5,
+          "ln wildcard -> inverse": 2087.0,
+          "dense chordstream|wildcard -> fast chordstream": 58.0,
+          "dense chordstream|wildcard -> minijack": 4116.0
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "F02",
+        "uid": "spm_dataset-1.1.1/bm_0088/87",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": "spm_dataset-1.1.1/bm_0090/89"
+      },
+      {
+        "id": "G02",
+        "uid": "spm_dataset-1.1.1/bm_0376/375",
+        "allowedPrimary": [
+          "inverse"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": "spm_dataset-1.1.1/bm_0376/375"
+      }
+    ],
+    "display": {
+      "segments": 717,
+      "tagSwitches": 596,
+      "subsecondSegments": 5,
+      "medianSegmentMs": 8869.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "type_only": {
+    "manual": [
+      {
+        "uid": "manual/DS",
+        "accuracy": 0.6398873620847826,
+        "correctMs": 260868.0,
+        "totalMs": 407678.0,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "perClass": {
+          "release": {
+            "tp": 39289.0,
+            "fp": 0.0,
+            "fn": 20521.0
+          },
+          "coordination": {
+            "tp": 7809.5,
+            "fp": 6266.0,
+            "fn": 13245.5
+          },
+          "break": {
+            "tp": 38778.0,
+            "fp": 156.5,
+            "fn": 43339.0
+          },
+          "density": {
+            "tp": 50097.5,
+            "fp": 35866.5,
+            "fn": 27673.5
+          },
+          "chordjack": {
+            "tp": 34666.5,
+            "fp": 12914.5,
+            "fn": 12366.5
+          },
+          "tech": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 8553.0
+          },
+          "fast chordstream": {
+            "tp": 17473.5,
+            "fp": 16067.0,
+            "fn": 14751.5
+          },
+          "wildcard": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 47347.0
+          },
+          "dense chordstream": {
+            "tp": 37780.5,
+            "fp": 21828.0,
+            "fn": 5314.5
+          },
+          "technical": {
+            "tp": 11770.5,
+            "fp": 22213.5,
+            "fn": 19287.5
+          },
+          "speed": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 7904.0
+          },
+          "ln wildcard": {
+            "tp": 5713.0,
+            "fp": 6403.5,
+            "fn": 9454.0
+          },
+          "inverse": {
+            "tp": 17490.0,
+            "fp": 20978.5,
+            "fn": 0.0
+          },
+          "minijack": {
+            "tp": 0.0,
+            "fp": 4116.0,
+            "fn": 0.0
+          }
+        },
+        "transitions": {
+          "release -> release": 39289.0,
+          "release -> coordination": 6250.0,
+          "release -> break": 156.5,
+          "break -> break": 38778.0,
+          "break -> density": 7673.5,
+          "release -> density": 8256.0,
+          "coordination|chordjack -> density": 4542.0,
+          "chordjack -> density": 1513.0,
+          "coordination -> density": 8658.0,
+          "tech -> density": 2202.0,
+          "density -> density": 33297.0,
+          "density -> fast chordstream": 1500.5,
+          "chordjack -> fast chordstream": 1696.0,
+          "fast chordstream|wildcard -> fast chordstream": 12391.0,
+          "fast chordstream|wildcard -> dense chordstream": 14087.0,
+          "dense chordstream -> fast chordstream": 325.5,
+          "dense chordstream -> dense chordstream": 21900.5,
+          "break -> dense chordstream": 202.5,
+          "break -> fast chordstream": 7501.5,
+          "tech -> fast chordstream": 620.0,
+          "tech -> technical": 757.0,
+          "density|technical -> technical": 11770.5,
+          "density|technical -> density": 16800.5,
+          "fast chordstream -> density": 509.0,
+          "fast chordstream -> fast chordstream": 5082.5,
+          "fast chordstream -> chordjack": 155.5,
+          "chordjack -> chordjack": 34666.5,
+          "speed|tech -> chordjack": 2487.0,
+          "chordjack -> dense chordstream": 3964.0,
+          "tech -> dense chordstream": 2487.0,
+          "speed -> dense chordstream": 1087.5,
+          "speed -> density": 155.5,
+          "technical -> density": 2357.5,
+          "technical -> fast chordstream": 129.5,
+          "ln wildcard -> fast chordstream": 4236.0,
+          "ln wildcard -> ln wildcard": 5713.0,
+          "release -> ln wildcard": 77.5,
+          "release -> inverse": 5781.0,
+          "inverse -> inverse": 17490.0,
+          "break -> inverse": 4447.5,
+          "break -> technical": 21411.0,
+          "coordination -> technical": 45.5,
+          "coordination -> coordination": 7809.5,
+          "break -> coordination": 16.0,
+          "dense chordstream|wildcard -> dense chordstream": 15880.0,
+          "dense chordstream|wildcard -> ln wildcard": 815.0,
+          "density -> ln wildcard": 5511.0,
+          "density -> inverse": 8011.5,
+          "density -> chordjack": 880.0,
+          "break -> chordjack": 2087.0,
+          "speed -> chordjack": 4174.0,
+          "ln wildcard -> chordjack": 3131.0,
+          "chordjack -> inverse": 651.5,
+          "ln wildcard -> inverse": 2087.0,
+          "dense chordstream|wildcard -> fast chordstream": 58.0,
+          "dense chordstream|wildcard -> minijack": 4116.0
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "F02",
+        "uid": "spm_dataset-1.1.1/bm_0088/87",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": "spm_dataset-1.1.1/bm_0090/89"
+      },
+      {
+        "id": "G02",
+        "uid": "spm_dataset-1.1.1/bm_0376/375",
+        "allowedPrimary": [
+          "inverse"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": "spm_dataset-1.1.1/bm_0376/375"
+      }
+    ],
+    "display": {
+      "segments": 717,
+      "tagSwitches": 596,
+      "subsecondSegments": 5,
+      "medianSegmentMs": 8869.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "no_guidance": {
+    "manual": [
+      {
+        "uid": "manual/DS",
+        "accuracy": 0.6398873620847826,
+        "correctMs": 260868.0,
+        "totalMs": 407678.0,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "perClass": {
+          "release": {
+            "tp": 39289.0,
+            "fp": 0.0,
+            "fn": 20521.0
+          },
+          "coordination": {
+            "tp": 7809.5,
+            "fp": 6266.0,
+            "fn": 13245.5
+          },
+          "break": {
+            "tp": 38778.0,
+            "fp": 156.5,
+            "fn": 43339.0
+          },
+          "density": {
+            "tp": 50097.5,
+            "fp": 35866.5,
+            "fn": 27673.5
+          },
+          "chordjack": {
+            "tp": 34666.5,
+            "fp": 12914.5,
+            "fn": 12366.5
+          },
+          "tech": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 8553.0
+          },
+          "fast chordstream": {
+            "tp": 17473.5,
+            "fp": 16067.0,
+            "fn": 14751.5
+          },
+          "wildcard": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 47347.0
+          },
+          "dense chordstream": {
+            "tp": 37780.5,
+            "fp": 21828.0,
+            "fn": 5314.5
+          },
+          "technical": {
+            "tp": 11770.5,
+            "fp": 22213.5,
+            "fn": 19287.5
+          },
+          "speed": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 7904.0
+          },
+          "ln wildcard": {
+            "tp": 5713.0,
+            "fp": 6403.5,
+            "fn": 9454.0
+          },
+          "inverse": {
+            "tp": 17490.0,
+            "fp": 20978.5,
+            "fn": 0.0
+          },
+          "minijack": {
+            "tp": 0.0,
+            "fp": 4116.0,
+            "fn": 0.0
+          }
+        },
+        "transitions": {
+          "release -> release": 39289.0,
+          "release -> coordination": 6250.0,
+          "release -> break": 156.5,
+          "break -> break": 38778.0,
+          "break -> density": 7673.5,
+          "release -> density": 8256.0,
+          "coordination|chordjack -> density": 4542.0,
+          "chordjack -> density": 1513.0,
+          "coordination -> density": 8658.0,
+          "tech -> density": 2202.0,
+          "density -> density": 33297.0,
+          "density -> fast chordstream": 1500.5,
+          "chordjack -> fast chordstream": 1696.0,
+          "fast chordstream|wildcard -> fast chordstream": 12391.0,
+          "fast chordstream|wildcard -> dense chordstream": 14087.0,
+          "dense chordstream -> fast chordstream": 325.5,
+          "dense chordstream -> dense chordstream": 21900.5,
+          "break -> dense chordstream": 202.5,
+          "break -> fast chordstream": 7501.5,
+          "tech -> fast chordstream": 620.0,
+          "tech -> technical": 757.0,
+          "density|technical -> technical": 11770.5,
+          "density|technical -> density": 16800.5,
+          "fast chordstream -> density": 509.0,
+          "fast chordstream -> fast chordstream": 5082.5,
+          "fast chordstream -> chordjack": 155.5,
+          "chordjack -> chordjack": 34666.5,
+          "speed|tech -> chordjack": 2487.0,
+          "chordjack -> dense chordstream": 3964.0,
+          "tech -> dense chordstream": 2487.0,
+          "speed -> dense chordstream": 1087.5,
+          "speed -> density": 155.5,
+          "technical -> density": 2357.5,
+          "technical -> fast chordstream": 129.5,
+          "ln wildcard -> fast chordstream": 4236.0,
+          "ln wildcard -> ln wildcard": 5713.0,
+          "release -> ln wildcard": 77.5,
+          "release -> inverse": 5781.0,
+          "inverse -> inverse": 17490.0,
+          "break -> inverse": 4447.5,
+          "break -> technical": 21411.0,
+          "coordination -> technical": 45.5,
+          "coordination -> coordination": 7809.5,
+          "break -> coordination": 16.0,
+          "dense chordstream|wildcard -> dense chordstream": 15880.0,
+          "dense chordstream|wildcard -> ln wildcard": 815.0,
+          "density -> ln wildcard": 5511.0,
+          "density -> inverse": 8011.5,
+          "density -> chordjack": 880.0,
+          "break -> chordjack": 2087.0,
+          "speed -> chordjack": 4174.0,
+          "ln wildcard -> chordjack": 3131.0,
+          "chordjack -> inverse": 651.5,
+          "ln wildcard -> inverse": 2087.0,
+          "dense chordstream|wildcard -> fast chordstream": 58.0,
+          "dense chordstream|wildcard -> minijack": 4116.0
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "F02",
+        "uid": "spm_dataset-1.1.1/bm_0088/87",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": "spm_dataset-1.1.1/bm_0090/89"
+      },
+      {
+        "id": "G02",
+        "uid": "spm_dataset-1.1.1/bm_0376/375",
+        "allowedPrimary": [
+          "inverse"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": "spm_dataset-1.1.1/bm_0376/375"
+      }
+    ],
+    "display": {
+      "segments": 717,
+      "tagSwitches": 596,
+      "subsecondSegments": 5,
+      "medianSegmentMs": 8869.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "no_context": {
+    "manual": [
+      {
+        "uid": "manual/DS",
+        "accuracy": 0.6398873620847826,
+        "correctMs": 260868.0,
+        "totalMs": 407678.0,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "perClass": {
+          "release": {
+            "tp": 39289.0,
+            "fp": 0.0,
+            "fn": 20521.0
+          },
+          "coordination": {
+            "tp": 7809.5,
+            "fp": 6266.0,
+            "fn": 13245.5
+          },
+          "break": {
+            "tp": 38778.0,
+            "fp": 156.5,
+            "fn": 43339.0
+          },
+          "density": {
+            "tp": 50097.5,
+            "fp": 35866.5,
+            "fn": 27673.5
+          },
+          "chordjack": {
+            "tp": 34666.5,
+            "fp": 12914.5,
+            "fn": 12366.5
+          },
+          "tech": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 8553.0
+          },
+          "fast chordstream": {
+            "tp": 17473.5,
+            "fp": 16067.0,
+            "fn": 14751.5
+          },
+          "wildcard": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 47347.0
+          },
+          "dense chordstream": {
+            "tp": 37780.5,
+            "fp": 21828.0,
+            "fn": 5314.5
+          },
+          "technical": {
+            "tp": 11770.5,
+            "fp": 22213.5,
+            "fn": 19287.5
+          },
+          "speed": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 7904.0
+          },
+          "ln wildcard": {
+            "tp": 5713.0,
+            "fp": 6403.5,
+            "fn": 9454.0
+          },
+          "inverse": {
+            "tp": 17490.0,
+            "fp": 20978.5,
+            "fn": 0.0
+          },
+          "minijack": {
+            "tp": 0.0,
+            "fp": 4116.0,
+            "fn": 0.0
+          }
+        },
+        "transitions": {
+          "release -> release": 39289.0,
+          "release -> coordination": 6250.0,
+          "release -> break": 156.5,
+          "break -> break": 38778.0,
+          "break -> density": 7673.5,
+          "release -> density": 8256.0,
+          "coordination|chordjack -> density": 4542.0,
+          "chordjack -> density": 1513.0,
+          "coordination -> density": 8658.0,
+          "tech -> density": 2202.0,
+          "density -> density": 33297.0,
+          "density -> fast chordstream": 1500.5,
+          "chordjack -> fast chordstream": 1696.0,
+          "fast chordstream|wildcard -> fast chordstream": 12391.0,
+          "fast chordstream|wildcard -> dense chordstream": 14087.0,
+          "dense chordstream -> fast chordstream": 325.5,
+          "dense chordstream -> dense chordstream": 21900.5,
+          "break -> dense chordstream": 202.5,
+          "break -> fast chordstream": 7501.5,
+          "tech -> fast chordstream": 620.0,
+          "tech -> technical": 757.0,
+          "density|technical -> technical": 11770.5,
+          "density|technical -> density": 16800.5,
+          "fast chordstream -> density": 509.0,
+          "fast chordstream -> fast chordstream": 5082.5,
+          "fast chordstream -> chordjack": 155.5,
+          "chordjack -> chordjack": 34666.5,
+          "speed|tech -> chordjack": 2487.0,
+          "chordjack -> dense chordstream": 3964.0,
+          "tech -> dense chordstream": 2487.0,
+          "speed -> dense chordstream": 1087.5,
+          "speed -> density": 155.5,
+          "technical -> density": 2357.5,
+          "technical -> fast chordstream": 129.5,
+          "ln wildcard -> fast chordstream": 4236.0,
+          "ln wildcard -> ln wildcard": 5713.0,
+          "release -> ln wildcard": 77.5,
+          "release -> inverse": 5781.0,
+          "inverse -> inverse": 17490.0,
+          "break -> inverse": 4447.5,
+          "break -> technical": 21411.0,
+          "coordination -> technical": 45.5,
+          "coordination -> coordination": 7809.5,
+          "break -> coordination": 16.0,
+          "dense chordstream|wildcard -> dense chordstream": 15880.0,
+          "dense chordstream|wildcard -> ln wildcard": 815.0,
+          "density -> ln wildcard": 5511.0,
+          "density -> inverse": 8011.5,
+          "density -> chordjack": 880.0,
+          "break -> chordjack": 2087.0,
+          "speed -> chordjack": 4174.0,
+          "ln wildcard -> chordjack": 3131.0,
+          "chordjack -> inverse": 651.5,
+          "ln wildcard -> inverse": 2087.0,
+          "dense chordstream|wildcard -> fast chordstream": 58.0,
+          "dense chordstream|wildcard -> minijack": 4116.0
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "F02",
+        "uid": "spm_dataset-1.1.1/bm_0088/87",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": "spm_dataset-1.1.1/bm_0090/89"
+      },
+      {
+        "id": "G02",
+        "uid": "spm_dataset-1.1.1/bm_0376/375",
+        "allowedPrimary": [
+          "inverse"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": "spm_dataset-1.1.1/bm_0376/375"
+      }
+    ],
+    "display": {
+      "segments": 717,
+      "tagSwitches": 596,
+      "subsecondSegments": 5,
+      "medianSegmentMs": 8869.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  },
+  "product": {
+    "manual": [
+      {
+        "uid": "manual/DS",
+        "accuracy": 0.6398873620847826,
+        "correctMs": 260868.0,
+        "totalMs": 407678.0,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "perClass": {
+          "release": {
+            "tp": 39289.0,
+            "fp": 0.0,
+            "fn": 20521.0
+          },
+          "coordination": {
+            "tp": 7809.5,
+            "fp": 6266.0,
+            "fn": 13245.5
+          },
+          "break": {
+            "tp": 38778.0,
+            "fp": 156.5,
+            "fn": 43339.0
+          },
+          "density": {
+            "tp": 50097.5,
+            "fp": 35866.5,
+            "fn": 27673.5
+          },
+          "chordjack": {
+            "tp": 34666.5,
+            "fp": 12914.5,
+            "fn": 12366.5
+          },
+          "tech": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 8553.0
+          },
+          "fast chordstream": {
+            "tp": 17473.5,
+            "fp": 16067.0,
+            "fn": 14751.5
+          },
+          "wildcard": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 47347.0
+          },
+          "dense chordstream": {
+            "tp": 37780.5,
+            "fp": 21828.0,
+            "fn": 5314.5
+          },
+          "technical": {
+            "tp": 11770.5,
+            "fp": 22213.5,
+            "fn": 19287.5
+          },
+          "speed": {
+            "tp": 0.0,
+            "fp": 0.0,
+            "fn": 7904.0
+          },
+          "ln wildcard": {
+            "tp": 5713.0,
+            "fp": 6403.5,
+            "fn": 9454.0
+          },
+          "inverse": {
+            "tp": 17490.0,
+            "fp": 20978.5,
+            "fn": 0.0
+          },
+          "minijack": {
+            "tp": 0.0,
+            "fp": 4116.0,
+            "fn": 0.0
+          }
+        },
+        "transitions": {
+          "release -> release": 39289.0,
+          "release -> coordination": 6250.0,
+          "release -> break": 156.5,
+          "break -> break": 38778.0,
+          "break -> density": 7673.5,
+          "release -> density": 8256.0,
+          "coordination|chordjack -> density": 4542.0,
+          "chordjack -> density": 1513.0,
+          "coordination -> density": 8658.0,
+          "tech -> density": 2202.0,
+          "density -> density": 33297.0,
+          "density -> fast chordstream": 1500.5,
+          "chordjack -> fast chordstream": 1696.0,
+          "fast chordstream|wildcard -> fast chordstream": 12391.0,
+          "fast chordstream|wildcard -> dense chordstream": 14087.0,
+          "dense chordstream -> fast chordstream": 325.5,
+          "dense chordstream -> dense chordstream": 21900.5,
+          "break -> dense chordstream": 202.5,
+          "break -> fast chordstream": 7501.5,
+          "tech -> fast chordstream": 620.0,
+          "tech -> technical": 757.0,
+          "density|technical -> technical": 11770.5,
+          "density|technical -> density": 16800.5,
+          "fast chordstream -> density": 509.0,
+          "fast chordstream -> fast chordstream": 5082.5,
+          "fast chordstream -> chordjack": 155.5,
+          "chordjack -> chordjack": 34666.5,
+          "speed|tech -> chordjack": 2487.0,
+          "chordjack -> dense chordstream": 3964.0,
+          "tech -> dense chordstream": 2487.0,
+          "speed -> dense chordstream": 1087.5,
+          "speed -> density": 155.5,
+          "technical -> density": 2357.5,
+          "technical -> fast chordstream": 129.5,
+          "ln wildcard -> fast chordstream": 4236.0,
+          "ln wildcard -> ln wildcard": 5713.0,
+          "release -> ln wildcard": 77.5,
+          "release -> inverse": 5781.0,
+          "inverse -> inverse": 17490.0,
+          "break -> inverse": 4447.5,
+          "break -> technical": 21411.0,
+          "coordination -> technical": 45.5,
+          "coordination -> coordination": 7809.5,
+          "break -> coordination": 16.0,
+          "dense chordstream|wildcard -> dense chordstream": 15880.0,
+          "dense chordstream|wildcard -> ln wildcard": 815.0,
+          "density -> ln wildcard": 5511.0,
+          "density -> inverse": 8011.5,
+          "density -> chordjack": 880.0,
+          "break -> chordjack": 2087.0,
+          "speed -> chordjack": 4174.0,
+          "ln wildcard -> chordjack": 3131.0,
+          "chordjack -> inverse": 651.5,
+          "ln wildcard -> inverse": 2087.0,
+          "dense chordstream|wildcard -> fast chordstream": 58.0,
+          "dense chordstream|wildcard -> minijack": 4116.0
+        }
+      }
+    ],
+    "real": [
+      {
+        "id": "F02",
+        "uid": "spm_dataset-1.1.1/bm_0088/87",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": "spm_dataset-1.1.1/bm_0090/89"
+      },
+      {
+        "id": "G02",
+        "uid": "spm_dataset-1.1.1/bm_0376/375",
+        "allowedPrimary": [
+          "inverse"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": "spm_dataset-1.1.1/bm_0376/375"
+      }
+    ],
+    "display": {
+      "segments": 717,
+      "tagSwitches": 596,
+      "subsecondSegments": 5,
+      "medianSegmentMs": 8869.5
+    },
+    "mechanisms": [
+      {
+        "id": "B01",
+        "uid": "query/B01",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "B02",
+        "uid": "query/B02",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "C16",
+        "uid": "query/C16",
+        "allowedPrimary": [
+          "speed"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 1.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "C24",
+        "uid": "query/C24",
+        "allowedPrimary": [
+          "tech"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-L",
+        "uid": "query/CTX-L",
+        "allowedPrimary": [
+          "dense chordstream",
+          "fast chordstream"
+        ],
+        "coverage": {
+          "speed": 1.0
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "CTX-H",
+        "uid": "query/CTX-H",
+        "allowedPrimary": [
+          "break"
+        ],
+        "coverage": {
+          "speed": 0.8515625,
+          "dense chordstream": 0.1484375
+        },
+        "accuracy": 0.0,
+        "primary": "speed",
+        "group": null
+      },
+      {
+        "id": "LN-L",
+        "uid": "query/LN-L",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "break": 0.578125,
+          "speed": 0.421875
+        },
+        "accuracy": 0.0,
+        "primary": "break",
+        "group": null
+      },
+      {
+        "id": "LN-H",
+        "uid": "query/LN-H",
+        "allowedPrimary": [
+          "release"
+        ],
+        "coverage": {
+          "fast chordstream": 0.578125,
+          "break": 0.3828125,
+          "dense chordstream": 0.0390625
+        },
+        "accuracy": 0.0,
+        "primary": "fast chordstream",
+        "group": null
+      }
+    ]
+  }
+}

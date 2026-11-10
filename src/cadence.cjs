@@ -49,7 +49,7 @@ function correctCadenceDisplay(result, ctx, speedRate = 1) {
     const measured = regularRowCadence(ctx, start, end, speedRate);
     if (!measured) continue;
     const { equivBpm, ...evidence } = measured;
-    segment.evidence.cadence = { ...evidence, legacyEquivBpm: segment.equivBpm };
+    segment.evidence.cadence = { ...evidence, measuredStart:start,measuredEnd:end,legacyEquivBpm: segment.evidence.archivedEquivBpm??segment.equivBpm };
     segment.equivBpm = equivBpm;
   }
   result.modelInfo.cadencePolicy = 'uniform rows measured directly; other archived cadence unchanged';

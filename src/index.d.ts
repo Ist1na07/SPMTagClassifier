@@ -6,7 +6,7 @@ export interface RatingEvidence {
 }
 export interface Options {
   speedRate?: number; algorithm?: 'modern' | 'stable' | 'legacy';
-  /** Stable 7K defaults to perceptual; classic restores v1.2.2 whole aggregation. */
+  /** Stable 7K defaults to perceptual; classic uses the archived aggregation policy on current segments. */
   aggregation?: 'perceptual' | 'classic'; ratingEvidence?: RatingEvidence;
 }
 export interface Note { t: number; col: number; lnEnd: number | null }
@@ -31,10 +31,12 @@ export interface Segment {
   evidence?: { normalizedEntropy: number; margin: number; effort: number; occupancy: number;
     featureWindows: number; contextNoteObservations: number; legacyConfidence?: number;
     concentration?: number; structuralWindows?: number; clippedFeatureFraction?: number;
-    sourceStart?: number; sourceEnd?: number; geometry?: GeometryEvidence;
+    sourceStart?: number; sourceEnd?: number; archivedEquivBpm?: number; geometry?: GeometryEvidence;
     /** Direct display-only cadence measurement; archived model features are unchanged. */
     cadence?: { source: 'uniform-rows-within-source-ms'; rowCount: number; spacingMs: number;
-      maxResidualMs: number; resolutionMs: number; legacyEquivBpm?: number } };
+      maxResidualMs: number; resolutionMs: number; legacyEquivBpm?: number;
+      /** Measured plateau; may be narrower than its display envelope. */
+      measuredStart?: number; measuredEnd?: number } };
 }
 export interface GeometryEvidence {
   start: number; end: number;
@@ -70,6 +72,7 @@ export interface Result {
     physicalSupport?: 'none' | 'jack' | 'ln' | 'both'; defaultReplacementAccepted?: boolean;
     effortPower?: number; concentrationPower?: number; extraGate?: string;
     localScoreKind?: string; confidenceMeaning?: string; coverage?: string; cadencePolicy?: string;
+    segmentReadout?: {stepMs: number; cutContextMs: number; minCadencePlateauMs: number; cutExcludedFrames: number};
     sortMeaning?: string; overallDecision?: string; supervision?: string;
     overlayPolicy?: { regularityRestRelativeNps: number; regularityRestRowRateMax: number;
       rowRateUnit: 'rows per converted second'; aggregation: 'unchanged legacy policy' | 'support-weighted perceptual burden' };

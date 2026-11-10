@@ -102,7 +102,11 @@ function infer(map,segments,rating,profile,options={}){
   if(profile.schemaVersion!==1||profile.classes.length!==14)throw Error('PerceptionProfileSchema');
   const classes=profile.classes,needComponents=!!profile.components;
   const integral=integrate(map,segments,rating,profile.recipe,{...options,modelIdentity:profile.modelIdentity??EXPECTED_RATING,components:needComponents,includeGeometry:!!profile.localCoef});
-  const base=baseSupport(segments,classes,profile.supportPower??1,profile.hard),support=base.map(a=>[...a]);
+  // A negative physical exclusion must not renormalize and inflate the other
+  // branches when it removes the old maximum-scoring class.
+  const base=options._branchSupport??baseSupport(segments,classes,profile.supportPower??1,profile.hard);
+  if(base.length!==segments.length||base.some(row=>row.length!==classes.length||row.some(v=>!Number.isFinite(v)||v<0||v>1)))throw Error('PerceptionBranchSupport');
+  const support=base.map(a=>[...a]);
   if(profile.localCoef){const s=profile.localScaler;
     for(let i=0;i<support.length;i++)for(let j=0;j<classes.length;j++){
       if(base[i][j]<=0)continue;let residual=0;

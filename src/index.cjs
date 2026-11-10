@@ -5,6 +5,7 @@ const {features,windows,FEATURE_KEYS}=require('./features.cjs');
 const {coarseResult}=require('./coarse-result.cjs'),{lnResult}=require('./ln-result.cjs');
 const geometry=require('./generated/native-geometry.cjs'),{version}=require('../package.json');
 const {correctCadenceDisplay}=require('./cadence.cjs');
+const {refine:refineSegments}=require('./segment-readout.cjs');
 const overlay7=require('./generated/overlay-engine.cjs'),overlayProfile=require('./models/overlay7k.json');
 const profile4=require('./models/4k.json'),profile7=require('./models/7k.json');
 const native4=require('./models/native4k.json'),native6=require('./models/native6k.json'),native7=require('./models/native7k.json');
@@ -27,7 +28,10 @@ function describe(w) {
 }
 function stable7(osuText,opts,e) {
   const perceptual=opts.aggregation!=='classic';
-  const r=overlay7.analyzeMap(osuText,{...opts,_rawEvidence:perceptual}),geometryContext=geometry.prepare(e.ctx);
+  const name=opts.ratingEvidence?(opts.ratingEvidence.modelIdentity===perception.COMPACT_RATING?'compact':'detail'):'actions',p=perceptionProfiles[name];
+  const r=overlay7.analyzeMap(osuText,{...opts,_rawEvidence:true,_segmentReadout:(raw,resolveBpm)=>refineSegments(e.ctx,raw,p.classes,{resolveBpm,speedRate:opts.speedRate??1,supportPower:p.supportPower??1})}),geometryContext=geometry.prepare(e.ctx);
+  const classicPrior=r.debug.classicPrior,branchSupport=r.debug.readoutSupport,cutExclusions=r.debug.cutExclusions;
+  delete r.debug.classicPrior;delete r.debug.readoutSupport;delete r.debug.cutExclusions;
   const raw=r.debug.rawSegments;delete r.debug.rawSegments;
   // The inherited segmenter can omit a short leading pickup when snapping.
   // Extend only the envelope; keep the learned tags and overall decision.
@@ -38,7 +42,9 @@ function stable7(osuText,opts,e) {
     const distribution=Object.fromEntries(Object.entries(raw).map(([k,v])=>[k,sum>0?v/sum:Number(k===s.tag)]));
     const ranked=Object.values(distribution).sort((a,b)=>b-a);
     s.distribution=distribution;
-    s.evidence={normalizedEntropy:ranked.length>1?-ranked.reduce((a,v)=>v>0?a+v*Math.log(v):a,0)/Math.log(ranked.length):0,
+    const archivedEquivBpm=s._archivedEquivBpm;delete s._archivedEquivBpm;
+    const cadence=s.evidence?.cadence;
+    s.evidence={...(cadence?{cadence}:{}),...(archivedEquivBpm===undefined?{}:{archivedEquivBpm}),normalizedEntropy:ranked.length>1?-ranked.reduce((a,v)=>v>0?a+v*Math.log(v):a,0)/Math.log(ranked.length):0,
       margin:(ranked[0]||0)-(ranked[1]||0),effort:w.metrics.effort,occupancy:w.metrics.occupancy,
       featureWindows:1,contextNoteObservations:w.notes,legacyConfidence:s.confidence,
       geometry:geometry.describeInterval(geometryContext,s.start,Math.max(s.start+1,s.end))};
@@ -47,13 +53,13 @@ function stable7(osuText,opts,e) {
   r.overall.composition=total>0?Object.fromEntries(Object.entries(r.overall.weights).map(([k,v])=>[k,v/total])):{break:1};
   r.overall.scoreKind='legacy decision scores; distribution is normalized affinity, not calibrated confidence';
   r.modelInfo={version,keyCount:7,variant:'legacy-stable',researchVariant:'anchored-ln-release',
-    segmentEvidence:'archived affinities with corrected fast-regular rest gate; interval-union diagnostics',temporalResolutionMs:250,
+    segmentEvidence:'archived affinities, regular-rest gate and two-thumb static-hand cut exclusion; stable cadence plateaus',temporalResolutionMs:250,
+    segmentReadout:{stepMs:500,cutContextMs:4000,minCadencePlateauMs:1800,cutExcludedFrames:cutExclusions},
     overlayPolicy:{regularityRestRelativeNps:overlayProfile.gate.ratio,regularityRestRowRateMax:overlayProfile.gate.rowRateMax,
       rowRateUnit:'rows per converted second',aggregation:'unchanged legacy policy'}};
   if(perceptual){
     const rating=opts.ratingEvidence;
-    const name=rating?(rating.modelIdentity===perception.COMPACT_RATING?'compact':'detail'):'actions';
-    const p=perceptionProfiles[name],a=perception.infer(e.map,raw,rating,p,{speedRate:opts.speedRate??1,context:e.ctx,baseline:r.overall});
+    const a=perception.infer(e.map,raw,rating,p,{speedRate:opts.speedRate??1,context:e.ctx,baseline:classicPrior??r.overall,_branchSupport:branchSupport});
     r.overall=a.overall;perception.decorateSegments(r.segments,a,p.classes);
     r.modelInfo.overlayPolicy.aggregation='support-weighted perceptual burden';
     r.modelInfo.perception={profile:name,recipe:{...p.recipe},supportPower:p.supportPower,

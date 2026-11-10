@@ -1,6 +1,6 @@
 # 在 overlay 中显示整谱负担占比
 
-本轮以 v1.1.0 为研究基线，全部成果归入 v1.2 系列。v1.2.3 的稳定 7K 路径使用多分支支持与连续时间负担积分决定整谱 tag。原局部主类、BPM 和旧 `confidence` 保留；4K／6K 和 `modern` 的分类路径不变。
+本轮以 v1.1.0 为研究基线，全部成果归入 v1.2 系列。稳定 7K 使用多分支支持与连续时间负担积分决定整谱 tag。v1.2.4 增加逐手动作的假切换排除及同类内部稳定变速显示；其余局部专家、4K／6K 和 `modern` 路径不变。联合学习权重没有通过来源留出，未进入默认路径。
 
 ## 已有 SPM Rating 结果时，直接复用
 
@@ -16,7 +16,7 @@ console.log(result.overall.tags, result.overall.percentages);
 
 直接提供的 `ratingEvidence` 包含 `schemaVersion:1`、`keyCount:7`、相同 `speedRate`、`clock:'post-rate-ms'`、`modelIdentity`、`query` 和 `demand`。错误模型、裁剪曲线或倍率会明确报错。所有时间都是倍率换算后的毫秒，保留小数。
 
-不提供曲线时，使用单独联调的动作物量配置；`overall.perception.difficultyAvailable` 为 `false`。不会把缺失难度补成零。恢复 v1.2.2 整谱聚合：
+不提供曲线时，使用单独联调的动作物量配置；`overall.perception.difficultyAvailable` 为 `false`。不会把缺失难度补成零。使用原整谱聚合策略（消费当前分段；完整原行为用 `algorithm:'legacy'`）：
 
 ```js
 analyzeMap(osuText, {aggregation: 'classic'});
@@ -35,7 +35,7 @@ node path/to/package/bin/update-overlay.cjs 'E:/path/to/plugin'
 node path/to/package/bin/update-overlay.cjs 'E:/path/to/plugin' --apply
 ```
 
-适配器只修改 `index.html`、`spm_algorithm.js` 和 `tag_engine.js`；写入前把三份原文件及清单保存在插件内 `.spm-tag-backups/<时间>/`。设置、音乐和谱面不变。回退时关闭页面，从对应备份复制这三个文件到插件目录，再重新加载。首次更新后也需重新加载页面。已使用误编号 v1.3.0 的插件可直接运行本更新器迁移，不必先手动还原；它识别旧集成标记并保留备份。npm 用户应显式安装 v1.2.3 的包，普通版本升级不会自动从 1.3.0 降版。
+适配器只修改 `index.html`、`spm_algorithm.js` 和 `tag_engine.js`；写入前把三份原文件及清单保存在插件内 `.spm-tag-backups/<时间>/`。设置、音乐和谱面不变。回退时关闭页面，从对应备份复制这三个文件到插件目录，再重新加载。首次更新后也需重新加载页面。旧 schema1 及误编号 v1.3.0 集成均可原位迁移并保留备份。npm 用户应显式安装 v1.2.4 的包，普通版本升级不会自动从 1.3.0 降版。
 
 适配器针对 SPM Map Analyser v1.2.0 的已验证布局，拒绝未知参数和布局。同版本重复运行无变化。评分函数只附带同一次计算已产生的原始 `query/D`；评分数值不变。切换 Detailed／Compact 会同时更新整谱 tag；平滑和显示宽度不影响 tag。插件本来的 4K／6K 难度显示保留，不借此增加细分类界面。
 
@@ -56,6 +56,8 @@ A[t] = (1000/windowMs × (窗口头数 + 并集尾数) + holdCredit × 持键列
 每个动作使用以其时间为中心的方窗。每列 LN 先取区间并集；重叠持键不重复计价。`D` 沿头部行时钟右连续，最后样本延拓到最后物理事件；延拓毫秒数单列在元数据中。积分在所有分支、曲线、动作窗和持键端点的并集上精确求和，而不是逐头平均。
 
 `support` 来自未平滑的原专家分支：非负分数除以 `max(1, 最大分数)`，端点上限 0.999；Break 为零。它表示原型贴合，保留一阶意义，不平方、不强迫各类和为一。困难但短的段落可以比时间占比更突出；Break 的物理负担仍保留在分母中。
+
+纯 Rice 且两种拇指归属下都无手内指组变化时，排除不可能的 Dense/Fast CS 支持；分母仍用排除前原最大值，不把删除的支持分给其它类型。原整谱判断继续作为固定先验。RC Wildcard 没有对应的整谱细分支，局部百分数使用其原分类支持并明确标注来源，不假报为 0%。
 
 最终动作版参数为 `alpha=0,beta=2,windowMs=1000,holdCredit=1`；Detailed 恢复 R1 的 `alpha=2,beta=1,windowMs=1000,holdCredit=1`；Compact 保留 `alpha=4,beta=1.5,windowMs=1000,holdCredit=1`。指数是在压缩后的量上联调得到；仍有活跃边界，不能视为已找出唯一最优参数。
 
