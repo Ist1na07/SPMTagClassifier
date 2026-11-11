@@ -10,9 +10,10 @@ test('stable 7K integrates matching Detailed and Compact curves on native fracti
   assert.deepEqual(curve,before);assert(!Object.hasOwn(r.debug,'rawSegments'));
  }
 });
-test('rating consumer preserves retuned local decisions; branches are independent and weighted',()=>{
+test('away from rest repair, rating preserves retuned type decisions; branches are independent and weighted',()=>{
  const text=chart(),a=api.analyzeMap(text),b=api.analyzeMap(text,{ratingEvidence:rating(text,1,EXPECTED_RATING)});
  assert.equal(a.modelInfo.perception.profile,'actions');assert(!a.overall.perception.difficultyAvailable);
+ assert(a.segments.every(s=>s.tag!=='break'));
  assert.deepEqual(a.segments.map(s=>[s.tag,s.confidence,s.start,s.end,s.equivBpm]),b.segments.map(s=>[s.tag,s.confidence,s.start,s.end,s.equivBpm]));
  assert(a.segments.every(s=>Object.values(s.branches).every(x=>x>=0&&x<=1)));
  assert(Math.abs(a.segments.reduce((a,s)=>a+s.aggregationWeight,0)-1)<1e-10);

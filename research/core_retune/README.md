@@ -31,7 +31,7 @@
 - `joint_oof_report.py`：完整349池化指标。`joint-source-r1/oof.json` 的整谱字段为 OUTER 逐折均值，不能代替 `oof-full349.json`。
 - `verify_candidate.cjs`、`product_report.py`：LN Wildcard 修正阶段的411重放及冻结报告；不再作为当前参数的重放入口，也不覆盖当时的证据。
 - `historical_audit.cjs`：只读审计旧工具；`deployment_refit.py`：完整全量参数网格及先前 INNER 选择；`refit_product.cjs`、`refit_report.py`：真实三消费路径的固定／移动先验对照。
-- `verify_refit.cjs`：当前静态默认的411重放，与保存的采用候选逐项比较，并核对411条 classic 的完整输出。
+- `verify_refit.cjs`：`184408e` 参数采用检查点的411重放。后续压力 Break 修补改变评分消费器，当前入口改为 `research/break_pressure/verify.cjs`，旧采用证据不覆盖。
 - `native_check.cjs`：非零原 W/b 模型与真实原生分类器的数值及决策一致性。
 - `test_core.py`：研究合同、导出、来源隔离、指标计数、梯度及原生参数可达性检查。
 
@@ -43,7 +43,8 @@ npm test
 npm run test:types
 npm run test:parity
 python -X utf8 -m unittest discover -s research/core_retune -p test_core.py
-node research/core_retune/verify_refit.cjs
+node research/break_pressure/verify.cjs
+python -X utf8 research/break_pressure/report.py
 ```
 
 需要原始 `dataset/`、只读 `.upstream/` 和先前提取的物理／评分缓存；不把数据集、音频或评分重算封装进产品。所有声明的网格均已完成，不需要为了复核再做一轮大搜索。可选 sample-F1 的旧中间字段已作废，正确最终值见重放报告；其它指标和选模保持。

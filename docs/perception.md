@@ -4,6 +4,8 @@
 
 仓库未发布更新已采用原56维专家的联合重调 W/b，倍率仍为1.4；保持训练约定中的旧参考预测器作为积分聚合先验。新分段与分支支持由新 W/b 计算，并保留 LN Wildcard 的低贴合休息豁免。`aggregation:'classic'` 保留替换前局部与原聚合路径；已发布 v1.2.4 tag／资产不变。开发成绩、来源留出风险和已接受的退步见 [参数采用报告](../research/core_retune/REFIT_FINDINGS.md)。
 
+最新小修补还让同一次 SPM 曲线进入 Break 判断：至少一半段落时间的有效 D 不低于全图有效时间中位数时，不再仅因低 NPS／低类型贴合判作 Break。长头部空隙和最后样本之后不延拓压力证据；原初始空隙、空行和稀疏处理保留。已对有／无难度输入独立联调门槛；无曲线的动作版不变。评分模型切换现在可能改变局部 Break，类型 W/b 不变。作用范围、代价及后续高成本方向见 [Break 修补](../research/break_pressure/README.md)。
+
 ## 已有 SPM Rating 结果时，直接复用
 
 ```js
@@ -70,6 +72,7 @@ A[t] = (1000/windowMs × (窗口头数 + 并集尾数) + holdCredit × 持键列
 - `overall.composition`：为旧调用保留的类型组成：有支持时和为一，无支持时全零，不能当作新百分数。
 - `segment.branches`：在可见合并段上按实际负担积分得到的多分支贴合度。
 - `segment.aggregationWeight`：该可见段对全谱负担分母的比例。
+- `modelInfo.breakPolicy`：Break 联调参数、是否使用难度曲线、图内参考 D 及触发保护的自然段数；独立稀疏规则仍可保留 Break。
 
 整谱门控使用这些新份额保留／剔除旧 tag，必要时用强原型替换旧 Mix；两个具有实质负担的家族可触发 Hybrid，不再要求三个细类。具体门槛见 `modelInfo.perception`。
 

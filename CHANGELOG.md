@@ -4,7 +4,10 @@
 
 All research and implementation below belongs to one iteration. Patch releases are checkpoints, not separate research generations. The former v1.3.0 was misnumbered; its tag/assets remain historical. Current release: v1.2.4.
 
-### Unreleased — original-core joint parameter refit and fixed-reference deployment
+### Unreleased — joint parameter refit and pressure-aware rest repair
+
+- Reuse the existing native Detailed/Compact demand distribution before Break classification. Sustained high demand can veto low-stakes/low-fit rest gates; exclude stale samples across long head gaps and past the last head. Preserve initial marked/empty/sparse handling, fixed reference prior, and unrated action output.
+- Independently retune9 no-sensor and171 rated configurations per consumer. Six-chart false Break55.1965s→47.4715s, missed true Break+0.15s; DetailedF1 58.1211%→58.7703%, Compact56.9678%→56.9551%. Retain source-heldout/local limitations and expensive future directions in `research/break_pressure/README.md`. Actual411/three-consumer parity and71 product tests pass.
 
 - Adopt jointly retuned original56D W/b with fixed1.4 gain and ridge0.1. Keep the reference whole predictor fixed as in the training objective; do not inadvertently change both local branches and the integral prior. classic retains its previous local path; raw legacy, modern and4K/6K remain unchanged.
 - Complete all12 full-data parameter configurations and actual four-arm/three-consumer replays, including moving/fixed prior controls. Development six-chart accuracy70.4051%→71.7214%, real-eight29.8858%→62.5%; Detailed/Actions/Compact macroF1 become58.1211/57.4008/56.9678%. These labels participated in final fitting; source-heldout instability and accepted BE/Release/recall regressions remain explicit.

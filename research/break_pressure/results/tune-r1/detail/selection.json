@@ -1,0 +1,22 @@
+{
+  "off": {
+    "id": 4,
+    "config": {
+      "quantile": null,
+      "fraction": null,
+      "target": "none",
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1.0
+    }
+  },
+  "pressure": {
+    "id": 40,
+    "config": {
+      "quantile": 0.5,
+      "fraction": 0.5,
+      "target": "low+late",
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1.0
+    }
+  }
+}

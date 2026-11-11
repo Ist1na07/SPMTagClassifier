@@ -6,7 +6,7 @@ export interface RatingEvidence {
 }
 export interface Options {
   speedRate?: number; algorithm?: 'modern' | 'stable' | 'legacy';
-  /** Stable 7K defaults to perceptual; classic uses the archived aggregation policy on current segments. */
+  /** Stable 7K defaults to perceptual; classic retains the previous local expert and aggregation policy. */
   aggregation?: 'perceptual' | 'classic'; ratingEvidence?: RatingEvidence;
 }
 export interface Note { t: number; col: number; lnEnd: number | null }
@@ -70,6 +70,8 @@ export interface Result {
   modelInfo?: { version: string; keyCount: number; variant: string; segmentEvidence: string; temporalResolutionMs: number;
     taxonomy?: string; classes?: string[]; featureKeys?: string[]; featureCount?: number;
     localExpert?: 'original56-joint-fixed-ridge01' | 'archived';
+    breakPolicy?: {id: string; ratingUsed: boolean; confidenceFloor: number; lowNpsScale: number;
+      quantile: number | null; fraction: number | null; referenceDemand: number | null; protectedParents: number};
     physicalSupport?: 'none' | 'jack' | 'ln' | 'both'; defaultReplacementAccepted?: boolean;
     effortPower?: number; concentrationPower?: number; extraGate?: string;
     localScoreKind?: string; confidenceMeaning?: string; coverage?: string; cadencePolicy?: string;

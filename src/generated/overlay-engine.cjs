@@ -1818,6 +1818,7 @@ var TagClassifier = (() => {
   return nps < referenceNps * relativeNps || rowCount * 1000 / durationMs < rowRateMax;
 }
   function classifySegments(cm, opts = {}) {
+    const breakPolicy=opts._breakPolicy, lowNpsScale=breakPolicy?.lowNpsScale??1;
     const out = [];
     const lnDom = opts.lnDominantRatio ?? CONFIG.lnDominantRatio;
     const mapMeds = computeMapMedians(cm.windows);
@@ -1832,8 +1833,8 @@ var TagClassifier = (() => {
       }
       const f = segF[i];
       const ex = cm.extras[i];
-      const lowStakes = s.end - s.start >= 2500 && f.nps < mapNps && (f.nps < 18.5 && ex.segIvLogStd > 0.41 || regularityRestSupported(f.nps, mapNps, ex.rowCount, s.end - s.start, 0.85, 16) && f.chordMean < 1.9 && ex.vibroFraction > 0.3 && ex.segRhythmChangeRate < 0.1 || f.nps < 22.5 && ex.segIvLogStd > 0.25 && ex.vibroFraction < 0.45 && f.lnWeightRatio < 0.5);
-      if (lowStakes) {
+      const lowStakes = s.end - s.start >= 2500 && f.nps < mapNps && (f.nps < 18.5 * lowNpsScale && ex.segIvLogStd > 0.41 || regularityRestSupported(f.nps, mapNps, ex.rowCount, s.end - s.start, 0.85, 16) && f.chordMean < 1.9 && ex.vibroFraction > 0.3 && ex.segRhythmChangeRate < 0.1 || f.nps < 22.5 * lowNpsScale && ex.segIvLogStd > 0.25 && ex.vibroFraction < 0.45 && f.lnWeightRatio < 0.5);
+      if (lowStakes && !breakPolicy?.protects?.(s.start,s.end,"low")) {
         out.push({ start: s.start, end: s.end, tag: "break", confidence: 1, family: "break" });
         continue;
       }
@@ -1901,9 +1902,9 @@ var TagClassifier = (() => {
       const seg = out[i];
       if (seg.family === "break") continue;
       const dur = seg.end - seg.start;
-      const easyAmbiguous = seg.tag !== "ln wildcard" && seg.confidence < 0.5 && diffs[i] <= Math.max(p15, 1) && (medians[i].nps ?? 0) < mapNps;
+      const easyAmbiguous = seg.tag !== "ln wildcard" && seg.confidence < (breakPolicy?.confidenceFloor??0.5) && diffs[i] <= Math.max(p15, 1) && (medians[i].nps ?? 0) < mapNps;
       const shortSparse = dur < 2e4 && medians[i].nps > 0 && medians[i].nps < medNps * 0.4 && medians[i].nps < 4;
-      if (easyAmbiguous || shortSparse) {
+      if ((easyAmbiguous && !breakPolicy?.protects?.(seg.start,seg.end,"late")) || shortSparse) {
         seg.tag = "break";
         seg.secondary = void 0;
         seg.family = "break";
@@ -2069,9 +2070,9 @@ var TagClassifier = (() => {
     const rate = opts.speedRate ?? 1;
     if (rate !== 1) map = rescale(map, rate);
     const cm = buildCachedMap(osuText, opts);
-    const rawEvidence = opts._rawEvidence ? classifySegments(cm,{scorer:"model",_expertModel:opts._archivedExpert?model_generated_default:undefined}) : null;
+    const rawEvidence = opts._rawEvidence ? classifySegments(cm,{scorer:"model",_expertModel:opts._archivedExpert?model_generated_default:undefined,_breakPolicy:opts._archivedExpert?undefined:opts._breakPolicy}) : null;
 
-    const originalSegments = smoothSegments(rawEvidence ? rawEvidence.map(s=>({...s})) : classifySegments(cm,{scorer:"model",_expertModel:opts._archivedExpert?model_generated_default:undefined}));
+    const originalSegments = smoothSegments(rawEvidence ? rawEvidence.map(s=>({...s})) : classifySegments(cm,{scorer:"model",_expertModel:opts._archivedExpert?model_generated_default:undefined,_breakPolicy:opts._archivedExpert?undefined:opts._breakPolicy}));
     const classicPrior = aggregateOverall(smoothSegments(classifySegments(cm,{scorer:"model",_expertModel:model_generated_default})), {"dominantShare":0.52,"mixShare":0.07,"secondRel":0.75});
     let readout = null;
     if (opts._segmentReadout) {

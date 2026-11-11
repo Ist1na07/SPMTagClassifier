@@ -10,6 +10,7 @@ const overlay7=require('./generated/overlay-engine.cjs'),overlayProfile=require(
 const profile4=require('./models/4k.json'),profile7=require('./models/7k.json');
 const native4=require('./models/native4k.json'),native6=require('./models/native6k.json'),native7=require('./models/native7k.json');
 const perception=require('./perception.cjs'),perceptionProfiles=require('./models/perception7k.json').profiles;
+const {createPressureGuard}=require('./break-pressure.cjs'),breakProfile=require('./models/break7k.json');
 function profile(key){return key===4?profile4:profile7;}
 function evidenceMap(osuText,opts={}) {
   const map=parseOsu(osuText,opts),ctx=prepare(map,10);
@@ -29,7 +30,16 @@ function describe(w) {
 function stable7(osuText,opts,e) {
   const perceptual=opts.aggregation!=='classic';
   const name=opts.ratingEvidence?(opts.ratingEvidence.modelIdentity===perception.COMPACT_RATING?'compact':'detail'):'actions',p=perceptionProfiles[name];
-  const r=overlay7.analyzeMap(osuText,{...opts,_rawEvidence:true,_archivedExpert:!perceptual,_segmentReadout:(raw,resolveBpm)=>refineSegments(e.ctx,raw,p.classes,{resolveBpm,speedRate:opts.speedRate??1,supportPower:p.supportPower??1})}),geometryContext=geometry.prepare(e.ctx);
+  const policy=breakProfile.profiles[name],protectedParents=new Set();let pressure=null;
+  if(perceptual&&opts.ratingEvidence){
+    perception.validateRating(e.map,opts.ratingEvidence,{speedRate:opts.speedRate??1,modelIdentity:p.modelIdentity});
+    pressure=createPressureGuard(opts.ratingEvidence,policy,breakProfile.gapMs);
+  }
+  const breakPolicy=perceptual?{...policy,protects:(start,end,stage)=>{
+    if(!pressure||!policy.target.split('+').includes(stage))return false;
+    const result=pressure.measure(start,end);if(result.protected)protectedParents.add(start+':'+end);return result.protected;
+  }}:undefined;
+  const r=overlay7.analyzeMap(osuText,{...opts,_rawEvidence:true,_archivedExpert:!perceptual,_breakPolicy:breakPolicy,_segmentReadout:(raw,resolveBpm)=>refineSegments(e.ctx,raw,p.classes,{resolveBpm,speedRate:opts.speedRate??1,supportPower:p.supportPower??1})}),geometryContext=geometry.prepare(e.ctx);
   const classicPrior=r.debug.classicPrior,branchSupport=r.debug.readoutSupport,cutExclusions=r.debug.cutExclusions;
   delete r.debug.classicPrior;delete r.debug.readoutSupport;delete r.debug.cutExclusions;
   const raw=r.debug.rawSegments;delete r.debug.rawSegments;
@@ -59,6 +69,7 @@ function stable7(osuText,opts,e) {
     overlayPolicy:{regularityRestRelativeNps:overlayProfile.gate.ratio,regularityRestRowRateMax:overlayProfile.gate.rowRateMax,
       rowRateUnit:'rows per converted second',aggregation:'unchanged legacy policy'}};
   if(perceptual){
+    r.modelInfo.breakPolicy={id:breakProfile.id,ratingUsed:!!pressure,confidenceFloor:policy.confidenceFloor,lowNpsScale:policy.lowNpsScale,quantile:policy.quantile,fraction:policy.fraction,referenceDemand:pressure?.reference??null,protectedParents:protectedParents.size};
     const rating=opts.ratingEvidence;
     const a=perception.infer(e.map,raw,rating,p,{speedRate:opts.speedRate??1,context:e.ctx,baseline:classicPrior??r.overall,_branchSupport:branchSupport});
     r.overall=a.overall;perception.decorateSegments(r.segments,a,p.classes);

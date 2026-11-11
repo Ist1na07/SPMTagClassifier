@@ -4,7 +4,7 @@ const {replaceOnce}=require('../research/rework/legacy-lab.cjs');
 const profile=require('../src/models/overlay7k.json');
 const localProfile=require('../src/models/local7k.json');
 if(profile.schemaVersion!==1)throw Error('Unsupported overlay gate schema');
-function compileOverlayEngine({segmentReadout=false,localExpert=segmentReadout}={}){
+function compileOverlayEngine({segmentReadout=false,localExpert=segmentReadout,breakPressure=localExpert}={}){
 if(localExpert&&!segmentReadout)throw Error('Retuned local expert requires its maintained readout');
 let source=compileRestEngine(profile.gate,profile.aggregation);
 // Internal evidence request reuses this exact classification pass. Smoothing
@@ -52,6 +52,18 @@ if(localExpert){
   // Do not inadvertently change both the fitted local branch and its prior.
   source=replaceOnce(source,`    const classicPrior = aggregateOverall(originalSegments, ${JSON.stringify(profile.aggregation)});`,
     `    const classicPrior = aggregateOverall(smoothSegments(classifySegments(cm,{scorer:"model",_expertModel:model_generated_default})), ${JSON.stringify(profile.aggregation)});`);
+}
+if(breakPressure){
+  const currentCall='classifySegments(cm,{scorer:"model",_expertModel:opts._archivedExpert?model_generated_default:undefined})';
+  if(source.split(currentCall).length!==3)throw Error('Expected both local classification entry points');
+  source=source.split(currentCall).join('classifySegments(cm,{scorer:"model",_expertModel:opts._archivedExpert?model_generated_default:undefined,_breakPolicy:opts._archivedExpert?undefined:opts._breakPolicy})');
+  source=replaceOnce(source,'  function classifySegments(cm, opts = {}) {',
+    '  function classifySegments(cm, opts = {}) {\n    const breakPolicy=opts._breakPolicy, lowNpsScale=breakPolicy?.lowNpsScale??1;');
+  source=replaceOnce(source,'f.nps < 18.5 && ex.segIvLogStd','f.nps < 18.5 * lowNpsScale && ex.segIvLogStd');
+  source=replaceOnce(source,'f.nps < 22.5 && ex.segIvLogStd','f.nps < 22.5 * lowNpsScale && ex.segIvLogStd');
+  source=replaceOnce(source,'if (lowStakes) {','if (lowStakes && !breakPolicy?.protects?.(s.start,s.end,"low")) {');
+  source=replaceOnce(source,'seg.confidence < 0.5 && diffs[i]','seg.confidence < (breakPolicy?.confidenceFloor??0.5) && diffs[i]');
+  source=replaceOnce(source,'if (easyAmbiguous || shortSparse) {','if ((easyAmbiguous && !breakPolicy?.protects?.(seg.start,seg.end,"late")) || shortSparse) {');
 }
 return source;
 }

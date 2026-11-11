@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "sustained-native-demand-r1",
+  "gapMs": 2500,
+  "profiles": {
+    "actions": {
+      "quantile": null,
+      "fraction": null,
+      "target": "none",
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1.0
+    },
+    "detail": {
+      "quantile": 0.5,
+      "fraction": 0.5,
+      "target": "low+late",
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1.0
+    },
+    "compact": {
+      "quantile": 0.5,
+      "fraction": 0.5,
+      "target": "low+late",
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1.0
+    }
+  }
+}
