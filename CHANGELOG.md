@@ -4,11 +4,12 @@
 
 All research and implementation below belongs to one iteration. Patch releases are checkpoints, not separate research generations. The former v1.3.0 was misnumbered; its tag/assets remain historical. Current release: v1.2.4.
 
-### Unreleased — original-core parameter audit and LN Wildcard rest correction
+### Unreleased — original-core joint parameter refit and fixed-reference deployment
 
-- Do not interpret LN Wildcard's low prototype affinity as inactivity. Exempt it only from the late confidence-dependent Break clause; preserve physical rests, sparse handling and original coefficients. Actual six-chart replay improves from 69.5855% to 70.4051%, all three full349 whole-tag P/R/F1 remain unchanged. This is a retrospective one-chart gain, not a broad new accuracy claim.
-- Complete direct original W/b retuning, local-context controls, matched native parameter/mechanism searches and fixed/free-strength local/joint integral training. Reject fitted candidates that trade local quality for whole-map gains; ordinary Tech→Dense remains unresolved.
-- Preserve full evidence in `research/core_retune/CONCLUSIONS.md`; exact actual411 replay, 64 product tests and legacy parity pass. No new release/tag and no live plugin modification.
+- Adopt jointly retuned original56D W/b with fixed1.4 gain and ridge0.1. Keep the reference whole predictor fixed as in the training objective; do not inadvertently change both local branches and the integral prior. classic retains its previous local path; raw legacy, modern and4K/6K remain unchanged.
+- Complete all12 full-data parameter configurations and actual four-arm/three-consumer replays, including moving/fixed prior controls. Development six-chart accuracy70.4051%→71.7214%, real-eight29.8858%→62.5%; Detailed/Actions/Compact macroF1 become58.1211/57.4008/56.9678%. These labels participated in final fitting; source-heldout instability and accepted BE/Release/recall regressions remain explicit.
+- Read-only audit the old training tools: fixed trainer knobs, repeated manual exposure, coordinate rollback bug and invalid Break precision denominator. Full evidence and revised acceptance in `research/core_retune/REFIT_FINDINGS.md`; ordinary Tech→Dense3012ms remains unresolved.
+- Retain the LN Wildcard low-fit rest exemption. Verify the static default against all411 inputs/three consumers, and classic full outputs against411 originals;66 product tests, types,782 legacy parity checks and six research tests pass. No new release/tag and no live plugin modification.
 - Correct boolean sample-F1 counting in the research metric helper; no selection in this continuation used that optional metric.
 
 ### 1.2.4 — 2026-11-11: static-hand cuts and stable tempo readout

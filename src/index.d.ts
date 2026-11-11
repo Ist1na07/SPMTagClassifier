@@ -69,6 +69,7 @@ export interface Result {
   debug: { windows: FeatureWindow[] | Record<string, number>[]; norm?: unknown; ctx?: unknown };
   modelInfo?: { version: string; keyCount: number; variant: string; segmentEvidence: string; temporalResolutionMs: number;
     taxonomy?: string; classes?: string[]; featureKeys?: string[]; featureCount?: number;
+    localExpert?: 'original56-joint-fixed-ridge01' | 'archived';
     physicalSupport?: 'none' | 'jack' | 'ln' | 'both'; defaultReplacementAccepted?: boolean;
     effortPower?: number; concentrationPower?: number; extraGate?: string;
     localScoreKind?: string; confidenceMeaning?: string; coverage?: string; cadencePolicy?: string;

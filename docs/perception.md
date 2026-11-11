@@ -2,7 +2,7 @@
 
 本轮以 v1.1.0 为研究基线，全部成果归入 v1.2 系列。稳定 7K 使用多分支支持与连续时间负担积分决定整谱 tag。v1.2.4 增加逐手动作的假切换排除及同类内部稳定变速显示；其余局部专家、4K／6K 和 `modern` 路径不变。联合学习权重没有通过来源留出，未进入默认路径。
 
-仓库中的未发布修正还保留低原型贴合的 LN Wildcard，不再仅凭其低支持把它改成 Break；物理休息和稀疏判断保持。没有采用新的 W/b 或分数倍率。已发布的 v1.2.4 tag／资产不变；核心联调和实际重放见 `research/core_retune/CONCLUSIONS.md`。
+仓库未发布更新已采用原56维专家的联合重调 W/b，倍率仍为1.4；保持训练约定中的旧参考预测器作为积分聚合先验。新分段与分支支持由新 W/b 计算，并保留 LN Wildcard 的低贴合休息豁免。`aggregation:'classic'` 保留替换前局部与原聚合路径；已发布 v1.2.4 tag／资产不变。开发成绩、来源留出风险和已接受的退步见 [参数采用报告](../research/core_retune/REFIT_FINDINGS.md)。
 
 ## 已有 SPM Rating 结果时，直接复用
 
@@ -18,7 +18,7 @@ console.log(result.overall.tags, result.overall.percentages);
 
 直接提供的 `ratingEvidence` 包含 `schemaVersion:1`、`keyCount:7`、相同 `speedRate`、`clock:'post-rate-ms'`、`modelIdentity`、`query` 和 `demand`。错误模型、裁剪曲线或倍率会明确报错。所有时间都是倍率换算后的毫秒，保留小数。
 
-不提供曲线时，使用单独联调的动作物量配置；`overall.perception.difficultyAvailable` 为 `false`。不会把缺失难度补成零。使用原整谱聚合策略（消费当前分段；完整原行为用 `algorithm:'legacy'`）：
+不提供曲线时，使用单独联调的动作物量配置；`overall.perception.difficultyAvailable` 为 `false`。不会把缺失难度补成零。使用替换前局部专家及原整谱聚合策略（完整 v1.1.0 行为用 `algorithm:'legacy'`）：
 
 ```js
 analyzeMap(osuText, {aggregation: 'classic'});
@@ -57,9 +57,9 @@ A[t] = (1000/windowMs × (窗口头数 + 并集尾数) + holdCredit × 持键列
 
 每个动作使用以其时间为中心的方窗。每列 LN 先取区间并集；重叠持键不重复计价。`D` 沿头部行时钟右连续，最后样本延拓到最后物理事件；延拓毫秒数单列在元数据中。积分在所有分支、曲线、动作窗和持键端点的并集上精确求和，而不是逐头平均。
 
-`support` 来自未平滑的原专家分支：非负分数除以 `max(1, 最大分数)`，端点上限 0.999；Break 为零。它表示原型贴合，保留一阶意义，不平方、不强迫各类和为一。困难但短的段落可以比时间占比更突出；Break 的物理负担仍保留在分母中。
+`support` 来自未平滑的当前专家分支：非负分数除以 `max(1, 最大分数)`，端点上限 0.999；Break 为零。它表示原型贴合，保留一阶意义，不平方、不强迫各类和为一。困难但短的段落可以比时间占比更突出；Break 的物理负担仍保留在分母中。
 
-纯 Rice 且两种拇指归属下都无手内指组变化时，排除不可能的 Dense/Fast CS 支持；分母仍用排除前原最大值，不把删除的支持分给其它类型。原整谱判断继续作为固定先验。RC Wildcard 没有对应的整谱细分支，局部百分数使用其原分类支持并明确标注来源，不假报为 0%。
+纯 Rice 且两种拇指归属下都无手内指组变化时，排除不可能的 Dense/Fast CS 支持；分母仍用排除前原最大值，不把删除的支持分给其它类型。旧参考预测器的整谱判断继续作为固定先验，不随新局部参数一起移动。RC Wildcard 没有对应的整谱细分支，局部百分数使用其分类支持并明确标注来源，不假报为 0%。
 
 最终动作版参数为 `alpha=0,beta=2,windowMs=1000,holdCredit=1`；Detailed 恢复 R1 的 `alpha=2,beta=1,windowMs=1000,holdCredit=1`；Compact 保留 `alpha=4,beta=1.5,windowMs=1000,holdCredit=1`。指数是在压缩后的量上联调得到；仍有活跃边界，不能视为已找出唯一最优参数。
 

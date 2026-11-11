@@ -9,6 +9,7 @@ const familyMass: number | undefined = result.coarse?.familyMass.ln;
 const weight: number | undefined = result.segments[0]?.aggregationWeight;
 const confidenceExponent: number | undefined = result.modelInfo?.aggregationPolicy?.confidencePower;
 const restRowRate: number | undefined = result.modelInfo?.overlayPolicy?.regularityRestRowRateMax;
+const localExpert: 'original56-joint-fixed-ridge01' | 'archived' | undefined = result.modelInfo?.localExpert;
 const geometry: GeometryEvidence | undefined = result.descriptors?.[0]?.geometry;
 extractIntermediate(text, { algorithm: 'stable' }).segments;
 buildCachedMap(text).rawSegs;

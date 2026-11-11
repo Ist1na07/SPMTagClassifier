@@ -29,7 +29,7 @@ function describe(w) {
 function stable7(osuText,opts,e) {
   const perceptual=opts.aggregation!=='classic';
   const name=opts.ratingEvidence?(opts.ratingEvidence.modelIdentity===perception.COMPACT_RATING?'compact':'detail'):'actions',p=perceptionProfiles[name];
-  const r=overlay7.analyzeMap(osuText,{...opts,_rawEvidence:true,_segmentReadout:(raw,resolveBpm)=>refineSegments(e.ctx,raw,p.classes,{resolveBpm,speedRate:opts.speedRate??1,supportPower:p.supportPower??1})}),geometryContext=geometry.prepare(e.ctx);
+  const r=overlay7.analyzeMap(osuText,{...opts,_rawEvidence:true,_archivedExpert:!perceptual,_segmentReadout:(raw,resolveBpm)=>refineSegments(e.ctx,raw,p.classes,{resolveBpm,speedRate:opts.speedRate??1,supportPower:p.supportPower??1})}),geometryContext=geometry.prepare(e.ctx);
   const classicPrior=r.debug.classicPrior,branchSupport=r.debug.readoutSupport,cutExclusions=r.debug.cutExclusions;
   delete r.debug.classicPrior;delete r.debug.readoutSupport;delete r.debug.cutExclusions;
   const raw=r.debug.rawSegments;delete r.debug.rawSegments;
@@ -53,7 +53,8 @@ function stable7(osuText,opts,e) {
   r.overall.composition=total>0?Object.fromEntries(Object.entries(r.overall.weights).map(([k,v])=>[k,v/total])):{break:1};
   r.overall.scoreKind='legacy decision scores; distribution is normalized affinity, not calibrated confidence';
   r.modelInfo={version,keyCount:7,variant:'legacy-stable',researchVariant:'anchored-ln-release',
-    segmentEvidence:'archived affinities; LN wildcard prototype ambiguity is not inactivity; regular-rest gate and two-thumb static-hand cut exclusion; stable cadence plateaus',temporalResolutionMs:250,
+    segmentEvidence:(perceptual?'joint-retuned56D affinities; frozen reference predictor for integral prior; ':'archived affinities; ')+'LN wildcard prototype ambiguity is not inactivity; regular-rest gate and two-thumb static-hand cut exclusion; stable cadence plateaus',temporalResolutionMs:250,
+    localExpert:perceptual?'original56-joint-fixed-ridge01':'archived',
     segmentReadout:{stepMs:500,cutContextMs:4000,minCadencePlateauMs:1800,cutExcludedFrames:cutExclusions},
     overlayPolicy:{regularityRestRelativeNps:overlayProfile.gate.ratio,regularityRestRowRateMax:overlayProfile.gate.rowRateMax,
       rowRateUnit:'rows per converted second',aggregation:'unchanged legacy policy'}};
@@ -76,8 +77,8 @@ function analyzeMap(osuText,opts={}) {
   if(opts.algorithm && !['modern','stable'].includes(opts.algorithm))throw new Error('UnknownAlgorithm: expected modern, stable or legacy');
   const e=evidenceMap(osuText,opts),{map}=e;
   if(map.keys!==7&&(opts.aggregation==='perceptual'||opts.ratingEvidence))throw Error('PerceptionUnsupportedKeys: fitted profiles currently require native 7K');
-  // Keep the mature LOCAL expert. The modern local adaptation remains opt-in;
-  // stable 7K now applies the independently selected perceptual whole readout.
+  // Stable 7K uses the retuned original56D expert with the existing integral
+  // profiles. classic retains its previous local expert and aggregation path.
   if(map.keys===7){
     const r=opts.algorithm==='modern'?lnResult(osuText,native7,opts,e):stable7(osuText,opts,e);
     return correctCadenceDisplay(r,e.ctx,opts.speedRate??1);

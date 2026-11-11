@@ -45,11 +45,14 @@ test('Jack cadence keeps its repetition/chord clock when single rows interleave'
 test('7K display fixes the 300-to-200 alias and excludes CS from a fixed-grip fixture', () => {
   const text = chart(50), old = api.legacy.analyzeMap(text);
   assert.equal(old.segments[0].equivBpm, 200);
-  for (const algorithm of ['stable', 'modern']) {
-    const r = api.analyzeMap(text, { algorithm });
+  for (const opts of [{algorithm:'stable',aggregation:'classic'}, {algorithm:'modern'}]) {
+    const r = api.analyzeMap(text, opts);
     assert.equal(r.segments[0].equivBpm, 300);
     assert.equal(r.segments[0].evidence.cadence.legacyEquivBpm, 200);
   }
+  const retuned=api.analyzeMap(text);
+  assert.equal(retuned.segments[0].equivBpm,300);
+  assert(retuned.segments[0].evidence.cadence);
   const r = api.analyzeMap(text, {aggregation:'classic'});
   assert(r.segments.every(s=>s.tag==='wildcard'&&s.secondary==='vibro'));
   assert(r.segments.every(s=>s.scores['dense chordstream']===0&&s.scores['fast chordstream']===0));

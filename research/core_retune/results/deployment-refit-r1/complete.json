@@ -1,0 +1,100 @@
+{
+  "jointConfigs": 12,
+  "newFamilyFits": 24,
+  "starts": 48,
+  "reusedLocalFits": 6,
+  "choicesBeforeRefit": {
+    "local/fixed": {
+      "id": 0,
+      "config": {
+        "wholeWeight": 0.0,
+        "learnGain": false,
+        "ridge": 0.1
+      },
+      "innerMetrics": {
+        "local": {
+          "accuracy": 0.663758887076059,
+          "realAccuracy": 0.22385833333333335,
+          "techToDenseMs": 15060.0,
+          "techCsConfusionMs": 18385.0,
+          "objective": 0.5537837486403776
+        },
+        "consumers": {
+          "macroF1": 0.5194933032899927,
+          "macroPrecision": 0.5912904959832761,
+          "macroRecall": 0.511490542011445
+        },
+        "score": 0.5446128298920271
+      }
+    },
+    "local/free": {
+      "id": 3,
+      "config": {
+        "wholeWeight": 0.0,
+        "learnGain": true,
+        "ridge": 0.1
+      },
+      "innerMetrics": {
+        "local": {
+          "accuracy": 0.6418267111225234,
+          "realAccuracy": 0.19454333333333335,
+          "techToDenseMs": 15060.0,
+          "techCsConfusionMs": 30235.0,
+          "objective": 0.5300058666752259
+        },
+        "consumers": {
+          "macroF1": 0.5103772815717421,
+          "macroPrecision": 0.5915682191162017,
+          "macroRecall": 0.4913400234385079
+        },
+        "score": 0.5279607840498871
+      }
+    },
+    "joint/fixed": {
+      "id": 6,
+      "config": {
+        "wholeWeight": 1.0,
+        "learnGain": false,
+        "ridge": 0.1
+      },
+      "innerMetrics": {
+        "local": {
+          "accuracy": 0.6359965199045063,
+          "realAccuracy": 0.19885833333333333,
+          "techToDenseMs": 15060.0,
+          "techCsConfusionMs": 86686.0,
+          "objective": 0.526711973261713
+        },
+        "consumers": {
+          "macroF1": 0.5210668200122075,
+          "macroPrecision": 0.5896834892548839,
+          "macroRecall": 0.5121162401499924
+        },
+        "score": 0.5313476578095179
+      }
+    },
+    "joint/free": {
+      "id": 9,
+      "config": {
+        "wholeWeight": 1.0,
+        "learnGain": true,
+        "ridge": 0.1
+      },
+      "innerMetrics": {
+        "local": {
+          "accuracy": 0.6349754380645811,
+          "realAccuracy": 0.20431499999999997,
+          "techToDenseMs": 15060.0,
+          "techCsConfusionMs": 86686.0,
+          "objective": 0.5273103285484358
+        },
+        "consumers": {
+          "macroF1": 0.5250143939093628,
+          "macroPrecision": 0.5911119517409609,
+          "macroRecall": 0.5222902567430988
+        },
+        "score": 0.5340840388120661
+      }
+    }
+  }
+}

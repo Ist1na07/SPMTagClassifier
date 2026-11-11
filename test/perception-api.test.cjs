@@ -10,8 +10,8 @@ test('stable 7K integrates matching Detailed and Compact curves on native fracti
   assert.deepEqual(curve,before);assert(!Object.hasOwn(r.debug,'rawSegments'));
  }
 });
-test('perceptual default preserves visible local decisions; branches are independent and weighted',()=>{
- const text=chart(),a=api.analyzeMap(text),b=api.analyzeMap(text,{aggregation:'classic'});
+test('rating consumer preserves retuned local decisions; branches are independent and weighted',()=>{
+ const text=chart(),a=api.analyzeMap(text),b=api.analyzeMap(text,{ratingEvidence:rating(text,1,EXPECTED_RATING)});
  assert.equal(a.modelInfo.perception.profile,'actions');assert(!a.overall.perception.difficultyAvailable);
  assert.deepEqual(a.segments.map(s=>[s.tag,s.confidence,s.start,s.end,s.equivBpm]),b.segments.map(s=>[s.tag,s.confidence,s.start,s.end,s.equivBpm]));
  assert(a.segments.every(s=>Object.values(s.branches).every(x=>x>=0&&x<=1)));

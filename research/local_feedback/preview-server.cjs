@@ -11,6 +11,8 @@ const fixtures = {
   H01: 'artifacts/frontier-annotation-r7/H01.osu',
   H02: 'artifacts/frontier-annotation-r7/H02.osu',
   F02: 'artifacts/frontier-annotation-r5/F02.osu',
+  G01: 'artifacts/frontier-annotation-r6/G01.osu',
+  E02: 'artifacts/frontier-annotation-r4/E02.osu',
   real0088: 'dataset/spm_dataset-1.1.1/beatmaps/bm_0088.osu',
   hybrid: 'dataset/spm_dataset-1.1.1/beatmaps/bm_0157.osu',
   B02: 'artifacts/frontier-annotation-r1/B02.osu',

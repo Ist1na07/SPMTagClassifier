@@ -1,0 +1,85 @@
+{
+  "historicalRoot": "E:/Files/Developing/SPM/TagClassifier_Eta/tagclassifier",
+  "mode": "read only; no historical training/import/build performed",
+  "training": {
+    "epochs": 500,
+    "learningRate": 0.08,
+    "l2": 0.0005,
+    "hyperparameterSearchInTrainer": false,
+    "manualDuplication": [
+      3,
+      5
+    ],
+    "manualMajorityThreshold": 0.6,
+    "labels": "Single-tag whole-chart labels copied to every non-empty non-Break natural segment, plus six charts primary labels; standardization and class weights on those same training samples.",
+    "validation": "Trainer prints in-sample accuracy only; tuneSeg uses all six annotated charts for both knob selection and its reported objective."
+  },
+  "defects": {
+    "coordinateRollback": {
+      "parameterAfterTrials": 0,
+      "recordedBestScore": 1,
+      "parameterThatEarnedBestScore": 1,
+      "source": "scripts/tune.ts"
+    },
+    "breakPrecision": {
+      "toy": {
+        "correctBreakMs": 1000,
+        "falseBreakOnScoredMs": 1000,
+        "unknownMs": 0
+      },
+      "reported": 1,
+      "correct": 0.5,
+      "source": "scripts/evalSeg.ts",
+      "effect": "Scored-time false Breaks omitted from precision denominator, so reported 100% is not a protection guarantee."
+    }
+  },
+  "comparisonToArchivedModel": {
+    "rc": {
+      "keysMatch": true,
+      "classesMatch": true,
+      "mean": {
+        "count": 56,
+        "maxAbsoluteDifference": 0.04014650823152266
+      },
+      "std": {
+        "count": 56,
+        "maxAbsoluteDifference": 0.06467267021311862
+      },
+      "W": {
+        "count": 392,
+        "maxAbsoluteDifference": 0.22994695599548204
+      },
+      "b": {
+        "count": 7,
+        "maxAbsoluteDifference": 0.042460371445338374
+      }
+    },
+    "ln": {
+      "keysMatch": true,
+      "classesMatch": true,
+      "mean": {
+        "count": 56,
+        "maxAbsoluteDifference": 0.39930908400702236
+      },
+      "std": {
+        "count": 56,
+        "maxAbsoluteDifference": 0.1969568065609124
+      },
+      "W": {
+        "count": 336,
+        "maxAbsoluteDifference": 0.19919426342822694
+      },
+      "b": {
+        "count": 6,
+        "maxAbsoluteDifference": 0.08809130876760848
+      }
+    }
+  },
+  "identity": "Same 56 keys and family classes, different scaler/weights; this is not a recovered exact training batch.",
+  "readmeEvidence": {
+    "source": "README.md",
+    "manualTrainAndTune": true,
+    "reportedCacheMismatch": true,
+    "oldOverallMetric": "Composite-aware three-slot partial credit, not the current literal multi-label metric."
+  }
+}
