@@ -115,6 +115,9 @@ def predict(p,classes):
 
 
 def metrics(y,p,w):
+    # NumPy boolean addition is logical OR, not an integer count. Sample Dice
+    # must count truth+prediction separately, including two matching positives.
+    y=np.asarray(y,dtype=float);p=np.asarray(p,dtype=float)
     tp=np.sum(w[:,None]*y*p,axis=0);fp=np.sum(w[:,None]*(1-y)*p,axis=0);fn=np.sum(w[:,None]*y*(1-p),axis=0)
     div=lambda a,b:np.divide(a,b,out=np.zeros_like(a,dtype=float),where=b>0)
     precision=div(tp,tp+fp);recall=div(tp,tp+fn);f1=div(2*tp,2*tp+fp+fn)

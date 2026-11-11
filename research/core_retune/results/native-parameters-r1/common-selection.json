@@ -1,0 +1,2167 @@
+{
+  "usesOuterTruth": false,
+  "choices": {
+    "fixed/local": {
+      "id": 94,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5783986506628243,
+        "local": {
+          "objective": 0.6006257667038609,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    "fixed/joint": {
+      "id": 94,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5783986506628243,
+        "local": {
+          "objective": 0.6006257667038609,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    "free/local": {
+      "id": 38,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5759942616413732,
+        "local": {
+          "objective": 0.6122603503144669,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    "free/joint": {
+      "id": 78,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5820716562793133,
+        "local": {
+          "objective": 0.602825377847685,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    }
+  },
+  "grid": [
+    {
+      "id": 0,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5199516078838583,
+        "local": {
+          "objective": 0.581933968532755,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 1,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5094222137715093,
+        "local": {
+          "objective": 0.5855183165928903,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 2,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5142555723435034,
+        "local": {
+          "objective": 0.594995259021732,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 3,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5142555723435034,
+        "local": {
+          "objective": 0.594995259021732,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 4,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5168747053356489,
+        "local": {
+          "objective": 0.5757801634363363,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 5,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5063453112233,
+        "local": {
+          "objective": 0.5793645114964715,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 6,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.511178669795294,
+        "local": {
+          "objective": 0.5888414539253133,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 7,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.511178669795294,
+        "local": {
+          "objective": 0.5888414539253133,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 8,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5130831614667337,
+        "local": {
+          "objective": 0.5681970756985059,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 9,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5025537673543847,
+        "local": {
+          "objective": 0.571781423758641,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 10,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5073871259263788,
+        "local": {
+          "objective": 0.5812583661874827,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 11,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5073871259263788,
+        "local": {
+          "objective": 0.5812583661874827,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 12,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.515687386563864,
+        "local": {
+          "objective": 0.5734055258927667,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 13,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5051579924515152,
+        "local": {
+          "objective": 0.5769898739529017,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 14,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5099913510235092,
+        "local": {
+          "objective": 0.5864668163817435,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 15,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5099913510235092,
+        "local": {
+          "objective": 0.5864668163817435,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 16,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5084098481187029,
+        "local": {
+          "objective": 0.5588504490024443,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 17,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.4978804540063541,
+        "local": {
+          "objective": 0.5624347970625797,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 18,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.502713812578348,
+        "local": {
+          "objective": 0.5719117394914214,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 19,
+      "config": {
+        "gain": 0.35,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.502713812578348,
+        "local": {
+          "objective": 0.5719117394914214,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 20,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5635348977818461,
+        "local": {
+          "objective": 0.5864788686755501,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 21,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5580653383584306,
+        "local": {
+          "objective": 0.575064401789462,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 22,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5639269326233591,
+        "local": {
+          "objective": 0.5881256922784389,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 23,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5639269326233591,
+        "local": {
+          "objective": 0.5881256922784389,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 24,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5669696811534924,
+        "local": {
+          "objective": 0.5933484354188431,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 25,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5615001217300771,
+        "local": {
+          "objective": 0.581933968532755,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 26,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5673617159950056,
+        "local": {
+          "objective": 0.594995259021732,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 27,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5673617159950056,
+        "local": {
+          "objective": 0.594995259021732,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 28,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5669144728201592,
+        "local": {
+          "objective": 0.5932380187521765,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 29,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5614449133967438,
+        "local": {
+          "objective": 0.5818235518660885,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 30,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5673065076616725,
+        "local": {
+          "objective": 0.5948848423550654,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 31,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5673065076616725,
+        "local": {
+          "objective": 0.5948848423550654,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 32,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5601012347363677,
+        "local": {
+          "objective": 0.5796115425845939,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 33,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5546316753129525,
+        "local": {
+          "objective": 0.5681970756985059,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 34,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5604932695778811,
+        "local": {
+          "objective": 0.5812583661874827,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 35,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5604932695778811,
+        "local": {
+          "objective": 0.5812583661874827,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 36,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5756022267998598,
+        "local": {
+          "objective": 0.610613526711578,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 37,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5701326673764447,
+        "local": {
+          "objective": 0.59919905982549,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 38,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5759942616413732,
+        "local": {
+          "objective": 0.6122603503144669,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 39,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5759942616413732,
+        "local": {
+          "objective": 0.6122603503144669,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 40,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5749468634275624,
+        "local": {
+          "objective": 0.5875281824385458,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 41,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5755454942819312,
+        "local": {
+          "objective": 0.5859546919500634,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 42,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5751880496452736,
+        "local": {
+          "objective": 0.5840171674928172,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 43,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5751794977518202,
+        "local": {
+          "objective": 0.5876015155529525,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 44,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5752089517903056,
+        "local": {
+          "objective": 0.5880523591640324,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 45,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5758075826446746,
+        "local": {
+          "objective": 0.5864788686755501,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 46,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.575450138008017,
+        "local": {
+          "objective": 0.5845413442183037,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 47,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5754415861145636,
+        "local": {
+          "objective": 0.5881256922784389,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 48,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5786437351619522,
+        "local": {
+          "objective": 0.5949219259073254,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 49,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5792423660163211,
+        "local": {
+          "objective": 0.5933484354188431,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 50,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5788849213796635,
+        "local": {
+          "objective": 0.5914109109615968,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 51,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5788763694862101,
+        "local": {
+          "objective": 0.594995259021732,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 52,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5786437351619522,
+        "local": {
+          "objective": 0.5949219259073254,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 53,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5792423660163211,
+        "local": {
+          "objective": 0.5933484354188431,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 54,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5788849213796635,
+        "local": {
+          "objective": 0.5914109109615968,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 55,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5788763694862101,
+        "local": {
+          "objective": 0.594995259021732,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 56,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5755668326137429,
+        "local": {
+          "objective": 0.5887681208109067,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 57,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5761654634681117,
+        "local": {
+          "objective": 0.5871946303224244,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 58,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.575808018831454,
+        "local": {
+          "objective": 0.585257105865178,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 59,
+      "config": {
+        "gain": 0.7,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5757994669380008,
+        "local": {
+          "objective": 0.5888414539253133,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 60,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.572876516105257,
+        "local": {
+          "objective": 0.5874562741088846,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 61,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.569716147863177,
+        "local": {
+          "objective": 0.5811355376247248,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 62,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.575178462138013,
+        "local": {
+          "objective": 0.5890389895650842,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 63,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5686914204679777,
+        "local": {
+          "objective": 0.5776245226789961,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 64,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5760728385121674,
+        "local": {
+          "objective": 0.5938489189227055,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 65,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5729124702700875,
+        "local": {
+          "objective": 0.5875281824385458,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 66,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5783747845449235,
+        "local": {
+          "objective": 0.5954316343789051,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 67,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5718877428748882,
+        "local": {
+          "objective": 0.5840171674928172,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 68,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5763349268749107,
+        "local": {
+          "objective": 0.5943730956481922,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 69,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5731745586328308,
+        "local": {
+          "objective": 0.5880523591640324,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 70,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5786368729076669,
+        "local": {
+          "objective": 0.5959558111043918,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 71,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5721498312376315,
+        "local": {
+          "objective": 0.5845413442183037,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 72,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5788709945832441,
+        "local": {
+          "objective": 0.5994452310648589,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 73,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5757106263411641,
+        "local": {
+          "objective": 0.5931244945806989,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 74,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5811729406160002,
+        "local": {
+          "objective": 0.6010279465210584,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 75,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5746858989459648,
+        "local": {
+          "objective": 0.5896134796349705,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 76,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5797697102465572,
+        "local": {
+          "objective": 0.6012426623914853,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 77,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5766093420044773,
+        "local": {
+          "objective": 0.5949219259073254,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 78,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5820716562793133,
+        "local": {
+          "objective": 0.602825377847685,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 79,
+      "config": {
+        "gain": 1.0,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5755846146092779,
+        "local": {
+          "objective": 0.5914109109615968,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 80,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5673723166987482,
+        "local": {
+          "objective": 0.5787628734908553,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 81,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5673723166987482,
+        "local": {
+          "objective": 0.5787628734908553,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 82,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5690453070286623,
+        "local": {
+          "objective": 0.5819190794355372,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 83,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5680963458159329,
+        "local": {
+          "objective": 0.5803455889470549,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 84,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5717190170077627,
+        "local": {
+          "objective": 0.5874562741088846,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 85,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5717190170077627,
+        "local": {
+          "objective": 0.5874562741088846,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 86,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5733920073376769,
+        "local": {
+          "objective": 0.5906124800535665,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 87,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5724430461249476,
+        "local": {
+          "objective": 0.5890389895650842,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 88,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5749153394146732,
+        "local": {
+          "objective": 0.5938489189227055,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 89,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5749153394146732,
+        "local": {
+          "objective": 0.5938489189227055,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 90,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5765883297445874,
+        "local": {
+          "objective": 0.5970051248673875,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 91,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.575639368531858,
+        "local": {
+          "objective": 0.5954316343789051,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 92,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.57672566033291,
+        "local": {
+          "objective": 0.5974695607591789,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 93,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.57672566033291,
+        "local": {
+          "objective": 0.5974695607591789,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 94,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5783986506628243,
+        "local": {
+          "objective": 0.6006257667038609,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 95,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5774496894500948,
+        "local": {
+          "objective": 0.5990522762153786,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 96,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5751774277774166,
+        "local": {
+          "objective": 0.5943730956481922,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 97,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5751774277774166,
+        "local": {
+          "objective": 0.5943730956481922,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 98,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5768504181073307,
+        "local": {
+          "objective": 0.5975293015928741,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 99,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5759014568946014,
+        "local": {
+          "objective": 0.5959558111043918,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 100,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5607695804085943,
+        "local": {
+          "objective": 0.5699089887628938,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 101,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5607695804085943,
+        "local": {
+          "objective": 0.5699089887628938,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 102,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5656029389805882,
+        "local": {
+          "objective": 0.5793859311917355,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 103,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5634552827305882,
+        "local": {
+          "objective": 0.5750906186917356,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 104,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5660723671890017,
+        "local": {
+          "objective": 0.5805145623237087,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 105,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5660723671890017,
+        "local": {
+          "objective": 0.5805145623237087,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 106,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5709057257609956,
+        "local": {
+          "objective": 0.5899915047525505,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 107,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5687580695109956,
+        "local": {
+          "objective": 0.5856961922525504,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 108,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5695432230815896,
+        "local": {
+          "objective": 0.5874562741088846,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 109,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5695432230815896,
+        "local": {
+          "objective": 0.5874562741088846,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 110,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5743765816535835,
+        "local": {
+          "objective": 0.5969332165377262,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 111,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5722289254035835,
+        "local": {
+          "objective": 0.5926379040377263,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 112,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5727395454885,
+        "local": {
+          "objective": 0.5938489189227055,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 113,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5727395454885,
+        "local": {
+          "objective": 0.5938489189227055,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 114,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5775729040604941,
+        "local": {
+          "objective": 0.6033258613515472,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 115,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5754252478104941,
+        "local": {
+          "objective": 0.5990305488515472,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 116,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5727395454885,
+        "local": {
+          "objective": 0.5938489189227055,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 117,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5727395454885,
+        "local": {
+          "objective": 0.5938489189227055,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 118,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5775729040604941,
+        "local": {
+          "objective": 0.6033258613515472,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 119,
+      "config": {
+        "gain": 2.0,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5754252478104941,
+        "local": {
+          "objective": 0.5990305488515472,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 120,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5553097488652775,
+        "local": {
+          "objective": 0.5565814473502656,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 121,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5553097488652775,
+        "local": {
+          "objective": 0.5565814473502656,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 122,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5601431074372716,
+        "local": {
+          "objective": 0.5660583897791075,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 123,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.13,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5601431074372716,
+        "local": {
+          "objective": 0.5660583897791075,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 124,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5619735195715916,
+        "local": {
+          "objective": 0.5699089887628938,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 125,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5619735195715916,
+        "local": {
+          "objective": 0.5699089887628938,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 126,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5668068781435857,
+        "local": {
+          "objective": 0.5793859311917355,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 127,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.195,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5668068781435857,
+        "local": {
+          "objective": 0.5793859311917355,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 128,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5664004619355724,
+        "local": {
+          "objective": 0.5787628734908553,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 129,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5664004619355724,
+        "local": {
+          "objective": 0.5787628734908553,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 130,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5712338205075664,
+        "local": {
+          "objective": 0.5882398159196972,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 131,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.26,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5712338205075664,
+        "local": {
+          "objective": 0.5882398159196972,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 132,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5689368413263503,
+        "local": {
+          "objective": 0.5838356322724111,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 133,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5689368413263503,
+        "local": {
+          "objective": 0.5838356322724111,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 134,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5737701998983442,
+        "local": {
+          "objective": 0.5933125747012529,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 135,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.5737701998983442,
+        "local": {
+          "objective": 0.5933125747012529,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 136,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5707471622445869,
+        "local": {
+          "objective": 0.5874562741088846,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 137,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.35
+      },
+      "metrics": {
+        "jointScore": 0.5707471622445869,
+        "local": {
+          "objective": 0.5874562741088846,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 138,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.575580520816581,
+        "local": {
+          "objective": 0.5969332165377262,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    {
+      "id": 139,
+      "config": {
+        "gain": 2.8,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.65
+      },
+      "metrics": {
+        "jointScore": 0.575580520816581,
+        "local": {
+          "objective": 0.5969332165377262,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    }
+  ]
+}

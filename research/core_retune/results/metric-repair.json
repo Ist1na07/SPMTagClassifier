@@ -1,0 +1,6 @@
+{
+  "reason": "Truth and predictions passed as NumPy bool made y+p a logical union, invalidating optional sampleF1. Shared metrics now converts bool/int inputs to numeric counts. No macro/micro P/R/F1 or exact-match values, selected config, objective, fits or labels change. Optional sampleF1 removed from intermediate tables; canonical full349 and product reports regenerate it correctly.",
+  "removedFields": 6747,
+  "files": 114,
+  "selectionUsesSampleF1": false
+}

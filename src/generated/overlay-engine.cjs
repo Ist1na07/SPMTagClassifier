@@ -1901,7 +1901,7 @@ var TagClassifier = (() => {
       const seg = out[i];
       if (seg.family === "break") continue;
       const dur = seg.end - seg.start;
-      const easyAmbiguous = seg.confidence < 0.5 && diffs[i] <= Math.max(p15, 1) && (medians[i].nps ?? 0) < mapNps;
+      const easyAmbiguous = seg.tag !== "ln wildcard" && seg.confidence < 0.5 && diffs[i] <= Math.max(p15, 1) && (medians[i].nps ?? 0) < mapNps;
       const shortSparse = dur < 2e4 && medians[i].nps > 0 && medians[i].nps < medNps * 0.4 && medians[i].nps < 4;
       if (easyAmbiguous || shortSparse) {
         seg.tag = "break";

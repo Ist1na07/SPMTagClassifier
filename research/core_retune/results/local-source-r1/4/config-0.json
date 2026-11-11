@@ -1,0 +1,531 @@
+{
+  "id": 0,
+  "config": {
+    "input": "parent",
+    "mode": "bias",
+    "ridge": 0.1
+  },
+  "inner": [
+    {
+      "manual": {
+        "accuracy": 0.6544478132737963,
+        "techToDenseMs": 3012.0,
+        "techCsConfusionMs": 3857.0,
+        "details": [
+          {
+            "uid": "manual/AA",
+            "accuracy": 0.6690082644628099,
+            "techToDenseMs": 525.0,
+            "techCsConfusionMs": 750.0,
+            "perClass": {
+              "ln wildcard": {
+                "tp": 4087.5,
+                "fp": 1162.5,
+                "fn": 10012.5
+              },
+              "break": {
+                "tp": 26512.5,
+                "fp": 21937.5,
+                "fn": 6450.0
+              },
+              "fast chordstream": {
+                "tp": 2700.0,
+                "fp": 2887.5,
+                "fn": 6000.0
+              },
+              "coordination": {
+                "tp": 16725.0,
+                "fp": 9600.0,
+                "fn": 75.0
+              },
+              "inverse": {
+                "tp": 4200.0,
+                "fp": 787.5,
+                "fn": 7200.0
+              },
+              "dense chordstream": {
+                "tp": 27525.0,
+                "fp": 3975.0,
+                "fn": 2175.0
+              },
+              "chordjack": {
+                "tp": 0.0,
+                "fp": 9900.0,
+                "fn": 6000.0
+              },
+              "tech": {
+                "tp": 21675.0,
+                "fp": 9375.0,
+                "fn": 525.0
+              },
+              "density": {
+                "tp": 18000.0,
+                "fp": 412.5,
+                "fn": 0.0
+              },
+              "technical": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 16800.0
+              },
+              "wildcard": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 4875.0
+              }
+            }
+          },
+          {
+            "uid": "manual/DS",
+            "accuracy": 0.6398873620847826,
+            "techToDenseMs": 2487.0,
+            "techCsConfusionMs": 3107.0,
+            "perClass": {
+              "release": {
+                "tp": 39289.0,
+                "fp": 0.0,
+                "fn": 20521.0
+              },
+              "coordination": {
+                "tp": 7809.5,
+                "fp": 6266.0,
+                "fn": 13245.5
+              },
+              "break": {
+                "tp": 38778.0,
+                "fp": 156.5,
+                "fn": 43339.0
+              },
+              "density": {
+                "tp": 56124.0,
+                "fp": 35866.5,
+                "fn": 15903.0
+              },
+              "fast chordstream": {
+                "tp": 17473.5,
+                "fp": 16067.0,
+                "fn": 14751.5
+              },
+              "dense chordstream": {
+                "tp": 37780.5,
+                "fp": 21828.0,
+                "fn": 5314.5
+              },
+              "technical": {
+                "tp": 5744.0,
+                "fp": 22213.5,
+                "fn": 2487.0
+              },
+              "chordjack": {
+                "tp": 34666.5,
+                "fp": 12914.5,
+                "fn": 12366.5
+              },
+              "ln wildcard": {
+                "tp": 5713.0,
+                "fp": 6403.5,
+                "fn": 9454.0
+              },
+              "inverse": {
+                "tp": 17490.0,
+                "fp": 20978.5,
+                "fn": 0.0
+              },
+              "minijack": {
+                "tp": 0.0,
+                "fp": 4116.0,
+                "fn": 0.0
+              },
+              "tech": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 8553.0
+              },
+              "wildcard": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 19076.0
+              },
+              "speed": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 7904.0
+              }
+            }
+          }
+        ]
+      },
+      "real": {
+        "accuracy": 0.0,
+        "details": [
+          {
+            "id": "E01",
+            "uid": "spm_dataset-1.1.1/bm_0041/40",
+            "accuracy": 0.0
+          },
+          {
+            "id": "E02",
+            "uid": "spm_dataset-1.1.1/bm_0001/0",
+            "accuracy": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "manual": {
+        "accuracy": 0.7454017060703104,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "details": [
+          {
+            "uid": "manual/AH",
+            "accuracy": 0.7267875,
+            "techToDenseMs": 0.0,
+            "techCsConfusionMs": 0.0,
+            "perClass": {
+              "break": {
+                "tp": 26649.0,
+                "fp": 9299.0,
+                "fn": 11922.0
+              },
+              "inverse": {
+                "tp": 0.0,
+                "fp": 3654.5,
+                "fn": 10983.0
+              },
+              "density": {
+                "tp": 46415.5,
+                "fp": 14629.0,
+                "fn": 24222.5
+              },
+              "ln wildcard": {
+                "tp": 25905.5,
+                "fp": 1492.5,
+                "fn": 20893.0
+              },
+              "technical": {
+                "tp": 75459.0,
+                "fp": 31675.5,
+                "fn": 153.0
+              },
+              "coordination": {
+                "tp": 0.0,
+                "fp": 4820.5,
+                "fn": 7347.0
+              }
+            }
+          },
+          {
+            "uid": "manual/RJ",
+            "accuracy": 0.7640159121406207,
+            "techToDenseMs": 0.0,
+            "techCsConfusionMs": 0.0,
+            "perClass": {
+              "break": {
+                "tp": 83099.5,
+                "fp": 3115.0,
+                "fn": 25362.5
+              },
+              "coordination": {
+                "tp": 65288.5,
+                "fp": 19730.5,
+                "fn": 14096.5
+              },
+              "density": {
+                "tp": 6462.0,
+                "fp": 441.5,
+                "fn": 11404.0
+              },
+              "technical": {
+                "tp": 0.0,
+                "fp": 24988.5,
+                "fn": 0.0
+              },
+              "chordjack": {
+                "tp": 2942.0,
+                "fp": 346.5,
+                "fn": 5365.0
+              },
+              "dense chordstream": {
+                "tp": 2769.0,
+                "fp": 971.0,
+                "fn": 0.0
+              },
+              "fast chordstream": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 4442.0
+              }
+            }
+          }
+        ]
+      },
+      "real": {
+        "accuracy": 0.5,
+        "details": [
+          {
+            "id": "F02",
+            "uid": "spm_dataset-1.1.1/bm_0088/87",
+            "accuracy": 1.0
+          },
+          {
+            "id": "I01",
+            "uid": "spm_dataset-1.1.1/bm_0291/290",
+            "accuracy": 0.0
+          }
+        ]
+      }
+    },
+    {
+      "manual": {
+        "accuracy": 0.6244360355115703,
+        "techToDenseMs": 0.0,
+        "techCsConfusionMs": 0.0,
+        "details": [
+          {
+            "uid": "manual/BE",
+            "accuracy": 0.6244360355115703,
+            "techToDenseMs": 0.0,
+            "techCsConfusionMs": 0.0,
+            "perClass": {
+              "break": {
+                "tp": 55917.5,
+                "fp": 26137.5,
+                "fn": 667.5
+              },
+              "chordjack": {
+                "tp": 3300.0,
+                "fp": 0.0,
+                "fn": 12300.0
+              },
+              "fast chordstream": {
+                "tp": 38435.0,
+                "fp": 55745.0,
+                "fn": 0.0
+              },
+              "wildcard": {
+                "tp": 52515.0,
+                "fp": 2035.0,
+                "fn": 35650.0
+              },
+              "speed": {
+                "tp": 0.0,
+                "fp": 6400.0,
+                "fn": 0.0
+              },
+              "dense chordstream": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 57700.0
+              }
+            }
+          }
+        ]
+      },
+      "real": {
+        "accuracy": 0.5,
+        "details": [
+          {
+            "id": "F01",
+            "uid": "spm_dataset-1.1.1/bm_0362/361",
+            "accuracy": 1.0
+          },
+          {
+            "id": "G02",
+            "uid": "spm_dataset-1.1.1/bm_0376/375",
+            "accuracy": 0.0
+          }
+        ]
+      }
+    }
+  ],
+  "metrics": {
+    "accuracy": 0.6848270148399567,
+    "realAccuracy": 0.3333333333333333,
+    "techToDenseMs": 3012.0,
+    "techCsConfusionMs": 3857.0,
+    "objective": 0.5969535944633009
+  },
+  "receipts": [
+    {
+      "inner": 0,
+      "trainUids": [
+        "manual/AH",
+        "manual/BE",
+        "manual/RJ",
+        "spm_dataset-1.1.1/bm_0088/87",
+        "spm_dataset-1.1.1/bm_0291/290",
+        "spm_dataset-1.1.1/bm_0362/361",
+        "spm_dataset-1.1.1/bm_0376/375"
+      ],
+      "validationUids": [
+        "manual/AA",
+        "manual/DS",
+        "spm_dataset-1.1.1/bm_0001/0",
+        "spm_dataset-1.1.1/bm_0041/40"
+      ],
+      "fits": {
+        "rc": [
+          {
+            "start": 0,
+            "loss": 0.2622799653125329,
+            "maximumGradient": 1.8876114431937152e-08,
+            "iterations": 7,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.005066499928943813
+          },
+          {
+            "start": 1,
+            "loss": 0.26227996531253167,
+            "maximumGradient": 1.4252574833881204e-08,
+            "iterations": 7,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.004723199992440641
+          }
+        ],
+        "ln": [
+          {
+            "start": 0,
+            "loss": 0.40513167905184677,
+            "maximumGradient": 3.1566203703009554e-08,
+            "iterations": 5,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.00995790003798902
+          },
+          {
+            "start": 1,
+            "loss": 0.40513167905184116,
+            "maximumGradient": 2.3392965555965595e-08,
+            "iterations": 5,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.010109400027431548
+          }
+        ]
+      }
+    },
+    {
+      "inner": 1,
+      "trainUids": [
+        "manual/AA",
+        "manual/BE",
+        "manual/DS",
+        "spm_dataset-1.1.1/bm_0001/0",
+        "spm_dataset-1.1.1/bm_0041/40",
+        "spm_dataset-1.1.1/bm_0362/361",
+        "spm_dataset-1.1.1/bm_0376/375"
+      ],
+      "validationUids": [
+        "manual/AH",
+        "manual/RJ",
+        "spm_dataset-1.1.1/bm_0088/87",
+        "spm_dataset-1.1.1/bm_0291/290"
+      ],
+      "fits": {
+        "rc": [
+          {
+            "start": 0,
+            "loss": 0.2972569039982289,
+            "maximumGradient": 3.101387801088262e-08,
+            "iterations": 5,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.009394000051543117
+          },
+          {
+            "start": 1,
+            "loss": 0.29725690399824317,
+            "maximumGradient": 4.231797571391249e-08,
+            "iterations": 5,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.008613599929958582
+          }
+        ],
+        "ln": [
+          {
+            "start": 0,
+            "loss": 0.37936572872179564,
+            "maximumGradient": 2.6106004876185092e-08,
+            "iterations": 6,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.007678199908696115
+          },
+          {
+            "start": 1,
+            "loss": 0.3793657287218001,
+            "maximumGradient": 3.6029148808066486e-08,
+            "iterations": 6,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.007602300029247999
+          }
+        ]
+      }
+    },
+    {
+      "inner": 2,
+      "trainUids": [
+        "manual/AA",
+        "manual/AH",
+        "manual/DS",
+        "manual/RJ",
+        "spm_dataset-1.1.1/bm_0001/0",
+        "spm_dataset-1.1.1/bm_0041/40",
+        "spm_dataset-1.1.1/bm_0088/87",
+        "spm_dataset-1.1.1/bm_0291/290"
+      ],
+      "validationUids": [
+        "manual/BE",
+        "spm_dataset-1.1.1/bm_0362/361",
+        "spm_dataset-1.1.1/bm_0376/375"
+      ],
+      "fits": {
+        "rc": [
+          {
+            "start": 0,
+            "loss": 0.19755399002543406,
+            "maximumGradient": 9.37395124276947e-08,
+            "iterations": 6,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.0068527000257745385
+          },
+          {
+            "start": 1,
+            "loss": 0.19755399002538868,
+            "maximumGradient": 5.5421442516625716e-09,
+            "iterations": 7,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.008755700080655515
+          }
+        ],
+        "ln": [
+          {
+            "start": 0,
+            "loss": 0.7979570327548646,
+            "maximumGradient": 6.47718499842409e-09,
+            "iterations": 7,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.01798700005747378
+          },
+          {
+            "start": 1,
+            "loss": 0.7979570327548645,
+            "maximumGradient": 5.54119556142596e-09,
+            "iterations": 7,
+            "success": true,
+            "message": "CONVERGENCE: NORM OF PROJECTED GRADIENT <= PGTOL",
+            "seconds": 0.01798669993877411
+          }
+        ]
+      }
+    }
+  ]
+}

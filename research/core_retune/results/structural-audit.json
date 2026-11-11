@@ -1,0 +1,90 @@
+{
+  "scope": "Structural diagnosis, not candidate performance. Parent-constant oracle permits any category and ignores learnability; it only bounds one-label-per-parent readout.",
+  "parentConstantOracle": [
+    {
+      "uid": "manual/AA",
+      "bestConstantParentAccuracy": 0.8373966942148761
+    },
+    {
+      "uid": "manual/AH",
+      "bestConstantParentAccuracy": 0.8899729166666667
+    },
+    {
+      "uid": "manual/BE",
+      "bestConstantParentAccuracy": 0.9410358234401314
+    },
+    {
+      "uid": "manual/DS",
+      "bestConstantParentAccuracy": 0.8940217524615015
+    },
+    {
+      "uid": "manual/EE",
+      "bestConstantParentAccuracy": 0.8437224429420744
+    },
+    {
+      "uid": "manual/RJ",
+      "bestConstantParentAccuracy": 0.9480737935038115
+    }
+  ],
+  "techToDense": [
+    {
+      "uid": "manual/AA",
+      "parent": 8269,
+      "start": 123551,
+      "end": 135851,
+      "wrongTechMs": 525,
+      "truthDurationMs": {
+        "tech": 525,
+        "chordjack": 2400,
+        "dense chordstream": 8400,
+        "break": 975
+      }
+    },
+    {
+      "uid": "manual/DS",
+      "parent": 8365,
+      "start": 178515,
+      "end": 188748,
+      "wrongTechMs": 2487,
+      "truthDurationMs": {
+        "chordjack": 285,
+        "tech": 2487,
+        "dense chordstream": 7461
+      }
+    }
+  ],
+  "wildcardFeasibility": [
+    {
+      "id": "I01",
+      "expected": [
+        "ln wildcard"
+      ],
+      "parts": [
+        {
+          "parent": 6430,
+          "durationMs": 7500,
+          "preLate": "ln",
+          "ordinary": "coordination",
+          "allModelMassToWildcard": "ln wildcard",
+          "wildScore": 0.156
+        }
+      ]
+    },
+    {
+      "id": "I02",
+      "expected": [
+        "ln wildcard"
+      ],
+      "parts": [
+        {
+          "parent": 345,
+          "durationMs": 7500,
+          "preLate": "ln",
+          "ordinary": "break",
+          "allModelMassToWildcard": "break",
+          "wildScore": 0.156
+        }
+      ]
+    }
+  ]
+}

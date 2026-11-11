@@ -1,0 +1,65 @@
+{
+  "usesOuterTruth": false,
+  "choices": {
+    "fixed/local": {
+      "id": 94,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5814719977702623,
+        "local": {
+          "objective": 0.6067724609187369,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    "fixed/joint": {
+      "id": 94,
+      "config": {
+        "gain": 1.4,
+        "wildBase": 0.325,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5814719977702623,
+        "local": {
+          "objective": 0.6067724609187369,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    "free/local": {
+      "id": 38,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.5
+      },
+      "metrics": {
+        "jointScore": 0.5933997203134539,
+        "local": {
+          "objective": 0.6459479103712031,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    },
+    "free/joint": {
+      "id": 36,
+      "config": {
+        "gain": 0.5,
+        "wildBase": 0.39,
+        "confidenceFloor": 0.25
+      },
+      "metrics": {
+        "jointScore": 0.5938120744717974,
+        "local": {
+          "objective": 0.6443010867683142,
+          "techCsConfusionMs": 3214.1666666666665
+        }
+      }
+    }
+  }
+}

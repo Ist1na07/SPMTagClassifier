@@ -14,6 +14,10 @@ source=replaceOnce(source,'    return { map, segments, overall, debug: { windows
   '    const result = { map, segments, overall, debug: { windows: cm.windows, norm: void 0, ctx: void 0 } };\n'+
   '    if (rawEvidence) result.debug.rawSegments = rawEvidence;\n    return result;');
 if(segmentReadout){
+  // LN Wildcard's deliberately low prototype affinity is not a probability
+  // of inactivity. Explicit early rests and shortSparse remain unchanged.
+  source=replaceOnce(source,'const easyAmbiguous = seg.confidence < 0.5 &&',
+    'const easyAmbiguous = seg.tag !== "ln wildcard" && seg.confidence < 0.5 &&');
   const before='    const segments = smoothSegments(rawEvidence ? rawEvidence.map(s => ({...s, ...(s.scores ? {scores:{...s.scores}} : {})})) : classifySegments(cm, { scorer: "model" }));';
   source=replaceOnce(source,before,`
     const originalSegments = smoothSegments(rawEvidence ? rawEvidence.map(s=>({...s})) : classifySegments(cm,{scorer:"model"}));

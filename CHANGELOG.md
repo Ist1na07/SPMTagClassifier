@@ -4,6 +4,13 @@
 
 All research and implementation below belongs to one iteration. Patch releases are checkpoints, not separate research generations. The former v1.3.0 was misnumbered; its tag/assets remain historical. Current release: v1.2.4.
 
+### Unreleased — original-core parameter audit and LN Wildcard rest correction
+
+- Do not interpret LN Wildcard's low prototype affinity as inactivity. Exempt it only from the late confidence-dependent Break clause; preserve physical rests, sparse handling and original coefficients. Actual six-chart replay improves from 69.5855% to 70.4051%, all three full349 whole-tag P/R/F1 remain unchanged. This is a retrospective one-chart gain, not a broad new accuracy claim.
+- Complete direct original W/b retuning, local-context controls, matched native parameter/mechanism searches and fixed/free-strength local/joint integral training. Reject fitted candidates that trade local quality for whole-map gains; ordinary Tech→Dense remains unresolved.
+- Preserve full evidence in `research/core_retune/CONCLUSIONS.md`; exact actual411 replay, 64 product tests and legacy parity pass. No new release/tag and no live plugin modification.
+- Correct boolean sample-F1 counting in the research metric helper; no selection in this continuation used that optional metric.
+
 ### 1.2.4 — 2026-11-11: static-hand cuts and stable tempo readout
 
 - Exclude Dense/Fast CS when both 7K thumb assignments certify no within-hand finger-set change in pure Rice. Remove only the impossible supports, never inflate alternatives; Anchor/Vibro remain attributes. H01/H03 now use low-fit Wildcard instead of false CS; H02/H04 retain real cuts.

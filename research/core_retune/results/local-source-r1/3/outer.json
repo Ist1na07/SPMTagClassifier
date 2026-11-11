@@ -1,0 +1,782 @@
+{
+  "all": {
+    "choice": {
+      "id": -1,
+      "config": null,
+      "metrics": {
+        "accuracy": 0.707048849063985,
+        "realAccuracy": 0.2318111111111111,
+        "techToDenseMs": 525.0,
+        "techCsConfusionMs": 750.0,
+        "objective": 0.5882394145757666
+      }
+    },
+    "metrics": {
+      "manual": {
+        "accuracy": 0.6398873620847826,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "details": [
+          {
+            "uid": "manual/DS",
+            "accuracy": 0.6398873620847826,
+            "techToDenseMs": 2487.0,
+            "techCsConfusionMs": 3107.0,
+            "perClass": {
+              "release": {
+                "tp": 39289.0,
+                "fp": 0.0,
+                "fn": 20521.0
+              },
+              "coordination": {
+                "tp": 7809.5,
+                "fp": 6266.0,
+                "fn": 13245.5
+              },
+              "break": {
+                "tp": 38778.0,
+                "fp": 156.5,
+                "fn": 43339.0
+              },
+              "density": {
+                "tp": 50097.5,
+                "fp": 35866.5,
+                "fn": 15903.0
+              },
+              "fast chordstream": {
+                "tp": 17473.5,
+                "fp": 16067.0,
+                "fn": 14751.5
+              },
+              "dense chordstream": {
+                "tp": 37780.5,
+                "fp": 21828.0,
+                "fn": 5314.5
+              },
+              "technical": {
+                "tp": 11770.5,
+                "fp": 22213.5,
+                "fn": 2487.0
+              },
+              "chordjack": {
+                "tp": 34666.5,
+                "fp": 12914.5,
+                "fn": 12366.5
+              },
+              "ln wildcard": {
+                "tp": 5713.0,
+                "fp": 6403.5,
+                "fn": 9454.0
+              },
+              "inverse": {
+                "tp": 17490.0,
+                "fp": 20978.5,
+                "fn": 0.0
+              },
+              "minijack": {
+                "tp": 0.0,
+                "fp": 4116.0,
+                "fn": 0.0
+              },
+              "tech": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 8553.0
+              },
+              "wildcard": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 19076.0
+              },
+              "speed": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 7904.0
+              }
+            }
+          }
+        ]
+      },
+      "real": {
+        "accuracy": 0.5,
+        "details": [
+          {
+            "id": "F02",
+            "uid": "spm_dataset-1.1.1/bm_0088/87",
+            "accuracy": 1.0
+          },
+          {
+            "id": "G02",
+            "uid": "spm_dataset-1.1.1/bm_0376/375",
+            "accuracy": 0.0
+          }
+        ]
+      }
+    },
+    "models": {},
+    "receipts": {},
+    "trainUids": [
+      "manual/AA",
+      "manual/AH",
+      "manual/BE",
+      "manual/EE",
+      "manual/RJ",
+      "spm_dataset-1.1.1/bm_0001/0",
+      "spm_dataset-1.1.1/bm_0023/22",
+      "spm_dataset-1.1.1/bm_0041/40",
+      "spm_dataset-1.1.1/bm_0168/167",
+      "spm_dataset-1.1.1/bm_0291/290",
+      "spm_dataset-1.1.1/bm_0362/361"
+    ]
+  },
+  "parent": {
+    "choice": {
+      "id": -1,
+      "config": null,
+      "metrics": {
+        "accuracy": 0.707048849063985,
+        "realAccuracy": 0.2318111111111111,
+        "techToDenseMs": 525.0,
+        "techCsConfusionMs": 750.0,
+        "objective": 0.5882394145757666
+      }
+    },
+    "metrics": {
+      "manual": {
+        "accuracy": 0.6398873620847826,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "details": [
+          {
+            "uid": "manual/DS",
+            "accuracy": 0.6398873620847826,
+            "techToDenseMs": 2487.0,
+            "techCsConfusionMs": 3107.0,
+            "perClass": {
+              "release": {
+                "tp": 39289.0,
+                "fp": 0.0,
+                "fn": 20521.0
+              },
+              "coordination": {
+                "tp": 7809.5,
+                "fp": 6266.0,
+                "fn": 13245.5
+              },
+              "break": {
+                "tp": 38778.0,
+                "fp": 156.5,
+                "fn": 43339.0
+              },
+              "density": {
+                "tp": 50097.5,
+                "fp": 35866.5,
+                "fn": 15903.0
+              },
+              "fast chordstream": {
+                "tp": 17473.5,
+                "fp": 16067.0,
+                "fn": 14751.5
+              },
+              "dense chordstream": {
+                "tp": 37780.5,
+                "fp": 21828.0,
+                "fn": 5314.5
+              },
+              "technical": {
+                "tp": 11770.5,
+                "fp": 22213.5,
+                "fn": 2487.0
+              },
+              "chordjack": {
+                "tp": 34666.5,
+                "fp": 12914.5,
+                "fn": 12366.5
+              },
+              "ln wildcard": {
+                "tp": 5713.0,
+                "fp": 6403.5,
+                "fn": 9454.0
+              },
+              "inverse": {
+                "tp": 17490.0,
+                "fp": 20978.5,
+                "fn": 0.0
+              },
+              "minijack": {
+                "tp": 0.0,
+                "fp": 4116.0,
+                "fn": 0.0
+              },
+              "tech": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 8553.0
+              },
+              "wildcard": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 19076.0
+              },
+              "speed": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 7904.0
+              }
+            }
+          }
+        ]
+      },
+      "real": {
+        "accuracy": 0.5,
+        "details": [
+          {
+            "id": "F02",
+            "uid": "spm_dataset-1.1.1/bm_0088/87",
+            "accuracy": 1.0
+          },
+          {
+            "id": "G02",
+            "uid": "spm_dataset-1.1.1/bm_0376/375",
+            "accuracy": 0.0
+          }
+        ]
+      }
+    },
+    "models": {},
+    "receipts": {},
+    "trainUids": [
+      "manual/AA",
+      "manual/AH",
+      "manual/BE",
+      "manual/EE",
+      "manual/RJ",
+      "spm_dataset-1.1.1/bm_0001/0",
+      "spm_dataset-1.1.1/bm_0023/22",
+      "spm_dataset-1.1.1/bm_0041/40",
+      "spm_dataset-1.1.1/bm_0168/167",
+      "spm_dataset-1.1.1/bm_0291/290",
+      "spm_dataset-1.1.1/bm_0362/361"
+    ]
+  },
+  "context4000": {
+    "choice": {
+      "id": -1,
+      "config": null,
+      "metrics": {
+        "accuracy": 0.707048849063985,
+        "realAccuracy": 0.2318111111111111,
+        "techToDenseMs": 525.0,
+        "techCsConfusionMs": 750.0,
+        "objective": 0.5882394145757666
+      }
+    },
+    "metrics": {
+      "manual": {
+        "accuracy": 0.6398873620847826,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "details": [
+          {
+            "uid": "manual/DS",
+            "accuracy": 0.6398873620847826,
+            "techToDenseMs": 2487.0,
+            "techCsConfusionMs": 3107.0,
+            "perClass": {
+              "release": {
+                "tp": 39289.0,
+                "fp": 0.0,
+                "fn": 20521.0
+              },
+              "coordination": {
+                "tp": 7809.5,
+                "fp": 6266.0,
+                "fn": 13245.5
+              },
+              "break": {
+                "tp": 38778.0,
+                "fp": 156.5,
+                "fn": 43339.0
+              },
+              "density": {
+                "tp": 50097.5,
+                "fp": 35866.5,
+                "fn": 15903.0
+              },
+              "fast chordstream": {
+                "tp": 17473.5,
+                "fp": 16067.0,
+                "fn": 14751.5
+              },
+              "dense chordstream": {
+                "tp": 37780.5,
+                "fp": 21828.0,
+                "fn": 5314.5
+              },
+              "technical": {
+                "tp": 11770.5,
+                "fp": 22213.5,
+                "fn": 2487.0
+              },
+              "chordjack": {
+                "tp": 34666.5,
+                "fp": 12914.5,
+                "fn": 12366.5
+              },
+              "ln wildcard": {
+                "tp": 5713.0,
+                "fp": 6403.5,
+                "fn": 9454.0
+              },
+              "inverse": {
+                "tp": 17490.0,
+                "fp": 20978.5,
+                "fn": 0.0
+              },
+              "minijack": {
+                "tp": 0.0,
+                "fp": 4116.0,
+                "fn": 0.0
+              },
+              "tech": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 8553.0
+              },
+              "wildcard": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 19076.0
+              },
+              "speed": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 7904.0
+              }
+            }
+          }
+        ]
+      },
+      "real": {
+        "accuracy": 0.5,
+        "details": [
+          {
+            "id": "F02",
+            "uid": "spm_dataset-1.1.1/bm_0088/87",
+            "accuracy": 1.0
+          },
+          {
+            "id": "G02",
+            "uid": "spm_dataset-1.1.1/bm_0376/375",
+            "accuracy": 0.0
+          }
+        ]
+      }
+    },
+    "models": {},
+    "receipts": {},
+    "trainUids": [
+      "manual/AA",
+      "manual/AH",
+      "manual/BE",
+      "manual/EE",
+      "manual/RJ",
+      "spm_dataset-1.1.1/bm_0001/0",
+      "spm_dataset-1.1.1/bm_0023/22",
+      "spm_dataset-1.1.1/bm_0041/40",
+      "spm_dataset-1.1.1/bm_0168/167",
+      "spm_dataset-1.1.1/bm_0291/290",
+      "spm_dataset-1.1.1/bm_0362/361"
+    ]
+  },
+  "bias": {
+    "choice": {
+      "id": -1,
+      "config": null,
+      "metrics": {
+        "accuracy": 0.707048849063985,
+        "realAccuracy": 0.2318111111111111,
+        "techToDenseMs": 525.0,
+        "techCsConfusionMs": 750.0,
+        "objective": 0.5882394145757666
+      }
+    },
+    "metrics": {
+      "manual": {
+        "accuracy": 0.6398873620847826,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "details": [
+          {
+            "uid": "manual/DS",
+            "accuracy": 0.6398873620847826,
+            "techToDenseMs": 2487.0,
+            "techCsConfusionMs": 3107.0,
+            "perClass": {
+              "release": {
+                "tp": 39289.0,
+                "fp": 0.0,
+                "fn": 20521.0
+              },
+              "coordination": {
+                "tp": 7809.5,
+                "fp": 6266.0,
+                "fn": 13245.5
+              },
+              "break": {
+                "tp": 38778.0,
+                "fp": 156.5,
+                "fn": 43339.0
+              },
+              "density": {
+                "tp": 50097.5,
+                "fp": 35866.5,
+                "fn": 15903.0
+              },
+              "fast chordstream": {
+                "tp": 17473.5,
+                "fp": 16067.0,
+                "fn": 14751.5
+              },
+              "dense chordstream": {
+                "tp": 37780.5,
+                "fp": 21828.0,
+                "fn": 5314.5
+              },
+              "technical": {
+                "tp": 11770.5,
+                "fp": 22213.5,
+                "fn": 2487.0
+              },
+              "chordjack": {
+                "tp": 34666.5,
+                "fp": 12914.5,
+                "fn": 12366.5
+              },
+              "ln wildcard": {
+                "tp": 5713.0,
+                "fp": 6403.5,
+                "fn": 9454.0
+              },
+              "inverse": {
+                "tp": 17490.0,
+                "fp": 20978.5,
+                "fn": 0.0
+              },
+              "minijack": {
+                "tp": 0.0,
+                "fp": 4116.0,
+                "fn": 0.0
+              },
+              "tech": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 8553.0
+              },
+              "wildcard": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 19076.0
+              },
+              "speed": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 7904.0
+              }
+            }
+          }
+        ]
+      },
+      "real": {
+        "accuracy": 0.5,
+        "details": [
+          {
+            "id": "F02",
+            "uid": "spm_dataset-1.1.1/bm_0088/87",
+            "accuracy": 1.0
+          },
+          {
+            "id": "G02",
+            "uid": "spm_dataset-1.1.1/bm_0376/375",
+            "accuracy": 0.0
+          }
+        ]
+      }
+    },
+    "models": {},
+    "receipts": {},
+    "trainUids": [
+      "manual/AA",
+      "manual/AH",
+      "manual/BE",
+      "manual/EE",
+      "manual/RJ",
+      "spm_dataset-1.1.1/bm_0001/0",
+      "spm_dataset-1.1.1/bm_0023/22",
+      "spm_dataset-1.1.1/bm_0041/40",
+      "spm_dataset-1.1.1/bm_0168/167",
+      "spm_dataset-1.1.1/bm_0291/290",
+      "spm_dataset-1.1.1/bm_0362/361"
+    ]
+  },
+  "weights": {
+    "choice": {
+      "id": -1,
+      "config": null,
+      "metrics": {
+        "accuracy": 0.707048849063985,
+        "realAccuracy": 0.2318111111111111,
+        "techToDenseMs": 525.0,
+        "techCsConfusionMs": 750.0,
+        "objective": 0.5882394145757666
+      }
+    },
+    "metrics": {
+      "manual": {
+        "accuracy": 0.6398873620847826,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "details": [
+          {
+            "uid": "manual/DS",
+            "accuracy": 0.6398873620847826,
+            "techToDenseMs": 2487.0,
+            "techCsConfusionMs": 3107.0,
+            "perClass": {
+              "release": {
+                "tp": 39289.0,
+                "fp": 0.0,
+                "fn": 20521.0
+              },
+              "coordination": {
+                "tp": 7809.5,
+                "fp": 6266.0,
+                "fn": 13245.5
+              },
+              "break": {
+                "tp": 38778.0,
+                "fp": 156.5,
+                "fn": 43339.0
+              },
+              "density": {
+                "tp": 50097.5,
+                "fp": 35866.5,
+                "fn": 15903.0
+              },
+              "fast chordstream": {
+                "tp": 17473.5,
+                "fp": 16067.0,
+                "fn": 14751.5
+              },
+              "dense chordstream": {
+                "tp": 37780.5,
+                "fp": 21828.0,
+                "fn": 5314.5
+              },
+              "technical": {
+                "tp": 11770.5,
+                "fp": 22213.5,
+                "fn": 2487.0
+              },
+              "chordjack": {
+                "tp": 34666.5,
+                "fp": 12914.5,
+                "fn": 12366.5
+              },
+              "ln wildcard": {
+                "tp": 5713.0,
+                "fp": 6403.5,
+                "fn": 9454.0
+              },
+              "inverse": {
+                "tp": 17490.0,
+                "fp": 20978.5,
+                "fn": 0.0
+              },
+              "minijack": {
+                "tp": 0.0,
+                "fp": 4116.0,
+                "fn": 0.0
+              },
+              "tech": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 8553.0
+              },
+              "wildcard": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 19076.0
+              },
+              "speed": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 7904.0
+              }
+            }
+          }
+        ]
+      },
+      "real": {
+        "accuracy": 0.5,
+        "details": [
+          {
+            "id": "F02",
+            "uid": "spm_dataset-1.1.1/bm_0088/87",
+            "accuracy": 1.0
+          },
+          {
+            "id": "G02",
+            "uid": "spm_dataset-1.1.1/bm_0376/375",
+            "accuracy": 0.0
+          }
+        ]
+      }
+    },
+    "models": {},
+    "receipts": {},
+    "trainUids": [
+      "manual/AA",
+      "manual/AH",
+      "manual/BE",
+      "manual/EE",
+      "manual/RJ",
+      "spm_dataset-1.1.1/bm_0001/0",
+      "spm_dataset-1.1.1/bm_0023/22",
+      "spm_dataset-1.1.1/bm_0041/40",
+      "spm_dataset-1.1.1/bm_0168/167",
+      "spm_dataset-1.1.1/bm_0291/290",
+      "spm_dataset-1.1.1/bm_0362/361"
+    ]
+  },
+  "unchanged": {
+    "choice": {
+      "id": -1,
+      "config": null,
+      "metrics": {
+        "accuracy": 0.707048849063985,
+        "realAccuracy": 0.2318111111111111,
+        "techToDenseMs": 525.0,
+        "techCsConfusionMs": 750.0,
+        "objective": 0.5882394145757666
+      }
+    },
+    "metrics": {
+      "manual": {
+        "accuracy": 0.6398873620847826,
+        "techToDenseMs": 2487.0,
+        "techCsConfusionMs": 3107.0,
+        "details": [
+          {
+            "uid": "manual/DS",
+            "accuracy": 0.6398873620847826,
+            "techToDenseMs": 2487.0,
+            "techCsConfusionMs": 3107.0,
+            "perClass": {
+              "release": {
+                "tp": 39289.0,
+                "fp": 0.0,
+                "fn": 20521.0
+              },
+              "coordination": {
+                "tp": 7809.5,
+                "fp": 6266.0,
+                "fn": 13245.5
+              },
+              "break": {
+                "tp": 38778.0,
+                "fp": 156.5,
+                "fn": 43339.0
+              },
+              "density": {
+                "tp": 50097.5,
+                "fp": 35866.5,
+                "fn": 15903.0
+              },
+              "fast chordstream": {
+                "tp": 17473.5,
+                "fp": 16067.0,
+                "fn": 14751.5
+              },
+              "dense chordstream": {
+                "tp": 37780.5,
+                "fp": 21828.0,
+                "fn": 5314.5
+              },
+              "technical": {
+                "tp": 11770.5,
+                "fp": 22213.5,
+                "fn": 2487.0
+              },
+              "chordjack": {
+                "tp": 34666.5,
+                "fp": 12914.5,
+                "fn": 12366.5
+              },
+              "ln wildcard": {
+                "tp": 5713.0,
+                "fp": 6403.5,
+                "fn": 9454.0
+              },
+              "inverse": {
+                "tp": 17490.0,
+                "fp": 20978.5,
+                "fn": 0.0
+              },
+              "minijack": {
+                "tp": 0.0,
+                "fp": 4116.0,
+                "fn": 0.0
+              },
+              "tech": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 8553.0
+              },
+              "wildcard": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 19076.0
+              },
+              "speed": {
+                "tp": 0.0,
+                "fp": 0.0,
+                "fn": 7904.0
+              }
+            }
+          }
+        ]
+      },
+      "real": {
+        "accuracy": 0.5,
+        "details": [
+          {
+            "id": "F02",
+            "uid": "spm_dataset-1.1.1/bm_0088/87",
+            "accuracy": 1.0
+          },
+          {
+            "id": "G02",
+            "uid": "spm_dataset-1.1.1/bm_0376/375",
+            "accuracy": 0.0
+          }
+        ]
+      }
+    },
+    "models": {},
+    "receipts": {},
+    "trainUids": [
+      "manual/AA",
+      "manual/AH",
+      "manual/BE",
+      "manual/EE",
+      "manual/RJ",
+      "spm_dataset-1.1.1/bm_0001/0",
+      "spm_dataset-1.1.1/bm_0023/22",
+      "spm_dataset-1.1.1/bm_0041/40",
+      "spm_dataset-1.1.1/bm_0168/167",
+      "spm_dataset-1.1.1/bm_0291/290",
+      "spm_dataset-1.1.1/bm_0362/361"
+    ]
+  }
+}
