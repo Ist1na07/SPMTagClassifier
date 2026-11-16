@@ -1,0 +1,32 @@
+{
+  "scope": "Native 411-input x 3-consumer complete music-parameter replay; historically exposed development labels.",
+  "configs": [
+    {
+      "id": "off"
+    },
+    {
+      "id": "nearest-0.5",
+      "maxMoveBeats": 0.5,
+      "mode": "nearest"
+    },
+    {
+      "id": "nearest-1",
+      "maxMoveBeats": 1,
+      "mode": "nearest"
+    },
+    {
+      "id": "nearest-2",
+      "maxMoveBeats": 2,
+      "mode": "nearest"
+    }
+  ],
+  "amendment": "After six-chart mechanism check and before full-whole-map replay, include whole-tag macro P/R/F1 and exact match for every distinct radius. Contrast/nearest were identical on all six charts because the allowed radii normally contain one bar candidate; keep duplicate-grid evidence but do not duplicate the full replay.",
+  "selectionScore": "mean manual-chart duration accuracy across all consumers + mean full349 consumer macro-F1; equal dimensionless weights. Report individual metrics and all tradeoffs.",
+  "cadence": "current action-clock prototype in all arms; cadence is display-only and cannot change integral scores.",
+  "orderingExtension": {
+    "comparedNativeCuts": 1233,
+    "differingMapRadiusPairs": 26,
+    "completeSettings": 7,
+    "reuse": "Only exactly equal cut geometry reuses predictions; differing inputs are replayed through the public API."
+  }
+}

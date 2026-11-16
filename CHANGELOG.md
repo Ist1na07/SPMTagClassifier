@@ -4,7 +4,12 @@
 
 All research and implementation below belongs to one iteration. Patch releases are checkpoints, not separate research generations. The former v1.3.0 was misnumbered; its tag/assets remain historical. Current release: v1.2.4.
 
-### Unreleased — joint parameter refit and pressure-aware rest repair
+### Unreleased — action cadence, musical segmentation and prior refits
+
+- Measure 7K BPM on type-conditional action objects: same-hand coactive Jack backbones, same-finger Minijacks, hand-substitution streams, and supported head articulations. Separate common-finger Anchor embellishment from unrelated rolls; retain both thumb assignments. The reported example is133 BPM rather than263, with no per-chart halving or song-BPM cap. Omit unsupported scalars and expose branch-specific cadence/action evidence.
+- Before classification, prefer valid measure boundaries within one beat, preserving timing metre/phase/omit-first-bar semantics, physical gaps and unmoved feature-window assignments. Recompute segment extras, while retaining the original segmented reference prior and shared windows. classic/modern cadence policies and raw legacy remain available.
+- Complete60 mechanism parameter configurations,189 music/rest consumer configurations with independent off-arm tuning and source-scoped selection, and four actual411-input/three-consumer arms. Rated six-chart accuracy72.3687%→73.3754%, missed true Break134.1050s→124.8880s, false Break+0.1875s. Detailed macroF1 58.7703%→58.4853%, Compact56.9551%→57.2801%; record lower scalar-tempo coverage and the remaining HT rest error. Type W/b and difficulty integrands unchanged. Full evidence: `research/action_clock/README.md`.
+
 
 - Reuse the existing native Detailed/Compact demand distribution before Break classification. Sustained high demand can veto low-stakes/low-fit rest gates; exclude stale samples across long head gaps and past the last head. Preserve initial marked/empty/sparse handling, fixed reference prior, and unrated action output.
 - Independently retune9 no-sensor and171 rated configurations per consumer. Six-chart false Break55.1965s→47.4715s, missed true Break+0.15s; DetailedF1 58.1211%→58.7703%, Compact56.9678%→56.9551%. Retain source-heldout/local limitations and expensive future directions in `research/break_pressure/README.md`. Actual411/three-consumer parity and71 product tests pass.
@@ -45,7 +50,7 @@ All research and implementation below belongs to one iteration. Patch releases a
 
 - Correct 7K displayed equivalent BPM for rows uniform to source-millisecond resolution; avoid coarse-grid aliases such as 300 → 200 BPM. Keep archived model features and raw `legacy` results unchanged.
 - Expose the direct measurement and original display value in `segment.evidence.cadence`.
-- Preserve Jack's chord-row/repetition clock when single rows interleave; do not substitute the all-row cadence.
+- Avoid overwriting archived Jack estimates with the all-row uniform override when singles interleave. Those archived estimates were later found to include all-row intervals; the Unreleased action clock supersedes them.
 - Restrict the default 7K regular-small-chord Break disjunct using jointly selected relative NPS and actual row rate. Preserve expert coefficients and the original whole-map aggregation policy; expose `modelInfo.overlayPolicy`.
 - Complete matched 57-gate × 245-aggregation comparisons and original-aggregation controls with source-grouped player supervision. Fix the two curated Speed→Break regressions; whole-map macro-F1 is essentially unchanged, and original six-chart OOF accuracy decreases by 0.17 percentage points. Tech→Dense CS remains unresolved.
 - Add focused overlay cadence/hand-mechanics regressions and a test-only driver using the actual upstream renderer, without connecting to or modifying the user's live tosu/plugin.

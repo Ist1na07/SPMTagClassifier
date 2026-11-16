@@ -1,0 +1,923 @@
+{
+  "file": "examplebeatmap/KOOOZ - Inorganic compound (Ist1na) [Breakthrough].osu",
+  "targetMs": [
+    131980,
+    142582
+  ],
+  "example": [
+    {
+      "speedRate": 0.75,
+      "arm": "before",
+      "segments": [
+        {
+          "start": 170222,
+          "end": 177552.5,
+          "tag": "break"
+        },
+        {
+          "start": 177552.5,
+          "end": 182364.5,
+          "tag": "chordjack",
+          "equivBpm": 197
+        },
+        {
+          "start": 182364.5,
+          "end": 190184.5,
+          "tag": "chordjack",
+          "equivBpm": 197
+        }
+      ],
+      "modelInfo": {
+        "version": "1.2.4",
+        "keyCount": 7,
+        "variant": "legacy-stable",
+        "researchVariant": "anchored-ln-release",
+        "segmentEvidence": "joint-retuned56D affinities; frozen reference predictor for integral prior; LN wildcard prototype ambiguity is not inactivity; regular-rest gate and two-thumb static-hand cut exclusion; stable cadence plateaus",
+        "temporalResolutionMs": 250,
+        "localExpert": "original56-joint-fixed-ridge01",
+        "segmentReadout": {
+          "stepMs": 500,
+          "cutContextMs": 4000,
+          "minCadencePlateauMs": 1800,
+          "cutExcludedFrames": 0
+        },
+        "overlayPolicy": {
+          "regularityRestRelativeNps": 0.85,
+          "regularityRestRowRateMax": 16,
+          "rowRateUnit": "rows per converted second",
+          "aggregation": "support-weighted perceptual burden"
+        },
+        "breakPolicy": {
+          "id": "sustained-native-demand-r1",
+          "ratingUsed": false,
+          "confidenceFloor": 0.5,
+          "lowNpsScale": 1,
+          "quantile": null,
+          "fraction": null,
+          "referenceDemand": null,
+          "protectedParents": 0
+        },
+        "perception": {
+          "profile": "actions",
+          "recipe": {
+            "alpha": 0,
+            "beta": 2,
+            "width": 1000,
+            "hold": 1
+          },
+          "supportPower": 1,
+          "family": {
+            "enabled": true,
+            "minRc": 0.1,
+            "minLn": 0.05
+          },
+          "policy": {
+            "keepFloor": 0.25,
+            "addFloor": 0.5,
+            "mixOverride": 1.01
+          },
+          "ratingModelIdentity": null
+        },
+        "cadencePolicy": "uniform rows measured directly; other archived cadence unchanged"
+      }
+    },
+    {
+      "speedRate": 0.75,
+      "arm": "combined",
+      "segments": [
+        {
+          "start": 170222,
+          "end": 178078.66666666666,
+          "tag": "break",
+          "musicalEnd": {
+            "t": 178078.66666666666,
+            "beatLength": 601.5037593984961,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 178079.59899749368,
+            "originalTime": 177552.5
+          }
+        },
+        {
+          "start": 178078.66666666666,
+          "end": 181078.66666666666,
+          "tag": "chordjack",
+          "equivBpm": 100,
+          "cadence": {
+            "source": "hand-strike-interval-mode",
+            "spacingMs": 150.222222222219,
+            "resolutionMs": 1.3333333333333333,
+            "rowCount": 26,
+            "pairCount": 3,
+            "intervalShare": 1,
+            "handMeasurements": [
+              {
+                "thumb": 0,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 150.222222222219,
+                    "intervalShare": 1,
+                    "eventCount": 26,
+                    "coveredMs": 450.66666666665697
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 150.222222222219,
+                    "intervalShare": 0.75,
+                    "eventCount": 22,
+                    "coveredMs": 450.66666666665697
+                  }
+                ]
+              },
+              {
+                "thumb": 1,
+                "hands": [
+                  {
+                    "side": 1,
+                    "spacingMs": 150.222222222219,
+                    "intervalShare": 1,
+                    "eventCount": 28,
+                    "coveredMs": 450.66666666665697
+                  }
+                ]
+              }
+            ],
+            "measuredStart": 178078.66666666666,
+            "measuredEnd": 181078.66666666666,
+            "legacyEquivBpm": 197
+          },
+          "musicalStart": {
+            "t": 178078.66666666666,
+            "beatLength": 601.5037593984961,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 178079.59899749368,
+            "originalTime": 177552.5
+          }
+        },
+        {
+          "start": 181078.66666666666,
+          "end": 182890.66666666666,
+          "tag": "chordjack",
+          "equivBpm": 100,
+          "cadence": {
+            "source": "hand-strike-interval-mode",
+            "spacingMs": 150.3030303030312,
+            "resolutionMs": 1.3333333333333333,
+            "rowCount": 12,
+            "pairCount": 11,
+            "intervalShare": 1,
+            "handMeasurements": [
+              {
+                "thumb": 0,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 150.3030303030312,
+                    "intervalShare": 1,
+                    "eventCount": 12,
+                    "coveredMs": 1653.333333333343
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 150.3030303030312,
+                    "intervalShare": 1,
+                    "eventCount": 12,
+                    "coveredMs": 1653.333333333343
+                  }
+                ]
+              },
+              {
+                "thumb": 1,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 150.3030303030312,
+                    "intervalShare": 1,
+                    "eventCount": 12,
+                    "coveredMs": 1653.333333333343
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 150.3030303030312,
+                    "intervalShare": 1,
+                    "eventCount": 12,
+                    "coveredMs": 1653.333333333343
+                  }
+                ]
+              }
+            ],
+            "measuredStart": 181078.66666666666,
+            "measuredEnd": 182890.66666666666,
+            "legacyEquivBpm": 197
+          },
+          "musicalEnd": {
+            "t": 182890.66666666666,
+            "beatLength": 601.5037593984961,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 182891.62907268165,
+            "originalTime": 182364.5
+          }
+        },
+        {
+          "start": 182890.66666666666,
+          "end": 190109.33333333334,
+          "tag": "chordjack",
+          "equivBpm": 100,
+          "cadence": {
+            "source": "hand-strike-interval-mode",
+            "spacingMs": 150.28571428571325,
+            "resolutionMs": 1.3333333333333333,
+            "rowCount": 50,
+            "pairCount": 14,
+            "intervalShare": 0.875,
+            "handMeasurements": [
+              {
+                "thumb": 0,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 150.33333333333212,
+                    "intervalShare": 1,
+                    "eventCount": 61,
+                    "coveredMs": 2405.333333333314
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 150.2857142857122,
+                    "intervalShare": 0.875,
+                    "eventCount": 50,
+                    "coveredMs": 2103.999999999971
+                  }
+                ]
+              },
+              {
+                "thumb": 1,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 150.28571428571428,
+                    "intervalShare": 0.9333333333333333,
+                    "eventCount": 50,
+                    "coveredMs": 2104
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 150.33333333333212,
+                    "intervalShare": 1,
+                    "eventCount": 61,
+                    "coveredMs": 2405.333333333314
+                  }
+                ]
+              }
+            ],
+            "measuredStart": 182890.66666666666,
+            "measuredEnd": 190109.33333333334,
+            "legacyEquivBpm": 197
+          },
+          "musicalStart": {
+            "t": 182890.66666666666,
+            "beatLength": 601.5037593984961,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 182891.62907268165,
+            "originalTime": 182364.5
+          },
+          "musicalEnd": {
+            "t": 190109.33333333334,
+            "beatLength": 601.5037593984961,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 190109.6741854636,
+            "originalTime": 190184.5
+          }
+        }
+      ],
+      "modelInfo": {
+        "version": "1.2.4",
+        "keyCount": 7,
+        "variant": "legacy-stable",
+        "researchVariant": "anchored-ln-release",
+        "segmentEvidence": "joint-retuned56D affinities; frozen reference predictor for integral prior; LN wildcard prototype ambiguity is not inactivity; regular-rest gate and two-thumb static-hand cut exclusion; stable cadence plateaus",
+        "temporalResolutionMs": 250,
+        "localExpert": "original56-joint-fixed-ridge01",
+        "segmentReadout": {
+          "stepMs": 500,
+          "cutContextMs": 4000,
+          "minCadencePlateauMs": 1800,
+          "cutExcludedFrames": 0
+        },
+        "overlayPolicy": {
+          "regularityRestRelativeNps": 0.85,
+          "regularityRestRowRateMax": 16,
+          "rowRateUnit": "rows per converted second",
+          "aggregation": "support-weighted perceptual burden"
+        },
+        "segmentation": {
+          "id": "meter-aware-snap-r1",
+          "maxMoveBeats": 1,
+          "movedBoundaries": 13,
+          "referencePrior": "original boundaries retained"
+        },
+        "breakPolicy": {
+          "id": "sustained-native-demand-r1",
+          "ratingUsed": false,
+          "confidenceFloor": 0.5,
+          "lowNpsScale": 1,
+          "quantile": null,
+          "fraction": null,
+          "referenceDemand": null,
+          "protectedParents": 0
+        },
+        "perception": {
+          "profile": "actions",
+          "recipe": {
+            "alpha": 0,
+            "beta": 2,
+            "width": 1000,
+            "hold": 1
+          },
+          "supportPower": 1,
+          "family": {
+            "enabled": true,
+            "minRc": 0.1,
+            "minLn": 0.05
+          },
+          "policy": {
+            "keepFloor": 0.25,
+            "addFloor": 0.5,
+            "mixOverride": 1.01
+          },
+          "ratingModelIdentity": null
+        },
+        "cadencePolicy": "type-conditional observed action periods: per-hand strikes, same-finger rearticulation, within-hand substitution, or head articulation; unsupported scalar tempo omitted"
+      }
+    },
+    {
+      "speedRate": 1,
+      "arm": "before",
+      "segments": [
+        {
+          "start": 131923.5,
+          "end": 135532.5,
+          "tag": "chordjack",
+          "equivBpm": 263
+        },
+        {
+          "start": 135532.5,
+          "end": 139029.5,
+          "tag": "chordjack",
+          "equivBpm": 263
+        },
+        {
+          "start": 139029.5,
+          "end": 142638.5,
+          "tag": "chordjack",
+          "equivBpm": 263
+        }
+      ],
+      "modelInfo": {
+        "version": "1.2.4",
+        "keyCount": 7,
+        "variant": "legacy-stable",
+        "researchVariant": "anchored-ln-release",
+        "segmentEvidence": "joint-retuned56D affinities; frozen reference predictor for integral prior; LN wildcard prototype ambiguity is not inactivity; regular-rest gate and two-thumb static-hand cut exclusion; stable cadence plateaus",
+        "temporalResolutionMs": 250,
+        "localExpert": "original56-joint-fixed-ridge01",
+        "segmentReadout": {
+          "stepMs": 500,
+          "cutContextMs": 4000,
+          "minCadencePlateauMs": 1800,
+          "cutExcludedFrames": 0
+        },
+        "overlayPolicy": {
+          "regularityRestRelativeNps": 0.85,
+          "regularityRestRowRateMax": 16,
+          "rowRateUnit": "rows per converted second",
+          "aggregation": "support-weighted perceptual burden"
+        },
+        "breakPolicy": {
+          "id": "sustained-native-demand-r1",
+          "ratingUsed": false,
+          "confidenceFloor": 0.5,
+          "lowNpsScale": 1,
+          "quantile": null,
+          "fraction": null,
+          "referenceDemand": null,
+          "protectedParents": 0
+        },
+        "perception": {
+          "profile": "actions",
+          "recipe": {
+            "alpha": 0,
+            "beta": 2,
+            "width": 1000,
+            "hold": 1
+          },
+          "supportPower": 1,
+          "family": {
+            "enabled": true,
+            "minRc": 0.1,
+            "minLn": 0.05
+          },
+          "policy": {
+            "keepFloor": 0.25,
+            "addFloor": 0.5,
+            "mixOverride": 1.01
+          },
+          "ratingModelIdentity": null
+        },
+        "cadencePolicy": "uniform rows measured directly; other archived cadence unchanged"
+      }
+    },
+    {
+      "speedRate": 1,
+      "arm": "combined",
+      "segments": [
+        {
+          "start": 131755,
+          "end": 135364,
+          "tag": "chordjack",
+          "equivBpm": 133,
+          "cadence": {
+            "source": "hand-strike-interval-mode",
+            "spacingMs": 112.75,
+            "resolutionMs": 1,
+            "rowCount": 38,
+            "pairCount": 16,
+            "intervalShare": 1,
+            "handMeasurements": [
+              {
+                "thumb": 0,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 112.75,
+                    "intervalShare": 1,
+                    "eventCount": 38,
+                    "coveredMs": 1804
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 112.78571428571429,
+                    "intervalShare": 0.875,
+                    "eventCount": 33,
+                    "coveredMs": 1579
+                  }
+                ]
+              },
+              {
+                "thumb": 1,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 112.78571428571429,
+                    "intervalShare": 0.8235294117647058,
+                    "eventCount": 31,
+                    "coveredMs": 1579
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 112.75,
+                    "intervalShare": 1,
+                    "eventCount": 40,
+                    "coveredMs": 1804
+                  }
+                ]
+              }
+            ],
+            "measuredStart": 131755,
+            "measuredEnd": 135364,
+            "legacyEquivBpm": 263
+          },
+          "musicalStart": {
+            "t": 131755,
+            "beatLength": 451.127819548872,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 131755.18796992477,
+            "originalTime": 131923.5
+          },
+          "musicalEnd": {
+            "t": 135364,
+            "beatLength": 451.127819548872,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 135364.21052631576,
+            "originalTime": 135532.5
+          }
+        },
+        {
+          "start": 135364,
+          "end": 138973,
+          "tag": "chordjack",
+          "equivBpm": 133,
+          "cadence": {
+            "source": "hand-strike-interval-mode",
+            "spacingMs": 112.75,
+            "resolutionMs": 1,
+            "rowCount": 40,
+            "pairCount": 16,
+            "intervalShare": 1,
+            "handMeasurements": [
+              {
+                "thumb": 0,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 112.75,
+                    "intervalShare": 1,
+                    "eventCount": 40,
+                    "coveredMs": 1804
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 112.75,
+                    "intervalShare": 1,
+                    "eventCount": 32,
+                    "coveredMs": 1804
+                  }
+                ]
+              },
+              {
+                "thumb": 1,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 112.75,
+                    "intervalShare": 1,
+                    "eventCount": 35,
+                    "coveredMs": 1804
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 112.75,
+                    "intervalShare": 1,
+                    "eventCount": 37,
+                    "coveredMs": 1804
+                  }
+                ]
+              }
+            ],
+            "measuredStart": 135364,
+            "measuredEnd": 138973,
+            "legacyEquivBpm": 263
+          },
+          "musicalStart": {
+            "t": 135364,
+            "beatLength": 451.127819548872,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 135364.21052631576,
+            "originalTime": 135532.5
+          },
+          "musicalEnd": {
+            "t": 138973,
+            "beatLength": 451.127819548872,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 138973.23308270672,
+            "originalTime": 139029.5
+          }
+        },
+        {
+          "start": 138973,
+          "end": 142582,
+          "tag": "chordjack",
+          "equivBpm": 133,
+          "cadence": {
+            "source": "hand-strike-interval-mode",
+            "spacingMs": 112.71428571428571,
+            "resolutionMs": 1,
+            "rowCount": 34,
+            "pairCount": 14,
+            "intervalShare": 0.9333333333333333,
+            "handMeasurements": [
+              {
+                "thumb": 0,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 112.75,
+                    "intervalShare": 1,
+                    "eventCount": 37,
+                    "coveredMs": 1804
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 112.71428571428571,
+                    "intervalShare": 0.9333333333333333,
+                    "eventCount": 34,
+                    "coveredMs": 1578
+                  }
+                ]
+              },
+              {
+                "thumb": 1,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 112.71428571428571,
+                    "intervalShare": 0.9333333333333333,
+                    "eventCount": 31,
+                    "coveredMs": 1578
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 112.75,
+                    "intervalShare": 1,
+                    "eventCount": 40,
+                    "coveredMs": 1804
+                  }
+                ]
+              }
+            ],
+            "measuredStart": 138973,
+            "measuredEnd": 142582,
+            "legacyEquivBpm": 263
+          },
+          "musicalStart": {
+            "t": 138973,
+            "beatLength": 451.127819548872,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 138973.23308270672,
+            "originalTime": 139029.5
+          },
+          "musicalEnd": {
+            "t": 142582,
+            "beatLength": 451.127819548872,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 142582.2556390977,
+            "originalTime": 142638.5
+          }
+        }
+      ],
+      "modelInfo": {
+        "version": "1.2.4",
+        "keyCount": 7,
+        "variant": "legacy-stable",
+        "researchVariant": "anchored-ln-release",
+        "segmentEvidence": "joint-retuned56D affinities; frozen reference predictor for integral prior; LN wildcard prototype ambiguity is not inactivity; regular-rest gate and two-thumb static-hand cut exclusion; stable cadence plateaus",
+        "temporalResolutionMs": 250,
+        "localExpert": "original56-joint-fixed-ridge01",
+        "segmentReadout": {
+          "stepMs": 500,
+          "cutContextMs": 4000,
+          "minCadencePlateauMs": 1800,
+          "cutExcludedFrames": 0
+        },
+        "overlayPolicy": {
+          "regularityRestRelativeNps": 0.85,
+          "regularityRestRowRateMax": 16,
+          "rowRateUnit": "rows per converted second",
+          "aggregation": "support-weighted perceptual burden"
+        },
+        "segmentation": {
+          "id": "meter-aware-snap-r1",
+          "maxMoveBeats": 1,
+          "movedBoundaries": 9,
+          "referencePrior": "original boundaries retained"
+        },
+        "breakPolicy": {
+          "id": "sustained-native-demand-r1",
+          "ratingUsed": false,
+          "confidenceFloor": 0.5,
+          "lowNpsScale": 1,
+          "quantile": null,
+          "fraction": null,
+          "referenceDemand": null,
+          "protectedParents": 0
+        },
+        "perception": {
+          "profile": "actions",
+          "recipe": {
+            "alpha": 0,
+            "beta": 2,
+            "width": 1000,
+            "hold": 1
+          },
+          "supportPower": 1,
+          "family": {
+            "enabled": true,
+            "minRc": 0.1,
+            "minLn": 0.05
+          },
+          "policy": {
+            "keepFloor": 0.25,
+            "addFloor": 0.5,
+            "mixOverride": 1.01
+          },
+          "ratingModelIdentity": null
+        },
+        "cadencePolicy": "type-conditional observed action periods: per-hand strikes, same-finger rearticulation, within-hand substitution, or head articulation; unsupported scalar tempo omitted"
+      }
+    },
+    {
+      "speedRate": 1.5,
+      "arm": "before",
+      "segments": [
+        {
+          "start": 87874,
+          "end": 100828,
+          "tag": "chordjack",
+          "equivBpm": 200
+        }
+      ],
+      "modelInfo": {
+        "version": "1.2.4",
+        "keyCount": 7,
+        "variant": "legacy-stable",
+        "researchVariant": "anchored-ln-release",
+        "segmentEvidence": "joint-retuned56D affinities; frozen reference predictor for integral prior; LN wildcard prototype ambiguity is not inactivity; regular-rest gate and two-thumb static-hand cut exclusion; stable cadence plateaus",
+        "temporalResolutionMs": 250,
+        "localExpert": "original56-joint-fixed-ridge01",
+        "segmentReadout": {
+          "stepMs": 500,
+          "cutContextMs": 4000,
+          "minCadencePlateauMs": 1800,
+          "cutExcludedFrames": 0
+        },
+        "overlayPolicy": {
+          "regularityRestRelativeNps": 0.85,
+          "regularityRestRowRateMax": 16,
+          "rowRateUnit": "rows per converted second",
+          "aggregation": "support-weighted perceptual burden"
+        },
+        "breakPolicy": {
+          "id": "sustained-native-demand-r1",
+          "ratingUsed": false,
+          "confidenceFloor": 0.5,
+          "lowNpsScale": 1,
+          "quantile": null,
+          "fraction": null,
+          "referenceDemand": null,
+          "protectedParents": 0
+        },
+        "perception": {
+          "profile": "actions",
+          "recipe": {
+            "alpha": 0,
+            "beta": 2,
+            "width": 1000,
+            "hold": 1
+          },
+          "supportPower": 1,
+          "family": {
+            "enabled": true,
+            "minRc": 0.1,
+            "minLn": 0.05
+          },
+          "policy": {
+            "keepFloor": 0.25,
+            "addFloor": 0.5,
+            "mixOverride": 1.01
+          },
+          "ratingModelIdentity": null
+        },
+        "cadencePolicy": "uniform rows measured directly; other archived cadence unchanged"
+      }
+    },
+    {
+      "speedRate": 1.5,
+      "arm": "combined",
+      "segments": [
+        {
+          "start": 87836.66666666667,
+          "end": 101069.33333333333,
+          "tag": "chordjack",
+          "equivBpm": 200,
+          "cadence": {
+            "source": "hand-strike-interval-mode",
+            "spacingMs": 75.17525773195861,
+            "resolutionMs": 0.6666666666666666,
+            "rowCount": 181,
+            "pairCount": 97,
+            "intervalShare": 0.8981481481481481,
+            "handMeasurements": [
+              {
+                "thumb": 0,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 75.17857142857103,
+                    "intervalShare": 0.9911504424778761,
+                    "eventCount": 207,
+                    "coveredMs": 8419.999999999956
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 75.17525773195861,
+                    "intervalShare": 0.9150943396226415,
+                    "eventCount": 181,
+                    "coveredMs": 7291.999999999985
+                  }
+                ]
+              },
+              {
+                "thumb": 1,
+                "hands": [
+                  {
+                    "side": 0,
+                    "spacingMs": 75.17525773195861,
+                    "intervalShare": 0.8981481481481481,
+                    "eventCount": 179,
+                    "coveredMs": 7291.999999999985
+                  },
+                  {
+                    "side": 1,
+                    "spacingMs": 75.17857142857103,
+                    "intervalShare": 0.9911504424778761,
+                    "eventCount": 209,
+                    "coveredMs": 8419.999999999956
+                  }
+                ]
+              }
+            ],
+            "measuredStart": 87836.66666666667,
+            "measuredEnd": 101069.33333333333,
+            "legacyEquivBpm": 200
+          },
+          "musicalStart": {
+            "t": 87836.66666666667,
+            "beatLength": 300.75187969924804,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 87836.79197994985,
+            "originalTime": 87874
+          },
+          "musicalEnd": {
+            "t": 101069.33333333333,
+            "beatLength": 300.75187969924804,
+            "meter": 4,
+            "kind": "measure",
+            "nominalTime": 101069.87468671676,
+            "originalTime": 100828
+          }
+        }
+      ],
+      "modelInfo": {
+        "version": "1.2.4",
+        "keyCount": 7,
+        "variant": "legacy-stable",
+        "researchVariant": "anchored-ln-release",
+        "segmentEvidence": "joint-retuned56D affinities; frozen reference predictor for integral prior; LN wildcard prototype ambiguity is not inactivity; regular-rest gate and two-thumb static-hand cut exclusion; stable cadence plateaus",
+        "temporalResolutionMs": 250,
+        "localExpert": "original56-joint-fixed-ridge01",
+        "segmentReadout": {
+          "stepMs": 500,
+          "cutContextMs": 4000,
+          "minCadencePlateauMs": 1800,
+          "cutExcludedFrames": 0
+        },
+        "overlayPolicy": {
+          "regularityRestRelativeNps": 0.85,
+          "regularityRestRowRateMax": 16,
+          "rowRateUnit": "rows per converted second",
+          "aggregation": "support-weighted perceptual burden"
+        },
+        "segmentation": {
+          "id": "meter-aware-snap-r1",
+          "maxMoveBeats": 1,
+          "movedBoundaries": 5,
+          "referencePrior": "original boundaries retained"
+        },
+        "breakPolicy": {
+          "id": "sustained-native-demand-r1",
+          "ratingUsed": false,
+          "confidenceFloor": 0.5,
+          "lowNpsScale": 1,
+          "quantile": null,
+          "fraction": null,
+          "referenceDemand": null,
+          "protectedParents": 0
+        },
+        "perception": {
+          "profile": "actions",
+          "recipe": {
+            "alpha": 0,
+            "beta": 2,
+            "width": 1000,
+            "hold": 1
+          },
+          "supportPower": 1,
+          "family": {
+            "enabled": true,
+            "minRc": 0.1,
+            "minLn": 0.05
+          },
+          "policy": {
+            "keepFloor": 0.25,
+            "addFloor": 0.5,
+            "mixOverride": 1.01
+          },
+          "ratingModelIdentity": null
+        },
+        "cadencePolicy": "type-conditional observed action periods: per-hand strikes, same-finger rearticulation, within-hand substitution, or head articulation; unsupported scalar tempo omitted"
+      }
+    }
+  ]
+}

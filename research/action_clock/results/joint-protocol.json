@@ -1,0 +1,246 @@
+{
+  "scope": "Retrospective 7K development study; historically exposed W/b and labels. No new blind claim.",
+  "configs": [
+    {
+      "radius": null,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": null,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": null,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 1.25
+    },
+    {
+      "radius": null,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": null,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": null,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1.25
+    },
+    {
+      "radius": null,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": null,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": null,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 1.25
+    },
+    {
+      "radius": 0.5,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": 0.5,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": 0.5,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 1.25
+    },
+    {
+      "radius": 0.5,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": 0.5,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": 0.5,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1.25
+    },
+    {
+      "radius": 0.5,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": 0.5,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": 0.5,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 1.25
+    },
+    {
+      "radius": 1,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": 1,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": 1,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 1.25
+    },
+    {
+      "radius": 1,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": 1,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": 1,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1.25
+    },
+    {
+      "radius": 1,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": 1,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": 1,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 1.25
+    },
+    {
+      "radius": 2,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": 2,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": 2,
+      "confidenceFloor": 0.35,
+      "lowNpsScale": 1.25
+    },
+    {
+      "radius": 2,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": 2,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": 2,
+      "confidenceFloor": 0.5,
+      "lowNpsScale": 1.25
+    },
+    {
+      "radius": 2,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 0.75
+    },
+    {
+      "radius": 2,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 1
+    },
+    {
+      "radius": 2,
+      "confidenceFloor": 0.65,
+      "lowNpsScale": 1.25
+    }
+  ],
+  "consumers": [
+    "actions",
+    "detail",
+    "compact"
+  ],
+  "amendment": "Fixed-gate full music study showed local gains and some whole-macro-F1 costs. Before this joint replay, expand every radius INCLUDING off to independent 3x3 confidenceFloor/lowNpsScale tuning. No selective protection of old parameters.",
+  "selection": "Same multi-objective as previous Break study: 0.30 six-chart per-chart local accuracy +0.15 corrected-denominator Break F1 +0.15 real8 local accuracy +0.40 full349 macro-F1. Select each consumer gate pair within each radius, then one shared radius maximizing mean consumer score. Report full-data and source-scoped selection separately.",
+  "cached": "Native windows once/map/radius; same tag/secondary decision masks reuse identical readout/integral, never reuse predictions across different masks/consumers/radii.",
+  "fixed": "Type W/b, type routing, rule attributes, difficulty quantile/fraction, physical integrand, all integral thresholds and original reference segmentation.",
+  "classes": [
+    "anchor",
+    "chordjack",
+    "coordination",
+    "dense chordstream",
+    "density",
+    "fast chordstream",
+    "hybrid",
+    "inverse",
+    "ln mix",
+    "ln wildcard",
+    "minijack",
+    "rc mix",
+    "release",
+    "speed",
+    "tech",
+    "technical",
+    "vibro"
+  ],
+  "orderingExtension": {
+    "scope": "Added after the full411 candidate geometry audit, retaining the initial108 protocol and full off-arm tuning.",
+    "comparedNativeCuts": 1233,
+    "differingParentMapRadiusPairs": 26,
+    "completeConsumerConfigurations": 189,
+    "selection": "Share both radius and ordering across all three consumers; independently select each gate pair; ties prefer nearest ordering."
+  },
+  "executionRepairs": [
+    {
+      "source": "research/action_clock/results/quantization-repair-uids.json",
+      "reason": "Quantization-aware downbeat ownership: source-rounded/truncated barline head is in the following half-open interval.",
+      "inputsByRadius": {
+        "1": 328,
+        "2": 333,
+        ".5": 313
+      },
+      "computed": 6604,
+      "hits": 19694,
+      "checked": 18
+    },
+    {
+      "source": "research/action_clock/results/music-ordering-audit.json",
+      "reason": "Complete contrast-order extension after all411 cut audit, reuse exactly identical native cuts.",
+      "inputsByRadius": {
+        "1": 2,
+        "2": 24,
+        ".5": 0
+      },
+      "computed": 181,
+      "hits": 521,
+      "checked": 0
+    }
+  ]
+}

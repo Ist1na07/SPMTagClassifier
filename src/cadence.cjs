@@ -1,5 +1,6 @@
 'use strict';
 const { lowerBound } = require('./parser.cjs');
+const {jackCadence,switchCadence,intervalMode}=require('./action-clock.cjs');
 
 // A display measurement, not a replacement for the archived model's features.
 // Round-to-ms timestamps on a uniform sequence can deviate from the line
@@ -26,33 +27,40 @@ function regularRowCadence(ctx, start, end, speedRate = 1) {
 
 const DISPLAY_TAGS = new Set(['chordjack', 'minijack', 'dense chordstream', 'fast chordstream',
   'speed', 'tech', 'wildcard', 'coordination', 'density']);
-function jackClockMatchesRows(ctx, start, end) {
-  const lo = lowerBound(ctx.rows, start, r => r.t), hi = lowerBound(ctx.rows, end, r => r.t);
-  if (lo === hi) return false;
-  const firstMask = ctx.rows[lo].mask;
-  let allChords = true, sameGrip = true;
-  for (let i = lo; i < hi; i++) {
-    const mask = ctx.rows[i].mask;
-    allChords &&= (mask & (mask - 1)) !== 0;
-    sameGrip &&= mask === firstMask;
-  }
-  // The archive measures chord-row cadence for Jack, falling back to
-  // same-column repetition. Do not replace either by an interleaved row clock.
-  return allChords || sameGrip;
+function measureCadence(ctx,start,end,tag,speedRate=1){
+  if(!DISPLAY_TAGS.has(tag))return null;
+  if(['chordjack','minijack'].includes(tag))return jackCadence(ctx,start,end,tag,speedRate);
+  if(['dense chordstream','fast chordstream'].includes(tag))return switchCadence(ctx,start,end,speedRate);
+  const uniform=regularRowCadence(ctx,start,end,speedRate);if(uniform)return uniform;
+  const rows=ctx.rows.slice(lowerBound(ctx.rows,start,r=>r.t),lowerBound(ctx.rows,end,r=>r.t));
+  const pairs=rows.slice(1).map((r,i)=>({dt:r.t-rows[i].t,width:1})),m=intervalMode(pairs,1/speedRate);
+  return m?{...m,source:'head-articulation-interval-mode',resolutionMs:1/speedRate,rowCount:rows.length,equivBpm:Math.round(15000/m.spacingMs)}:null;
 }
-function correctCadenceDisplay(result, ctx, speedRate = 1) {
+function legacyRowClockAllowed(ctx,start,end,tag){
+  if(!['chordjack','minijack'].includes(tag))return true;
+  const rows=ctx.rows.slice(lowerBound(ctx.rows,start,r=>r.t),lowerBound(ctx.rows,end,r=>r.t));
+  return rows.length>0&&(rows.every(r=>(r.mask&(r.mask-1))!==0)||rows.every(r=>r.mask===rows[0].mask));
+}
+function correctCadenceDisplay(result, ctx, speedRate = 1, {actionClocks=true}={}) {
   for (const segment of result.segments) {
     if (!DISPLAY_TAGS.has(segment.tag)) continue;
     const start = segment.evidence?.sourceStart ?? segment.start;
     const end = segment.evidence?.sourceEnd ?? segment.end;
-    if (['chordjack', 'minijack'].includes(segment.tag) && !jackClockMatchesRows(ctx, start, end)) continue;
-    const measured = regularRowCadence(ctx, start, end, speedRate);
-    if (!measured) continue;
+    delete segment.evidence.secondaryCadence;
+    const measured=actionClocks?measureCadence(ctx,start,end,segment.tag,speedRate):
+      legacyRowClockAllowed(ctx,start,end,segment.tag)?regularRowCadence(ctx,start,end,speedRate):null;
+    if(!actionClocks&&!measured)continue;
+    if(actionClocks&&segment.secondary){
+      const secondary=measureCadence(ctx,start,end,segment.secondary,speedRate);
+      if(secondary)segment.evidence.secondaryCadence={tag:segment.secondary,...secondary,measuredStart:start,measuredEnd:end};
+    }
+    if(!measured){delete segment.equivBpm;segment.evidence.cadenceUnresolved='no dominant, type-appropriate action period';delete segment.evidence.cadence;continue;}
+    delete segment.evidence.cadenceUnresolved;
     const { equivBpm, ...evidence } = measured;
     segment.evidence.cadence = { ...evidence, measuredStart:start,measuredEnd:end,legacyEquivBpm: segment.evidence.archivedEquivBpm??segment.equivBpm };
     segment.equivBpm = equivBpm;
   }
-  result.modelInfo.cadencePolicy = 'uniform rows measured directly; other archived cadence unchanged';
+  result.modelInfo.cadencePolicy = !actionClocks?'uniform rows measured directly; other archived cadence unchanged':'type-conditional observed action periods: per-hand strikes, same-finger rearticulation, within-hand substitution, or head articulation; unsupported scalar tempo omitted';
   return result;
 }
-module.exports = { regularRowCadence, correctCadenceDisplay };
+module.exports = { regularRowCadence, measureCadence, correctCadenceDisplay };

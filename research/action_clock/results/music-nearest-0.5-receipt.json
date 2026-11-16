@@ -1,0 +1,18 @@
+{
+  "inputs": 411,
+  "consumers": 3,
+  "medianMs": 47.54290000000037,
+  "p95Ms": 201.26870000000054,
+  "output": "research/action_clock/results/music-nearest-0.5.jsonl.gz",
+  "rangeRepair": {
+    "inputs": 8,
+    "reason": "Preserve original feature-window indices at every unmoved endpoint, not a metric/label change."
+  },
+  "executionRepairs": [
+    {
+      "inputs": 313,
+      "reason": "Quantization-aware downbeat ownership: source-rounded/truncated barline head is in the following half-open interval.",
+      "source": "research/action_clock/results/quantization-repair-uids.json"
+    }
+  ]
+}

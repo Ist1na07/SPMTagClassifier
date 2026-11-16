@@ -1,0 +1,40 @@
+{
+  "scope": "Six previously exposed manual charts; development mechanism/parameter comparison, not new blind evidence.",
+  "configs": [
+    {
+      "id": "off"
+    },
+    {
+      "id": "nearest-0.5",
+      "maxMoveBeats": 0.5,
+      "mode": "nearest"
+    },
+    {
+      "id": "contrast-0.5",
+      "maxMoveBeats": 0.5,
+      "mode": "contrast"
+    },
+    {
+      "id": "nearest-1",
+      "maxMoveBeats": 1,
+      "mode": "nearest"
+    },
+    {
+      "id": "contrast-1",
+      "maxMoveBeats": 1,
+      "mode": "contrast"
+    },
+    {
+      "id": "nearest-2",
+      "maxMoveBeats": 2,
+      "mode": "nearest"
+    },
+    {
+      "id": "contrast-2",
+      "maxMoveBeats": 2,
+      "mode": "contrast"
+    }
+  ],
+  "choice": "mean duration-weighted allowed-label accuracy across charts and consumers; musical-boundary alignment breaks ties; never optimize exemplar BPM as segmentation target",
+  "fixed": "W/b, pressure guards, integral weights/profiles, frozen reference segmentation; only musical-boundary candidate selection changes"
+}

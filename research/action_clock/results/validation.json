@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-17",
+  "iteration": "v1.2",
+  "researchBaseline": "v1.1.0",
+  "directCheckpoint": "b311c408ef02d6705d30b51a4ea789d3e86d2976",
+  "packageVersion": "1.2.4",
+  "release": "Unreleased repository update; existing tags and release assets retained",
+  "productTests": {
+    "command": "npm test",
+    "passed": 89,
+    "failed": 0
+  },
+  "types": {
+    "command": "npm run test:types",
+    "passed": true
+  },
+  "build": {
+    "command": "npm run build",
+    "passed": true,
+    "staticModules": 27
+  },
+  "mechanismGrid": {
+    "configs": 60,
+    "casesPerConfig": 816,
+    "selectedPassed": 816
+  },
+  "jointGrid": {
+    "completeConsumerConfigurations": 189,
+    "selected": {
+      "radius": 1,
+      "mode": "nearest",
+      "score": 0.6531789165000431,
+      "consumers": {
+        "actions": {
+          "id": 22,
+          "config": {
+            "radius": 1,
+            "confidenceFloor": 0.5,
+            "lowNpsScale": 1
+          },
+          "score": 0.6483510782317143
+        },
+        "detail": {
+          "id": 22,
+          "config": {
+            "radius": 1,
+            "confidenceFloor": 0.5,
+            "lowNpsScale": 1
+          },
+          "score": 0.6580030557250006
+        },
+        "compact": {
+          "id": 22,
+          "config": {
+            "radius": 1,
+            "confidenceFloor": 0.5,
+            "lowNpsScale": 1
+          },
+          "score": 0.6531826155434145
+        }
+      }
+    }
+  },
+  "nativeAblation": {
+    "inputs": 411,
+    "consumers": 3,
+    "arms": [
+      "before",
+      "action-only",
+      "music-only",
+      "combined"
+    ],
+    "maxPercentagePointError": 0,
+    "cadenceOnlyClassificationAndIntegralInvariant": true,
+    "provenance": "ablation-native.json",
+    "postReplayEvidenceOnlyCorrection": "A supported secondaryCadence is now retained when the primary period is unresolved. Added product regression passes; replayed primary BPM, labels, integral values and serialized cadence metrics are unchanged."
+  },
+  "ui": {
+    "renderer": "Actual upstream plugin, offline fixture transport",
+    "exampleSourceTimeSec": 136,
+    "oldBpm": 263,
+    "currentBpm": 133,
+    "dtBpm": 200,
+    "screenshot": "example-overlay.png",
+    "liveGameTosu": false
+  },
+  "remaining": {
+    "wholeF1": "Detailed and actions decline; Compact improves; see per-class report.",
+    "tempoCoverage": "Unresolved periods omit scalar BPM; no real-chart numerical BPM accuracy claim.",
+    "htExample": "Opening no-rating Break error remains and music snap extends it about 0.395 source seconds."
+  },
+  "checksNotRun": "Live game/tosu end-to-end acceptance; no deployed plugin files modified."
+}

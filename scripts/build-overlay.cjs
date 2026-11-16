@@ -36,6 +36,15 @@ if(segmentReadout){
   source=replaceOnce(source,'    if (rawEvidence) result.debug.rawSegments = rawEvidence;',
     '    if (rawEvidence) result.debug.rawSegments = readout ? readout.frames : rawEvidence;\n    if(readout){result.debug.classicPrior=classicPrior;result.debug.readoutSupport=readout.support;result.debug.cutExclusions=readout.exclusions;}');
 }
+if(segmentReadout){
+  source=replaceOnce(source,'    const rawSegs0 = segmentMap({ map, rows, windows, norm });',
+    '    const referenceSegs = segmentMap({ map, rows, windows, norm });\n'+
+    '    const rawSegs0 = opts._musicalSegmenter ? opts._musicalSegmenter({segments:referenceSegs,windows,norm,speedRate:rate}) : referenceSegs;');
+  source=replaceOnce(source,'    return { cutDemandRef, rawSegs, extras, windows };',
+    '    const result={cutDemandRef,rawSegs,extras,windows};\n'+
+    '    if(opts._musicalSegmenter){const marks=markBreaks(map,rows,referenceSegs);result.referenceCm={cutDemandRef,windows,rawSegs:referenceSegs.map((s,i)=>({...s,family0:marks[i].family})),extras:referenceSegs.map(s=>computeSegmentExtras(ctx,s.start,s.end))};}\n'+
+    '    return result;');
+}
 if(localExpert){
   if(localProfile.schemaVersion!==1)throw Error('Unsupported local expert schema');
   for(const f of ['rc','ln']){
@@ -51,7 +60,7 @@ if(localExpert){
   // The integral profiles and joint loss use this frozen reference predictor.
   // Do not inadvertently change both the fitted local branch and its prior.
   source=replaceOnce(source,`    const classicPrior = aggregateOverall(originalSegments, ${JSON.stringify(profile.aggregation)});`,
-    `    const classicPrior = aggregateOverall(smoothSegments(classifySegments(cm,{scorer:"model",_expertModel:model_generated_default})), ${JSON.stringify(profile.aggregation)});`);
+    `    const classicPrior = aggregateOverall(smoothSegments(classifySegments(cm.referenceCm??cm,{scorer:"model",_expertModel:model_generated_default})), ${JSON.stringify(profile.aggregation)});`);
 }
 if(breakPressure){
   const currentCall='classifySegments(cm,{scorer:"model",_expertModel:opts._archivedExpert?model_generated_default:undefined})';

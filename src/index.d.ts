@@ -12,7 +12,7 @@ export interface Options {
 export interface Note { t: number; col: number; lnEnd: number | null }
 export interface Beatmap {
   keys: number; notes: Note[]; firstNote: number; lastNote: number;
-  timingPoints: { t: number; beatLength: number }[];
+  timingPoints: { t: number; beatLength: number; meter?: number; omitFirstBarLine?: boolean }[];
   breaks: [number, number][]; meta: Record<string, string | number | undefined>;
   warnings?: string[];
 }
@@ -32,11 +32,31 @@ export interface Segment {
     featureWindows: number; contextNoteObservations: number; legacyConfidence?: number;
     concentration?: number; structuralWindows?: number; clippedFeatureFraction?: number;
     sourceStart?: number; sourceEnd?: number; archivedEquivBpm?: number; geometry?: GeometryEvidence;
-    /** Direct display-only cadence measurement; archived model features are unchanged. */
-    cadence?: { source: 'uniform-rows-within-source-ms'; rowCount: number; spacingMs: number;
-      maxResidualMs: number; resolutionMs: number; legacyEquivBpm?: number;
-      /** Measured plateau; may be narrower than its display envelope. */
-      measuredStart?: number; measuredEnd?: number } };
+    /** Type-conditional observed action cadence; not a probability or fitted grid divisor. */
+    cadence?: CadenceEvidence; cadenceUnresolved?: string;
+    actions?: ActionEvidence; musicalStart?: MusicalBoundary; musicalEnd?: MusicalBoundary;
+    secondaryCadence?: CadenceEvidence & { tag: string; equivBpm: number } };
+
+}
+export interface MusicalBoundary {
+  t: number; beatLength: number; meter: number; kind: 'measure' | 'timing-section'; originalTime: number;
+  /** Ideal music time before assigning the source timestamp cell to the following section. */
+  nominalTime?: number;
+}
+export interface CadenceEvidence {
+  source: 'uniform-rows-within-source-ms' | 'hand-strike-interval-mode' | 'same-finger-rearticulation-mode'
+    | 'hand-substitution-stream-mode' | 'head-articulation-interval-mode';
+  rowCount: number; spacingMs: number; resolutionMs: number; maxResidualMs?: number;
+  pairCount?: number; intervalShare?: number; totalPairs?: number; coveredMs?: number;
+  minSpacingMs?: number; maxSpacingMs?: number; legacyEquivBpm?: number;
+  measuredStart?: number; measuredEnd?: number;
+  handMeasurements?: { thumb: number; hands: {side: number; spacingMs: number; intervalShare: number; eventCount: number; coveredMs: number}[] }[];
+}
+/** Head-event geometry, not captured finger/wrist motion or LN release control. */
+export interface ActionEvidence {
+  meaning: string;
+  thumbAssignments: {thumb: number; hands: {side: number; eventCount: number; coactiveFraction: number;
+    rearticulationFraction: number; substitutionFraction: number; fixedGripFraction: number}[]}[];
 }
 export interface GeometryEvidence {
   start: number; end: number;
@@ -75,6 +95,7 @@ export interface Result {
     physicalSupport?: 'none' | 'jack' | 'ln' | 'both'; defaultReplacementAccepted?: boolean;
     effortPower?: number; concentrationPower?: number; extraGate?: string;
     localScoreKind?: string; confidenceMeaning?: string; coverage?: string; cadencePolicy?: string;
+    segmentation?: {id: string; maxMoveBeats: number; movedBoundaries: number; referencePrior: string};
     segmentReadout?: {stepMs: number; cutContextMs: number; minCadencePlateauMs: number; cutExcludedFrames: number};
     sortMeaning?: string; overallDecision?: string; supervision?: string;
     overlayPolicy?: { regularityRestRelativeNps: number; regularityRestRowRateMax: number;

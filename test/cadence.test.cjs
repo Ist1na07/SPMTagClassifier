@@ -30,13 +30,13 @@ test('measurement is bounded to its interval and does not absorb a different sur
   assert.equal(regularRowCadence(ctx, 1000, 1200).equivBpm, 300);
   assert.equal(regularRowCadence(ctx, 100, 2401), null);
 });
-test('Jack cadence keeps its repetition/chord clock when single rows interleave', () => {
+test('interleaved singles distinguish whole-hand chord pulses from same-finger repetition', () => {
   const rows = Array.from({ length: 12 }, (_, i) => ({ t: 1000 + i * 50, mask: i % 2 ? 3 : 1 }));
   for (const tag of ['chordjack', 'minijack']) {
     const result = { segments: [{ start: 1000, end: 1600, tag, equivBpm: 150, evidence: {} }], modelInfo: {} };
     correctCadenceDisplay(result, { rows });
-    assert.equal(result.segments[0].equivBpm, 150);
-    assert.equal(result.segments[0].evidence.cadence, undefined);
+    assert.equal(result.segments[0].equivBpm, tag==='chordjack'?150:300);
+    assert.equal(result.segments[0].evidence.cadence.source,tag==='chordjack'?'hand-strike-interval-mode':'same-finger-rearticulation-mode');
   }
   const result = { segments: [{ start: 1000, end: 1600, tag: 'chordjack', equivBpm: 299, evidence: {} }], modelInfo: {} };
   correctCadenceDisplay(result, { rows: rows.map(r => ({ ...r, mask: 3 })) });

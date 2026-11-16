@@ -20,7 +20,9 @@ function parseOsu(text, { speedRate = 1 } = {}) {
       const p = line.split(','), t = Number(p[0]), beatLength = Number(p[1]);
       if(!Number.isFinite(t)||!Number.isFinite(beatLength)){warnings.push('IgnoredNonfiniteTimingPoint');continue;}
       if (beatLength > 0 && (p[6] === undefined || p[6].trim() !== '0'))
-        timingPoints.push({ t: t / speedRate, beatLength: beatLength / speedRate });
+        timingPoints.push({ t: t / speedRate, beatLength: beatLength / speedRate,
+          meter: Number.isInteger(Number(p[2])) && Number(p[2]) > 0 ? Number(p[2]) : 4,
+          omitFirstBarLine: (Number(p[7]) & 8) !== 0 });
     } else if (section === 'events') {
       const p = line.split(/\s*,\s*|\s+/);
       if (p[0] === '2' || p[0] === 'Break') {

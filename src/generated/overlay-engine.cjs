@@ -2054,7 +2054,8 @@ var TagClassifier = (() => {
     const norm = normalizeWindows(windows);
     const activeCut = windows.map((w) => w.cutDemand).filter((v) => v > 0).sort((a, b) => a - b);
     const cutDemandRef = activeCut.length ? activeCut[Math.floor(activeCut.length * 0.8)] : 1;
-    const rawSegs0 = segmentMap({ map, rows, windows, norm });
+    const referenceSegs = segmentMap({ map, rows, windows, norm });
+    const rawSegs0 = opts._musicalSegmenter ? opts._musicalSegmenter({segments:referenceSegs,windows,norm,speedRate:rate}) : referenceSegs;
     const marks = markBreaks(map, rows, rawSegs0);
     const rawSegs = rawSegs0.map((s, i) => ({
       start: s.start,
@@ -2063,7 +2064,9 @@ var TagClassifier = (() => {
       family0: marks[i].family
     }));
     const extras = rawSegs.map((s) => computeSegmentExtras(ctx, s.start, s.end));
-    return { cutDemandRef, rawSegs, extras, windows };
+    const result={cutDemandRef,rawSegs,extras,windows};
+    if(opts._musicalSegmenter){const marks=markBreaks(map,rows,referenceSegs);result.referenceCm={cutDemandRef,windows,rawSegs:referenceSegs.map((s,i)=>({...s,family0:marks[i].family})),extras:referenceSegs.map(s=>computeSegmentExtras(ctx,s.start,s.end))};}
+    return result;
   }
   function analyzeMap(osuText, opts = {}) {
     let map = parseOsu(osuText);
@@ -2073,7 +2076,7 @@ var TagClassifier = (() => {
     const rawEvidence = opts._rawEvidence ? classifySegments(cm,{scorer:"model",_expertModel:opts._archivedExpert?model_generated_default:undefined,_breakPolicy:opts._archivedExpert?undefined:opts._breakPolicy}) : null;
 
     const originalSegments = smoothSegments(rawEvidence ? rawEvidence.map(s=>({...s})) : classifySegments(cm,{scorer:"model",_expertModel:opts._archivedExpert?model_generated_default:undefined,_breakPolicy:opts._archivedExpert?undefined:opts._breakPolicy}));
-    const classicPrior = aggregateOverall(smoothSegments(classifySegments(cm,{scorer:"model",_expertModel:model_generated_default})), {"dominantShare":0.52,"mixShare":0.07,"secondRel":0.75});
+    const classicPrior = aggregateOverall(smoothSegments(classifySegments(cm.referenceCm??cm,{scorer:"model",_expertModel:model_generated_default})), {"dominantShare":0.52,"mixShare":0.07,"secondRel":0.75});
     let readout = null;
     if (opts._segmentReadout) {
       const mapMedians=computeMapMedians(cm.windows),medians=new Map();

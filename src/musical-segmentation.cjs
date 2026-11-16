@@ -1,0 +1,71 @@
+'use strict';
+const {lowerBound}=require('./parser.cjs');
+
+// Timing supplies metre and red-line phase, not an audio phrase detector.
+// Inherited SV/hitsound points never reset that phase.
+function measureLines(map,start=map.firstNote,end=map.lastNote){
+  const out=[],points=map.timingPoints;
+  for(let i=0;i<points.length;i++){
+    const p=points[i],stop=Math.min(end,points[i+1]?.t??Infinity),bar=p.beatLength*(p.meter??4);
+    if(!(bar>0&&Number.isFinite(bar))||stop<=start)continue;
+    // The first red point's grid also describes a negative-time pickup.
+    const lo=Math.max(i?0:-Infinity,Math.ceil((start-p.t)/bar-1e-10));
+    const hi=Math.floor((stop-p.t)/bar+1e-10);
+    for(let n=lo;n<=hi;n++){
+      const t=p.t+n*bar;
+      if(t<start-1e-7||t>end+1e-7||i+1<points.length&&t>=points[i+1].t-1e-7||n===0&&p.omitFirstBarLine)continue;
+      out.push({t,beatLength:p.beatLength,meter:p.meter??4,kind:n===0?'timing-section':'measure'});
+    }
+  }
+  return out;
+}
+function contrastAt(windows,norm,t){
+  const i=lowerBound(windows,t,w=>w.t),half=4;
+  const mean=(a,b)=>{
+    const v=Array(norm.featureNames.length).fill(0);let n=0;
+    for(let j=Math.max(0,a);j<Math.min(windows.length,b);j++){n++;for(let k=0;k<v.length;k++)v[k]+=norm.values[j][k];}
+    return n?v.map(x=>x/n):v;
+  };
+  const a=mean(i-half,i),b=mean(i,i+half);
+  return a.reduce((s,x,k)=>s+Math.abs(x-b[k]),0)/Math.max(1,a.length);
+}
+function musicalSegments(ctx,input,{maxMoveBeats=1,mode='nearest'}={}){
+  const {map,rows}=ctx,{segments,windows,norm}=input;
+  if(!map.timingPoints.length||segments.length<2)return segments;
+  const rate=input.speedRate??1;
+  // Put a rounded/truncated downbeat head in the FOLLOWING interval. The
+  // ideal fractional barline can be up to one source millisecond after it.
+  const lines=measureLines(map).map(p=>{
+    const source=p.t*rate,epsilon=16*Number.EPSILON*Math.max(1,Math.abs(source));
+    const t=Math.floor(source+epsilon)/rate;return {...p,t,...(t!==p.t?{nominalTime:p.t}:{})};
+  }),ends=segments.slice(0,-1).map(s=>s.end),points=[segments[0].start],evidence=[];
+  for(let i=0;i<ends.length;i++){
+    const old=ends[i],at=lowerBound(rows,old,r=>r.t),before=rows[at-1],after=rows[at];
+    // Actual silence/pickups and headless sustained intervals are not moved
+    // merely to make a musically neat display. They require physical cuts.
+    const gap=before&&after?after.t-before.t:Infinity;
+    const ti=lowerBound(map.timingPoints,old,p=>p.t);
+    const timing=map.timingPoints[map.timingPoints[ti]?.t===old?ti:Math.max(0,ti-1)];
+    const radius=timing.beatLength*maxMoveBeats;
+    let candidates=lines.filter(p=>Math.abs((p.nominalTime??p.t)-old)<=radius+1e-7);
+    const leftMin=Math.min(3000/(input.speedRate??1),segments[i].end-segments[i].start);
+    const rightMin=Math.min(3000/(input.speedRate??1),segments[i+1].end-segments[i+1].start);
+    candidates=candidates.filter(p=>p.t-points.at(-1)>=leftMin-1e-7&&segments[i+1].end-p.t>=rightMin-1e-7);
+    if(gap>=timing.beatLength)candidates=[];
+    candidates.sort((a,b)=>mode==='contrast'?
+      contrastAt(windows,norm,b.t)-contrastAt(windows,norm,a.t)||Math.abs(a.t-old)-Math.abs(b.t-old):
+      Math.abs(a.t-old)-Math.abs(b.t-old)||a.t-b.t);
+    const chosen=candidates[0];points.push(chosen?.t??old);evidence.push(chosen?{...chosen,originalTime:old}:null);
+  }
+  points.push(segments.at(-1).end);
+  return segments.map((s,i)=>{
+    // Keep the original observation contract at every unmoved endpoint.
+    // Its sequential window assignment can intentionally include one edge
+    // window after a short pickup; recomputing it would change unrelated data.
+    const lo=points[i]===s.start?s.windowRange[0]:Math.max(0,Math.min(windows.length-1,Math.round((points[i]-map.firstNote)/250)));
+    const hi=points[i+1]===s.end?s.windowRange[1]:Math.min(windows.length,Math.max(lo+1,Math.round((points[i+1]-map.firstNote)/250)));
+    return {start:points[i],end:points[i+1],windowRange:[lo,hi],
+      ...(evidence[i-1]?{musicalStart:evidence[i-1]}:{}),...(evidence[i]?{musicalEnd:evidence[i]}:{})};
+  });
+}
+module.exports={measureLines,musicalSegments};

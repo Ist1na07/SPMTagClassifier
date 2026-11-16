@@ -11,6 +11,13 @@ const fixtures = {
   F02: 'artifacts/frontier-annotation-r5/F02.osu',
   real0088: 'dataset/spm_dataset-1.1.1/beatmaps/bm_0088.osu',
 };
+if(process.env.SPM_QA_EXAMPLE){
+  const example=path.resolve(root,process.env.SPM_QA_EXAMPLE);
+  if(!example.startsWith(root+path.sep)||!example.endsWith('.osu'))throw Error('Fixture must be an osu file inside this workspace');
+  fixtures.example=path.relative(root,example);
+}
+const initialFixture=Object.hasOwn(fixtures,process.env.SPM_QA_FIXTURE)?process.env.SPM_QA_FIXTURE:'uniform50';
+const initialTime=Number.isFinite(Number(process.env.SPM_QA_TIME))?Number(process.env.SPM_QA_TIME):5;
 function uniform() {
   return '[General]\nMode:3\n[Metadata]\nTitle:Cadence regression\nArtist:SPM\nCreator:Research\nVersion:Uniform 50 ms\n' +
     '[Difficulty]\nCircleSize:7\nOverallDifficulty:8\n[TimingPoints]\n0,500,4,2,1,100,1,0\n[HitObjects]\n' +
@@ -23,9 +30,9 @@ function html(engine) {
     'fetch(`/fixture.osu?case=${encodeURIComponent(document.getElementById("qa-fixture").value)}`)');
   const controls = `<aside style="position:fixed;right:16px;top:16px;z-index:999;background:#17202e;color:#fff;padding:16px;width:270px;border-radius:8px;font:14px system-ui;line-height:1.7">
     <strong>Offline overlay regression</strong><br><small>Actual plugin renderer · simulated transport<br>Not connected to a game session</small>
-    <label style="display:block">Fixture <select id="qa-fixture">${Object.keys(fixtures).map(k=>`<option>${k}</option>`).join('')}</select></label>
+    <label style="display:block">Fixture <select id="qa-fixture">${Object.keys(fixtures).map(k=>`<option${k===initialFixture?' selected':''}>${k}</option>`).join('')}</select></label>
     <label style="display:block">Rate <select id="qa-rate"><option value="1">1×</option><option value="1.5">1.5× DT</option><option value="0.75">0.75× HT</option></select></label>
-    <label style="display:block">Source time (s) <input id="qa-time" type="number" min="0" step="0.1" value="5" style="width:70px"></label>
+    <label style="display:block">Source time (s) <input id="qa-time" type="number" min="0" step="0.1" value="${initialTime}" style="width:70px"></label>
     <button id="qa-load">Load / recalculate</button><br>
     <a href="/?engine=old" style="color:#9dd2ff">Archived engine</a> · <a href="/?engine=new" style="color:#9dd2ff">Working engine</a>
     <output id="qa-status" style="display:block"></output></aside>`;
@@ -77,6 +84,6 @@ const server = http.createServer((request, response) => {
 server.listen(0, '127.0.0.1', () => {
   const receipt = { pid: process.pid, url: `http://127.0.0.1:${server.address().port}/`,
     transport: 'Offline fixture driver; actual upstream renderer; no live tosu connection' };
-  fs.writeFileSync(path.join(root, '.cache/overlay-quality-preview.json'), JSON.stringify(receipt, null, 2) + '\n');
+  fs.writeFileSync(path.join(root, process.env.SPM_QA_RECEIPT??'.cache/overlay-quality-preview.json'), JSON.stringify(receipt, null, 2) + '\n');
   console.log(receipt);
 });

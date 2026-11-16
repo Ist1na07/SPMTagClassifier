@@ -5,6 +5,9 @@ const {features,windows,FEATURE_KEYS}=require('./features.cjs');
 const {coarseResult}=require('./coarse-result.cjs'),{lnResult}=require('./ln-result.cjs');
 const geometry=require('./generated/native-geometry.cjs'),{version}=require('../package.json');
 const {correctCadenceDisplay}=require('./cadence.cjs');
+const {describeActions}=require('./action-clock.cjs');
+const {musicalSegments}=require('./musical-segmentation.cjs');
+const musicalProfile=require('./models/musical7k.json');
 const {refine:refineSegments}=require('./segment-readout.cjs');
 const overlay7=require('./generated/overlay-engine.cjs'),overlayProfile=require('./models/overlay7k.json');
 const profile4=require('./models/4k.json'),profile7=require('./models/7k.json');
@@ -35,11 +38,15 @@ function stable7(osuText,opts,e) {
     perception.validateRating(e.map,opts.ratingEvidence,{speedRate:opts.speedRate??1,modelIdentity:p.modelIdentity});
     pressure=createPressureGuard(opts.ratingEvidence,policy,breakProfile.gapMs);
   }
+  let musicCuts=[];
+  const musicSegmenter=!perceptual||opts._musicalSegmenter===false?undefined:input=>{
+    musicCuts=opts._musicalSegmenter?opts._musicalSegmenter(input):musicalSegments(e.ctx,input,musicalProfile);return musicCuts;
+  };
   const breakPolicy=perceptual?{...policy,protects:(start,end,stage)=>{
     if(!pressure||!policy.target.split('+').includes(stage))return false;
     const result=pressure.measure(start,end);if(result.protected)protectedParents.add(start+':'+end);return result.protected;
   }}:undefined;
-  const r=overlay7.analyzeMap(osuText,{...opts,_rawEvidence:true,_archivedExpert:!perceptual,_breakPolicy:breakPolicy,_segmentReadout:(raw,resolveBpm)=>refineSegments(e.ctx,raw,p.classes,{resolveBpm,speedRate:opts.speedRate??1,supportPower:p.supportPower??1})}),geometryContext=geometry.prepare(e.ctx);
+  const r=overlay7.analyzeMap(osuText,{...opts,_rawEvidence:true,_archivedExpert:!perceptual,_musicalSegmenter:musicSegmenter,_breakPolicy:breakPolicy,_segmentReadout:(raw,resolveBpm)=>refineSegments(e.ctx,raw,p.classes,{resolveBpm,speedRate:opts.speedRate??1,supportPower:p.supportPower??1,actionClocks:perceptual})}),geometryContext=geometry.prepare(e.ctx);
   const classicPrior=r.debug.classicPrior,branchSupport=r.debug.readoutSupport,cutExclusions=r.debug.cutExclusions;
   delete r.debug.classicPrior;delete r.debug.readoutSupport;delete r.debug.cutExclusions;
   const raw=r.debug.rawSegments;delete r.debug.rawSegments;
@@ -54,7 +61,9 @@ function stable7(osuText,opts,e) {
     s.distribution=distribution;
     const archivedEquivBpm=s._archivedEquivBpm;delete s._archivedEquivBpm;
     const cadence=s.evidence?.cadence;
-    s.evidence={...(cadence?{cadence}:{}),...(archivedEquivBpm===undefined?{}:{archivedEquivBpm}),normalizedEntropy:ranked.length>1?-ranked.reduce((a,v)=>v>0?a+v*Math.log(v):a,0)/Math.log(ranked.length):0,
+    s.evidence={...(perceptual?{actions:describeActions(e.ctx,s.start,s.end)}:{}),
+      ...(musicCuts.find(c=>c.start===s.start)?.musicalStart?{musicalStart:musicCuts.find(c=>c.start===s.start).musicalStart}:{}),
+      ...(musicCuts.find(c=>c.end===s.end)?.musicalEnd?{musicalEnd:musicCuts.find(c=>c.end===s.end).musicalEnd}:{}),...(cadence?{cadence}:{}),...(archivedEquivBpm===undefined?{}:{archivedEquivBpm}),normalizedEntropy:ranked.length>1?-ranked.reduce((a,v)=>v>0?a+v*Math.log(v):a,0)/Math.log(ranked.length):0,
       margin:(ranked[0]||0)-(ranked[1]||0),effort:w.metrics.effort,occupancy:w.metrics.occupancy,
       featureWindows:1,contextNoteObservations:w.notes,legacyConfidence:s.confidence,
       geometry:geometry.describeInterval(geometryContext,s.start,Math.max(s.start+1,s.end))};
@@ -69,6 +78,8 @@ function stable7(osuText,opts,e) {
     overlayPolicy:{regularityRestRelativeNps:overlayProfile.gate.ratio,regularityRestRowRateMax:overlayProfile.gate.rowRateMax,
       rowRateUnit:'rows per converted second',aggregation:'unchanged legacy policy'}};
   if(perceptual){
+    r.map.timingPoints=e.map.timingPoints;
+    r.modelInfo.segmentation={id:musicalProfile.id,maxMoveBeats:musicalProfile.maxMoveBeats,movedBoundaries:musicCuts.filter(s=>s.musicalEnd).length,referencePrior:'original boundaries retained'};
     r.modelInfo.breakPolicy={id:breakProfile.id,ratingUsed:!!pressure,confidenceFloor:policy.confidenceFloor,lowNpsScale:policy.lowNpsScale,quantile:policy.quantile,fraction:policy.fraction,referenceDemand:pressure?.reference??null,protectedParents:protectedParents.size};
     const rating=opts.ratingEvidence;
     const a=perception.infer(e.map,raw,rating,p,{speedRate:opts.speedRate??1,context:e.ctx,baseline:classicPrior??r.overall,_branchSupport:branchSupport});
@@ -92,7 +103,7 @@ function analyzeMap(osuText,opts={}) {
   // profiles. classic retains its previous local expert and aggregation path.
   if(map.keys===7){
     const r=opts.algorithm==='modern'?lnResult(osuText,native7,opts,e):stable7(osuText,opts,e);
-    return correctCadenceDisplay(r,e.ctx,opts.speedRate??1);
+    return correctCadenceDisplay(r,e.ctx,opts.speedRate??1,{actionClocks:opts.algorithm!=='modern'&&opts.aggregation!=='classic'});
   }
   return coarseResult(osuText,map.keys===4?native4:native6,opts);
 }

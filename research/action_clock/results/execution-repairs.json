@@ -1,0 +1,52 @@
+{
+  "scope": "Implementation corrections within one v1.2 task; no label revisions or hidden failed-candidate removal.",
+  "repairs": [
+    {
+      "issue": "Dominant interval mode accidentally joined a true same-type tempo transition",
+      "correction": "Require a uniform-row certificate before extending cadence display plateaus; preserve 150 to 200 and DT 225 to 300.",
+      "evidence": "test/segment-readout.test.cjs"
+    },
+    {
+      "issue": "Sparse chord accents inside a same-hand roll suggested a half-speed Jack clock",
+      "correction": "Intervening notes outside the common fingers of adjacent coactive grips invalidate that backbone pair.",
+      "evidence": "test/action-clock.test.cjs"
+    },
+    {
+      "issue": "Rejecting every intervening same-hand event removed valid Anchor plus Chordjack roles",
+      "correction": "Allow common-finger retriggers as an additional role; keep them separate from unrelated roll motion.",
+      "evidence": "test/action-clock.test.cjs"
+    },
+    {
+      "issue": "Median rounded source intervals biased 133 to 134 or DT 200 to 199",
+      "correction": "Use the weighted mean of the supported narrow interval cluster, not its modal integer millisecond.",
+      "evidence": "results/example-final.json"
+    },
+    {
+      "issue": "Recomputing indices at unmoved endpoints changed the original observation contract",
+      "correction": "Retain original indices at every unmoved endpoint; patch all affected grid outputs before full reselection.",
+      "evidence": "results/range-repair-uids.json",
+      "affectedInputs": 8,
+      "parentRadiusPairs": 23
+    },
+    {
+      "issue": "A fractional ideal barline placed a truncated source downbeat in the previous half-open interval",
+      "correction": "Use the lower source-millisecond cell edge as the cut and retain nominalTime; replay changed inputs for every radius before full reselection.",
+      "evidence": "results/quantization-repair-uids.json",
+      "inputsByRadius": {
+        "1": 328,
+        "2": 333,
+        ".5": 313
+      }
+    },
+    {
+      "issue": "An early rate-fixture assertion recomputed an endpoint which runtime must preserve",
+      "correction": "Assert the provided original endpoint index; separately test shifted internal indices and all three native rate clocks.",
+      "evidence": "test/musical-segmentation.test.cjs"
+    },
+    {
+      "issue": "Unresolved primary clock accidentally hid a supported secondary branch clock",
+      "correction": "Measure secondary cadence independently before handling an unresolved primary. Primary BPM, labels, integrals and stored ablation metrics are unchanged.",
+      "evidence": "test/action-clock.test.cjs"
+    }
+  ]
+}

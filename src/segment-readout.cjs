@@ -1,6 +1,6 @@
 'use strict';
 const {lowerBound:lb}=require('./parser.cjs');
-const {correctCadenceDisplay}=require('./cadence.cjs');
+const {correctCadenceDisplay,regularRowCadence}=require('./cadence.cjs');
 const CS=new Set(['dense chordstream','fast chordstream']);
 const STEP_MS=500,CONTEXT_MS=4000,MIN_DISPLAY_MS=1800;
 
@@ -44,17 +44,18 @@ function excludeCut(s){
   return {...s,scores,tag,confidence:Math.min(1,value),secondary};
 }
 
-function smoothCadenceFrames(frames,ctx,speedRate=1){
+function smoothCadenceFrames(frames,ctx,speedRate=1,actionClocks=true){
   const same=(a,b)=>a.tag===b.tag&&a.secondary===b.secondary&&a.family===b.family;
   const measured=(s,anchor=s.equivBpm)=>{
+    if(!regularRowCadence(ctx,s.start,s.end,speedRate))return null;
     const copy={...s,evidence:{sourceStart:s.start,sourceEnd:s.end}};
-    correctCadenceDisplay({segments:[copy],modelInfo:{}},ctx,speedRate);
+    correctCadenceDisplay({segments:[copy],modelInfo:{}},ctx,speedRate,{actionClocks});
     const c=copy.evidence.cadence;
-    if(c&&Number.isFinite(anchor)){
+    if(c?.source==='uniform-rows-within-source-ms'&&Number.isFinite(anchor)){
       const e=c.resolutionMs/(c.rowCount-1),lo=15000/(c.spacingMs+e),hi=c.spacingMs>e?15000/(c.spacingMs-e):Infinity;
       if(lo<=anchor+.5&&hi>=anchor-.5)copy.equivBpm=anchor;
     }
-    return c?copy:null;
+    return c&&Number.isFinite(copy.equivBpm)?copy:null;
   };
   const groups=[];
   for(const s of frames){
@@ -101,7 +102,7 @@ function smoothCadenceFrames(frames,ctx,speedRate=1){
   }
   return out;
 }
-function refine(ctx,source,classes,{speedRate=1,supportPower=1,resolveBpm}={}){
+function refine(ctx,source,classes,{speedRate=1,supportPower=1,resolveBpm,actionClocks=true}={}){
   const map=ctx.map,hands=prepareHands(ctx),frames=[],support=[];let exclusions=0;
   source.forEach((old,parent)=>{
     const scores=old.scores??{[old.tag]:1},div=Math.max(1,...Object.values(scores));
@@ -114,6 +115,6 @@ function refine(ctx,source,classes,{speedRate=1,supportPower=1,resolveBpm}={}){
       frames.push(s);support.push(q.map((v,j)=>excluded&&CS.has(classes[j])?0:v));
     }
   });
-  return {frames,support,segments:smoothCadenceFrames(frames,ctx,speedRate),exclusions};
+  return {frames,support,segments:smoothCadenceFrames(frames,ctx,speedRate,actionClocks),exclusions};
 }
 module.exports={refine,prepareHands,noCut,smoothCadenceFrames};

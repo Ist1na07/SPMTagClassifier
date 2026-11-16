@@ -1,0 +1,40 @@
+{
+  "baseline": "b311c408ef02d6705d30b51a4ea789d3e86d2976",
+  "inputs": 411,
+  "consumers": 3,
+  "arms": [
+    "before",
+    "action-only",
+    "music-only",
+    "combined"
+  ],
+  "maxPercentagePointError": 0,
+  "classificationAndIntegralInvariantForCadenceOnly": true,
+  "timing": {
+    "before": {
+      "medianMs": 43.01759999999922,
+      "p95Ms": 173.62799999999697,
+      "maxMs": 336.0493000000133
+    },
+    "combined": {
+      "medianMs": 46.522000000000844,
+      "p95Ms": 198.41359999999986,
+      "maxMs": 374.41359999999986
+    }
+  },
+  "refresh": {
+    "candidateInputs": 411,
+    "musicOnlyChangedRangeInputs": 8,
+    "unchangedBaselineAndMusicRowsReused": true
+  },
+  "executionRepairs": [
+    {
+      "mode": "quantization-aware music cuts",
+      "source": "research/action_clock/results/quantization-repair-uids.json",
+      "changedMusicInputs": 328,
+      "baselineReused": true,
+      "actionOnlyReused": true,
+      "timingScope": "prior full-corpus timing retained; no new full timing claim"
+    }
+  ]
+}

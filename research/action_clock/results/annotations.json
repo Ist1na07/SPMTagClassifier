@@ -1,0 +1,22 @@
+{
+  "source": "User in this chat, 2026-11-17",
+  "example": {
+    "localPath": "examplebeatmap/",
+    "targetMs": [
+      131980,
+      142582
+    ],
+    "primary": "chordjack",
+    "manualNumericBpm": null,
+    "computedActionBpmApprox": 133
+  },
+  "alternatingHands": {
+    "globalRowIntervalMs": 100,
+    "sameHandIntervalMs": 200,
+    "userAnswer": "取决于分类器认为它是切还是叠。如果认为是叠（jack）就应该是75bpm；在这个单一例子中我倾向于认为它是一个中或低置信度的叠。",
+    "jackBpm": 75,
+    "fit": "medium-or-low",
+    "exhaustivePrimaryTruth": false
+  },
+  "use": "Mechanism constraints and regression, no new W/b training or invented numeric class confidence."
+}
